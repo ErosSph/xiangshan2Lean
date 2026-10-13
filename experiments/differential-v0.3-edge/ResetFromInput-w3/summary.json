@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "ResetFromInput",
+  "parameters": {
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.3-edge\\ResetFromInput-w3",
+  "seconds": 14.08,
+  "fingerprint": "343e5479a66adb40a5b3613112db62c21fe2c7f910e55bf0fd6c569d0fd3d764"
+}

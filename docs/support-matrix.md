@@ -1,12 +1,17 @@
-# v0.2 支持矩阵
+# Chisel 7.3 支持矩阵
 
-完整结果见 experiments/differential-v0.2-{full,edge,control,extension}
-及 experiments/rejections-v0.2 的 summary.json；错误检测见 experiments/mutation。
+当前结果见 experiments/differential-v0.3-{full,edge,control,extension}
+及 experiments/rejections-v0.3；错误检测见 experiments/mutation-v0.3。
+此前 v0.2 / Chisel 3.5.6 报告保留为历史记录。
 下表按语言构造定义能力；电路名称只是回归样例。
 
 | 构造 | 实现状态 | 回归样例/限制 |
 |---|---|---|
-| Scala typer / Chisel 3.5.6 源前端 | 已实现 | 固定 Chicala 提交、Scala 2.13.10 |
+| Scala typer / Chisel 7.3.0 源前端 | 已实现 | Scala 2.13.15；官方参考使用 CIRCT firtool 1.135.0 |
+| Module 父类和 trait、父构造参数绑定 | 已实现子集 | ConfiguredPipeline、InheritedPrimitive；需要父类源码 |
+| 继承 getter 覆盖、纯参数 helper | 已实现子集 | Scala 线性化顺序，private/final 静态绑定；初始化风险拒绝 |
+| 真实 CDE Int/Boolean 字段投影 | 已实现子集 | singleton Field、嵌套 case-class 字段、多个配置根、Field 默认值 |
+| 真实香山 XSModule / HasXSParameter | 已验证叶模块 | 原始完整 Alu.scala 的 RightShiftModule；真实完整配置依赖 |
 | Int / Boolean 参数、require | 已实现 | Counter、BoolGate；Int 范围/溢出反例 |
 | 参数 +、-、*、/、%、负号、比较、布尔表达式 | 已实现 | Int 回绕，纯参数表达式，条件合法域 |
 | 纯参数辅助函数和不可变参数别名 | 已实现 | HelperWidth；递归/副作用不支持 |
@@ -44,6 +49,8 @@
 | 多写端口/掩码存储器、显式 ReadFirst/WriteFirst | 不支持 | 冲突模型尚未实现，拒绝 |
 | Mux1H、Decoupled/Queue 标准库封装、运行时 assert | 不支持 | 可用支持的基本构造写对应电路；未知调用拒绝 |
 | 任意 Scala、递归/可变宿主计算 | 不支持 | 只支持明确的纯参数子集 |
+| 动态 CDE key、集合/Option 配置、对象配置的子模块传递 | 未完整支持 | 明确拒绝；不声明完整香山处理器已支持 |
+| XSBundle 继承、generic 父类、显式 super、eager 配置 val | 未完整支持 | 配置 getter 使用 def；初始化语义有明确边界 |
 | 自动规格/定理证明 | 不属于本项目 | 不生成 sorry/admit/新公理 |
 
 宽度规则和上下文约定见 semantics.md。Bundle 复位支持 Bundle 引用；

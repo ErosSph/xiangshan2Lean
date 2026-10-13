@@ -46,7 +46,7 @@ class ParameterLookup(val w: Int) extends RawModule {
   val a = IO(Input(UInt(w.W)))
   val b = IO(Input(UInt(w.W)))
   val out = IO(Output(UInt(w.W)))
-  out := MuxLookup(sel, 0.U, Seq(0.U -> a, 1.U -> b, 2.U -> (a + b)))
+  out := MuxLookup(sel, 0.U)(Seq(0.U -> a, 1.U -> b, 2.U -> (a + b)))
 }
 
 class TabulatedVector(val n: Int, val w: Int) extends RawModule {

@@ -1,0 +1,25 @@
+{
+  "case": "Fifo-depth2-w3",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\Fifo-depth2-w3",
+  "passed": true,
+  "firrtl_sha256": "5a7bd2780a593ee6de58393c45a11e040bf717c93405b3775009c29a39682964",
+  "cycles": 61,
+  "output_comparisons": 363,
+  "initial_state": {
+    "storage_0": 0,
+    "storage_1": 0,
+    "read": 0,
+    "write": 0,
+    "count": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "enq": "enq",
+    "deq": "deq",
+    "data": "data",
+    "out": "out",
+    "full": "full",
+    "empty": "empty"
+  }
+}

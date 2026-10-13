@@ -18,6 +18,7 @@ object ChicalaConfig {
   var backend = "scala"
   var leanOutput = "generated"
   var module = ""
+  var leanChiselVersion = "7.3.0"
 }
 
 class ChicalaPlugin(val global: Global) extends Plugin {
@@ -35,12 +36,14 @@ class ChicalaPlugin(val global: Global) extends Plugin {
     ChicalaConfig.backend = "scala"
     ChicalaConfig.leanOutput = "generated"
     ChicalaConfig.module = ""
+    ChicalaConfig.leanChiselVersion = "7.3.0"
     var valid = true
     for (option <- options) {
       if (option == "backend:lean") ChicalaConfig.backend = "lean"
       else if (option == "backend:scala") ChicalaConfig.backend = "scala"
       else if (option.startsWith("out:")) ChicalaConfig.leanOutput = option.substring(4)
       else if (option.startsWith("module:")) ChicalaConfig.module = option.substring(7)
+      else if (option.startsWith("chisel-version:")) ChicalaConfig.leanChiselVersion = option.substring(15)
       else if (option.startsWith("simulation:")) {
         val emitFormat = option.substring("simulation:".length)
         emitFormat match {

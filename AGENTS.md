@@ -1,6 +1,6 @@
 # Chisel2Lean working rules
 
-Implement Chisel 3.5.6 -> typed parameterized IR -> executable Lean 4.
+Implement Chisel 7.3.0 -> typed parameterized IR -> executable Lean 4.
 The user authorized continuous implementation on 2026-10-13, including work
 beyond the handoff's T0 stopping point. Do not stop at an audit or a hand-written
 Counter model. The handoff is preserved in docs/handoff as source material.
@@ -22,3 +22,6 @@ Record the frontend audit, semantics, support matrix, decisions, and real
 compiler/runtime/differential evidence. Finite tests are not an equivalence
 proof. A versioned, tested subset is the deliverable; arbitrary Scala is not
 an implicit support promise.
+
+The user explicitly authorized upgrading the whole project to Chisel 7.3 on
+2026-10-13. Preserve earlier version evidence as historical and revalidate.

@@ -1,0 +1,599 @@
+{
+  "suite": "full",
+  "cases": [
+    {
+      "status": "PASS",
+      "cycles": 7,
+      "compared_output_values": 13,
+      "module": "Counter",
+      "parameters": {
+        "n": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Counter-n1",
+      "seconds": 9.62,
+      "fingerprint": "ce507e60c4b1c5200c7a21637d5b8a3cae6704768da6e6a591a819e1656340dd"
+    },
+    {
+      "status": "PASS",
+      "cycles": 9,
+      "compared_output_values": 17,
+      "module": "Counter",
+      "parameters": {
+        "n": 2
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Counter-n2",
+      "seconds": 11.55,
+      "fingerprint": "d06b73a6f7fff163fd0a769228e40694394142740ba4f2b1740b8a0c3cb403cb"
+    },
+    {
+      "status": "PASS",
+      "cycles": 13,
+      "compared_output_values": 25,
+      "module": "Counter",
+      "parameters": {
+        "n": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Counter-n3",
+      "seconds": 11.73,
+      "fingerprint": "420574eb5c5063ba1ef5a9f06501e801053a7d2cf33e38866fbbe0cad2749443"
+    },
+    {
+      "status": "PASS",
+      "cycles": 21,
+      "compared_output_values": 41,
+      "module": "Counter",
+      "parameters": {
+        "n": 4
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Counter-n4",
+      "seconds": 11.81,
+      "fingerprint": "3284673cd35370ab96f5a980cf7bb3ba00a73d8d65e6cc8454b24f5f79cfdb6f"
+    },
+    {
+      "status": "PASS",
+      "cycles": 133,
+      "compared_output_values": 265,
+      "module": "Counter",
+      "parameters": {
+        "n": 7
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Counter-n7",
+      "seconds": 11.48,
+      "fingerprint": "566213ed71c4910aaccef4a0b00a903b95e34cb99ed6c1a00e0d3d159b24f9a9"
+    },
+    {
+      "status": "PASS",
+      "cycles": 261,
+      "compared_output_values": 521,
+      "module": "Counter",
+      "parameters": {
+        "n": 8
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Counter-n8",
+      "seconds": 12.17,
+      "fingerprint": "7b6c1934fe2b585c340649ba6f8d11b669fe6c90f3f09c6d9e83a2ca5928c40e"
+    },
+    {
+      "status": "PASS",
+      "cycles": 517,
+      "compared_output_values": 1033,
+      "module": "Counter",
+      "parameters": {
+        "n": 9
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Counter-n9",
+      "seconds": 13.31,
+      "fingerprint": "812c25c89b1e6510634207d8525e56eacd473c9a98e68f7e5d161e40eb2628f9"
+    },
+    {
+      "status": "PASS",
+      "cycles": 13,
+      "compared_output_values": 25,
+      "module": "DirectCounter",
+      "parameters": {
+        "n": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\DirectCounter-n3",
+      "seconds": 11.05,
+      "fingerprint": "c3b9a404b2c60af081dc7113afab32ab3769aea47192df79f0609c8af2d3e78e"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 190,
+      "module": "DualRegister",
+      "parameters": {
+        "n": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\DualRegister-n1",
+      "seconds": 12.25,
+      "fingerprint": "7891e45e98788a19b02a9c1eecf36da04a538ae04440d037472dda903257cca8"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 190,
+      "module": "DualRegister",
+      "parameters": {
+        "n": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\DualRegister-n3",
+      "seconds": 11.61,
+      "fingerprint": "6ce032a5e210171bc1a2b59223f356cf9c81a9b5302ae031a74e222273c1025e"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 190,
+      "module": "DualRegister",
+      "parameters": {
+        "n": 9
+      },
+      "evidence": "experiments\\differential-v0.3-full\\DualRegister-n9",
+      "seconds": 11.52,
+      "fingerprint": "4647313a0680c709a6c45f9da7c32e3eee25ecb252efb32a39aa7f288ebdb86f"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "Priority",
+      "parameters": {
+        "n": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Priority-n1",
+      "seconds": 12.59,
+      "fingerprint": "2b28564c124c751d8fc5ff0c1ac8202e78581b13d889cc8d61c52f2d2c0daf6d"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "Priority",
+      "parameters": {
+        "n": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Priority-n3",
+      "seconds": 12.03,
+      "fingerprint": "4e2bb18492861770decaa8be474e5e3b33484c9ceb23ea652e43745ff95f6b24"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "Priority",
+      "parameters": {
+        "n": 8
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Priority-n8",
+      "seconds": 12.38,
+      "fingerprint": "9be1be157f20db026e27a4e5dcccb2f6dd4023e96fd1f5ecbcd685ec12bd65f6"
+    },
+    {
+      "status": "PASS",
+      "cycles": 2,
+      "compared_output_values": 4,
+      "module": "ParamChoice",
+      "parameters": {
+        "n": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\ParamChoice-n1",
+      "seconds": 14.67,
+      "fingerprint": "e92f8b582282c126f6d7140f0e3e915b38ce1bded185a7ff66d4e96f7c194125"
+    },
+    {
+      "status": "PASS",
+      "cycles": 8,
+      "compared_output_values": 16,
+      "module": "ParamChoice",
+      "parameters": {
+        "n": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\ParamChoice-n3",
+      "seconds": 13.67,
+      "fingerprint": "1917f4845c912cf539d25dc460cab43b772b894ea070eed67eda981e3edf66cb"
+    },
+    {
+      "status": "PASS",
+      "cycles": 16,
+      "compared_output_values": 32,
+      "module": "ParamChoice",
+      "parameters": {
+        "n": 4
+      },
+      "evidence": "experiments\\differential-v0.3-full\\ParamChoice-n4",
+      "seconds": 12.42,
+      "fingerprint": "6d25ce4585d8aa4bb2adf28a4c2069717345d4e1f257cc54926e1c91090393fa"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 96,
+      "module": "ParamChoice",
+      "parameters": {
+        "n": 9
+      },
+      "evidence": "experiments\\differential-v0.3-full\\ParamChoice-n9",
+      "seconds": 11.19,
+      "fingerprint": "5b97c5c6241ee6e6ede6c3d3d5218f9b417008a4aedf48e3610b06617a669070"
+    },
+    {
+      "status": "PASS",
+      "cycles": 4,
+      "compared_output_values": 8,
+      "module": "ParamExpression",
+      "parameters": {
+        "n": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\ParamExpression-n1",
+      "seconds": 11.98,
+      "fingerprint": "ae75fa71d8faebc1eef0b4670a43c44940096b4f85f977b40a380bc06790cc76"
+    },
+    {
+      "status": "PASS",
+      "cycles": 16,
+      "compared_output_values": 32,
+      "module": "ParamExpression",
+      "parameters": {
+        "n": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\ParamExpression-n3",
+      "seconds": 12.8,
+      "fingerprint": "4d5c2fa9fda7aca3cf506c3dd4e66b55d6a2d5509d3644cf44785ff2e8cb8a6e"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 96,
+      "module": "ParamExpression",
+      "parameters": {
+        "n": 9
+      },
+      "evidence": "experiments\\differential-v0.3-full\\ParamExpression-n9",
+      "seconds": 12.89,
+      "fingerprint": "e1d5d6d215a096584952bf221ae570207f7c9986bb58a3d65f05b4f731b35eea"
+    },
+    {
+      "status": "PASS",
+      "cycles": 13,
+      "compared_output_values": 25,
+      "module": "RenamedAccumulator",
+      "parameters": {
+        "width": 3,
+        "increment": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\RenamedAccumulator-width3-increment3",
+      "seconds": 11.45,
+      "fingerprint": "9064dac364936d684bf9e28f216a86f676a227361350f692c80ad97b83ac3baa"
+    },
+    {
+      "status": "PASS",
+      "cycles": 517,
+      "compared_output_values": 1033,
+      "module": "RenamedAccumulator",
+      "parameters": {
+        "width": 9,
+        "increment": 7
+      },
+      "evidence": "experiments\\differential-v0.3-full\\RenamedAccumulator-width9-increment7",
+      "seconds": 12.09,
+      "fingerprint": "5287992ea0620db9e7c5905b75aff1a423918d6c57a4aba0eee38e36679b67d4"
+    },
+    {
+      "status": "PASS",
+      "cycles": 16,
+      "compared_output_values": 288,
+      "module": "Arithmetic",
+      "parameters": {
+        "aWidth": 1,
+        "bWidth": 2
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Arithmetic-aWidth1-bWidth2",
+      "seconds": 12.97,
+      "fingerprint": "7dacf264d900c3cfaaddbf1c60a72d9966ffa92d8d2afc02db4e6e7761076be3"
+    },
+    {
+      "status": "PASS",
+      "cycles": 16,
+      "compared_output_values": 288,
+      "module": "Arithmetic",
+      "parameters": {
+        "aWidth": 2,
+        "bWidth": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Arithmetic-aWidth2-bWidth1",
+      "seconds": 13.06,
+      "fingerprint": "be2178f72e18d6cef6afa4ecfa4c4e19e8eec380c88bf2f463238d70f62b6ce9"
+    },
+    {
+      "status": "PASS",
+      "cycles": 128,
+      "compared_output_values": 2304,
+      "module": "Arithmetic",
+      "parameters": {
+        "aWidth": 3,
+        "bWidth": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Arithmetic-aWidth3-bWidth3",
+      "seconds": 14.41,
+      "fingerprint": "2f8ae1549696a0e9d0f56145d8c8936604c4faba7de837fbd00fc40c1c69746d"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 864,
+      "module": "Arithmetic",
+      "parameters": {
+        "aWidth": 7,
+        "bWidth": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\Arithmetic-aWidth7-bWidth3",
+      "seconds": 13.23,
+      "fingerprint": "6bd807a3d9126373a6f149f4e222b24f2f92a6678b3ff588bf6b57e5ff2d6781"
+    },
+    {
+      "status": "PASS",
+      "cycles": 4,
+      "compared_output_values": 48,
+      "module": "SignedArithmetic",
+      "parameters": {
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\SignedArithmetic-w1",
+      "seconds": 13.02,
+      "fingerprint": "8b21ec17f079a48444049d41352afecef920a949b50cf2899bebd60e30d7a2dc"
+    },
+    {
+      "status": "PASS",
+      "cycles": 64,
+      "compared_output_values": 768,
+      "module": "SignedArithmetic",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\SignedArithmetic-w3",
+      "seconds": 13.12,
+      "fingerprint": "80f2ad442d50ab1c2371b500e5087285faf88ff55157300680a560b506be5941"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 576,
+      "module": "SignedArithmetic",
+      "parameters": {
+        "w": 4
+      },
+      "evidence": "experiments\\differential-v0.3-full\\SignedArithmetic-w4",
+      "seconds": 13.44,
+      "fingerprint": "9977d269e19db2a77ce666e99f27274511177f48ff09c94437b5d2fdd2dad7c7"
+    },
+    {
+      "status": "PASS",
+      "cycles": 16,
+      "compared_output_values": 32,
+      "module": "CombinationalDependencies",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\CombinationalDependencies-w3",
+      "seconds": 12.34,
+      "fingerprint": "9aa9f8d2b20416ea0ba46592be865ccb9914c441fc5a43288d57d460c9c38e29"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 96,
+      "module": "CombinationalDependencies",
+      "parameters": {
+        "w": 9
+      },
+      "evidence": "experiments\\differential-v0.3-full\\CombinationalDependencies-w9",
+      "seconds": 12.45,
+      "fingerprint": "6c6405243700227cf9a77f501215b07a107f1aa3bddb4fc46ee19f69f328e74d"
+    },
+    {
+      "status": "PASS",
+      "cycles": 2,
+      "compared_output_values": 4,
+      "module": "BoolGate",
+      "parameters": {
+        "invert": false
+      },
+      "evidence": "experiments\\differential-v0.3-full\\BoolGate-invertFalse",
+      "seconds": 11.17,
+      "fingerprint": "1de766b981b5ed5d971af649cc1b52f9fcefcc54a1d2be112e2e29f60da75307"
+    },
+    {
+      "status": "PASS",
+      "cycles": 2,
+      "compared_output_values": 4,
+      "module": "BoolGate",
+      "parameters": {
+        "invert": true
+      },
+      "evidence": "experiments\\differential-v0.3-full\\BoolGate-invertTrue",
+      "seconds": 10.59,
+      "fingerprint": "df192adee16992e8a7e1d7a068a7448e70d287b7a4739235c7fdc9e6a6827e2e"
+    },
+    {
+      "status": "PASS",
+      "cycles": 4,
+      "compared_output_values": 8,
+      "module": "HelperWidth",
+      "parameters": {
+        "n": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\HelperWidth-n1",
+      "seconds": 12.81,
+      "fingerprint": "6f219483f5d6d5847e76e077c6fe5b8dff1556cea6c1e8c93d0045e4eb1a2716"
+    },
+    {
+      "status": "PASS",
+      "cycles": 16,
+      "compared_output_values": 32,
+      "module": "HelperWidth",
+      "parameters": {
+        "n": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\HelperWidth-n3",
+      "seconds": 13.66,
+      "fingerprint": "4343ee4acc94df2a19bf3baec28f927e1a92d016ae236c41891db98e7ed3e4c5"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "EnabledRegister",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\EnabledRegister-w3",
+      "seconds": 9.61,
+      "fingerprint": "fb20929e90f57ae01d8be8ab37cf5cffc736b8d62ec8bd34e8dae558c8ab5abc"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "EnabledRegister",
+      "parameters": {
+        "w": 9
+      },
+      "evidence": "experiments\\differential-v0.3-full\\EnabledRegister-w9",
+      "seconds": 12.95,
+      "fingerprint": "db74dc1b9a8eacce1baf529ce6a87d60a9fcf3c4c70bf33bd96749263025eea3"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 192,
+      "module": "VecLoop",
+      "parameters": {
+        "n": 2,
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\VecLoop-n2-w3",
+      "seconds": 12.75,
+      "fingerprint": "360043e053f983626571e91115ace8c69885d8886495c1a2a0833d430721b9b2"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 288,
+      "module": "VecLoop",
+      "parameters": {
+        "n": 3,
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\VecLoop-n3-w1",
+      "seconds": 14.36,
+      "fingerprint": "58e3fd4420d929f327865c33c6e2db93536628d3603406b6016586a2e4b3605b"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 384,
+      "module": "VecLoop",
+      "parameters": {
+        "n": 4,
+        "w": 7
+      },
+      "evidence": "experiments\\differential-v0.3-full\\VecLoop-n4-w7",
+      "seconds": 15.05,
+      "fingerprint": "399226affa80d418a9173b730d00730e71a1f033e847c34377464891a8a1a933"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 285,
+      "module": "VecRegisters",
+      "parameters": {
+        "n": 3,
+        "w": 2
+      },
+      "evidence": "experiments\\differential-v0.3-full\\VecRegisters-n3-w2",
+      "seconds": 14.05,
+      "fingerprint": "2ade0fb4d2d22e2cbf04194738fe3f9ad6eff5601da48b3ee385dac9e7cec6a5"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "VecRegisters",
+      "parameters": {
+        "n": 1,
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-full\\VecRegisters-n1-w8",
+      "seconds": 13.27,
+      "fingerprint": "ef03a8652678bfabfce3c27b960d44ef0aab32da03a45c33b5da17ad17927dd5"
+    },
+    {
+      "status": "PASS",
+      "cycles": 2,
+      "compared_output_values": 28,
+      "module": "BitOperations",
+      "parameters": {
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-full\\BitOperations-w1",
+      "seconds": 11.8,
+      "fingerprint": "f6fdb20eeb4ea11cca991223ef4088ab1c62d6f47551e142daceb6cc34b0f058"
+    },
+    {
+      "status": "PASS",
+      "cycles": 8,
+      "compared_output_values": 112,
+      "module": "BitOperations",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-full\\BitOperations-w3",
+      "seconds": 10.58,
+      "fingerprint": "ea0b79f70f703b82571a5b65fcb2624ab559a2a952bea8daae12ceb5ddeb381f"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 672,
+      "module": "BitOperations",
+      "parameters": {
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-full\\BitOperations-w8",
+      "seconds": 12.17,
+      "fingerprint": "18779d69ad5e0d056f2f3286d7f4241fb1f18b0e4d0e45bf3a8a20f4ec67669c"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 96,
+      "module": "VecIndex",
+      "parameters": {
+        "n": 3,
+        "w": 4,
+        "k": 0
+      },
+      "evidence": "experiments\\differential-v0.3-full\\VecIndex-n3-w4-k0",
+      "seconds": 12.97,
+      "fingerprint": "973ac225b0ddbfd904a5b232f872f299155faa90aa9cb239acc7fb83f34cf388"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 96,
+      "module": "VecIndex",
+      "parameters": {
+        "n": 3,
+        "w": 4,
+        "k": 2
+      },
+      "evidence": "experiments\\differential-v0.3-full\\VecIndex-n3-w4-k2",
+      "seconds": 13.22,
+      "fingerprint": "c4ccbe76f491667d3b8b751e60545018c472e2a02835d339fc365a8102eb5c64"
+    }
+  ],
+  "passed": 48,
+  "failed": 0,
+  "formal_equivalence_proof": false
+}

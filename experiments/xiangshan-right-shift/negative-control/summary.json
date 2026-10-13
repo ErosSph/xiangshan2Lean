@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "fault": "arithmetic right shift replaced by logical right shift",
+  "detected": true,
+  "observed": {
+    "cycle": 0,
+    "sampling": "pre",
+    "inputs": {
+      "io.srlSrc": 0,
+      "io.sraSrc": 9223372036854775808,
+      "io.shamt": 1,
+      "io.revShamt": 63
+    },
+    "expected": {
+      "io.srl": 0,
+      "io.sra": 13835058055282163712,
+      "io.revSrl": 0
+    },
+    "lean": {
+      "io.srl": 0,
+      "io.sra": 4611686018427387904,
+      "io.revSrl": 0
+    },
+    "rtl": {
+      "io.revSrl": 0,
+      "io.sra": 13835058055282163712,
+      "io.srl": 0
+    }
+  }
+}

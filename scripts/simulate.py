@@ -191,6 +191,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("ir", type=Path)
     parser.add_argument("--params", nargs="*", default=[])
+    parser.add_argument("--config-snapshot", type=Path, help="materialize_config.py output containing automatically mapped parameters")
     parser.add_argument("--trace", type=Path, required=True)
     parser.add_argument("--initial-state", type=Path)
     parser.add_argument("--warmup", action="store_true", help="allow an undefined output before the first edge; post-edge outputs must be defined")
@@ -198,7 +199,15 @@ def main():
     args = parser.parse_args()
     evidence = args.evidence or ROOT / "experiments" / "simulation" / uuid.uuid4().hex[:12]
     initial = json.loads(args.initial_state.read_text(encoding="utf-8")) if args.initial_state else None
-    code, _ = simulate(args.ir.resolve(), parse_parameters(args.params), json.loads(args.trace.read_text(encoding="utf-8")), initial, evidence.resolve(), args.warmup)
+    parameters = parse_parameters(args.params)
+    if args.config_snapshot:
+        if args.params:
+            parser.error("Use either --params or --config-snapshot")
+        snapshot = json.loads(args.config_snapshot.read_text(encoding="utf-8"))
+        if snapshot["module"] != json.loads(args.ir.read_text(encoding="utf-8"))["module"]:
+            parser.error("Configuration snapshot belongs to a different module")
+        parameters = snapshot["parameters"]
+    code, _ = simulate(args.ir.resolve(), parameters, json.loads(args.trace.read_text(encoding="utf-8")), initial, evidence.resolve(), args.warmup)
     print(f"Evidence: {evidence}")
     return code
 

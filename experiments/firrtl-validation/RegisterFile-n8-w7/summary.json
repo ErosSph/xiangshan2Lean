@@ -1,0 +1,27 @@
+{
+  "case": "RegisterFile-n8-w7",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\RegisterFile-n8-w7",
+  "passed": true,
+  "firrtl_sha256": "d45fb5db48efd90194ba98b57e38364f435b51b9289cedbb11e1d4c78cec3a0e",
+  "cycles": 48,
+  "output_comparisons": 95,
+  "initial_state": {
+    "registers_0": 0,
+    "registers_1": 0,
+    "registers_2": 0,
+    "registers_3": 0,
+    "registers_4": 0,
+    "registers_5": 0,
+    "registers_6": 0,
+    "registers_7": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "write": "write",
+    "waddr": "waddr",
+    "raddr": "raddr",
+    "data": "data",
+    "out": "out"
+  }
+}

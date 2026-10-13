@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\DualRegister-n3\\reference\\rtl\\DualRegister.fir",
+  "source_sha256": "e0ad89ad682b0d6bb0175dd10d4be5b3050a5019791632b1d27627f9f6f74923",
+  "compiler_sha256": "40937bde440f25efce307092d88ce4cb3c4afe623d02f93576c699c22f8d417b",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.DualRegister",
+      "top": "DualRegister",
+      "ir": "FIRRTL/DualRegister.ir.json",
+      "lean": "FIRRTL/DualRegister.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T134340Z-906b374d"
+}

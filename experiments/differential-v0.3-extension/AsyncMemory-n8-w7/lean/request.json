@@ -1,0 +1,452 @@
+{
+  "parameters": {
+    "n": 8,
+    "w": 7
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 5,
+        "data": 121
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 6,
+        "raddr": 0,
+        "data": 60
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 3,
+        "data": 26
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 2,
+        "raddr": 3,
+        "data": 115
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 2,
+        "raddr": 0,
+        "data": 35
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 2,
+        "raddr": 5,
+        "data": 101
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 121
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 6,
+        "raddr": 7,
+        "data": 101
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 4,
+        "raddr": 0,
+        "data": 37
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 1,
+        "data": 11
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 1,
+        "raddr": 7,
+        "data": 115
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 6,
+        "data": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 5,
+        "data": 50
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 7,
+        "data": 18
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 0,
+        "raddr": 3,
+        "data": 75
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 7,
+        "raddr": 2,
+        "data": 92
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 2,
+        "raddr": 1,
+        "data": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 7,
+        "data": 17
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 1,
+        "raddr": 7,
+        "data": 83
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 123
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 0,
+        "raddr": 4,
+        "data": 55
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 5,
+        "raddr": 4,
+        "data": 70
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 2,
+        "raddr": 5,
+        "data": 68
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 3,
+        "raddr": 5,
+        "data": 50
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "write": false,
+        "waddr": 3,
+        "raddr": 0,
+        "data": 31
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 1,
+        "raddr": 4,
+        "data": 115
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 43
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 5,
+        "raddr": 5,
+        "data": 35
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 5,
+        "raddr": 6,
+        "data": 3
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 1,
+        "data": 97
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 0,
+        "raddr": 1,
+        "data": 106
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 3,
+        "raddr": 5,
+        "data": 39
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 6,
+        "raddr": 0,
+        "data": 87
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 7,
+        "raddr": 4,
+        "data": 63
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 2,
+        "raddr": 6,
+        "data": 27
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 6,
+        "raddr": 6,
+        "data": 84
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 2,
+        "raddr": 5,
+        "data": 61
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 1,
+        "raddr": 7,
+        "data": 69
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 4,
+        "raddr": 0,
+        "data": 106
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 0,
+        "raddr": 3,
+        "data": 16
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 4,
+        "raddr": 2,
+        "data": 122
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 4,
+        "raddr": 1,
+        "data": 16
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 1,
+        "data": 8
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 7,
+        "data": 27
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 7,
+        "raddr": 5,
+        "data": 81
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 89
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 1,
+        "raddr": 6,
+        "data": 42
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 4,
+        "raddr": 7,
+        "data": 63
+      }
+    }
+  ],
+  "initial_state": {
+    "memory": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "case": "RenamedAccumulator-width3-increment3",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\RenamedAccumulator-width3-increment3",
+  "passed": true,
+  "firrtl_sha256": "b2d6038166b0b6daf8f4aafce137ec39bbd3cbe37323d3b184482f1ddaec1abd",
+  "cycles": 13,
+  "output_comparisons": 25,
+  "initial_state": {
+    "storage": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "active": "active",
+    "result": "result"
+  }
+}

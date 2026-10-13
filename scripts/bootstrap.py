@@ -7,7 +7,7 @@ from pathlib import Path
 import subprocess
 import urllib.request
 import zipfile
-from common import ROOT, LEAN_VERSION, SBT_VERSION
+from common import ROOT, LEAN_VERSION, SBT_VERSION, FIRTOOL_VERSION
 
 
 def download(url: str, path: Path):
@@ -37,9 +37,10 @@ def download(url: str, path: Path):
 parser = argparse.ArgumentParser()
 parser.add_argument("--sbt", action="store_true")
 parser.add_argument("--lean", action="store_true")
+parser.add_argument("--firtool", action="store_true")
 args = parser.parse_args()
-if not (args.sbt or args.lean):
-    args.sbt = args.lean = True
+if not (args.sbt or args.lean or args.firtool):
+    args.sbt = args.lean = args.firtool = True
 tools = ROOT / ".tools"
 if args.sbt:
     download(f"https://repo.maven.apache.org/maven2/org/scala-sbt/sbt-launch/{SBT_VERSION}/sbt-launch-{SBT_VERSION}.jar",
@@ -62,4 +63,26 @@ if args.lean:
                 package.extractall(tools)
         else:
             subprocess.run(["tar", "-xf", str(archive), "-C", str(tools)], check=True)
+    subprocess.run([str(executable), "--version"], check=True)
+if args.firtool:
+    platform = "windows" if os.name == "nt" else "linux"
+    extension = "zip" if os.name == "nt" else "tar.gz"
+    name = f"firrtl-bin-{platform}-x64.{extension}"
+    destination = tools / f"firtool-{FIRTOOL_VERSION}"
+    executable = destination / f"firtool-{FIRTOOL_VERSION}" / "bin" / ("firtool.exe" if os.name == "nt" else "firtool")
+    if not executable.is_file():
+        archive = tools / "downloads" / name
+        url = f"https://github.com/llvm/circt/releases/download/firtool-{FIRTOOL_VERSION}/{name}"
+        download(url, archive)
+        expected = urllib.request.urlopen(url + ".sha256", timeout=120).read().decode().split()[0]
+        if hashlib.sha256(archive.read_bytes()).hexdigest() != expected:
+            raise RuntimeError("firtool archive does not match the official SHA256")
+        destination.mkdir(parents=True, exist_ok=True)
+        if extension == "zip":
+            with zipfile.ZipFile(archive) as package:
+                if any(not (destination / n).resolve().is_relative_to(destination.resolve()) for n in package.namelist()):
+                    raise RuntimeError("Unsafe path in firtool release archive")
+                package.extractall(destination)
+        else:
+            subprocess.run(["tar", "-xf", str(archive), "-C", str(destination)], check=True)
     subprocess.run([str(executable), "--version"], check=True)

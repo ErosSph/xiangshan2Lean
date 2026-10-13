@@ -14,6 +14,7 @@ import chicala.convert.backend.stainless.StainlessEmitter
 import chicala.convert.pass._
 import chicala.ChicalaConfig
 import chicala.lean.frontend.LeanAdapter
+import chicala.lean.frontend.LeanSourceResolver
 import chicala.lean.ir.{Module => IRModule, Normalize, TranslationError, Source}
 import chicala.lean.backend.{LeanEmitter, Json}
 import scala.util.control.NonFatal
@@ -40,6 +41,7 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
       extends StdPhase(prev)
       with Scala2Reader
       with LeanAdapter
+      with LeanSourceResolver
       with ChicalaPassCollecttion
       with StainlessEmitter
       with Format {
@@ -55,6 +57,7 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
     var readerInfo: ReaderInfo = ReaderInfo.empty
     private val leanTrees = scala.collection.mutable.LinkedHashMap.empty[String, (Tree, String, Boolean)]
     private val leanDefinitions = scala.collection.mutable.Map.empty[String, (ModuleDef, Tree)]
+    private val leanSourceMetadata = scala.collection.mutable.Map.empty[String, String]
 
     private def safely(tree: Tree)(body: => Unit): Unit = try body catch {
       case e: TranslationError =>
@@ -96,7 +99,20 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
           }.traverse(tree)
         }
         targets.foreach(visit)
-        needed.toList.reverse.foreach { name => val (tree, pkg, _) = leanTrees(name); safely(tree)(applyOnTree(tree, pkg)) }
+        needed.toList.reverse.foreach { name =>
+          val (tree, pkg, isModule) = leanTrees(name)
+          safely(tree) {
+            val c = tree.asInstanceOf[ClassDef]
+            val customParent = c.impl.parents.exists(p => !Set("chisel3.Module", "chisel3.RawModule", "chisel3.Bundle")(p.tpe.typeSymbol.fullName))
+            val config = c.impl.body.collect { case d: DefDef if d.name == termNames.CONSTRUCTOR => d.vparamss.flatten }
+              .flatten.exists(p => p.tpt.tpe.baseClasses.exists(_.fullName == "org.chipsalliance.cde.config.Parameters"))
+            if (isModule && (customParent || config)) {
+              val resolved = resolveLeanSource(c)
+              leanSourceMetadata(name) = resolved.metadata
+              applyOnTree(resolved.tree, pkg)
+            } else applyOnTree(tree, pkg)
+          }
+        }
         processTodos()
         readerInfo.todos.foreach { case (t, _) => reporter.error(t.pos, "Module or Bundle dependency could not be resolved") }
         val cache = scala.collection.mutable.Map.empty[String, IRModule]
@@ -109,7 +125,8 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
             val directory = Paths.get(ChicalaConfig.leanOutput).resolve(segments.dropRight(1).mkString("/"))
             Files.createDirectories(directory)
             Files.write(directory.resolve(segments.last + ".lean"), LeanEmitter.emit(ir).getBytes(StandardCharsets.UTF_8))
-            Files.write(directory.resolve(segments.last + ".ir.json"), (Json.module(ir) + "\n").getBytes(StandardCharsets.UTF_8))
+            Files.write(directory.resolve(segments.last + ".ir.json"), (Json.module(ir,
+              Some(ChicalaConfig.leanChiselVersion), leanSourceMetadata.get(name).map(m => "configuration" -> m).toList) + "\n").getBytes(StandardCharsets.UTF_8))
           }
         } }
         return
@@ -119,6 +136,25 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
     }
 
     def apply(unit: CompilationUnit): Unit = {
+      if (ChicalaConfig.backend == "lean") {
+        registerLeanSources(unit.body)
+        new Traverser {
+          override def traverse(t: Tree): Unit = {
+            t match {
+              case c: ClassDef if c.symbol != NoSymbol && !c.symbol.isAnonymousClass =>
+                val name = c.symbol.fullName
+                val pkg = c.symbol.owner.fullName
+                val bases = c.symbol.asClass.baseClasses.map(_.fullName)
+                val isBundle = bases.contains("chisel3.Bundle") && c.impl.parents.exists(_.tpe.typeSymbol.fullName == "chisel3.Bundle")
+                val isModule = bases.contains("chisel3.RawModule") && !c.mods.isTrait && !c.symbol.isAbstractClass
+                if (isBundle || isModule) leanTrees(name) = (c, if (pkg == "<empty>") "" else pkg, isModule)
+              case _ =>
+            }
+            super.traverse(t)
+          }
+        }.traverse(unit.body)
+        return
+      }
       val packageDef  = unit.body.asInstanceOf[PackageDef]
       val packageName = packageDef.pid.toString()
 

@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\Rejected.scala:81: error: [chisel2lean] Only Int and Boolean constructor parameters are supported
+class StringParameter(label: String) extends Module {
+       ^
+1 error

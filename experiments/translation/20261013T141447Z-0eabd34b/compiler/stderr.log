@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\xiangshan\src\main\scala\xiangshan\backend\fu\Alu.scala:69: error: [chisel2lean] Frontend could not represent this module: MatchError: type FoldedHistoryInfo = (Int, Int) (of class scala.reflect.internal.Trees$TypeDef)
+class RightShiftModule(implicit p: Parameters) extends XSModule {
+      ^
+1 error

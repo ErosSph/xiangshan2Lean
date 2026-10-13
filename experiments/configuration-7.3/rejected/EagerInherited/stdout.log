@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\Rejected.scala:16: error: [chisel2lean] Eager inherited configuration vals may read uninitialized Parameters; use def
+trait EagerConfig extends ConfigParams { val eager = width }
+                                              ^
+1 error

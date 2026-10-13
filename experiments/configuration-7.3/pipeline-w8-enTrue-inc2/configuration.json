@@ -1,0 +1,73 @@
+{
+  "format": "chisel2lean-configuration-v1",
+  "module": "configuration.ConfiguredPipeline",
+  "parameters": {
+    "inc": 2,
+    "cfg_p_configuration_CoreKey_width": 8,
+    "cfg_p_configuration_CoreKey_enabled": true,
+    "cfg_p_configuration_CoreKey_nested_offset": 3
+  },
+  "factories": {
+    "p": {
+      "class": "configuration.TestConfig",
+      "args": [
+        8,
+        true,
+        3
+      ]
+    }
+  },
+  "constructor": {
+    "inc": 2
+  },
+  "class_sha256": {
+    "configuration.TestConfig": "7c3e863b5c70103b0648c240fe34e7277b75812712c3b3f410826435dd0f082a",
+    "configuration.ConfiguredPipeline": "89a2830a2e2644491b27eb38e0f621c280d997eb3e5a8bd969ace8fe1da4b8c9"
+  },
+  "projection": [
+    {
+      "name": "cfg_p_configuration_CoreKey_width",
+      "kind": "Int",
+      "root": "p",
+      "key": "configuration.CoreKey",
+      "selectors": [
+        "width"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+        "line": 17,
+        "column": 21
+      }
+    },
+    {
+      "name": "cfg_p_configuration_CoreKey_enabled",
+      "kind": "Bool",
+      "root": "p",
+      "key": "configuration.CoreKey",
+      "selectors": [
+        "enabled"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+        "line": 18,
+        "column": 23
+      }
+    },
+    {
+      "name": "cfg_p_configuration_CoreKey_nested_offset",
+      "kind": "Int",
+      "root": "p",
+      "key": "configuration.CoreKey",
+      "selectors": [
+        "nested",
+        "offset"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+        "line": 19,
+        "column": 29
+      }
+    }
+  ],
+  "chisel_version": "7.3.0"
+}

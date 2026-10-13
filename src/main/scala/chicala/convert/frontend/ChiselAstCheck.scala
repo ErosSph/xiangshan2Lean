@@ -6,7 +6,7 @@ trait ChiselAstCheck extends Utils { this: Scala2Reader =>
   val global: Global
   import global._
 
-  def isChisel3Package(tree: Tree): Boolean = tree.toString() == "chisel3.`package`"
+  def isChisel3Package(tree: Tree): Boolean = Set("chisel3.`package`", "chisel3")(tree.toString())
 
   def isChisel3WhenApply(tree: Tree): Boolean = tree.toString() == "chisel3.when.apply"
 
@@ -18,7 +18,7 @@ trait ChiselAstCheck extends Utils { this: Scala2Reader =>
   def isChisel3WireApply(tree: Tree): Boolean =
     passThrough(tree)._1.toString() == "chisel3.Wire.apply"
   def isChisel3WireInitApply(tree: Tree): Boolean =
-    passThrough(tree)._1.toString() == "chisel3.`package`.WireInit.apply"
+    Set("chisel3.`package`.WireInit.apply", "chisel3.WireInit.apply")(passThrough(tree)._1.toString())
   def isChisel3VecInitDoApply(tree: Tree): Boolean =
     passThrough(tree)._1.toString() == "chisel3.VecInit.do_apply"
 
@@ -35,7 +35,7 @@ trait ChiselAstCheck extends Utils { this: Scala2Reader =>
   def isChisel3RegNextApply(tree: Tree): Boolean =
     chicala.ChicalaConfig.backend == "lean" && passThrough(tree)._1.toString() == "chisel3.RegNext.apply"
   def isChisel3UtilRegEnableApply(tree: Tree): Boolean =
-    passThrough(tree)._1.toString() == "chisel3.util.RegEnable.apply"
+    Set("chisel3.util.RegEnable.apply", "chisel3.util.RegEnable.do_apply")(passThrough(tree)._1.toString())
 
   def isChisel3ModuleDoApply(tree: Tree): Boolean =
     passThrough(tree)._1.toString() == "chisel3.Module.do_apply"
@@ -71,8 +71,12 @@ trait ChiselAstCheck extends Utils { this: Scala2Reader =>
 
   def isReturnAssert(tree: Tree): Boolean = tree.tpe.toString().endsWith(": chisel3.assert.Assert")
 
-  def isSourceInfoFun(fun: Tree): Boolean =
-    fun.tpe.toString().startsWith("(implicit sourceInfo: chisel3.internal.sourceinfo.SourceInfo")
+  def isSourceInfoFun(fun: Tree): Boolean = fun.tpe match {
+    case MethodType(parameters, _) if parameters.nonEmpty =>
+      parameters.forall(p => Set("chisel3.experimental.SourceInfo", "chisel3.internal.sourceinfo.SourceInfo")(p.tpe.typeSymbol.fullName)) &&
+        fun.symbol != null && fun.symbol != NoSymbol && fun.symbol.owner.fullName.startsWith("chisel3.")
+    case _ => false
+  }
   def isCompileOptionsFun(fun: Tree): Boolean =
     fun.tpe.toString().startsWith("(implicit compileOptions: chisel3.CompileOptions):")
   def isReflectClassTagFun(fun: Tree): Boolean =

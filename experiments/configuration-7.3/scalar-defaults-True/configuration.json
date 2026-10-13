@@ -1,0 +1,48 @@
+{
+  "format": "chisel2lean-configuration-v1",
+  "module": "configuration.ScalarDefaults",
+  "parameters": {
+    "cfg_p_configuration_ScalarKey": 5,
+    "cfg_p_configuration_FlagKey": true
+  },
+  "factories": {
+    "p": {
+      "class": "configuration.ScalarConfig",
+      "args": [
+        true
+      ]
+    }
+  },
+  "constructor": {},
+  "class_sha256": {
+    "configuration.ScalarConfig": "659817cb22af54a1f837601a98d7c62f110bf0d879b81a6765d726e6a9e82ed5",
+    "configuration.ScalarDefaults": "0b5f861632a882ff8946503584781b919aee44a208dabd8e4af9359e80289d6f"
+  },
+  "projection": [
+    {
+      "name": "cfg_p_configuration_ScalarKey",
+      "kind": "Int",
+      "root": "p",
+      "key": "configuration.ScalarKey",
+      "selectors": [],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+        "line": 66,
+        "column": 24
+      }
+    },
+    {
+      "name": "cfg_p_configuration_FlagKey",
+      "kind": "Bool",
+      "root": "p",
+      "key": "configuration.FlagKey",
+      "selectors": [],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+        "line": 67,
+        "column": 27
+      }
+    }
+  ],
+  "chisel_version": "7.3.0"
+}

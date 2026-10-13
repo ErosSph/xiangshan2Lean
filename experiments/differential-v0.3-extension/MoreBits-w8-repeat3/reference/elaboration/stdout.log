@@ -1,0 +1,5 @@
+[warn] \audit\src\main\scala\Mainstream.scala 73:11: [W003] Dynamic index with width 2 is too small for extractee of width 8
+[warn]   bit := a(shift)
+[warn]           ^
+[warn] There were 1 warning(s) during hardware elaboration.
+Official Chisel 7.3.0 / CIRCT firtool RTL: E:\ICT\chisel2lean4\experiments\differential-v0.3-extension\MoreBits-w8-repeat3\reference\rtl\Chisel2LeanReference.v

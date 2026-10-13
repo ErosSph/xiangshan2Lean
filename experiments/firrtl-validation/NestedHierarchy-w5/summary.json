@@ -1,0 +1,19 @@
+{
+  "case": "NestedHierarchy-w5",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\NestedHierarchy-w5",
+  "passed": true,
+  "firrtl_sha256": "c40edf5dc7739a61d475cda3f50b5dd82336a92650d6cdeefc13c2a80cd49d56",
+  "cycles": 48,
+  "output_comparisons": 95,
+  "initial_state": {
+    "child.a.r": 0,
+    "child.b.r": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "io.en": "io_en",
+    "io.in": "io_in",
+    "io.out": "io_out"
+  }
+}

@@ -38,6 +38,9 @@ trait CTermsLoader { self: Scala2Reader =>
     def apply(cInfo: CircuitInfo, tr: Tree): Option[(CircuitInfo, Option[CApply])] = {
       val (tree, tpt) = passThrough(tr)
       tree match {
+        case Apply(first @ Apply(fun, earlier), later) if passThrough(fun)._1.toString == "chisel3.util.MuxLookup.apply" =>
+          val tpe = SignalTypeLoader.fromTpt(tpt).get.setInferredWidth
+          Some((cInfo, Some(CApply(MuxLookup, tpe, (earlier ++ later).map(MTermLoader(cInfo, _).get._2.get)))))
         case Apply(fun, args) if chicala.ChicalaConfig.backend == "lean" && isChisel3VecInitDoApply(fun) =>
           Some((cInfo, Some(vecInit(cInfo, args))))
         case Apply(Select(qualifier, name), args) if isChiselSignalType(qualifier) =>

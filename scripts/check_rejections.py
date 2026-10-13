@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import argparse
 from pathlib import Path
 import subprocess
 import sys
@@ -11,7 +12,12 @@ from differential import initial_state
 
 
 def main():
-    output = ROOT / "experiments" / "rejections-v0.2"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--generated", type=Path, default=ROOT / "generated/chisel7")
+    parser.add_argument("--evidence", type=Path, default=ROOT / "experiments/rejections-v0.3")
+    args = parser.parse_args()
+    args.generated = args.generated.resolve()
+    output = args.evidence
     output.mkdir(parents=True, exist_ok=True)
     cases = ["CombinationalCycle", "UnconnectedOutput", "ChangedReset", "ConditionalDeclaration",
              "HostSideEffect", "StringParameter", "MultipleMemoryWrites",
@@ -45,7 +51,7 @@ def main():
     for index, (name, parameters) in enumerate(domain_cases):
         rejected = False
         try:
-            simulate(ROOT / "generated" / "probes" / (name + ".ir.json"), parameters,
+            simulate(args.generated / "probes" / (name + ".ir.json"), parameters,
                      [{"inputs": {}}], None, output / f"domain-{index}")
         except ValueError as error:
             rejected = "legal domain" in str(error)
@@ -57,14 +63,14 @@ def main():
         ("RegisterFile", {"n": 3, "w": 4}, {"write": False, "waddr": 0, "raddr": 3, "data": 0})]
     for index, (name, parameters, values) in enumerate(undefined_cases):
         directory = output / f"undefined-{index}"
-        code, _ = simulate(ROOT / "generated" / "probes" / (name + ".ir.json"), parameters,
+        code, _ = simulate(args.generated / "probes" / (name + ".ir.json"), parameters,
                            [{"inputs": values}], None, directory)
         message = (directory / "execution" / "stderr.log").read_text(encoding="utf-8")
         rejected = code != 0 and "Undefined output operation" in message
         results.append({"module": name, "status": "PASS" if rejected else "FAIL", "kind": "undefined-trace"})
         print(f"{name}: {'undefined input rejected' if rejected else 'FAIL'}", flush=True)
     for label, write, read in [("disabled", False, False), ("collision", True, True)]:
-        path = ROOT / "generated" / "probes" / "SyncMemory.ir.json"
+        path = args.generated / "probes" / "SyncMemory.ir.json"
         ir = json.loads(path.read_text(encoding="utf-8"))
         params = {"n": 3, "w": 4}
         values = {"write": write, "readEnable": read, "waddr": 1, "raddr": 1, "data": 7}

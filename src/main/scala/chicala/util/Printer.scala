@@ -7,7 +7,8 @@ trait Printer extends Format {
   import global._
 
   def unprocessedTree(tree: Tree, from: String) = {
-    val report = if (chicala.ChicalaConfig.backend == "lean") reporter.error _ else reporter.warning _
+    val report: (Position, String) => Unit = if (chicala.ChicalaConfig.backend == "lean")
+      (pos, msg) => reporter.error(pos, msg) else (pos, msg) => reporter.warning(pos, msg)
     report(
       tree.pos,
       s"""not processed in ${from}:

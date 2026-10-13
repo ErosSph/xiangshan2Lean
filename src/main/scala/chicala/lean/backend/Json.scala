@@ -33,10 +33,12 @@ object Json {
     "kind" -> str(s.kind), "type" -> hwType(s.tpe), "source" -> source(s.source))
   def expression(e: TypedExpr): String = obj("kind" -> str(e.kind), "type" -> hwType(e.tpe),
     "name" -> str(e.name), "params" -> arr(e.params.map(param)), "args" -> arr(e.args.map(expression)))
-  def module(n: Normalized): String = obj(
+  def module(n: Normalized, chiselVersion: Option[String] = Some("7.3.0"),
+             metadata: List[(String, String)] = Nil, resetMode: Option[String] = None): String = {
+    val base = obj(
     "format" -> str("chisel2lean-ir-v2"), "module" -> str(n.module.name),
     "namespace" -> str(LeanEmitter.namespace(n.module.name)), "leanVersion" -> str("4.19.0"),
-    "chiselVersion" -> str("3.5.6"), "reset" -> str(if (n.next.isEmpty) "none-combinational" else "single-clock-synchronous-active-high"),
+    "chiselVersion" -> chiselVersion.map(str).getOrElse("null"), "reset" -> str(resetMode.getOrElse(if (n.next.isEmpty) "none-combinational" else "single-clock-synchronous-active-high")),
     "definedness" -> str("executable-predicates"),
     "source" -> source(n.module.source),
     "parameters" -> arr(n.module.parameters.map(p => obj("name" -> str(p.name), "field" -> str(LeanEmitter.field(p.name)), "kind" -> str(p.kind)))),
@@ -44,4 +46,6 @@ object Json {
     "next" -> arr(n.next.map { case (s, e) => obj("signal" -> str(s.name), "expression" -> expression(e)) }),
     "outputs" -> arr(n.outputs.map { case (s, e) => obj("signal" -> str(s.name), "expression" -> expression(e)) }),
     "resets" -> arr(n.resets.map { case (s, e) => obj("signal" -> str(s.name), "expression" -> expression(e)) }))
+    if (metadata.isEmpty) base else base.dropRight(1) + metadata.map { case (k, v) => "," + str(k) + ":" + v }.mkString + "}"
+  }
 }

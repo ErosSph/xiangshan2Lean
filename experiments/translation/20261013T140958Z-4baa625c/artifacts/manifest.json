@@ -1,0 +1,23 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala"
+  ],
+  "modules": [
+    {
+      "module": "configuration.ConfiguredPipeline",
+      "namespace": "configuration.ConfiguredPipeline",
+      "ir": "configuration/ConfiguredPipeline.ir.json",
+      "lean": "configuration/ConfiguredPipeline.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala": "f90da6f2a5296035158603e1b31bd9b7f84260824afb403676d1fe3f589192df"
+  },
+  "compiler_sha256": "8cd0c57b2edc0b116d4514f3dd8aab23b75f2d28506a0b68c7e3ea1710a5b3a7",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T140958Z-4baa625c"
+}

@@ -24,8 +24,8 @@ trait CClassDefsLoader { self: Scala2Reader =>
     )(implicit
         readerInfo: ReaderInfo
     ): Option[(ReaderInfo, Option[ModuleDef])] = tree match {
-      // only Class inherits chisel3.Module directly
-      case ClassDef(mods, name, tparams, Template(parents, self, body)) if parents.exists {
+      case c @ ClassDef(mods, name, tparams, Template(parents, self, body)) if
+          (chicala.ChicalaConfig.backend == "lean" && c.symbol.asClass.baseClasses.exists(_.fullName == "chisel3.RawModule")) || parents.exists {
             case Select(Ident(TermName("chisel3")), TypeName("Module")) => true
             case Select(Ident(TermName("chisel3")), TypeName("RawModule")) if chicala.ChicalaConfig.backend == "lean" => true
             case p if chicala.ChicalaConfig.backend == "lean" => Set("chisel3.Module", "chisel3.RawModule")(p.tpe.typeSymbol.fullName)

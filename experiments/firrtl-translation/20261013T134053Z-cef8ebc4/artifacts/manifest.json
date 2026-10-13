@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-edge\\ResetFromInput-w3\\reference\\rtl\\ResetFromInput.fir",
+  "source_sha256": "518ebb62dbc50b217b21b4c87a141c468524cd68afad54ed8933461b850340cb",
+  "compiler_sha256": "40937bde440f25efce307092d88ce4cb3c4afe623d02f93576c699c22f8d417b",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.ResetFromInput",
+      "top": "ResetFromInput",
+      "ir": "FIRRTL/ResetFromInput.ir.json",
+      "lean": "FIRRTL/ResetFromInput.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T134053Z-cef8ebc4"
+}

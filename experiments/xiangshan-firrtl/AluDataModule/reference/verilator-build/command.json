@@ -1,0 +1,26 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "AluDataModule",
+    "--Mdir",
+    "obj_dir",
+    "AluDataModule.v",
+    "trace.cpp"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-firrtl\\AluDataModule\\original",
+  "started_at": "2026-10-13T14:51:11.975647+00:00"
+}

@@ -67,7 +67,9 @@ trait COpsLoader { self: Scala2Reader =>
     )
 
     def apply(opName: String): Option[COp] = {
-      if (nameToObj.contains(opName)) Some(nameToObj(opName))
+      val canonical = if (opName.startsWith("chisel3.util.") && opName.endsWith(".do_apply"))
+        opName.stripSuffix(".do_apply") + ".apply" else opName
+      if (nameToObj.contains(canonical)) Some(nameToObj(canonical))
       else None
     }
   }

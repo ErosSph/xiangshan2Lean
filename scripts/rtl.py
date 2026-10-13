@@ -6,7 +6,7 @@ import json
 import os
 from pathlib import Path
 import shutil
-from common import ROOT, java_executable, run_logged
+from common import ROOT, java_executable, run_logged, rtl_environment
 
 
 def native_environment():
@@ -58,9 +58,14 @@ def run_rtl(ir_path: Path, parameters: dict, trace: list[dict], evidence: Path) 
         values.append(str(v).lower() if isinstance(v, bool) else str(v))
     command = [java_executable(), "-Xmx2g", "-cp", classpath_file.read_text(encoding="utf-8").strip(),
                "reference.GenerateRTL", ir["module"], str(directory), *values]
-    if code := run_logged(command, evidence / "elaboration", echo=False):
+    if code := run_logged(command, evidence / "elaboration", env=rtl_environment(), echo=False):
         return code, []
     metadata = json.loads((directory / "ports.json").read_text(encoding="utf-8"))
+    return run_emitted_rtl(directory, metadata, trace, evidence)
+
+
+def run_emitted_rtl(directory: Path, metadata: dict, trace: list[dict], evidence: Path) -> tuple[int, list[dict]]:
+    """Execute an independently emitted RTL circuit with its declared interface."""
     ports = metadata["ports"]
     has_clock = metadata["clocked"] and any(p["name"] == "clock" for p in ports)
     has_reset = metadata["clocked"] and any(p["name"] == "reset" for p in ports)

@@ -1,0 +1,23 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "3.5.6",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\examples\\SaturatingAccumulator.scala"
+  ],
+  "modules": [
+    {
+      "module": "walkthrough.SaturatingAccumulator",
+      "namespace": "walkthrough.SaturatingAccumulator",
+      "ir": "walkthrough/SaturatingAccumulator.ir.json",
+      "lean": "walkthrough/SaturatingAccumulator.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\examples\\SaturatingAccumulator.scala": "12c81600ff270420b30b197e7bd48eee7c50427a9da9e189a38e2a9448370c88"
+  },
+  "compiler_sha256": "b529982427922b1b9383e0b36f0485443a934dd4ce71f17db4b4a8b4d1828df9",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T082052Z-baac36f0"
+}

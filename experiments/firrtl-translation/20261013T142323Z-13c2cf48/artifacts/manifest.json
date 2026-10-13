@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\SignedArithmetic-w65\\reference\\rtl\\SignedArithmetic.fir",
+  "source_sha256": "2d54559d57928dfd3f0d95624d780f8c553aff734b0bb68af5cf73215b29bea9",
+  "compiler_sha256": "bacf056d5839a33f7a1dc43710e1b24aa33d75b2f6d2125677ff3a5025a7092f",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.SignedArithmetic",
+      "top": "SignedArithmetic",
+      "ir": "FIRRTL/SignedArithmetic.ir.json",
+      "lean": "FIRRTL/SignedArithmetic.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T142323Z-13c2cf48"
+}

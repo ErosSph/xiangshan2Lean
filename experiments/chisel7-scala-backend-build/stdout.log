@@ -1,0 +1,93 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (11223 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] Wrote E:\ICT\chisel2lean4\target\scala-2.13\chicala_2.13-0.2.0-SNAPSHOT.pom
+[info] Main Scala API documentation to E:\ICT\chisel2lean4\target\scala-2.13\api...
+[info] Main Scala API documentation successful.
+[info] :: delivering :: cn.ac.ios.tis#chicala_2.13;0.2.0-SNAPSHOT :: 0.2.0-SNAPSHOT :: integration :: Tue Oct 13 23:02:01 HKT 2026
+[info] 	delivering ivy file to E:\ICT\chisel2lean4\target\scala-2.13\ivy-0.2.0-SNAPSHOT.xml
+[info] 	published chicala_2.13 to E:\ICT\chisel2lean4\.cache\ivy\local\cn.ac.ios.tis\chicala_2.13\0.2.0-SNAPSHOT\poms\chicala_2.13.pom
+[info] 	published chicala_2.13 to E:\ICT\chisel2lean4\.cache\ivy\local\cn.ac.ios.tis\chicala_2.13\0.2.0-SNAPSHOT\jars\chicala_2.13.jar
+[info] 	published chicala_2.13 to E:\ICT\chisel2lean4\.cache\ivy\local\cn.ac.ios.tis\chicala_2.13\0.2.0-SNAPSHOT\srcs\chicala_2.13-sources.jar
+[info] 	published chicala_2.13 to E:\ICT\chisel2lean4\.cache\ivy\local\cn.ac.ios.tis\chicala_2.13\0.2.0-SNAPSHOT\docs\chicala_2.13-javadoc.jar
+[info] 	published ivy to E:\ICT\chisel2lean4\.cache\ivy\local\cn.ac.ios.tis\chicala_2.13\0.2.0-SNAPSHOT\ivys\ivy.xml
+[success] Total time: 41 s, completed 2026年10月13日 下午11:02:01
+[success] Total time: 0 s, completed 2026年10月13日 下午11:02:01
+[info] compiling 9 Scala sources to E:\ICT\chisel2lean4\testcase\target\scala-2.13\classes ...
+[error] E:\ICT\chisel2lean4\testcase\src\main\scala\example\xiangshan\Multiplier.scala:70:24: overloaded method apply with alternatives:
+[error]   (x: BigInt,y: BigInt)chisel3.UInt <and>
+[error]   (x: Int,y: Int)chisel3.UInt <and>
+[error]   (x: chisel3.UInt)chisel3.Bool <and>
+[error]   (x: Int)chisel3.Bool <and>
+[error]   (x: BigInt)chisel3.Bool
+[error]  cannot be applied to ()
+[error]   neg_b   := (~b_sext).asUInt()
+[error]                        ^
+[error] E:\ICT\chisel2lean4\testcase\src\main\scala\example\xiangshan\Multiplier.scala:135:27: overloaded method apply with alternatives:
+[error]   (x: BigInt,y: BigInt)chisel3.UInt <and>
+[error]   (x: Int,y: Int)chisel3.UInt <and>
+[error]   (x: chisel3.UInt)chisel3.Bool <and>
+[error]   (x: Int)chisel3.Bool <and>
+[error]   (x: BigInt)chisel3.Bool
+[error]  cannot be applied to ()
+[error]       sum = c22.io.out(0).asBool() +: cin
+[error]                           ^
+[error] E:\ICT\chisel2lean4\testcase\src\main\scala\example\xiangshan\Multiplier.scala:136:33: overloaded method apply with alternatives:
+[error]   (x: BigInt,y: BigInt)chisel3.UInt <and>
+[error]   (x: Int,y: Int)chisel3.UInt <and>
+[error]   (x: chisel3.UInt)chisel3.Bool <and>
+[error]   (x: Int)chisel3.Bool <and>
+[error]   (x: BigInt)chisel3.Bool
+[error]  cannot be applied to ()
+[error]       cout2 = Seq(c22.io.out(1).asBool())
+[error]                                 ^
+[error] E:\ICT\chisel2lean4\testcase\src\main\scala\example\xiangshan\Multiplier.scala:140:27: overloaded method apply with alternatives:
+[error]   (x: BigInt,y: BigInt)chisel3.UInt <and>
+[error]   (x: Int,y: Int)chisel3.UInt <and>
+[error]   (x: chisel3.UInt)chisel3.Bool <and>
+[error]   (x: Int)chisel3.Bool <and>
+[error]   (x: BigInt)chisel3.Bool
+[error]  cannot be applied to ()
+[error]       sum = c32.io.out(0).asBool() +: cin
+[error]                           ^
+[error] E:\ICT\chisel2lean4\testcase\src\main\scala\example\xiangshan\Multiplier.scala:141:33: overloaded method apply with alternatives:
+[error]   (x: BigInt,y: BigInt)chisel3.UInt <and>
+[error]   (x: Int,y: Int)chisel3.UInt <and>
+[error]   (x: chisel3.UInt)chisel3.Bool <and>
+[error]   (x: Int)chisel3.Bool <and>
+[error]   (x: BigInt)chisel3.Bool
+[error]  cannot be applied to ()
+[error]       cout2 = Seq(c32.io.out(1).asBool())
+[error]                                 ^
+[error] E:\ICT\chisel2lean4\testcase\src\main\scala\example\xiangshan\Multiplier.scala:145:31: overloaded method apply with alternatives:
+[error]   (x: BigInt,y: BigInt)chisel3.UInt <and>
+[error]   (x: Int,y: Int)chisel3.UInt <and>
+[error]   (x: chisel3.UInt)chisel3.Bool <and>
+[error]   (x: Int)chisel3.Bool <and>
+[error]   (x: BigInt)chisel3.Bool
+[error]  cannot be applied to ()
+[error]       sum = Seq(c53.io.out(0).asBool()) ++ (if (cin.nonEmpty) cin.drop(1) else Nil)
+[error]                               ^
+[error] E:\ICT\chisel2lean4\testcase\src\main\scala\example\xiangshan\Multiplier.scala:146:33: overloaded method apply with alternatives:
+[error]   (x: BigInt,y: BigInt)chisel3.UInt <and>
+[error]   (x: Int,y: Int)chisel3.UInt <and>
+[error]   (x: chisel3.UInt)chisel3.Bool <and>
+[error]   (x: Int)chisel3.Bool <and>
+[error]   (x: BigInt)chisel3.Bool
+[error]  cannot be applied to ()
+[error]       cout1 = Seq(c53.io.out(1).asBool())
+[error]                                 ^
+[error] E:\ICT\chisel2lean4\testcase\src\main\scala\example\xiangshan\Multiplier.scala:147:33: overloaded method apply with alternatives:
+[error]   (x: BigInt,y: BigInt)chisel3.UInt <and>
+[error]   (x: Int,y: Int)chisel3.UInt <and>
+[error]   (x: chisel3.UInt)chisel3.Bool <and>
+[error]   (x: Int)chisel3.Bool <and>
+[error]   (x: BigInt)chisel3.Bool
+[error]  cannot be applied to ()
+[error]       cout2 = Seq(c53.io.out(2).asBool())
+[error]                                 ^
+[error] 8 errors found
+[error] (testcase / Compile / compileIncremental) Compilation failed
+[error] Total time: 8 s, completed 2026年10月13日 下午11:02:09

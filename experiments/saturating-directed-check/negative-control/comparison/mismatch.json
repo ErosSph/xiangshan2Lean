@@ -1,0 +1,16 @@
+{
+  "cycle": 6,
+  "sampling": "post",
+  "expected": {
+    "value": 15,
+    "overflow": true
+  },
+  "lean": {
+    "value": 15,
+    "overflow": false
+  },
+  "rtl": {
+    "value": 15,
+    "overflow": false
+  }
+}

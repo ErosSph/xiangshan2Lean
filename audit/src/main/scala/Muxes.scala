@@ -14,9 +14,9 @@ class MuxPriorities(val w: Int) extends RawModule {
   val muxcase = IO(Output(UInt(w.W)))
   val priority = IO(Output(UInt(w.W)))
   val widthCheck = IO(Output(UInt((w + 1).W)))
-  lookup := MuxLookup(sel, 0.U, Seq(0.U -> a, 0.U -> b, 1.U -> c))
+  lookup := MuxLookup(sel, 0.U)(Seq(0.U -> a, 0.U -> b, 1.U -> c))
   muxcase := MuxCase(c, Seq(x -> a, y -> b))
   priority := PriorityMux(Seq(x -> a, y -> b, true.B -> c))
-  val exhaustive = MuxLookup(sel, 255.U(8.W), Seq(0.U -> a, 1.U -> b, 2.U -> c, 3.U -> a))
+  val exhaustive = MuxLookup(sel, 255.U(8.W))(Seq(0.U -> a, 1.U -> b, 2.U -> c, 3.U -> a))
   widthCheck := exhaustive +& 1.U
 }

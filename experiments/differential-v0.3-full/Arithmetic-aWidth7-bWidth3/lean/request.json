@@ -1,0 +1,393 @@
+{
+  "parameters": {
+    "aWidth": 7,
+    "bWidth": 3
+  },
+  "trace": [
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 117,
+        "io.b": 3,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 121,
+        "io.b": 1,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 13,
+        "io.b": 3,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 4,
+        "io.b": 3,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 63,
+        "io.b": 2,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 115,
+        "io.b": 7,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 11,
+        "io.b": 2,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 46,
+        "io.b": 5,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 106,
+        "io.b": 5,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 121,
+        "io.b": 7,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 117,
+        "io.b": 6,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 78,
+        "io.b": 0,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 107,
+        "io.b": 3,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 11,
+        "io.b": 7,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 120,
+        "io.b": 7,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 6,
+        "io.b": 6,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 107,
+        "io.b": 3,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 50,
+        "io.b": 3,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 122,
+        "io.b": 1,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 10,
+        "io.b": 3,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 39,
+        "io.b": 7,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 92,
+        "io.b": 6,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 22,
+        "io.b": 0,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 49,
+        "io.b": 7,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 100,
+        "io.b": 1,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 83,
+        "io.b": 4,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 118,
+        "io.b": 7,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 11,
+        "io.b": 4,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 56,
+        "io.b": 5,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 70,
+        "io.b": 4,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 91,
+        "io.b": 4,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 59,
+        "io.b": 5,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 53,
+        "io.b": 3,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 31,
+        "io.b": 5,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 71,
+        "io.b": 7,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 95,
+        "io.b": 7,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 60,
+        "io.b": 5,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 35,
+        "io.b": 5,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 105,
+        "io.b": 0,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 50,
+        "io.b": 1,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 94,
+        "io.b": 0,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 106,
+        "io.b": 1,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 87,
+        "io.b": 2,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 97,
+        "io.b": 0,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 4,
+        "io.b": 7,
+        "io.choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 63,
+        "io.b": 3,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 109,
+        "io.b": 1,
+        "io.choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.a": 105,
+        "io.b": 6,
+        "io.choose": true
+      }
+    }
+  ],
+  "initial_state": null
+}

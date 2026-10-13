@@ -1,8 +1,8 @@
 package reference
 
 import chisel3._
-import chisel3.experimental.DataMirror
-import chisel3.stage.ChiselStage
+import chisel3.reflect.DataMirror
+import circt.stage.ChiselStage
 import java.nio.file.{Files, Paths}
 import java.nio.charset.StandardCharsets
 
@@ -22,36 +22,55 @@ object GenerateRTL {
       case (t, v) if t == java.lang.Boolean.TYPE => java.lang.Boolean.valueOf(v)
       case _ => throw new IllegalArgumentException("Unsupported reference constructor type")
     }
-    var elaborated: RawModule = null
-    def create(): RawModule = {
-      val m = constructor.newInstance(values.map(_.asInstanceOf[AnyRef]): _*).asInstanceOf[RawModule]
-      elaborated = m
-      m
+    emit(() => constructor.newInstance(values.map(_.asInstanceOf[AnyRef]): _*).asInstanceOf[RawModule], args(0), args(1))
+  }
+
+  def emit(factory: () => RawModule, moduleName: String, output: String): Unit = {
+    val directory = Paths.get(output).toAbsolutePath
+    Files.createDirectories(directory)
+    var original: RawModule = null
+    var mirrored = List.empty[(String, String, String, Int, Boolean)]
+    // Legal, unique wrapper ports avoid guessing CIRCT's keyword/collision
+    // renaming. The original class and every hardware statement remain intact.
+    class ReferencePorts extends Module {
+      override def desiredName = "Chisel2LeanReference"
+      original = Module(factory())
+      val clocked = original.isInstanceOf[Module]
+      var serial = 0
+      def expose(path: String, data: Data): Unit = data match {
+        case b: Bundle => b.elements.toList.sortBy(_._1).foreach { case (n, d) => expose(path + "." + n, d) }
+        case v: Vec[_] => v.toList.zipWithIndex.foreach { case (d, i) => expose(path + "." + i, d) }
+        case leaf if clocked && (path == "clock" || path == "reset") =>
+          mirrored :+= ((path, path, "input", 1, false))
+        case leaf =>
+          val direction = DataMirror.directionOf(leaf).toString.toLowerCase
+          val name = "c2l_port_" + serial
+          serial += 1
+          val port = if (direction == "input") IO(Input(chiselTypeOf(leaf))) else IO(Output(chiselTypeOf(leaf)))
+          port.suggestName(name)
+          if (direction == "input") leaf := port else port := leaf
+          mirrored :+= ((path, name, direction, leaf.getWidth, leaf.isInstanceOf[SInt]))
+      }
+      DataMirror.modulePorts(original).foreach { case (n, d) => expose(n, d) }
     }
-    val verilog = (new ChiselStage).emitVerilog(create(), Array("--target-dir", directory.toString))
+    var elaborated: RawModule = null
+    def create(): RawModule = { elaborated = new ReferencePorts; elaborated }
+    val verilog = ChiselStage.emitSystemVerilog(create(), Array.empty[String],
+      Array("--disable-all-randomization", "--default-layer-specialization=enable"))
     val top = elaborated.desiredName
     Files.write(directory.resolve(top + ".v"), verilog.getBytes(StandardCharsets.UTF_8))
     val header = verilog.substring(verilog.indexOf("module " + top + "(")).takeWhile(_ != ';')
-    val emittedNames = "(?m)^\\s*(?:input|output)\\s+(?:wire\\s+)?(?:\\[[^\\]]+\\]\\s+)?([a-zA-Z_][a-zA-Z0-9_$]*)".r
-      .findAllMatchIn(header).map(_.group(1)).toSet
+    val emittedNames = "(?m)//[^\\r\\n]*".r.replaceAllIn(header, "").split(',').flatMap { declaration =>
+      "[a-zA-Z_][a-zA-Z0-9_$]*".r.findAllIn(declaration).toList.lastOption
+    }.toSet
     def quote(value: String): String = "\"" + value.replace("\\", "\\\\").replace("\"", "\\\"") + "\""
-    def flatten(path: String, data: Data): List[String] = data match {
-      case b: Bundle => b.elements.toList.sortBy(_._1).flatMap { case (n, d) => flatten(path + "." + n, d) }
-      case v: Vec[_] => v.toList.zipWithIndex.flatMap { case (d, i) => flatten(path + "." + i, d) }
-      case leaf =>
-        val direction = DataMirror.directionOf(leaf).toString.toLowerCase
-        val width = leaf.getWidth
-        val signed = leaf.isInstanceOf[SInt]
-        var emitted = path.replace('.', '_')
-        var attempts = 0
-        while (width > 0 && !emittedNames(emitted) && attempts < 32) { emitted += "_"; attempts += 1 }
-        require(width == 0 || emittedNames(emitted), s"Cannot map source port $path into official emitted RTL")
-        List(s"{\"name\":${quote(path)},\"rtl_name\":${quote(emitted)},\"direction\":${quote(direction)},\"width\":$width,\"signed\":$signed}")
+    val ports = mirrored.map { case (path, emitted, direction, width, signed) =>
+      require(width == 0 || emittedNames(emitted), s"Missing stable reference port $path/$emitted")
+      s"{\"name\":${quote(path)},\"rtl_name\":${quote(emitted)},\"direction\":${quote(direction)},\"width\":$width,\"signed\":$signed}"
     }
-    val ports = DataMirror.modulePorts(elaborated).toList.flatMap { case (n, d) => flatten(n, d) }
-    val clocked = elaborated.isInstanceOf[Module]
-    val metadata = s"{\"top\":${quote(top)},\"module\":${quote(args(0))},\"clocked\":$clocked,\"ports\":[${ports.mkString(",")}]}\n"
+    val clocked = original.isInstanceOf[Module]
+    val metadata = s"{\"top\":${quote(top)},\"module\":${quote(moduleName)},\"clocked\":$clocked,\"ports\":[${ports.mkString(",")}]}\n"
     Files.write(directory.resolve("ports.json"), metadata.getBytes(StandardCharsets.UTF_8))
-    println(s"Official Chisel 3.5.6 / Scala FIRRTL RTL: ${directory.resolve(top + ".v")}")
+    println(s"Official Chisel 7.3.0 / CIRCT firtool RTL: ${directory.resolve(top + ".v")}")
   }
 }

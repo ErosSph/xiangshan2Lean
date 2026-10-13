@@ -1,0 +1,25 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Rejected.scala"
+  ],
+  "modules": [
+    {
+      "module": "rejectedconfiguration.OverrideVal",
+      "namespace": "rejectedconfiguration.OverrideVal",
+      "ir": "rejectedconfiguration/OverrideVal.ir.json",
+      "lean": "rejectedconfiguration/OverrideVal.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala": "255851781633178e7672046129b7eb71bb6718544b3f56609ce545b75deada1f",
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Rejected.scala": "2c73e8ddcfb48984ad7411e53593f4f0d3b16a629601de6fb84cf6dd0b54a7c4"
+  },
+  "compiler_sha256": "c8a021007f43ffd694ec4d0c4010afa324513489d05c4b17d5060dea09d9ea41",
+  "lean_checked": false,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T151809Z-b73a8504"
+}

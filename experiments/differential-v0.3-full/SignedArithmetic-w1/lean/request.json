@@ -1,0 +1,32 @@
+{
+  "parameters": {
+    "w": 1
+  },
+  "trace": [
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 1
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 1
+      }
+    }
+  ],
+  "initial_state": null
+}

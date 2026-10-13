@@ -1,0 +1,84 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (10449 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] compiling 65 Scala sources to E:\ICT\chisel2lean4\target\scala-2.13\classes ...
+[info] Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.15. Compiling...
+[info]   Compilation completed in 13.247s.
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\util\Printer.scala:11:11: not enough arguments for method apply: (v1: scala.reflect.internal.util.Position, v2: String, v3: List[scala.reflect.internal.util.CodeAction]): Unit in trait Function3.
+[error] Unspecified value parameter v3.
+[error]     report(
+[error]           ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlAdapter.scala:33:23: wrong number of arguments for pattern firrtl.ir.Reference(name: String, tpe: firrtl.ir.Type)
+[error]       case F.Reference(n, _, _, _) => name(prefix, n)
+[error]                       ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlAdapter.scala:34:22: wrong number of arguments for pattern firrtl.ir.SubField(expr: firrtl.ir.Expression, name: String, tpe: firrtl.ir.Type)
+[error]       case F.SubField(parent, field, _, _) => reference(parent, prefix) + "." + field
+[error]                      ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlAdapter.scala:120:11: value foreachStmt is not a member of firrtl.ir.Statement
+[error]         s.foreachStmt(reserve)
+[error]           ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlAdapter.scala:120:23: missing argument list for method reserve
+[error] Unapplied methods are only converted to functions when a function type is expected.
+[error] You can make this conversion explicit by writing `reserve _` or `reserve(_)` instead of `reserve`.
+[error]         s.foreachStmt(reserve)
+[error]                       ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlAdapter.scala:125:11: value foreachInfo is not a member of firrtl.ir.Statement
+[error]         s.foreachInfo(info => location = source(info))
+[error]           ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlAdapter.scala:152:11: value foreachInfo is not a member of firrtl.ir.Statement
+[error]         s.foreachInfo(info => location = source(info))
+[error]           ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlAdapter.scala:183:23: value reset is not a member of firrtl.ir.DefRegister
+[error]         val value = r.reset match {
+[error]                       ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlAdapter.scala:185:37: value reset is not a member of firrtl.ir.DefRegister
+[error]           case _ => L.Choose(bool(r.reset, scope), expression(r.init, scope), L.Ref(next))
+[error]                                     ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlAdapter.scala:185:65: value init is not a member of firrtl.ir.DefRegister
+[error] did you mean info or wait?
+[error]           case _ => L.Choose(bool(r.reset, scope), expression(r.init, scope), L.Ref(next))
+[error]                                                                 ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlMain.scala:5:8: object CircuitState is not a member of package firrtl
+[error] import firrtl.{CircuitState, ChirrtlForm, LowFirrtlCompiler, Parser}
+[error]        ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlMain.scala:15:25: value parse is not a member of object firrtl.Parser
+[error]     val parsed = Parser.parse(new String(Files.readAllBytes(input), StandardCharsets.UTF_8))
+[error]                         ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlMain.scala:22:23: not found: type LowFirrtlCompiler
+[error]     val lowered = new LowFirrtlCompiler().compile(CircuitState(parsed.copy(main = top), ChirrtlForm), Nil).circuit
+[error]                       ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlMain.scala:22:51: not found: value CircuitState
+[error]     val lowered = new LowFirrtlCompiler().compile(CircuitState(parsed.copy(main = top), ChirrtlForm), Nil).circuit
+[error]                                                   ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlMain.scala:22:89: not found: value ChirrtlForm
+[error]     val lowered = new LowFirrtlCompiler().compile(CircuitState(parsed.copy(main = top), ChirrtlForm), Nil).circuit
+[error]                                                                                         ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:5:8: object CircuitState is not a member of package firrtl
+[error] import firrtl.{CircuitState, ChirrtlForm, LowFirrtlCompiler, Parser, VerilogCompiler}
+[error]        ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:13:25: value parse is not a member of object firrtl.Parser
+[error]     val parsed = Parser.parse(new String(Files.readAllBytes(Paths.get(args(0))), StandardCharsets.UTF_8))
+[error]                         ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:16:19: not found: type LowFirrtlCompiler
+[error]     val low = new LowFirrtlCompiler().compile(CircuitState(circuit, ChirrtlForm), Nil).circuit
+[error]                   ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:16:47: not found: value CircuitState
+[error]     val low = new LowFirrtlCompiler().compile(CircuitState(circuit, ChirrtlForm), Nil).circuit
+[error]                                               ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:16:69: not found: value ChirrtlForm
+[error]     val low = new LowFirrtlCompiler().compile(CircuitState(circuit, ChirrtlForm), Nil).circuit
+[error]                                                                     ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:18:23: not found: type VerilogCompiler
+[error]     val verilog = new VerilogCompiler().compileAndEmit(CircuitState(circuit, ChirrtlForm)).getEmittedCircuit.value
+[error]                       ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:18:56: not found: value CircuitState
+[error]     val verilog = new VerilogCompiler().compileAndEmit(CircuitState(circuit, ChirrtlForm)).getEmittedCircuit.value
+[error]                                                        ^
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:18:78: not found: value ChirrtlForm
+[error]     val verilog = new VerilogCompiler().compileAndEmit(CircuitState(circuit, ChirrtlForm)).getEmittedCircuit.value
+[error]                                                                              ^
+[error] 23 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 32 s, completed 2026年10月13日 下午9:52:03

@@ -35,7 +35,8 @@ trait LeanAdapter { self: Scala2Reader =>
         case ValDef(_, n, _, rhs) if (passThrough(rhs)._1 match {
           case Apply(fun, args) =>
             val name = passThrough(fun)._1.toString
-            (name == "chisel3.RegInit.apply" && args.size == 1) || (name == "chisel3.util.RegEnable.apply" && args.size == 3)
+            (name == "chisel3.RegInit.apply" && args.size == 1) ||
+              (Set("chisel3.util.RegEnable.apply", "chisel3.util.RegEnable.do_apply")(name) && args.size == 3)
           case _ => false
         }) => n.toString.trim
       }.toSet

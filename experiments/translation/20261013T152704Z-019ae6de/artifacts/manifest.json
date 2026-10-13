@@ -1,0 +1,41 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala"
+  ],
+  "modules": [
+    {
+      "module": "configuration.ConfiguredPipeline",
+      "namespace": "configuration.ConfiguredPipeline",
+      "ir": "configuration/ConfiguredPipeline.ir.json",
+      "lean": "configuration/ConfiguredPipeline.lean"
+    },
+    {
+      "module": "configuration.InheritedPrimitive",
+      "namespace": "configuration.InheritedPrimitive",
+      "ir": "configuration/InheritedPrimitive.ir.json",
+      "lean": "configuration/InheritedPrimitive.lean"
+    },
+    {
+      "module": "configuration.ScalarDefaults",
+      "namespace": "configuration.ScalarDefaults",
+      "ir": "configuration/ScalarDefaults.ir.json",
+      "lean": "configuration/ScalarDefaults.lean"
+    },
+    {
+      "module": "configuration.TwoConfigurations",
+      "namespace": "configuration.TwoConfigurations",
+      "ir": "configuration/TwoConfigurations.ir.json",
+      "lean": "configuration/TwoConfigurations.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala": "255851781633178e7672046129b7eb71bb6718544b3f56609ce545b75deada1f"
+  },
+  "compiler_sha256": "696ae04d5cf58f50cbbb0b89ca65867872ecc4820ff1af4d5a5555107b8699f9",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T152704Z-019ae6de"
+}

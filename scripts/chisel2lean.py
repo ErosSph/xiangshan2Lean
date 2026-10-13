@@ -81,7 +81,7 @@ def translate(sources: list[Path], output: Path, module: str | None,
                         "ir": ir_path.relative_to(stage).as_posix(),
                         "lean": ir_path.with_suffix("").with_suffix(".lean").relative_to(stage).as_posix()})
     manifest = {"format": "chisel2lean-manifest-v2", "version": "0.2.0",
-                "lean_version": "4.19.0", "chisel_version": "3.5.6",
+                "lean_version": "4.19.0", "chisel_version": "7.3.0",
                 "sources": [str(s.resolve()) for s in sources], "modules": modules,
                 "source_sha256": {str(s.resolve()): hashlib.sha256(s.read_bytes()).hexdigest() for s in sources},
                 "compiler_sha256": hashlib.sha256(plugin.read_bytes()).hexdigest(),
@@ -104,6 +104,7 @@ def main():
     parser.add_argument("--module", help="qualified or unambiguous short module name")
     parser.add_argument("--out", default=ROOT / "generated", type=Path)
     parser.add_argument("--classpath", help="extra source dependencies, separated by the OS path separator")
+    parser.add_argument("--classpath-file", type=Path, help="file containing the extra dependency classpath")
     parser.add_argument("--check", action=argparse.BooleanOptionalAction, default=True,
                         help="type-check generated Lean with the pinned compiler (default: yes)")
     parser.add_argument("--rebuild", action="store_true", help="rebuild compiler/plugin first")
@@ -111,7 +112,10 @@ def main():
     for source in args.sources:
         if not source.is_file():
             parser.error(f"Source file not found: {source}")
-    return translate(args.sources, args.out.resolve(), args.module, args.classpath, args.check, args.rebuild)
+    extra = args.classpath or ""
+    if args.classpath_file:
+        extra = os.pathsep.join(filter(None, [extra, args.classpath_file.read_text(encoding="utf-8").strip()]))
+    return translate(args.sources, args.out.resolve(), args.module, extra or None, args.check, args.rebuild)
 
 
 if __name__ == "__main__":

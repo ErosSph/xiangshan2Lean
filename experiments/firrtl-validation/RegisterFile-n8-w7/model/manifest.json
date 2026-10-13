@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\RegisterFile-n8-w7\\reference\\rtl\\RegisterFile.fir",
+  "source_sha256": "d45fb5db48efd90194ba98b57e38364f435b51b9289cedbb11e1d4c78cec3a0e",
+  "compiler_sha256": "bacf056d5839a33f7a1dc43710e1b24aa33d75b2f6d2125677ff3a5025a7092f",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.RegisterFile",
+      "top": "RegisterFile",
+      "ir": "FIRRTL/RegisterFile.ir.json",
+      "lean": "FIRRTL/RegisterFile.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T142307Z-b137c27e"
+}

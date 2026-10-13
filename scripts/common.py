@@ -13,6 +13,18 @@ import threading
 ROOT = Path(__file__).resolve().parents[1]
 LEAN_VERSION = "4.19.0"
 SBT_VERSION = "1.8.2"
+CHISEL_VERSION = "7.3.0"
+SCALA_VERSION = "2.13.15"
+FIRTOOL_VERSION = "1.135.0"
+
+
+def rtl_environment():
+    env = os.environ.copy()
+    platform = "windows" if os.name == "nt" else "linux"
+    directory = ROOT / ".tools" / f"firtool-{FIRTOOL_VERSION}" / f"firtool-{FIRTOOL_VERSION}" / "bin"
+    if directory.is_dir():
+        env["CHISEL_FIRTOOL_PATH"] = str(directory)
+    return env
 
 
 def java_executable() -> str:

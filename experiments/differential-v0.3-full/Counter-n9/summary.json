@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 517,
+  "compared_output_values": 1033,
+  "module": "Counter",
+  "parameters": {
+    "n": 9
+  },
+  "evidence": "experiments\\differential-v0.3-full\\Counter-n9",
+  "seconds": 13.31,
+  "fingerprint": "812c25c89b1e6510634207d8525e56eacd473c9a98e68f7e5d161e40eb2628f9"
+}

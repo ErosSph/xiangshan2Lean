@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "version": "0.2.0",
+  "chisel_version": "7.3.0",
+  "scala_version": "2.13.15",
+  "firtool_version": "1.135.0",
+  "source_to_lean_modules": 51,
+  "differential_configurations": 128,
+  "differential_cycles": 6303,
+  "compared_output_values": 28907,
+  "rejection_checks": 25,
+  "mutation_detected": true,
+  "client_model_theorems_checked": 2,
+  "formal_equivalence_proof": false,
+  "evidence": [
+    {
+      "path": "experiments/differential-v0.3-full/summary.json",
+      "pass": true,
+      "fresh": true
+    },
+    {
+      "path": "experiments/differential-v0.3-edge/summary.json",
+      "pass": true,
+      "fresh": true
+    },
+    {
+      "path": "experiments/differential-v0.3-control/summary.json",
+      "pass": true,
+      "fresh": true
+    },
+    {
+      "path": "experiments/differential-v0.3-extension/summary.json",
+      "pass": true,
+      "fresh": true
+    },
+    {
+      "path": "experiments/rejections-v0.3/summary.json",
+      "pass": true
+    },
+    {
+      "path": "experiments/mutation-v0.3/summary.json",
+      "pass": true
+    },
+    {
+      "path": "experiments/client-proof-v0.3/result.json",
+      "pass": true
+    }
+  ]
+}
