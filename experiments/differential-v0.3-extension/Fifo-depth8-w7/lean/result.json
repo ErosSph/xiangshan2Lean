@@ -1,0 +1,2214 @@
+[
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 0
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 0
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 1
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 1
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 2
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 2
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 3
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 3
+  },
+  {
+    "state": {
+      "write": 4,
+      "storage": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 4
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 4
+  },
+  {
+    "state": {
+      "write": 5,
+      "storage": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 5
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 5
+  },
+  {
+    "state": {
+      "write": 6,
+      "storage": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 6
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 6
+  },
+  {
+    "state": {
+      "write": 7,
+      "storage": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0
+      ],
+      "read": 0,
+      "count": 7
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 7
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "read": 0,
+      "count": 8
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": true,
+      "empty": false
+    },
+    "cycle": 8
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "read": 0,
+      "count": 8
+    },
+    "pre": {
+      "out": 0,
+      "full": true,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": true,
+      "empty": false
+    },
+    "cycle": 9
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "read": 0,
+      "count": 8
+    },
+    "pre": {
+      "out": 0,
+      "full": true,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": true,
+      "empty": false
+    },
+    "cycle": 10
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "read": 1,
+      "count": 7
+    },
+    "pre": {
+      "out": 0,
+      "full": true,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 11
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "read": 2,
+      "count": 7
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 2,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 12
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "read": 3,
+      "count": 7
+    },
+    "pre": {
+      "out": 2,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 3,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 13
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        1,
+        1,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "read": 4,
+      "count": 7
+    },
+    "pre": {
+      "out": 3,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 4,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 14
+  },
+  {
+    "state": {
+      "write": 4,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "read": 5,
+      "count": 7
+    },
+    "pre": {
+      "out": 4,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 5,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 15
+  },
+  {
+    "state": {
+      "write": 5,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        5,
+        6,
+        7
+      ],
+      "read": 6,
+      "count": 7
+    },
+    "pre": {
+      "out": 5,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 6,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 16
+  },
+  {
+    "state": {
+      "write": 6,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        7
+      ],
+      "read": 7,
+      "count": 7
+    },
+    "pre": {
+      "out": 6,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 7,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 17
+  },
+  {
+    "state": {
+      "write": 7,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        7
+      ],
+      "read": 0,
+      "count": 7
+    },
+    "pre": {
+      "out": 7,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 18
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 1,
+      "count": 7
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 19
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 2,
+      "count": 7
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 20
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 3,
+      "count": 6
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 21
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 4,
+      "count": 5
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 22
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 5,
+      "count": 4
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 23
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 6,
+      "count": 3
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 24
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 7,
+      "count": 2
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 25
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 0,
+      "count": 1
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 26
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 1,
+      "count": 0
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 27
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 1,
+      "count": 0
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 28
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 1,
+      "count": 0
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 29
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "read": 1,
+      "count": 0
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 1,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 30
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 0
+    },
+    "pre": {
+      "out": 1,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 31
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        106,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 1
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 106,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 32
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        106,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 1
+    },
+    "pre": {
+      "out": 106,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 106,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 33
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        106,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 1
+    },
+    "pre": {
+      "out": 106,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 106,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 34
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        106,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 1
+    },
+    "pre": {
+      "out": 106,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 106,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 35
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        106,
+        39,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 1,
+      "count": 1
+    },
+    "pre": {
+      "out": 106,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 39,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 36
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        106,
+        39,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 1,
+      "count": 1
+    },
+    "pre": {
+      "out": 39,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 39,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 37
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        106,
+        39,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 2,
+      "count": 0
+    },
+    "pre": {
+      "out": 39,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 38
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        106,
+        39,
+        120,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 2,
+      "count": 1
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 120,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 39
+  },
+  {
+    "state": {
+      "write": 4,
+      "storage": [
+        106,
+        39,
+        120,
+        110,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 3,
+      "count": 1
+    },
+    "pre": {
+      "out": 120,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 110,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 40
+  },
+  {
+    "state": {
+      "write": 5,
+      "storage": [
+        106,
+        39,
+        120,
+        110,
+        62,
+        0,
+        0,
+        0
+      ],
+      "read": 4,
+      "count": 1
+    },
+    "pre": {
+      "out": 110,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 62,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 41
+  },
+  {
+    "state": {
+      "write": 6,
+      "storage": [
+        106,
+        39,
+        120,
+        110,
+        62,
+        37,
+        0,
+        0
+      ],
+      "read": 4,
+      "count": 2
+    },
+    "pre": {
+      "out": 62,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 62,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 42
+  },
+  {
+    "state": {
+      "write": 7,
+      "storage": [
+        106,
+        39,
+        120,
+        110,
+        62,
+        37,
+        26,
+        0
+      ],
+      "read": 4,
+      "count": 3
+    },
+    "pre": {
+      "out": 62,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 62,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 43
+  },
+  {
+    "state": {
+      "write": 7,
+      "storage": [
+        106,
+        39,
+        120,
+        110,
+        62,
+        37,
+        26,
+        0
+      ],
+      "read": 5,
+      "count": 2
+    },
+    "pre": {
+      "out": 62,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 37,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 44
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        106,
+        39,
+        120,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 6,
+      "count": 2
+    },
+    "pre": {
+      "out": 37,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 26,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 45
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        106,
+        39,
+        120,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 7,
+      "count": 1
+    },
+    "pre": {
+      "out": 26,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 46
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        95,
+        39,
+        120,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 7,
+      "count": 2
+    },
+    "pre": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 47
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        95,
+        39,
+        120,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 7,
+      "count": 2
+    },
+    "pre": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 48
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        95,
+        75,
+        120,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 7,
+      "count": 3
+    },
+    "pre": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 49
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        95,
+        75,
+        120,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 7,
+      "count": 3
+    },
+    "pre": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 50
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        95,
+        75,
+        120,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 0,
+      "count": 2
+    },
+    "pre": {
+      "out": 36,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 95,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 51
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        95,
+        75,
+        37,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 1,
+      "count": 2
+    },
+    "pre": {
+      "out": 95,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 75,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 52
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        95,
+        75,
+        37,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 1,
+      "count": 2
+    },
+    "pre": {
+      "out": 75,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 75,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 53
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        95,
+        75,
+        37,
+        110,
+        62,
+        37,
+        26,
+        36
+      ],
+      "read": 2,
+      "count": 1
+    },
+    "pre": {
+      "out": 75,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 37,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 54
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 0
+    },
+    "pre": {
+      "out": 37,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 55
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        88,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 0,
+      "count": 1
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 88,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 56
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        88,
+        98,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 1,
+      "count": 1
+    },
+    "pre": {
+      "out": 88,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 98,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 57
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        88,
+        98,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 2,
+      "count": 0
+    },
+    "pre": {
+      "out": 98,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 58
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        88,
+        98,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 2,
+      "count": 0
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 59
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        88,
+        98,
+        43,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 2,
+      "count": 1
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 43,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 60
+  },
+  {
+    "state": {
+      "write": 4,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 3,
+      "count": 1
+    },
+    "pre": {
+      "out": 43,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 50,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 61
+  },
+  {
+    "state": {
+      "write": 4,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 4,
+      "count": 0
+    },
+    "pre": {
+      "out": 50,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 62
+  },
+  {
+    "state": {
+      "write": 4,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 4,
+      "count": 0
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 63
+  },
+  {
+    "state": {
+      "write": 4,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "read": 4,
+      "count": 0
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 64
+  },
+  {
+    "state": {
+      "write": 5,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        99,
+        0,
+        0,
+        0
+      ],
+      "read": 4,
+      "count": 1
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 99,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 65
+  },
+  {
+    "state": {
+      "write": 6,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        99,
+        43,
+        0,
+        0
+      ],
+      "read": 5,
+      "count": 1
+    },
+    "pre": {
+      "out": 99,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 43,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 66
+  },
+  {
+    "state": {
+      "write": 6,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        99,
+        43,
+        0,
+        0
+      ],
+      "read": 6,
+      "count": 0
+    },
+    "pre": {
+      "out": 43,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 67
+  },
+  {
+    "state": {
+      "write": 6,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        99,
+        43,
+        0,
+        0
+      ],
+      "read": 6,
+      "count": 0
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "cycle": 68
+  },
+  {
+    "state": {
+      "write": 7,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        99,
+        43,
+        85,
+        0
+      ],
+      "read": 6,
+      "count": 1
+    },
+    "pre": {
+      "out": 0,
+      "full": false,
+      "empty": true
+    },
+    "post": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 69
+  },
+  {
+    "state": {
+      "write": 7,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        99,
+        43,
+        85,
+        0
+      ],
+      "read": 6,
+      "count": 1
+    },
+    "pre": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 70
+  },
+  {
+    "state": {
+      "write": 0,
+      "storage": [
+        88,
+        98,
+        43,
+        50,
+        99,
+        43,
+        85,
+        19
+      ],
+      "read": 6,
+      "count": 2
+    },
+    "pre": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 71
+  },
+  {
+    "state": {
+      "write": 1,
+      "storage": [
+        52,
+        98,
+        43,
+        50,
+        99,
+        43,
+        85,
+        19
+      ],
+      "read": 6,
+      "count": 3
+    },
+    "pre": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 72
+  },
+  {
+    "state": {
+      "write": 2,
+      "storage": [
+        52,
+        11,
+        43,
+        50,
+        99,
+        43,
+        85,
+        19
+      ],
+      "read": 6,
+      "count": 4
+    },
+    "pre": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 73
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        52,
+        11,
+        87,
+        50,
+        99,
+        43,
+        85,
+        19
+      ],
+      "read": 6,
+      "count": 5
+    },
+    "pre": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 74
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        52,
+        11,
+        87,
+        50,
+        99,
+        43,
+        85,
+        19
+      ],
+      "read": 7,
+      "count": 4
+    },
+    "pre": {
+      "out": 85,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 19,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 75
+  },
+  {
+    "state": {
+      "write": 3,
+      "storage": [
+        52,
+        11,
+        87,
+        50,
+        99,
+        43,
+        85,
+        19
+      ],
+      "read": 7,
+      "count": 4
+    },
+    "pre": {
+      "out": 19,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 19,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 76
+  },
+  {
+    "state": {
+      "write": 4,
+      "storage": [
+        52,
+        11,
+        87,
+        26,
+        99,
+        43,
+        85,
+        19
+      ],
+      "read": 7,
+      "count": 5
+    },
+    "pre": {
+      "out": 19,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 19,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 77
+  },
+  {
+    "state": {
+      "write": 5,
+      "storage": [
+        52,
+        11,
+        87,
+        26,
+        84,
+        43,
+        85,
+        19
+      ],
+      "read": 0,
+      "count": 5
+    },
+    "pre": {
+      "out": 19,
+      "full": false,
+      "empty": false
+    },
+    "post": {
+      "out": 52,
+      "full": false,
+      "empty": false
+    },
+    "cycle": 78
+  }
+]

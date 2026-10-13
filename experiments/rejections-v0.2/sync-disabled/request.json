@@ -1,0 +1,26 @@
+{
+  "parameters": {
+    "n": 3,
+    "w": 4
+  },
+  "trace": [
+    {
+      "inputs": {
+        "write": false,
+        "readEnable": false,
+        "waddr": 1,
+        "raddr": 1,
+        "data": 7
+      }
+    }
+  ],
+  "initial_state": {
+    "memory": [
+      0,
+      0,
+      0
+    ],
+    "__memory_memory_read_0": 0,
+    "__memory_memory_read_0_valid": false
+  }
+}

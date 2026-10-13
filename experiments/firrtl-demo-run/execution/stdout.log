@@ -1,0 +1,5 @@
+{"state":{"cnt":0},"pre":{"io_q":0},"post":{"io_q":0},"cycle":0}
+{"state":{"cnt":1},"pre":{"io_q":0},"post":{"io_q":1},"cycle":1}
+{"state":{"cnt":2},"pre":{"io_q":1},"post":{"io_q":2},"cycle":2}
+{"state":{"cnt":2},"pre":{"io_q":2},"post":{"io_q":2},"cycle":3}
+{"state":{"cnt":0},"pre":{"io_q":2},"post":{"io_q":0},"cycle":4}

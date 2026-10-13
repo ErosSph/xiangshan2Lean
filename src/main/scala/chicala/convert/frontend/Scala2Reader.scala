@@ -1,0 +1,33 @@
+package chicala.convert.frontend
+
+import chicala.util._
+import chicala.ast.ChicalaAst
+
+trait Scala2Reader
+    extends ChicalaAst
+    // Loader
+    with CClassDefsLoader
+    with MStatementsLoader
+    with MTermsLoader
+    with CTermsLoader
+    with STermsLoader
+    with MTypesLoader
+    with COpsLoader
+    // TreeReader
+    with ApplysReader
+    with AssignsReader
+    with BlocksReader
+    with DefDefsReader
+    with FunctionsReader
+    with IdentsReader
+    with IfsReader
+    with LiteralsReader
+    with MatchsReader
+    with SelectsReader
+    with StatementsReader
+    with ValDefsReader
+    // util
+    with ReaderInfos
+    with CircuitInfos
+    with ChiselAstCheck
+    with Printer

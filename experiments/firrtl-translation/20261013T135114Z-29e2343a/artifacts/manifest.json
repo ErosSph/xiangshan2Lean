@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\RenamedAccumulator-width3-increment3\\reference\\rtl\\RenamedAccumulator.fir",
+  "source_sha256": "b2d6038166b0b6daf8f4aafce137ec39bbd3cbe37323d3b184482f1ddaec1abd",
+  "compiler_sha256": "40937bde440f25efce307092d88ce4cb3c4afe623d02f93576c699c22f8d417b",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.RenamedAccumulator",
+      "top": "RenamedAccumulator",
+      "ir": "FIRRTL/RenamedAccumulator.ir.json",
+      "lean": "FIRRTL/RenamedAccumulator.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T135114Z-29e2343a"
+}

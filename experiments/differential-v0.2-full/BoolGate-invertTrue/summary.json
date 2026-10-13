@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 2,
+  "compared_output_values": 4,
+  "module": "BoolGate",
+  "parameters": {
+    "invert": true
+  },
+  "evidence": "experiments\\differential-v0.2-full\\BoolGate-invertTrue",
+  "seconds": 20.7,
+  "fingerprint": "f47031739eeea74cc370f3021cf77cbc68dfb0fda05dae8a1c7782e0036fcb7d"
+}

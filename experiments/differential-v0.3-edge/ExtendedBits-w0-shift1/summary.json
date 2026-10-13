@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 8,
+  "compared_output_values": 112,
+  "module": "ExtendedBits",
+  "parameters": {
+    "w": 0,
+    "shift": 1
+  },
+  "evidence": "experiments\\differential-v0.3-edge\\ExtendedBits-w0-shift1",
+  "seconds": 12.08,
+  "fingerprint": "1309534fe6f2d7cd9eb56ac5ea8c17d8173576b5511eab87afc929a62c7e2bdb"
+}

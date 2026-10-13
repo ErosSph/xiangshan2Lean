@@ -1,0 +1,20 @@
+{
+  "case": "ConditionalPriority-w3",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-control\\ConditionalPriority-w3",
+  "passed": true,
+  "firrtl_sha256": "45b549bee655d7b030218fa5b54b477069442a19e3d999f9f4c07bb6abebca9e",
+  "cycles": 48,
+  "output_comparisons": 190,
+  "initial_state": {
+    "r": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "a": "a",
+    "b": "b",
+    "c": "c",
+    "combinational": "combinational",
+    "sequential": "sequential"
+  }
+}

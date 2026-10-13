@@ -1,0 +1,440 @@
+{
+  "passed": true,
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "cases": [
+    {
+      "case": "ConditionalPriority-w3",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-control\\ConditionalPriority-w3",
+      "passed": true,
+      "firrtl_sha256": "45b549bee655d7b030218fa5b54b477069442a19e3d999f9f4c07bb6abebca9e",
+      "cycles": 48,
+      "output_comparisons": 190,
+      "initial_state": {
+        "r": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "combinational": "combinational",
+        "sequential": "sequential"
+      }
+    },
+    {
+      "case": "ResetFromInput-w3",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-edge\\ResetFromInput-w3",
+      "passed": true,
+      "firrtl_sha256": "518ebb62dbc50b217b21b4c87a141c468524cd68afad54ed8933461b850340cb",
+      "cycles": 48,
+      "output_comparisons": 95,
+      "initial_state": {
+        "r": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "in": "in",
+        "out": "out"
+      }
+    },
+    {
+      "case": "Arithmetic-aWidth65-bWidth7",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\Arithmetic-aWidth65-bWidth7",
+      "passed": true,
+      "firrtl_sha256": "e3b508295f33fe2be169e4b74008f97aed0695e378dbd356b12c973c702f3be0",
+      "cycles": 48,
+      "output_comparisons": 864,
+      "initial_state": {},
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "io.a": "io_a",
+        "io.b": "io_b",
+        "io.carry": "io_carry",
+        "io.choose": "io_choose",
+        "io.concat": "io_concat",
+        "io.equal": "io_equal",
+        "io.less": "io_less",
+        "io.product": "io_product",
+        "io.selected": "io_selected",
+        "io.sub": "io_sub",
+        "io.sum": "io_sum",
+        "io.xor": "io_xor"
+      }
+    },
+    {
+      "case": "BundlePipeline-w8",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\BundlePipeline-w8",
+      "passed": true,
+      "firrtl_sha256": "20102bc4012ee00cb48feb8bff652bf6771362bcbc582df75d1ddcd8291a3742",
+      "cycles": 48,
+      "output_comparisons": 190,
+      "initial_state": {
+        "r_data": 0,
+        "r_valid": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "in.data": "in_data",
+        "in.valid": "in_valid",
+        "out.data": "out_data",
+        "out.valid": "out_valid"
+      }
+    },
+    {
+      "case": "ExtendedBits-w128-shift3",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\ExtendedBits-w128-shift3",
+      "passed": true,
+      "firrtl_sha256": "8c0689a9b23baf781cc44a8a9bc269d29c30512290f8be05fc0eef123c573b4b",
+      "cycles": 48,
+      "output_comparisons": 672,
+      "initial_state": {},
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "in": "in",
+        "flag": "flag",
+        "amount": "amount",
+        "inverted": "inverted",
+        "negative": "negative",
+        "concatenated": "concatenated",
+        "isZero": "isZero",
+        "shifted": "shifted",
+        "dynamic": "dynamic",
+        "padded": "padded"
+      }
+    },
+    {
+      "case": "Fifo-depth2-w3",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\Fifo-depth2-w3",
+      "passed": true,
+      "firrtl_sha256": "5a7bd2780a593ee6de58393c45a11e040bf717c93405b3775009c29a39682964",
+      "cycles": 61,
+      "output_comparisons": 363,
+      "initial_state": {
+        "storage_0": 0,
+        "storage_1": 0,
+        "read": 0,
+        "write": 0,
+        "count": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "enq": "enq",
+        "deq": "deq",
+        "data": "data",
+        "out": "out",
+        "full": "full",
+        "empty": "empty"
+      }
+    },
+    {
+      "case": "HierarchicalPipeline-w8",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\HierarchicalPipeline-w8",
+      "passed": true,
+      "firrtl_sha256": "d6c2be33391680e73609ba8849643d63ed401d475e517fc3fd49acd26b58ea58",
+      "cycles": 48,
+      "output_comparisons": 95,
+      "initial_state": {
+        "a.r": 0,
+        "b.r": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "in": "in",
+        "en": "en",
+        "out": "out"
+      }
+    },
+    {
+      "case": "NestedHierarchy-w5",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\NestedHierarchy-w5",
+      "passed": true,
+      "firrtl_sha256": "c40edf5dc7739a61d475cda3f50b5dd82336a92650d6cdeefc13c2a80cd49d56",
+      "cycles": 48,
+      "output_comparisons": 95,
+      "initial_state": {
+        "child.a.r": 0,
+        "child.b.r": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "io.en": "io_en",
+        "io.in": "io_in",
+        "io.out": "io_out"
+      }
+    },
+    {
+      "case": "RegisterFile-n8-w7",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\RegisterFile-n8-w7",
+      "passed": true,
+      "firrtl_sha256": "d45fb5db48efd90194ba98b57e38364f435b51b9289cedbb11e1d4c78cec3a0e",
+      "cycles": 48,
+      "output_comparisons": 95,
+      "initial_state": {
+        "registers_0": 0,
+        "registers_1": 0,
+        "registers_2": 0,
+        "registers_3": 0,
+        "registers_4": 0,
+        "registers_5": 0,
+        "registers_6": 0,
+        "registers_7": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "write": "write",
+        "waddr": "waddr",
+        "raddr": "raddr",
+        "data": "data",
+        "out": "out"
+      }
+    },
+    {
+      "case": "RegisterIdioms-w3",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\RegisterIdioms-w3",
+      "passed": true,
+      "firrtl_sha256": "10d59319f654795e516bc75910a2457768645acfe093ce9f0fb1147616b39376",
+      "cycles": 48,
+      "output_comparisons": 95,
+      "initial_state": {
+        "delayed": 0,
+        "held": 0,
+        "explicit": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "in": "in",
+        "en": "en",
+        "out": "out"
+      }
+    },
+    {
+      "case": "SignedArithmetic-w65",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\SignedArithmetic-w65",
+      "passed": true,
+      "firrtl_sha256": "2d54559d57928dfd3f0d95624d780f8c553aff734b0bb68af5cf73215b29bea9",
+      "cycles": 48,
+      "output_comparisons": 576,
+      "initial_state": {},
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "io.a": "io_a",
+        "io.b": "io_b",
+        "io.extended": "io_extended",
+        "io.less": "io_less",
+        "io.product": "io_product",
+        "io.shr": "io_shr",
+        "io.sum": "io_sum",
+        "io.wide": "io_wide"
+      }
+    },
+    {
+      "case": "SignedDivision-w8",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\SignedDivision-w8",
+      "passed": true,
+      "firrtl_sha256": "f03b52f80efc1750d70ac543988590ccb3ab5d2328e4e53aa6c3a28a03659401",
+      "cycles": 48,
+      "output_comparisons": 192,
+      "initial_state": {},
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "a": "a",
+        "b": "b",
+        "quotient": "quotient",
+        "remainder": "remainder"
+      }
+    },
+    {
+      "case": "SwitchMachine-w5",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\SwitchMachine-w5",
+      "passed": true,
+      "firrtl_sha256": "974671930918c82178d5a7f36d74d666a2faea4cb010549fb9725179b01200d0",
+      "cycles": 48,
+      "output_comparisons": 95,
+      "initial_state": {
+        "state": 0,
+        "data": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "in": "in",
+        "en": "en",
+        "out": "out"
+      }
+    },
+    {
+      "case": "VectorReset-n3-w4",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\VectorReset-n3-w4",
+      "passed": true,
+      "firrtl_sha256": "9b20f8e341cac27fbcb22713afbe98fd83cbe141d7af1f57f18a6deb6f15e55d",
+      "cycles": 48,
+      "output_comparisons": 285,
+      "initial_state": {
+        "regs_0": 0,
+        "regs_1": 0,
+        "regs_2": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "in.0": "in_0",
+        "in.1": "in_1",
+        "in.2": "in_2",
+        "en": "en",
+        "out.0": "out_0",
+        "out.1": "out_1",
+        "out.2": "out_2"
+      }
+    },
+    {
+      "case": "Counter-n1",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\Counter-n1",
+      "passed": true,
+      "firrtl_sha256": "e5d42d1933aa47569afbe31e58bff174bdc61b779dcb535a0f52fb4039bc96c5",
+      "cycles": 7,
+      "output_comparisons": 13,
+      "initial_state": {
+        "cnt": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "io.en": "io_en",
+        "io.q": "io_q"
+      }
+    },
+    {
+      "case": "Counter-n4",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\Counter-n4",
+      "passed": true,
+      "firrtl_sha256": "60ca74e7be22f2a110471d97af915310b648f77b02a8762fc5db72369a3b14b5",
+      "cycles": 21,
+      "output_comparisons": 41,
+      "initial_state": {
+        "cnt": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "io.en": "io_en",
+        "io.q": "io_q"
+      }
+    },
+    {
+      "case": "Counter-n9",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\Counter-n9",
+      "passed": true,
+      "firrtl_sha256": "af34d96c8d0b5ef4cd5d5e7cc5024e82f83ca624c718efac68319be9bb673c7f",
+      "cycles": 517,
+      "output_comparisons": 1033,
+      "initial_state": {
+        "cnt": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "io.en": "io_en",
+        "io.q": "io_q"
+      }
+    },
+    {
+      "case": "DualRegister-n3",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\DualRegister-n3",
+      "passed": true,
+      "firrtl_sha256": "e0ad89ad682b0d6bb0175dd10d4be5b3050a5019791632b1d27627f9f6f74923",
+      "cycles": 48,
+      "output_comparisons": 190,
+      "initial_state": {
+        "first": 0,
+        "second": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "io.a": "io_a",
+        "io.b": "io_b",
+        "io.in": "io_in"
+      }
+    },
+    {
+      "case": "Priority-n3",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\Priority-n3",
+      "passed": true,
+      "firrtl_sha256": "52ad7ccd5bf924edb528ea6b4436cef174fe65604c96525c39bc48b5916f5526",
+      "cycles": 48,
+      "output_comparisons": 95,
+      "initial_state": {
+        "cnt": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "io.clear": "io_clear",
+        "io.en": "io_en",
+        "io.q": "io_q"
+      }
+    },
+    {
+      "case": "RenamedAccumulator-width3-increment3",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\RenamedAccumulator-width3-increment3",
+      "passed": true,
+      "firrtl_sha256": "b2d6038166b0b6daf8f4aafce137ec39bbd3cbe37323d3b184482f1ddaec1abd",
+      "cycles": 13,
+      "output_comparisons": 25,
+      "initial_state": {
+        "storage": 0
+      },
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "active": "active",
+        "result": "result"
+      }
+    },
+    {
+      "case": "SignedArithmetic-w4",
+      "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\SignedArithmetic-w4",
+      "passed": true,
+      "firrtl_sha256": "7b3e03b7a8e32cbf8f2ad1435ef5e2fb665da9ae4f6ec4f26b2f4cf09b7bd859",
+      "cycles": 48,
+      "output_comparisons": 576,
+      "initial_state": {},
+      "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+      "interface_mapping": {
+        "reset": "reset",
+        "io.a": "io_a",
+        "io.b": "io_b",
+        "io.extended": "io_extended",
+        "io.less": "io_less",
+        "io.product": "io_product",
+        "io.shr": "io_shr",
+        "io.sum": "io_sum",
+        "io.wide": "io_wide"
+      }
+    },
+    {
+      "case": "PrimitiveWidths",
+      "passed": true,
+      "cycles": 32768,
+      "output_comparisons": 589824,
+      "exhaustive_input_bits": 15,
+      "comparison": "FIRRTL Lean == fresh official RTL == independent integer specification"
+    }
+  ],
+  "configurations": 22,
+  "cycles": 34155,
+  "output_comparisons": 595699,
+  "formal_translation_equivalence": false
+}

@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\Rejected.scala:77: error: [chisel2lean] Unsupported hardware statement: SApply(SSelect(SSelect(SIdent(scala,StWrapped("scala.type")),Predef,StWrapped("Predef.type")),println,StFunc),List(SIdent(w,StInt)),StUnit)
+  println(w)
+          ^
+1 error

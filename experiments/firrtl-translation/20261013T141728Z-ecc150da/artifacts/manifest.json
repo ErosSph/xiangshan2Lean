@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-firrtl\\AluDataModule\\original\\AluDataModule.fir",
+  "source_sha256": "76b164bc07970d71cdb99d557ef6abbdbf398dc76eba8d66bfe1cc2260be2313",
+  "compiler_sha256": "bacf056d5839a33f7a1dc43710e1b24aa33d75b2f6d2125677ff3a5025a7092f",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.AluDataModule",
+      "top": "AluDataModule",
+      "ir": "FIRRTL/AluDataModule.ir.json",
+      "lean": "FIRRTL/AluDataModule.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T141728Z-ecc150da"
+}

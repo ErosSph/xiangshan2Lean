@@ -1,0 +1,46 @@
+[
+  {
+    "state": {},
+    "pre": {
+      "right": 0,
+      "parity": false,
+      "out": 0,
+      "left": 0,
+      "bit": false,
+      "any": false,
+      "all": false
+    },
+    "post": {
+      "right": 0,
+      "parity": false,
+      "out": 0,
+      "left": 0,
+      "bit": false,
+      "any": false,
+      "all": false
+    },
+    "cycle": 0
+  },
+  {
+    "state": {},
+    "pre": {
+      "right": 0,
+      "parity": true,
+      "out": 1,
+      "left": 4,
+      "bit": true,
+      "any": true,
+      "all": true
+    },
+    "post": {
+      "right": 0,
+      "parity": true,
+      "out": 1,
+      "left": 4,
+      "bit": true,
+      "any": true,
+      "all": true
+    },
+    "cycle": 1
+  }
+]

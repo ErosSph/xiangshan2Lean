@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "module": "walkthrough.SaturatingAccumulator",
+  "source_sha256": "12c81600ff270420b30b197e7bd48eee7c50427a9da9e189a38e2a9448370c88",
+  "seed": 20261013,
+  "cases": [
+    {
+      "status": "PASS",
+      "parameters": {
+        "w": 1
+      },
+      "cycles": 218,
+      "compared_output_values": 870,
+      "comparison": "mathematical expectation == executed Lean == official RTL",
+      "initial_sampling": "post first reset edge; subsequent pre and post edges"
+    },
+    {
+      "status": "PASS",
+      "parameters": {
+        "w": 4
+      },
+      "cycles": 218,
+      "compared_output_values": 870,
+      "comparison": "mathematical expectation == executed Lean == official RTL",
+      "initial_sampling": "post first reset edge; subsequent pre and post edges"
+    },
+    {
+      "status": "PASS",
+      "parameters": {
+        "w": 8
+      },
+      "cycles": 218,
+      "compared_output_values": 870,
+      "comparison": "mathematical expectation == executed Lean == official RTL",
+      "initial_sampling": "post first reset edge; subsequent pre and post edges"
+    }
+  ],
+  "formal_equivalence_proof": false,
+  "directed_expected_table_checked": true,
+  "lean_checked": true,
+  "compiler_sha256": "b529982427922b1b9383e0b36f0485443a934dd4ce71f17db4b4a8b4d1828df9",
+  "configurations": 3,
+  "cycles": 654,
+  "compared_output_values": 2610
+}

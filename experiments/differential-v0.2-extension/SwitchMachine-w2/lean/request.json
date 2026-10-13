@@ -1,0 +1,344 @@
+{
+  "parameters": {
+    "w": 2
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 0,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 0,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 0,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 0,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 0,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 0,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 0,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 3,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 1,
+        "en": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": 2,
+        "en": false
+      }
+    }
+  ],
+  "initial_state": null
+}

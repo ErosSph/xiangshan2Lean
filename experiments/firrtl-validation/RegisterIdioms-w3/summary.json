@@ -1,0 +1,20 @@
+{
+  "case": "RegisterIdioms-w3",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\RegisterIdioms-w3",
+  "passed": true,
+  "firrtl_sha256": "10d59319f654795e516bc75910a2457768645acfe093ce9f0fb1147616b39376",
+  "cycles": 48,
+  "output_comparisons": 95,
+  "initial_state": {
+    "delayed": 0,
+    "held": 0,
+    "explicit": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "in": "in",
+    "en": "en",
+    "out": "out"
+  }
+}

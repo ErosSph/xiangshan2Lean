@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "RegisterIdioms",
+  "parameters": {
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\RegisterIdioms-w3",
+  "seconds": 13.08,
+  "fingerprint": "7f36a9b828f89c8a119e0bc365d046944f5b5fb5456c9dadad78f26948390181"
+}

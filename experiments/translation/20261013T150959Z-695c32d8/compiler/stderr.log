@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\Rejected.scala:43: error: [chisel2lean] Unsupported parameter computation: SApply(SIdent(IO,StFunc),List(SApply(SSelect(SSelect(SIdent(chisel3,StWrapped("chisel3.type")),Input,StWrapped("chisel3.Input.type")),apply,StFunc),List(SApply(SSelect(SSelect(SIdent(chisel3,StWrapped("chisel3.type")),AsyncReset,StWrapped("chisel3.AsyncReset.type")),apply,StFunc),List(),StWrapped("chisel3.AsyncReset"))),StWrapped("chisel3.AsyncReset"))),StWrapped("chisel3.AsyncReset"))
+  val resetIn = IO(Input(AsyncReset()))
+       ^
+1 error

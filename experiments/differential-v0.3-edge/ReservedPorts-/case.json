@@ -1,0 +1,8 @@
+{
+  "module": "probes.ReservedPorts",
+  "parameters": {},
+  "seed": 20261013,
+  "cycles": 4,
+  "sampling": "before/after rising edge",
+  "comparison_start": "post first reset/warm-up edge for stateful modules"
+}

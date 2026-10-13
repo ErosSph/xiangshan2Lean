@@ -1,0 +1,60 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (11220 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] compiling 62 Scala sources to E:\ICT\chisel2lean4\target\scala-2.13\classes ...
+[info] done compiling
+[success] Total time: 32 s, completed 2026年10月13日 下午9:56:17
+[info] compiling 26 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\difftest\target\scala-2.13\classes ...
+[info] compiling 1 Scala source to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\macros\target\scala-2.13\classes ...
+[info] compiling 20 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\hardfloat\target\scala-2.13\classes ...
+[info] compiling 15 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\fudian\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\cde\target\scala-2.13\classes ...
+[info] done compiling
+[warn] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\fudian\src\main\scala\fudian\FPToInt.scala:55:12: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+[warn]   io.to_s2.sel_lpath
+[warn]            ^
+[info] done compiling
+[warn] 5 deprecations (since 2.13.0); re-run with -deprecation for details
+[warn] two warnings found
+[info] done compiling
+[warn] 1 deprecation (since 2.13.0)
+[warn] 1 deprecation (since 2.13.13)
+[warn] 2 deprecations (since Chisel 6.0)
+[warn] 4 deprecations in total; re-run with -deprecation for details
+[warn] four warnings found
+[info] done compiling
+[info] compiling 315 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\rocket\target\scala-2.13\classes ...
+[warn] 1 deprecation
+[warn] 66 deprecations (since 2.13.0)
+[warn] 1 deprecation (since 2.13.7)
+[warn] 1 deprecation (since 9)
+[warn] 52 deprecations (since CDE 0.1)
+[warn] 1 deprecation (since Chisel 6.7.0)
+[warn] 8 deprecations (since Chisel 7.0.0)
+[warn] 1 deprecation (since rocket-chip 1.2)
+[warn] 131 deprecations in total; re-run with -deprecation for details
+[warn] 19 feature warnings; re-run with -feature for details
+[warn] 10 warnings found
+[info] done compiling
+[info] compiling 58 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\utility\target\scala-2.13\classes ...
+[error] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\utility\src\main\scala\utility\sram\SRAMTemplate.scala:22:8: not found: object sourcecode
+[error] import sourcecode.FullName
+[error]        ^
+[error] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\utility\src\main\scala\utility\sram\SRAMTemplate.scala:213:21: not found: value sourcecode
+[error] )(implicit valName: sourcecode.FullName) extends Module {
+[error]                     ^
+[error] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\utility\src\main\scala\utility\sram\SRAMTemplate.scala:517:21: not found: value sourcecode
+[error] )(implicit valName: sourcecode.FullName) extends Module {
+[error]                     ^
+[error] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\utility\src\main\scala\utility\sram\SRAMTemplate.scala:624:45: value asTypeOf is not a member of Nothing
+[error]   io.r.resp.data := Mux1H(ren_vec, allData).asTypeOf(Vec(way, gen))
+[error]                                             ^
+[error] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\utility\src\main\scala\utility\sram\SRAMTemplate.scala:637:21: not found: value sourcecode
+[error] )(implicit valName: sourcecode.FullName) extends Module {
+[error]                     ^
+[error] 5 errors found
+[error] (xsUtility / Compile / compileIncremental) Compilation failed
+[error] Total time: 166 s (02:46), completed 2026年10月13日 下午9:59:04

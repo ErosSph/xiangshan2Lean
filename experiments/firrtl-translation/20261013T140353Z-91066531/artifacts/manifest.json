@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-right-shift\\XLEN-64\\reference\\rtl\\OriginalRightShiftReference.fir",
+  "source_sha256": "3f039a159888ca6cd42e1fb4feff7e5e043270f8736185caeb9108acdf6bc774",
+  "compiler_sha256": "53922502e96db0ba21cc9e98f23bfad06b2a50630ed3141bdf6808943a0628b0",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.OriginalRightShiftReference",
+      "top": "OriginalRightShiftReference",
+      "ir": "FIRRTL/OriginalRightShiftReference.ir.json",
+      "lean": "FIRRTL/OriginalRightShiftReference.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T140353Z-91066531"
+}

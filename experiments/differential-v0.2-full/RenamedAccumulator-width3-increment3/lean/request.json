@@ -1,0 +1,76 @@
+{
+  "parameters": {
+    "width": 3,
+    "increment": 3
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": true
+      }
+    },
+    {
+      "inputs": {
+        "active": false
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "active": true
+      }
+    }
+  ],
+  "initial_state": null
+}

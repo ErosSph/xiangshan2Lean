@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "module": "ScalarDefaults",
+  "parameters": {
+    "cfg_p_configuration_ScalarKey": 5,
+    "cfg_p_configuration_FlagKey": false
+  },
+  "cycles": 32,
+  "output_comparisons": 64,
+  "comparison": "executed Lean == original official RTL == independent specification"
+}

@@ -1,0 +1,25 @@
+{
+  "case": "Arithmetic-aWidth65-bWidth7",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\Arithmetic-aWidth65-bWidth7",
+  "passed": true,
+  "firrtl_sha256": "e3b508295f33fe2be169e4b74008f97aed0695e378dbd356b12c973c702f3be0",
+  "cycles": 48,
+  "output_comparisons": 864,
+  "initial_state": {},
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "io.a": "io_a",
+    "io.b": "io_b",
+    "io.carry": "io_carry",
+    "io.choose": "io_choose",
+    "io.concat": "io_concat",
+    "io.equal": "io_equal",
+    "io.less": "io_less",
+    "io.product": "io_product",
+    "io.selected": "io_selected",
+    "io.sub": "io_sub",
+    "io.sum": "io_sum",
+    "io.xor": "io_xor"
+  }
+}

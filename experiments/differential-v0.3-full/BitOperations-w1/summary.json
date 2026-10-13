@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 2,
+  "compared_output_values": 28,
+  "module": "BitOperations",
+  "parameters": {
+    "w": 1
+  },
+  "evidence": "experiments\\differential-v0.3-full\\BitOperations-w1",
+  "seconds": 11.8,
+  "fingerprint": "f6fdb20eeb4ea11cca991223ef4088ab1c62d6f47551e142daceb6cc34b0f058"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 384,
+  "module": "VecLoop",
+  "parameters": {
+    "n": 4,
+    "w": 7
+  },
+  "evidence": "experiments\\differential-v0.2-full\\VecLoop-n4-w7",
+  "seconds": 20.14,
+  "fingerprint": "2d6355dd10f2d66ea930a21dec9d0efef5fdb0911c8d08b02c80fae3cb9390e0"
+}

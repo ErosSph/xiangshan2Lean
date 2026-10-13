@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\SignedDivision-w8\\reference\\rtl\\SignedDivision.fir",
+  "source_sha256": "f03b52f80efc1750d70ac543988590ccb3ab5d2328e4e53aa6c3a28a03659401",
+  "compiler_sha256": "bacf056d5839a33f7a1dc43710e1b24aa33d75b2f6d2125677ff3a5025a7092f",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.SignedDivision",
+      "top": "SignedDivision",
+      "ir": "FIRRTL/SignedDivision.ir.json",
+      "lean": "FIRRTL/SignedDivision.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T142330Z-9e079d2a"
+}

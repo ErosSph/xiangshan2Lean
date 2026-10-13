@@ -1,0 +1,30 @@
+{
+  "parameters": {},
+  "trace": [
+    {
+      "inputs": {
+        "clock": false,
+        "reset": false
+      }
+    },
+    {
+      "inputs": {
+        "clock": false,
+        "reset": true
+      }
+    },
+    {
+      "inputs": {
+        "clock": true,
+        "reset": false
+      }
+    },
+    {
+      "inputs": {
+        "clock": true,
+        "reset": true
+      }
+    }
+  ],
+  "initial_state": null
+}

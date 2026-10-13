@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "version": "0.1.0",
+  "source_to_lean_modules": 26,
+  "differential_configurations": 68,
+  "differential_cycles": 3472,
+  "compared_output_values": 15365,
+  "rejection_checks": 17,
+  "mutation_detected": true,
+  "formal_equivalence_proof": false,
+  "evidence": [
+    "experiments/differential-release-full/summary.json",
+    "experiments/differential-release-edge/summary.json",
+    "experiments/differential-release-control/summary.json",
+    "experiments/rejections/summary.json",
+    "experiments/mutation/summary.json"
+  ]
+}

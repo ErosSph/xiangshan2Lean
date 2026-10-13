@@ -1,0 +1,76 @@
+package chicala.convert.frontend
+
+import scala.tools.nsc.Global
+
+trait COpsLoader { self: Scala2Reader =>
+  val global: Global
+  import global._
+
+  object COpLoader {
+    val nameToObj: Map[String, COp] = Map(
+      // CCalculOp
+      "do_apply"        -> Slice,
+      "do_unary_$bang"  -> LogiNot,
+      "do_unary_$tilde" -> Not,
+      "do_unary_$minus" -> Negative,
+      //
+      "do_$plus"  -> Add,
+      "do_$minus" -> Minus,
+      "do_$times" -> Multiply,
+      "do_$div" -> Divide,
+      "do_$percent" -> Remainder,
+      "do_$plus$amp" -> AddWide,
+      "do_$plus$percent" -> Add,
+      "do_$minus$amp" -> MinusWide,
+      "do_$minus$percent" -> Minus,
+      //
+      "do_$amp"             -> And,
+      "do_$bar"             -> Or,
+      "do_$up"              -> Xor,
+      "do_$less$less"       -> LShift,
+      "do_$greater$greater" -> RShift,
+      //
+      "do_$eq$eq$eq"   -> Equal,
+      "do_$eq$div$eq"  -> NotEqual,
+      "do_$greater$eq" -> GreaterEq,
+      "do_$less" -> Less,
+      "do_$less$eq" -> LessEq,
+      "do_$greater" -> Greater,
+      //
+      "do_$amp$amp" -> LogiAnd,
+      "do_$bar$bar" -> LogiOr,
+      //
+      "apply" -> VecSelect,
+      "take"  -> VecTake,
+      "last"  -> VecLast,
+
+      //
+      "do_asUInt" -> AsUInt,
+      "do_asSInt" -> AsSInt,
+      "do_asBool" -> AsBool,
+      "do_orR" -> OrReduce,
+      "do_andR" -> AndReduce,
+      "do_xorR" -> XorReduce,
+      "do_pad" -> Pad,
+      "do_head" -> Head,
+      "do_tail" -> Tail,
+      "do_$hash$hash" -> Cat,
+
+      // CUtilOp
+      "chisel3.Mux.do_apply"         -> Mux,
+      "chisel3.util.MuxLookup.apply" -> MuxLookup,
+      "chisel3.util.MuxCase.apply" -> MuxCase,
+      "chisel3.util.PriorityMux.apply" -> PriorityMux,
+      "chisel3.util.Cat.apply"       -> Cat,
+      "chisel3.util.Fill.apply"      -> Fill,
+      "chisel3.util.Log2.apply"      -> Log2
+    )
+
+    def apply(opName: String): Option[COp] = {
+      val canonical = if (opName.startsWith("chisel3.util.") && opName.endsWith(".do_apply"))
+        opName.stripSuffix(".do_apply") + ".apply" else opName
+      if (nameToObj.contains(canonical)) Some(nameToObj(canonical))
+      else None
+    }
+  }
+}

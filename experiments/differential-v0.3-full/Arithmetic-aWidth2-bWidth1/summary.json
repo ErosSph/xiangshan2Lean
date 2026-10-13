@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 16,
+  "compared_output_values": 288,
+  "module": "Arithmetic",
+  "parameters": {
+    "aWidth": 2,
+    "bWidth": 1
+  },
+  "evidence": "experiments\\differential-v0.3-full\\Arithmetic-aWidth2-bWidth1",
+  "seconds": 13.06,
+  "fingerprint": "be2178f72e18d6cef6afa4ecfa4c4e19e8eec380c88bf2f463238d70f62b6ce9"
+}

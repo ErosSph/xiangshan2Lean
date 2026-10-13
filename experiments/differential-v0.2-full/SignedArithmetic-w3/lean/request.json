@@ -1,0 +1,392 @@
+{
+  "parameters": {
+    "w": 3
+  },
+  "trace": [
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 1
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 2
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 3
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 4
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 5
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 6
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 7
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 1
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 2
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 3
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 4
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 5
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 6
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 7
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 2,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 2,
+        "io.b": 1
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 2,
+        "io.b": 2
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 2,
+        "io.b": 3
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 2,
+        "io.b": 4
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 2,
+        "io.b": 5
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 2,
+        "io.b": 6
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 2,
+        "io.b": 7
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 3,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 3,
+        "io.b": 1
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 3,
+        "io.b": 2
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 3,
+        "io.b": 3
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 3,
+        "io.b": 4
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 3,
+        "io.b": 5
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 3,
+        "io.b": 6
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 3,
+        "io.b": 7
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 4,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 4,
+        "io.b": 1
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 4,
+        "io.b": 2
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 4,
+        "io.b": 3
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 4,
+        "io.b": 4
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 4,
+        "io.b": 5
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 4,
+        "io.b": 6
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 4,
+        "io.b": 7
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 5,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 5,
+        "io.b": 1
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 5,
+        "io.b": 2
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 5,
+        "io.b": 3
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 5,
+        "io.b": 4
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 5,
+        "io.b": 5
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 5,
+        "io.b": 6
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 5,
+        "io.b": 7
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 6,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 6,
+        "io.b": 1
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 6,
+        "io.b": 2
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 6,
+        "io.b": 3
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 6,
+        "io.b": 4
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 6,
+        "io.b": 5
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 6,
+        "io.b": 6
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 6,
+        "io.b": 7
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 7,
+        "io.b": 0
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 7,
+        "io.b": 1
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 7,
+        "io.b": 2
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 7,
+        "io.b": 3
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 7,
+        "io.b": 4
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 7,
+        "io.b": 5
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 7,
+        "io.b": 6
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 7,
+        "io.b": 7
+      }
+    }
+  ],
+  "initial_state": null
+}

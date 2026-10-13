@@ -1,0 +1,27 @@
+[
+  {
+    "file": "examples/firrtl/Counter4.fir",
+    "sha256": "60ca74e7be22f2a110471d97af915310b648f77b02a8762fc5db72369a3b14b5",
+    "origin": "experiments/differential-v0.2-full/Counter-n4/reference/rtl/Counter.fir"
+  },
+  {
+    "file": "examples/firrtl/HierarchicalPipeline8.fir",
+    "sha256": "d6c2be33391680e73609ba8849643d63ed401d475e517fc3fd49acd26b58ea58",
+    "origin": "experiments/differential-v0.2-extension/HierarchicalPipeline-w8/reference/rtl/HierarchicalPipeline.fir"
+  },
+  {
+    "file": "verification/xiangshan/firrtl/RightShiftModule.fir",
+    "sha256": "02f10e43b69169bd428e90935a7cba34f4faa5621ac934d55685429172570dc5",
+    "origin": "experiments/xiangshan-firrtl/RightShiftModule/original/RightShiftModule.fir"
+  },
+  {
+    "file": "verification/xiangshan/firrtl/AluDataModule.fir",
+    "sha256": "76b164bc07970d71cdb99d557ef6abbdbf398dc76eba8d66bfe1cc2260be2313",
+    "origin": "experiments/xiangshan-firrtl/AluDataModule/original/AluDataModule.fir"
+  },
+  {
+    "file": "verification/firrtl/OriginalRightShiftReference.fir",
+    "sha256": "3f039a159888ca6cd42e1fb4feff7e5e043270f8736185caeb9108acdf6bc774",
+    "origin": "experiments/xiangshan-right-shift/XLEN-64/reference/rtl/OriginalRightShiftReference.fir"
+  }
+]

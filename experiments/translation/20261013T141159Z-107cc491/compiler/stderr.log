@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\audit\src\main\scala\Advanced.scala:35: error: [chisel2lean] Unsupported hardware expression: SApply(SSelect(SSelect(SSelect(SIdent(chisel3,StWrapped("chisel3.type")),util,StWrapped("chisel3.util.type")),Cat,StWrapped("chisel3.util.Cat.type")),do_apply,StFunc),List(SignalRef(ExtendedBits.this.flag,Bool(Io,Input)), Negative(SignalRef(ExtendedBits.this.in,UInt(KnownSize(SIdent(w,StInt)),Io,Input)))),UInt(UnknownSize,Node,Undirect))
+  concatenated := Cat(flag, -in)
+                ^
+1 error

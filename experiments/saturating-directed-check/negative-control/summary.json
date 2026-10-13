@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "mutation": "overflow flag deliberately never set",
+  "isolated_source_copy": true,
+  "observed_verification": "FAIL",
+  "lean_matches_rtl": true,
+  "specification_mismatch_detected": true,
+  "first_mismatch": {
+    "cycle": 6,
+    "sampling": "post",
+    "expected": {
+      "value": 15,
+      "overflow": true
+    },
+    "lean": {
+      "value": 15,
+      "overflow": false
+    },
+    "rtl": {
+      "value": 15,
+      "overflow": false
+    }
+  }
+}

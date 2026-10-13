@@ -1,0 +1,25 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Rejected.scala"
+  ],
+  "modules": [
+    {
+      "module": "rejectedconfiguration.EagerInherited",
+      "namespace": "rejectedconfiguration.EagerInherited",
+      "ir": "rejectedconfiguration/EagerInherited.ir.json",
+      "lean": "rejectedconfiguration/EagerInherited.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala": "255851781633178e7672046129b7eb71bb6718544b3f56609ce545b75deada1f",
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Rejected.scala": "2c73e8ddcfb48984ad7411e53593f4f0d3b16a629601de6fb84cf6dd0b54a7c4"
+  },
+  "compiler_sha256": "ea2b19d39da2c88e65f65932c3ceebf698a8f67c4a5395611ecca18b9bf8c4b1",
+  "lean_checked": false,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T150154Z-1c12d713"
+}

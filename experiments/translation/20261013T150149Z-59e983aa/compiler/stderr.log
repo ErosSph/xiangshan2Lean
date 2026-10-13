@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\Rejected.scala:12: error: [chisel2lean] CDE values used by hardware must end in an Int/Boolean case-class field
+  val y = IO(Output(UInt(p(CoreKey).unused.head.W)))
+                                     ^
+1 error

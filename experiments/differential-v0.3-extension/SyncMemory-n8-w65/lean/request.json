@@ -1,0 +1,502 @@
+{
+  "parameters": {
+    "n": 8,
+    "w": 65
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 1358736949838177847
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 3,
+        "raddr": 2,
+        "data": 26781488172453841940
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 2,
+        "raddr": 3,
+        "data": 32203424398702201502
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 27206506674344466245
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 6,
+        "raddr": 3,
+        "data": 31131896787279800392
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 0,
+        "raddr": 7,
+        "data": 17132182396913534892
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 2,
+        "raddr": 0,
+        "data": 22209808400943317033
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 0,
+        "raddr": 7,
+        "data": 19757577365217010959
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 4,
+        "raddr": 2,
+        "data": 33806790077006384778
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 6,
+        "raddr": 2,
+        "data": 11877084023196831941
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 3,
+        "raddr": 7,
+        "data": 29363506918350887646
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 4,
+        "data": 27020180490924327820
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 4,
+        "raddr": 3,
+        "data": 25117026730015622380
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 2,
+        "raddr": 5,
+        "data": 30223915569124587435
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 3,
+        "data": 14523945897447868416
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 1,
+        "raddr": 4,
+        "data": 25642552809013799801
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 3,
+        "raddr": 5,
+        "data": 30732200890085069662
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 0,
+        "raddr": 5,
+        "data": 13491981417592138371
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 0,
+        "data": 19866612291026214687
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 2,
+        "data": 33563152514723274964
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 4,
+        "raddr": 3,
+        "data": 4143375483643395874
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 1,
+        "raddr": 6,
+        "data": 21552199923127482371
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 1,
+        "raddr": 7,
+        "data": 5001064848129243787
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 6,
+        "raddr": 5,
+        "data": 31679256769258816354
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 7,
+        "raddr": 7,
+        "data": 15559237543755187230
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 1,
+        "raddr": 0,
+        "data": 784481317040692027
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 4,
+        "raddr": 7,
+        "data": 36366770992267324080
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 19843949951111048368
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 4,
+        "raddr": 7,
+        "data": 30522067631327418910
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 4,
+        "raddr": 4,
+        "data": 29218812537477133056
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 6,
+        "raddr": 5,
+        "data": 13167432107232284556
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 6,
+        "raddr": 6,
+        "data": 8829475658362150798
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 6,
+        "raddr": 1,
+        "data": 23056091162542755482
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 7,
+        "raddr": 0,
+        "data": 16471283266478743284
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 0,
+        "raddr": 7,
+        "data": 9372982186470679233
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 6,
+        "raddr": 5,
+        "data": 34662408570783731332
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 0,
+        "raddr": 2,
+        "data": 28162144959449735258
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 0,
+        "raddr": 4,
+        "data": 32650527431873258793
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 2,
+        "data": 8721270685008284864
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 2,
+        "raddr": 7,
+        "data": 14763070052335005156
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 3,
+        "raddr": 3,
+        "data": 35755172179829022630
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 1,
+        "raddr": 2,
+        "data": 35127294161350507790
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 4,
+        "raddr": 7,
+        "data": 25110800828406753068
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 5,
+        "data": 32612351989626145655
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 5,
+        "raddr": 4,
+        "data": 16132488279700790840
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 7,
+        "raddr": 7,
+        "data": 21521974873863698336
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "readEnable": true,
+        "waddr": 0,
+        "raddr": 6,
+        "data": 12876073559458615511
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "readEnable": true,
+        "waddr": 6,
+        "raddr": 0,
+        "data": 12830033909609752495
+      }
+    }
+  ],
+  "initial_state": {
+    "memory": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "__memory_memory_read_0": 0,
+    "__memory_memory_read_0_valid": false
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "cycle": 0,
+    "pre": {
+      "out": 0,
+      "left": 0,
+      "right": 0,
+      "bit": 0,
+      "any": 0,
+      "all": 0,
+      "parity": 0
+    },
+    "post": {
+      "out": 0,
+      "left": 0,
+      "right": 0,
+      "bit": 0,
+      "any": 0,
+      "all": 0,
+      "parity": 0
+    }
+  },
+  {
+    "cycle": 1,
+    "pre": {
+      "out": 1,
+      "left": 4,
+      "right": 0,
+      "bit": 1,
+      "any": 1,
+      "all": 0,
+      "parity": 1
+    },
+    "post": {
+      "out": 1,
+      "left": 4,
+      "right": 0,
+      "bit": 1,
+      "any": 1,
+      "all": 0,
+      "parity": 1
+    }
+  },
+  {
+    "cycle": 2,
+    "pre": {
+      "out": 2,
+      "left": 8,
+      "right": 1,
+      "bit": 0,
+      "any": 1,
+      "all": 0,
+      "parity": 1
+    },
+    "post": {
+      "out": 2,
+      "left": 8,
+      "right": 1,
+      "bit": 0,
+      "any": 1,
+      "all": 0,
+      "parity": 1
+    }
+  },
+  {
+    "cycle": 3,
+    "pre": {
+      "out": 3,
+      "left": 12,
+      "right": 1,
+      "bit": 1,
+      "any": 1,
+      "all": 0,
+      "parity": 0
+    },
+    "post": {
+      "out": 3,
+      "left": 12,
+      "right": 1,
+      "bit": 1,
+      "any": 1,
+      "all": 0,
+      "parity": 0
+    }
+  },
+  {
+    "cycle": 4,
+    "pre": {
+      "out": 4,
+      "left": 16,
+      "right": 2,
+      "bit": 0,
+      "any": 1,
+      "all": 0,
+      "parity": 1
+    },
+    "post": {
+      "out": 4,
+      "left": 16,
+      "right": 2,
+      "bit": 0,
+      "any": 1,
+      "all": 0,
+      "parity": 1
+    }
+  },
+  {
+    "cycle": 5,
+    "pre": {
+      "out": 5,
+      "left": 20,
+      "right": 2,
+      "bit": 1,
+      "any": 1,
+      "all": 0,
+      "parity": 0
+    },
+    "post": {
+      "out": 5,
+      "left": 20,
+      "right": 2,
+      "bit": 1,
+      "any": 1,
+      "all": 0,
+      "parity": 0
+    }
+  },
+  {
+    "cycle": 6,
+    "pre": {
+      "out": 6,
+      "left": 24,
+      "right": 3,
+      "bit": 0,
+      "any": 1,
+      "all": 0,
+      "parity": 0
+    },
+    "post": {
+      "out": 6,
+      "left": 24,
+      "right": 3,
+      "bit": 0,
+      "any": 1,
+      "all": 0,
+      "parity": 0
+    }
+  },
+  {
+    "cycle": 7,
+    "pre": {
+      "out": 7,
+      "left": 28,
+      "right": 3,
+      "bit": 1,
+      "any": 1,
+      "all": 1,
+      "parity": 1
+    },
+    "post": {
+      "out": 7,
+      "left": 28,
+      "right": 3,
+      "bit": 1,
+      "any": 1,
+      "all": 1,
+      "parity": 1
+    }
+  }
+]

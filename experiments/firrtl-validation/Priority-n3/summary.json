@@ -1,0 +1,18 @@
+{
+  "case": "Priority-n3",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\Priority-n3",
+  "passed": true,
+  "firrtl_sha256": "52ad7ccd5bf924edb528ea6b4436cef174fe65604c96525c39bc48b5916f5526",
+  "cycles": 48,
+  "output_comparisons": 95,
+  "initial_state": {
+    "cnt": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "io.clear": "io_clear",
+    "io.en": "io_en",
+    "io.q": "io_q"
+  }
+}

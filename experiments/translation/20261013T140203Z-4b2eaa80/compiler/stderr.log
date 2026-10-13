@@ -1,0 +1,21 @@
+E:\ICT\chisel2lean4\examples\Counter.scala:6: error: not processed in SignalTypeLoader #2:
+tree.tpe:
+  (): chisel3.Bool
+tree:
+  chisel3.Bool.apply
+tree AST:
+  Select(Select(Ident(chisel3), chisel3.Bool), TermName("apply"))
+source code:
+  val en = IO(Input(Bool()))
+                    ^
+E:\ICT\chisel2lean4\examples\Counter.scala:7: error: not processed in SignalTypeLoader #2:
+tree.tpe:
+  (width: chisel3.Width): chisel3.UInt
+tree:
+  chisel3.UInt.apply
+tree AST:
+  Select(Select(Ident(chisel3), chisel3.UInt), TermName("apply"))
+source code:
+  val q = IO(Output(UInt(n.W)))
+                    ^
+2 errors

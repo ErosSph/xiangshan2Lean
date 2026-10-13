@@ -1,0 +1,23 @@
+{
+  "case": "ExtendedBits-w128-shift3",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\ExtendedBits-w128-shift3",
+  "passed": true,
+  "firrtl_sha256": "8c0689a9b23baf781cc44a8a9bc269d29c30512290f8be05fc0eef123c573b4b",
+  "cycles": 48,
+  "output_comparisons": 672,
+  "initial_state": {},
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "in": "in",
+    "flag": "flag",
+    "amount": "amount",
+    "inverted": "inverted",
+    "negative": "negative",
+    "concatenated": "concatenated",
+    "isZero": "isZero",
+    "shifted": "shifted",
+    "dynamic": "dynamic",
+    "padded": "padded"
+  }
+}

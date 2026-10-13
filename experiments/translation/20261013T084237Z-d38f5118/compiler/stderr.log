@@ -1,0 +1,3 @@
+E:\ICT\chisel2lean4\testcase\src\main\scala\example\xiangshan\Divider.scala:30: error: [chisel2lean] Unsupported hardware statement: SUnapplyDef(List(a, b),STuple(List(VecSelect(SignalRef(Divider.this.io.in.bits,Vec(KnownSize(SLiteral(2,StInt)),Io,UInt(KnownSize(SIdent(len,StInt)),Io,Input))), SLiteral(0,StInt)), VecSelect(SignalRef(Divider.this.io.in.bits,Vec(KnownSize(SLiteral(2,StInt)),Io,UInt(KnownSize(SIdent(len,StInt)),Io,Input))), SLiteral(1,StInt))),StTuple(List(UInt(UnknownSize,Node,Undirect), UInt(UnknownSize,Node,Undirect)))),StTuple(List(UInt(UnknownSize,Node,Undirect), UInt(UnknownSize,Node,Undirect))))
+  val (a, b) = (io.in.bits(0), io.in.bits(1)) // 6
+           ^

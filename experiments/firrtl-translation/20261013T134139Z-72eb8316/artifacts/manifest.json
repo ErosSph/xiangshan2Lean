@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\Fifo-depth2-w3\\reference\\rtl\\Fifo.fir",
+  "source_sha256": "5a7bd2780a593ee6de58393c45a11e040bf717c93405b3775009c29a39682964",
+  "compiler_sha256": "40937bde440f25efce307092d88ce4cb3c4afe623d02f93576c699c22f8d417b",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.Fifo",
+      "top": "Fifo",
+      "ir": "FIRRTL/Fifo.ir.json",
+      "lean": "FIRRTL/Fifo.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T134139Z-72eb8316"
+}

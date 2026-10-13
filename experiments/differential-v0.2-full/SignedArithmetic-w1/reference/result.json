@@ -1,0 +1,78 @@
+[
+  {
+    "cycle": 0,
+    "pre": {
+      "io.extended": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.shr": 0,
+      "io.sum": 0,
+      "io.wide": 0
+    },
+    "post": {
+      "io.extended": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.shr": 0,
+      "io.sum": 0,
+      "io.wide": 0
+    }
+  },
+  {
+    "cycle": 1,
+    "pre": {
+      "io.extended": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.shr": 0,
+      "io.sum": 1,
+      "io.wide": 3
+    },
+    "post": {
+      "io.extended": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.shr": 0,
+      "io.sum": 1,
+      "io.wide": 3
+    }
+  },
+  {
+    "cycle": 2,
+    "pre": {
+      "io.extended": 7,
+      "io.less": 1,
+      "io.product": 0,
+      "io.shr": 1,
+      "io.sum": 1,
+      "io.wide": 3
+    },
+    "post": {
+      "io.extended": 7,
+      "io.less": 1,
+      "io.product": 0,
+      "io.shr": 1,
+      "io.sum": 1,
+      "io.wide": 3
+    }
+  },
+  {
+    "cycle": 3,
+    "pre": {
+      "io.extended": 7,
+      "io.less": 0,
+      "io.product": 1,
+      "io.shr": 1,
+      "io.sum": 0,
+      "io.wide": 2
+    },
+    "post": {
+      "io.extended": 7,
+      "io.less": 0,
+      "io.product": 1,
+      "io.shr": 1,
+      "io.sum": 0,
+      "io.wide": 2
+    }
+  }
+]

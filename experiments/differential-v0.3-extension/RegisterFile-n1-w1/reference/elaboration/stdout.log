@@ -1,0 +1,8 @@
+[warn] \audit\src\main\scala\Designs.scala 13:26: [W004] Dynamic index with width 3 is too wide for Vec of size 1 (expected index width 0).
+[warn]   when(write) { registers(waddr) := data }
+[warn]                          ^
+[warn] \audit\src\main\scala\Designs.scala 14:19: [W004] Dynamic index with width 3 is too wide for Vec of size 1 (expected index width 0).
+[warn]   out := registers(raddr)
+[warn]                   ^
+[warn] There were 2 warning(s) during hardware elaboration.
+Official Chisel 7.3.0 / CIRCT firtool RTL: E:\ICT\chisel2lean4\experiments\differential-v0.3-extension\RegisterFile-n1-w1\reference\rtl\Chisel2LeanReference.v

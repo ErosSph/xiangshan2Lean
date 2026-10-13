@@ -1,0 +1,18 @@
+{
+  "parameters": {
+    "invert": true
+  },
+  "trace": [
+    {
+      "inputs": {
+        "in": false
+      }
+    },
+    {
+      "inputs": {
+        "in": true
+      }
+    }
+  ],
+  "initial_state": null
+}

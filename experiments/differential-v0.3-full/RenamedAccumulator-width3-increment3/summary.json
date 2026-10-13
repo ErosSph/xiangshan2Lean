@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 13,
+  "compared_output_values": 25,
+  "module": "RenamedAccumulator",
+  "parameters": {
+    "width": 3,
+    "increment": 3
+  },
+  "evidence": "experiments\\differential-v0.3-full\\RenamedAccumulator-width3-increment3",
+  "seconds": 11.45,
+  "fingerprint": "9064dac364936d684bf9e28f216a86f676a227361350f692c80ad97b83ac3baa"
+}

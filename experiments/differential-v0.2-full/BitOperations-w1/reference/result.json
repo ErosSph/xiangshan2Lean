@@ -1,0 +1,44 @@
+[
+  {
+    "cycle": 0,
+    "pre": {
+      "out": 0,
+      "left": 0,
+      "right": 0,
+      "bit": 0,
+      "any": 0,
+      "all": 0,
+      "parity": 0
+    },
+    "post": {
+      "out": 0,
+      "left": 0,
+      "right": 0,
+      "bit": 0,
+      "any": 0,
+      "all": 0,
+      "parity": 0
+    }
+  },
+  {
+    "cycle": 1,
+    "pre": {
+      "out": 1,
+      "left": 4,
+      "right": 0,
+      "bit": 1,
+      "any": 1,
+      "all": 1,
+      "parity": 1
+    },
+    "post": {
+      "out": 1,
+      "left": 4,
+      "right": 0,
+      "bit": 1,
+      "any": 1,
+      "all": 1,
+      "parity": 1
+    }
+  }
+]

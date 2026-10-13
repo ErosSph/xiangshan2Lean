@@ -1,0 +1,11 @@
+{
+  "module": "probes.TabulatedVector",
+  "parameters": {
+    "n": 4,
+    "w": 3
+  },
+  "seed": 20261013,
+  "cycles": 48,
+  "sampling": "before/after rising edge",
+  "comparison_start": "post first reset/warm-up edge for stateful modules"
+}

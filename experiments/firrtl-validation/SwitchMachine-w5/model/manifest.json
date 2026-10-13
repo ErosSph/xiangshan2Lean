@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\SwitchMachine-w5\\reference\\rtl\\SwitchMachine.fir",
+  "source_sha256": "974671930918c82178d5a7f36d74d666a2faea4cb010549fb9725179b01200d0",
+  "compiler_sha256": "bacf056d5839a33f7a1dc43710e1b24aa33d75b2f6d2125677ff3a5025a7092f",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.SwitchMachine",
+      "top": "SwitchMachine",
+      "ir": "FIRRTL/SwitchMachine.ir.json",
+      "lean": "FIRRTL/SwitchMachine.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T142335Z-ca977e4c"
+}

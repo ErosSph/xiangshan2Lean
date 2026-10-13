@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 96,
+  "module": "VecIndex",
+  "parameters": {
+    "n": 3,
+    "w": 4,
+    "k": 0
+  },
+  "evidence": "experiments\\differential-v0.3-full\\VecIndex-n3-w4-k0",
+  "seconds": 12.97,
+  "fingerprint": "973ac225b0ddbfd904a5b232f872f299155faa90aa9cb239acc7fb83f34cf388"
+}

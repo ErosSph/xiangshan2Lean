@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\Rejected.scala:51: error: [chisel2lean] Unconnected combinational signal child.in
+  val in = IO(Input(UInt(w.W)))
+       ^
+1 error

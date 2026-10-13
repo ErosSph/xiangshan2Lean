@@ -1,0 +1,1202 @@
+[
+  {
+    "cycle": 0,
+    "pre": {
+      "io.carry": 120,
+      "io.concat": 939,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 351,
+      "io.selected": 117,
+      "io.sub": 114,
+      "io.sum": 120,
+      "io.xor": 118
+    },
+    "post": {
+      "io.carry": 120,
+      "io.concat": 939,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 351,
+      "io.selected": 117,
+      "io.sub": 114,
+      "io.sum": 120,
+      "io.xor": 118
+    }
+  },
+  {
+    "cycle": 1,
+    "pre": {
+      "io.carry": 122,
+      "io.concat": 969,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 121,
+      "io.selected": 121,
+      "io.sub": 120,
+      "io.sum": 122,
+      "io.xor": 120
+    },
+    "post": {
+      "io.carry": 122,
+      "io.concat": 969,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 121,
+      "io.selected": 121,
+      "io.sub": 120,
+      "io.sum": 122,
+      "io.xor": 120
+    }
+  },
+  {
+    "cycle": 2,
+    "pre": {
+      "io.carry": 16,
+      "io.concat": 107,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 39,
+      "io.selected": 3,
+      "io.sub": 10,
+      "io.sum": 16,
+      "io.xor": 14
+    },
+    "post": {
+      "io.carry": 16,
+      "io.concat": 107,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 39,
+      "io.selected": 3,
+      "io.sub": 10,
+      "io.sum": 16,
+      "io.xor": 14
+    }
+  },
+  {
+    "cycle": 3,
+    "pre": {
+      "io.carry": 7,
+      "io.concat": 35,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 12,
+      "io.selected": 3,
+      "io.sub": 1,
+      "io.sum": 7,
+      "io.xor": 7
+    },
+    "post": {
+      "io.carry": 7,
+      "io.concat": 35,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 12,
+      "io.selected": 3,
+      "io.sub": 1,
+      "io.sum": 7,
+      "io.xor": 7
+    }
+  },
+  {
+    "cycle": 4,
+    "pre": {
+      "io.carry": 65,
+      "io.concat": 506,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 126,
+      "io.selected": 2,
+      "io.sub": 61,
+      "io.sum": 65,
+      "io.xor": 61
+    },
+    "post": {
+      "io.carry": 65,
+      "io.concat": 506,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 126,
+      "io.selected": 2,
+      "io.sub": 61,
+      "io.sum": 65,
+      "io.xor": 61
+    }
+  },
+  {
+    "cycle": 5,
+    "pre": {
+      "io.carry": 122,
+      "io.concat": 927,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 805,
+      "io.selected": 7,
+      "io.sub": 108,
+      "io.sum": 122,
+      "io.xor": 116
+    },
+    "post": {
+      "io.carry": 122,
+      "io.concat": 927,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 805,
+      "io.selected": 7,
+      "io.sub": 108,
+      "io.sum": 122,
+      "io.xor": 116
+    }
+  },
+  {
+    "cycle": 6,
+    "pre": {
+      "io.carry": 13,
+      "io.concat": 90,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 22,
+      "io.selected": 2,
+      "io.sub": 9,
+      "io.sum": 13,
+      "io.xor": 9
+    },
+    "post": {
+      "io.carry": 13,
+      "io.concat": 90,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 22,
+      "io.selected": 2,
+      "io.sub": 9,
+      "io.sum": 13,
+      "io.xor": 9
+    }
+  },
+  {
+    "cycle": 7,
+    "pre": {
+      "io.carry": 51,
+      "io.concat": 373,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 230,
+      "io.selected": 46,
+      "io.sub": 41,
+      "io.sum": 51,
+      "io.xor": 43
+    },
+    "post": {
+      "io.carry": 51,
+      "io.concat": 373,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 230,
+      "io.selected": 46,
+      "io.sub": 41,
+      "io.sum": 51,
+      "io.xor": 43
+    }
+  },
+  {
+    "cycle": 8,
+    "pre": {
+      "io.carry": 111,
+      "io.concat": 853,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 530,
+      "io.selected": 106,
+      "io.sub": 101,
+      "io.sum": 111,
+      "io.xor": 111
+    },
+    "post": {
+      "io.carry": 111,
+      "io.concat": 853,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 530,
+      "io.selected": 106,
+      "io.sub": 101,
+      "io.sum": 111,
+      "io.xor": 111
+    }
+  },
+  {
+    "cycle": 9,
+    "pre": {
+      "io.carry": 128,
+      "io.concat": 975,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 847,
+      "io.selected": 121,
+      "io.sub": 114,
+      "io.sum": 0,
+      "io.xor": 126
+    },
+    "post": {
+      "io.carry": 128,
+      "io.concat": 975,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 847,
+      "io.selected": 121,
+      "io.sub": 114,
+      "io.sum": 0,
+      "io.xor": 126
+    }
+  },
+  {
+    "cycle": 10,
+    "pre": {
+      "io.carry": 123,
+      "io.concat": 942,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 702,
+      "io.selected": 6,
+      "io.sub": 111,
+      "io.sum": 123,
+      "io.xor": 115
+    },
+    "post": {
+      "io.carry": 123,
+      "io.concat": 942,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 702,
+      "io.selected": 6,
+      "io.sub": 111,
+      "io.sum": 123,
+      "io.xor": 115
+    }
+  },
+  {
+    "cycle": 11,
+    "pre": {
+      "io.carry": 78,
+      "io.concat": 624,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 0,
+      "io.sub": 78,
+      "io.sum": 78,
+      "io.xor": 78
+    },
+    "post": {
+      "io.carry": 78,
+      "io.concat": 624,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 0,
+      "io.sub": 78,
+      "io.sum": 78,
+      "io.xor": 78
+    }
+  },
+  {
+    "cycle": 12,
+    "pre": {
+      "io.carry": 110,
+      "io.concat": 859,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 321,
+      "io.selected": 3,
+      "io.sub": 104,
+      "io.sum": 110,
+      "io.xor": 104
+    },
+    "post": {
+      "io.carry": 110,
+      "io.concat": 859,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 321,
+      "io.selected": 3,
+      "io.sub": 104,
+      "io.sum": 110,
+      "io.xor": 104
+    }
+  },
+  {
+    "cycle": 13,
+    "pre": {
+      "io.carry": 18,
+      "io.concat": 95,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 77,
+      "io.selected": 7,
+      "io.sub": 4,
+      "io.sum": 18,
+      "io.xor": 12
+    },
+    "post": {
+      "io.carry": 18,
+      "io.concat": 95,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 77,
+      "io.selected": 7,
+      "io.sub": 4,
+      "io.sum": 18,
+      "io.xor": 12
+    }
+  },
+  {
+    "cycle": 14,
+    "pre": {
+      "io.carry": 127,
+      "io.concat": 967,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 840,
+      "io.selected": 7,
+      "io.sub": 113,
+      "io.sum": 127,
+      "io.xor": 127
+    },
+    "post": {
+      "io.carry": 127,
+      "io.concat": 967,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 840,
+      "io.selected": 7,
+      "io.sub": 113,
+      "io.sum": 127,
+      "io.xor": 127
+    }
+  },
+  {
+    "cycle": 15,
+    "pre": {
+      "io.carry": 12,
+      "io.concat": 54,
+      "io.equal": 1,
+      "io.less": 0,
+      "io.product": 36,
+      "io.selected": 6,
+      "io.sub": 0,
+      "io.sum": 12,
+      "io.xor": 0
+    },
+    "post": {
+      "io.carry": 12,
+      "io.concat": 54,
+      "io.equal": 1,
+      "io.less": 0,
+      "io.product": 36,
+      "io.selected": 6,
+      "io.sub": 0,
+      "io.sum": 12,
+      "io.xor": 0
+    }
+  },
+  {
+    "cycle": 16,
+    "pre": {
+      "io.carry": 110,
+      "io.concat": 859,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 321,
+      "io.selected": 107,
+      "io.sub": 104,
+      "io.sum": 110,
+      "io.xor": 104
+    },
+    "post": {
+      "io.carry": 110,
+      "io.concat": 859,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 321,
+      "io.selected": 107,
+      "io.sub": 104,
+      "io.sum": 110,
+      "io.xor": 104
+    }
+  },
+  {
+    "cycle": 17,
+    "pre": {
+      "io.carry": 53,
+      "io.concat": 403,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 150,
+      "io.selected": 3,
+      "io.sub": 47,
+      "io.sum": 53,
+      "io.xor": 49
+    },
+    "post": {
+      "io.carry": 53,
+      "io.concat": 403,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 150,
+      "io.selected": 3,
+      "io.sub": 47,
+      "io.sum": 53,
+      "io.xor": 49
+    }
+  },
+  {
+    "cycle": 18,
+    "pre": {
+      "io.carry": 123,
+      "io.concat": 977,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 122,
+      "io.selected": 122,
+      "io.sub": 121,
+      "io.sum": 123,
+      "io.xor": 123
+    },
+    "post": {
+      "io.carry": 123,
+      "io.concat": 977,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 122,
+      "io.selected": 122,
+      "io.sub": 121,
+      "io.sum": 123,
+      "io.xor": 123
+    }
+  },
+  {
+    "cycle": 19,
+    "pre": {
+      "io.carry": 13,
+      "io.concat": 83,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 30,
+      "io.selected": 10,
+      "io.sub": 7,
+      "io.sum": 13,
+      "io.xor": 9
+    },
+    "post": {
+      "io.carry": 13,
+      "io.concat": 83,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 30,
+      "io.selected": 10,
+      "io.sub": 7,
+      "io.sum": 13,
+      "io.xor": 9
+    }
+  },
+  {
+    "cycle": 20,
+    "pre": {
+      "io.carry": 46,
+      "io.concat": 319,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 273,
+      "io.selected": 7,
+      "io.sub": 32,
+      "io.sum": 46,
+      "io.xor": 32
+    },
+    "post": {
+      "io.carry": 46,
+      "io.concat": 319,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 273,
+      "io.selected": 7,
+      "io.sub": 32,
+      "io.sum": 46,
+      "io.xor": 32
+    }
+  },
+  {
+    "cycle": 21,
+    "pre": {
+      "io.carry": 98,
+      "io.concat": 742,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 552,
+      "io.selected": 6,
+      "io.sub": 86,
+      "io.sum": 98,
+      "io.xor": 90
+    },
+    "post": {
+      "io.carry": 98,
+      "io.concat": 742,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 552,
+      "io.selected": 6,
+      "io.sub": 86,
+      "io.sum": 98,
+      "io.xor": 90
+    }
+  },
+  {
+    "cycle": 22,
+    "pre": {
+      "io.carry": 22,
+      "io.concat": 176,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 22,
+      "io.sub": 22,
+      "io.sum": 22,
+      "io.xor": 22
+    },
+    "post": {
+      "io.carry": 22,
+      "io.concat": 176,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 22,
+      "io.sub": 22,
+      "io.sum": 22,
+      "io.xor": 22
+    }
+  },
+  {
+    "cycle": 23,
+    "pre": {
+      "io.carry": 56,
+      "io.concat": 399,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 343,
+      "io.selected": 7,
+      "io.sub": 42,
+      "io.sum": 56,
+      "io.xor": 54
+    },
+    "post": {
+      "io.carry": 56,
+      "io.concat": 399,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 343,
+      "io.selected": 7,
+      "io.sub": 42,
+      "io.sum": 56,
+      "io.xor": 54
+    }
+  },
+  {
+    "cycle": 24,
+    "pre": {
+      "io.carry": 101,
+      "io.concat": 801,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 100,
+      "io.selected": 100,
+      "io.sub": 99,
+      "io.sum": 101,
+      "io.xor": 101
+    },
+    "post": {
+      "io.carry": 101,
+      "io.concat": 801,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 100,
+      "io.selected": 100,
+      "io.sub": 99,
+      "io.sum": 101,
+      "io.xor": 101
+    }
+  },
+  {
+    "cycle": 25,
+    "pre": {
+      "io.carry": 87,
+      "io.concat": 668,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 332,
+      "io.selected": 83,
+      "io.sub": 79,
+      "io.sum": 87,
+      "io.xor": 87
+    },
+    "post": {
+      "io.carry": 87,
+      "io.concat": 668,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 332,
+      "io.selected": 83,
+      "io.sub": 79,
+      "io.sum": 87,
+      "io.xor": 87
+    }
+  },
+  {
+    "cycle": 26,
+    "pre": {
+      "io.carry": 125,
+      "io.concat": 951,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 826,
+      "io.selected": 118,
+      "io.sub": 111,
+      "io.sum": 125,
+      "io.xor": 113
+    },
+    "post": {
+      "io.carry": 125,
+      "io.concat": 951,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 826,
+      "io.selected": 118,
+      "io.sub": 111,
+      "io.sum": 125,
+      "io.xor": 113
+    }
+  },
+  {
+    "cycle": 27,
+    "pre": {
+      "io.carry": 15,
+      "io.concat": 92,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 44,
+      "io.selected": 4,
+      "io.sub": 7,
+      "io.sum": 15,
+      "io.xor": 15
+    },
+    "post": {
+      "io.carry": 15,
+      "io.concat": 92,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 44,
+      "io.selected": 4,
+      "io.sub": 7,
+      "io.sum": 15,
+      "io.xor": 15
+    }
+  },
+  {
+    "cycle": 28,
+    "pre": {
+      "io.carry": 61,
+      "io.concat": 453,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 280,
+      "io.selected": 56,
+      "io.sub": 51,
+      "io.sum": 61,
+      "io.xor": 61
+    },
+    "post": {
+      "io.carry": 61,
+      "io.concat": 453,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 280,
+      "io.selected": 56,
+      "io.sub": 51,
+      "io.sum": 61,
+      "io.xor": 61
+    }
+  },
+  {
+    "cycle": 29,
+    "pre": {
+      "io.carry": 74,
+      "io.concat": 564,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 280,
+      "io.selected": 4,
+      "io.sub": 66,
+      "io.sum": 74,
+      "io.xor": 66
+    },
+    "post": {
+      "io.carry": 74,
+      "io.concat": 564,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 280,
+      "io.selected": 4,
+      "io.sub": 66,
+      "io.sum": 74,
+      "io.xor": 66
+    }
+  },
+  {
+    "cycle": 30,
+    "pre": {
+      "io.carry": 95,
+      "io.concat": 732,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 364,
+      "io.selected": 4,
+      "io.sub": 87,
+      "io.sum": 95,
+      "io.xor": 95
+    },
+    "post": {
+      "io.carry": 95,
+      "io.concat": 732,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 364,
+      "io.selected": 4,
+      "io.sub": 87,
+      "io.sum": 95,
+      "io.xor": 95
+    }
+  },
+  {
+    "cycle": 31,
+    "pre": {
+      "io.carry": 64,
+      "io.concat": 477,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 295,
+      "io.selected": 5,
+      "io.sub": 54,
+      "io.sum": 64,
+      "io.xor": 62
+    },
+    "post": {
+      "io.carry": 64,
+      "io.concat": 477,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 295,
+      "io.selected": 5,
+      "io.sub": 54,
+      "io.sum": 64,
+      "io.xor": 62
+    }
+  },
+  {
+    "cycle": 32,
+    "pre": {
+      "io.carry": 56,
+      "io.concat": 427,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 159,
+      "io.selected": 3,
+      "io.sub": 50,
+      "io.sum": 56,
+      "io.xor": 54
+    },
+    "post": {
+      "io.carry": 56,
+      "io.concat": 427,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 159,
+      "io.selected": 3,
+      "io.sub": 50,
+      "io.sum": 56,
+      "io.xor": 54
+    }
+  },
+  {
+    "cycle": 33,
+    "pre": {
+      "io.carry": 36,
+      "io.concat": 253,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 155,
+      "io.selected": 5,
+      "io.sub": 26,
+      "io.sum": 36,
+      "io.xor": 26
+    },
+    "post": {
+      "io.carry": 36,
+      "io.concat": 253,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 155,
+      "io.selected": 5,
+      "io.sub": 26,
+      "io.sum": 36,
+      "io.xor": 26
+    }
+  },
+  {
+    "cycle": 34,
+    "pre": {
+      "io.carry": 78,
+      "io.concat": 575,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 497,
+      "io.selected": 71,
+      "io.sub": 64,
+      "io.sum": 78,
+      "io.xor": 64
+    },
+    "post": {
+      "io.carry": 78,
+      "io.concat": 575,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 497,
+      "io.selected": 71,
+      "io.sub": 64,
+      "io.sum": 78,
+      "io.xor": 64
+    }
+  },
+  {
+    "cycle": 35,
+    "pre": {
+      "io.carry": 102,
+      "io.concat": 767,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 665,
+      "io.selected": 7,
+      "io.sub": 88,
+      "io.sum": 102,
+      "io.xor": 88
+    },
+    "post": {
+      "io.carry": 102,
+      "io.concat": 767,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 665,
+      "io.selected": 7,
+      "io.sub": 88,
+      "io.sum": 102,
+      "io.xor": 88
+    }
+  },
+  {
+    "cycle": 36,
+    "pre": {
+      "io.carry": 65,
+      "io.concat": 485,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 300,
+      "io.selected": 60,
+      "io.sub": 55,
+      "io.sum": 65,
+      "io.xor": 57
+    },
+    "post": {
+      "io.carry": 65,
+      "io.concat": 485,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 300,
+      "io.selected": 60,
+      "io.sub": 55,
+      "io.sum": 65,
+      "io.xor": 57
+    }
+  },
+  {
+    "cycle": 37,
+    "pre": {
+      "io.carry": 40,
+      "io.concat": 285,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 175,
+      "io.selected": 35,
+      "io.sub": 30,
+      "io.sum": 40,
+      "io.xor": 38
+    },
+    "post": {
+      "io.carry": 40,
+      "io.concat": 285,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 175,
+      "io.selected": 35,
+      "io.sub": 30,
+      "io.sum": 40,
+      "io.xor": 38
+    }
+  },
+  {
+    "cycle": 38,
+    "pre": {
+      "io.carry": 105,
+      "io.concat": 840,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 105,
+      "io.sub": 105,
+      "io.sum": 105,
+      "io.xor": 105
+    },
+    "post": {
+      "io.carry": 105,
+      "io.concat": 840,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 105,
+      "io.sub": 105,
+      "io.sum": 105,
+      "io.xor": 105
+    }
+  },
+  {
+    "cycle": 39,
+    "pre": {
+      "io.carry": 51,
+      "io.concat": 401,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 50,
+      "io.selected": 50,
+      "io.sub": 49,
+      "io.sum": 51,
+      "io.xor": 51
+    },
+    "post": {
+      "io.carry": 51,
+      "io.concat": 401,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 50,
+      "io.selected": 50,
+      "io.sub": 49,
+      "io.sum": 51,
+      "io.xor": 51
+    }
+  },
+  {
+    "cycle": 40,
+    "pre": {
+      "io.carry": 94,
+      "io.concat": 752,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 0,
+      "io.sub": 94,
+      "io.sum": 94,
+      "io.xor": 94
+    },
+    "post": {
+      "io.carry": 94,
+      "io.concat": 752,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 0,
+      "io.sub": 94,
+      "io.sum": 94,
+      "io.xor": 94
+    }
+  },
+  {
+    "cycle": 41,
+    "pre": {
+      "io.carry": 107,
+      "io.concat": 849,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 106,
+      "io.selected": 1,
+      "io.sub": 105,
+      "io.sum": 107,
+      "io.xor": 107
+    },
+    "post": {
+      "io.carry": 107,
+      "io.concat": 849,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 106,
+      "io.selected": 1,
+      "io.sub": 105,
+      "io.sum": 107,
+      "io.xor": 107
+    }
+  },
+  {
+    "cycle": 42,
+    "pre": {
+      "io.carry": 89,
+      "io.concat": 698,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 174,
+      "io.selected": 2,
+      "io.sub": 85,
+      "io.sum": 89,
+      "io.xor": 85
+    },
+    "post": {
+      "io.carry": 89,
+      "io.concat": 698,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 174,
+      "io.selected": 2,
+      "io.sub": 85,
+      "io.sum": 89,
+      "io.xor": 85
+    }
+  },
+  {
+    "cycle": 43,
+    "pre": {
+      "io.carry": 97,
+      "io.concat": 776,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 97,
+      "io.sub": 97,
+      "io.sum": 97,
+      "io.xor": 97
+    },
+    "post": {
+      "io.carry": 97,
+      "io.concat": 776,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 0,
+      "io.selected": 97,
+      "io.sub": 97,
+      "io.sum": 97,
+      "io.xor": 97
+    }
+  },
+  {
+    "cycle": 44,
+    "pre": {
+      "io.carry": 11,
+      "io.concat": 39,
+      "io.equal": 0,
+      "io.less": 1,
+      "io.product": 28,
+      "io.selected": 4,
+      "io.sub": 125,
+      "io.sum": 11,
+      "io.xor": 3
+    },
+    "post": {
+      "io.carry": 11,
+      "io.concat": 39,
+      "io.equal": 0,
+      "io.less": 1,
+      "io.product": 28,
+      "io.selected": 4,
+      "io.sub": 125,
+      "io.sum": 11,
+      "io.xor": 3
+    }
+  },
+  {
+    "cycle": 45,
+    "pre": {
+      "io.carry": 66,
+      "io.concat": 507,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 189,
+      "io.selected": 3,
+      "io.sub": 60,
+      "io.sum": 66,
+      "io.xor": 60
+    },
+    "post": {
+      "io.carry": 66,
+      "io.concat": 507,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 189,
+      "io.selected": 3,
+      "io.sub": 60,
+      "io.sum": 66,
+      "io.xor": 60
+    }
+  },
+  {
+    "cycle": 46,
+    "pre": {
+      "io.carry": 110,
+      "io.concat": 873,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 109,
+      "io.selected": 1,
+      "io.sub": 108,
+      "io.sum": 110,
+      "io.xor": 108
+    },
+    "post": {
+      "io.carry": 110,
+      "io.concat": 873,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 109,
+      "io.selected": 1,
+      "io.sub": 108,
+      "io.sum": 110,
+      "io.xor": 108
+    }
+  },
+  {
+    "cycle": 47,
+    "pre": {
+      "io.carry": 111,
+      "io.concat": 846,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 630,
+      "io.selected": 105,
+      "io.sub": 99,
+      "io.sum": 111,
+      "io.xor": 111
+    },
+    "post": {
+      "io.carry": 111,
+      "io.concat": 846,
+      "io.equal": 0,
+      "io.less": 0,
+      "io.product": 630,
+      "io.selected": 105,
+      "io.sub": 99,
+      "io.sum": 111,
+      "io.xor": 111
+    }
+  }
+]

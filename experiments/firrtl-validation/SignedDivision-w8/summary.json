@@ -1,0 +1,16 @@
+{
+  "case": "SignedDivision-w8",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\SignedDivision-w8",
+  "passed": true,
+  "firrtl_sha256": "f03b52f80efc1750d70ac543988590ccb3ab5d2328e4e53aa6c3a28a03659401",
+  "cycles": 48,
+  "output_comparisons": 192,
+  "initial_state": {},
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "a": "a",
+    "b": "b",
+    "quotient": "quotient",
+    "remainder": "remainder"
+  }
+}

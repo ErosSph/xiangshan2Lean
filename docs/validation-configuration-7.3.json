@@ -1,0 +1,292 @@
+{
+  "status": "PASS",
+  "configurations": 20,
+  "cases": [
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 1,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 1,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 1,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 1,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 8,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 8,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 8,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 8,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "TwoConfigurations",
+      "parameters": {
+        "cfg_p_configuration_CoreKey_width": 2,
+        "cfg_other_configuration_CoreKey_width": 5
+      },
+      "cycles": 4,
+      "output_comparisons": 8,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "TwoConfigurations",
+      "parameters": {
+        "cfg_p_configuration_CoreKey_width": 5,
+        "cfg_other_configuration_CoreKey_width": 2
+      },
+      "cycles": 32,
+      "output_comparisons": 64,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "TwoConfigurations",
+      "parameters": {
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_other_configuration_CoreKey_width": 4
+      },
+      "cycles": 16,
+      "output_comparisons": 32,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "InheritedPrimitive",
+      "parameters": {
+        "n": 1
+      },
+      "cycles": 4,
+      "output_comparisons": 8,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "InheritedPrimitive",
+      "parameters": {
+        "n": 3
+      },
+      "cycles": 16,
+      "output_comparisons": 32,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "InheritedPrimitive",
+      "parameters": {
+        "n": 6
+      },
+      "cycles": 128,
+      "output_comparisons": 256,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ScalarDefaults",
+      "parameters": {
+        "cfg_p_configuration_ScalarKey": 5,
+        "cfg_p_configuration_FlagKey": false
+      },
+      "cycles": 32,
+      "output_comparisons": 64,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ScalarDefaults",
+      "parameters": {
+        "cfg_p_configuration_ScalarKey": 5,
+        "cfg_p_configuration_FlagKey": true
+      },
+      "cycles": 32,
+      "output_comparisons": 64,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    }
+  ],
+  "rejections": [
+    {
+      "module": "DynamicKey",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "CollectionField",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "EagerInherited",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "ForwardValue",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "ExplicitSuper",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "RecursiveGetter",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "OverloadedGetter",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "OverrideVal",
+      "status": "PASS",
+      "source_diagnostic": true
+    }
+  ],
+  "cycles": 1032,
+  "output_comparisons": 2064,
+  "formal_source_to_lean_equivalence_proof": false
+}

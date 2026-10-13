@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean\tests\fixtures\Rejected.scala:90: error: [chisel2lean] Unsupported parameter computation: SApply(SSelect(SSelect(SIdent(chisel3,StWrapped("chisel3.type")),SyncReadMem,StWrapped("chisel3.SyncReadMem.type")),do_apply,StFunc),List(SLiteral(4,StInt), SApply(SSelect(SSelect(SSelect(SIdent(chisel3,StWrapped("chisel3.type")),package,StWrapped("chisel3.package.type")),UInt,StWrapped("chisel3.package.UInt.type")),apply,StFunc),List(SSelect(SApply(SSelect(SSelect(SIdent(chisel3,StWrapped("chisel3.type")),package,StWrapped("chisel3.package.type")),fromIntToWidth,StFunc),List(SIdent(w,StInt)),StWrapped("chisel3.package.fromIntToWidth")),W,StWrapped("chisel3.internal.firrtl.Width"))),UInt(UnknownSize,Node,Undirect))),StWrapped("chisel3.SyncReadMem[_ <: chisel3.Data]"))
+  val mem = SyncReadMem(4, UInt(w.W))
+       ^
+1 error

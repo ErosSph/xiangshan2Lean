@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "HierarchicalPipeline",
+  "parameters": {
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.2-extension\\HierarchicalPipeline-w3",
+  "seconds": 13.67,
+  "fingerprint": "2c29c24dfd3b2f1dc29c2753fba1f1723f211e52e18a9346b53964d7d0e348cf"
+}

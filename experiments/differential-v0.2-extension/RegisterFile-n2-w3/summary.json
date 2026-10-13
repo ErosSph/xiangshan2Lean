@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "RegisterFile",
+  "parameters": {
+    "n": 2,
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.2-extension\\RegisterFile-n2-w3",
+  "seconds": 12.95,
+  "fingerprint": "be43a19ab8b1f04a1d8f76b284256a87991a031ccb516a755af30382c3284eb5"
+}

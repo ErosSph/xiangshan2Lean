@@ -1,0 +1,28 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "HierarchicalComb",
+    "--Mdir",
+    "obj_dir",
+    "HierarchicalComb.v",
+    "trace.cpp"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean\\experiments\\differential-v0.2-extension\\HierarchicalComb-w3-invertTrue\\reference\\rtl",
+  "started_at": "2026-10-13T03:20:23.383295+00:00",
+  "exit_code": 0,
+  "ended_at": "2026-10-13T03:20:27.871755+00:00"
+}

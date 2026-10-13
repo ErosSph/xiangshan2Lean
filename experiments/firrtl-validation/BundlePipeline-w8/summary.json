@@ -1,0 +1,20 @@
+{
+  "case": "BundlePipeline-w8",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\BundlePipeline-w8",
+  "passed": true,
+  "firrtl_sha256": "20102bc4012ee00cb48feb8bff652bf6771362bcbc582df75d1ddcd8291a3742",
+  "cycles": 48,
+  "output_comparisons": 190,
+  "initial_state": {
+    "r_data": 0,
+    "r_valid": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "in.data": "in_data",
+    "in.valid": "in_valid",
+    "out.data": "out_data",
+    "out.valid": "out_valid"
+  }
+}

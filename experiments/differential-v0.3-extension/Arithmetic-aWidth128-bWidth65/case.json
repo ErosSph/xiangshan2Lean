@@ -1,0 +1,11 @@
+{
+  "module": "probes.Arithmetic",
+  "parameters": {
+    "aWidth": 128,
+    "bWidth": 65
+  },
+  "seed": 20261013,
+  "cycles": 48,
+  "sampling": "before/after rising edge",
+  "comparison_start": "post first reset/warm-up edge for stateful modules"
+}

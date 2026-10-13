@@ -1,0 +1,641 @@
+{
+  "parameters": {
+    "depth": 8,
+    "w": 7
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 3
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 4
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 5
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 7
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 8
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 9
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 0
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 83
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 106
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 18
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 26
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 51
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 39
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 57
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 101
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 120
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 110
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 62
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 37
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 26
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 17
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 36
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 95
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 9
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 75
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 75
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 37
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 37
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 114
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 17
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 114
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 88
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 98
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 55
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 73
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 43
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 50
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 50
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 5
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 21
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 99
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 43
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 91
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 84
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 85
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 97
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 19
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 52
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 11
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 87
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": true,
+        "data": 73
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": false,
+        "deq": false,
+        "data": 47
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": false,
+        "data": 26
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "enq": true,
+        "deq": true,
+        "data": 84
+      }
+    }
+  ],
+  "initial_state": null
+}

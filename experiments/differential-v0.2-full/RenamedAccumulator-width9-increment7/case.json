@@ -1,0 +1,11 @@
+{
+  "module": "probes.RenamedAccumulator",
+  "parameters": {
+    "width": 9,
+    "increment": 7
+  },
+  "seed": 20261013,
+  "cycles": 517,
+  "sampling": "before/after rising edge",
+  "comparison_start": "post first reset/warm-up edge for stateful modules"
+}

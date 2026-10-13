@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 190,
+  "module": "MixedReset",
+  "parameters": {
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.2-edge\\MixedReset-w3",
+  "seconds": 21.33,
+  "fingerprint": "d045c7cc842470a743751937564bbfd506cc41141a0f90b2db4ea38fbe8ebc28"
+}

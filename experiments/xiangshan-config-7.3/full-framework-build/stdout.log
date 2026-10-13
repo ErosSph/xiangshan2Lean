@@ -1,0 +1,48 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (11221 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] compiling 1 Scala source to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\cde\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 10 Scala sources to E:\ICT\chisel2lean4\reference\target\scala-2.13\classes ...
+[error] E:\ICT\chisel2lean4\audit\src\main\scala\Designs.scala:49:10: overloaded method apply with alternatives:
+[error]   [S <: chisel3.EnumType, T <: chisel3.Data](key: S, default: T)(mapping: Seq[(S, T)]): T <and>
+[error]   [T <: chisel3.Data](key: chisel3.UInt, default: T)(mapping: Seq[(chisel3.UInt, T)]): T
+[error]  cannot be applied to (chisel3.UInt, chisel3.UInt, Seq[(chisel3.UInt, chisel3.UInt)])
+[error]   out := MuxLookup(sel, 0.U, Seq(0.U -> a, 1.U -> b, 2.U -> (a + b)))
+[error]          ^
+[error] E:\ICT\chisel2lean4\audit\src\main\scala\Muxes.scala:17:13: overloaded method apply with alternatives:
+[error]   [S <: chisel3.EnumType, T <: chisel3.Data](key: S, default: T)(mapping: Seq[(S, T)]): T <and>
+[error]   [T <: chisel3.Data](key: chisel3.UInt, default: T)(mapping: Seq[(chisel3.UInt, T)]): T
+[error]  cannot be applied to (chisel3.UInt, chisel3.UInt, Seq[(chisel3.UInt, chisel3.UInt)])
+[error]   lookup := MuxLookup(sel, 0.U, Seq(0.U -> a, 0.U -> b, 1.U -> c))
+[error]             ^
+[error] E:\ICT\chisel2lean4\audit\src\main\scala\Muxes.scala:20:20: overloaded method apply with alternatives:
+[error]   [S <: chisel3.EnumType, T <: chisel3.Data](key: S, default: T)(mapping: Seq[(S, T)]): T <and>
+[error]   [T <: chisel3.Data](key: chisel3.UInt, default: T)(mapping: Seq[(chisel3.UInt, T)]): T
+[error]  cannot be applied to (chisel3.UInt, chisel3.UInt, Seq[(chisel3.UInt, chisel3.UInt)])
+[error]   val exhaustive = MuxLookup(sel, 255.U(8.W), Seq(0.U -> a, 1.U -> b, 2.U -> c, 3.U -> a))
+[error]                    ^
+[error] E:\ICT\chisel2lean4\reference\src\main\scala\GenerateRTL.scala:4:8: object DataMirror is not a member of package chisel3.experimental
+[error] import chisel3.experimental.DataMirror
+[error]        ^
+[error] E:\ICT\chisel2lean4\reference\src\main\scala\GenerateRTL.scala:44:25: not found: value DataMirror
+[error]         val direction = DataMirror.directionOf(leaf).toString.toLowerCase
+[error]                         ^
+[error] E:\ICT\chisel2lean4\reference\src\main\scala\GenerateRTL.scala:53:17: not found: value DataMirror
+[error]     val ports = DataMirror.modulePorts(elaborated).toList.flatMap { case (n, d) => flatten(n, d) }
+[error]                 ^
+[error] E:\ICT\chisel2lean4\reference\src\main\scala\GenerateRTL.scala:53:92: type mismatch;
+[error]  found   : Any
+[error]  required: String
+[error]     val ports = DataMirror.modulePorts(elaborated).toList.flatMap { case (n, d) => flatten(n, d) }
+[error]                                                                                            ^
+[error] E:\ICT\chisel2lean4\reference\src\main\scala\GenerateRTL.scala:53:95: type mismatch;
+[error]  found   : Any
+[error]  required: chisel3.Data
+[error]     val ports = DataMirror.modulePorts(elaborated).toList.flatMap { case (n, d) => flatten(n, d) }
+[error]                                                                                               ^
+[error] 8 errors found
+[error] (reference / Compile / compileIncremental) Compilation failed
+[error] Total time: 9 s, completed 2026年10月13日 下午10:02:38

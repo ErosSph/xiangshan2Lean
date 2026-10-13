@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "module": "xiangshan.backend.fu.RightShiftModule",
+  "toolchain": {
+    "format": "chisel2lean-source-dependencies-v1",
+    "scala_version": "2.13.15",
+    "chisel_version": "7.3.0",
+    "upstream_scala_version": "2.13.15",
+    "cache_directory": ".cache/xiangshan-dependencies-7.3",
+    "dependencies": [
+      {
+        "name": "xiangshan",
+        "repository": "OpenXiangShan/XiangShan",
+        "commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2"
+      },
+      {
+        "name": "rocket",
+        "repository": "OpenXiangShan/rocket-chip",
+        "commit": "0f09d1ab77adf6e57d42ef9b6ab1cb7c4cc8c654"
+      },
+      {
+        "name": "cde",
+        "repository": "chipsalliance/cde",
+        "commit": "52768c97a27b254c0cc0ac9401feb55b29e18c28"
+      },
+      {
+        "name": "hardfloat",
+        "repository": "ucb-bar/berkeley-hardfloat",
+        "commit": "d93aa570806013dea479a92ba9bb33d1f2d4f69f"
+      },
+      {
+        "name": "utility",
+        "repository": "OpenXiangShan/Utility",
+        "commit": "c8d424348b0a058753116558c3d7066dba375f17"
+      },
+      {
+        "name": "huancun",
+        "repository": "OpenXiangShan/HuanCun",
+        "commit": "65ef077373ecf398b4cecdea06b65ef9b8d79044"
+      },
+      {
+        "name": "difftest",
+        "repository": "OpenXiangShan/difftest",
+        "commit": "4a528c6c0c47097c8b0f7db5977591a5eba78512"
+      },
+      {
+        "name": "fudian",
+        "repository": "OpenXiangShan/fudian",
+        "commit": "e1bd4695ca7beb36a5ce7357e9527ad9e95b9ec1"
+      }
+    ]
+  },
+  "configuration_framework": "real CDE + original XSModule + complete HasXSParameter + original MinimalConfig/XSCoreParameters",
+  "source_sha256": {
+    "xiangshan\\src\\main\\scala\\xiangshan\\backend\\fu\\Alu.scala": "3400084dc26d34b2d4ce796f93c80000d12c173746d0d7eba7c47e8f36825fdc",
+    "xiangshan\\src\\main\\scala\\xiangshan\\XSCore.scala": "b1c34dede360f505759fa660f7391dff9ed0719cf388bd21840aa7641f55569f",
+    "xiangshan\\src\\main\\scala\\xiangshan\\Parameters.scala": "5e1419aaad93e212f571672c5b0c46546c49cb3547667dbd3f9844b2705b63ad"
+  },
+  "cases": [
+    {
+      "status": "PASS",
+      "parameters": {
+        "XLEN": 8
+      },
+      "cycles": 16896,
+      "compared_output_values": 101376,
+      "actual_processor_configuration": false,
+      "coverage": "each output function exhaustive over 8-bit data and 6-bit amount; plus uncorrelated random inputs",
+      "comparison": "integer specification == executed Lean == original-class official RTL",
+      "lean_parameters": {
+        "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 8
+      },
+      "real_CDE": true,
+      "original_full_source": true
+    },
+    {
+      "status": "PASS",
+      "parameters": {
+        "XLEN": 32
+      },
+      "cycles": 4864,
+      "compared_output_values": 29184,
+      "actual_processor_configuration": false,
+      "coverage": "corner patterns, walking ones/zeros, every 6-bit amount, uncorrelated random inputs",
+      "comparison": "integer specification == executed Lean == original-class official RTL",
+      "lean_parameters": {
+        "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 32
+      },
+      "real_CDE": true,
+      "original_full_source": true
+    },
+    {
+      "status": "PASS",
+      "parameters": {
+        "XLEN": 64
+      },
+      "cycles": 8960,
+      "compared_output_values": 53760,
+      "actual_processor_configuration": true,
+      "coverage": "corner patterns, walking ones/zeros, every 6-bit amount, uncorrelated random inputs",
+      "comparison": "integer specification == executed Lean == original-class official RTL",
+      "lean_parameters": {
+        "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 64
+      },
+      "real_CDE": true,
+      "original_full_source": true
+    }
+  ],
+  "cycles": 30720,
+  "compared_output_values": 184320,
+  "generated_model_specification_theorems": 3,
+  "formal_source_to_lean_equivalence_proof": false
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "cycle": 0,
+    "outputs": {
+      "io.srl": 4611686018427387904,
+      "io.sra": 13835058055282163712,
+      "io.revSrl": 1
+    }
+  },
+  {
+    "cycle": 1,
+    "outputs": {
+      "io.srl": 1,
+      "io.sra": 18446744073709551615,
+      "io.revSrl": 18446744073709551615
+    }
+  },
+  {
+    "cycle": 2,
+    "outputs": {
+      "io.srl": 9223372036854775808,
+      "io.sra": 9223372036854775808,
+      "io.revSrl": 4611686018427387904
+    }
+  },
+  {
+    "cycle": 3,
+    "outputs": {
+      "io.srl": 15,
+      "io.sra": 15,
+      "io.revSrl": 30
+    }
+  },
+  {
+    "cycle": 4,
+    "outputs": {
+      "io.srl": 0,
+      "io.sra": 0,
+      "io.revSrl": 0
+    }
+  }
+]

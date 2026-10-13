@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-control\\ConditionalPriority-w3\\reference\\rtl\\ConditionalPriority.fir",
+  "source_sha256": "45b549bee655d7b030218fa5b54b477069442a19e3d999f9f4c07bb6abebca9e",
+  "compiler_sha256": "bacf056d5839a33f7a1dc43710e1b24aa33d75b2f6d2125677ff3a5025a7092f",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.ConditionalPriority",
+      "top": "ConditionalPriority",
+      "ir": "FIRRTL/ConditionalPriority.ir.json",
+      "lean": "FIRRTL/ConditionalPriority.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T142203Z-46d40fec"
+}

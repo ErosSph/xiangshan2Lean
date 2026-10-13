@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "parameters": {
+    "XLEN": 8
+  },
+  "cycles": 16896,
+  "compared_output_values": 101376,
+  "actual_processor_configuration": false,
+  "coverage": "each output function exhaustive over 8-bit data and 6-bit amount; plus uncorrelated random inputs",
+  "comparison": "integer specification == executed Lean == original-class official RTL",
+  "lean_parameters": {
+    "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 8
+  },
+  "real_CDE": true,
+  "original_full_source": true
+}

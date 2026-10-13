@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\Rejected.scala:23: error: [chisel2lean] Member read before Scala initialization: later
+  val first = later
+               ^
+1 error

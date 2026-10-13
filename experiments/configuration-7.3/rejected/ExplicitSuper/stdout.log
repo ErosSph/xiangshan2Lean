@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\Rejected.scala:29: error: [chisel2lean] Explicit super dispatch is outside the inheritance subset
+trait SuperWidth extends ConfigParams { override def laneWidth = super.laneWidth + 1 }
+                                                                  ^
+1 error

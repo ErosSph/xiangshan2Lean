@@ -1,0 +1,17 @@
+{
+  "parameters": {
+    "n": 3,
+    "w": 4
+  },
+  "trace": [
+    {
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 3,
+        "data": 0
+      }
+    }
+  ],
+  "initial_state": null
+}

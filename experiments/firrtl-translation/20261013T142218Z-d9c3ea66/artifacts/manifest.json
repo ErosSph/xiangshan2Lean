@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\Arithmetic-aWidth65-bWidth7\\reference\\rtl\\Arithmetic.fir",
+  "source_sha256": "e3b508295f33fe2be169e4b74008f97aed0695e378dbd356b12c973c702f3be0",
+  "compiler_sha256": "bacf056d5839a33f7a1dc43710e1b24aa33d75b2f6d2125677ff3a5025a7092f",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.Arithmetic",
+      "top": "Arithmetic",
+      "ir": "FIRRTL/Arithmetic.ir.json",
+      "lean": "FIRRTL/Arithmetic.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T142218Z-d9c3ea66"
+}

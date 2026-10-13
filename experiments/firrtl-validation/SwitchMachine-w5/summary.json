@@ -1,0 +1,19 @@
+{
+  "case": "SwitchMachine-w5",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\SwitchMachine-w5",
+  "passed": true,
+  "firrtl_sha256": "974671930918c82178d5a7f36d74d666a2faea4cb010549fb9725179b01200d0",
+  "cycles": 48,
+  "output_comparisons": 95,
+  "initial_state": {
+    "state": 0,
+    "data": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "in": "in",
+    "en": "en",
+    "out": "out"
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "parameters": {
+    "n": 2,
+    "w": 3
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 5,
+        "data": 7
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 6,
+        "raddr": 0,
+        "data": 3
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 3,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 2,
+        "raddr": 3,
+        "data": 7
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 2,
+        "raddr": 0,
+        "data": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 2,
+        "raddr": 5,
+        "data": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 7
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 6,
+        "raddr": 7,
+        "data": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 4,
+        "raddr": 0,
+        "data": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 1,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 1,
+        "raddr": 7,
+        "data": 7
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 6,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 5,
+        "data": 3
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 7,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 0,
+        "raddr": 3,
+        "data": 4
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 7,
+        "raddr": 2,
+        "data": 5
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 2,
+        "raddr": 1,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 7,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 1,
+        "raddr": 7,
+        "data": 5
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 7
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 0,
+        "raddr": 4,
+        "data": 3
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 5,
+        "raddr": 4,
+        "data": 4
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 2,
+        "raddr": 5,
+        "data": 4
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 3,
+        "raddr": 5,
+        "data": 3
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "write": false,
+        "waddr": 3,
+        "raddr": 0,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 1,
+        "raddr": 4,
+        "data": 7
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 5,
+        "raddr": 5,
+        "data": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 5,
+        "raddr": 6,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 3,
+        "raddr": 1,
+        "data": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 0,
+        "raddr": 1,
+        "data": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 3,
+        "raddr": 5,
+        "data": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 6,
+        "raddr": 0,
+        "data": 5
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 7,
+        "raddr": 4,
+        "data": 3
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 2,
+        "raddr": 6,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 6,
+        "raddr": 6,
+        "data": 5
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 2,
+        "raddr": 5,
+        "data": 3
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 1,
+        "raddr": 7,
+        "data": 4
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 4,
+        "raddr": 0,
+        "data": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 0,
+        "raddr": 3,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 4,
+        "raddr": 2,
+        "data": 7
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 4,
+        "raddr": 1,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 1,
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 0,
+        "raddr": 7,
+        "data": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 7,
+        "raddr": 5,
+        "data": 5
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": false,
+        "waddr": 5,
+        "raddr": 7,
+        "data": 5
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 1,
+        "raddr": 6,
+        "data": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "write": true,
+        "waddr": 4,
+        "raddr": 7,
+        "data": 3
+      }
+    }
+  ],
+  "initial_state": null
+}

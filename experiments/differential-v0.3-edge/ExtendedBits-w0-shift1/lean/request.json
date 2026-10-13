@@ -1,0 +1,65 @@
+{
+  "parameters": {
+    "w": 0,
+    "shift": 1
+  },
+  "trace": [
+    {
+      "inputs": {
+        "in": 0,
+        "flag": false,
+        "amount": 0
+      }
+    },
+    {
+      "inputs": {
+        "in": 0,
+        "flag": false,
+        "amount": 1
+      }
+    },
+    {
+      "inputs": {
+        "in": 0,
+        "flag": false,
+        "amount": 2
+      }
+    },
+    {
+      "inputs": {
+        "in": 0,
+        "flag": false,
+        "amount": 3
+      }
+    },
+    {
+      "inputs": {
+        "in": 0,
+        "flag": true,
+        "amount": 0
+      }
+    },
+    {
+      "inputs": {
+        "in": 0,
+        "flag": true,
+        "amount": 1
+      }
+    },
+    {
+      "inputs": {
+        "in": 0,
+        "flag": true,
+        "amount": 2
+      }
+    },
+    {
+      "inputs": {
+        "in": 0,
+        "flag": true,
+        "amount": 3
+      }
+    }
+  ],
+  "initial_state": null
+}

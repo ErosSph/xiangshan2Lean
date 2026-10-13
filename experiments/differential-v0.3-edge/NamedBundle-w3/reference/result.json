@@ -1,0 +1,74 @@
+[
+  {
+    "cycle": 0,
+    "pre": {
+      "io.out": 1
+    },
+    "post": {
+      "io.out": 1
+    }
+  },
+  {
+    "cycle": 1,
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 2
+    }
+  },
+  {
+    "cycle": 2,
+    "pre": {
+      "io.out": 3
+    },
+    "post": {
+      "io.out": 3
+    }
+  },
+  {
+    "cycle": 3,
+    "pre": {
+      "io.out": 4
+    },
+    "post": {
+      "io.out": 4
+    }
+  },
+  {
+    "cycle": 4,
+    "pre": {
+      "io.out": 5
+    },
+    "post": {
+      "io.out": 5
+    }
+  },
+  {
+    "cycle": 5,
+    "pre": {
+      "io.out": 6
+    },
+    "post": {
+      "io.out": 6
+    }
+  },
+  {
+    "cycle": 6,
+    "pre": {
+      "io.out": 7
+    },
+    "post": {
+      "io.out": 7
+    }
+  },
+  {
+    "cycle": 7,
+    "pre": {
+      "io.out": 0
+    },
+    "post": {
+      "io.out": 0
+    }
+  }
+]

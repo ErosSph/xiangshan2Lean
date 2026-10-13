@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "module": "walkthrough.SaturatingAccumulator",
+  "source_sha256": "12c81600ff270420b30b197e7bd48eee7c50427a9da9e189a38e2a9448370c88",
+  "seed": 20261013,
+  "cases": [
+    {
+      "status": "PASS",
+      "parameters": {
+        "w": 4
+      },
+      "cycles": 18,
+      "compared_output_values": 70,
+      "comparison": "mathematical expectation == executed Lean == official RTL",
+      "initial_sampling": "post first reset edge; subsequent pre and post edges"
+    }
+  ],
+  "formal_equivalence_proof": false,
+  "directed_expected_table_checked": true,
+  "lean_checked": true,
+  "compiler_sha256": "b529982427922b1b9383e0b36f0485443a934dd4ce71f17db4b4a8b4d1828df9",
+  "negative_control": {
+    "status": "PASS",
+    "mutation": "overflow flag deliberately never set",
+    "isolated_source_copy": true,
+    "observed_verification": "FAIL",
+    "lean_matches_rtl": true,
+    "specification_mismatch_detected": true,
+    "first_mismatch": {
+      "cycle": 6,
+      "sampling": "post",
+      "expected": {
+        "value": 15,
+        "overflow": true
+      },
+      "lean": {
+        "value": 15,
+        "overflow": false
+      },
+      "rtl": {
+        "value": 15,
+        "overflow": false
+      }
+    }
+  },
+  "configurations": 1,
+  "cycles": 18,
+  "compared_output_values": 70
+}

@@ -1,0 +1,23 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\examples\\Counter.scala"
+  ],
+  "modules": [
+    {
+      "module": "Counter",
+      "namespace": "Counter",
+      "ir": "Counter.ir.json",
+      "lean": "Counter.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\examples\\Counter.scala": "1e659f7352afe687d0d701a9bf14b8a2af8c8e7edf6131b24b9259e25135df46"
+  },
+  "compiler_sha256": "13e21589890ba2ccd43619904b5e823376e5456648661121956dee23768d0763",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T140715Z-7f9681bb"
+}

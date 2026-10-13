@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "InferredVectorReset",
+  "parameters": {
+    "n": 1,
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.2-extension\\InferredVectorReset-n1-w3",
+  "seconds": 18.94,
+  "fingerprint": "43bdaa66e7e011e28f460756877b88736245f0ef63b07a7dedd54ac4a73c952f"
+}

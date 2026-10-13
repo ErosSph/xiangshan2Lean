@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 190,
+  "module": "DualRegister",
+  "parameters": {
+    "n": 9
+  },
+  "evidence": "experiments\\differential-v0.3-full\\DualRegister-n9",
+  "seconds": 11.52,
+  "fingerprint": "4647313a0680c709a6c45f9da7c32e3eee25ecb252efb32a39aa7f288ebdb86f"
+}

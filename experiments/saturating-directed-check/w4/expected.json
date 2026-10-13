@@ -1,0 +1,272 @@
+[
+  {
+    "cycle": 0,
+    "pre": {
+      "value": 0,
+      "overflow": false
+    },
+    "post": {
+      "value": 0,
+      "overflow": false
+    },
+    "state": {
+      "acc": 0,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 1,
+    "pre": {
+      "value": 0,
+      "overflow": false
+    },
+    "post": {
+      "value": 0,
+      "overflow": false
+    },
+    "state": {
+      "acc": 0,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 2,
+    "pre": {
+      "value": 0,
+      "overflow": false
+    },
+    "post": {
+      "value": 5,
+      "overflow": false
+    },
+    "state": {
+      "acc": 5,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 3,
+    "pre": {
+      "value": 5,
+      "overflow": false
+    },
+    "post": {
+      "value": 12,
+      "overflow": false
+    },
+    "state": {
+      "acc": 12,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 4,
+    "pre": {
+      "value": 12,
+      "overflow": false
+    },
+    "post": {
+      "value": 12,
+      "overflow": false
+    },
+    "state": {
+      "acc": 12,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 5,
+    "pre": {
+      "value": 12,
+      "overflow": false
+    },
+    "post": {
+      "value": 15,
+      "overflow": false
+    },
+    "state": {
+      "acc": 15,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 6,
+    "pre": {
+      "value": 15,
+      "overflow": false
+    },
+    "post": {
+      "value": 15,
+      "overflow": true
+    },
+    "state": {
+      "acc": 15,
+      "seenOverflow": true
+    }
+  },
+  {
+    "cycle": 7,
+    "pre": {
+      "value": 15,
+      "overflow": true
+    },
+    "post": {
+      "value": 15,
+      "overflow": true
+    },
+    "state": {
+      "acc": 15,
+      "seenOverflow": true
+    }
+  },
+  {
+    "cycle": 8,
+    "pre": {
+      "value": 15,
+      "overflow": true
+    },
+    "post": {
+      "value": 15,
+      "overflow": true
+    },
+    "state": {
+      "acc": 15,
+      "seenOverflow": true
+    }
+  },
+  {
+    "cycle": 9,
+    "pre": {
+      "value": 15,
+      "overflow": true
+    },
+    "post": {
+      "value": 0,
+      "overflow": false
+    },
+    "state": {
+      "acc": 0,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 10,
+    "pre": {
+      "value": 0,
+      "overflow": false
+    },
+    "post": {
+      "value": 4,
+      "overflow": false
+    },
+    "state": {
+      "acc": 4,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 11,
+    "pre": {
+      "value": 4,
+      "overflow": false
+    },
+    "post": {
+      "value": 0,
+      "overflow": false
+    },
+    "state": {
+      "acc": 0,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 12,
+    "pre": {
+      "value": 0,
+      "overflow": false
+    },
+    "post": {
+      "value": 15,
+      "overflow": false
+    },
+    "state": {
+      "acc": 15,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 13,
+    "pre": {
+      "value": 15,
+      "overflow": false
+    },
+    "post": {
+      "value": 15,
+      "overflow": false
+    },
+    "state": {
+      "acc": 15,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 14,
+    "pre": {
+      "value": 15,
+      "overflow": false
+    },
+    "post": {
+      "value": 15,
+      "overflow": true
+    },
+    "state": {
+      "acc": 15,
+      "seenOverflow": true
+    }
+  },
+  {
+    "cycle": 15,
+    "pre": {
+      "value": 15,
+      "overflow": true
+    },
+    "post": {
+      "value": 0,
+      "overflow": false
+    },
+    "state": {
+      "acc": 0,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 16,
+    "pre": {
+      "value": 0,
+      "overflow": false
+    },
+    "post": {
+      "value": 0,
+      "overflow": false
+    },
+    "state": {
+      "acc": 0,
+      "seenOverflow": false
+    }
+  },
+  {
+    "cycle": 17,
+    "pre": {
+      "value": 0,
+      "overflow": false
+    },
+    "post": {
+      "value": 2,
+      "overflow": false
+    },
+    "state": {
+      "acc": 2,
+      "seenOverflow": false
+    }
+  }
+]

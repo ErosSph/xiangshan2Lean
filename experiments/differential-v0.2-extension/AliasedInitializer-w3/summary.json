@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "AliasedInitializer",
+  "parameters": {
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.2-extension\\AliasedInitializer-w3",
+  "seconds": 33.94,
+  "fingerprint": "329af67815a2a2ced71700380cb34901527e5cf2d66f2bd1bba128458a5bd299"
+}

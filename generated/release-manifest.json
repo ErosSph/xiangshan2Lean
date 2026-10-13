@@ -1,0 +1,458 @@
+{
+  "format": "chisel2lean-release-manifest-v2",
+  "version": "0.2.0",
+  "modules": [
+    {
+      "module": "Counter",
+      "namespace": "Counter",
+      "ir": "Counter.ir.json",
+      "lean": "Counter.lean",
+      "lean_sha256": "449ed4b56cb6ae9beec9455657a58ff9c2c0a19b972bc0b99e9c67f77c1bf130",
+      "ir_sha256": "d628f8910ecf4530450cffb149fa3728f2e964531372afb58c499bf0f6670419"
+    },
+    {
+      "module": "probes.AliasedInitializer",
+      "namespace": "probes.AliasedInitializer",
+      "ir": "probes/AliasedInitializer.ir.json",
+      "lean": "probes/AliasedInitializer.lean",
+      "lean_sha256": "820f624649998095dbb554300879f12189ded97bbf8bfd2cd897acc827304627",
+      "ir_sha256": "cd5ad088c86ae8e5e94312b6aae52a86c0e072ca456de0a4c9ee995ea03da62c"
+    },
+    {
+      "module": "probes.Arithmetic",
+      "namespace": "probes.Arithmetic",
+      "ir": "probes/Arithmetic.ir.json",
+      "lean": "probes/Arithmetic.lean",
+      "lean_sha256": "edcf47b23dd2869c3ca64474cf4c0d9cbf4447b776d33a3d6c7466ff7e3aa773",
+      "ir_sha256": "b4b77701ddbd5f344e950e3ea71d533d46740ecd8967cb4b93dfae719517eb30"
+    },
+    {
+      "module": "probes.AsyncMemory",
+      "namespace": "probes.AsyncMemory",
+      "ir": "probes/AsyncMemory.ir.json",
+      "lean": "probes/AsyncMemory.lean",
+      "lean_sha256": "1ab1fb24030cc4698af364404d3bdfacc71ebbed654dc29b70ebd0f702660c2f",
+      "ir_sha256": "1967fa07df971ff3290c3f0986e4279e47493ab92d68d7ebbe4a0424ef69d78d"
+    },
+    {
+      "module": "probes.BitOperations",
+      "namespace": "probes.BitOperations",
+      "ir": "probes/BitOperations.ir.json",
+      "lean": "probes/BitOperations.lean",
+      "lean_sha256": "428f0f02d020436eb3f606966756f8f42c531cc8c1c69fc79f37c57d8bd15d63",
+      "ir_sha256": "2bfbcb02971a5947d28d728b7bfded05b9691e9e8dd67a8dd98ca3de1217ae86"
+    },
+    {
+      "module": "probes.BoolGate",
+      "namespace": "probes.BoolGate",
+      "ir": "probes/BoolGate.ir.json",
+      "lean": "probes/BoolGate.lean",
+      "lean_sha256": "384d0747577359c003170f80738a06add9b422fd1ac071aa0668188093711173",
+      "ir_sha256": "53e20f04f9995ed18e13af21149c4ffc154db562f85d1345158870c2757190a5"
+    },
+    {
+      "module": "probes.BoolState",
+      "namespace": "probes.BoolState",
+      "ir": "probes/BoolState.ir.json",
+      "lean": "probes/BoolState.lean",
+      "lean_sha256": "b1438b782293caef2cb76206f2b57377523b40418c193da5be5122cfd69875da",
+      "ir_sha256": "61990f6b79895d4fa09dfba262f2d025eca67a49ace2e25c8d12ad269c5f176a"
+    },
+    {
+      "module": "probes.BundlePipeline",
+      "namespace": "probes.BundlePipeline",
+      "ir": "probes/BundlePipeline.ir.json",
+      "lean": "probes/BundlePipeline.lean",
+      "lean_sha256": "67e5382ba0b0eda8ede9baefabc5656f2bb53fcbd03634cdadf08037a9dae3af",
+      "ir_sha256": "d4f939d58ab1cb868109cc28c837e7f7ec92c1a1689458af5048c77a6eaf4ffd"
+    },
+    {
+      "module": "probes.CombinationalDependencies",
+      "namespace": "probes.CombinationalDependencies",
+      "ir": "probes/CombinationalDependencies.ir.json",
+      "lean": "probes/CombinationalDependencies.lean",
+      "lean_sha256": "72f4b34909932ed47f7e9ca10bfe135d0f38070af84a288ebebf48efa8ba6255",
+      "ir_sha256": "7ae5e99fd8d31d41b40ab0d32df680e7077b256234afd4fb2783d89bb2f17ea4"
+    },
+    {
+      "module": "probes.CombLane",
+      "namespace": "probes.CombLane",
+      "ir": "probes/CombLane.ir.json",
+      "lean": "probes/CombLane.lean",
+      "lean_sha256": "154eec8670de88783d046d3c4cd7d3e2c2aa28e4f91c7b66e688485aafd2272f",
+      "ir_sha256": "c33243a14c8ca30107e6671b7dd247ea9b2551c45ab7b8181c4eab0ee0e4ed86"
+    },
+    {
+      "module": "probes.ConditionalPriority",
+      "namespace": "probes.ConditionalPriority",
+      "ir": "probes/ConditionalPriority.ir.json",
+      "lean": "probes/ConditionalPriority.lean",
+      "lean_sha256": "31d62cf2c9b6e0f715a32ff9e904c56d0802c7b245d34fbf7711582d9cd9c2ca",
+      "ir_sha256": "925c674cbc039df2ed50c319a1a52f52e6a3c568222dd19e565bb683ed2a83d1"
+    },
+    {
+      "module": "probes.Counter",
+      "namespace": "probes.Counter",
+      "ir": "probes/Counter.ir.json",
+      "lean": "probes/Counter.lean",
+      "lean_sha256": "750e8fca99fef4aabbd4cfcfddb0a811f6d7a8c6d6695ed94303e5fc867ccd45",
+      "ir_sha256": "d6206811a5da17b188f62bc2e7aee7f9e46793b9eee4bd2ceb05a27e50680c45"
+    },
+    {
+      "module": "probes.DirectCounter",
+      "namespace": "probes.DirectCounter",
+      "ir": "probes/DirectCounter.ir.json",
+      "lean": "probes/DirectCounter.lean",
+      "lean_sha256": "8f9f63e1b9662c0d3fb9e8f4ce6c493df175f1e870cac1f9def1ca2abae82f93",
+      "ir_sha256": "0e80fb2a0fbb0875c7489a952252317a780a59b0f7be4c9e1b337c85074da1aa"
+    },
+    {
+      "module": "probes.DualRegister",
+      "namespace": "probes.DualRegister",
+      "ir": "probes/DualRegister.ir.json",
+      "lean": "probes/DualRegister.lean",
+      "lean_sha256": "6fca14601c8a08f9ee0551120b8afc6561447d0ff194cf3d4c3e40eb4fbd4072",
+      "ir_sha256": "fffdcdac4863f5c86af1c0f227ca640956bc92bab1d71b41eaaedf3b8b241d05"
+    },
+    {
+      "module": "probes.ElaborationLiteral",
+      "namespace": "probes.ElaborationLiteral",
+      "ir": "probes/ElaborationLiteral.ir.json",
+      "lean": "probes/ElaborationLiteral.lean",
+      "lean_sha256": "931cfbef2ca9ba5b0ab0afafe781fa59f01d82f095b69fb5e16ea80f814bb4fa",
+      "ir_sha256": "4eac07e433232a9348d78dd6b1fd53f2cc931c65f6ca1bab1c5c922b85e6e686"
+    },
+    {
+      "module": "probes.ElaborationWidth",
+      "namespace": "probes.ElaborationWidth",
+      "ir": "probes/ElaborationWidth.ir.json",
+      "lean": "probes/ElaborationWidth.lean",
+      "lean_sha256": "9d12b88d2ce0fab23b8f8d6d7872d9895c9808ce3afc695831064bf845d7251b",
+      "ir_sha256": "dda3a74304998c83fafb4fd17bb529b99feb2741e1aafd6dbdfde3af241fd7ff"
+    },
+    {
+      "module": "probes.EnabledRegister",
+      "namespace": "probes.EnabledRegister",
+      "ir": "probes/EnabledRegister.ir.json",
+      "lean": "probes/EnabledRegister.lean",
+      "lean_sha256": "b91c3586742af0f24f72ab8d71592538c20bf79be31924e112c63096ad7d5c31",
+      "ir_sha256": "bdc159a23a8c264f591137e27bd1a6915ce51bb99fec4a70c303d0805b71bb10"
+    },
+    {
+      "module": "probes.ExtendedBits",
+      "namespace": "probes.ExtendedBits",
+      "ir": "probes/ExtendedBits.ir.json",
+      "lean": "probes/ExtendedBits.lean",
+      "lean_sha256": "60006207d4dcac869386684cd3bbecad9f560b1e390efc385da080876e34c3b8",
+      "ir_sha256": "a8128a4362ad49228510c22a2b3bef10a7babdb92f0152841a1e74b242f3cebb"
+    },
+    {
+      "module": "probes.Fifo",
+      "namespace": "probes.Fifo",
+      "ir": "probes/Fifo.ir.json",
+      "lean": "probes/Fifo.lean",
+      "lean_sha256": "3f7cfa79bbfa85689e5389e35beef4e5dda8207508bb7d90484da5f3dc105b63",
+      "ir_sha256": "768677b19da981481a4c8373d9bf2aef688c7acf3fbc7945de94cb728c952d68"
+    },
+    {
+      "module": "probes.HardwareHelper",
+      "namespace": "probes.HardwareHelper",
+      "ir": "probes/HardwareHelper.ir.json",
+      "lean": "probes/HardwareHelper.lean",
+      "lean_sha256": "d7241d646ccd390679fc9c6baf8a81d849561d9845bac0ba5667d92e6acc9259",
+      "ir_sha256": "79ba3281b91ceff77a66b78fd86aba803520fb03b748b351c4fb514b49bab610"
+    },
+    {
+      "module": "probes.HelperWidth",
+      "namespace": "probes.HelperWidth",
+      "ir": "probes/HelperWidth.ir.json",
+      "lean": "probes/HelperWidth.lean",
+      "lean_sha256": "2d0855e6c3687ae7222868b99546a903ea2216aa5aaf41870288ce118e606fa3",
+      "ir_sha256": "10071aaeb6e9775129cfede70efe88274e8af6e2a015eb81a054b8b4c19ba220"
+    },
+    {
+      "module": "probes.HierarchicalComb",
+      "namespace": "probes.HierarchicalComb",
+      "ir": "probes/HierarchicalComb.ir.json",
+      "lean": "probes/HierarchicalComb.lean",
+      "lean_sha256": "ca47ef2ec3f675c1f5df389a40856fd3f60e5ffbf3e9bf9a9d2d56ab3b45bcd9",
+      "ir_sha256": "34cbfdcbe7ba889f79628d172a58683bc4edd7f12c12ff39775996b6e52eeb9e"
+    },
+    {
+      "module": "probes.HierarchicalPipeline",
+      "namespace": "probes.HierarchicalPipeline",
+      "ir": "probes/HierarchicalPipeline.ir.json",
+      "lean": "probes/HierarchicalPipeline.lean",
+      "lean_sha256": "f756d8a33f1efaadfde0b0b6f8af038de90747cedc12b470eb5348d05b408974",
+      "ir_sha256": "27cc17b3d226b0500eee61f7c1624155c11b2b9b15b087a93c1ebfbbc8a5e9e6"
+    },
+    {
+      "module": "probes.InferredRegisters",
+      "namespace": "probes.InferredRegisters",
+      "ir": "probes/InferredRegisters.ir.json",
+      "lean": "probes/InferredRegisters.lean",
+      "lean_sha256": "ac522112c01dbdbd3a1ad83afb44454a3fbe21a3479c985a91579ada708303d7",
+      "ir_sha256": "8259f9bb0cb68aa2d516328cdd6f70555200c84e531ce8c927deb8d5acf037ca"
+    },
+    {
+      "module": "probes.InferredVectorReset",
+      "namespace": "probes.InferredVectorReset",
+      "ir": "probes/InferredVectorReset.ir.json",
+      "lean": "probes/InferredVectorReset.lean",
+      "lean_sha256": "f43536173d6ccac20101f26a44fb50c2200f41263ad8b044689fbc029120b014",
+      "ir_sha256": "9f539f30167acc71feef187e96bbd988f5dd80de16fa140f2a2e94ba2b14c41f"
+    },
+    {
+      "module": "probes.LiteralVector",
+      "namespace": "probes.LiteralVector",
+      "ir": "probes/LiteralVector.ir.json",
+      "lean": "probes/LiteralVector.lean",
+      "lean_sha256": "e6c88bd69e235ca30744f0146d7c12c8d86e173e08b4415e8c9acf6aa1c789ad",
+      "ir_sha256": "5d2141ee8cb92e02b5994dbf26184db691928fdc10cc72f78240af99923ef686"
+    },
+    {
+      "module": "probes.MixedReset",
+      "namespace": "probes.MixedReset",
+      "ir": "probes/MixedReset.ir.json",
+      "lean": "probes/MixedReset.lean",
+      "lean_sha256": "cf2090af944f0ee1cbe159a4bcd72940dc2ee8bf02c001c2938130aaf8099d9f",
+      "ir_sha256": "75d3ee6c093838f39224a0c1eaaf35a8fd1500a3916d480a94209c7127edffe0"
+    },
+    {
+      "module": "probes.MoreBits",
+      "namespace": "probes.MoreBits",
+      "ir": "probes/MoreBits.ir.json",
+      "lean": "probes/MoreBits.lean",
+      "lean_sha256": "5685702cea3fb7114908fc7dac20b45df6d89830b07de188ae3745c945a1103a",
+      "ir_sha256": "86032b525c6b78932883a8ba05ee3e02b7bf3e2161f0f5d44d70ec2be3a15dbb"
+    },
+    {
+      "module": "probes.MuxPriorities",
+      "namespace": "probes.MuxPriorities",
+      "ir": "probes/MuxPriorities.ir.json",
+      "lean": "probes/MuxPriorities.lean",
+      "lean_sha256": "853ceb6f30865afaedab3a57e676ee601e607ebda049cecc7356e9e8750f7859",
+      "ir_sha256": "e40db661e149d56185c18aa83be7bdee4d70e848b99c8c256eea80e1f692473c"
+    },
+    {
+      "module": "probes.NamedBundle",
+      "namespace": "probes.NamedBundle",
+      "ir": "probes/NamedBundle.ir.json",
+      "lean": "probes/NamedBundle.lean",
+      "lean_sha256": "5aacfb03067d54d045a38c576df97811b48129802e9cfa65c229e7c463cefee9",
+      "ir_sha256": "9fe1bf84f7839419a0675124e37705b84907d1ee0eb84e5da00ad7b3ccda984d"
+    },
+    {
+      "module": "probes.NestedHierarchy",
+      "namespace": "probes.NestedHierarchy",
+      "ir": "probes/NestedHierarchy.ir.json",
+      "lean": "probes/NestedHierarchy.lean",
+      "lean_sha256": "39c9212a28907e01729f8ae01877e23b116b3e22236ba3eacbfc1803313932c5",
+      "ir_sha256": "8797bead08971a443526d56ac19a35c2d920deaac663cd349b5884bacaf72aaf"
+    },
+    {
+      "module": "probes.ParamChoice",
+      "namespace": "probes.ParamChoice",
+      "ir": "probes/ParamChoice.ir.json",
+      "lean": "probes/ParamChoice.lean",
+      "lean_sha256": "f7050647b052068476887ea9290ef518cf8970e38d1944a2011eafa95fb8607f",
+      "ir_sha256": "e733dd8e48986ec69ae528b1449e0db9365d6b0f096d1a3bfa65577a4b34c9c8"
+    },
+    {
+      "module": "probes.ParameterLookup",
+      "namespace": "probes.ParameterLookup",
+      "ir": "probes/ParameterLookup.ir.json",
+      "lean": "probes/ParameterLookup.lean",
+      "lean_sha256": "eb3b5ff8c40b07cdbaa22eb747a94c5c75ab50d1d67e3ff99a219515183641b4",
+      "ir_sha256": "d1bca00704cb739a57f75700bb1a317142e72efd25ecd16892545a469deb3a54"
+    },
+    {
+      "module": "probes.ParamExpression",
+      "namespace": "probes.ParamExpression",
+      "ir": "probes/ParamExpression.ir.json",
+      "lean": "probes/ParamExpression.lean",
+      "lean_sha256": "4d252a10c5240d49727903b6e0c7cca1c09c72672e28f127b21bf2efaf655c00",
+      "ir_sha256": "db3b115a45390ff7c9852947882b89557fe0b8221fe7242f84c7d49e6b2bee59"
+    },
+    {
+      "module": "probes.PartialGenerate",
+      "namespace": "probes.PartialGenerate",
+      "ir": "probes/PartialGenerate.ir.json",
+      "lean": "probes/PartialGenerate.lean",
+      "lean_sha256": "22280a1e8c430fb9d9b0f067c4ef656099280de7477519594eb64d379db00697",
+      "ir_sha256": "aa57d063c451a4ca52a7229a88ab4f351ad1d7e4e6ee2f1df6cbfd599a11f6d1"
+    },
+    {
+      "module": "probes.PipelineLane",
+      "namespace": "probes.PipelineLane",
+      "ir": "probes/PipelineLane.ir.json",
+      "lean": "probes/PipelineLane.lean",
+      "lean_sha256": "305e45a13afb17368090bd61c774abd6a8f29124916c7edbe6cf62f9d1d6c2e3",
+      "ir_sha256": "2c9d125599c1b0ffe07c532903ae54dec472a9d76bb8a31ae637d4f0e9efd8a1"
+    },
+    {
+      "module": "probes.Priority",
+      "namespace": "probes.Priority",
+      "ir": "probes/Priority.ir.json",
+      "lean": "probes/Priority.lean",
+      "lean_sha256": "d8f8af1efcba65e3514e6f845928391db6f2c0f5c01f447982705b45f3215dcb",
+      "ir_sha256": "a365c9c8d3f27ad675338e40957c0b705cecf807ef8f9bcca380be711147fc52"
+    },
+    {
+      "module": "probes.RegisterFile",
+      "namespace": "probes.RegisterFile",
+      "ir": "probes/RegisterFile.ir.json",
+      "lean": "probes/RegisterFile.lean",
+      "lean_sha256": "f9d87947f1e1ad710ec199b588b3407cb961b3a54677b21247f1fe10c8386832",
+      "ir_sha256": "48c3a7a2cd88efc3e312793d3f4f003a972b39916491e22a9d50428c85262e00"
+    },
+    {
+      "module": "probes.RegisterIdioms",
+      "namespace": "probes.RegisterIdioms",
+      "ir": "probes/RegisterIdioms.ir.json",
+      "lean": "probes/RegisterIdioms.lean",
+      "lean_sha256": "213ced7f71ee327230a590cd0db46e961779e0c80b5fc6ba8a0578ce3bd1abf8",
+      "ir_sha256": "7f65186cff5469023f5454fc820b68f05fd9972dbc437c74de50c2d71825255c"
+    },
+    {
+      "module": "probes.RenamedAccumulator",
+      "namespace": "probes.RenamedAccumulator",
+      "ir": "probes/RenamedAccumulator.ir.json",
+      "lean": "probes/RenamedAccumulator.lean",
+      "lean_sha256": "4ba50903f49d0364823409cfde1efa7cbedce6efe917c570e1fea8190fa3cde5",
+      "ir_sha256": "5b46ff8893a45365440909a57c742362ca8a639743ca6c742124600a016a9c03"
+    },
+    {
+      "module": "probes.ReservedPorts",
+      "namespace": "probes.ReservedPorts",
+      "ir": "probes/ReservedPorts.ir.json",
+      "lean": "probes/ReservedPorts.lean",
+      "lean_sha256": "e89cc6eeb84e1f9d7894b0f75843832c55cbc65b7269771d6d83ff323efd4745",
+      "ir_sha256": "3bb2e27705773b55a447b46ff3b08b4407278a39410bac5bf1318128f336f6b8"
+    },
+    {
+      "module": "probes.ResetFromInput",
+      "namespace": "probes.ResetFromInput",
+      "ir": "probes/ResetFromInput.ir.json",
+      "lean": "probes/ResetFromInput.lean",
+      "lean_sha256": "584fb9da497221b2cc89e70cf2cfaa3267bb278cba6000d9bb674fa62dc71d03",
+      "ir_sha256": "cca3677d0c1d611b70da8624852c4feb50565e41152abad05b31f226dade6427"
+    },
+    {
+      "module": "probes.SignedArithmetic",
+      "namespace": "probes.SignedArithmetic",
+      "ir": "probes/SignedArithmetic.ir.json",
+      "lean": "probes/SignedArithmetic.lean",
+      "lean_sha256": "db94739cd4a134f764768507ee3037540e7fd4c667d16aa1c50a91bbdaaca43e",
+      "ir_sha256": "8647149b05c2abbadb2d893f8fdf2b35bab79a8ebfba9eb51aba52236c906f73"
+    },
+    {
+      "module": "probes.SignedDivision",
+      "namespace": "probes.SignedDivision",
+      "ir": "probes/SignedDivision.ir.json",
+      "lean": "probes/SignedDivision.lean",
+      "lean_sha256": "2cd3bde6966772204d0dd821cac6acbf00e74b820248005fdf2fa2d7aef2384f",
+      "ir_sha256": "db7c640124a90cc018f1d65121e5e9a4de4956ac4d3a05217fbdb684a112e60d"
+    },
+    {
+      "module": "probes.SwitchMachine",
+      "namespace": "probes.SwitchMachine",
+      "ir": "probes/SwitchMachine.ir.json",
+      "lean": "probes/SwitchMachine.lean",
+      "lean_sha256": "45b4f091967d7555fee7b926c213b7cda688f43bf2b63f4b23fbe88d126f41cb",
+      "ir_sha256": "ff7f317c533b94a2cef9b090cf4e92224384f1f4196d548df43fe9a7fd976de6"
+    },
+    {
+      "module": "probes.SyncMemory",
+      "namespace": "probes.SyncMemory",
+      "ir": "probes/SyncMemory.ir.json",
+      "lean": "probes/SyncMemory.lean",
+      "lean_sha256": "2ad704b0aaf34ada47b703afdd6a8db9a4c79dc649c0ddde24515d5f9186d827",
+      "ir_sha256": "f84ac1ca4e8d967beed269633b082446c2c7d3f550d6585d46c729a4070e6661"
+    },
+    {
+      "module": "probes.TabulatedVector",
+      "namespace": "probes.TabulatedVector",
+      "ir": "probes/TabulatedVector.ir.json",
+      "lean": "probes/TabulatedVector.lean",
+      "lean_sha256": "1192f5813956dfda82731e87c8e103b9be561fdd5eb54437fe82cfbaba85131a",
+      "ir_sha256": "e4eefd9dbeee5e7eb3d39c0018357ea0514f92431bb6cbc5222b185cfd4881a2"
+    },
+    {
+      "module": "probes.VecIndex",
+      "namespace": "probes.VecIndex",
+      "ir": "probes/VecIndex.ir.json",
+      "lean": "probes/VecIndex.lean",
+      "lean_sha256": "95b01220fb0bd04ad4e38b9ea800bf90e45d852e283eb60d96effa25a816fb77",
+      "ir_sha256": "198e5c38cf9994dffa38d3ca7ad8a45444170f65358b6defc870c48ba550b616"
+    },
+    {
+      "module": "probes.VecLoop",
+      "namespace": "probes.VecLoop",
+      "ir": "probes/VecLoop.ir.json",
+      "lean": "probes/VecLoop.lean",
+      "lean_sha256": "b20685062805d917629a224a4f2b76d502cbcd5ac6a38a9445d01008db5d5cb1",
+      "ir_sha256": "56b478288ab8faef08b94239b87ebba2bb07fd03bcaf79233a7baf9fb1fad807"
+    },
+    {
+      "module": "probes.VecRegisters",
+      "namespace": "probes.VecRegisters",
+      "ir": "probes/VecRegisters.ir.json",
+      "lean": "probes/VecRegisters.lean",
+      "lean_sha256": "d8a110dcfdcd8318b8c446651c1e97df5e65b41dc041b43d91b7aa15887ee2bd",
+      "ir_sha256": "ab4ed441db8d04935f0b91e2822834311ab7fd7e4c475cabbfc745dfa0cf8c2a"
+    },
+    {
+      "module": "probes.VectorReset",
+      "namespace": "probes.VectorReset",
+      "ir": "probes/VectorReset.ir.json",
+      "lean": "probes/VectorReset.lean",
+      "lean_sha256": "a44dd074ba6d3578802f8c6a0f9a7a614b606c13dc43837865e06fef65c60bc8",
+      "ir_sha256": "c87cc58ec42767c424662791a2931773bdb6763f835f4c115e6ebacd6c10c55e"
+    }
+  ],
+  "lean_version": "4.19.0",
+  "chisel_version": "3.5.6",
+  "validation": {
+    "status": "PASS",
+    "version": "0.2.0",
+    "source_to_lean_modules": 51,
+    "differential_configurations": 128,
+    "differential_cycles": 6303,
+    "compared_output_values": 28907,
+    "rejection_checks": 25,
+    "mutation_detected": true,
+    "client_model_theorems_checked": 2,
+    "formal_equivalence_proof": false,
+    "evidence": [
+      {
+        "path": "experiments/differential-v0.2-full/summary.json",
+        "pass": true
+      },
+      {
+        "path": "experiments/differential-v0.2-edge/summary.json",
+        "pass": true
+      },
+      {
+        "path": "experiments/differential-v0.2-control/summary.json",
+        "pass": true
+      },
+      {
+        "path": "experiments/differential-v0.2-extension/summary.json",
+        "pass": true
+      },
+      {
+        "path": "experiments/rejections-v0.2/summary.json",
+        "pass": true
+      },
+      {
+        "path": "experiments/mutation/summary.json",
+        "pass": true
+      },
+      {
+        "path": "experiments/client-proof-v0.2/result.json",
+        "pass": true
+      }
+    ]
+  }
+}

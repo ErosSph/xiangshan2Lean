@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 13,
+  "compared_output_values": 25,
+  "module": "DirectCounter",
+  "parameters": {
+    "n": 3
+  },
+  "evidence": "experiments\\differential-v0.3-full\\DirectCounter-n3",
+  "seconds": 11.05,
+  "fingerprint": "c3b9a404b2c60af081dc7113afab32ab3769aea47192df79f0609c8af2d3e78e"
+}

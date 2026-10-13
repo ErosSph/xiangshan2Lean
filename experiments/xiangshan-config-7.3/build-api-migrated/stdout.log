@@ -1,0 +1,53 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (11223 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] compiling 1 Scala source to E:\ICT\chisel2lean4\target\scala-2.13\classes ...
+[info] done compiling
+[success] Total time: 8 s, completed 2026年10月13日 下午10:08:59
+[info] compiling 12 Scala sources to E:\ICT\chisel2lean4\reference\target\scala-2.13\classes ...
+[info] done compiling
+[success] Total time: 11 s, completed 2026年10月13日 下午10:09:10
+[info] compiling 2 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\rocket\target\scala-2.13\classes ...
+[warn] 1 deprecation (since 2.13.0)
+[warn] 1 deprecation (since 9)
+[warn] 7 deprecations (since Chisel 7.0.0)
+[warn] 9 deprecations in total; re-run with -deprecation for details
+[warn] four warnings found
+[info] done compiling
+[info] compiling 58 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\utility\target\scala-2.13\classes ...
+[warn] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\utility\src\main\scala\utility\TLUtils\TLLogger.scala:91:5: match may not be exhaustive.
+[warn] It would fail on the following input: TLBundleE()
+[warn]     chn match {
+[warn]     ^
+[warn] 10 deprecations (since 2.13.0); re-run with -deprecation for details
+[warn] two warnings found
+[info] done compiling
+[info] compiling 43 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\huancun\target\scala-2.13\classes ...
+[warn] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\huancun\src\main\scala\huancun\Slice.scala:444:44: non-variable type argument huancun.noninclusive.MSHR in type pattern Seq[huancun.noninclusive.MSHR] (the underlying of Seq[huancun.noninclusive.MSHR]) is unchecked since it is eliminated by erasure
+[warn]     case (dir: noninclusive.Directory, ms: Seq[noninclusive.MSHR]) =>
+[warn]                                            ^
+[warn] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\huancun\src\main\scala\huancun\Slice.scala:459:38: non-variable type argument huancun.inclusive.MSHR in type pattern Seq[huancun.inclusive.MSHR] (the underlying of Seq[huancun.inclusive.MSHR]) is unchecked since it is eliminated by erasure
+[warn]     case (_: inclusive.Directory, _: Seq[inclusive.MSHR]) =>
+[warn]                                      ^
+[warn] 16 deprecations (since Chisel 7.0.0); re-run with -deprecation for details
+[warn] three warnings found
+[info] done compiling
+[info] compiling 194 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build-7.3\xiangshan\target\scala-2.13\classes ...
+[warn] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\xiangshan\src\main\scala\top\BusPerfMonitor.scala:52:11: match may not be exhaustive.
+[warn] It would fail on the following input: TLBundleE()
+[warn]       chn.bits match {
+[warn]           ^
+[warn] 17 deprecations
+[warn] 30 deprecations (since 2.13.0)
+[warn] 1 deprecation (since 2.13.2)
+[warn] 14 deprecations (since 2.13.3)
+[warn] 2 deprecations (since Chisel 6.0)
+[warn] 1 deprecation (since Chisel 6.7.0)
+[warn] 65 deprecations in total; re-run with -deprecation for details
+[warn] 8 warnings found
+[info] done compiling
+[success] Total time: 194 s (03:14), completed 2026年10月13日 下午10:12:24
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[success] Total time: 0 s, completed 2026年10月13日 下午10:12:24

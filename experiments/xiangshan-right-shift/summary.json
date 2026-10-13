@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "module": "xiangshan.backend.fu.RightShiftModule",
+  "source": {
+    "repository": "OpenXiangShan/XiangShan",
+    "branch": "nanhu",
+    "commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2",
+    "module": "xiangshan.backend.fu.RightShiftModule",
+    "upstream_path": "src/main/scala/xiangshan/backend/fu/Alu.scala",
+    "upstream_url": "https://github.com/OpenXiangShan/XiangShan/blob/997cd5b35cfbd26586674aa553d0f04b27914cb2/src/main/scala/xiangshan/backend/fu/Alu.scala",
+    "upstream_sha256": "3400084dc26d34b2d4ce796f93c80000d12c173746d0d7eba7c47e8f36825fdc",
+    "original_class_sha256": "6452cb539a6856528f41ea872b9619f66c2d3754ef79e502284b1550dce59afa",
+    "hardware_body_sha256": "a674ee26006339538124726c885ef29a8b91f4bbecf8ab840b4afa422dd2d63b",
+    "standalone_sha256": "8f28bd3b13781c334581d1d9269f9efa41282fe05c35ca9fb74a12216229a968",
+    "adaptation": {
+      "original_declaration": "class RightShiftModule(implicit p: Parameters) extends XSModule {",
+      "standalone_declaration": "class RightShiftModule(val XLEN: Int) extends Module {",
+      "hardware_body_unchanged": true,
+      "actual_processor_XLEN": 64,
+      "framework_scope": "Only Parameters.XLEN and XSModule inheritance needed by this class; no full-core elaboration."
+    },
+    "license": "Mulan PSL v2; original headers and upstream LICENSE retained"
+  },
+  "cases": [
+    {
+      "status": "PASS",
+      "parameters": {
+        "XLEN": 8
+      },
+      "cycles": 16896,
+      "compared_output_values": 101376,
+      "actual_processor_configuration": false,
+      "coverage": "each output function exhaustive over 8-bit data and 6-bit amount; plus uncorrelated random inputs",
+      "comparison": "integer specification == executed Lean == original-class official RTL"
+    },
+    {
+      "status": "PASS",
+      "parameters": {
+        "XLEN": 32
+      },
+      "cycles": 4864,
+      "compared_output_values": 29184,
+      "actual_processor_configuration": false,
+      "coverage": "corner patterns, walking ones/zeros, every 6-bit amount, uncorrelated random inputs",
+      "comparison": "integer specification == executed Lean == original-class official RTL"
+    },
+    {
+      "status": "PASS",
+      "parameters": {
+        "XLEN": 64
+      },
+      "cycles": 8960,
+      "compared_output_values": 53760,
+      "actual_processor_configuration": true,
+      "coverage": "corner patterns, walking ones/zeros, every 6-bit amount, uncorrelated random inputs",
+      "comparison": "integer specification == executed Lean == original-class official RTL"
+    }
+  ],
+  "configurations": 3,
+  "cycles": 30720,
+  "compared_output_values": 184320,
+  "all_six_bit_shift_amounts_checked": true,
+  "negative_control": {
+    "status": "PASS",
+    "fault": "arithmetic right shift replaced by logical right shift",
+    "detected": true,
+    "observed": {
+      "cycle": 0,
+      "sampling": "pre",
+      "inputs": {
+        "io.srlSrc": 0,
+        "io.sraSrc": 9223372036854775808,
+        "io.shamt": 1,
+        "io.revShamt": 63
+      },
+      "expected": {
+        "io.srl": 0,
+        "io.sra": 13835058055282163712,
+        "io.revSrl": 0
+      },
+      "lean": {
+        "io.srl": 0,
+        "io.sra": 4611686018427387904,
+        "io.revSrl": 0
+      },
+      "rtl": {
+        "io.revSrl": 0,
+        "io.sra": 13835058055282163712,
+        "io.srl": 0
+      }
+    }
+  },
+  "generated_model_specification_proof": {
+    "status": "PASS",
+    "theorems": 3,
+    "scope": "generated model equals standard BitVec logical/arithmetic shifts for every model width and input",
+    "source_to_model_formal_equivalence_proof": false,
+    "proof_sha256": "9024511981a96685f72e043e8a82b25faaa4dc4b4e854635b5b5ad7157c775d5"
+  },
+  "formal_equivalence_proof": false,
+  "scope": "original right-shift hardware body with isolated width/configuration framework; not whole XiangShan ALU/core",
+  "public_demo": {
+    "status": "PASS",
+    "cycles": 5,
+    "compared_output_values": 30,
+    "evidence": "experiments/xiangshan-right-shift-demo/summary.json"
+  }
+}

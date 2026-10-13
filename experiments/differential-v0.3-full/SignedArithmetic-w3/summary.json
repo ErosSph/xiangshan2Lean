@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 64,
+  "compared_output_values": 768,
+  "module": "SignedArithmetic",
+  "parameters": {
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.3-full\\SignedArithmetic-w3",
+  "seconds": 13.12,
+  "fingerprint": "80f2ad442d50ab1c2371b500e5087285faf88ff55157300680a560b506be5941"
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "E:\\ICT\\.tools\\jdk-17.0.20.1+1\\bin\\java.exe",
+    "-Xmx4g",
+    "-XX:ActiveProcessorCount=4",
+    "-Dfile.encoding=UTF-8",
+    "-cp",
+    "E:\\ICT\\chisel2lean4\\.tools\\mill-dist-0.9.8.jar",
+    "mill.MillMain",
+    "-i",
+    "XiangShan.runMain",
+    "validation.GenerateModules",
+    "RightShiftModule",
+    "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-firrtl\\RightShiftModule\\original"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-v2.1",
+  "started_at": "2026-10-13T13:51:28.374249+00:00"
+}

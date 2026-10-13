@@ -1,0 +1,12 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (10449 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] compiling 4 Scala sources to E:\ICT\chisel2lean4\target\scala-2.13\classes ...
+[error] E:\ICT\chisel2lean4\src\main\scala\chicala\convert\ChiselToScalaComponent.scala:149:98: value isAbstract is not a member of ChiselToScalaComponent.this.global.Modifiers
+[error]                 val isModule = bases.contains("chisel3.RawModule") && !c.mods.isTrait && !c.mods.isAbstract
+[error]                                                                                                  ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 8 s, completed 2026年10月13日 下午9:46:09

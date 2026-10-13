@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\Priority-n3\\reference\\rtl\\Priority.fir",
+  "source_sha256": "52ad7ccd5bf924edb528ea6b4436cef174fe65604c96525c39bc48b5916f5526",
+  "compiler_sha256": "40937bde440f25efce307092d88ce4cb3c4afe623d02f93576c699c22f8d417b",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.Priority",
+      "top": "Priority",
+      "ir": "FIRRTL/Priority.ir.json",
+      "lean": "FIRRTL/Priority.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T134359Z-e82adb1d"
+}

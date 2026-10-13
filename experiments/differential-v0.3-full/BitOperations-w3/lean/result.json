@@ -1,0 +1,178 @@
+[
+  {
+    "state": {},
+    "pre": {
+      "right": 0,
+      "parity": false,
+      "out": 0,
+      "left": 0,
+      "bit": false,
+      "any": false,
+      "all": false
+    },
+    "post": {
+      "right": 0,
+      "parity": false,
+      "out": 0,
+      "left": 0,
+      "bit": false,
+      "any": false,
+      "all": false
+    },
+    "cycle": 0
+  },
+  {
+    "state": {},
+    "pre": {
+      "right": 0,
+      "parity": true,
+      "out": 1,
+      "left": 4,
+      "bit": true,
+      "any": true,
+      "all": false
+    },
+    "post": {
+      "right": 0,
+      "parity": true,
+      "out": 1,
+      "left": 4,
+      "bit": true,
+      "any": true,
+      "all": false
+    },
+    "cycle": 1
+  },
+  {
+    "state": {},
+    "pre": {
+      "right": 1,
+      "parity": true,
+      "out": 2,
+      "left": 8,
+      "bit": false,
+      "any": true,
+      "all": false
+    },
+    "post": {
+      "right": 1,
+      "parity": true,
+      "out": 2,
+      "left": 8,
+      "bit": false,
+      "any": true,
+      "all": false
+    },
+    "cycle": 2
+  },
+  {
+    "state": {},
+    "pre": {
+      "right": 1,
+      "parity": false,
+      "out": 3,
+      "left": 12,
+      "bit": true,
+      "any": true,
+      "all": false
+    },
+    "post": {
+      "right": 1,
+      "parity": false,
+      "out": 3,
+      "left": 12,
+      "bit": true,
+      "any": true,
+      "all": false
+    },
+    "cycle": 3
+  },
+  {
+    "state": {},
+    "pre": {
+      "right": 2,
+      "parity": true,
+      "out": 4,
+      "left": 16,
+      "bit": false,
+      "any": true,
+      "all": false
+    },
+    "post": {
+      "right": 2,
+      "parity": true,
+      "out": 4,
+      "left": 16,
+      "bit": false,
+      "any": true,
+      "all": false
+    },
+    "cycle": 4
+  },
+  {
+    "state": {},
+    "pre": {
+      "right": 2,
+      "parity": false,
+      "out": 5,
+      "left": 20,
+      "bit": true,
+      "any": true,
+      "all": false
+    },
+    "post": {
+      "right": 2,
+      "parity": false,
+      "out": 5,
+      "left": 20,
+      "bit": true,
+      "any": true,
+      "all": false
+    },
+    "cycle": 5
+  },
+  {
+    "state": {},
+    "pre": {
+      "right": 3,
+      "parity": false,
+      "out": 6,
+      "left": 24,
+      "bit": false,
+      "any": true,
+      "all": false
+    },
+    "post": {
+      "right": 3,
+      "parity": false,
+      "out": 6,
+      "left": 24,
+      "bit": false,
+      "any": true,
+      "all": false
+    },
+    "cycle": 6
+  },
+  {
+    "state": {},
+    "pre": {
+      "right": 3,
+      "parity": true,
+      "out": 7,
+      "left": 28,
+      "bit": true,
+      "any": true,
+      "all": true
+    },
+    "post": {
+      "right": 3,
+      "parity": true,
+      "out": 7,
+      "left": 28,
+      "bit": true,
+      "any": true,
+      "all": true
+    },
+    "cycle": 7
+  }
+]

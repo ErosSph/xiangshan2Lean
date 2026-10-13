@@ -1,0 +1,76 @@
+{
+  "top": "AluDataModule",
+  "clocked": true,
+  "ports": [
+    {
+      "name": "clock",
+      "rtl_name": "clock",
+      "direction": "input",
+      "width": 1,
+      "signed": false
+    },
+    {
+      "name": "reset",
+      "rtl_name": "reset",
+      "direction": "input",
+      "width": 1,
+      "signed": false
+    },
+    {
+      "name": "io_src_0",
+      "rtl_name": "io_src_0",
+      "direction": "input",
+      "width": 64,
+      "signed": false
+    },
+    {
+      "name": "io_src_1",
+      "rtl_name": "io_src_1",
+      "direction": "input",
+      "width": 64,
+      "signed": false
+    },
+    {
+      "name": "io_func",
+      "rtl_name": "io_func",
+      "direction": "input",
+      "width": 7,
+      "signed": false
+    },
+    {
+      "name": "io_pred_taken",
+      "rtl_name": "io_pred_taken",
+      "direction": "input",
+      "width": 1,
+      "signed": false
+    },
+    {
+      "name": "io_isBranch",
+      "rtl_name": "io_isBranch",
+      "direction": "input",
+      "width": 1,
+      "signed": false
+    },
+    {
+      "name": "io_result",
+      "rtl_name": "io_result",
+      "direction": "output",
+      "width": 64,
+      "signed": false
+    },
+    {
+      "name": "io_taken",
+      "rtl_name": "io_taken",
+      "direction": "output",
+      "width": 1,
+      "signed": false
+    },
+    {
+      "name": "io_mispredict",
+      "rtl_name": "io_mispredict",
+      "direction": "output",
+      "width": 1,
+      "signed": false
+    }
+  ]
+}

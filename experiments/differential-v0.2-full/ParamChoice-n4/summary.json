@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 16,
+  "compared_output_values": 32,
+  "module": "ParamChoice",
+  "parameters": {
+    "n": 4
+  },
+  "evidence": "experiments\\differential-v0.2-full\\ParamChoice-n4",
+  "seconds": 11.34,
+  "fingerprint": "ea6c2330cda46d7507d3511f3536b1ace913d23b3a66b6b3ac814035b5048edc"
+}

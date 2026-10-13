@@ -1,0 +1,626 @@
+[
+  {
+    "state": {
+      "child.b.r": 0,
+      "child.a.r": 0
+    },
+    "pre": {
+      "io.out": 0
+    },
+    "post": {
+      "io.out": 0
+    },
+    "cycle": 0
+  },
+  {
+    "state": {
+      "child.b.r": 2,
+      "child.a.r": 31
+    },
+    "pre": {
+      "io.out": 0
+    },
+    "post": {
+      "io.out": 2
+    },
+    "cycle": 1
+  },
+  {
+    "state": {
+      "child.b.r": 2,
+      "child.a.r": 31
+    },
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 2
+    },
+    "cycle": 2
+  },
+  {
+    "state": {
+      "child.b.r": 2,
+      "child.a.r": 31
+    },
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 2
+    },
+    "cycle": 3
+  },
+  {
+    "state": {
+      "child.b.r": 2,
+      "child.a.r": 31
+    },
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 2
+    },
+    "cycle": 4
+  },
+  {
+    "state": {
+      "child.b.r": 2,
+      "child.a.r": 31
+    },
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 2
+    },
+    "cycle": 5
+  },
+  {
+    "state": {
+      "child.b.r": 2,
+      "child.a.r": 31
+    },
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 2
+    },
+    "cycle": 6
+  },
+  {
+    "state": {
+      "child.b.r": 2,
+      "child.a.r": 31
+    },
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 2
+    },
+    "cycle": 7
+  },
+  {
+    "state": {
+      "child.b.r": 33,
+      "child.a.r": 10
+    },
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 33
+    },
+    "cycle": 8
+  },
+  {
+    "state": {
+      "child.b.r": 33,
+      "child.a.r": 10
+    },
+    "pre": {
+      "io.out": 33
+    },
+    "post": {
+      "io.out": 33
+    },
+    "cycle": 9
+  },
+  {
+    "state": {
+      "child.b.r": 33,
+      "child.a.r": 10
+    },
+    "pre": {
+      "io.out": 33
+    },
+    "post": {
+      "io.out": 33
+    },
+    "cycle": 10
+  },
+  {
+    "state": {
+      "child.b.r": 12,
+      "child.a.r": 26
+    },
+    "pre": {
+      "io.out": 33
+    },
+    "post": {
+      "io.out": 12
+    },
+    "cycle": 11
+  },
+  {
+    "state": {
+      "child.b.r": 28,
+      "child.a.r": 22
+    },
+    "pre": {
+      "io.out": 12
+    },
+    "post": {
+      "io.out": 28
+    },
+    "cycle": 12
+  },
+  {
+    "state": {
+      "child.b.r": 24,
+      "child.a.r": 31
+    },
+    "pre": {
+      "io.out": 28
+    },
+    "post": {
+      "io.out": 24
+    },
+    "cycle": 13
+  },
+  {
+    "state": {
+      "child.b.r": 33,
+      "child.a.r": 28
+    },
+    "pre": {
+      "io.out": 24
+    },
+    "post": {
+      "io.out": 33
+    },
+    "cycle": 14
+  },
+  {
+    "state": {
+      "child.b.r": 30,
+      "child.a.r": 26
+    },
+    "pre": {
+      "io.out": 33
+    },
+    "post": {
+      "io.out": 30
+    },
+    "cycle": 15
+  },
+  {
+    "state": {
+      "child.b.r": 30,
+      "child.a.r": 26
+    },
+    "pre": {
+      "io.out": 30
+    },
+    "post": {
+      "io.out": 30
+    },
+    "cycle": 16
+  },
+  {
+    "state": {
+      "child.b.r": 30,
+      "child.a.r": 26
+    },
+    "pre": {
+      "io.out": 30
+    },
+    "post": {
+      "io.out": 30
+    },
+    "cycle": 17
+  },
+  {
+    "state": {
+      "child.b.r": 28,
+      "child.a.r": 16
+    },
+    "pre": {
+      "io.out": 30
+    },
+    "post": {
+      "io.out": 28
+    },
+    "cycle": 18
+  },
+  {
+    "state": {
+      "child.b.r": 28,
+      "child.a.r": 16
+    },
+    "pre": {
+      "io.out": 28
+    },
+    "post": {
+      "io.out": 28
+    },
+    "cycle": 19
+  },
+  {
+    "state": {
+      "child.b.r": 18,
+      "child.a.r": 5
+    },
+    "pre": {
+      "io.out": 28
+    },
+    "post": {
+      "io.out": 18
+    },
+    "cycle": 20
+  },
+  {
+    "state": {
+      "child.b.r": 7,
+      "child.a.r": 29
+    },
+    "pre": {
+      "io.out": 18
+    },
+    "post": {
+      "io.out": 7
+    },
+    "cycle": 21
+  },
+  {
+    "state": {
+      "child.b.r": 7,
+      "child.a.r": 29
+    },
+    "pre": {
+      "io.out": 7
+    },
+    "post": {
+      "io.out": 7
+    },
+    "cycle": 22
+  },
+  {
+    "state": {
+      "child.b.r": 31,
+      "child.a.r": 2
+    },
+    "pre": {
+      "io.out": 7
+    },
+    "post": {
+      "io.out": 31
+    },
+    "cycle": 23
+  },
+  {
+    "state": {
+      "child.b.r": 0,
+      "child.a.r": 0
+    },
+    "pre": {
+      "io.out": 31
+    },
+    "post": {
+      "io.out": 0
+    },
+    "cycle": 24
+  },
+  {
+    "state": {
+      "child.b.r": 2,
+      "child.a.r": 13
+    },
+    "pre": {
+      "io.out": 0
+    },
+    "post": {
+      "io.out": 2
+    },
+    "cycle": 25
+  },
+  {
+    "state": {
+      "child.b.r": 2,
+      "child.a.r": 13
+    },
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 2
+    },
+    "cycle": 26
+  },
+  {
+    "state": {
+      "child.b.r": 15,
+      "child.a.r": 5
+    },
+    "pre": {
+      "io.out": 2
+    },
+    "post": {
+      "io.out": 15
+    },
+    "cycle": 27
+  },
+  {
+    "state": {
+      "child.b.r": 7,
+      "child.a.r": 3
+    },
+    "pre": {
+      "io.out": 15
+    },
+    "post": {
+      "io.out": 7
+    },
+    "cycle": 28
+  },
+  {
+    "state": {
+      "child.b.r": 7,
+      "child.a.r": 3
+    },
+    "pre": {
+      "io.out": 7
+    },
+    "post": {
+      "io.out": 7
+    },
+    "cycle": 29
+  },
+  {
+    "state": {
+      "child.b.r": 7,
+      "child.a.r": 3
+    },
+    "pre": {
+      "io.out": 7
+    },
+    "post": {
+      "io.out": 7
+    },
+    "cycle": 30
+  },
+  {
+    "state": {
+      "child.b.r": 7,
+      "child.a.r": 3
+    },
+    "pre": {
+      "io.out": 7
+    },
+    "post": {
+      "io.out": 7
+    },
+    "cycle": 31
+  },
+  {
+    "state": {
+      "child.b.r": 5,
+      "child.a.r": 10
+    },
+    "pre": {
+      "io.out": 7
+    },
+    "post": {
+      "io.out": 5
+    },
+    "cycle": 32
+  },
+  {
+    "state": {
+      "child.b.r": 5,
+      "child.a.r": 10
+    },
+    "pre": {
+      "io.out": 5
+    },
+    "post": {
+      "io.out": 5
+    },
+    "cycle": 33
+  },
+  {
+    "state": {
+      "child.b.r": 12,
+      "child.a.r": 13
+    },
+    "pre": {
+      "io.out": 5
+    },
+    "post": {
+      "io.out": 12
+    },
+    "cycle": 34
+  },
+  {
+    "state": {
+      "child.b.r": 15,
+      "child.a.r": 5
+    },
+    "pre": {
+      "io.out": 12
+    },
+    "post": {
+      "io.out": 15
+    },
+    "cycle": 35
+  },
+  {
+    "state": {
+      "child.b.r": 7,
+      "child.a.r": 8
+    },
+    "pre": {
+      "io.out": 15
+    },
+    "post": {
+      "io.out": 7
+    },
+    "cycle": 36
+  },
+  {
+    "state": {
+      "child.b.r": 10,
+      "child.a.r": 21
+    },
+    "pre": {
+      "io.out": 7
+    },
+    "post": {
+      "io.out": 10
+    },
+    "cycle": 37
+  },
+  {
+    "state": {
+      "child.b.r": 23,
+      "child.a.r": 23
+    },
+    "pre": {
+      "io.out": 10
+    },
+    "post": {
+      "io.out": 23
+    },
+    "cycle": 38
+  },
+  {
+    "state": {
+      "child.b.r": 25,
+      "child.a.r": 31
+    },
+    "pre": {
+      "io.out": 23
+    },
+    "post": {
+      "io.out": 25
+    },
+    "cycle": 39
+  },
+  {
+    "state": {
+      "child.b.r": 33,
+      "child.a.r": 3
+    },
+    "pre": {
+      "io.out": 25
+    },
+    "post": {
+      "io.out": 33
+    },
+    "cycle": 40
+  },
+  {
+    "state": {
+      "child.b.r": 5,
+      "child.a.r": 14
+    },
+    "pre": {
+      "io.out": 33
+    },
+    "post": {
+      "io.out": 5
+    },
+    "cycle": 41
+  },
+  {
+    "state": {
+      "child.b.r": 5,
+      "child.a.r": 14
+    },
+    "pre": {
+      "io.out": 5
+    },
+    "post": {
+      "io.out": 5
+    },
+    "cycle": 42
+  },
+  {
+    "state": {
+      "child.b.r": 16,
+      "child.a.r": 18
+    },
+    "pre": {
+      "io.out": 5
+    },
+    "post": {
+      "io.out": 16
+    },
+    "cycle": 43
+  },
+  {
+    "state": {
+      "child.b.r": 20,
+      "child.a.r": 11
+    },
+    "pre": {
+      "io.out": 16
+    },
+    "post": {
+      "io.out": 20
+    },
+    "cycle": 44
+  },
+  {
+    "state": {
+      "child.b.r": 13,
+      "child.a.r": 18
+    },
+    "pre": {
+      "io.out": 20
+    },
+    "post": {
+      "io.out": 13
+    },
+    "cycle": 45
+  },
+  {
+    "state": {
+      "child.b.r": 13,
+      "child.a.r": 18
+    },
+    "pre": {
+      "io.out": 13
+    },
+    "post": {
+      "io.out": 13
+    },
+    "cycle": 46
+  },
+  {
+    "state": {
+      "child.b.r": 20,
+      "child.a.r": 13
+    },
+    "pre": {
+      "io.out": 13
+    },
+    "post": {
+      "io.out": 20
+    },
+    "cycle": 47
+  }
+]

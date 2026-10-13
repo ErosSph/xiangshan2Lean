@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "parameters": {
+    "XLEN": 32
+  },
+  "cycles": 4864,
+  "compared_output_values": 29184,
+  "actual_processor_configuration": false,
+  "coverage": "corner patterns, walking ones/zeros, every 6-bit amount, uncorrelated random inputs",
+  "comparison": "integer specification == executed Lean == original-class official RTL"
+}

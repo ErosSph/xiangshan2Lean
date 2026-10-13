@@ -1,0 +1,23 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "3.5.6",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\experiments\\saturating-directed-check\\negative-control\\FaultySaturatingAccumulator.scala"
+  ],
+  "modules": [
+    {
+      "module": "walkthrough.FaultySaturatingAccumulator",
+      "namespace": "walkthrough.FaultySaturatingAccumulator",
+      "ir": "walkthrough/FaultySaturatingAccumulator.ir.json",
+      "lean": "walkthrough/FaultySaturatingAccumulator.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\experiments\\saturating-directed-check\\negative-control\\FaultySaturatingAccumulator.scala": "d700c6bbe5a0e42093ced5dc730594258f765c8445ff1a1c7ae94c2f203ca9b4"
+  },
+  "compiler_sha256": "b529982427922b1b9383e0b36f0485443a934dd4ce71f17db4b4a8b4d1828df9",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T082225Z-b8de8f65"
+}

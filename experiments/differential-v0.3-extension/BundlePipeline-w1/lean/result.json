@@ -1,0 +1,722 @@
+[
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 0
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 1
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "cycle": 2
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 3
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 4
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 5
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 6
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "cycle": 7
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 8
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 9
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 10
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 11
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 12
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 13
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 14
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 15
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "cycle": 16
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 17
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 18
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 19
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 20
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 21
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 22
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 23
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 24
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 25
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 26
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 27
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 28
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "cycle": 29
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "cycle": 30
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "cycle": 31
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 32
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 33
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 34
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 35
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 36
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 37
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 38
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 39
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 40
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 41
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "cycle": 42
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 43
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 44
+  },
+  {
+    "state": {
+      "r.valid": true,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "cycle": 45
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 0
+    },
+    "pre": {
+      "out.valid": true,
+      "out.data": 1
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "cycle": 46
+  },
+  {
+    "state": {
+      "r.valid": false,
+      "r.data": 1
+    },
+    "pre": {
+      "out.valid": false,
+      "out.data": 0
+    },
+    "post": {
+      "out.valid": false,
+      "out.data": 1
+    },
+    "cycle": 47
+  }
+]

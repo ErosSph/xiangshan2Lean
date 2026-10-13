@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "module": "InheritedPrimitive",
+  "parameters": {
+    "n": 3
+  },
+  "cycles": 16,
+  "output_comparisons": 32,
+  "comparison": "executed Lean == original official RTL == independent specification"
+}

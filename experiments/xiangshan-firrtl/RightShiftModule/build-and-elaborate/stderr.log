@@ -1,0 +1,742 @@
+Preparing Java 17.0.20.1 runtime; this may take a minute or two ...
+Compiling E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\rocket-chip\common.sc
+Compiling E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\rocket-chip\api-config-chipsalliance\build-rules\mill\build.sc
+Compiling E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\rocket-chip\hardfloat\build.sc
+Compiling E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\build.sc
+[1/214] XiangShan.resources 
+[1A[2K[9999D[2/214] mill.scalalib.ZincWorkerModule.classpath 
+[1A[2K[9999D[3/214] mill.scalalib.ZincWorkerModule.worker 
+[1A[2K[9999D[4/214] rocketchip.macros.upstreamCompileOutput 
+[1A[2K[9999D[5/214] rocketchip.macros.sources 
+[1A[2K[9999D[6/214] rocketchip.macros.generatedSources 
+[1A[2K[9999D[7/214] rocketchip.macros.allSources 
+[1A[2K[9999D[8/214] rocketchip.macros.allSourceFiles 
+[1A[2K[9999D[9/214] rocketchip.macros.transitiveLocalClasspath 
+[1A[2K[9999D[10/214] rocketchip.macros.resources 
+[1A[2K[9999D[11/214] rocketchip.macros.unmanagedClasspath 
+[1A[2K[9999D[12/214] rocketchip.scalaVersion 
+[1A[2K[9999D[13/214] rocketchip.macros.scalaVersion 
+[1A[2K[9999D[14/214] rocketchip.macros.platformSuffix 
+[1A[2K[9999D[15/214] rocketchip.macros.compileIvyDeps 
+[1A[2K[9999D[16/214] rocketchip.macros.transitiveCompileIvyDeps 
+[1A[2K[9999D[17/214] rocketchip.macros.scalaOrganization 
+[1A[2K[9999D[18/214] rocketchip.macros.scalaLibraryIvyDeps 
+[1A[2K[9999D[19/214] rocketchip.scalaOrganization 
+[1A[2K[9999D[20/214] rocketchip.ivyDeps 
+[1A[2K[9999D[21/214] rocketchip.macros.ivyDeps 
+[1A[2K[9999D[22/214] rocketchip.macros.transitiveIvyDeps 
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps 
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [1/1] artifacts (~0/0 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [2/2] artifacts (~0/0 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [3/3] artifacts (~0/0 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [4/4] artifacts (~0/0 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~0/0 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~0/1602 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~1602/1602 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~1602/1602 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~1602/3415 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~3415/3415 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~3415/5437 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~3415/5437 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~5437/5437 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~5437/10106 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~10106/10106 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~10106/10106 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~10106/10106 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~10106/13005 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~13005/13005 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [5/5] artifacts (~13005/13005 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [6/6] artifacts (~13005/13005 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [7/7] artifacts (~13005/13005 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [8/8] artifacts (~13005/13005 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [9/9] artifacts (~13005/13005 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [10/10] artifacts (~13005/13005 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [11/11] artifacts (~13005/13005 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [11/11] artifacts (~13005/15474 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [11/11] artifacts (~15474/15474 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [11/11] artifacts (~15474/17919 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [11/11] artifacts (~15474/20382 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [11/11] artifacts (~15474/20382 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [12/12] artifacts (~15474/20382 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [12/12] artifacts (~17919/20382 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [12/12] artifacts (~17919/26689 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [12/12] artifacts (~17919/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [12/12] artifacts (~20382/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [12/12] artifacts (~22124/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [12/12] artifacts (~22124/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [12/12] artifacts (~28431/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [13/13] artifacts (~28431/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [13/13] artifacts (~28431/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [14/14] artifacts (~28431/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [14/14] artifacts (~28431/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [15/15] artifacts (~28431/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [15/15] artifacts (~28431/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [16/16] artifacts (~28431/28431 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [16/16] artifacts (~28431/30879 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [16/16] artifacts (~30879/30879 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [16/16] artifacts (~30879/30879 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [17/17] artifacts (~30879/30879 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [17/17] artifacts (~30879/32975 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [17/17] artifacts (~32975/32975 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [17/17] artifacts (~32975/32975 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [18/18] artifacts (~32975/32975 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [18/18] artifacts (~32975/35423 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [18/18] artifacts (~35423/35423 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [18/18] artifacts (~35423/37871 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [18/18] artifacts (~37871/37871 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [18/18] artifacts (~37871/37871 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [19/19] artifacts (~37871/37871 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [19/19] artifacts (~37871/37871 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [20/20] artifacts (~37871/37871 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [20/20] artifacts (~37871/40052 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [20/20] artifacts (~37871/41544 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [20/20] artifacts (~40052/41544 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [20/20] artifacts (~40960/41544 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [20/20] artifacts (~41544/41544 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [20/20] artifacts (~41544/41544 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [21/21] artifacts (~41544/41544 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [21/21] artifacts (~41544/41544 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [21/21] artifacts (~41544/43992 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [21/21] artifacts (~43992/43992 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [21/21] artifacts (~43992/43992 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [21/21] artifacts (~43992/46467 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [21/21] artifacts (~46467/46467 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [21/21] artifacts (~46467/46467 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [22/22] artifacts (~46467/46467 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~46467/46467 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~46467/48924 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~48924/48924 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~48924/52776 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~52776/52776 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~52776/52776 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~52776/52776 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~52776/55221 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~53685/55221 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~55054/55221 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~55221/55221 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~55221/55221 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~55221/57669 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~55221/60117 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~57669/60117 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~57669/60117 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~60117/60117 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [23/23] artifacts (~60117/60117 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [24/24] artifacts (~60117/60117 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [24/24] artifacts (~60117/65486 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [24/24] artifacts (~65486/65486 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [24/24] artifacts (~65486/65486 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [25/25] artifacts (~65486/65486 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [25/25] artifacts (~65486/77779 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [25/25] artifacts (~69582/77779 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [25/25] artifacts (~77779/77779 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [25/25] artifacts (~77779/77779 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [26/26] artifacts (~77779/77779 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [26/26] artifacts (~77779/85802 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [26/26] artifacts (~85802/85802 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [26/26] artifacts (~85802/85802 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [27/27] artifacts (~85802/85802 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [27/27] artifacts (~85802/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [27/27] artifacts (~101724/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [27/27] artifacts (~107622/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [27/27] artifacts (~107622/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [28/28] artifacts (~107622/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [29/29] artifacts (~107622/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [30/30] artifacts (~107622/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [31/31] artifacts (~107622/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [32/32] artifacts (~107622/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [33/33] artifacts (~107622/107622 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [33/33] artifacts (~107622/108731 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [33/33] artifacts (~108731/108731 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [33/33] artifacts (~108731/110970 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [33/33] artifacts (~108731/110970 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [34/34] artifacts (~108731/110970 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [34/34] artifacts (~110970/110970 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [34/34] artifacts (~110970/110970 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [35/35] artifacts (~110970/110970 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [35/35] artifacts (~110970/114548 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [35/35] artifacts (~114548/114548 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [35/35] artifacts (~114548/114548 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [35/35] artifacts (~114548/118608 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [35/35] artifacts (~114548/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [36/36] artifacts (~114548/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [36/36] artifacts (~115456/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [36/36] artifacts (~116825/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [36/36] artifacts (~118194/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [36/36] artifacts (~118608/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [36/36] artifacts (~123882/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [36/36] artifacts (~123882/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~123882/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~123882/123882 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~123882/126633 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~126633/126633 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~126633/126633 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~126633/128287 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~126633/129929 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~128287/129929 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~129196/129929 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~129929/129929 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~129929/129929 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~129929/129929 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~129929/131870 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~130837/131870 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~131870/131870 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~131870/131870 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~131870/133521 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~133521/133521 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [37/37] artifacts (~133521/133521 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [38/38] artifacts (~133521/133521 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~133521/133521 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~133521/141346 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~141266/141346 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~141346/141346 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~141346/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~142254/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~143623/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~144541/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~145910/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~147279/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~148648/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~150017/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~151386/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~152755/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~152886/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~152886/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [39/39] artifacts (~152886/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~152886/152886 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~152886/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~153794/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~155163/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~156532/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~157901/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~159270/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~160630/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~161999/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~163368/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~164737/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~166106/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~167475/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~168844/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~170213/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~171582/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~172901/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [40/40] artifacts (~172901/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [41/41] artifacts (~172901/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [42/42] artifacts (~172901/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [43/43] artifacts (~172901/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [44/44] artifacts (~172901/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [45/45] artifacts (~172901/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~172901/172901 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~172901/175153 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~172901/192013 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~172901/194169 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~172901/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~173810/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~175153/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~176983/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~179139/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~195062/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~195999/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [46/46] artifacts (~195999/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~195999/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~195999/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~195999/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~195999/195999 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~195999/198244 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~196907/198244 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~198244/198244 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~198244/198244 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~198244/201861 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~201861/201861 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~201861/201861 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~201861/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~202770/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~204139/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~205508/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~206877/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~207425/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [47/47] artifacts (~207425/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [48/48] artifacts (~207425/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [49/49] artifacts (~207425/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~207425/207425 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~207425/215596 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~207425/220006 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~215169/220006 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~215596/220006 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~216504/220006 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~217873/220006 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~219242/220006 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~220006/220006 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~220006/220006 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~220006/220006 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~220006/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~220913/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~222282/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~223651/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~225020/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~226389/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~227758/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~229127/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~230496/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~231865/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~233234/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~234603/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~235972/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~237341/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~238710/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~240079/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~241448/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~242817/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~244186/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~245555/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~246924/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~248293/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~249662/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~251031/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~252400/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~253769/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~255138/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~256507/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~257876/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~262105/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~266334/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~270563/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~274792/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~279021/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~283250/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~284620/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~288849/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~293078/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~297307/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~297942/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [50/50] artifacts (~297942/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [51/51] artifacts (~297942/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~297942/297942 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~297942/301485 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~298852/301485 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~300221/301485 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~301485/301485 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~301485/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~301485/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~305253/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~309482/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~313711/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~317940/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~319907/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [52/52] artifacts (~319907/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [53/53] artifacts (~319907/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [54/54] artifacts (~319907/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [55/55] artifacts (~319907/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~319907/319907 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~319907/322092 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~322092/322092 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~322092/322092 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~322092/323880 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~322092/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~323880/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~324787/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~326156/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~327525/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~328894/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~330263/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~331632/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~333001/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~334370/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~335739/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~337108/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~338477/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~339846/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~341215/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~341215/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~342584/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~343953/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~345322/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~346691/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~348007/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~349376/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~350745/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~352114/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~353483/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~354852/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~356221/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~357590/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~358959/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~360328/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~361697/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~361728/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~361728/361728 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~361728/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~365496/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~369725/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~373954/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~378183/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~382412/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~386641/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~390870/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~391760/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [56/56] artifacts (~391760/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [57/57] artifacts (~391760/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [58/58] artifacts (~391760/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [59/59] artifacts (~391760/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~391760/391760 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~391760/400237 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~391760/401881 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~399504/401881 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~400237/401881 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~401881/401881 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~401881/401881 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~401881/401881 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~401881/403534 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~401881/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~403534/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~407302/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~411531/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~414921/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~419150/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~423379/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~427608/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~431837/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~431837/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~436066/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~440059/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [60/60] artifacts (~440059/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~440059/440059 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~440059/472627 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~443826/472627 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~448055/472627 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~452284/472627 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~456513/472627 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~460742/472627 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~464971/472627 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~469200/472627 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~472627/472627 bytes)
+[1A[2K[9999D[23/214] rocketchip.macros.resolvedIvyDeps | Downloading [61/61] artifacts (~472627/472627 bytes)
+[1A[2K[9999D[24/214] rocketchip.macros.compileClasspath 
+[1A[2K[9999D[25/214] rocketchip.macros.javacOptions 
+[1A[2K[9999D[26/214] rocketchip.macros.scalacOptions 
+[1A[2K[9999D[27/214] rocketchip.macros.scalaCompilerClasspath 
+[1A[2K[9999D[27/214] rocketchip.macros.scalaCompilerClasspath | Downloading [1/1] artifacts (~0/0 bytes)
+[1A[2K[9999D[27/214] rocketchip.macros.scalaCompilerClasspath | Downloading [1/1] artifacts (~0/2689 bytes)
+[1A[2K[9999D[27/214] rocketchip.macros.scalaCompilerClasspath | Downloading [1/1] artifacts (~2689/2689 bytes)
+[1A[2K[9999D[27/214] rocketchip.macros.scalaCompilerClasspath | Downloading [1/1] artifacts (~2689/2689 bytes)
+[1A[2K[9999D[27/214] rocketchip.macros.scalaCompilerClasspath | Downloading [2/2] artifacts (~2689/2689 bytes)
+[1A[2K[9999D[27/214] rocketchip.macros.scalaCompilerClasspath | Downloading [2/2] artifacts (~2689/5207 bytes)
+[1A[2K[9999D[27/214] rocketchip.macros.scalaCompilerClasspath | Downloading [2/2] artifacts (~5207/5207 bytes)
+[1A[2K[9999D[27/214] rocketchip.macros.scalaCompilerClasspath | Downloading [2/2] artifacts (~5207/5207 bytes)
+[1A[2K[9999D[28/214] rocketchip.macros.scalacPluginIvyDeps 
+[1A[2K[9999D[29/214] rocketchip.macros.scalacPluginClasspath 
+[1A[2K[9999D[30/214] rocketchip.macros.compile 
+Compiling compiler interface...
+[info] compiling 1 Scala source to E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\out\rocketchip\macros\compile\dest\classes ...
+[info] done compiling
+[31/214] hardfloat.upstreamCompileOutput 
+[1A[2K[9999D[32/214] hardfloat.sources 
+[1A[2K[9999D[33/214] hardfloat.generatedSources 
+[1A[2K[9999D[34/214] hardfloat.allSources 
+[1A[2K[9999D[35/214] hardfloat.allSourceFiles 
+[1A[2K[9999D[36/214] hardfloat.transitiveLocalClasspath 
+[1A[2K[9999D[37/214] hardfloat.resources 
+[1A[2K[9999D[38/214] hardfloat.unmanagedClasspath 
+[1A[2K[9999D[39/214] hardfloat.scalaVersion 
+[1A[2K[9999D[40/214] hardfloat.platformSuffix 
+[1A[2K[9999D[41/214] hardfloat.compileIvyDeps 
+[1A[2K[9999D[42/214] hardfloat.transitiveCompileIvyDeps 
+[1A[2K[9999D[43/214] hardfloat.scalaOrganization 
+[1A[2K[9999D[44/214] hardfloat.scalaLibraryIvyDeps 
+[1A[2K[9999D[45/214] hardfloat.ivyDeps.overriden.mill.scalalib.JavaModule.ivyDeps 
+[1A[2K[9999D[46/214] hardfloat.ivyDeps 
+[1A[2K[9999D[47/214] hardfloat.transitiveIvyDeps 
+[1A[2K[9999D[48/214] hardfloat.resolvedIvyDeps 
+[1A[2K[9999D[49/214] hardfloat.compileClasspath 
+[1A[2K[9999D[50/214] hardfloat.javacOptions 
+[1A[2K[9999D[51/214] hardfloat.scalacOptions 
+[1A[2K[9999D[52/214] hardfloat.scalaCompilerClasspath 
+[1A[2K[9999D[53/214] hardfloat.scalacPluginIvyDeps 
+[1A[2K[9999D[54/214] hardfloat.scalacPluginClasspath.overriden.mill.scalalib.ScalaModule.scalacPluginClasspath 
+[1A[2K[9999D[54/214] hardfloat.scalacPluginClasspath.overriden.mill.scalalib.ScalaModule.scalacPluginClasspath | Downloading [1/1] artifacts (~0/0 bytes)
+[1A[2K[9999D[54/214] hardfloat.scalacPluginClasspath.overriden.mill.scalalib.ScalaModule.scalacPluginClasspath | Downloading [1/1] artifacts (~0/1925 bytes)
+[1A[2K[9999D[54/214] hardfloat.scalacPluginClasspath.overriden.mill.scalalib.ScalaModule.scalacPluginClasspath | Downloading [1/1] artifacts (~910/1925 bytes)
+[1A[2K[9999D[54/214] hardfloat.scalacPluginClasspath.overriden.mill.scalalib.ScalaModule.scalacPluginClasspath | Downloading [1/1] artifacts (~1925/1925 bytes)
+[1A[2K[9999D[54/214] hardfloat.scalacPluginClasspath.overriden.mill.scalalib.ScalaModule.scalacPluginClasspath | Downloading [1/1] artifacts (~1925/1925 bytes)
+[1A[2K[9999D[55/214] hardfloat.scalacPluginClasspath 
+[1A[2K[9999D[56/214] hardfloat.compile 
+[info] compiling 20 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\out\foreign-modules\rocket-chip\hardfloat\hardfloat\compile\dest\classes ...
+[warn] 535 feature warnings; re-run with -feature for details
+[warn] one warning found
+[info] done compiling
+[57/214] config.upstreamCompileOutput 
+[1A[2K[9999D[58/214] config.sources 
+[1A[2K[9999D[59/214] config.generatedSources 
+[1A[2K[9999D[60/214] config.allSources 
+[1A[2K[9999D[61/214] config.allSourceFiles 
+[1A[2K[9999D[62/214] config.transitiveLocalClasspath 
+[1A[2K[9999D[63/214] config.resources 
+[1A[2K[9999D[64/214] config.unmanagedClasspath 
+[1A[2K[9999D[65/214] config.scalaVersion 
+[1A[2K[9999D[66/214] config.platformSuffix 
+[1A[2K[9999D[67/214] config.compileIvyDeps 
+[1A[2K[9999D[68/214] config.transitiveCompileIvyDeps 
+[1A[2K[9999D[69/214] config.scalaOrganization 
+[1A[2K[9999D[70/214] config.scalaLibraryIvyDeps 
+[1A[2K[9999D[71/214] config.ivyDeps 
+[1A[2K[9999D[72/214] config.transitiveIvyDeps 
+[1A[2K[9999D[73/214] config.resolvedIvyDeps 
+[1A[2K[9999D[74/214] config.compileClasspath 
+[1A[2K[9999D[75/214] config.javacOptions 
+[1A[2K[9999D[76/214] config.scalacOptions 
+[1A[2K[9999D[77/214] config.scalaCompilerClasspath 
+[1A[2K[9999D[78/214] config.scalacPluginIvyDeps 
+[1A[2K[9999D[79/214] config.scalacPluginClasspath 
+[1A[2K[9999D[80/214] config.compile 
+[info] compiling 1 Scala source to E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\out\foreign-modules\rocket-chip\api-config-chipsalliance\build-rules\mill\config\compile\dest\classes ...
+[info] done compiling
+[81/214] rocketchip.upstreamCompileOutput 
+[1A[2K[9999D[82/214] rocketchip.sources 
+[1A[2K[9999D[83/214] rocketchip.generatedSources 
+[1A[2K[9999D[84/214] rocketchip.allSources 
+[1A[2K[9999D[85/214] rocketchip.allSourceFiles 
+[1A[2K[9999D[86/214] rocketchip.macros.localClasspath 
+[1A[2K[9999D[87/214] hardfloat.localClasspath 
+[1A[2K[9999D[88/214] config.localClasspath 
+[1A[2K[9999D[89/214] rocketchip.transitiveLocalClasspath 
+[1A[2K[9999D[90/214] rocketchip.resources 
+[1A[2K[9999D[91/214] rocketchip.unmanagedClasspath 
+[1A[2K[9999D[92/214] rocketchip.platformSuffix 
+[1A[2K[9999D[93/214] rocketchip.compileIvyDeps 
+[1A[2K[9999D[94/214] rocketchip.transitiveCompileIvyDeps 
+[1A[2K[9999D[95/214] rocketchip.scalaLibraryIvyDeps 
+[1A[2K[9999D[96/214] rocketchip.transitiveIvyDeps 
+[1A[2K[9999D[97/214] rocketchip.resolvedIvyDeps 
+[1A[2K[9999D[97/214] rocketchip.resolvedIvyDeps | Downloading [1/1] artifacts (~0/0 bytes)
+[1A[2K[9999D[97/214] rocketchip.resolvedIvyDeps | Downloading [1/1] artifacts (~0/2020 bytes)
+[1A[2K[9999D[97/214] rocketchip.resolvedIvyDeps | Downloading [1/1] artifacts (~910/2020 bytes)
+[1A[2K[9999D[97/214] rocketchip.resolvedIvyDeps | Downloading [1/1] artifacts (~2020/2020 bytes)
+[1A[2K[9999D[97/214] rocketchip.resolvedIvyDeps | Downloading [1/1] artifacts (~2020/2020 bytes)
+[1A[2K[9999D[98/214] rocketchip.compileClasspath 
+[1A[2K[9999D[99/214] rocketchip.javacOptions 
+[1A[2K[9999D[100/214] rocketchip.scalacOptions 
+[1A[2K[9999D[101/214] rocketchip.scalaCompilerClasspath 
+[1A[2K[9999D[102/214] rocketchip.scalacPluginIvyDeps 
+[1A[2K[9999D[103/214] rocketchip.scalacPluginClasspath 
+[1A[2K[9999D[104/214] rocketchip.compile 
+[info] compiling 339 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\out\rocketchip\compile\dest\classes ...
+[warn] two deprecations
+[warn] 314 deprecations (since Chisel 3.5)
+[warn] 16 deprecations (since FIRRTL 1.4)
+[warn] one deprecation (since FIRRTL 1.5)
+[warn] 333 deprecations in total; re-run with -deprecation for details
+[warn] 2656 feature warnings; re-run with -feature for details
+[warn] 6 warnings found
+[info] done compiling
+[105/214] difftest.upstreamCompileOutput 
+[1A[2K[9999D[106/214] difftest.sources 
+[1A[2K[9999D[107/214] difftest.generatedSources 
+[1A[2K[9999D[108/214] difftest.allSources 
+[1A[2K[9999D[109/214] difftest.allSourceFiles 
+[1A[2K[9999D[110/214] difftest.transitiveLocalClasspath 
+[1A[2K[9999D[111/214] difftest.resources 
+[1A[2K[9999D[112/214] difftest.unmanagedClasspath 
+[1A[2K[9999D[113/214] difftest.scalaVersion 
+[1A[2K[9999D[114/214] difftest.platformSuffix 
+[1A[2K[9999D[115/214] difftest.compileIvyDeps 
+[1A[2K[9999D[116/214] difftest.transitiveCompileIvyDeps 
+[1A[2K[9999D[117/214] difftest.scalaOrganization 
+[1A[2K[9999D[118/214] difftest.scalaLibraryIvyDeps 
+[1A[2K[9999D[119/214] difftest.ivyDeps 
+[1A[2K[9999D[120/214] difftest.transitiveIvyDeps 
+[1A[2K[9999D[121/214] difftest.resolvedIvyDeps 
+[1A[2K[9999D[121/214] difftest.resolvedIvyDeps | Downloading [1/1] artifacts (~0/0 bytes)
+[1A[2K[9999D[121/214] difftest.resolvedIvyDeps | Downloading [1/1] artifacts (~0/2076 bytes)
+[1A[2K[9999D[121/214] difftest.resolvedIvyDeps | Downloading [1/1] artifacts (~922/2076 bytes)
+[1A[2K[9999D[121/214] difftest.resolvedIvyDeps | Downloading [1/1] artifacts (~2076/2076 bytes)
+[1A[2K[9999D[121/214] difftest.resolvedIvyDeps | Downloading [1/1] artifacts (~2076/2076 bytes)
+[1A[2K[9999D[122/214] difftest.compileClasspath 
+[1A[2K[9999D[123/214] difftest.javacOptions 
+[1A[2K[9999D[124/214] difftest.scalacOptions 
+[1A[2K[9999D[125/214] difftest.scalaCompilerClasspath 
+[1A[2K[9999D[126/214] difftest.scalacPluginIvyDeps 
+[1A[2K[9999D[127/214] difftest.scalacPluginClasspath 
+[1A[2K[9999D[128/214] difftest.compile 
+[info] compiling 2 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\out\difftest\compile\dest\classes ...
+[warn] E:/ICT/chisel2lean4/.cache/xiangshan-v2.1/difftest/src/main/scala/Difftest.scala:244:19: non-variable type argument chisel3.Data in type pattern chisel3.Vec[chisel3.Data] is unchecked since it is eliminated by erasure
+[warn]         case vec: Vec[Data] => vec.zipWithIndex.map{ case (v, i) => (s"io_${name}_$i", v) }
+[warn]                   ^
+[warn] one warning found
+[info] done compiling
+[129/214] huancun.upstreamCompileOutput 
+[1A[2K[9999D[130/214] huancun.sources 
+[1A[2K[9999D[131/214] huancun.generatedSources 
+[1A[2K[9999D[132/214] huancun.allSources 
+[1A[2K[9999D[133/214] huancun.allSourceFiles 
+[1A[2K[9999D[134/214] rocketchip.localClasspath 
+[1A[2K[9999D[135/214] huancun.transitiveLocalClasspath 
+[1A[2K[9999D[136/214] huancun.resources 
+[1A[2K[9999D[137/214] huancun.unmanagedClasspath 
+[1A[2K[9999D[138/214] huancun.scalaVersion 
+[1A[2K[9999D[139/214] huancun.platformSuffix 
+[1A[2K[9999D[140/214] huancun.compileIvyDeps 
+[1A[2K[9999D[141/214] huancun.transitiveCompileIvyDeps 
+[1A[2K[9999D[142/214] huancun.scalaOrganization 
+[1A[2K[9999D[143/214] huancun.scalaLibraryIvyDeps 
+[1A[2K[9999D[144/214] huancun.ivyDeps 
+[1A[2K[9999D[145/214] huancun.transitiveIvyDeps 
+[1A[2K[9999D[146/214] huancun.resolvedIvyDeps 
+[1A[2K[9999D[147/214] huancun.compileClasspath 
+[1A[2K[9999D[148/214] huancun.javacOptions 
+[1A[2K[9999D[149/214] huancun.scalacOptions 
+[1A[2K[9999D[150/214] huancun.scalaCompilerClasspath 
+[1A[2K[9999D[151/214] huancun.scalacPluginIvyDeps 
+[1A[2K[9999D[152/214] huancun.scalacPluginClasspath 
+[1A[2K[9999D[153/214] huancun.compile 
+[info] compiling 58 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\out\huancun\compile\dest\classes ...
+[warn] E:/ICT/chisel2lean4/.cache/xiangshan-v2.1/huancun/src/main/scala/huancun/Slice.scala:438:44: non-variable type argument huancun.noninclusive.MSHR in type pattern Seq[huancun.noninclusive.MSHR] (the underlying of Seq[huancun.noninclusive.MSHR]) is unchecked since it is eliminated by erasure
+[warn]     case (dir: noninclusive.Directory, ms: Seq[noninclusive.MSHR]) =>
+[warn]                                            ^
+[warn] E:/ICT/chisel2lean4/.cache/xiangshan-v2.1/huancun/src/main/scala/huancun/Slice.scala:453:38: non-variable type argument huancun.inclusive.MSHR in type pattern Seq[huancun.inclusive.MSHR] (the underlying of Seq[huancun.inclusive.MSHR]) is unchecked since it is eliminated by erasure
+[warn]     case (_: inclusive.Directory, _: Seq[inclusive.MSHR]) =>
+[warn]                                      ^
+[warn] 139 deprecations (since Chisel 3.5); re-run with -deprecation for details
+[warn] 1311 feature warnings; re-run with -feature for details
+[warn] four warnings found
+[info] done compiling
+[154/214] fudian.upstreamCompileOutput 
+[1A[2K[9999D[155/214] fudian.sources 
+[1A[2K[9999D[156/214] fudian.generatedSources 
+[1A[2K[9999D[157/214] fudian.allSources 
+[1A[2K[9999D[158/214] fudian.allSourceFiles 
+[1A[2K[9999D[159/214] fudian.transitiveLocalClasspath 
+[1A[2K[9999D[160/214] fudian.resources 
+[1A[2K[9999D[161/214] fudian.unmanagedClasspath 
+[1A[2K[9999D[162/214] fudian.scalaVersion 
+[1A[2K[9999D[163/214] fudian.platformSuffix 
+[1A[2K[9999D[164/214] fudian.compileIvyDeps 
+[1A[2K[9999D[165/214] fudian.transitiveCompileIvyDeps 
+[1A[2K[9999D[166/214] fudian.scalaOrganization 
+[1A[2K[9999D[167/214] fudian.scalaLibraryIvyDeps 
+[1A[2K[9999D[168/214] fudian.ivyDeps 
+[1A[2K[9999D[169/214] fudian.transitiveIvyDeps 
+[1A[2K[9999D[170/214] fudian.resolvedIvyDeps 
+[1A[2K[9999D[171/214] fudian.compileClasspath 
+[1A[2K[9999D[172/214] fudian.javacOptions 
+[1A[2K[9999D[173/214] fudian.scalacOptions 
+[1A[2K[9999D[174/214] fudian.scalaCompilerClasspath 
+[1A[2K[9999D[175/214] fudian.scalacPluginIvyDeps 
+[1A[2K[9999D[176/214] fudian.scalacPluginClasspath 
+[1A[2K[9999D[177/214] fudian.compile 
+[info] compiling 17 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\out\fudian\compile\dest\classes ...
+[warn] E:/ICT/chisel2lean4/.cache/xiangshan-v2.1/fudian/src/main/scala/fudian/FPToInt.scala:55:12: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+[warn]   io.to_s2.sel_lpath
+[warn]            ^
+[warn] one deprecation (since 2.11.0); re-run with -deprecation for details
+[warn] 604 feature warnings; re-run with -feature for details
+[warn] three warnings found
+[info] done compiling
+[178/214] XiangShan.upstreamCompileOutput 
+[1A[2K[9999D[179/214] XiangShan.sources 
+[1A[2K[9999D[180/214] XiangShan.generatedSources 
+[1A[2K[9999D[181/214] XiangShan.allSources 
+[1A[2K[9999D[182/214] XiangShan.allSourceFiles 
+[1A[2K[9999D[183/214] difftest.localClasspath 
+[1A[2K[9999D[184/214] huancun.localClasspath 
+[1A[2K[9999D[185/214] fudian.localClasspath 
+[1A[2K[9999D[186/214] XiangShan.transitiveLocalClasspath 
+[1A[2K[9999D[187/214] XiangShan.unmanagedClasspath 
+[1A[2K[9999D[188/214] XiangShan.scalaVersion 
+[1A[2K[9999D[189/214] XiangShan.platformSuffix 
+[1A[2K[9999D[190/214] XiangShan.compileIvyDeps 
+[1A[2K[9999D[191/214] XiangShan.transitiveCompileIvyDeps 
+[1A[2K[9999D[192/214] XiangShan.scalaOrganization 
+[1A[2K[9999D[193/214] XiangShan.scalaLibraryIvyDeps 
+[1A[2K[9999D[194/214] XiangShan.ivyDeps.overriden.ammonite.$file.build.XSModule.ivyDeps 
+[1A[2K[9999D[195/214] XiangShan.ivyDeps 
+[1A[2K[9999D[196/214] XiangShan.transitiveIvyDeps 
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps 
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [1/1] artifacts (~0/0 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [1/1] artifacts (~0/2515 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [1/1] artifacts (~922/2515 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [1/1] artifacts (~2291/2515 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [1/1] artifacts (~2515/2515 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [1/1] artifacts (~2515/2515 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [2/2] artifacts (~2515/2515 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [3/3] artifacts (~2515/2515 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~2515/2515 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~2515/4545 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~3423/4545 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~4545/4545 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~4545/4545 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~4545/6213 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~5455/6213 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~6213/6213 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~6213/6213 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~6213/8327 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~7135/8327 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~8327/8327 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [4/4] artifacts (~8327/8327 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [5/5] artifacts (~8327/8327 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~8327/8327 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~8327/10772 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~9237/10772 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~10606/10772 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~10772/10772 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~10772/10772 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~10772/12855 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~11681/12855 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~12855/12855 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [6/6] artifacts (~12855/12855 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [7/7] artifacts (~12855/12855 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [7/7] artifacts (~12855/16456 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [7/7] artifacts (~13763/16456 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [7/7] artifacts (~15132/16456 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [7/7] artifacts (~16456/16456 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [7/7] artifacts (~16456/16456 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~16456/16456 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~16456/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~17363/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~18732/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~20101/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~21470/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~22839/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~24208/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~25577/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~26946/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~27903/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [8/8] artifacts (~27903/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~27903/27903 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~27903/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~28810/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~30179/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~31548/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~32917/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~34286/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~35655/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~37024/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~38393/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~39269/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~40638/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~42007/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~42558/42558 bytes)
+[1A[2K[9999D[197/214] XiangShan.resolvedIvyDeps | Downloading [9/9] artifacts (~42558/42558 bytes)
+[1A[2K[9999D[198/214] XiangShan.compileClasspath 
+[1A[2K[9999D[199/214] XiangShan.javacOptions 
+[1A[2K[9999D[200/214] XiangShan.scalacOptions 
+[1A[2K[9999D[201/214] XiangShan.scalaCompilerClasspath 
+[1A[2K[9999D[202/214] XiangShan.scalacPluginIvyDeps 
+[1A[2K[9999D[203/214] XiangShan.scalacPluginClasspath 
+[1A[2K[9999D[204/214] XiangShan.compile 
+[info] compiling 198 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-v2.1\out\XiangShan\compile\dest\classes ...
+[warn] three deprecations (since 2.11.0)
+[warn] 493 deprecations (since Chisel 3.5)
+[warn] one deprecation (since FIRRTL 1.5)
+[warn] 497 deprecations in total; re-run with -deprecation for details
+[warn] 9494 feature warnings; re-run with -feature for details
+[warn] 5 warnings found
+[info] done compiling
+[205/214] XiangShan.localClasspath 
+[1A[2K[9999D[206/214] XiangShan.runIvyDeps 
+[1A[2K[9999D[207/214] XiangShan.resolvedRunIvyDeps 
+[1A[2K[9999D[208/214] XiangShan.upstreamAssemblyClasspath 
+[1A[2K[9999D[209/214] XiangShan.runClasspath 
+[1A[2K[9999D[210/214] XiangShan.forkArgs 
+[1A[2K[9999D[211/214] XiangShan.forkEnv 
+[1A[2K[9999D[212/214] XiangShan.forkWorkingDir 
+[1A[2K[9999D[213/214] XiangShan.runUseArgsFile 
+[1A[2K[9999D[214/214] XiangShan.runMain 

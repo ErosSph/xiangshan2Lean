@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean\tests\fixtures\Rejected.scala:115: error: [chisel2lean] Vec elements must have a uniform width independent of the generate index
+  val v = VecInit(Seq.tabulate(w)(i => i.U))
+       ^
+1 error

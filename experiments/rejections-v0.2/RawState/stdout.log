@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean\tests\fixtures\Rejected.scala:111: error: [chisel2lean] Clocked state requires the implicit clock of Module; explicit RawModule clocks are unsupported
+  out := r
+       ^
+1 error

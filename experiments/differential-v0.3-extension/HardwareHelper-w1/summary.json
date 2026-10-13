@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 2,
+  "compared_output_values": 4,
+  "module": "HardwareHelper",
+  "parameters": {
+    "w": 1
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\HardwareHelper-w1",
+  "seconds": 11.38,
+  "fingerprint": "cccbae9c155fb73acadea79e479c67c6d073ca5089a91769ff4097349bc6b40f"
+}

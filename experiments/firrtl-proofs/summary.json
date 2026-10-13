@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "lean_version": "4.19.0",
+  "proofs": [
+    {
+      "file": "verification/firrtl/CounterBridge.lean",
+      "configuration": {
+        "n": 4
+      },
+      "scope": "all initial states, all enable/reset inputs, all finite sequence lengths"
+    },
+    {
+      "file": "verification/firrtl/RightShiftBridge.lean",
+      "configuration": {
+        "XLEN": 64
+      },
+      "scope": "all source bit patterns, all six-bit shift amounts, both reset values"
+    },
+    {
+      "file": "verification/firrtl/RightShiftOriginalBridge.lean",
+      "configuration": {
+        "XLEN": 64
+      },
+      "full_xiangshan_framework": true,
+      "release": "v2.1",
+      "scope": "all source bit patterns, all six-bit shift amounts, both reset values"
+    }
+  ],
+  "general_compiler_correctness_proved": false,
+  "full_xiangshan_framework_in_this_right_shift_fixture": false
+}

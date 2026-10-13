@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "SyncMemory",
+  "parameters": {
+    "n": 2,
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.2-extension\\SyncMemory-n2-w3",
+  "seconds": 21.0,
+  "fingerprint": "eca7dd49653f754a4acc18da545d8f59910fa18c96f7ed947e1b926536c208e6"
+}

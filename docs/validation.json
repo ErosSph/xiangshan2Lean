@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "version": "0.2.0",
+  "source_to_lean_modules": 51,
+  "differential_configurations": 128,
+  "differential_cycles": 6303,
+  "compared_output_values": 28907,
+  "rejection_checks": 25,
+  "mutation_detected": true,
+  "client_model_theorems_checked": 2,
+  "formal_equivalence_proof": false,
+  "evidence": [
+    {
+      "path": "experiments/differential-v0.2-full/summary.json",
+      "pass": true
+    },
+    {
+      "path": "experiments/differential-v0.2-edge/summary.json",
+      "pass": true
+    },
+    {
+      "path": "experiments/differential-v0.2-control/summary.json",
+      "pass": true
+    },
+    {
+      "path": "experiments/differential-v0.2-extension/summary.json",
+      "pass": true
+    },
+    {
+      "path": "experiments/rejections-v0.2/summary.json",
+      "pass": true
+    },
+    {
+      "path": "experiments/mutation/summary.json",
+      "pass": true
+    },
+    {
+      "path": "experiments/client-proof-v0.2/result.json",
+      "pass": true
+    }
+  ]
+}

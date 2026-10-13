@@ -1,0 +1,11 @@
+{
+  "module": "probes.HierarchicalComb",
+  "parameters": {
+    "w": 1,
+    "invert": false
+  },
+  "seed": 20261013,
+  "cycles": 2,
+  "sampling": "before/after rising edge",
+  "comparison_start": "post first reset/warm-up edge for stateful modules"
+}

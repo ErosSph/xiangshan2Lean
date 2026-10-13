@@ -1,0 +1,17 @@
+{
+  "case": "Counter-n4",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\Counter-n4",
+  "passed": true,
+  "firrtl_sha256": "60ca74e7be22f2a110471d97af915310b648f77b02a8762fc5db72369a3b14b5",
+  "cycles": 21,
+  "output_comparisons": 41,
+  "initial_state": {
+    "cnt": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "io.en": "io_en",
+    "io.q": "io_q"
+  }
+}

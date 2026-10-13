@@ -1,0 +1,10 @@
+{
+  "module": "probes.ParamExpression",
+  "parameters": {
+    "n": 3
+  },
+  "seed": 20261013,
+  "cycles": 16,
+  "sampling": "before/after rising edge",
+  "comparison_start": "post first reset/warm-up edge for stateful modules"
+}

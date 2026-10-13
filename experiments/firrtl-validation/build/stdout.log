@@ -1,0 +1,28 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (10449 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] compiling 1 Scala source to E:\ICT\chisel2lean4\target\scala-2.13\classes ...
+[warn] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:16:39: method compile in trait Compiler is deprecated (since FIRRTL 1.3.3): Migrate to '(new FirrtlStage).execute(args: Array[String], annotations: AnnotationSeq)'.This will be removed in 1.4.
+[warn]     val low = new LowFirrtlCompiler().compile(CircuitState(circuit, ChirrtlForm), Nil).circuit
+[warn]                                       ^
+[warn] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:16:19: class LowFirrtlCompiler in package firrtl is deprecated (since FIRRTL 1.3): Use stage.{FirrtlStage, FirrtlMain} stage.transforms.Compiler(Dependency[LowFirrtlEmitter])
+[warn]     val low = new LowFirrtlCompiler().compile(CircuitState(circuit, ChirrtlForm), Nil).circuit
+[warn]                   ^
+[warn] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:16:69: object ChirrtlForm in package firrtl is deprecated (since FIRRTL 1.3): Mix-in the DependencyAPIMigration trait into your Transform and specify its Dependency API dependencies. See: https://bit.ly/2Voppre
+[warn]     val low = new LowFirrtlCompiler().compile(CircuitState(circuit, ChirrtlForm), Nil).circuit
+[warn]                                                                     ^
+[warn] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:18:23: class VerilogCompiler in package firrtl is deprecated (since FIRRTL 1.3): Use stage.{FirrtlStage, FirrtlMain} stage.transforms.Compiler(Dependency[VerilogEmitter])
+[warn]     val verilog = new VerilogCompiler().compileAndEmit(CircuitState(circuit, ChirrtlForm)).getEmittedCircuit.value
+[warn]                       ^
+[warn] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:18:78: object ChirrtlForm in package firrtl is deprecated (since FIRRTL 1.3): Mix-in the DependencyAPIMigration trait into your Transform and specify its Dependency API dependencies. See: https://bit.ly/2Voppre
+[warn]     val verilog = new VerilogCompiler().compileAndEmit(CircuitState(circuit, ChirrtlForm)).getEmittedCircuit.value
+[warn]                                                                              ^
+[warn] E:\ICT\chisel2lean4\src\main\scala\chicala\lean\firrtl\FirrtlReference.scala:18:19: method compileAndEmit in trait Compiler is deprecated (since FIRRTL 1.3.3): Migrate to '(new FirrtlStage).execute(args: Array[String], annotations: AnnotationSeq)'.This will be removed in 1.4.
+[warn]     val verilog = new VerilogCompiler().compileAndEmit(CircuitState(circuit, ChirrtlForm)).getEmittedCircuit.value
+[warn]                   ^
+[warn] 6 warnings found
+[info] done compiling
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[success] Total time: 8 s, completed 2026年10月13日 下午9:40:53

@@ -1,0 +1,19 @@
+{
+  "case": "DualRegister-n3",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-full\\DualRegister-n3",
+  "passed": true,
+  "firrtl_sha256": "e0ad89ad682b0d6bb0175dd10d4be5b3050a5019791632b1d27627f9f6f74923",
+  "cycles": 48,
+  "output_comparisons": 190,
+  "initial_state": {
+    "first": 0,
+    "second": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "io.a": "io_a",
+    "io.b": "io_b",
+    "io.in": "io_in"
+  }
+}

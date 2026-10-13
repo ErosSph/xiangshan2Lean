@@ -1,0 +1,38 @@
+{
+  "format": "chisel2lean-configuration-v1",
+  "module": "xiangshan.backend.fu.RightShiftModule",
+  "parameters": {
+    "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 32
+  },
+  "factories": {
+    "p": {
+      "class": "xiangshan.validation.NanhuWidthConfig",
+      "args": [
+        32,
+        true
+      ]
+    }
+  },
+  "constructor": {},
+  "class_sha256": {
+    "xiangshan.validation.NanhuWidthConfig": "0e44e0e8b936dd41ac8bc451bd178b1e2db283fd5fc9dce97360edb8a3bd9774",
+    "xiangshan.backend.fu.RightShiftModule": "e70b7d0722917da5d80436dfaebb5da9371d11e4a7926dacddf5dcb0b701b7ed"
+  },
+  "projection": [
+    {
+      "name": "cfg_p_xiangshan_XSCoreParamsKey_XLEN",
+      "kind": "Int",
+      "root": "p",
+      "key": "xiangshan.XSCoreParamsKey",
+      "selectors": [
+        "XLEN"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Parameters.scala",
+        "line": 279,
+        "column": 26
+      }
+    }
+  ],
+  "chisel_version": "7.3.0"
+}

@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean\tests\fixtures\Rejected.scala:98: error: [chisel2lean] Multiple Mem write ports require an explicit collision model
+  mem.write(1.U, in)
+            ^
+1 error
