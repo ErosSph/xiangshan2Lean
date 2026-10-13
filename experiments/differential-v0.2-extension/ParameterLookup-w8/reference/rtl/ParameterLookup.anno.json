@@ -1,0 +1,19 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"E:\\ICT\\chisel2lean\\experiments\\differential-v0.2-extension\\ParameterLookup-w8\\reference\\rtl"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~ParameterLookup|ParameterLookup>out",
+    "sources":[
+      "~ParameterLookup|ParameterLookup>sel",
+      "~ParameterLookup|ParameterLookup>b",
+      "~ParameterLookup|ParameterLookup>a"
+    ]
+  }
+]

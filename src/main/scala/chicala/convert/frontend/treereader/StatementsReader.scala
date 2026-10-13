@@ -20,10 +20,12 @@ trait StatementsReader { self: Scala2Reader =>
     def apply(cInfo: CircuitInfo, tr: Tree): Option[(CircuitInfo, Option[MStatement])] = {
       if (cInfo.needExit) return None
       val (tree, tpt) = passThrough(tr)
-      tree match {
+      val result = tree match {
         case _: ValDef | _: DefDef => MDefLoader(cInfo, tr)
         case _                     => MTermLoader(cInfo, tr)
       }
+      result.foreach(_._2.foreach(s => recordPosition(s, tr.pos)))
+      result
     }
   }
 

@@ -1,0 +1,392 @@
+{
+  "parameters": {
+    "w": 7
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": true,
+        "c": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": false,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": false,
+        "c": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a": true,
+        "b": true,
+        "c": true
+      }
+    }
+  ],
+  "initial_state": null
+}

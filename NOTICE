@@ -1,0 +1,14 @@
+Chisel2Lean4
+
+This project derives from Chicala:
+https://github.com/iscas-tis/chicala
+
+The upstream baseline is commit:
+c8bab84b24c448c611b8bf2a87c7e9c26014b081
+
+The original Apache License, Version 2.0 is retained in LICENSE.
+The upstream README is retained in docs/upstream/README.md.
+
+This distribution includes additions and modifications for the parameterized
+Lean 4 intermediate representation, backend, runtime, source diagnostics,
+command-line execution, and independent RTL differential validation.

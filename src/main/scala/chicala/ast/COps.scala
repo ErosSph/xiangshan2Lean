@@ -19,6 +19,10 @@ trait COps { self: ChicalaAst =>
   case object Add      extends CBinaryOp // +
   case object Minus    extends CBinaryOp // -
   case object Multiply extends CBinaryOp // `*`
+  case object AddWide extends CBinaryOp
+  case object MinusWide extends CBinaryOp
+  case object Divide extends CBinaryOp
+  case object Remainder extends CBinaryOp
 
   case object And    extends CBinaryOp // &
   case object Or     extends CBinaryOp // |
@@ -29,6 +33,9 @@ trait COps { self: ChicalaAst =>
   case object Equal     extends CBinaryOp // ===
   case object NotEqual  extends CBinaryOp // =/=
   case object GreaterEq extends CBinaryOp // >=
+  case object Less extends CBinaryOp
+  case object LessEq extends CBinaryOp
+  case object Greater extends CBinaryOp
 
   case object LogiAnd extends CBinaryOp // &&
   case object LogiOr  extends CBinaryOp // ||
@@ -44,12 +51,21 @@ trait COps { self: ChicalaAst =>
   case object AsUInt extends CBackOp // .asUInt
   case object AsSInt extends CBackOp // .asSInt
   case object AsBool extends CBackOp // .asBool
+  case object OrReduce extends CBackOp
+  case object AndReduce extends CBackOp
+  case object XorReduce extends CBackOp
+  case object Pad extends CBackOp
+  case object Head extends CBackOp
+  case object Tail extends CBackOp
 
   sealed abstract class CUtilOp extends COp
   case object Mux               extends CUtilOp
   case object MuxLookup         extends CUtilOp
+  case object MuxCase extends CUtilOp
+  case object PriorityMux extends CUtilOp
   case object Cat               extends CUtilOp
   case object Fill              extends CUtilOp
   case object Log2              extends CUtilOp
+  case object MakeVec extends CUtilOp
 
 }

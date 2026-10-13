@@ -1,0 +1,26 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"E:\\ICT\\chisel2lean\\experiments\\differential-v0.2-extension\\SignedDivision-w3\\reference\\rtl"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~SignedDivision|SignedDivision>quotient",
+    "sources":[
+      "~SignedDivision|SignedDivision>a",
+      "~SignedDivision|SignedDivision>b"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~SignedDivision|SignedDivision>remainder",
+    "sources":[
+      "~SignedDivision|SignedDivision>a",
+      "~SignedDivision|SignedDivision>b"
+    ]
+  }
+]

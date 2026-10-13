@@ -1,0 +1,17 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"E:\\ICT\\chisel2lean\\experiments\\differential-v0.2-full\\VecIndex-n3-w4-k0\\reference\\rtl"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~VecIndex|VecIndex>out",
+    "sources":[
+      "~VecIndex|VecIndex>in_0"
+    ]
+  }
+]

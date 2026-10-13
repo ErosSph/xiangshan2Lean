@@ -15,3 +15,16 @@ metals.sbt
 
 # Scala
 target
+
+# Project-local tools and generated artifacts
+.tools/
+.cache/
+__pycache__/
+*.olean
+*.ilean
+generated/
+.lake/
+dist/
+experiments/**/source-and-ir/
+experiments/**/rtl/
+experiments/**/obj_dir/

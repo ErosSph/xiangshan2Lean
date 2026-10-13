@@ -1,0 +1,19 @@
+{
+  "parameters": {
+    "w": 1,
+    "invert": false
+  },
+  "trace": [
+    {
+      "inputs": {
+        "a": 0
+      }
+    },
+    {
+      "inputs": {
+        "a": 1
+      }
+    }
+  ],
+  "initial_state": null
+}

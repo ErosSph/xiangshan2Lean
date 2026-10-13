@@ -13,6 +13,12 @@ import chicala.util.Printer
 import chicala.convert.backend.stainless.StainlessEmitter
 import chicala.convert.pass._
 import chicala.ChicalaConfig
+import chicala.lean.frontend.LeanAdapter
+import chicala.lean.ir.{Module => IRModule, Normalize, TranslationError, Source}
+import chicala.lean.backend.{LeanEmitter, Json}
+import scala.util.control.NonFatal
+import java.nio.file.{Files, Paths}
+import java.nio.charset.StandardCharsets
 
 object ChiselToScalaComponent {
   val phaseName = "chiselToScala"
@@ -33,6 +39,7 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
   class ChiselToScalaPhase(prev: Phase)
       extends StdPhase(prev)
       with Scala2Reader
+      with LeanAdapter
       with ChicalaPassCollecttion
       with StainlessEmitter
       with Format {
@@ -46,9 +53,67 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
     chicalaLog.close()
 
     var readerInfo: ReaderInfo = ReaderInfo.empty
+    private val leanTrees = scala.collection.mutable.LinkedHashMap.empty[String, (Tree, String, Boolean)]
+    private val leanDefinitions = scala.collection.mutable.Map.empty[String, (ModuleDef, Tree)]
+
+    private def safely(tree: Tree)(body: => Unit): Unit = try body catch {
+      case e: TranslationError =>
+        val src = global.currentRun.units.map(_.source).find(_.file.path == e.source.file)
+        val pos = src.map(s => new scala.reflect.internal.util.OffsetPosition(s,
+          s.lineToOffset(e.source.line - 1) + e.source.column - 1)).getOrElse(tree.pos)
+        reporter.error(pos, "[chisel2lean] " + e.detail)
+      case NonFatal(e) => reporter.error(tree.pos, s"[chisel2lean] Frontend could not represent this module: ${e.getClass.getSimpleName}: ${e.getMessage}")
+    }
+
+    private def emitLean(name: String, cache: scala.collection.mutable.Map[String, IRModule], stack: Set[String] = Set.empty): IRModule = {
+      if (stack(name)) {
+        val root = leanDefinitions(name)._2
+        throw TranslationError(Source(root.pos.source.file.path, root.pos.line, root.pos.column + 1), "Recursive module instantiation: " + name)
+      }
+      cache.getOrElseUpdate(name, {
+        val (definition, root) = leanDefinitions.getOrElse(name, throw new IllegalArgumentException("Module source unavailable: " + name))
+        adaptToLean(definition, root, child => emitLean(child, cache, stack + name))
+      })
+    }
 
     override def run(): Unit = {
       super.run()
+      if (ChicalaConfig.backend == "lean") {
+        val targets = leanTrees.toList.collect { case (name, (tree, pkg, true))
+          if ChicalaConfig.module.isEmpty || ChicalaConfig.module == name || ChicalaConfig.module == name.split('.').last => name }
+        val needed = scala.collection.mutable.LinkedHashSet.empty[String]
+        def visit(name: String): Unit = if (!needed(name)) {
+          needed += name
+          val tree = leanTrees(name)._1
+          new Traverser {
+            override def traverse(t: Tree): Unit = {
+              t match {
+                case New(tpt) if tpt.tpe != null && leanTrees.contains(tpt.tpe.typeSymbol.fullName) => visit(tpt.tpe.typeSymbol.fullName)
+                case _ =>
+              }
+              super.traverse(t)
+            }
+          }.traverse(tree)
+        }
+        targets.foreach(visit)
+        needed.toList.reverse.foreach { name => val (tree, pkg, _) = leanTrees(name); safely(tree)(applyOnTree(tree, pkg)) }
+        processTodos()
+        readerInfo.todos.foreach { case (t, _) => reporter.error(t.pos, "Module or Bundle dependency could not be resolved") }
+        val cache = scala.collection.mutable.Map.empty[String, IRModule]
+        targets.foreach { name => safely(leanTrees(name)._1) {
+          if (!reporter.hasErrors) {
+            val ir = Normalize(emitLean(name, cache))
+            if (name == "Chisel2Lean.Runtime") throw TranslationError(ir.module.source, "Module name collides with the generated runtime library")
+            val segments = name.split('.').toList
+            if (!segments.forall(_.matches("[a-zA-Z_][a-zA-Z0-9_]*"))) throw TranslationError(ir.module.source, "Module/package names must be ASCII identifiers")
+            val directory = Paths.get(ChicalaConfig.leanOutput).resolve(segments.dropRight(1).mkString("/"))
+            Files.createDirectories(directory)
+            Files.write(directory.resolve(segments.last + ".lean"), LeanEmitter.emit(ir).getBytes(StandardCharsets.UTF_8))
+            Files.write(directory.resolve(segments.last + ".ir.json"), (Json.module(ir) + "\n").getBytes(StandardCharsets.UTF_8))
+          }
+        } }
+        return
+      }
       processTodos()
       readerInfo.todos.foreach { case (t, pname) => reporter.error(t.pos, "This class not processed") }
     }
@@ -58,7 +123,14 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
       val packageName = packageDef.pid.toString()
 
       for (tree @ ClassDef(mods, name, tparams, Template(parents, self, body)) <- packageDef.stats) {
-        applyOnTree(tree, packageName)
+        if (ChicalaConfig.backend != "lean") applyOnTree(tree, packageName)
+        else {
+          val fullName = List(packageName, name.toString).filter(p => p.nonEmpty && p != "<empty>").mkString(".")
+          val bases = tree.symbol.asClass.baseClasses.map(_.fullName)
+          val isBundle = bases.contains("chisel3.Bundle") && parents.exists(_.tpe.typeSymbol.fullName == "chisel3.Bundle")
+          val isModule = bases.contains("chisel3.RawModule")
+          if (isBundle || isModule) leanTrees(fullName) = (tree, if (packageName == "<empty>") "" else packageName, isModule)
+        }
       }
     }
 
@@ -105,6 +177,19 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
                 packageDir + s"/${name}.chicala.scala",
                 cClassDef.toString + "\n"
               )
+
+              if (ChicalaConfig.backend == "lean") {
+                cClassDef match {
+                  case m: ModuleDef =>
+                    readerInfo = readerInfo.addedModuleDef(m)
+                    // Keep source connection order. DependencySort/SubModuleCall encode
+                    // assumptions of the Scala backend that are not our semantic contract.
+                    val prepared = RunChicalaPass(m, List(LiteralPropagation, RegEnableApply)).asInstanceOf[ModuleDef]
+                    leanDefinitions(m.fullName.stripPrefix(".")) = (prepared, tree)
+                  case b: BundleDef => readerInfo = readerInfo.addedBundleDef(b)
+                }
+                return
+              }
 
               val sortedCClassDef = cClassDef match {
                 case m @ ModuleDef(name, info, body, pkg) =>
@@ -153,7 +238,7 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
         val todos = readerInfo.todos
         lastNum = todos.size
         readerInfo = readerInfo.copy(todos = List.empty)
-        todos.foreach { case (t, pname) => applyOnTree(t, pname) }
+        todos.foreach { case (t, pname) => if (ChicalaConfig.backend == "lean") safely(t)(applyOnTree(t, pname)) else applyOnTree(t, pname) }
       }
     }
 

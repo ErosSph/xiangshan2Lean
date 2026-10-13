@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 285,
+  "module": "VecRegisters",
+  "parameters": {
+    "n": 3,
+    "w": 2
+  },
+  "evidence": "experiments\\differential-v0.2-full\\VecRegisters-n3-w2",
+  "seconds": 18.66,
+  "fingerprint": "d509f32cc4476fbf57b66c294b96b0b1ae0187200e93551b65771a2936803691"
+}

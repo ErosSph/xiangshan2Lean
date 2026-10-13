@@ -1,0 +1,24 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"E:\\ICT\\chisel2lean\\experiments\\differential-v0.2-extension\\PartialGenerate-n2-w1\\reference\\rtl"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~PartialGenerate|PartialGenerate>out_0",
+    "sources":[
+      "~PartialGenerate|PartialGenerate>in_0"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~PartialGenerate|PartialGenerate>out_1",
+    "sources":[
+      "~PartialGenerate|PartialGenerate>in_0"
+    ]
+  }
+]

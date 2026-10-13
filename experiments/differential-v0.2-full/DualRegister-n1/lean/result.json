@@ -1,0 +1,722 @@
+[
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 0
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 1
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 2
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 3
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "cycle": 4
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 5
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "cycle": 6
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 7
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 8
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 9
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 10
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 11
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 12
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 13
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 14
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 15
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 16
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "cycle": 17
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 18
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 19
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 20
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 21
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 22
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 23
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 24
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 25
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 26
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 27
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 28
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 29
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 30
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 31
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "cycle": 32
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 33
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "cycle": 34
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 35
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 36
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "cycle": 37
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 38
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 39
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 40
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "cycle": 41
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 42
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "cycle": 43
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "cycle": 44
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "cycle": 45
+  },
+  {
+    "state": {
+      "second": 0,
+      "first": 1
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 0
+    },
+    "post": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "cycle": 46
+  },
+  {
+    "state": {
+      "second": 1,
+      "first": 0
+    },
+    "pre": {
+      "io.b": 0,
+      "io.a": 1
+    },
+    "post": {
+      "io.b": 1,
+      "io.a": 0
+    },
+    "cycle": 47
+  }
+]

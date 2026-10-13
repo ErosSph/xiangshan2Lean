@@ -16,6 +16,8 @@ trait SelectsReader { self: Scala2Reader =>
       //
       "scala.Array.fill",
       "scala.`package`.Seq.apply",
+      "scala.`package`.Seq.fill",
+      "scala.`package`.Seq.tabulate",
       "scala.`package`.Range.apply",
       "scala.`package`.BigInt.apply",
       "scala.`package`.Nil",

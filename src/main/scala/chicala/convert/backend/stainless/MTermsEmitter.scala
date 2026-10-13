@@ -99,6 +99,7 @@ trait MTermsEmitter { self: StainlessEmitter with ChicalaAst =>
           case Cat       => "Cat"
           case Fill      => "Fill"
           case Log2      => "Log2"
+          case other => throw new IllegalArgumentException(s"Operation $other is supported only by the Lean backend")
         }
         cApply.op match {
           case b: CBinaryOp => s"(${operands(0)} ${op} ${operands(1)})"

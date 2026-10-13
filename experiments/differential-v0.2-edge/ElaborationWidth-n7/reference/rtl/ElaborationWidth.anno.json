@@ -1,0 +1,17 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"E:\\ICT\\chisel2lean\\experiments\\differential-v0.2-edge\\ElaborationWidth-n7\\reference\\rtl"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~ElaborationWidth|ElaborationWidth>out",
+    "sources":[
+      "~ElaborationWidth|ElaborationWidth>in"
+    ]
+  }
+]

@@ -27,6 +27,8 @@ trait CClassDefsLoader { self: Scala2Reader =>
       // only Class inherits chisel3.Module directly
       case ClassDef(mods, name, tparams, Template(parents, self, body)) if parents.exists {
             case Select(Ident(TermName("chisel3")), TypeName("Module")) => true
+            case Select(Ident(TermName("chisel3")), TypeName("RawModule")) if chicala.ChicalaConfig.backend == "lean" => true
+            case p if chicala.ChicalaConfig.backend == "lean" => Set("chisel3.Module", "chisel3.RawModule")(p.tpe.typeSymbol.fullName)
             case _                                                      => false
           } =>
         val (cInfo, cBody): (CircuitInfo, List[MStatement]) =
@@ -49,6 +51,7 @@ trait CClassDefsLoader { self: Scala2Reader =>
         // only Class inherits chisel3.Bundle directly
         case ClassDef(mods, name, tparams, Template(parents, self, body)) if parents.exists {
               case Select(Ident(TermName("chisel3")), TypeName("Bundle")) => true
+              case p if chicala.ChicalaConfig.backend == "lean" => p.tpe.typeSymbol.fullName == "chisel3.Bundle"
               case _                                                      => false
             } =>
           var vps = List.empty[SValDef]

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 16,
+  "compared_output_values": 32,
+  "module": "ElaborationLiteral",
+  "parameters": {
+    "n": 4
+  },
+  "evidence": "experiments\\differential-v0.2-edge\\ElaborationLiteral-n4",
+  "seconds": 19.16,
+  "fingerprint": "ca939f62ae439b997f25db2eb050bd191688de97792fe4150ad97367bb66fa92"
+}

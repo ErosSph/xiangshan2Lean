@@ -25,12 +25,15 @@ trait ChiselAstCheck extends Utils { this: Scala2Reader =>
   def isChiselRegDefApply(tree: Tree): Boolean = List(
     isChisel3RegApply(_),
     isChisel3RegInitApply(_),
+    isChisel3RegNextApply(_),
     isChisel3UtilRegEnableApply(_)
   ).exists(_(tree))
   def isChisel3RegApply(tree: Tree): Boolean =
     passThrough(tree)._1.toString() == "chisel3.Reg.apply"
   def isChisel3RegInitApply(tree: Tree): Boolean =
     passThrough(tree)._1.toString() == "chisel3.RegInit.apply"
+  def isChisel3RegNextApply(tree: Tree): Boolean =
+    chicala.ChicalaConfig.backend == "lean" && passThrough(tree)._1.toString() == "chisel3.RegNext.apply"
   def isChisel3UtilRegEnableApply(tree: Tree): Boolean =
     passThrough(tree)._1.toString() == "chisel3.util.RegEnable.apply"
 
@@ -123,8 +126,11 @@ trait ChiselAstCheck extends Utils { this: Scala2Reader =>
 
     tpe match {
       case tr @ TypeRef(pre, sym, args) =>
-        if (sym.isClass)
-          sym.asClass.baseClasses.map(_.toString()).contains("class Module")
+        if (sym.isClass) {
+          val bases = sym.asClass.baseClasses.map(_.toString())
+          bases.contains("class Module") ||
+            (chicala.ChicalaConfig.backend == "lean" && bases.contains("class RawModule"))
+        }
         else
           false
       case _ => false

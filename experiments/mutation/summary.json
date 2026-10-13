@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "mutation": "output incremented by one",
+  "isolated_artifacts": true,
+  "observed": {
+    "status": "FAIL",
+    "phase": "comparison",
+    "cycle": 0,
+    "sampling": "post",
+    "lean": {
+      "io.q": 1
+    },
+    "rtl": {
+      "io.q": 0
+    }
+  }
+}

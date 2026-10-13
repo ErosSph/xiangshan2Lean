@@ -85,7 +85,7 @@ trait CircuitInfos { self: Scala2Reader =>
       tree match {
         case Ident(termName: TermName)                   => getVal(termName).get
         case Select(This(this.name), termName: TermName) => getVal(termName).get
-        case Select(qualifier, TermName("io")) if isChiselModuleType(qualifier) =>
+        case Select(qualifier, port: TermName) if isChiselModuleType(qualifier) =>
           val termName = qualifier match {
             case Select(This(this.name), name: TermName) => name
             case Ident(name: TermName)                   => name
@@ -94,8 +94,8 @@ trait CircuitInfos { self: Scala2Reader =>
               TermName("")
           }
           val tpe       = vals(termName).asInstanceOf[SubModule]
-          val moduleDef = readerInfo.moduleDefs(tpe.fullName)
-          moduleDef.ioDef.tpe
+          if (chicala.ChicalaConfig.backend == "lean") select(tpe.ioDef.tpe, port)
+          else readerInfo.moduleDefs(tpe.fullName).ioDef.tpe
         case Select(qualifier, termName: TermName) => select(getSignalType(qualifier), termName)
         case _ => {
           reportError(tree.pos, "Unknown structure in CircuitInfo.getMType #2")

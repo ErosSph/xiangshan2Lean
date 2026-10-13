@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean\tests\fixtures\Rejected.scala:8: error: [chisel2lean] Combinational dependency cycle involving b
+  val b = Wire(UInt(w.W))
+       ^
+1 error

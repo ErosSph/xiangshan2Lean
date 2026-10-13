@@ -20,9 +20,26 @@ trait CTermsLoader { self: Scala2Reader =>
     }
   }
   object CApplyLoader extends MTermLoader {
+    def vecInit(cInfo: CircuitInfo, args: List[Tree]): CApply = {
+      val terms = args.map(MTermLoader(cInfo, _).get._2.get)
+      val (size, element): (STerm, SignalType) = terms match {
+        case List(SApply(SApply(SLib(name, _), List(n: STerm), _), List(value), _)) if name.endsWith("Seq.fill") =>
+          (n, value.tpe.asInstanceOf[SignalType])
+        case List(SApply(SApply(SLib(name, _), List(n: STerm), _), List(SFunction(_, value: MTerm)), _)) if name.endsWith("Seq.tabulate") =>
+          (n, value.tpe.asInstanceOf[SignalType])
+        case List(SApply(SLib(name, _), values, _)) if name.endsWith("Seq.apply") =>
+          (SLiteral(values.size, StInt), values.head.tpe.asInstanceOf[SignalType].setInferredWidth)
+        case values if values.forall(_.tpe.isInstanceOf[SignalType]) =>
+          (SLiteral(values.size, StInt), values.head.tpe.asInstanceOf[SignalType].setInferredWidth)
+        case _ => throw new IllegalArgumentException("VecInit requires a nonempty literal Seq, Seq.fill, or Seq.tabulate")
+      }
+      CApply(MakeVec, Vec(KnownSize(size), Node, element), terms)
+    }
     def apply(cInfo: CircuitInfo, tr: Tree): Option[(CircuitInfo, Option[CApply])] = {
       val (tree, tpt) = passThrough(tr)
       tree match {
+        case Apply(fun, args) if chicala.ChicalaConfig.backend == "lean" && isChisel3VecInitDoApply(fun) =>
+          Some((cInfo, Some(vecInit(cInfo, args))))
         case Apply(Select(qualifier, name), args) if isChiselSignalType(qualifier) =>
           val opName = name.toString()
           COpLoader(opName) match {
@@ -35,7 +52,8 @@ trait CTermsLoader { self: Scala2Reader =>
                   SignalType.empty
               }
               val operands = (qualifier :: args).map(MTermLoader(cInfo, _).get._2.get)
-              val cApply   = CApply(op, tpe, operands)
+              val actualOp = if (chicala.ChicalaConfig.backend == "lean" && op == Slice && operands.head.tpe.isInstanceOf[Vec]) VecSelect else op
+              val cApply   = CApply(actualOp, tpe, operands)
               Some((cInfo, Some(cApply)))
             case None =>
               unprocessedTree(tr, s"CApplyLoader `${opName}`")
@@ -75,6 +93,10 @@ trait CTermsLoader { self: Scala2Reader =>
         case When(cond, whenp, otherp, false) =>
           When(cond, whenp, elseWhen, true)
       }
+      def appendOtherwise(when: When, other: MStatement): When = when match {
+        case When(cond, yes, next: When, true) => When(cond, yes, appendOtherwise(next, other), true)
+        case When(cond, yes, _, _) => When(cond, yes, other, false)
+      }
 
       val (tree, _) = passThrough(tr)
       tree match {
@@ -86,7 +108,9 @@ trait CTermsLoader { self: Scala2Reader =>
         case Apply(Select(qualifier, TermName("otherwise")), args) => {
           val Some((newCInfo, Some(when))) = WhenLoader(cInfo, qualifier)
           val otherp                       = StatementReader(cInfo, args.head).get._2.get
-          Some((cInfo, Some(When(when.cond, when.whenp, otherp))))
+          val combined = if (chicala.ChicalaConfig.backend == "lean") appendOtherwise(when, otherp)
+                         else When(when.cond, when.whenp, otherp)
+          Some((cInfo, Some(combined)))
         }
         case Apply(Apply(Select(qualifier, TermName("elsewhen")), condArgs), args) => {
           val Some((newCInfo, Some(when))) = WhenLoader(cInfo, qualifier)

@@ -17,6 +17,14 @@ trait ValDefsReader { self: Scala2Reader =>
 
       val name = nameTmp.stripSuffix(" ")
 
+      if (chicala.ChicalaConfig.backend == "lean") passThrough(rhs)._1 match {
+        case Apply(fun, List(size, dataType)) if Set("chisel3.Mem.apply", "chisel3.Mem.do_apply", "chisel3.SyncReadMem.do_apply")(passThrough(fun)._1.toString) =>
+          val element = SignalTypeLoader(cInfo, dataType).get
+          val tpe = Vec(KnownSize(STermLoader(cInfo, size).get._2.get), Reg, element.updatedPhysical(Reg))
+          return Some((cInfo.updatedVal(name, tpe), Some(RegDef(name, tpe))))
+        case _ =>
+      }
+
       if (isScala2UnapplyTmpValDef(tree)) {
         rhs match {
           case Match(Typed(Apply(cuea, number), _), _) if isChisel3UtilEnumApply(cuea) => { // EnumDef step 1
@@ -128,6 +136,14 @@ trait ValDefsReader { self: Scala2Reader =>
         name: TermName,
         args: List[Tree]
     ): (CircuitInfo, Option[IoDef]) = {
+      if (chicala.ChicalaConfig.backend == "lean") {
+        return SignalTypeLoader(cInfo, args.head) match {
+          case Some(tpe) =>
+            val signal = tpe.updatedPhysical(Io)
+            (cInfo.updatedVal(name, signal), Some(IoDef(name, signal)))
+          case None => (cInfo.settedDependentClassNotDef, None)
+        }
+      }
       val someInfoAndDef = args.head match {
         case Block(stats, expr) => BundleDefLoader(cInfo, stats.head, "")
         case a @ Apply(Select(New(tpt), termNames.CONSTRUCTOR), aparams) =>
@@ -172,6 +188,11 @@ trait ValDefsReader { self: Scala2Reader =>
         val wireDef = WireDef(name, sigType, Some(init), isVar)
         (newInfo, Some(wireDef))
       } else if (isChisel3VecInitDoApply(func)) {
+        if (chicala.ChicalaConfig.backend == "lean") {
+          val init = CApplyLoader.vecInit(cInfo, args)
+          val tpe = init.tpe.updatedPhysical(Wire)
+          return (cInfo.updatedVal(name, tpe), Some(WireDef(name, tpe, Some(init), isVar)))
+        }
         assertError(args.length >= 1, func.pos, "Should have at last 1 arg in VecInit()")
         val mArgs = args.map(MTermLoader(cInfo, _).get._2.get)
         val init  = SApply(SLib("scala.`package`.Seq.apply", StFunc), mArgs, StSeq(mArgs.head.tpe))
@@ -194,6 +215,16 @@ trait ValDefsReader { self: Scala2Reader =>
         func: Tree,
         args: List[Tree]
     ): (CircuitInfo, Option[RegDef]) = {
+      def initType(init: MTerm): SignalType = {
+        val tpe = init.tpe.asInstanceOf[SignalType]
+        if (chicala.ChicalaConfig.backend != "lean") return tpe.updatedPhysical(Reg)
+        val inferred = init match {
+          case Lit(_, UInt(_: KnownSize, _, _)) | Lit(_, SInt(_: KnownSize, _, _)) => tpe
+          case _ if tpe.isInstanceOf[UInt] || tpe.isInstanceOf[SInt] => tpe.setInferredWidth
+          case _ => tpe
+        }
+        inferred.updatedPhysical(Reg)
+      }
       if (isChisel3RegApply(func)) {
         assert(args.length == 1, "should have only 1 arg in Reg()")
 
@@ -204,21 +235,32 @@ trait ValDefsReader { self: Scala2Reader =>
       } else if (isChisel3RegInitApply(func)) {
         if (args.length == 1) {
           val init       = MTermLoader(cInfo, args.head).get._2.get
-          val signalInfo = init.tpe.asInstanceOf[SignalType].updatedPhysical(Reg)
+          val signalInfo = initType(init)
           val newCInfo   = cInfo.updatedVal(name, signalInfo)
           (newCInfo, Some(RegDef(name, signalInfo, Some(init))))
+        } else if (args.length == 2 && chicala.ChicalaConfig.backend == "lean") {
+          val tpe = SignalTypeLoader(cInfo, args.head).get.updatedPhysical(Reg)
+          val init = MTermLoader(cInfo, args(1)).get._2.get
+          (cInfo.updatedVal(name, tpe), Some(RegDef(name, tpe, Some(init))))
         } else {
           unprocessedTree(func, s"ValDefReader.loadRegDef with ${args.size} arg")
           (cInfo, None)
         }
+      } else if (isChisel3RegNextApply(func)) {
+        val next = MTermLoader(cInfo, args.head).get._2.get
+        val original = next.tpe.asInstanceOf[SignalType]
+        val tpe = (if (original.isInstanceOf[UInt] || original.isInstanceOf[SInt]) original.setInferredWidth else original).updatedPhysical(Reg)
+        val init = args.drop(1).headOption.map(MTermLoader(cInfo, _).get._2.get)
+        (cInfo.updatedVal(name, tpe), Some(RegDef(name, tpe, init, Some(next))))
       } else if (isChisel3UtilRegEnableApply(func)) {
-        if (args.length != 2)
+        if (args.length != 2 && !(chicala.ChicalaConfig.backend == "lean" && args.length == 3))
           reporter.error(func.pos, "should have 2 args in RegEnable()")
         val next       = MTermLoader(cInfo, args.head).get._2.get
-        val enable     = MTermLoader(cInfo, args.tail.head).get._2.get
-        val signalInfo = next.tpe.asInstanceOf[SignalType].updatedPhysical(Reg)
+        val enable     = MTermLoader(cInfo, args.last).get._2.get
+        val init = if (args.length == 3) Some(MTermLoader(cInfo, args(1)).get._2.get) else None
+        val signalInfo = init.map(initType).getOrElse(next.tpe.asInstanceOf[SignalType].updatedPhysical(Reg))
         val newCInfo   = cInfo.updatedVal(name, signalInfo)
-        (newCInfo, Some(RegDef(name, signalInfo, None, Some(next), Some(enable))))
+        (newCInfo, Some(RegDef(name, signalInfo, init, Some(next), Some(enable))))
       } else {
         reporter.error(func.pos, "Unknow RegDef function")
         (cInfo, None)
@@ -248,7 +290,12 @@ trait ValDefsReader { self: Scala2Reader =>
           val someModuleDef  = cInfo.readerInfo.moduleDefs.get(moduleFullName)
           someModuleDef match {
             case Some(value) =>
-              val ioDef        = value.ioDef
+              val ioDef = if (chicala.ChicalaConfig.backend == "lean") {
+                val replaceMap: Map[String, MStatement] = value.vparams.zip(args.map(x => MTermLoader(cInfo, x).get._2.get))
+                  .map { case (p, a) => SIdent(p.name, p.tpe).toString -> a }.toMap
+                val ports = value.body.collect { case io: IoDef => io.name -> io.tpe.replaced(replaceMap).asInstanceOf[SignalType] }.toMap
+                IoDef(TermName("__ports"), Bundle(Io, ports))
+              } else value.ioDef
               val tpe          = SubModule(moduleFullName, ioDef)
               val subModuleDef = SubModuleDef(name, tpe, args.map(x => MTermLoader(cInfo, x).get._2.get))
               (cInfo.updatedVal(name, tpe), Some(subModuleDef))
