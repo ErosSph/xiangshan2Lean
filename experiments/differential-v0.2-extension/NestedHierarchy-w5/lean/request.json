@@ -1,0 +1,344 @@
+{
+  "parameters": {
+    "w": 5
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "io.en": true,
+        "io.in": 12
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 30
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 26
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 15
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 8
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 28
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 9
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 8
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 11
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 25
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 21
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 30
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 27
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 25
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 19
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 9
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 15
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 4
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 28
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 1
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "io.en": true,
+        "io.in": 13
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 12
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 4
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 18
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 29
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 23
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 9
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 12
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 4
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 7
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 20
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 22
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 30
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 2
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 13
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 23
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 17
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 10
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 17
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": false,
+        "io.in": 14
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "io.en": true,
+        "io.in": 12
+      }
+    }
+  ],
+  "initial_state": null
+}

@@ -1,0 +1,17 @@
+{
+  "format": "chisel2lean-source-dependencies-v1",
+  "scala_version": "2.13.15",
+  "chisel_version": "7.3.0",
+  "upstream_scala_version": "2.13.15",
+  "cache_directory": ".cache/xiangshan-dependencies-7.3",
+  "dependencies": [
+    {"name": "xiangshan", "repository": "OpenXiangShan/XiangShan", "commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2"},
+    {"name": "rocket", "repository": "OpenXiangShan/rocket-chip", "commit": "0f09d1ab77adf6e57d42ef9b6ab1cb7c4cc8c654"},
+    {"name": "cde", "repository": "chipsalliance/cde", "commit": "52768c97a27b254c0cc0ac9401feb55b29e18c28"},
+    {"name": "hardfloat", "repository": "ucb-bar/berkeley-hardfloat", "commit": "d93aa570806013dea479a92ba9bb33d1f2d4f69f"},
+    {"name": "utility", "repository": "OpenXiangShan/Utility", "commit": "c8d424348b0a058753116558c3d7066dba375f17"},
+    {"name": "huancun", "repository": "OpenXiangShan/HuanCun", "commit": "65ef077373ecf398b4cecdea06b65ef9b8d79044"},
+    {"name": "difftest", "repository": "OpenXiangShan/difftest", "commit": "4a528c6c0c47097c8b0f7db5977591a5eba78512"},
+    {"name": "fudian", "repository": "OpenXiangShan/fudian", "commit": "e1bd4695ca7beb36a5ce7357e9527ad9e95b9ec1"}
+  ]
+}

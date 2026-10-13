@@ -1,0 +1,134 @@
+{
+  "repository": "OpenXiangShan/XiangShan",
+  "commit": "f0d8a1cf543c113433ff98140b6d77055d930deb",
+  "release": "v2.1",
+  "configuration": "top.MinimalConfig(1); bind XSCoreParamsKey to XSTileKey.head",
+  "framework_shim": false,
+  "scala_version": "2.12.13",
+  "chisel_version": "3.5.3",
+  "mill_version": "0.9.8",
+  "entry_sha256": "84ea39ac6988f5f08424a9d76b1a95ae197ee3e4e3f23906d8b0298dcecd5685",
+  "Alu.scala_sha256": "2a3774cfd05760319764c80284458f1772e54f9ce8d54f9c9fb9159c52bddd35",
+  "dependency_lock": [
+    {
+      "repository": "OpenXiangShan/XiangShan",
+      "revision": "f0d8a1cf543c113433ff98140b6d77055d930deb",
+      "archive_sha256": "faab9876cb710cea91f5e9126d859d278a96eea6fd274dfbd1f1f0729c4ea701",
+      "path": "."
+    },
+    {
+      "repository": "OpenXiangShan/difftest",
+      "revision": "c63b8d01b3effb3864dacdadce417946a570bd8e",
+      "archive_sha256": "1944ccee631c5e77a505228bc6054cca185286f9ce643561c73e836f58e2fef5",
+      "path": "difftest"
+    },
+    {
+      "repository": "OpenXiangShan/fudian",
+      "revision": "1285cb3940326ca92e92cd9c2a91beddaa3b236d",
+      "archive_sha256": "fecaaaac8bb70ac28d7380418e05939a98dbb87985a98a467274ddd0de3cb742",
+      "path": "fudian"
+    },
+    {
+      "repository": "ucb-bar/berkeley-softfloat-3",
+      "revision": "b64af41c3276f97f0e181920400ee056b9c88037",
+      "archive_sha256": "8e7a42cdcf524691db27b1782bab3eb3e516b011eadad83a3eb2d6aee0d4540f",
+      "path": "fudian\\berkeley-softfloat-3"
+    },
+    {
+      "repository": "ucb-bar/berkeley-testfloat-3",
+      "revision": "06b20075dd3c1a5d0dd007a93643282832221612",
+      "archive_sha256": "760ae0eebcc320d800f0ba56001713e3d5a21a54ff33d834ee67d3f31d312a6f",
+      "path": "fudian\\berkeley-testfloat-3"
+    },
+    {
+      "repository": "OpenXiangshan/huancun",
+      "revision": "ef97b9e1d43b4d098fb108f717e31dedb88d3269",
+      "archive_sha256": "5829db2191d76b768e60dff1832760c9952db12a1c03c24739e904fe785decc6",
+      "path": "huancun"
+    },
+    {
+      "repository": "OpenXiangShan/rocket-chip",
+      "revision": "ccb072185eb9ab819ac0d03fde8615156f2e16ca",
+      "archive_sha256": "219d615f70c67148131c9c190252c27a281075a5715b861342b72cf22f123add",
+      "path": "huancun\\rocket-chip"
+    },
+    {
+      "repository": "chipsalliance/api-config-chipsalliance",
+      "revision": "fd8df1105a92065425cd353b6855777e35bd79b4",
+      "archive_sha256": "05bc7f01ca4b41be43feccd33fa08c6e8d1d5357188694e1727960bf87419a78",
+      "path": "huancun\\rocket-chip\\api-config-chipsalliance"
+    },
+    {
+      "repository": "ucb-bar/berkeley-hardfloat",
+      "revision": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "archive_sha256": "fe3b1b4f3098f6c56ca608fac18a92494520fa6af0f85eb16dcef4374af203dd",
+      "path": "huancun\\rocket-chip\\hardfloat"
+    },
+    {
+      "repository": "ucb-bar/berkeley-softfloat-3",
+      "revision": "b64af41c3276f97f0e181920400ee056b9c88037",
+      "archive_sha256": "8e7a42cdcf524691db27b1782bab3eb3e516b011eadad83a3eb2d6aee0d4540f",
+      "path": "huancun\\rocket-chip\\hardfloat\\berkeley-softfloat-3"
+    },
+    {
+      "repository": "ucb-bar/berkeley-testfloat-3",
+      "revision": "06b20075dd3c1a5d0dd007a93643282832221612",
+      "archive_sha256": "760ae0eebcc320d800f0ba56001713e3d5a21a54ff33d834ee67d3f31d312a6f",
+      "path": "huancun\\rocket-chip\\hardfloat\\berkeley-testfloat-3"
+    },
+    {
+      "repository": "ucb-bar/riscv-torture",
+      "revision": "99d8b2b441ecaa18b852505bb7718ee04e2753f5",
+      "archive_sha256": "fec13e556043aac0c9693bce3064104613e606166d60b43cbd958e7e70e45e52",
+      "path": "huancun\\rocket-chip\\torture"
+    },
+    {
+      "repository": "riscv/riscv-test-env",
+      "revision": "ce70afbf50a203be04bc326326cfa75831fe7f5d",
+      "archive_sha256": "a4715f99763d0e5a16225e26c9231daf44f5ada811b2d0a47a4868cfae212a14",
+      "path": "huancun\\rocket-chip\\torture\\env"
+    },
+    {
+      "repository": "OpenXiangShan/rocket-chip",
+      "revision": "63f07d6b4ff20244316bdf9e71fcc41683e4d988",
+      "archive_sha256": "d1a3a77154da029915b376e5f502166c682bf6bc74b4c8b9bcbac9033b6b3b87",
+      "path": "rocket-chip"
+    },
+    {
+      "repository": "chipsalliance/api-config-chipsalliance",
+      "revision": "fd8df1105a92065425cd353b6855777e35bd79b4",
+      "archive_sha256": "05bc7f01ca4b41be43feccd33fa08c6e8d1d5357188694e1727960bf87419a78",
+      "path": "rocket-chip\\api-config-chipsalliance"
+    },
+    {
+      "repository": "ucb-bar/berkeley-hardfloat",
+      "revision": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "archive_sha256": "fe3b1b4f3098f6c56ca608fac18a92494520fa6af0f85eb16dcef4374af203dd",
+      "path": "rocket-chip\\hardfloat"
+    },
+    {
+      "repository": "ucb-bar/berkeley-softfloat-3",
+      "revision": "b64af41c3276f97f0e181920400ee056b9c88037",
+      "archive_sha256": "8e7a42cdcf524691db27b1782bab3eb3e516b011eadad83a3eb2d6aee0d4540f",
+      "path": "rocket-chip\\hardfloat\\berkeley-softfloat-3"
+    },
+    {
+      "repository": "ucb-bar/berkeley-testfloat-3",
+      "revision": "06b20075dd3c1a5d0dd007a93643282832221612",
+      "archive_sha256": "760ae0eebcc320d800f0ba56001713e3d5a21a54ff33d834ee67d3f31d312a6f",
+      "path": "rocket-chip\\hardfloat\\berkeley-testfloat-3"
+    },
+    {
+      "repository": "ucb-bar/riscv-torture",
+      "revision": "99d8b2b441ecaa18b852505bb7718ee04e2753f5",
+      "archive_sha256": "fec13e556043aac0c9693bce3064104613e606166d60b43cbd958e7e70e45e52",
+      "path": "rocket-chip\\torture"
+    },
+    {
+      "repository": "riscv/riscv-test-env",
+      "revision": "ce70afbf50a203be04bc326326cfa75831fe7f5d",
+      "archive_sha256": "a4715f99763d0e5a16225e26c9231daf44f5ada811b2d0a47a4868cfae212a14",
+      "path": "rocket-chip\\torture\\env"
+    }
+  ]
+}
