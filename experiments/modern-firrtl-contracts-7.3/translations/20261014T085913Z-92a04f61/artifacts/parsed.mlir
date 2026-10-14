@@ -1,0 +1,11 @@
+"builtin.module"() ({
+  "firrtl.circuit"() <{annotations = [], name = "DeadAssertion"}> ({
+    "firrtl.module"() <{annotations = [], convention = #firrtl<convention scalarized>, domainInfo = [], layers = [], portAnnotations = [], portDirections = array<i1: false, false, true>, portLocations = [loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":4:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":5:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":6:12)], portNames = ["clock", "en", "q"], portSymbols = [], portTypes = [!firrtl.clock, !firrtl.uint<1>, !firrtl.uint<1>], sym_name = "DeadAssertion"}> ({
+    ^bb0(%arg0: !firrtl.clock loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":4:11), %arg1: !firrtl.uint<1> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":5:11), %arg2: !firrtl.uint<1> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":6:12)):
+      "firrtl.matchingconnect"(%arg2, %arg1) : (!firrtl.uint<1>, !firrtl.uint<1>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":7:5)
+      %0 = "firrtl.constant"() <{value = 1 : ui1}> : () -> !firrtl.const.uint<1> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":8:19)
+      %1 = "firrtl.constant"() <{value = 0 : ui1}> : () -> !firrtl.const.uint<1> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":8:31)
+      "firrtl.assert"(%arg0, %0, %1) <{eventControl = 0 : i32, isConcurrent = false, message = "disabled assertion is still unsupported", name = ""}> : (!firrtl.clock, !firrtl.const.uint<1>, !firrtl.const.uint<1>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":8:5)
+    }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":3:10)
+  }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":2:1)
+}) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\DeadAssertion.fir":0:0)

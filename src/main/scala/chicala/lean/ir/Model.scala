@@ -13,6 +13,9 @@ final case class POp(op: String, args: List[ParamExpr], wrap32: Boolean = false)
 final case class PIf(cond: ParamExpr, yes: ParamExpr, no: ParamExpr) extends ParamExpr
 final case class PForall(index: String, size: ParamExpr, condition: ParamExpr) extends ParamExpr
 final case class Parameter(name: String, kind: String)
+/** An explicit source annotation and its expression in the module's parameters. */
+final case class PreservedParameter(owner: String, name: String, kind: String, role: String,
+                                    expression: ParamExpr, source: Source, instance: List[String] = Nil)
 
 object ParamSimplify {
   def apply(p: ParamExpr): ParamExpr = p match {
@@ -87,15 +90,22 @@ final case class VecSetDynamic(value: Expr, index: Expr, rhs: Expr) extends Expr
 final case class Checked(value: Expr, condition: Expr) extends Expr
 final case class Undefined(name: String) extends Expr
 
-final case class Signal(name: String, kind: String, tpe: HWType, init: Option[Expr], source: Source)
+final case class Signal(name: String, kind: String, tpe: HWType, init: Option[Expr], source: Source,
+                        sourcePath: List[String] = Nil)
 sealed trait Statement { def source: Source }
 final case class Assign(name: String, index: Option[ParamExpr], rhs: Expr, source: Source) extends Statement
 final case class DynamicAssign(name: String, index: Expr, rhs: Expr, source: Source) extends Statement
+sealed trait VectorIndex
+final case class StaticIndex(value: ParamExpr) extends VectorIndex
+final case class DynamicIndex(value: Expr) extends VectorIndex
+/** Retain the lvalue path so partial writes compose with earlier connections. */
+final case class IndexedAssign(name: String, indices: List[VectorIndex], rhs: Expr, source: Source) extends Statement
 final case class Branch(cond: Expr, yes: List[Statement], no: List[Statement], source: Source) extends Statement
 final case class Generate(index: String, start: ParamExpr, end: ParamExpr,
                           body: List[Statement], source: Source) extends Statement
 final case class Module(name: String, parameters: List[Parameter], requirements: List[ParamExpr],
-                        signals: List[Signal], statements: List[Statement], source: Source)
+                        signals: List[Signal], statements: List[Statement], source: Source,
+                        preservedParameters: List[PreservedParameter] = Nil)
 
 /** Every expression in the emission IR has its resolved hardware type. */
 final case class TypedExpr(kind: String, tpe: HWType, args: List[TypedExpr] = Nil,

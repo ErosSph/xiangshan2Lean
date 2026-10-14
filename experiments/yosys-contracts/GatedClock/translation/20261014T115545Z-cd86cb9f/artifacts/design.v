@@ -1,0 +1,1 @@
+module T(input clock, en, d, output reg q); wire g=clock&en; always @(posedge g) q<=d; endmodule

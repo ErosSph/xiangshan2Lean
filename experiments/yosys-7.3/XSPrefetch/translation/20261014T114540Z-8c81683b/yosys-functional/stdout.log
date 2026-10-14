@@ -1,0 +1,29 @@
+
+-- Running command `read_json /work/before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json /work/unconstrained.json' --
+
+1. Executing JSON frontend.
+Importing module Chisel2LeanReference from JSON tree.
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.next_req ($dff): CLK=\clock, D=$L2TlbPrefetch.next_req$15, Q=\c2l_port_11
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.old_index ($dff): CLK=\clock, D=$L2TlbPrefetch.old_index$54, Q=\L2TlbPrefetch.old_index
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.old_reqs_0 ($dff): CLK=\clock, D=$L2TlbPrefetch.old_reqs_0$11, Q=\L2TlbPrefetch.old_reqs_0
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.old_reqs_1 ($dff): CLK=\clock, D=$L2TlbPrefetch.old_reqs_1$12, Q=\L2TlbPrefetch.old_reqs_1
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.old_reqs_2 ($dff): CLK=\clock, D=$L2TlbPrefetch.old_reqs_2$13, Q=\L2TlbPrefetch.old_reqs_2
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.old_reqs_3 ($dff): CLK=\clock, D=$L2TlbPrefetch.old_reqs_3$14, Q=\L2TlbPrefetch.old_reqs_3
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.old_v_0 ($dff): CLK=\clock, D=$L2TlbPrefetch.old_v_0$50, Q=\L2TlbPrefetch.old_v_0
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.old_v_1 ($dff): CLK=\clock, D=$L2TlbPrefetch.old_v_1$51, Q=\L2TlbPrefetch.old_v_1
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.old_v_2 ($dff): CLK=\clock, D=$L2TlbPrefetch.old_v_2$52, Q=\L2TlbPrefetch.old_v_2
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.old_v_3 ($dff): CLK=\clock, D=$L2TlbPrefetch.old_v_3$53, Q=\L2TlbPrefetch.old_v_3
+Replacing Chisel2LeanReference.$driver$L2TlbPrefetch.v ($dff): CLK=\clock, D=$L2TlbPrefetch.v$55, Q=\c2l_port_13
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Chisel2LeanReference..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~1 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing JSON backend.

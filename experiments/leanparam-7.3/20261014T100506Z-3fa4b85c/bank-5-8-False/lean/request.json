@@ -1,0 +1,778 @@
+{
+  "parameters": {
+    "n": 5,
+    "w": 8,
+    "extra": false
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "data": [
+          136,
+          420,
+          303,
+          454,
+          178
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          100,
+          236,
+          275,
+          54,
+          170
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          62,
+          3,
+          483,
+          366,
+          419
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          368,
+          403,
+          477,
+          123,
+          441
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          430,
+          355,
+          61,
+          237,
+          28
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          486,
+          228,
+          321,
+          151,
+          140
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          258,
+          152,
+          95,
+          412,
+          457
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          485,
+          79,
+          291,
+          140,
+          124
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          162,
+          312,
+          350,
+          113,
+          476
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          353,
+          55,
+          67,
+          331,
+          93
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          357,
+          64,
+          67,
+          395,
+          66
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          130,
+          417,
+          118,
+          189,
+          317
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          254,
+          324,
+          331,
+          450,
+          64
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          128,
+          451,
+          336,
+          212,
+          484
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          26,
+          461,
+          500,
+          65,
+          403
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          442,
+          41,
+          317,
+          428,
+          86
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          489,
+          413,
+          413,
+          320,
+          200
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          26,
+          249,
+          209,
+          378,
+          358
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          1,
+          23,
+          418,
+          63,
+          218
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          245,
+          41,
+          233,
+          188,
+          444
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          309,
+          204,
+          494,
+          83,
+          200
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          106,
+          15,
+          263,
+          187,
+          453
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          67,
+          25,
+          141,
+          342,
+          381
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          212,
+          106,
+          433,
+          198,
+          405
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          111,
+          166,
+          50,
+          3,
+          140
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          180,
+          177,
+          269,
+          414,
+          375
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          383,
+          453,
+          339,
+          252,
+          317
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          481,
+          257,
+          398,
+          132,
+          426
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          149,
+          23,
+          396,
+          354,
+          505
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          267,
+          470,
+          103,
+          374,
+          507
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          435,
+          121,
+          306,
+          502,
+          99
+        ]
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "data": [
+          38,
+          164,
+          398,
+          111,
+          1
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          36,
+          75,
+          29,
+          178,
+          293
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          366,
+          478,
+          127,
+          236,
+          102
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          420,
+          260,
+          192,
+          356,
+          327
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          366,
+          400,
+          408,
+          7,
+          279
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          374,
+          94,
+          413,
+          405,
+          41
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          103,
+          403,
+          51,
+          436,
+          502
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          205,
+          53,
+          394,
+          26,
+          440
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          369,
+          64,
+          425,
+          428,
+          163
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          282,
+          490,
+          156,
+          318,
+          142
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          284,
+          66,
+          178,
+          387,
+          432
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          270,
+          272,
+          187,
+          216,
+          349
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          148,
+          251,
+          410,
+          20,
+          67
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          181,
+          391,
+          385,
+          160,
+          298
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          491,
+          358,
+          319,
+          398,
+          348
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          136,
+          76,
+          369,
+          164,
+          49
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          318,
+          332,
+          361,
+          82,
+          440
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          471,
+          153,
+          57,
+          191,
+          55
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          29,
+          446,
+          138,
+          121,
+          396
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          489,
+          124,
+          31,
+          275,
+          317
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          173,
+          309,
+          274,
+          191,
+          217
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          362,
+          254,
+          491,
+          377,
+          474
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          246,
+          3,
+          456,
+          433,
+          33
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          427,
+          135,
+          362,
+          504,
+          448
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          305,
+          171,
+          54,
+          429,
+          323
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          456,
+          299,
+          211,
+          245,
+          403
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          246,
+          210,
+          256,
+          290,
+          467
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          171,
+          13,
+          384,
+          430,
+          252
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          292,
+          61,
+          55,
+          165,
+          280
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          389,
+          270,
+          40,
+          210,
+          429
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          483,
+          441,
+          262,
+          237,
+          378
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          132,
+          355,
+          465,
+          107,
+          338
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": [
+          245,
+          63,
+          234,
+          125,
+          102
+        ]
+      }
+    }
+  ],
+  "initial_state": null
+}

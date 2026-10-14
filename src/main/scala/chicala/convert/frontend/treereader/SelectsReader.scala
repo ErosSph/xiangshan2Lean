@@ -41,8 +41,14 @@ trait SelectsReader { self: Scala2Reader =>
                   val cApply   = CApply(op, SignalTypeLoader.fromTpt(tpt).get, operands)
                   Some((cInfo, Some(cApply)))
                 case None => // select from bundle / module io / This
-                  // undefined operator will come to this case, but it is a bug
-                  Some((cInfo, Some(SignalRef(s, cInfo.getSignalType(s)))))
+                  if (chicala.ChicalaConfig.backend == "lean" && isChiselSignalType(qualifier)) {
+                    val from = MTermLoader(cInfo, qualifier).get._2.get
+                    from.tpe match {
+                      case Bundle(_, fields) if fields.contains(name) =>
+                        Some((cInfo, Some(SSelect(from, name, fields(name)))))
+                      case _ => Some((cInfo, Some(SignalRef(s, cInfo.getSignalType(s)))))
+                    }
+                  } else Some((cInfo, Some(SignalRef(s, cInfo.getSignalType(s)))))
               }
             } else if (isChiselLiteralType(qualifier)) {
               LitLoader(cInfo, tr)

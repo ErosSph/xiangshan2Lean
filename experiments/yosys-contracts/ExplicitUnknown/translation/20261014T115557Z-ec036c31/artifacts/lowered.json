@@ -1,0 +1,57 @@
+{
+  "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+  "modules": {
+    "T": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "work/design.v:1.8"
+      },
+      "ports": {
+        "d": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "c2l_undefined_0": {
+          "direction": "input",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "$auto$rtlil.cc:4097:Anyseq$2": {
+          "hide_name": 1,
+          "bits": [ 3 ],
+          "attributes": {
+          }
+        },
+        "c2l_undefined_0": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "d",
+            "src": "work/design.v:1.16"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "q",
+            "src": "work/design.v:1.26"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "format": "chisel2lean-official-elaboration-v1",
+  "module": "modernfixtures.HandshakeTop",
+  "constructor": [
+    3,
+    1
+  ],
+  "chisel_version": "7.3.0",
+  "configuration": "fixed",
+  "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+  "classpath_sha256": "bc462630147e51bd0da64d08bff00c4e52156423fe54dfeee1815d16a5e38bc8",
+  "artifacts_sha256": {
+    "design.fir": "0f55f2da37f198a210413828c8f625578f270ea062d6262ba3220a4f0163ab41",
+    "Chisel2LeanReference.v": "f8d9fae72f803c7221ca704e5af302e72291945ace56519fc1784b66292154ca",
+    "ports.json": "bea0702bf415f283b99c010a8fc1fbf16aa2c9979a96f8aeea8ded9a5c84a92a"
+  },
+  "source_frontend_used": false,
+  "independent_chisel_elaborations": 2,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\Handshake3x1\\elaboration",
+  "jvm": {
+    "chisel_version": "7.3.0",
+    "scala_version": "2.13.15",
+    "class_sha256": {
+      "modernfixtures.HandshakeTop": "1926da5e01977290ac1dd631ca7c7361006887c22144f3e0fbc451041953437c"
+    }
+  }
+}

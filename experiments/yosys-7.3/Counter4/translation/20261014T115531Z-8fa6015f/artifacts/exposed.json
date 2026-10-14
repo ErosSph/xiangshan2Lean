@@ -1,0 +1,554 @@
+{
+  "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+  "modules": {
+    "Chisel2LeanReference": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "work/design.v:19.8"
+      },
+      "ports": {
+        "reset": {
+          "direction": "input",
+          "bits": [
+            2
+          ]
+        },
+        "clock": {
+          "direction": "input",
+          "bits": [
+            3
+          ]
+        },
+        "c2l_port_0": {
+          "direction": "input",
+          "bits": [
+            4
+          ]
+        },
+        "c2l_port_1": {
+          "direction": "output",
+          "bits": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "c2l_undefined_0": {
+          "direction": "input",
+          "bits": [
+            27,
+            28,
+            29,
+            30
+          ]
+        }
+      },
+      "cells": {
+        "$1": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "work/design.v:14.14-14.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "B": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            "Y": [
+              9,
+              10,
+              11,
+              12
+            ]
+          }
+        },
+        "$auto$clk2fflogic.cc:108:sample_data$2": {
+          "hide_name": 1,
+          "type": "$ff",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "clk2fflogic": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "Q": [
+              13,
+              14,
+              15,
+              16
+            ]
+          }
+        },
+        "$auto$clk2fflogic.cc:108:sample_data$4": {
+          "hide_name": 1,
+          "type": "$ff",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              17,
+              18,
+              19,
+              20
+            ],
+            "Q": [
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        },
+        "$auto$clk2fflogic.cc:123:mux$9": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              13,
+              14,
+              15,
+              16
+            ],
+            "B": [
+              21,
+              22,
+              23,
+              24
+            ],
+            "S": [
+              25
+            ],
+            "Y": [
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        },
+        "$auto$clk2fflogic.cc:92:sample_control_edge$6": {
+          "hide_name": 1,
+          "type": "$ff",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {},
+          "port_directions": {
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              3
+            ],
+            "Q": [
+              26
+            ]
+          }
+        },
+        "$auto$clk2fflogic.cc:93:sample_control_edge$7": {
+          "hide_name": 1,
+          "type": "$eqx",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              3,
+              26
+            ],
+            "B": [
+              "1",
+              "0"
+            ],
+            "Y": [
+              25
+            ]
+          }
+        },
+        "$procmux$1": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "work/design.v:14.7-14.25|work/design.v:13.10-14.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "B": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "S": [
+              4
+            ],
+            "Y": [
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        },
+        "$procmux$4": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "work/design.v:12.7-12.19|work/design.v:11.5-14.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              31,
+              32,
+              33,
+              34
+            ],
+            "B": [
+              27,
+              28,
+              29,
+              30
+            ],
+            "S": [
+              2
+            ],
+            "Y": [
+              35,
+              36,
+              37,
+              38
+            ]
+          }
+        },
+        "$procmux$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "work/design.v:12.7-12.19|work/design.v:11.5-14.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              35,
+              36,
+              37,
+              38
+            ],
+            "B": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "S": [
+              2
+            ],
+            "Y": [
+              17,
+              18,
+              19,
+              20
+            ]
+          }
+        }
+      },
+      "netnames": {
+        "$1y": {
+          "hide_name": 1,
+          "bits": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "attributes": {}
+        },
+        "$Counter.cnt$2": {
+          "hide_name": 1,
+          "bits": [
+            35,
+            36,
+            37,
+            38
+          ],
+          "attributes": {
+            "src": "work/design.v:13.10-14.25"
+          }
+        },
+        "$Counter.cnt$3": {
+          "hide_name": 1,
+          "bits": [
+            17,
+            18,
+            19,
+            20
+          ],
+          "attributes": {
+            "src": "work/design.v:11.5-14.25"
+          }
+        },
+        "$auto$clk2fflogic.cc:101:sample_data$$Counter.cnt$3#sampled$3": {
+          "hide_name": 1,
+          "bits": [
+            21,
+            22,
+            23,
+            24
+          ],
+          "attributes": {
+            "init": "0000"
+          }
+        },
+        "$auto$clk2fflogic.cc:101:sample_data$\\c2l_port_1#sampled$1": {
+          "hide_name": 1,
+          "bits": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "attributes": {}
+        },
+        "$auto$clk2fflogic.cc:87:sample_control_edge$\\clock#sampled$5": {
+          "hide_name": 1,
+          "bits": [
+            26
+          ],
+          "attributes": {
+            "init": "1"
+          }
+        },
+        "$auto$rtlil.cc:3302:Eqx$8": {
+          "hide_name": 1,
+          "bits": [
+            25
+          ],
+          "attributes": {}
+        },
+        "$auto$rtlil.cc:4097:Anyseq$12": {
+          "hide_name": 1,
+          "bits": [
+            27,
+            28,
+            29,
+            30
+          ],
+          "attributes": {}
+        },
+        "$procmux$1_Y": {
+          "hide_name": 1,
+          "bits": [
+            31,
+            32,
+            33,
+            34
+          ],
+          "attributes": {}
+        },
+        "Counter.clock": {
+          "hide_name": 0,
+          "bits": [
+            3
+          ],
+          "attributes": {
+            "hdlname": "Counter clock",
+            "src": "work/design.v:3.16"
+          }
+        },
+        "Counter.cnt": {
+          "hide_name": 0,
+          "bits": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "attributes": {
+            "hdlname": "Counter cnt",
+            "src": "work/design.v:9.13"
+          }
+        },
+        "Counter.io_en": {
+          "hide_name": 0,
+          "bits": [
+            4
+          ],
+          "attributes": {
+            "hdlname": "Counter io_en",
+            "src": "work/design.v:5.16"
+          }
+        },
+        "Counter.io_q": {
+          "hide_name": 0,
+          "bits": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "attributes": {
+            "hdlname": "Counter io_q",
+            "src": "work/design.v:6.16"
+          }
+        },
+        "Counter.reset": {
+          "hide_name": 0,
+          "bits": [
+            2
+          ],
+          "attributes": {
+            "hdlname": "Counter reset",
+            "src": "work/design.v:4.16"
+          }
+        },
+        "c2l_port_0": {
+          "hide_name": 0,
+          "bits": [
+            4
+          ],
+          "attributes": {
+            "hdlname": "c2l_port_0",
+            "src": "work/design.v:22.16"
+          }
+        },
+        "c2l_port_1": {
+          "hide_name": 0,
+          "bits": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "attributes": {
+            "hdlname": "c2l_port_1",
+            "keep": "00000000000000000000000000000001",
+            "src": "work/design.v:23.16"
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [
+            3
+          ],
+          "attributes": {
+            "hdlname": "clock",
+            "src": "work/design.v:20.16"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [
+            2
+          ],
+          "attributes": {
+            "hdlname": "reset",
+            "src": "work/design.v:21.16"
+          }
+        },
+        "c2l_undefined_0": {
+          "hide_name": 0,
+          "bits": [
+            27,
+            28,
+            29,
+            30
+          ],
+          "attributes": {}
+        }
+      }
+    }
+  }
+}

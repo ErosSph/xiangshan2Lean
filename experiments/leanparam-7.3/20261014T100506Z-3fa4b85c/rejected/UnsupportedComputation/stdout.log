@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:54: error: [chisel2lean] @LeanParam rejectedleanparam.UnsupportedComputation.width: Unsupported parameter computation: SApply(SSelect(SSelect(SSelect(SIdent(scala,StWrapped("scala.type")),math,StWrapped("scala.math.type")),package,StWrapped("scala.math.package.type")),abs,StFunc),List(SIdent(n,StInt)),StInt)
+  @LeanParam def width: Int = math.abs(n)
+                  ^
+1 error

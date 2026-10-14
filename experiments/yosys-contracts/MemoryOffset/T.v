@@ -1,0 +1,1 @@
+module T(input clock, en, input [2:0] a, input [7:0] d, output [7:0] q); reg [7:0] m[1:4]; always @(posedge clock) if(en) m[a]<=d; assign q=m[a]; endmodule

@@ -1,0 +1,13 @@
+"builtin.module"() ({
+  "firrtl.circuit"() <{annotations = [], name = "AsyncReset"}> ({
+    "firrtl.module"() <{annotations = [], convention = #firrtl<convention scalarized>, domainInfo = [], layers = [], portAnnotations = [], portDirections = array<i1: false, false, true>, portLocations = [loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":4:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":5:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":6:12)], portNames = ["clock", "reset", "q"], portSymbols = [], portTypes = [!firrtl.clock, !firrtl.asyncreset, !firrtl.uint<8>], sym_name = "AsyncReset"}> ({
+    ^bb0(%arg0: !firrtl.clock loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":4:11), %arg1: !firrtl.asyncreset loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":5:11), %arg2: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":6:12)):
+      %0 = "firrtl.constant"() <{value = 0 : ui8}> : () -> !firrtl.const.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":7:41)
+      %1 = "firrtl.regreset"(%arg0, %arg1, %0) <{annotations = [], name = "r", nameKind = #firrtl<name_kind interesting_name>}> : (!firrtl.clock, !firrtl.asyncreset, !firrtl.const.uint<8>) -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":7:5)
+      %2 = "firrtl.constant"() <{value = 1 : ui8}> : () -> !firrtl.const.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":8:16)
+      %3 = "firrtl.constCast"(%2) : (!firrtl.const.uint<8>) -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":8:5)
+      "firrtl.matchingconnect"(%1, %3) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":8:5)
+      "firrtl.matchingconnect"(%arg2, %1) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":9:5)
+    }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":3:10)
+  }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":2:1)
+}) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\AsyncReset.fir":0:0)

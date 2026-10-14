@@ -4,6 +4,8 @@
 `firrtl2lean.py` 读取已经展开的固定配置电路。两者共用硬件 IR v2、
 Normalize、LeanEmitter 和 Lean Runtime。并行开发边界见
 [firrtl-integration-coordination.md](firrtl-integration-coordination.md)。
+Chisel 7.3 的现代文本现已接入固定版本 CIRCT，使用方法和新香山实验见
+[现代展开入口](modern-firrtl.md)。下文的 Scala FIRRTL 流程指经典入口。
 
 ## 使用
 
@@ -53,10 +55,13 @@ GSIM 提供了 FIRRTL→AST→电路图→可执行程序的参考，以及寄�
 静态和动态移位、Mux、聚合类型的官方展开、多层模块及单时钟同步寄存器。
 由寄存器组成的 FIFO 和寄存器文件已验证。
 
-本入口当前支持经典 FIRRTL 文本版本至 1.1.0（以及旧的无版本头格式）。
-现代 FIRRTL 6.x 等输入明确拒绝；Chicala 的 Chisel 7.3 入口仍独立发展。
+经典入口支持 FIRRTL 文本版本至 1.1.0（以及旧的无版本头格式）。
+默认根据版本选择入口：现代文本由 CIRCT 解析和规范化，主要验收 Chisel 7.3
+产生的 6.0.0；允许版本范围为 2.0.0 到 6.0.0，未来版本明确拒绝。
+现代入口按 SSA 身份接入已有适配器，不使用经典解析器读取现代文本。
 FIRRTL Mem/SyncReadMem、多时钟、门控时钟、异步复位、BlackBox/ExtModule、
 assert/stop/printf 等尚未纳入本入口的语义范围，给出诊断，不生成假模型。
+现代入口另外拒绝显式 DontCare/invalidvalue，避免官方规范化丢失未定义条件。
 除零及 false validif 的观察会被执行器拒绝。构造参数、require 和生成分支
 不能由固定电路自动恢复。
 
@@ -109,5 +114,5 @@ RightShift 验证 1,408 拍、8,448 次输出比较。AluDataModule 含 10 个�
 
 这个发布快照与之前 nanhu 的最新源码实验分别记录。最新 nanhu 已使用
 Chisel 7.3，不能把 v2.1 的成功当作新版本或完整处理器的验收。
-后续优先扩展现代 FIRRTL 版本和存储器语义，并继续通过共同 IR 建立两端
-在相同配置下的等价关系。
+Chisel 7.3 的原始 AluDataModule、L2TlbPrefetch 已建立独立的现代入口验证，见
+[现代入口说明](modern-firrtl.md)。存储器语义和更大模块仍待扩展。

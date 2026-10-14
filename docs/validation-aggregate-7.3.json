@@ -1,0 +1,475 @@
+{
+  "status": "PASS",
+  "chisel_version": "7.3.0",
+  "lean_version": "4.19.0",
+  "comparison": "executed Lean == official original Chisel RTL == independent integer specification",
+  "configurations": 23,
+  "cycles": 1472,
+  "output_comparisons": 97299,
+  "compiler_sha256": "a0d8be5e20d68b539825c675550b08a8674174f4d1cc904fdf32e43add52894a",
+  "model_theorems": 3,
+  "model_proof": "verification/aggregate/VectorPipelineProof.lean",
+  "formal_equivalence_proof": false,
+  "cases": [
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorPipeline",
+      "parameters": {
+        "n": 1,
+        "w": 1,
+        "m": 1
+      },
+      "cycles": 64,
+      "output_comparisons": 2286,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "9c0d983c2ecb82061a86f3488fcae4e2bbd426e10d0179375b7a6f9c16c4eebd",
+      "lean_sha256": "ae9c4cc7da385ac56591453965aa34aeb68fd4b149165f269c319b820a6b9512",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      },
+      "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorPipeline",
+      "parameters": {
+        "n": 3,
+        "w": 5,
+        "m": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 7112,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "9c0d983c2ecb82061a86f3488fcae4e2bbd426e10d0179375b7a6f9c16c4eebd",
+      "lean_sha256": "ae9c4cc7da385ac56591453965aa34aeb68fd4b149165f269c319b820a6b9512",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      },
+      "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorPipeline",
+      "parameters": {
+        "n": 4,
+        "w": 65,
+        "m": 2
+      },
+      "cycles": 64,
+      "output_comparisons": 8001,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "9c0d983c2ecb82061a86f3488fcae4e2bbd426e10d0179375b7a6f9c16c4eebd",
+      "lean_sha256": "ae9c4cc7da385ac56591453965aa34aeb68fd4b149165f269c319b820a6b9512",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorWrites",
+      "parameters": {
+        "n": 1,
+        "w": 1,
+        "m": 1
+      },
+      "cycles": 64,
+      "output_comparisons": 762,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "c0bdc6f89767c66817e19520bded13a80a5070b668962a3e322412dbd202d648",
+      "lean_sha256": "d8e5a075ac50458db996f65cb33f9849be383375c0e9cb1dbf3b9e6b1b975f23",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorWrites",
+      "parameters": {
+        "n": 3,
+        "w": 5,
+        "m": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 3048,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "c0bdc6f89767c66817e19520bded13a80a5070b668962a3e322412dbd202d648",
+      "lean_sha256": "d8e5a075ac50458db996f65cb33f9849be383375c0e9cb1dbf3b9e6b1b975f23",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorWrites",
+      "parameters": {
+        "n": 4,
+        "w": 65,
+        "m": 2
+      },
+      "cycles": 64,
+      "output_comparisons": 3556,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "c0bdc6f89767c66817e19520bded13a80a5070b668962a3e322412dbd202d648",
+      "lean_sha256": "d8e5a075ac50458db996f65cb33f9849be383375c0e9cb1dbf3b9e6b1b975f23",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorConstruct",
+      "parameters": {
+        "n": 1,
+        "w": 1,
+        "m": 1
+      },
+      "cycles": 64,
+      "output_comparisons": 3840,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "578508af02d973478168b49492423438c1000fbac4f0d1a27b198dce3c41bce7",
+      "lean_sha256": "560174b63bf823fd7da95fbe0b8bb41594e2173b9c8085459f36296e2e6cd141",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      },
+      "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorConstruct",
+      "parameters": {
+        "n": 3,
+        "w": 5,
+        "m": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 11264,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "578508af02d973478168b49492423438c1000fbac4f0d1a27b198dce3c41bce7",
+      "lean_sha256": "560174b63bf823fd7da95fbe0b8bb41594e2173b9c8085459f36296e2e6cd141",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      },
+      "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorConstruct",
+      "parameters": {
+        "n": 4,
+        "w": 65,
+        "m": 2
+      },
+      "cycles": 64,
+      "output_comparisons": 12544,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "578508af02d973478168b49492423438c1000fbac4f0d1a27b198dce3c41bce7",
+      "lean_sha256": "560174b63bf823fd7da95fbe0b8bb41594e2173b9c8085459f36296e2e6cd141",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      },
+      "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorHierarchy",
+      "parameters": {
+        "n": 1,
+        "w": 1,
+        "m": 1
+      },
+      "cycles": 64,
+      "output_comparisons": 762,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "99660d15c57d8f68521e68946795033cf521202396288aa89714321c5e092518",
+      "lean_sha256": "06382c8cbab79adb7c9ed7298be3e3a9d841c1208b780c9e64b45138a7fa56cd",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorHierarchy",
+      "parameters": {
+        "n": 3,
+        "w": 5,
+        "m": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 3048,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "99660d15c57d8f68521e68946795033cf521202396288aa89714321c5e092518",
+      "lean_sha256": "06382c8cbab79adb7c9ed7298be3e3a9d841c1208b780c9e64b45138a7fa56cd",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorHierarchy",
+      "parameters": {
+        "n": 4,
+        "w": 65,
+        "m": 2
+      },
+      "cycles": 64,
+      "output_comparisons": 3556,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "99660d15c57d8f68521e68946795033cf521202396288aa89714321c5e092518",
+      "lean_sha256": "06382c8cbab79adb7c9ed7298be3e3a9d841c1208b780c9e64b45138a7fa56cd",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.NestedBundleVector",
+      "parameters": {
+        "n": 1,
+        "m": 1,
+        "w": 1
+      },
+      "cycles": 64,
+      "output_comparisons": 1778,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "a35ef7514a6ae9c4a5e768dcc3cb18e5cd110eaf0475d84109f63b5d09e4da07",
+      "lean_sha256": "cbd694395f5b5ac6f0fdfbaff86594bb4b43876b8568fdf302fbe738a795d897",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.NestedBundleVector",
+      "parameters": {
+        "n": 3,
+        "m": 2,
+        "w": 4
+      },
+      "cycles": 64,
+      "output_comparisons": 6223,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "a35ef7514a6ae9c4a5e768dcc3cb18e5cd110eaf0475d84109f63b5d09e4da07",
+      "lean_sha256": "cbd694395f5b5ac6f0fdfbaff86594bb4b43876b8568fdf302fbe738a795d897",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.NestedBundleVector",
+      "parameters": {
+        "n": 2,
+        "m": 3,
+        "w": 65
+      },
+      "cycles": 64,
+      "output_comparisons": 6223,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "a35ef7514a6ae9c4a5e768dcc3cb18e5cd110eaf0475d84109f63b5d09e4da07",
+      "lean_sha256": "cbd694395f5b5ac6f0fdfbaff86594bb4b43876b8568fdf302fbe738a795d897",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorResize",
+      "parameters": {
+        "n": 1,
+        "wi": 1,
+        "wo": 5
+      },
+      "cycles": 64,
+      "output_comparisons": 896,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "9ab5cd52be1c85279ebf5ddb2e5564edbbf138716b9b4ffb3c82b4e3fef12cc7",
+      "lean_sha256": "82c74096df5af9d7e6ea67ed215c92588f45386e156f6478280bc04a215e714f",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorResize",
+      "parameters": {
+        "n": 3,
+        "wi": 5,
+        "wo": 2
+      },
+      "cycles": 64,
+      "output_comparisons": 2688,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "9ab5cd52be1c85279ebf5ddb2e5564edbbf138716b9b4ffb3c82b4e3fef12cc7",
+      "lean_sha256": "82c74096df5af9d7e6ea67ed215c92588f45386e156f6478280bc04a215e714f",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorResize",
+      "parameters": {
+        "n": 2,
+        "wi": 65,
+        "wo": 7
+      },
+      "cycles": 64,
+      "output_comparisons": 1792,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "9ab5cd52be1c85279ebf5ddb2e5564edbbf138716b9b4ffb3c82b4e3fef12cc7",
+      "lean_sha256": "82c74096df5af9d7e6ea67ed215c92588f45386e156f6478280bc04a215e714f",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorResize",
+      "parameters": {
+        "n": 3,
+        "wi": 2,
+        "wo": 65
+      },
+      "cycles": 64,
+      "output_comparisons": 2688,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "9ab5cd52be1c85279ebf5ddb2e5564edbbf138716b9b4ffb3c82b4e3fef12cc7",
+      "lean_sha256": "82c74096df5af9d7e6ea67ed215c92588f45386e156f6478280bc04a215e714f",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "previous_source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      }
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorMux",
+      "parameters": {
+        "n": 1,
+        "wi": 1,
+        "wo": 5
+      },
+      "cycles": 64,
+      "output_comparisons": 2688,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "bb2d33c156ba28c13843183f5df8fe356c755552db08531faef7af0491759e54",
+      "lean_sha256": "95aba744b3d953d8e1ee85e68acd735ec4fd4206111d7c920279075aa393036d",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      },
+      "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorMux",
+      "parameters": {
+        "n": 3,
+        "wi": 5,
+        "wo": 2
+      },
+      "cycles": 64,
+      "output_comparisons": 4480,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "bb2d33c156ba28c13843183f5df8fe356c755552db08531faef7af0491759e54",
+      "lean_sha256": "95aba744b3d953d8e1ee85e68acd735ec4fd4206111d7c920279075aa393036d",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      },
+      "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorMux",
+      "parameters": {
+        "n": 2,
+        "wi": 65,
+        "wo": 7
+      },
+      "cycles": 64,
+      "output_comparisons": 3584,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "bb2d33c156ba28c13843183f5df8fe356c755552db08531faef7af0491759e54",
+      "lean_sha256": "95aba744b3d953d8e1ee85e68acd735ec4fd4206111d7c920279075aa393036d",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      },
+      "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorMux",
+      "parameters": {
+        "n": 3,
+        "wi": 2,
+        "wo": 65
+      },
+      "cycles": 64,
+      "output_comparisons": 4480,
+      "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+      "ir_sha256": "bb2d33c156ba28c13843183f5df8fe356c755552db08531faef7af0491759e54",
+      "lean_sha256": "95aba744b3d953d8e1ee85e68acd735ec4fd4206111d7c920279075aa393036d",
+      "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+      "runtime_sha256": {
+        "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+        "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+      },
+      "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+    }
+  ]
+}

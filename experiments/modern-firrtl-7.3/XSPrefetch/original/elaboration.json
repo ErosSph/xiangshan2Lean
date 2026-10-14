@@ -1,0 +1,30 @@
+{
+  "format": "chisel2lean-official-elaboration-v1",
+  "module": "xiangshan.cache.mmu.L2TlbPrefetch",
+  "constructor": [
+    {
+      "class": "xiangshan.validation.NanhuCoreConfig",
+      "args": []
+    }
+  ],
+  "chisel_version": "7.3.0",
+  "configuration": "fixed",
+  "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-classpath.txt",
+  "classpath_sha256": "e684d7dded8d6d008174aa04f787785234b48c1911fedc699b78371f44a5e4cd",
+  "artifacts_sha256": {
+    "design.fir": "569e32dc9747d495141f6767f08501abba445543f3059a684528c9c205608e3a",
+    "Chisel2LeanReference.v": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927",
+    "ports.json": "3ccca6a455e6e7cad919243fec801a5d5cac5a0901496b31d91718af857f28d6"
+  },
+  "source_frontend_used": false,
+  "independent_chisel_elaborations": 2,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\XSPrefetch\\elaboration",
+  "jvm": {
+    "chisel_version": "7.3.0",
+    "scala_version": "2.13.15",
+    "class_sha256": {
+      "xiangshan.cache.mmu.L2TlbPrefetch": "8229b9101211f07bf5e88581d9cf439abc0addfe4ecbde508bb90e1c81d96568",
+      "xiangshan.validation.NanhuCoreConfig": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762"
+    }
+  }
+}

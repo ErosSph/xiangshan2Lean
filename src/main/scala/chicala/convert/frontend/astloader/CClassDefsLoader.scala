@@ -48,8 +48,8 @@ trait CClassDefsLoader { self: Scala2Reader =>
     }
     def apply(cInfo: CircuitInfo, tree: Tree, pkg: String): Option[(CircuitInfo, Option[BundleDef])] = {
       tree match {
-        // only Class inherits chisel3.Bundle directly
-        case ClassDef(mods, name, tparams, Template(parents, self, body)) if parents.exists {
+        case c @ ClassDef(mods, name, tparams, Template(parents, self, body)) if
+            (chicala.ChicalaConfig.backend == "lean" && c.symbol.asClass.baseClasses.exists(_.fullName == "chisel3.Bundle")) || parents.exists {
               case Select(Ident(TermName("chisel3")), TypeName("Bundle")) => true
               case p if chicala.ChicalaConfig.backend == "lean" => p.tpe.typeSymbol.fullName == "chisel3.Bundle"
               case _                                                      => false
@@ -77,11 +77,22 @@ trait CClassDefsLoader { self: Scala2Reader =>
                         case None              => (nowCInfo, nowSet)
                       }
                     }
+                  case _: DefDef | _: TypeDef | _: Import => (nowCInfo, nowSet)
+                  case EmptyTree | Literal(Constant(())) => (nowCInfo, nowSet)
+                  case other if chicala.ChicalaConfig.backend == "lean" =>
+                    val pos = if (other.pos.isDefined) other.pos else tree.pos
+                    throw chicala.lean.ir.TranslationError(
+                      chicala.lean.ir.Source(pos.source.file.path, pos.line, pos.column + 1),
+                      "Bundle constructor statements, including require and connections, are unsupported; place constraints in the enclosing Module")
                   case _ => (nowCInfo, nowSet)
                 }
               }
             }
 
+          if (chicala.ChicalaConfig.backend == "lean" && !newCInfo.needExit && signals.isEmpty)
+            throw chicala.lean.ir.TranslationError(
+              chicala.lean.ir.Source(c.pos.source.file.path, c.pos.line, c.pos.column + 1),
+              "Empty Bundles are outside the supported source subset")
           Some((newCInfo, Some(BundleDef(name, vps, Bundle(Node, signals), pkg))))
         case _ => None
       }

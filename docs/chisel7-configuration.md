@@ -18,6 +18,9 @@ Java 17 和 CIRCT firtool 1.135.0。升级前 v0.2 的报告保留为历史记�
 不会将一个选定配置的值硬编码进模型；未使用的 Seq、Option、函数等复杂
 配置字段不进入 Lean Params。
 
+可以在模块构造参数或纯标量 getter 上使用 [`@LeanParam`](lean-param.md)，显式要求保留其符号表达式。
+例如 `@LeanParam def width: Int = p(CoreKey).width` 会沿真实 CDE 查询记录依赖；注解不实现集合配置或条件硬件布局。
+
 例如原始香山代码保持如下声明：
 
 ```scala
@@ -92,6 +95,49 @@ python scripts/simulate.py generated/my-project/my/Module.ir.json --config-snaps
 参考路径在外层使用透明 IO 包装，为每个叶端口提供合法、唯一的 RTL 名称，
 以避免猜测 CIRCT 对 `bit` 等保留字及名称碰撞的重命名。
 
+## 配置在模块层次和 Bundle 中传递
+
+现在可以把构造参数中的真实 `Parameters` 原样传给有源码的子模块和命名 Bundle。
+转换器先分析子类实际使用的字段，再按原始构造参数的位置，把这些字段绑定到父类的配置根。
+因此，父模块即使没有直接查询配置，也会自动获得子模块需要的 Lean 参数。
+不同配置根保持独立；同一个根的同一字段只生成一个参数。普通 Int/Boolean 构造参数仍保留。
+依赖收集在继承展开之后进行，也覆盖父类中声明的子模块。
+
+Bundle 可以继承有源码的父类和 trait，包括原始 `XSBundle / HasXSParameter`。
+继承字段、命名 Bundle 嵌套和标量配置位宽沿用原有字段展开机制，支持整体连接和 Bundle 寄存器。
+字段位宽中的算术表达式和 Scala if 分支也会随实例替换参数，避免不同配置的实例串用位宽。
+`Vec[Bundle]` 的端口、寄存器、整体连接与动态字段读写现已接入，见
+[聚合向量说明](vector-bundles.md)。泛型 Bundle 和任意构造逻辑仍未支持。
+Bundle 构造体中的 `require`、连接等独立语句目前明确拒绝；参数约束可以写在外层 Module 中。
+这些语句不会被悄悄忽略。
+
+通用例子见 [Hierarchy.scala](../tests/fixtures/configuration/Hierarchy.scala)：
+两层子模块交换、重命名配置根，父类中创建子模块；另一个例子在不同配置宽度的
+继承 Bundle 之间进行带使能和复位的寄存器传递。
+
+这组测试检出并修复了旧前端的参数替换缺口。例如来源配置宽度为 5、目标为 2 时，
+`tag` 字段应从 6 位截成 3 位，输入 14 应得到 6。旧实现错误保留了 14，
+现在与独立计算和原始 RTL 一致，见 [原反例修复检查](../experiments/configuration-width-repair/summary.json)。
+回归同时包含算术位宽和条件位宽，以及相同类型 Bundle 的多个配置实例。
+
+```powershell
+python scripts/verify_configuration.py
+python scripts/verify_xiangshan_hierarchy.py
+```
+
+第二条使用本地测试顶层组合原始 `LeftShiftModule`、`RightShiftModule`，
+并将原始 `SfenceBundle` 放进一个带复位、使能的流水线。
+原始模块、Bundle、XSModule/XSBundle 和配置依赖保持不变；测试顶层是本项目编写的，
+不是香山上游的完整处理器模块。宽度变体仅用于这些孤立案例。
+模型与官方 Chisel/CIRCT/Verilator RTL、独立整数规格逐拍比较。
+已完成 6 组配置、2,112 个周期、18,048 次输出比较，见
+[层次与 XSBundle 验证](validation-xiangshan-hierarchy-7.3.json)。
+另有三条 Lean 模型定理，覆盖任意参数和输入下的关闭使能保持、使能采样、复位采样；
+证明对象是生成的流水线模型，见 [SfencePipelineProof.lean](../verification/xiangshan/config/SfencePipelineProof.lean)。
+
+配置对象必须来自当前模块的构造参数。模块内部新建配置、调用 `alter` 后再传给子模块，
+以及任意函数对配置对象的处理，仍不在这一转换子集内；真实 CDE 工厂中的配置组合不受此限制。
+
 ## 通用回归与限制
 
 ```powershell
@@ -102,13 +148,20 @@ python scripts/verify_xiangshan_config.py --skip-build
 
 通用配置回归涵盖继承寄存器、trait 连接优先级、getter 覆盖、带参/无参 getter、
 父构造参数表达式、Bool 分支、嵌套记录、多个配置根及 Field 默认值。
+当前共通过 32 组配置、1,848 个周期、6,768 次输出比较和 10 项拒绝检查，
+并检出故意交换子模块配置根的错误。见 [配置回归记录](validation-configuration-7.3.json)。
 
 当前明确拒绝：缺少父类源码、泛型父类、辅助构造器、显式 super 调度、
 覆盖/遮蔽的 concrete val、覆盖的构造 val、读取尚未初始化的成员、继承的
 eager 配置 val、递归/重载 helper、动态 Field key、被硬件使用的集合/Option
 配置、配置对象的任意宿主计算。继承的纯配置 getter 使用 `def`。
-对象配置的子模块构造参数传递、XSBundle 继承及 Vec[Bundle] 等尚未完整支持；
+原样传递构造配置的子模块和 XSBundle 继承已纳入上述子集。
+模块内改变配置、Bundle 独立构造语句等仍未支持；
 不能据此声称已转换整颗香山处理器。
+
+上面的限制针对保留符号参数的源码路线。新增的
+[官方展开入口](modern-firrtl.md) 可由实际 Chisel 工程执行更复杂的配置和 Scala
+构造，再将支持范围内的硬件转成固定配置 Lean 模型；两种能力分别验收。
 
 Lean 类型检查、规格定理和有限 RTL 对照并不构成 Scala/CDE/Chisel 到 Lean
 全过程、所有合法参数和所有输入序列的等价证明。报告保持这一限制为 false。

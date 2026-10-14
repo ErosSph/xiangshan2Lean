@@ -47,15 +47,20 @@ trait CTermsLoader { self: Scala2Reader =>
           val opName = name.toString()
           COpLoader(opName) match {
             case Some(op) =>
-              val tpe = MTypeLoader.fromTpt(tpt).get match {
+              val operands = (qualifier :: args).map(MTermLoader(cInfo, _).get._2.get)
+              val actualOp = if (chicala.ChicalaConfig.backend == "lean" && op == Slice && operands.head.tpe.isInstanceOf[Vec]) VecSelect else op
+              val selected = if (chicala.ChicalaConfig.backend == "lean" && actualOp == VecSelect) operands.head.tpe match {
+                case Vec(_, _, element: Bundle) => Some(element)
+                case Vec(_, _, element: Vec) => Some(element)
+                case _ => None
+              } else None
+              val tpe = selected.getOrElse(MTypeLoader.fromTpt(tpt).get match {
                 case StSeq(tparam: SignalType) => Vec(InferredSize, Node, tparam.setInferredWidth)
                 case x: SignalType             => x.setInferredWidth
                 case x =>
                   errorTree(tpt, s"Not a processable MType `${x}`")
                   SignalType.empty
-              }
-              val operands = (qualifier :: args).map(MTermLoader(cInfo, _).get._2.get)
-              val actualOp = if (chicala.ChicalaConfig.backend == "lean" && op == Slice && operands.head.tpe.isInstanceOf[Vec]) VecSelect else op
+              })
               val cApply   = CApply(actualOp, tpe, operands)
               Some((cInfo, Some(cApply)))
             case None =>
@@ -67,8 +72,14 @@ trait CTermsLoader { self: Scala2Reader =>
           val fName = f.toString()
           COpLoader(fName) match {
             case Some(op) =>
-              val tpe = SignalTypeLoader.fromTpt(tpt).get.setInferredWidth
-              Some((cInfo, Some(CApply(op, tpe, args.map(MTermLoader(cInfo, _).get._2.get)))))
+              val operands = args.map(MTermLoader(cInfo, _).get._2.get)
+              val aggregate = if (chicala.ChicalaConfig.backend == "lean" && op == Mux) operands(1).tpe match {
+                case x: Bundle => Some(x)
+                case x: Vec => Some(x)
+                case _ => None
+              } else None
+              val tpe = aggregate.getOrElse(SignalTypeLoader.fromTpt(tpt).get.setInferredWidth)
+              Some((cInfo, Some(CApply(op, tpe, operands))))
             case None => None
           }
         }

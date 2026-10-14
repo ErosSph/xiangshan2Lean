@@ -1,0 +1,10 @@
+"builtin.module"() ({
+  "firrtl.circuit"() <{annotations = [], default_layer_specialization = #firrtl<layerspecialization enable>, name = "ConditionalInvalid"}> ({
+    "firrtl.module"() <{annotations = [], convention = #firrtl<convention scalarized>, domainInfo = [[], [], []], layers = [], portAnnotations = [[], [], []], portDirections = array<i1: false, false, true>, portLocations = [loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":4:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":5:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":6:12)], portNames = ["en", "a", "q"], portSymbols = [], portTypes = [!firrtl.uint<1>, !firrtl.uint<8>, !firrtl.uint<8>], sym_name = "ConditionalInvalid"}> ({
+    ^bb0(%arg0: !firrtl.uint<1> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":4:11), %arg1: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":5:11), %arg2: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":6:12)):
+      %0 = "firrtl.wire"() <{annotations = [], name = "w", nameKind = #firrtl<name_kind interesting_name>}> : () -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":7:5)
+      "firrtl.connect"(%0, %arg1) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":9:5)
+      "firrtl.matchingconnect"(%arg2, %0) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":11:5)
+    }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":3:10)
+  }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":2:1)
+}) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir":0:0)

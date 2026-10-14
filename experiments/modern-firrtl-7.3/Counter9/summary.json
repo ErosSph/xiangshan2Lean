@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "case": "Counter9",
+  "module": "probes.Counter",
+  "constructor": [
+    9
+  ],
+  "cycles": 256,
+  "output_comparisons": 512,
+  "independent_integer_checks": 512,
+  "state_fields": 1,
+  "submodule_instances": 1,
+  "signals": 19,
+  "initial_state": {
+    "c2lInstance0.c2lSSA6": 0
+  },
+  "initialization_claim": "explicit zero experiment state; RTL --x-initial 0; no power-on guarantee",
+  "comparison": "executed Lean == independently elaborated official Chisel RTL; integer spec checks listed outputs",
+  "original_sources_sha256": {
+    "audit/src/main/scala/Probes.scala": "87b4086c1579f4bda1df9e1a3cf3a34585fcbe07dce6b766b246266a5818721e"
+  },
+  "elaboration": {
+    "format": "chisel2lean-official-elaboration-v1",
+    "module": "probes.Counter",
+    "constructor": [
+      9
+    ],
+    "chisel_version": "7.3.0",
+    "configuration": "fixed",
+    "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+    "classpath_sha256": "bc462630147e51bd0da64d08bff00c4e52156423fe54dfeee1815d16a5e38bc8",
+    "artifacts_sha256": {
+      "design.fir": "aceae8ca5ed7e029f0c498c1c5ecffdbb279e26e3a87f6e3988f3a1b4c1a765b",
+      "Chisel2LeanReference.v": "855d1b93cb7de75622676789fbc931f8b9e095ad64f7352ec87cf45bd714c84e",
+      "ports.json": "3c40931698bdd4f6e8e918113d36695618eb5c97984f77598cab0864b1a468ca"
+    },
+    "source_frontend_used": false,
+    "independent_chisel_elaborations": 2,
+    "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\Counter9\\elaboration",
+    "jvm": {
+      "chisel_version": "7.3.0",
+      "scala_version": "2.13.15",
+      "class_sha256": {
+        "probes.Counter": "acf86f080170fc66c47d25d9f5abd25b19649ed90c6ba882a8dbac36eb3bed4b"
+      }
+    }
+  },
+  "manifest": {
+    "format": "chisel2lean-firrtl-manifest-v1",
+    "frontend": "firrtl",
+    "frontend_implementation": "CIRCT",
+    "firrtl_version": "6.0.0",
+    "source_firrtl_version": "6.0.0",
+    "lean_version": "4.19.0",
+    "source": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\Counter9\\original\\design.fir",
+    "source_sha256": "aceae8ca5ed7e029f0c498c1c5ecffdbb279e26e3a87f6e3988f3a1b4c1a765b",
+    "compiler_sha256": "ae515ed8e48580399332c87a7b76406b7d18fb7790d8acbbd3170ecd00a4a7f4",
+    "configuration": "already-elaborated",
+    "symbolic_parameters": false,
+    "modules": [
+      {
+        "module": "Modern.Counter9",
+        "top": "Chisel2LeanReference",
+        "ir": "Modern/Counter9.ir.json",
+        "lean": "Modern/Counter9.lean"
+      }
+    ],
+    "lean_checked": true,
+    "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261014T085052Z-de74ae6b",
+    "circt_version": "1.135.0",
+    "circt_sha256": "afb77f160063de31ea3137502148365f920e8c0bdfa39673d14fac7d34d78939",
+    "ssa_reader_sha256": "29f63f7d14452d69d50068f8abc7b160f22e445ca8b53781700f69a670b44e15",
+    "bridge_sha256": "a63dd0d73e4bddef224ff79c08b44e14d512ac662554353653dee81f8f0e5762",
+    "parsed_mlir_sha256": "5fea0b3f8f541291eca253aab0099e7d8770593b6f8b28ffb1b29d0c5666ee4a",
+    "lowered_mlir_sha256": "223fc0ed97a226117737a487385795842fda16975957c6b11007c1f4c6cd88e0",
+    "unsupported_effects_checked_before_optimization": true
+  },
+  "formal_translation_equivalence": false
+}

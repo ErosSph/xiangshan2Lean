@@ -6,13 +6,14 @@ import chicala.convert.frontend.Scala2Reader
 import chicala.lean.ir.{Module => IRModule, Signal => IRSignal, Statement => IRStatement, Expr => IRExpr, Assign => IRAssign, _}
 
 /** Adapter from the reused Chicala source AST, before DependencySort. */
-trait LeanAdapter { self: Scala2Reader =>
+trait LeanAdapter { self: Scala2Reader with LeanSourceResolver =>
   val global: Global
   import global._
 
-  def adaptToLean(module: ModuleDef, root: Tree, child: String => IRModule): IRModule = new Adapter(module, root, child).build()
+  def adaptToLean(module: ModuleDef, root: Tree, child: String => IRModule,
+                  leanParameters: List[LeanParamBinding] = Nil): IRModule = new Adapter(module, root, child, leanParameters).build()
 
-  private class Adapter(module: ModuleDef, root: Tree, child: String => IRModule) {
+  private class Adapter(module: ModuleDef, root: Tree, child: String => IRModule, leanParameters: List[LeanParamBinding]) {
     private def source(pos: Position): Source = {
       val p = if (pos.isDefined) pos else root.pos
       Source(p.source.file.path, p.line, p.column + 1)
@@ -24,6 +25,8 @@ trait LeanAdapter { self: Scala2Reader =>
     }
     private def fail(detail: String): Nothing = throw TranslationError(location, detail)
     private val aliases = mutable.Map.empty[String, ParamExpr]
+    private val markedAliases = leanParameters.map(p => p.alias -> p).toMap
+    private val preservedParameters = mutable.ListBuffer.empty[PreservedParameter]
     private var indexSerial = 0
     private def freshIndex(name: String): String = { indexSerial += 1; name + "__" + indexSerial }
     private val hardwareAliases = mutable.Map.empty[String, IRExpr]
@@ -155,20 +158,149 @@ trait LeanAdapter { self: Scala2Reader =>
       case _: Bundle => fail("Bundle must be flattened before hardware typing")
     }
 
-    private def flatten(name: String, t: SignalType, kind: String, init: Option[MTerm], inferred: Boolean = false): Unit = t match {
+    // Transpose aggregate leaves into symbolic field columns. Vec lengths remain
+    // parameters, even when a Bundle field itself contains another Vec.
+    private def columns(t: SignalType): List[(List[TermName], SignalType)] = t match {
       case Bundle(_, fields) =>
-        fields.toList.sortBy(_._1.toString).foreach { case (n, v) => flatten(name + "." + n, v, kind, init.map(project(_, n, v)), inferred) }
-      case other =>
-        val actualKind = if (kind == "io") {
-          if (other.isInput) "input" else if (other.isOutput) "output" else fail(s"IO direction missing on $name")
-        } else kind
-        signals += IRSignal(name, actualKind, hwType(other, inferred), init.map(expression(_)), location)
+        if (fields.isEmpty) fail("Empty Bundles are outside the supported source subset")
+        fields.toList.sortBy(_._1.toString).flatMap { case (n, v) => columns(v).map { case (names, leaf) => (n :: names, leaf) } }
+      case Vec(size, physical, element) => columns(element).map { case (names, leaf) => (names, Vec(size, physical, leaf)) }
+      case leaf => List(Nil -> leaf)
+    }
+    private def columnName(name: String, fields: List[TermName]): String =
+      (name :: fields.map(_.decodedName.toString.trim)).mkString(".")
+    private def sourcePaths(t: SignalType, path: List[String]): Map[List[TermName], List[String]] = t match {
+      case Bundle(_, fields) => fields.toList.flatMap { case (name, field) =>
+        sourcePaths(field, path :+ name.decodedName.toString.trim).map { case (names, layout) => (name :: names) -> layout }
+      }.toMap
+      case Vec(_, _, element) => sourcePaths(element, path :+ "*")
+      case _ => Map(Nil -> path)
     }
 
-    private def project(value: MTerm, name: TermName, tpe: SignalType): MTerm = value match {
-      case SignalRef(tree, _) => SignalRef(Select(tree, name), tpe)
-      case CApply(Mux, _, List(c, a, b)) => CApply(Mux, tpe, List(c, project(a, name, tpe), project(b, name, tpe)))
-      case _ => fail("Aggregate values require a Bundle reference or Bundle Mux")
+    private def flatten(name: String, t: SignalType, kind: String, init: Option[MTerm], inferred: Boolean = false): Unit = {
+      val paths = sourcePaths(t, name.split('.').toList)
+      columns(t).foreach { case (fields, other) =>
+        val fullName = columnName(name, fields)
+        val actualKind = if (kind == "io") {
+          if (other.isInput) "input" else if (other.isOutput) "output" else fail(s"IO direction missing on $fullName")
+        } else kind
+        val layout = paths(fields)
+        val conventional = fullName.split('.').toList ++ layout.filter(_ == "*")
+        signals += IRSignal(fullName, actualKind, hwType(other, inferred), init.map(column(_, fields)), location,
+          if (layout == conventional) Nil else layout)
+      }
+    }
+
+    private def column(value: MTerm, fields: List[TermName], locals: Map[String, ParamExpr] = Map.empty,
+                       stack: Set[String] = Set.empty): IRExpr = value match {
+      case SignalRef(tree, _) =>
+        val name = columnName(path(tree), fields)
+        hardwareAliases.getOrElse(name, Ref(name))
+      case SSelect(from, field, _: SignalType) => column(from, field :: fields, locals, stack)
+      case CApply(VecSelect, _, List(from, index)) =>
+        val vector = column(from, fields, locals, stack)
+        if (index.tpe.isInstanceOf[SignalType]) VecGetDynamic(vector, expression(index, locals, stack))
+        else VecGet(vector, parameter(index, locals))
+      case CApply(Mux, _, List(c, a, b)) =>
+        aggregateChoice(a, List(b), "Mux", locals)
+        Choose(expression(c, locals, stack), column(a, fields, locals, stack), column(b, fields, locals, stack))
+      case SIf(c, a, b, _) =>
+        val condition = parameter(c, locals)
+        Choose(HostBool(condition), underParameterGuard(condition)(column(a, fields, locals, stack)),
+          underParameterGuard(POp("!", List(condition)))(column(b, fields, locals, stack)))
+      case CApply(MakeVec, _, operands) =>
+        val elements = vectorElements(operands)
+        elements.headOption.foreach(first => aggregateChoice(first, elements.tail, "VecInit", locals))
+        operands match {
+        case List(SApply(SApply(fun, List(n), _), List(element), _)) if funName(fun).endsWith("Seq.fill") =>
+          val size = parameter(n, locals)
+          requireParameter(POp(">", List(size, PInt(0))))
+          VecMap(freshIndex("__fill"), size, column(element, fields, locals, stack))
+        case List(SApply(SApply(fun, List(n), _), List(SFunction(List(i), body: MTerm)), _)) if funName(fun).endsWith("Seq.tabulate") =>
+          val index = freshIndex(i.name.toString)
+          val size = parameter(n, locals)
+          requireParameter(POp(">", List(size, PInt(0))))
+          VecMap(index, size, column(body, fields, locals + (i.name.toString -> PName(index)), stack))
+        case List(seq) if seq.tpe.isInstanceOf[StSeq] => VecValues(sequence(seq).map(column(_, fields, locals, stack)))
+        case values => VecValues(values.map(column(_, fields, locals, stack)))
+      }
+      case _ if fields.isEmpty => expression(value, locals, stack)
+      case _ => fail("Aggregate field projection requires a reference, VecInit, Mux or Scala if")
+    }
+
+    private def bindHardware(name: String, tpe: SignalType, rhs: MTerm,
+                             locals: Map[String, ParamExpr], stack: Set[String] = Set.empty): Unit = {
+      val bindings = columns(tpe).map { case (fields, _) => columnName(name, fields) -> column(rhs, fields, locals, stack) }
+      hardwareAliases ++= bindings
+    }
+    private def compatibleLayout(left: SignalType, right: SignalType): Boolean = (left, right) match {
+      case (Bundle(_, a), Bundle(_, b)) => a.keySet == b.keySet && a.forall { case (n, t) => compatibleLayout(t, b(n)) }
+      case (Vec(_, _, a), Vec(_, _, b)) => compatibleLayout(a, b)
+      case (_: GroundType, _: GroundType) => true
+      case _ => false
+    }
+
+    private def vectorElements(operands: List[MTerm]): List[MTerm] = operands match {
+      case List(SApply(SApply(fun, _, _), List(value), _)) if funName(fun).endsWith("Seq.fill") => List(value)
+      case List(SApply(SApply(fun, _, _), List(SFunction(_, body: MTerm)), _)) if funName(fun).endsWith("Seq.tabulate") => List(body)
+      case List(seq) if seq.tpe.isInstanceOf[StSeq] => sequence(seq)
+      case values => values
+    }
+    private lazy val vecClass = rootMirror.staticClass("chisel3.Vec")
+    private def scalaSignalType(value: MTerm): Option[Type] = value match {
+      case SignalRef(tree, _) => Option(tree.tpe).filter(_ != NoType).map(_.widen.finalResultType.dealias)
+      case SSelect(from, name, _: SignalType) => scalaSignalType(from).flatMap { tpe =>
+        val member = tpe.member(name)
+        if (member == NoSymbol) None else Some(member.typeSignatureIn(tpe).finalResultType.dealias)
+      }
+      case CApply(VecSelect, _, List(from, _)) => scalaSignalType(from).flatMap(_.baseType(vecClass).typeArgs.headOption)
+      case CApply(Mux, _, List(_, a, _)) => scalaSignalType(a)
+      case CApply(MakeVec, _, operands) => vectorElements(operands).headOption.flatMap(scalaSignalType).map { tpe =>
+        appliedType(vecClass.toTypeConstructor, List(tpe))
+      }
+      case SIf(_, a, _, _) => scalaSignalType(a)
+      case _ => None
+    }
+    private def dataClass(tpe: Type): List[Symbol] = {
+      val t = tpe.widen.finalResultType.dealias
+      if (t.typeSymbol == vecClass) vecClass :: t.baseType(vecClass).typeArgs.toList.flatMap(dataClass)
+      else List(t.typeSymbol)
+    }
+    // Chisel 7.3 cloneSupertype widens scalar Bits. Aggregate operands instead
+    // require identical classes, element kinds, lengths and declared widths.
+    private def aggregateChoice(first: MTerm, rest: List[MTerm], op: String,
+                                locals: Map[String, ParamExpr]): Unit = first.tpe match {
+      case _: Bundle | _: Vec =>
+        val identity = scalaSignalType(first).map(dataClass).getOrElse(fail(s"Cannot determine aggregate Scala class for $op"))
+        def equalSize(a: CSize, b: CSize): Unit = (a, b) match {
+          case (KnownSize(x), KnownSize(y)) =>
+            val left = ParamSimplify(parameter(x, locals))
+            val right = ParamSimplify(parameter(y, locals))
+            if (left != right) {
+              val condition = ParamSimplify(POp("==", List(left, right)))
+              if (condition == PBool(false)) fail(s"Chisel 7.3 aggregate $op requires matching widths and Vec lengths")
+              requireParameter(condition)
+            }
+          case (_: KnownSize, _) | (_, _: KnownSize) => fail(s"Aggregate $op cannot mix known and unresolved widths")
+          case _ =>
+        }
+        def check(a: SignalType, b: SignalType): Unit = (a, b) match {
+          case (Bundle(_, x), Bundle(_, y)) if x.keySet == y.keySet => x.foreach { case (n, t) => check(t, y(n)) }
+          case (Vec(KnownSize(n), _, x), Vec(KnownSize(m), _, y)) =>
+            if (ParamSimplify(parameter(n, locals)) != ParamSimplify(parameter(m, locals)))
+              fail(s"Aggregate $op requires identical symbolic Vec lengths; use a common length parameter")
+            check(x, y)
+          case (UInt(x, _, _), UInt(y, _, _)) => equalSize(x, y)
+          case (SInt(x, _, _), SInt(y, _, _)) => equalSize(x, y)
+          case (_: Bool, _: Bool) =>
+          case _ => fail(s"Chisel 7.3 aggregate $op requires matching fields and element kinds")
+        }
+        rest.foreach { other =>
+          if (!scalaSignalType(other).map(dataClass).contains(identity))
+            fail(s"Chisel 7.3 aggregate $op requires the same Bundle/Vec element classes")
+          check(first.tpe.asInstanceOf[SignalType], other.tpe.asInstanceOf[SignalType])
+        }
+      case _ =>
     }
 
     // Source aliases can still refer to forced-width hardware literals.
@@ -232,7 +364,8 @@ trait LeanAdapter { self: Scala2Reader =>
           readPorts += ((name, port, address, enable, size, location))
           Checked(Ref(port), Ref(port + "_valid"))
         }
-      case SignalRef(tree, _) => hardwareAliases.getOrElse(path(tree), Ref(path(tree)))
+      case _: SignalRef => column(t, Nil, locals, stack)
+      case SSelect(_, _, _: SignalType) => column(t, Nil, locals, stack)
       case Lit(v, tpe) =>
         val value = parameter(v, locals)
         chicala.lean.ir.Lit(value, literalType(tpe, value))
@@ -245,10 +378,7 @@ trait LeanAdapter { self: Scala2Reader =>
           "Cat" -> "cat", "OrReduce" -> "orR", "AndReduce" -> "andR", "XorReduce" -> "xorR",
           "Divide" -> "div", "Remainder" -> "rem")
         name match {
-          case "Mux" => Choose(expression(operands.head, locals, stack), expression(operands(1), locals, stack), expression(operands(2), locals, stack))
-          case "VecSelect" =>
-            if (operands(1).tpe.isInstanceOf[SignalType]) VecGetDynamic(expression(operands.head, locals, stack), expression(operands(1), locals, stack))
-            else VecGet(expression(operands.head, locals, stack), parameter(operands(1), locals))
+          case "Mux" | "VecSelect" | "MakeVec" => column(t, Nil, locals, stack)
           case "Slice" =>
             if (operands.size == 2 && operands(1).tpe.isInstanceOf[SignalType])
               Prim("bit", List(Prim("shr", operands.map(expression(_, locals, stack)))), List(PInt(0)))
@@ -262,19 +392,6 @@ trait LeanAdapter { self: Scala2Reader =>
             else Prim(if (name == "LShift") "shl" else "shr", operands.map(expression(_, locals, stack)))
           case "Pad" | "Head" | "Tail" => Prim(name.toLowerCase, List(expression(operands.head, locals, stack)), List(parameter(operands(1), locals)))
           case "Fill" => Prim("fill", List(expression(operands(1), locals, stack)), List(parameter(operands.head, locals)))
-          case "MakeVec" => operands match {
-            case List(SApply(SApply(fun, List(n), _), List(value), _)) if funName(fun).endsWith("Seq.fill") =>
-              val size = parameter(n, locals)
-              requireParameter(POp(">", List(size, PInt(0))))
-              VecMap(freshIndex("__fill"), size, expression(value, locals, stack))
-            case List(SApply(SApply(fun, List(n), _), List(SFunction(List(i), body: MTerm)), _)) if funName(fun).endsWith("Seq.tabulate") =>
-              val index = freshIndex(i.name.toString)
-              val size = parameter(n, locals)
-              requireParameter(POp(">", List(size, PInt(0))))
-              VecMap(index, size, expression(body, locals + (i.name.toString -> PName(index)), stack))
-            case List(value) if value.tpe.isInstanceOf[StSeq] => VecValues(sequence(value).map(expression(_, locals, stack)))
-            case values => VecValues(values.map(expression(_, locals, stack)))
-          }
           case "MuxLookup" =>
             val entries = sequence(operands(2)).map(pair)
             Prim("muxLookup", List(expression(operands.head, locals, stack), expression(operands(1), locals, stack)) ++
@@ -297,13 +414,15 @@ trait LeanAdapter { self: Scala2Reader =>
         val d = helpers(name)
         val bindings = d.vparamss.flatten.map(_.name.toString).zip(args).toMap
         val ps = bindings.collect { case (k, v) if v.tpe.isInstanceOf[SType] => k -> parameter(v, locals) }
-        val hs = bindings.collect { case (k, v) if v.tpe.isInstanceOf[SignalType] => k -> expression(v, locals, stack) }
         val saved = hardwareAliases.toMap
-        hardwareAliases ++= hs
+        bindings.foreach { case (k, v) => v.tpe match {
+          case tpe: SignalType => bindHardware(k, tpe, v, locals, stack)
+          case _ =>
+        } }
         def inline(body: MStatement): IRExpr = body match {
           case SBlock(parts, _) if parts.nonEmpty =>
             parts.dropRight(1).foreach {
-              case n: NodeDef if !n.isVar => hardwareAliases(n.name.toString) = expression(n.rhs, locals ++ ps, stack + name)
+              case n: NodeDef if !n.isVar => bindHardware(n.name.toString, n.tpe, n.rhs, locals ++ ps, stack + name)
               case _ => fail("Hardware helper blocks may contain immutable hardware values only")
             }
             inline(parts.last)
@@ -315,10 +434,19 @@ trait LeanAdapter { self: Scala2Reader =>
       case _ => fail(s"Unsupported hardware expression: $t")
     }
 
-    private def target(t: MTerm, locals: Map[String, ParamExpr]): (String, Option[ParamExpr]) = t match {
-      case SignalRef(tree, _) => path(tree) -> None
-      case CApply(VecSelect, _, List(SignalRef(tree, _), index)) => path(tree) -> Some(parameter(index, locals))
-      case _ => fail("Connections require a whole signal or a Vec element")
+    private def target(t: MTerm, fields: List[TermName], locals: Map[String, ParamExpr]): (String, List[VectorIndex]) = t match {
+      case SignalRef(tree, _) =>
+        val name = path(tree)
+        val fullName = columnName(name, fields)
+        if (nodeDefinitions.contains(name) || hardwareAliases.contains(fullName))
+          fail("Connections through value aliases are unsupported; drive the original signal or Vec element")
+        fullName -> Nil
+      case SSelect(from, field, _: SignalType) => target(from, field :: fields, locals)
+      case CApply(VecSelect, _, List(from, index)) =>
+        val (name, indices) = target(from, fields, locals)
+        val next = if (index.tpe.isInstanceOf[SignalType]) DynamicIndex(expression(index, locals)) else StaticIndex(parameter(index, locals))
+        name -> (indices :+ next)
+      case _ => fail("Connections require a signal, Bundle field or Vec element")
     }
 
     private def statements(s: MStatement, locals: Map[String, ParamExpr] = Map.empty,
@@ -346,16 +474,22 @@ trait LeanAdapter { self: Scala2Reader =>
           if (memoryWrites(name) > 1) fail("Multiple Mem write ports require an explicit collision model")
           writePorts(name) = expression(args.head, locals) -> context
           List(DynamicAssign(name, expression(args.head, locals), expression(args(1), locals), location))
-        case Connect(CApply(VecSelect, _, List(SignalRef(tree, _), index)), rhs) if index.tpe.isInstanceOf[SignalType] =>
-          List(DynamicAssign(path(tree), expression(index, locals), expression(rhs, locals), location))
         case Connect(left, rhs) =>
-          if (left.tpe.isInstanceOf[Bundle]) {
-            val expanded = Connect(left, rhs).expands
-            if (expanded.size == 1 && expanded.head.left == left) fail("Bundle assignment requires a compatible Bundle reference")
-            expanded.flatMap(statements(_, locals, nested))
-          } else {
-            val (name, index) = target(left, locals)
-            List(IRAssign(name, index, expression(rhs, locals), location))
+          if (!compatibleLayout(left.tpe.asInstanceOf[SignalType], rhs.tpe.asInstanceOf[SignalType]))
+            fail("Aggregate connection requires matching Bundle fields and Vec structure")
+          val leaves = columns(left.tpe.asInstanceOf[SignalType])
+          val rhsLeaves = columns(rhs.tpe.asInstanceOf[SignalType])
+          if (leaves.map(_._1).toSet != rhsLeaves.map(_._1).toSet)
+            fail("Aggregate connection requires matching Bundle fields")
+          leaves.map { case (fields, _) =>
+            val (name, indices) = target(left, fields, locals)
+            val value = column(rhs, fields, locals)
+            indices match {
+              case Nil => IRAssign(name, None, value, location)
+              case List(StaticIndex(i)) => IRAssign(name, Some(i), value, location)
+              case List(DynamicIndex(i)) => DynamicAssign(name, i, value, location)
+              case _ => IndexedAssign(name, indices, value, location)
+            }
           }
         case When(c, yes, no, _) =>
           val condition = expression(c, locals)
@@ -401,12 +535,25 @@ trait LeanAdapter { self: Scala2Reader =>
           Nil
         case n: NodeDef =>
           if (n.isVar) fail("Mutable hardware values are unsupported")
-          if (nested) hardwareAliases(n.name.toString) = expression(n.rhs, locals)
+          if (nested) bindHardware(n.name.toString, n.tpe, n.rhs, locals)
           else flatten(n.name.toString, n.tpe, "node", Some(n.rhs), inferred = true)
           Nil
         case SValDef(name, _, rhs, false) if rhs != EmptyMTerm =>
           // Validate unused host computations too, so side effects cannot disappear.
-          aliases(name.toString) = parameter(rhs, locals)
+          val marker = markedAliases.get(name.toString)
+          val value = try parameter(rhs, locals) catch {
+            case e: TranslationError if marker.nonEmpty =>
+              val m = marker.get
+              throw TranslationError(m.source, "@LeanParam " + m.owner + "." + m.name + ": " + e.detail)
+          }
+          aliases(name.toString) = value
+          marker.foreach { m =>
+            val dependencies = ParamSimplify.names(value)
+            if (dependencies.isEmpty || !dependencies.subsetOf(parameterNames))
+              throw TranslationError(m.source, "@LeanParam " + m.owner + "." + m.name +
+                " must derive from symbolic constructor parameters or supported CDE scalar fields; a constant cannot introduce a parameter family")
+            preservedParameters += PreservedParameter(m.owner, m.name, m.kind, m.role, value, m.source)
+          }
           Nil
         case _: SDefDef => Nil
         case EnumDef(names, tpe) =>
@@ -436,6 +583,7 @@ trait LeanAdapter { self: Scala2Reader =>
           val instance = Instantiate(definition, s.name.toString, bindings)
           signals ++= instance.signals
           requirements ++= instance.requirements
+          preservedParameters ++= instance.preservedParameters
           instance.statements
         case _ => fail(s"Unsupported hardware statement: $s")
       }
@@ -464,7 +612,8 @@ trait LeanAdapter { self: Scala2Reader =>
       }
       if (signals.exists(_.kind == "reg") && !root.symbol.asClass.baseClasses.exists(_.fullName == "chisel3.Module"))
         fail("Clocked state requires the implicit clock of Module; explicit RawModule clocks are unsupported")
-      IRModule(module.fullName.stripPrefix("."), parameters, requirements.toList, signals.toList, body ++ memorySteps, source(root.pos))
+      IRModule(module.fullName.stripPrefix("."), parameters, requirements.toList, signals.toList,
+        body ++ memorySteps, source(root.pos), preservedParameters.toList)
     }
   }
 }

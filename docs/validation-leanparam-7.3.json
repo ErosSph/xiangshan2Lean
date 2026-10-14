@@ -1,0 +1,258 @@
+{
+  "status": "PASS",
+  "format": "chisel2lean-leanparam-validation-v1",
+  "metadata_checks": [
+    {
+      "module": "AnnotatedBank",
+      "status": "PASS",
+      "declarations": 5
+    },
+    {
+      "module": "AnnotatedCounter",
+      "status": "PASS",
+      "declarations": 1
+    },
+    {
+      "module": "RenamedParameter",
+      "status": "PASS",
+      "declarations": 2
+    },
+    {
+      "module": "AnnotatedHierarchy",
+      "status": "PASS",
+      "declarations": 2
+    },
+    {
+      "module": "AnnotatedConfiguration",
+      "status": "PASS",
+      "declarations": 2
+    },
+    {
+      "module": "Unannotated",
+      "status": "PASS",
+      "explicit_annotations": 0
+    },
+    {
+      "module": "IgnoredLookalike",
+      "status": "PASS",
+      "explicit_annotations": 0
+    }
+  ],
+  "configurations": 12,
+  "cycles": 768,
+  "output_comparisons": 2432,
+  "cases": [
+    {
+      "status": "PASS",
+      "module": "AnnotatedBank",
+      "parameters": {
+        "n": 1,
+        "w": 1,
+        "extra": false
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "AnnotatedBank",
+      "parameters": {
+        "n": 3,
+        "w": 4,
+        "extra": true
+      },
+      "cycles": 64,
+      "output_comparisons": 384,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "AnnotatedBank",
+      "parameters": {
+        "n": 5,
+        "w": 8,
+        "extra": false
+      },
+      "cycles": 64,
+      "output_comparisons": 640,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "AnnotatedBank",
+      "parameters": {
+        "n": 2,
+        "w": 63,
+        "extra": true
+      },
+      "cycles": 64,
+      "output_comparisons": 256,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "AnnotatedCounter",
+      "parameters": {
+        "n": 1
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "AnnotatedCounter",
+      "parameters": {
+        "n": 9
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "AnnotatedHierarchy",
+      "parameters": {
+        "n": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "RenamedParameter",
+      "parameters": {
+        "n": 4
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "AnnotatedConfiguration",
+      "parameters": {
+        "cfg_p_leanparam_SettingsKey_width": 3,
+        "cfg_p_leanparam_SettingsKey_enabled": false
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "AnnotatedConfiguration",
+      "parameters": {
+        "cfg_p_leanparam_SettingsKey_width": 9,
+        "cfg_p_leanparam_SettingsKey_enabled": true
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "Unannotated",
+      "parameters": {
+        "n": 3
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "module": "IgnoredLookalike",
+      "parameters": {
+        "n": 4
+      },
+      "cycles": 64,
+      "output_comparisons": 128,
+      "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+    }
+  ],
+  "rejections": [
+    {
+      "module": "WrongScalar",
+      "status": "PASS",
+      "diagnostic": "supports Int and Boolean"
+    },
+    {
+      "module": "MutableParameter",
+      "status": "PASS",
+      "diagnostic": "mutable constructor"
+    },
+    {
+      "module": "MutableMember",
+      "status": "PASS",
+      "diagnostic": "mutable"
+    },
+    {
+      "module": "LazyMember",
+      "status": "PASS",
+      "diagnostic": "lazy"
+    },
+    {
+      "module": "HardwareValue",
+      "status": "PASS",
+      "diagnostic": "supports Int and Boolean"
+    },
+    {
+      "module": "MethodArgument",
+      "status": "PASS",
+      "diagnostic": "must mark"
+    },
+    {
+      "module": "ClassTarget",
+      "status": "PASS",
+      "diagnostic": "must mark"
+    },
+    {
+      "module": "LocalTarget",
+      "status": "PASS",
+      "diagnostic": "must mark"
+    },
+    {
+      "module": "CollectionMember",
+      "status": "PASS",
+      "diagnostic": "supports Int and Boolean"
+    },
+    {
+      "module": "ConstantMember",
+      "status": "PASS",
+      "diagnostic": "constant cannot introduce a parameter family"
+    },
+    {
+      "module": "UnsupportedComputation",
+      "status": "PASS",
+      "diagnostic": "@LeanParam"
+    },
+    {
+      "module": "ConditionalAllocation",
+      "status": "PASS",
+      "diagnostic": "Conditional register declarations"
+    },
+    {
+      "module": "RepeatedAllocation",
+      "status": "PASS",
+      "diagnostic": "dependent instance/port/state layout"
+    },
+    {
+      "module": "OptionalPort",
+      "status": "PASS",
+      "diagnostic": "dependent instance/port/state layout"
+    }
+  ],
+  "compiler_sha256": "c9ce396f914ee5221cb70d0bc70874cc9e47323b7010aa32cb339482b3851ae7",
+  "annotation_sha256": "90bc9c585624c7089554ddd3d0845f74cefb321ad13c2ac4b9660639dcb4ba8a",
+  "source_sha256": {
+    "tests/fixtures/leanparam/Supported.scala": "aac8f4c823c786b1875ef903d8c458f0a38911f3759e3ab0962f74b601d8241a",
+    "tests/fixtures/leanparam/Lookalike.scala": "30ec4c06caf19893e1f9062704a1b1c6a1465f2537b49e992c97458f4a349946",
+    "tests/fixtures/leanparam/Rejected.scala": "e0471f28228875ae2cbfac6f79dd39ff147a04df36d3798a7fbea281f5a7ae59"
+  },
+  "evidence_directory": "E:\\ICT\\chisel2lean4\\experiments\\leanparam-7.3\\20261014T100506Z-3fa4b85c",
+  "formal_source_to_lean_equivalence_proof": false,
+  "structural_module_arrays_and_option_layouts_supported": false
+}

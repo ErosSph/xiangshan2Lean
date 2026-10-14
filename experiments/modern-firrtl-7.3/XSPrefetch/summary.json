@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "case": "XSPrefetch",
+  "module": "xiangshan.cache.mmu.L2TlbPrefetch",
+  "constructor": [
+    {
+      "class": "xiangshan.validation.NanhuCoreConfig",
+      "args": []
+    }
+  ],
+  "cycles": 768,
+  "output_comparisons": 4608,
+  "independent_integer_checks": 4608,
+  "state_fields": 11,
+  "submodule_instances": 1,
+  "signals": 227,
+  "initial_state": {
+    "c2lInstance0.c2lSSA39": 0,
+    "c2lInstance0.c2lSSA40": 0,
+    "c2lInstance0.c2lSSA41": 0,
+    "c2lInstance0.c2lSSA42": 0,
+    "c2lInstance0.c2lSSA48": 0,
+    "c2lInstance0.c2lSSA49": 0,
+    "c2lInstance0.c2lSSA50": 0,
+    "c2lInstance0.c2lSSA51": 0,
+    "c2lInstance0.c2lSSA53": 0,
+    "c2lInstance0.c2lSSA66": 0,
+    "c2lInstance0.c2lSSA114": 0
+  },
+  "initialization_claim": "explicit zero experiment state; RTL --x-initial 0; no power-on guarantee",
+  "comparison": "executed Lean == independently elaborated official Chisel RTL; integer spec checks listed outputs",
+  "original_sources_sha256": {
+    ".cache/xiangshan-dependencies-7.3/xiangshan/src/main/scala/xiangshan/cache/mmu/L2TlbPrefetch.scala": "12262f8f45ea9287fe2d14edfe7b013633031ce4ef8f1b9f106b1beb8b6a35d9",
+    ".cache/xiangshan-dependencies-7.3/xiangshan/src/main/scala/xiangshan/cache/mmu/MMUConst.scala": "b7ef2c03df52c045db0cc911eb003ea45fecd440bdba315ee9602e3c1c7cfd52",
+    ".cache/xiangshan-dependencies-7.3/xiangshan/src/main/scala/xiangshan/Parameters.scala": "5e1419aaad93e212f571672c5b0c46546c49cb3547667dbd3f9844b2705b63ad"
+  },
+  "elaboration": {
+    "format": "chisel2lean-official-elaboration-v1",
+    "module": "xiangshan.cache.mmu.L2TlbPrefetch",
+    "constructor": [
+      {
+        "class": "xiangshan.validation.NanhuCoreConfig",
+        "args": []
+      }
+    ],
+    "chisel_version": "7.3.0",
+    "configuration": "fixed",
+    "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-classpath.txt",
+    "classpath_sha256": "e684d7dded8d6d008174aa04f787785234b48c1911fedc699b78371f44a5e4cd",
+    "artifacts_sha256": {
+      "design.fir": "569e32dc9747d495141f6767f08501abba445543f3059a684528c9c205608e3a",
+      "Chisel2LeanReference.v": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927",
+      "ports.json": "3ccca6a455e6e7cad919243fec801a5d5cac5a0901496b31d91718af857f28d6"
+    },
+    "source_frontend_used": false,
+    "independent_chisel_elaborations": 2,
+    "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\XSPrefetch\\elaboration",
+    "jvm": {
+      "chisel_version": "7.3.0",
+      "scala_version": "2.13.15",
+      "class_sha256": {
+        "xiangshan.cache.mmu.L2TlbPrefetch": "8229b9101211f07bf5e88581d9cf439abc0addfe4ecbde508bb90e1c81d96568",
+        "xiangshan.validation.NanhuCoreConfig": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762"
+      }
+    }
+  },
+  "manifest": {
+    "format": "chisel2lean-firrtl-manifest-v1",
+    "frontend": "firrtl",
+    "frontend_implementation": "CIRCT",
+    "firrtl_version": "6.0.0",
+    "source_firrtl_version": "6.0.0",
+    "lean_version": "4.19.0",
+    "source": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\XSPrefetch\\original\\design.fir",
+    "source_sha256": "569e32dc9747d495141f6767f08501abba445543f3059a684528c9c205608e3a",
+    "compiler_sha256": "ae515ed8e48580399332c87a7b76406b7d18fb7790d8acbbd3170ecd00a4a7f4",
+    "configuration": "already-elaborated",
+    "symbolic_parameters": false,
+    "modules": [
+      {
+        "module": "Modern.XSPrefetch",
+        "top": "Chisel2LeanReference",
+        "ir": "Modern/XSPrefetch.ir.json",
+        "lean": "Modern/XSPrefetch.lean"
+      }
+    ],
+    "lean_checked": true,
+    "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261014T085341Z-561580d9",
+    "circt_version": "1.135.0",
+    "circt_sha256": "afb77f160063de31ea3137502148365f920e8c0bdfa39673d14fac7d34d78939",
+    "ssa_reader_sha256": "29f63f7d14452d69d50068f8abc7b160f22e445ca8b53781700f69a670b44e15",
+    "bridge_sha256": "a090355df930240acaa6448ac1ea4e454f3c55e676c58422a000db1aa7da48b8",
+    "parsed_mlir_sha256": "983273a3127b9ff6c5032a4959d578e691e3bbd2cdcc857f5196012c9b33cc1d",
+    "lowered_mlir_sha256": "b3e9a12753ae6cd2ddbee5278b94f7e8825c2a152253bec029db656cdd3c733b",
+    "unsupported_effects_checked_before_optimization": true
+  },
+  "formal_translation_equivalence": false
+}

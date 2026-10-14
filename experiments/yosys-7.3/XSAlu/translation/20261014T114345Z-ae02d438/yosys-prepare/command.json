@@ -1,0 +1,12 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "-Q",
+    "-T",
+    "-p",
+    "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format /work/design.v --top Chisel2LeanReference; hierarchy -check -top Chisel2LeanReference; proc -noopt; flatten; opt_clean; memory_collect; write_json /work/before.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\XSAlu\\translation\\20261014T114345Z-ae02d438\\artifacts",
+  "started_at": "2026-10-14T11:43:45.047294+00:00"
+}

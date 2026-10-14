@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:25: error: [chisel2lean] @LeanParam supports Int and Boolean scalars; found chisel3.UInt
+  @LeanParam val data = IO(Input(UInt(n.W)))
+                  ^
+1 error

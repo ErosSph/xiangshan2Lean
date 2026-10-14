@@ -1,0 +1,14 @@
+{
+  "command": [
+    "E:\\ICT\\chisel2lean4\\.tools\\firtool-1.135.0\\firtool-1.135.0\\bin\\firtool.exe",
+    "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir",
+    "--parse-only",
+    "--mlir-print-op-generic",
+    "--mlir-print-local-scope",
+    "--mlir-print-debuginfo",
+    "-o",
+    "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085952Z-be9e8c80\\artifacts\\parsed.mlir"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4",
+  "started_at": "2026-10-14T08:59:52.345942+00:00"
+}

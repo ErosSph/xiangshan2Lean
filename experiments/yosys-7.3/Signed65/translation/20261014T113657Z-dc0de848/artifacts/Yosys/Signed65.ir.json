@@ -1,0 +1,2001 @@
+{
+  "format": "chisel2lean-functional-v1",
+  "namespace": "Yosys.Signed65",
+  "clock": null,
+  "symbolic_parameters": false,
+  "inputs": [
+    {
+      "name": "clock",
+      "field": "i0",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      }
+    },
+    {
+      "name": "reset",
+      "field": "i1",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      }
+    },
+    {
+      "name": "c2l_port_0",
+      "field": "i2",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      }
+    },
+    {
+      "name": "c2l_port_1",
+      "field": "i3",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "name": "c2l_port_2",
+      "field": "o0",
+      "sort": {
+        "kind": "bits",
+        "width": 67
+      },
+      "node": 3
+    },
+    {
+      "name": "c2l_port_3",
+      "field": "o1",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "node": 8
+    },
+    {
+      "name": "c2l_port_4",
+      "field": "o2",
+      "sort": {
+        "kind": "bits",
+        "width": 130
+      },
+      "node": 140
+    },
+    {
+      "name": "c2l_port_5",
+      "field": "o3",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "node": 142
+    },
+    {
+      "name": "c2l_port_6",
+      "field": "o4",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "node": 146
+    },
+    {
+      "name": "c2l_port_7",
+      "field": "o5",
+      "sort": {
+        "kind": "bits",
+        "width": 66
+      },
+      "node": 145
+    }
+  ],
+  "states": [],
+  "nodes": [
+    {
+      "id": 0,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "i2"
+    },
+    {
+      "id": 1,
+      "op": "extract",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        0
+      ],
+      "offset": 64
+    },
+    {
+      "id": 2,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 66
+      },
+      "args": [
+        1,
+        0
+      ],
+      "line": 27
+    },
+    {
+      "id": 3,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 67
+      },
+      "args": [
+        1,
+        2
+      ],
+      "line": 28
+    },
+    {
+      "id": 4,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "i3"
+    },
+    {
+      "id": 5,
+      "op": "bvsgt",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        4,
+        0
+      ],
+      "line": 30
+    },
+    {
+      "id": 6,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 7,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 8,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        5,
+        6,
+        7
+      ],
+      "line": 30
+    },
+    {
+      "id": 9,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 66
+      },
+      "args": [
+        1,
+        0
+      ],
+      "line": 31
+    },
+    {
+      "id": 10,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 67
+      },
+      "args": [
+        1,
+        9
+      ],
+      "line": 32
+    },
+    {
+      "id": 11,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 68
+      },
+      "args": [
+        1,
+        10
+      ],
+      "line": 33
+    },
+    {
+      "id": 12,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 69
+      },
+      "args": [
+        1,
+        11
+      ],
+      "line": 34
+    },
+    {
+      "id": 13,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 70
+      },
+      "args": [
+        1,
+        12
+      ],
+      "line": 35
+    },
+    {
+      "id": 14,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 71
+      },
+      "args": [
+        1,
+        13
+      ],
+      "line": 36
+    },
+    {
+      "id": 15,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 72
+      },
+      "args": [
+        1,
+        14
+      ],
+      "line": 37
+    },
+    {
+      "id": 16,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 73
+      },
+      "args": [
+        1,
+        15
+      ],
+      "line": 38
+    },
+    {
+      "id": 17,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 74
+      },
+      "args": [
+        1,
+        16
+      ],
+      "line": 39
+    },
+    {
+      "id": 18,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 75
+      },
+      "args": [
+        1,
+        17
+      ],
+      "line": 40
+    },
+    {
+      "id": 19,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 76
+      },
+      "args": [
+        1,
+        18
+      ],
+      "line": 41
+    },
+    {
+      "id": 20,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 77
+      },
+      "args": [
+        1,
+        19
+      ],
+      "line": 42
+    },
+    {
+      "id": 21,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 78
+      },
+      "args": [
+        1,
+        20
+      ],
+      "line": 43
+    },
+    {
+      "id": 22,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 79
+      },
+      "args": [
+        1,
+        21
+      ],
+      "line": 44
+    },
+    {
+      "id": 23,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 80
+      },
+      "args": [
+        1,
+        22
+      ],
+      "line": 45
+    },
+    {
+      "id": 24,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 81
+      },
+      "args": [
+        1,
+        23
+      ],
+      "line": 46
+    },
+    {
+      "id": 25,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 82
+      },
+      "args": [
+        1,
+        24
+      ],
+      "line": 47
+    },
+    {
+      "id": 26,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 83
+      },
+      "args": [
+        1,
+        25
+      ],
+      "line": 48
+    },
+    {
+      "id": 27,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 84
+      },
+      "args": [
+        1,
+        26
+      ],
+      "line": 49
+    },
+    {
+      "id": 28,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 85
+      },
+      "args": [
+        1,
+        27
+      ],
+      "line": 50
+    },
+    {
+      "id": 29,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 86
+      },
+      "args": [
+        1,
+        28
+      ],
+      "line": 51
+    },
+    {
+      "id": 30,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 87
+      },
+      "args": [
+        1,
+        29
+      ],
+      "line": 52
+    },
+    {
+      "id": 31,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 88
+      },
+      "args": [
+        1,
+        30
+      ],
+      "line": 53
+    },
+    {
+      "id": 32,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 89
+      },
+      "args": [
+        1,
+        31
+      ],
+      "line": 54
+    },
+    {
+      "id": 33,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 90
+      },
+      "args": [
+        1,
+        32
+      ],
+      "line": 55
+    },
+    {
+      "id": 34,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 91
+      },
+      "args": [
+        1,
+        33
+      ],
+      "line": 56
+    },
+    {
+      "id": 35,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 92
+      },
+      "args": [
+        1,
+        34
+      ],
+      "line": 57
+    },
+    {
+      "id": 36,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 93
+      },
+      "args": [
+        1,
+        35
+      ],
+      "line": 58
+    },
+    {
+      "id": 37,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 94
+      },
+      "args": [
+        1,
+        36
+      ],
+      "line": 59
+    },
+    {
+      "id": 38,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 95
+      },
+      "args": [
+        1,
+        37
+      ],
+      "line": 60
+    },
+    {
+      "id": 39,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 96
+      },
+      "args": [
+        1,
+        38
+      ],
+      "line": 61
+    },
+    {
+      "id": 40,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 97
+      },
+      "args": [
+        1,
+        39
+      ],
+      "line": 62
+    },
+    {
+      "id": 41,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 98
+      },
+      "args": [
+        1,
+        40
+      ],
+      "line": 63
+    },
+    {
+      "id": 42,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 99
+      },
+      "args": [
+        1,
+        41
+      ],
+      "line": 64
+    },
+    {
+      "id": 43,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 100
+      },
+      "args": [
+        1,
+        42
+      ],
+      "line": 65
+    },
+    {
+      "id": 44,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 101
+      },
+      "args": [
+        1,
+        43
+      ],
+      "line": 66
+    },
+    {
+      "id": 45,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 102
+      },
+      "args": [
+        1,
+        44
+      ],
+      "line": 67
+    },
+    {
+      "id": 46,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 103
+      },
+      "args": [
+        1,
+        45
+      ],
+      "line": 68
+    },
+    {
+      "id": 47,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 104
+      },
+      "args": [
+        1,
+        46
+      ],
+      "line": 69
+    },
+    {
+      "id": 48,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 105
+      },
+      "args": [
+        1,
+        47
+      ],
+      "line": 70
+    },
+    {
+      "id": 49,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 106
+      },
+      "args": [
+        1,
+        48
+      ],
+      "line": 71
+    },
+    {
+      "id": 50,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 107
+      },
+      "args": [
+        1,
+        49
+      ],
+      "line": 72
+    },
+    {
+      "id": 51,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 108
+      },
+      "args": [
+        1,
+        50
+      ],
+      "line": 73
+    },
+    {
+      "id": 52,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 109
+      },
+      "args": [
+        1,
+        51
+      ],
+      "line": 74
+    },
+    {
+      "id": 53,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 110
+      },
+      "args": [
+        1,
+        52
+      ],
+      "line": 75
+    },
+    {
+      "id": 54,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 111
+      },
+      "args": [
+        1,
+        53
+      ],
+      "line": 76
+    },
+    {
+      "id": 55,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 112
+      },
+      "args": [
+        1,
+        54
+      ],
+      "line": 77
+    },
+    {
+      "id": 56,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 113
+      },
+      "args": [
+        1,
+        55
+      ],
+      "line": 78
+    },
+    {
+      "id": 57,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 114
+      },
+      "args": [
+        1,
+        56
+      ],
+      "line": 79
+    },
+    {
+      "id": 58,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 115
+      },
+      "args": [
+        1,
+        57
+      ],
+      "line": 80
+    },
+    {
+      "id": 59,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 116
+      },
+      "args": [
+        1,
+        58
+      ],
+      "line": 81
+    },
+    {
+      "id": 60,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 117
+      },
+      "args": [
+        1,
+        59
+      ],
+      "line": 82
+    },
+    {
+      "id": 61,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 118
+      },
+      "args": [
+        1,
+        60
+      ],
+      "line": 83
+    },
+    {
+      "id": 62,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 119
+      },
+      "args": [
+        1,
+        61
+      ],
+      "line": 84
+    },
+    {
+      "id": 63,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 120
+      },
+      "args": [
+        1,
+        62
+      ],
+      "line": 85
+    },
+    {
+      "id": 64,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 121
+      },
+      "args": [
+        1,
+        63
+      ],
+      "line": 86
+    },
+    {
+      "id": 65,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 122
+      },
+      "args": [
+        1,
+        64
+      ],
+      "line": 87
+    },
+    {
+      "id": 66,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 123
+      },
+      "args": [
+        1,
+        65
+      ],
+      "line": 88
+    },
+    {
+      "id": 67,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 124
+      },
+      "args": [
+        1,
+        66
+      ],
+      "line": 89
+    },
+    {
+      "id": 68,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 125
+      },
+      "args": [
+        1,
+        67
+      ],
+      "line": 90
+    },
+    {
+      "id": 69,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 126
+      },
+      "args": [
+        1,
+        68
+      ],
+      "line": 91
+    },
+    {
+      "id": 70,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 127
+      },
+      "args": [
+        1,
+        69
+      ],
+      "line": 92
+    },
+    {
+      "id": 71,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 128
+      },
+      "args": [
+        1,
+        70
+      ],
+      "line": 93
+    },
+    {
+      "id": 72,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 129
+      },
+      "args": [
+        1,
+        71
+      ],
+      "line": 94
+    },
+    {
+      "id": 73,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 130
+      },
+      "args": [
+        1,
+        72
+      ],
+      "line": 95
+    },
+    {
+      "id": 74,
+      "op": "extract",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        4
+      ],
+      "offset": 64
+    },
+    {
+      "id": 75,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 66
+      },
+      "args": [
+        74,
+        4
+      ],
+      "line": 97
+    },
+    {
+      "id": 76,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 67
+      },
+      "args": [
+        74,
+        75
+      ],
+      "line": 98
+    },
+    {
+      "id": 77,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 68
+      },
+      "args": [
+        74,
+        76
+      ],
+      "line": 99
+    },
+    {
+      "id": 78,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 69
+      },
+      "args": [
+        74,
+        77
+      ],
+      "line": 100
+    },
+    {
+      "id": 79,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 70
+      },
+      "args": [
+        74,
+        78
+      ],
+      "line": 101
+    },
+    {
+      "id": 80,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 71
+      },
+      "args": [
+        74,
+        79
+      ],
+      "line": 102
+    },
+    {
+      "id": 81,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 72
+      },
+      "args": [
+        74,
+        80
+      ],
+      "line": 103
+    },
+    {
+      "id": 82,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 73
+      },
+      "args": [
+        74,
+        81
+      ],
+      "line": 104
+    },
+    {
+      "id": 83,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 74
+      },
+      "args": [
+        74,
+        82
+      ],
+      "line": 105
+    },
+    {
+      "id": 84,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 75
+      },
+      "args": [
+        74,
+        83
+      ],
+      "line": 106
+    },
+    {
+      "id": 85,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 76
+      },
+      "args": [
+        74,
+        84
+      ],
+      "line": 107
+    },
+    {
+      "id": 86,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 77
+      },
+      "args": [
+        74,
+        85
+      ],
+      "line": 108
+    },
+    {
+      "id": 87,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 78
+      },
+      "args": [
+        74,
+        86
+      ],
+      "line": 109
+    },
+    {
+      "id": 88,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 79
+      },
+      "args": [
+        74,
+        87
+      ],
+      "line": 110
+    },
+    {
+      "id": 89,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 80
+      },
+      "args": [
+        74,
+        88
+      ],
+      "line": 111
+    },
+    {
+      "id": 90,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 81
+      },
+      "args": [
+        74,
+        89
+      ],
+      "line": 112
+    },
+    {
+      "id": 91,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 82
+      },
+      "args": [
+        74,
+        90
+      ],
+      "line": 113
+    },
+    {
+      "id": 92,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 83
+      },
+      "args": [
+        74,
+        91
+      ],
+      "line": 114
+    },
+    {
+      "id": 93,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 84
+      },
+      "args": [
+        74,
+        92
+      ],
+      "line": 115
+    },
+    {
+      "id": 94,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 85
+      },
+      "args": [
+        74,
+        93
+      ],
+      "line": 116
+    },
+    {
+      "id": 95,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 86
+      },
+      "args": [
+        74,
+        94
+      ],
+      "line": 117
+    },
+    {
+      "id": 96,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 87
+      },
+      "args": [
+        74,
+        95
+      ],
+      "line": 118
+    },
+    {
+      "id": 97,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 88
+      },
+      "args": [
+        74,
+        96
+      ],
+      "line": 119
+    },
+    {
+      "id": 98,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 89
+      },
+      "args": [
+        74,
+        97
+      ],
+      "line": 120
+    },
+    {
+      "id": 99,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 90
+      },
+      "args": [
+        74,
+        98
+      ],
+      "line": 121
+    },
+    {
+      "id": 100,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 91
+      },
+      "args": [
+        74,
+        99
+      ],
+      "line": 122
+    },
+    {
+      "id": 101,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 92
+      },
+      "args": [
+        74,
+        100
+      ],
+      "line": 123
+    },
+    {
+      "id": 102,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 93
+      },
+      "args": [
+        74,
+        101
+      ],
+      "line": 124
+    },
+    {
+      "id": 103,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 94
+      },
+      "args": [
+        74,
+        102
+      ],
+      "line": 125
+    },
+    {
+      "id": 104,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 95
+      },
+      "args": [
+        74,
+        103
+      ],
+      "line": 126
+    },
+    {
+      "id": 105,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 96
+      },
+      "args": [
+        74,
+        104
+      ],
+      "line": 127
+    },
+    {
+      "id": 106,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 97
+      },
+      "args": [
+        74,
+        105
+      ],
+      "line": 128
+    },
+    {
+      "id": 107,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 98
+      },
+      "args": [
+        74,
+        106
+      ],
+      "line": 129
+    },
+    {
+      "id": 108,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 99
+      },
+      "args": [
+        74,
+        107
+      ],
+      "line": 130
+    },
+    {
+      "id": 109,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 100
+      },
+      "args": [
+        74,
+        108
+      ],
+      "line": 131
+    },
+    {
+      "id": 110,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 101
+      },
+      "args": [
+        74,
+        109
+      ],
+      "line": 132
+    },
+    {
+      "id": 111,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 102
+      },
+      "args": [
+        74,
+        110
+      ],
+      "line": 133
+    },
+    {
+      "id": 112,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 103
+      },
+      "args": [
+        74,
+        111
+      ],
+      "line": 134
+    },
+    {
+      "id": 113,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 104
+      },
+      "args": [
+        74,
+        112
+      ],
+      "line": 135
+    },
+    {
+      "id": 114,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 105
+      },
+      "args": [
+        74,
+        113
+      ],
+      "line": 136
+    },
+    {
+      "id": 115,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 106
+      },
+      "args": [
+        74,
+        114
+      ],
+      "line": 137
+    },
+    {
+      "id": 116,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 107
+      },
+      "args": [
+        74,
+        115
+      ],
+      "line": 138
+    },
+    {
+      "id": 117,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 108
+      },
+      "args": [
+        74,
+        116
+      ],
+      "line": 139
+    },
+    {
+      "id": 118,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 109
+      },
+      "args": [
+        74,
+        117
+      ],
+      "line": 140
+    },
+    {
+      "id": 119,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 110
+      },
+      "args": [
+        74,
+        118
+      ],
+      "line": 141
+    },
+    {
+      "id": 120,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 111
+      },
+      "args": [
+        74,
+        119
+      ],
+      "line": 142
+    },
+    {
+      "id": 121,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 112
+      },
+      "args": [
+        74,
+        120
+      ],
+      "line": 143
+    },
+    {
+      "id": 122,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 113
+      },
+      "args": [
+        74,
+        121
+      ],
+      "line": 144
+    },
+    {
+      "id": 123,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 114
+      },
+      "args": [
+        74,
+        122
+      ],
+      "line": 145
+    },
+    {
+      "id": 124,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 115
+      },
+      "args": [
+        74,
+        123
+      ],
+      "line": 146
+    },
+    {
+      "id": 125,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 116
+      },
+      "args": [
+        74,
+        124
+      ],
+      "line": 147
+    },
+    {
+      "id": 126,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 117
+      },
+      "args": [
+        74,
+        125
+      ],
+      "line": 148
+    },
+    {
+      "id": 127,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 118
+      },
+      "args": [
+        74,
+        126
+      ],
+      "line": 149
+    },
+    {
+      "id": 128,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 119
+      },
+      "args": [
+        74,
+        127
+      ],
+      "line": 150
+    },
+    {
+      "id": 129,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 120
+      },
+      "args": [
+        74,
+        128
+      ],
+      "line": 151
+    },
+    {
+      "id": 130,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 121
+      },
+      "args": [
+        74,
+        129
+      ],
+      "line": 152
+    },
+    {
+      "id": 131,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 122
+      },
+      "args": [
+        74,
+        130
+      ],
+      "line": 153
+    },
+    {
+      "id": 132,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 123
+      },
+      "args": [
+        74,
+        131
+      ],
+      "line": 154
+    },
+    {
+      "id": 133,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 124
+      },
+      "args": [
+        74,
+        132
+      ],
+      "line": 155
+    },
+    {
+      "id": 134,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 125
+      },
+      "args": [
+        74,
+        133
+      ],
+      "line": 156
+    },
+    {
+      "id": 135,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 126
+      },
+      "args": [
+        74,
+        134
+      ],
+      "line": 157
+    },
+    {
+      "id": 136,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 127
+      },
+      "args": [
+        74,
+        135
+      ],
+      "line": 158
+    },
+    {
+      "id": 137,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 128
+      },
+      "args": [
+        74,
+        136
+      ],
+      "line": 159
+    },
+    {
+      "id": 138,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 129
+      },
+      "args": [
+        74,
+        137
+      ],
+      "line": 160
+    },
+    {
+      "id": 139,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 130
+      },
+      "args": [
+        74,
+        138
+      ],
+      "line": 161
+    },
+    {
+      "id": 140,
+      "op": "bvmul",
+      "sort": {
+        "kind": "bits",
+        "width": 130
+      },
+      "args": [
+        73,
+        139
+      ],
+      "line": 162
+    },
+    {
+      "id": 141,
+      "op": "extract",
+      "sort": {
+        "kind": "bits",
+        "width": 64
+      },
+      "args": [
+        0
+      ],
+      "offset": 1
+    },
+    {
+      "id": 142,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [
+        1,
+        141
+      ],
+      "line": 164
+    },
+    {
+      "id": 143,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 66
+      },
+      "args": [
+        1,
+        0
+      ],
+      "line": 165
+    },
+    {
+      "id": 144,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 66
+      },
+      "args": [
+        74,
+        4
+      ],
+      "line": 166
+    },
+    {
+      "id": 145,
+      "op": "bvadd",
+      "sort": {
+        "kind": "bits",
+        "width": 66
+      },
+      "args": [
+        143,
+        144
+      ],
+      "line": 167
+    },
+    {
+      "id": 146,
+      "op": "extract",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [
+        145
+      ],
+      "offset": 0
+    }
+  ],
+  "initialization": "Known bits from Yosys JSON; unknown bits remain caller-supplied. SMT initial assertions discarded.",
+  "hardware": {
+    "register_cells": 0,
+    "memory_cells": 0,
+    "clock": null
+  },
+  "top": "Chisel2LeanReference"
+}

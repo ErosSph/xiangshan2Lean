@@ -1,0 +1,1 @@
+module T(input clock, en, output reg [3:0] q); initial q=4'b1x0x; always @(posedge clock) if(en) q<=q+1; endmodule

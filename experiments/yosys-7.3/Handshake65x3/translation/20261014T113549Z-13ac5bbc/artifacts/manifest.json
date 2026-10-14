@@ -1,0 +1,41 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\Handshake65x3\\original\\Chisel2LeanReference.v",
+  "source_sha256": "5b175013270f6781060e066be486c97303c9743c212b061537bd2f01439c3d43",
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Yosys.Handshake65x3",
+  "ir": "Yosys/Handshake65x3.ir.json",
+  "lean": "Yosys/Handshake65x3.lean",
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 6,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "nodes": 116,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\Handshake65x3\\translation\\20261014T113549Z-13ac5bbc",
+  "semantics": "Two-state, single positive-edge clock. clk2fflogic global steps retain edges. Explicit initial state; unknown initial bits unconstrained. Reachable division by zero is rejected by execution domains.",
+  "reader_sha256": "5492b3f86161d1a4e8f85f32efe82ed1cbf2f8f3cd89e44142e549d974b9ff3a",
+  "driver_sha256": "197252268d32fffc69aadc25c74c7cbf4ad606b9f0834ddb97849d5948120c6b",
+  "artifact_sha256": {
+    "before.json": "0673e3061246b765e44f5b3d501dd581293997453f5ed8bb305dd55ba87896c1",
+    "lowered.json": "4eaebf1616068a711785d993278b0b06afb2869560f93a34b051c35198a2939e",
+    "functional.smt2": "1d568f1e1fec797be03684151a8229e523ef4e9249e4f7c4d3bb6fe9ebba2bba",
+    "Yosys/Handshake65x3.lean": "f5a160affdd6d99fff22e2d0f0e14b1ea0334bc6dad314ae202748b9edf9342a",
+    "Yosys/Handshake65x3.ir.json": "4e23f496ee412df7cd0e76459a1858e45a4c12db33192534f8aa40a790a76f81"
+  }
+}

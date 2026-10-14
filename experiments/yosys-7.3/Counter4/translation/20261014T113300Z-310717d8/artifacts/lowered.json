@@ -1,0 +1,330 @@
+{
+  "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+  "modules": {
+    "Chisel2LeanReference": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "/work/design.v:19.1-32.10"
+      },
+      "ports": {
+        "clock": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "c2l_port_0": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "c2l_port_1": {
+          "direction": "output",
+          "bits": [ 5, 6, 7, 8 ]
+        }
+      },
+      "cells": {
+        "$auto$clk2fflogic.cc:108:sample_data$2": {
+          "hide_name": 1,
+          "type": "$ff",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "clk2fflogic": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 5, 6, 7, 8 ],
+            "Q": [ 9, 10, 11, 12 ]
+          }
+        },
+        "$auto$clk2fflogic.cc:108:sample_data$4": {
+          "hide_name": 1,
+          "type": "$ff",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 13, 14, 15, 16 ],
+            "Q": [ 17, 18, 19, 20 ]
+          }
+        },
+        "$auto$clk2fflogic.cc:123:mux$9": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11, 12 ],
+            "B": [ 17, 18, 19, 20 ],
+            "S": [ 21 ],
+            "Y": [ 5, 6, 7, 8 ]
+          }
+        },
+        "$auto$clk2fflogic.cc:92:sample_control_edge$6": {
+          "hide_name": 1,
+          "type": "$ff",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 2 ],
+            "Q": [ 22 ]
+          }
+        },
+        "$auto$clk2fflogic.cc:93:sample_control_edge$7": {
+          "hide_name": 1,
+          "type": "$eqx",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 22 ],
+            "B": [ "1", "0" ],
+            "Y": [ 21 ]
+          }
+        },
+        "$flatten\\Counter.$add$/work/design.v:14$2": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/work/design.v:14.14-14.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5, 6, 7, 8 ],
+            "B": [ "1", "0", "0", "0" ],
+            "Y": [ 23, 24, 25, 26 ]
+          }
+        },
+        "$flatten\\Counter.$procmux$3": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/work/design.v:13.14-13.19|/work/design.v:13.10-14.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5, 6, 7, 8 ],
+            "B": [ 23, 24, 25, 26 ],
+            "S": [ 4 ],
+            "Y": [ 27, 28, 29, 30 ]
+          }
+        },
+        "$flatten\\Counter.$procmux$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/design.v:11.9-11.14|/work/design.v:11.5-14.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 27, 28, 29, 30 ],
+            "B": [ "0", "0", "0", "0" ],
+            "S": [ 3 ],
+            "Y": [ 13, 14, 15, 16 ]
+          }
+        },
+        "Counter": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/work/design.v:26.11-31.4",
+            "module": "Counter",
+            "module_src": "/work/design.v:2.1-17.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        }
+      },
+      "netnames": {
+        "$auto$clk2fflogic.cc:101:sample_data$$flatten\\Counter.$0\\cnt[3:0]#sampled$3": {
+          "hide_name": 1,
+          "bits": [ 17, 18, 19, 20 ],
+          "attributes": {
+            "init": "0000"
+          }
+        },
+        "$auto$clk2fflogic.cc:101:sample_data$\\c2l_port_1#sampled$1": {
+          "hide_name": 1,
+          "bits": [ 9, 10, 11, 12 ],
+          "attributes": {
+          }
+        },
+        "$auto$clk2fflogic.cc:87:sample_control_edge$\\clock#sampled$5": {
+          "hide_name": 1,
+          "bits": [ 22 ],
+          "attributes": {
+            "init": "1"
+          }
+        },
+        "$auto$rtlil.cc:3302:Eqx$8": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\Counter.$0\\cnt[3:0]": {
+          "hide_name": 1,
+          "bits": [ 13, 14, 15, 16 ],
+          "attributes": {
+            "src": "/work/design.v:10.3-15.6"
+          }
+        },
+        "$flatten\\Counter.$add$/work/design.v:14$2_Y": {
+          "hide_name": 1,
+          "bits": [ 23, 24, 25, 26 ],
+          "attributes": {
+            "src": "/work/design.v:14.14-14.24"
+          }
+        },
+        "$flatten\\Counter.$procmux$3_Y": {
+          "hide_name": 1,
+          "bits": [ 27, 28, 29, 30 ],
+          "attributes": {
+          }
+        },
+        "Counter.clock": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "Counter clock",
+            "src": "/work/design.v:3.16-3.21"
+          }
+        },
+        "Counter.cnt": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8 ],
+          "attributes": {
+            "hdlname": "Counter cnt",
+            "src": "/work/design.v:9.13-9.16"
+          }
+        },
+        "Counter.io_en": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "hdlname": "Counter io_en",
+            "src": "/work/design.v:5.16-5.21"
+          }
+        },
+        "Counter.io_q": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8 ],
+          "attributes": {
+            "hdlname": "Counter io_q",
+            "src": "/work/design.v:6.16-6.20"
+          }
+        },
+        "Counter.reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "Counter reset",
+            "src": "/work/design.v:4.16-4.21"
+          }
+        },
+        "c2l_port_0": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/work/design.v:22.16-22.26"
+          }
+        },
+        "c2l_port_1": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8 ],
+          "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "src": "/work/design.v:23.16-23.26"
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/work/design.v:20.16-20.21"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/work/design.v:21.16-21.21"
+          }
+        }
+      }
+    }
+  }
+}

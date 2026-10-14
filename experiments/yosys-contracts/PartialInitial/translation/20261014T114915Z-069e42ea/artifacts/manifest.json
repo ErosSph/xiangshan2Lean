@@ -1,0 +1,43 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\PartialInitial\\T.v",
+  "source_sha256": "1ed5480a3234a38477cc63929a0b827b81bdf3f3be89c9e2a5febfff69dfd1a4",
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Contract.PartialInitial",
+  "ir": "Contract/PartialInitial.ir.json",
+  "lean": "Contract/PartialInitial.lean",
+  "arbitrary_inputs": [],
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 1,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "nodes": 22,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\PartialInitial\\translation\\20261014T114915Z-069e42ea",
+  "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+  "reader_sha256": "29b93b726832a098168d06331f904eb55526ca5de8700b1f3652be74a8ad275e",
+  "driver_sha256": "3c5f5e28e89849d076468f8a120f02cf27c7bbd0501a9aa566f03157a3f78373",
+  "artifact_sha256": {
+    "before.json": "2b4d097e27477fdd8c504e72a97c16ba98b1a6fd62fb9e5d34b80ff8db2a82e6",
+    "exposed.json": "f1461195b8078203d81c38a594f6ca703ed58d201c7800d2a75ce687d3028c24",
+    "lowered.json": "398872215c201feb8a72c921ab378dccbff02e51b351fc5a977847a04e38eecd",
+    "functional.smt2": "6ce4699bdb77c3b70c2f1beea2a0d49d6660ef2adb13f3e01ad92b4c89ad79d8",
+    "Contract/PartialInitial.lean": "adac1104af163818dfc61c7abde93435e0163086ff5d3afd2fe859e89258d0fd",
+    "Contract/PartialInitial.ir.json": "b463f15d992b8fb4bc178ed01c7b999d7ff22374a08d21c2f53e3a3916a69fd5"
+  }
+}

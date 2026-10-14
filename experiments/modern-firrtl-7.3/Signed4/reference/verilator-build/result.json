@@ -1,0 +1,28 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "Chisel2LeanReference",
+    "--Mdir",
+    "obj_dir",
+    "Chisel2LeanReference.v",
+    "trace.cpp"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\Signed4\\original",
+  "started_at": "2026-10-14T08:51:43.316554+00:00",
+  "exit_code": 0,
+  "ended_at": "2026-10-14T08:51:54.379789+00:00"
+}

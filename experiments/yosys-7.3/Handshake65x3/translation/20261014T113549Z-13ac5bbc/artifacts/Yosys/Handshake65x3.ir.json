@@ -1,0 +1,1650 @@
+{
+  "format": "chisel2lean-functional-v1",
+  "namespace": "Yosys.Handshake65x3",
+  "clock": "clock",
+  "symbolic_parameters": false,
+  "inputs": [
+    {
+      "name": "clock",
+      "field": "i0",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      }
+    },
+    {
+      "name": "reset",
+      "field": "i1",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      }
+    },
+    {
+      "name": "c2l_port_0",
+      "field": "i2",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      }
+    },
+    {
+      "name": "c2l_port_2",
+      "field": "i3",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      }
+    },
+    {
+      "name": "c2l_port_4",
+      "field": "i4",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "name": "c2l_port_1",
+      "field": "o0",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "node": 56
+    },
+    {
+      "name": "c2l_port_3",
+      "field": "o1",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "node": 104
+    },
+    {
+      "name": "c2l_port_5",
+      "field": "o2",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "node": 51
+    }
+  ],
+  "states": [
+    {
+      "name": "$auto$clk2fflogic.cc:92:sample_control_edge$16",
+      "field": "s0",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 1
+      },
+      "node": 0
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$14",
+      "field": "s1",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "initial": {
+        "mask": 36893488147419103231,
+        "value": 0
+      },
+      "node": 61
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$12",
+      "field": "s2",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "initial": {
+        "mask": 0,
+        "value": 0
+      },
+      "node": 12
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:92:sample_control_edge$26",
+      "field": "s3",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 1
+      },
+      "node": 0
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:92:sample_control_edge$36",
+      "field": "s4",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 1
+      },
+      "node": 0
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:92:sample_control_edge$6",
+      "field": "s5",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 1
+      },
+      "node": 0
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$24",
+      "field": "s6",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 0
+      },
+      "node": 69
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$22",
+      "field": "s7",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 0,
+        "value": 0
+      },
+      "node": 38
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$34",
+      "field": "s8",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "initial": {
+        "mask": 36893488147419103231,
+        "value": 0
+      },
+      "node": 85
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$32",
+      "field": "s9",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "initial": {
+        "mask": 0,
+        "value": 0
+      },
+      "node": 81
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$4",
+      "field": "s10",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 0
+      },
+      "node": 92
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$2",
+      "field": "s11",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 0,
+        "value": 0
+      },
+      "node": 25
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:92:sample_control_edge$56",
+      "field": "s12",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 1
+      },
+      "node": 0
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:92:sample_control_edge$46",
+      "field": "s13",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 1
+      },
+      "node": 0
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$54",
+      "field": "s14",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "initial": {
+        "mask": 36893488147419103231,
+        "value": 0
+      },
+      "node": 108
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$52",
+      "field": "s15",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "initial": {
+        "mask": 0,
+        "value": 0
+      },
+      "node": 104
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$44",
+      "field": "s16",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 0
+      },
+      "node": 115
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$42",
+      "field": "s17",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 0,
+        "value": 0
+      },
+      "node": 51
+    }
+  ],
+  "nodes": [
+    {
+      "id": 0,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "i0"
+    },
+    {
+      "id": 1,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "s2"
+    },
+    {
+      "id": 2,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "s1"
+    },
+    {
+      "id": 3,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s0"
+    },
+    {
+      "id": 4,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [
+        3,
+        0
+      ],
+      "line": 70
+    },
+    {
+      "id": 5,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 6,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        4,
+        5
+      ],
+      "line": 71
+    },
+    {
+      "id": 7,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 8,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 9,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        6,
+        7,
+        8
+      ],
+      "line": 71
+    },
+    {
+      "id": 10,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 11,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        9,
+        10
+      ],
+      "line": 75
+    },
+    {
+      "id": 12,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [
+        11,
+        2,
+        1
+      ],
+      "line": 74
+    },
+    {
+      "id": 13,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "i2"
+    },
+    {
+      "id": 14,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s11"
+    },
+    {
+      "id": 15,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s10"
+    },
+    {
+      "id": 16,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s5"
+    },
+    {
+      "id": 17,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [
+        16,
+        0
+      ],
+      "line": 89
+    },
+    {
+      "id": 18,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 19,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        17,
+        18
+      ],
+      "line": 90
+    },
+    {
+      "id": 20,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 21,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 22,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        19,
+        20,
+        21
+      ],
+      "line": 90
+    },
+    {
+      "id": 23,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 24,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        22,
+        23
+      ],
+      "line": 94
+    },
+    {
+      "id": 25,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        24,
+        15,
+        14
+      ],
+      "line": 93
+    },
+    {
+      "id": 26,
+      "op": "bvnot",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        25
+      ],
+      "line": 99
+    },
+    {
+      "id": 27,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s7"
+    },
+    {
+      "id": 28,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s6"
+    },
+    {
+      "id": 29,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s3"
+    },
+    {
+      "id": 30,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [
+        29,
+        0
+      ],
+      "line": 110
+    },
+    {
+      "id": 31,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 32,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        30,
+        31
+      ],
+      "line": 111
+    },
+    {
+      "id": 33,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 34,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 35,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        32,
+        33,
+        34
+      ],
+      "line": 111
+    },
+    {
+      "id": 36,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 37,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        35,
+        36
+      ],
+      "line": 115
+    },
+    {
+      "id": 38,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        37,
+        28,
+        27
+      ],
+      "line": 114
+    },
+    {
+      "id": 39,
+      "op": "bvnot",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        38
+      ],
+      "line": 120
+    },
+    {
+      "id": 40,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s17"
+    },
+    {
+      "id": 41,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s16"
+    },
+    {
+      "id": 42,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s13"
+    },
+    {
+      "id": 43,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [
+        42,
+        0
+      ],
+      "line": 131
+    },
+    {
+      "id": 44,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 45,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        43,
+        44
+      ],
+      "line": 132
+    },
+    {
+      "id": 46,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 47,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 48,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        45,
+        46,
+        47
+      ],
+      "line": 132
+    },
+    {
+      "id": 49,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 50,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        48,
+        49
+      ],
+      "line": 136
+    },
+    {
+      "id": 51,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        50,
+        41,
+        40
+      ],
+      "line": 135
+    },
+    {
+      "id": 52,
+      "op": "bvnot",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        51
+      ],
+      "line": 141
+    },
+    {
+      "id": 53,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "i4"
+    },
+    {
+      "id": 54,
+      "op": "bvor",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        52,
+        53
+      ],
+      "line": 145
+    },
+    {
+      "id": 55,
+      "op": "bvor",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        39,
+        54
+      ],
+      "line": 150
+    },
+    {
+      "id": 56,
+      "op": "bvor",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        26,
+        55
+      ],
+      "line": 155
+    },
+    {
+      "id": 57,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "i3"
+    },
+    {
+      "id": 58,
+      "op": "bvand",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        56,
+        57
+      ],
+      "line": 161
+    },
+    {
+      "id": 59,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 60,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        58,
+        59
+      ],
+      "line": 165
+    },
+    {
+      "id": 61,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [
+        60,
+        13,
+        12
+      ],
+      "line": 164
+    },
+    {
+      "id": 62,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 63,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        55,
+        62
+      ],
+      "line": 171
+    },
+    {
+      "id": 64,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        63,
+        25,
+        38
+      ],
+      "line": 170
+    },
+    {
+      "id": 65,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "i1"
+    },
+    {
+      "id": 66,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 67,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        65,
+        66
+      ],
+      "line": 177
+    },
+    {
+      "id": 68,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 69,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        67,
+        68,
+        64
+      ],
+      "line": 177
+    },
+    {
+      "id": 70,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "s9"
+    },
+    {
+      "id": 71,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "s8"
+    },
+    {
+      "id": 72,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s4"
+    },
+    {
+      "id": 73,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [
+        72,
+        0
+      ],
+      "line": 188
+    },
+    {
+      "id": 74,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 75,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        73,
+        74
+      ],
+      "line": 189
+    },
+    {
+      "id": 76,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 77,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 78,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        75,
+        76,
+        77
+      ],
+      "line": 189
+    },
+    {
+      "id": 79,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 80,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        78,
+        79
+      ],
+      "line": 193
+    },
+    {
+      "id": 81,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [
+        80,
+        71,
+        70
+      ],
+      "line": 192
+    },
+    {
+      "id": 82,
+      "op": "bvand",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        55,
+        25
+      ],
+      "line": 198
+    },
+    {
+      "id": 83,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 84,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        82,
+        83
+      ],
+      "line": 204
+    },
+    {
+      "id": 85,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [
+        84,
+        12,
+        81
+      ],
+      "line": 203
+    },
+    {
+      "id": 86,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 87,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        56,
+        86
+      ],
+      "line": 209
+    },
+    {
+      "id": 88,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        87,
+        57,
+        25
+      ],
+      "line": 209
+    },
+    {
+      "id": 89,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 90,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        65,
+        89
+      ],
+      "line": 212
+    },
+    {
+      "id": 91,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 92,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        90,
+        91,
+        88
+      ],
+      "line": 212
+    },
+    {
+      "id": 93,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "s15"
+    },
+    {
+      "id": 94,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "s14"
+    },
+    {
+      "id": 95,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s12"
+    },
+    {
+      "id": 96,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [
+        95,
+        0
+      ],
+      "line": 223
+    },
+    {
+      "id": 97,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 98,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        96,
+        97
+      ],
+      "line": 224
+    },
+    {
+      "id": 99,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 100,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 101,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        98,
+        99,
+        100
+      ],
+      "line": 224
+    },
+    {
+      "id": 102,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 103,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        101,
+        102
+      ],
+      "line": 228
+    },
+    {
+      "id": 104,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [
+        103,
+        94,
+        93
+      ],
+      "line": 227
+    },
+    {
+      "id": 105,
+      "op": "bvand",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        54,
+        38
+      ],
+      "line": 233
+    },
+    {
+      "id": 106,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 107,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        105,
+        106
+      ],
+      "line": 239
+    },
+    {
+      "id": 108,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [
+        107,
+        81,
+        104
+      ],
+      "line": 238
+    },
+    {
+      "id": 109,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 110,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        54,
+        109
+      ],
+      "line": 245
+    },
+    {
+      "id": 111,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        110,
+        38,
+        51
+      ],
+      "line": 244
+    },
+    {
+      "id": 112,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 113,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        65,
+        112
+      ],
+      "line": 250
+    },
+    {
+      "id": 114,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 115,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        113,
+        114,
+        111
+      ],
+      "line": 250
+    }
+  ],
+  "initialization": "Known bits from Yosys JSON; unknown bits remain caller-supplied. SMT initial assertions discarded.",
+  "hardware": {
+    "register_cells": 6,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "top": "Chisel2LeanReference"
+}

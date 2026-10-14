@@ -1,0 +1,1 @@
+module T(input clock, d, output q); assign q=d; always @(posedge clock) assert(d); endmodule

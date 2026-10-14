@@ -1,0 +1,1 @@
+module T(input en, d, output reg q); always_latch if(en) q<=d; endmodule

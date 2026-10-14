@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:34: error: [chisel2lean] @LeanParam must mark a primary constructor parameter, immutable scalar member val, or parameterless scalar def
+@LeanParam class ClassTarget(n: Int) extends Module {
+                  ^
+1 error

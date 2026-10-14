@@ -1,0 +1,12 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "-Q",
+    "-T",
+    "-p",
+    "read_json /work/before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json /work/unconstrained.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\SyncQueue3\\translation\\20261014T120144Z-9cf8679f\\artifacts",
+  "started_at": "2026-10-14T12:01:45.378842+00:00"
+}

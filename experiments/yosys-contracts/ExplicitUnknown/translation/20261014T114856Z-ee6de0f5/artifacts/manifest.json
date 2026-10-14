@@ -1,0 +1,49 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\ExplicitUnknown\\T.v",
+  "source_sha256": "be5ce1fb36ab3588febaf46c9a2ca5105af0aeae7ed96e0f8b159773ec4a299b",
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Contract.ExplicitUnknown",
+  "ir": "Contract/ExplicitUnknown.ir.json",
+  "lean": "Contract/ExplicitUnknown.lean",
+  "arbitrary_inputs": [
+    {
+      "name": "c2l_undefined_0",
+      "width": 1,
+      "source": "$auto$setundef.cc:550:execute$1"
+    }
+  ],
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 0,
+    "memory_cells": 0,
+    "clock": null
+  },
+  "nodes": 1,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\ExplicitUnknown\\translation\\20261014T114856Z-ee6de0f5",
+  "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+  "reader_sha256": "29b93b726832a098168d06331f904eb55526ca5de8700b1f3652be74a8ad275e",
+  "driver_sha256": "3c5f5e28e89849d076468f8a120f02cf27c7bbd0501a9aa566f03157a3f78373",
+  "artifact_sha256": {
+    "before.json": "ba381e20443be145ed00e4a091df8f0162d264a33a03e494f26af9ab3ddfac38",
+    "exposed.json": "01e8b929c335b96a5221924d0ada668951abf3b048d34f3e9dcd9c30b4a894e4",
+    "lowered.json": "a8f0b1be01ac3a61b63ce22e884907bc38f607fbdd4c70b47455ea3e69b77bd1",
+    "functional.smt2": "32bbefbd40d0cdde3dee232df711ee351751af5c2b91feb66f8e73677eada496",
+    "Contract/ExplicitUnknown.lean": "7207238a38bd88e19ae6eb9cc68e78bcc9b52de67097f965fa0744be7124e904",
+    "Contract/ExplicitUnknown.ir.json": "766f005831b3e232fdfda02497f5ccaca598eacb4e725cc48b1e187f05843c03"
+  }
+}

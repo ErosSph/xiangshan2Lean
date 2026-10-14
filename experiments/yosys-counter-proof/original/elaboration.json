@@ -1,0 +1,26 @@
+{
+  "format": "chisel2lean-official-elaboration-v1",
+  "module": "probes.Counter",
+  "constructor": [
+    4
+  ],
+  "chisel_version": "7.3.0",
+  "configuration": "fixed",
+  "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+  "classpath_sha256": "2b21743f2c71872f753a1fc0628cad5ee2b1a6e9c355cbf661f4a00f34ff5950",
+  "artifacts_sha256": {
+    "design.fir": "72689fcd945bdb75296773fef0116c87894d38a3921653cc8603aa6dbb83fe44",
+    "Chisel2LeanReference.v": "348826192ee7c1157911745889e4452290ad427327170a3b8f16ed0c0c8a5a11",
+    "ports.json": "f00f98e36ca6b63bf129f06037b49328b05d5cc7f982589c0f94ae9bada41cb4"
+  },
+  "source_frontend_used": false,
+  "independent_chisel_elaborations": 2,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-counter-proof\\elaboration",
+  "jvm": {
+    "chisel_version": "7.3.0",
+    "scala_version": "2.13.15",
+    "class_sha256": {
+      "probes.Counter": "acf86f080170fc66c47d25d9f5abd25b19649ed90c6ba882a8dbac36eb3bed4b"
+    }
+  }
+}

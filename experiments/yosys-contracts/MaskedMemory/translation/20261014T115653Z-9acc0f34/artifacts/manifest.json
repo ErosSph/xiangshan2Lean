@@ -1,0 +1,64 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\MaskedMemory\\MaskedMemory.v",
+  "source_sha256": "32a01d7fd330dce9cd1ebb30e4e06e0af6070576262e27b1b8567d13da7638f2",
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Contract.MaskedMemory",
+  "ir": "Contract/MaskedMemory.ir.json",
+  "lean": "Contract/MaskedMemory.lean",
+  "arbitrary_inputs": [
+    {
+      "name": "c2l_undefined_0",
+      "width": 4,
+      "source": "$auto$setundef.cc:550:execute$49"
+    },
+    {
+      "name": "c2l_undefined_1",
+      "width": 4,
+      "source": "$auto$setundef.cc:550:execute$51"
+    },
+    {
+      "name": "c2l_undefined_2",
+      "width": 4,
+      "source": "$auto$setundef.cc:550:execute$53"
+    },
+    {
+      "name": "c2l_undefined_3",
+      "width": 4,
+      "source": "$auto$setundef.cc:550:execute$55"
+    }
+  ],
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 0,
+    "memory_cells": 1,
+    "clock": "clock"
+  },
+  "nodes": 152,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\MaskedMemory\\translation\\20261014T115653Z-9acc0f34",
+  "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+  "reader_sha256": "40b8037a95ca2ada61390463412bbda780d36883be7a34f557c82bd059023141",
+  "driver_sha256": "3c5f5e28e89849d076468f8a120f02cf27c7bbd0501a9aa566f03157a3f78373",
+  "artifact_sha256": {
+    "before.json": "c4019d0bb9eb31b391e76fdf631aa24c76e8bc2d41079ad2a1eb0cf265caab45",
+    "exposed.json": "143cfaa095bec749f0bf93734ef4c4d91f0ccb53d87475224b23a280335eb851",
+    "lowered.json": "f52cfa4fe3395e86b2c07a48597fabd7a76c30ba04bd226218d0b4e0e47c759b",
+    "functional.smt2": "7582abab535611f3881f728ffe123045a1b72f44ea13d7e986e1089ecf5a7c14",
+    "Contract/MaskedMemory.lean": "57c6776962d19a23eb184d2e13b827bc17e1ef379c50cfd6affe1ffe01184d07",
+    "Contract/MaskedMemory.ir.json": "7bbe96e71c442e9ed7b55503dc3d67903c37d0dc714c137a24e711d2c01fef31"
+  }
+}

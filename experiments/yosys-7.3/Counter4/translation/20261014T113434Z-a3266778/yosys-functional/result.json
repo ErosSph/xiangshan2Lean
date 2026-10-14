@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "-Q",
+    "-T",
+    "-p",
+    "read_json /work/before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; check -assert; write_json /work/lowered.json; write_functional_smt2 /work/functional.smt2"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\Counter4\\translation\\20261014T113434Z-a3266778\\artifacts",
+  "started_at": "2026-10-14T11:34:35.886308+00:00",
+  "exit_code": 0,
+  "ended_at": "2026-10-14T11:34:37.300749+00:00"
+}

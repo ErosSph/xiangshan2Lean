@@ -1,0 +1,28 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "frontend_implementation": "CIRCT",
+  "firrtl_version": "99.0.0",
+  "source_firrtl_version": "99.0.0",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\UnknownVersion.fir",
+  "source_sha256": "894e6af000b02235a037b9118570db82eddc6ab26855a968717529f9d9bd1d56",
+  "compiler_sha256": "816caa79cb4d0f79177c7025c48318942b3c0a51ea2f04328725e893e5a47544",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.UnknownVersion",
+      "top": "UnknownVersion",
+      "ir": "FIRRTL/UnknownVersion.ir.json",
+      "lean": "FIRRTL/UnknownVersion.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261014T083711Z-2e1d2524",
+  "circt_version": "1.135.0",
+  "circt_sha256": "afb77f160063de31ea3137502148365f920e8c0bdfa39673d14fac7d34d78939",
+  "parsed_mlir_sha256": "5e42a3071cf28be25d1a29daecc967d046a8f07c61291ffb7d4d24adec932538",
+  "lowered_mlir_sha256": "5cb3a06fb2e1abd1a64a77328e59f5f4f7891e07d33777d27736f8ef141108b5",
+  "unsupported_effects_checked_before_optimization": true
+}

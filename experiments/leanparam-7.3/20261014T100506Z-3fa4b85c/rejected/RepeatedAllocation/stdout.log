@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:69: error: [chisel2lean] @LeanParam cannot yet preserve Seq/Option hardware allocation; a dependent instance/port/state layout is required
+  val children = Seq.fill(n)(Module(new leanparam.AnnotatedCounter(4)))
+       ^
+1 error

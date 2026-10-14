@@ -1,0 +1,1 @@
+module T(input clock, reset, d, output reg q); always @(posedge clock or posedge reset) if(reset) q<=0; else q<=d; endmodule

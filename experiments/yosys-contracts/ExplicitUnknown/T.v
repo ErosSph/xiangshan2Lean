@@ -1,0 +1,1 @@
+module T(input d, output q); assign q=1'bx; endmodule

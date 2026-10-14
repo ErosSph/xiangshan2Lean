@@ -1,0 +1,10 @@
+"builtin.module"() ({
+  "firrtl.circuit"() <{annotations = [], default_layer_specialization = #firrtl<layerspecialization enable>, name = "ConstantDivision"}> ({
+    "firrtl.module"() <{annotations = [], convention = #firrtl<convention scalarized>, domainInfo = [[], []], layers = [], portAnnotations = [[], []], portDirections = array<i1: false, true>, portLocations = [loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":4:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":5:12)], portNames = ["a", "q"], portSymbols = [], portTypes = [!firrtl.uint<8>, !firrtl.uint<8>], sym_name = "ConstantDivision"}> ({
+    ^bb0(%arg0: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":4:11), %arg1: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":5:12)):
+      %0 = "firrtl.constant"() <{value = 0 : ui8}> : () -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":6:23)
+      %1 = "firrtl.div"(%arg0, %0) : (!firrtl.uint<8>, !firrtl.uint<8>) -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":6:23)
+      "firrtl.matchingconnect"(%arg1, %1) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":6:5)
+    }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":3:10)
+  }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":2:1)
+}) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConstantDivision.fir":0:0)

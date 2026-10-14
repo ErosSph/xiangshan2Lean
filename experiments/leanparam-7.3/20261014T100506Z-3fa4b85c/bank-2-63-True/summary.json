@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "module": "AnnotatedBank",
+  "parameters": {
+    "n": 2,
+    "w": 63,
+    "extra": true
+  },
+  "cycles": 64,
+  "output_comparisons": 256,
+  "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+}

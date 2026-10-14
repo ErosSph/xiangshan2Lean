@@ -1,0 +1,30 @@
+{
+  "format": "chisel2lean-official-elaboration-v1",
+  "module": "xiangshan.backend.fu.AluDataModule",
+  "constructor": [
+    {
+      "class": "xiangshan.validation.NanhuCoreConfig",
+      "args": []
+    }
+  ],
+  "chisel_version": "7.3.0",
+  "configuration": "fixed",
+  "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-classpath.txt",
+  "classpath_sha256": "e684d7dded8d6d008174aa04f787785234b48c1911fedc699b78371f44a5e4cd",
+  "artifacts_sha256": {
+    "design.fir": "dca24a5b264f81015d6ec4555da213ceb3adfa15baf9b340616edc449edc27f8",
+    "Chisel2LeanReference.v": "f32b09044ef7c407d5e16824e5a313f5ebfa3e954f9e3a55bba40e26365fc82c",
+    "ports.json": "508345cd4bbb92e6b680af4f167c66614a6254ce8e1a3feff477c3dad840c7de"
+  },
+  "source_frontend_used": false,
+  "independent_chisel_elaborations": 2,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\XSAlu\\elaboration",
+  "jvm": {
+    "chisel_version": "7.3.0",
+    "scala_version": "2.13.15",
+    "class_sha256": {
+      "xiangshan.backend.fu.AluDataModule": "98c1f345f9d8b5954c3f7e86d5047d81b5838cdc2fd697cd359094e9ffa26c3a",
+      "xiangshan.validation.NanhuCoreConfig": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762"
+    }
+  }
+}

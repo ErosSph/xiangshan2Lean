@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "case": "Handshake3x1",
+  "module": "modernfixtures.HandshakeTop",
+  "constructor": [
+    3,
+    1
+  ],
+  "cycles": 384,
+  "output_comparisons": 2304,
+  "independent_integer_checks": 2304,
+  "state_fields": 2,
+  "submodule_instances": 2,
+  "signals": 58,
+  "initial_state": {
+    "c2lInstance0.c2lInstance12.c2lSSA27": 0,
+    "c2lInstance0.c2lInstance12.c2lSSA28": 0
+  },
+  "initialization_claim": "explicit zero experiment state; RTL --x-initial 0; no power-on guarantee",
+  "comparison": "executed Lean == independently elaborated official Chisel RTL; integer spec checks listed outputs",
+  "original_sources_sha256": {
+    "reference/src/main/scala/Handshake.scala": "a96e37219e5709b7de69e959d722a7bc58d1e35ec0bafb2776d3b73c6dfa4873"
+  },
+  "elaboration": {
+    "format": "chisel2lean-official-elaboration-v1",
+    "module": "modernfixtures.HandshakeTop",
+    "constructor": [
+      3,
+      1
+    ],
+    "chisel_version": "7.3.0",
+    "configuration": "fixed",
+    "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+    "classpath_sha256": "bc462630147e51bd0da64d08bff00c4e52156423fe54dfeee1815d16a5e38bc8",
+    "artifacts_sha256": {
+      "design.fir": "0f55f2da37f198a210413828c8f625578f270ea062d6262ba3220a4f0163ab41",
+      "Chisel2LeanReference.v": "f8d9fae72f803c7221ca704e5af302e72291945ace56519fc1784b66292154ca",
+      "ports.json": "bea0702bf415f283b99c010a8fc1fbf16aa2c9979a96f8aeea8ded9a5c84a92a"
+    },
+    "source_frontend_used": false,
+    "independent_chisel_elaborations": 2,
+    "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\Handshake3x1\\elaboration",
+    "jvm": {
+      "chisel_version": "7.3.0",
+      "scala_version": "2.13.15",
+      "class_sha256": {
+        "modernfixtures.HandshakeTop": "1926da5e01977290ac1dd631ca7c7361006887c22144f3e0fbc451041953437c"
+      }
+    }
+  },
+  "manifest": {
+    "format": "chisel2lean-firrtl-manifest-v1",
+    "frontend": "firrtl",
+    "frontend_implementation": "CIRCT",
+    "firrtl_version": "6.0.0",
+    "source_firrtl_version": "6.0.0",
+    "lean_version": "4.19.0",
+    "source": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\Handshake3x1\\original\\design.fir",
+    "source_sha256": "0f55f2da37f198a210413828c8f625578f270ea062d6262ba3220a4f0163ab41",
+    "compiler_sha256": "ae515ed8e48580399332c87a7b76406b7d18fb7790d8acbbd3170ecd00a4a7f4",
+    "configuration": "already-elaborated",
+    "symbolic_parameters": false,
+    "modules": [
+      {
+        "module": "Modern.Handshake3x1",
+        "top": "Chisel2LeanReference",
+        "ir": "Modern/Handshake3x1.ir.json",
+        "lean": "Modern/Handshake3x1.lean"
+      }
+    ],
+    "lean_checked": true,
+    "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261014T085233Z-74dd82fc",
+    "circt_version": "1.135.0",
+    "circt_sha256": "afb77f160063de31ea3137502148365f920e8c0bdfa39673d14fac7d34d78939",
+    "ssa_reader_sha256": "29f63f7d14452d69d50068f8abc7b160f22e445ca8b53781700f69a670b44e15",
+    "bridge_sha256": "d020d79222dc5ba3f4e456a88c7cb6c4f9061c75dc183bfc4b073f3c27730901",
+    "parsed_mlir_sha256": "81980aae8c3c6da712af0d0c28bd64fb217533d96bdaf0314473e019c3ac0f9f",
+    "lowered_mlir_sha256": "b4f5117398926789803d8dc4abdf925f6b7226bc36c12e32dcba489778f1c5f6",
+    "unsupported_effects_checked_before_optimization": true
+  },
+  "formal_translation_equivalence": false
+}

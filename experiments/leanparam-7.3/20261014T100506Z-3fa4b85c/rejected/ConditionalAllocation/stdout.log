@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:62: error: [chisel2lean] Conditional register declarations are outside the initial support subset
+    val extra = RegInit(0.U(4.W))
+         ^
+1 error

@@ -31,6 +31,14 @@ def verilator_command():
 def get_value(values: dict, path: str):
     if path in values:
         return values[path]
+    parts = path.split(".")
+    column = ".".join(part for part in parts if not part.isdigit())
+    if column in values:
+        value = values[column]
+        for part in parts:
+            if part.isdigit():
+                value = value[int(part)]
+        return value
     key = path
     indices = []
     while key not in values and "." in key:

@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:49: error: [chisel2lean] @LeanParam rejectedleanparam.ConstantMember.n must derive from symbolic constructor parameters or supported CDE scalar fields; a constant cannot introduce a parameter family
+  @LeanParam val n: Int = 4
+                  ^
+1 error

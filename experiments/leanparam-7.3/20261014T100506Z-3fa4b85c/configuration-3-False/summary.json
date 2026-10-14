@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "module": "AnnotatedConfiguration",
+  "parameters": {
+    "cfg_p_leanparam_SettingsKey_width": 3,
+    "cfg_p_leanparam_SettingsKey_enabled": false
+  },
+  "cycles": 64,
+  "output_comparisons": 128,
+  "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+}

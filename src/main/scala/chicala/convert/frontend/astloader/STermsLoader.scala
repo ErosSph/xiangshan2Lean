@@ -58,7 +58,18 @@ trait STermsLoader { self: Scala2Reader =>
         case Apply(fun, args) =>
           val sTerm = STermLoader(cInfo, fun).get._2.get
           val mArgs = args.map(MTermLoader(cInfo, _).get._2.get)
-          val tpe   = MTypeLoader.fromTpt(tpt).get
+          // A Scala Seq's erased element type cannot recover a parameterized
+          // Bundle layout. Retain the types of the already loaded values.
+          val sequenceType = if (chicala.ChicalaConfig.backend == "lean") sTerm match {
+            case SLib(name, _) if name.endsWith("Seq.apply") && mArgs.nonEmpty => Some(StSeq(mArgs.head.tpe))
+            case SApply(SLib(name, _), _, _) if name.endsWith("Seq.fill") && mArgs.size == 1 => Some(StSeq(mArgs.head.tpe))
+            case SApply(SLib(name, _), _, _) if name.endsWith("Seq.tabulate") => mArgs match {
+              case List(SFunction(_, body)) => Some(StSeq(body.tpe))
+              case _ => None
+            }
+            case _ => None
+          } else None
+          val tpe = sequenceType.getOrElse(MTypeLoader.fromTpt(tpt).get)
           Some((cInfo, Some(SApply(sTerm, mArgs, tpe))))
         case _ => None
       }

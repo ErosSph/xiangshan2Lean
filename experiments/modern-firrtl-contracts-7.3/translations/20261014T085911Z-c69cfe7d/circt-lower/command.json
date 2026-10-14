@@ -1,0 +1,19 @@
+{
+  "command": [
+    "E:\\ICT\\chisel2lean4\\.tools\\firtool-1.135.0\\firtool-1.135.0\\bin\\firtool.exe",
+    "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir",
+    "--ir-fir",
+    "--preserve-aggregate=none",
+    "--preserve-values=all",
+    "--disable-opt",
+    "--no-dedup",
+    "--default-layer-specialization=enable",
+    "--mlir-print-op-generic",
+    "--mlir-print-local-scope",
+    "--mlir-print-debuginfo",
+    "-o",
+    "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085911Z-c69cfe7d\\artifacts\\lowered.mlir"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4",
+  "started_at": "2026-10-14T08:59:11.874980+00:00"
+}

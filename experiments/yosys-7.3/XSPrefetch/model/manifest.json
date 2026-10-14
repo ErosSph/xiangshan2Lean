@@ -1,0 +1,49 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\XSPrefetch\\original\\Chisel2LeanReference.v",
+  "source_sha256": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927",
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Yosys.XSPrefetch",
+  "ir": "Yosys/XSPrefetch.ir.json",
+  "lean": "Yosys/XSPrefetch.lean",
+  "arbitrary_inputs": [
+    {
+      "name": "c2l_undefined_0",
+      "width": 2,
+      "source": "$auto$setundef.cc:550:execute$111"
+    }
+  ],
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 11,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "nodes": 280,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\XSPrefetch\\translation\\20261014T120055Z-07090b6c",
+  "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+  "reader_sha256": "40b8037a95ca2ada61390463412bbda780d36883be7a34f557c82bd059023141",
+  "driver_sha256": "3c5f5e28e89849d076468f8a120f02cf27c7bbd0501a9aa566f03157a3f78373",
+  "artifact_sha256": {
+    "before.json": "cb906431a9fdcb7782a06233538fb9092eaea7cc5545399f290f8c0198a5bad5",
+    "exposed.json": "c3225c63051505e0cbc6e7b7221499bf41b1c190f2d3839a0cb6f2d95bff3ee1",
+    "lowered.json": "e6b57cc23670abaf42518676ebfb606aeced039ea167a4b5b1450802c3751149",
+    "functional.smt2": "ea50dec2e67b3fef04bd428e5a0cb112227bea0de019cf5114444f87b2e42f2a",
+    "Yosys/XSPrefetch.lean": "a8541a4c2514a39291e0606f009017d2223fc4e85a56b53a6061c23a9e77b414",
+    "Yosys/XSPrefetch.ir.json": "115f75d082ed957aa3c1c4df827493ad3aa9f5ba2c4a362e796e3cedcb7a8179"
+  }
+}

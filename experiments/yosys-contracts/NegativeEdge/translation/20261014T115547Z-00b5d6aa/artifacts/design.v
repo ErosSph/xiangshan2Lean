@@ -1,0 +1,1 @@
+module T(input clock, d, output reg q); always @(negedge clock) q<=d; endmodule

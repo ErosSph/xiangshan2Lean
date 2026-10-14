@@ -1,0 +1,43 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\Division\\T.v",
+  "source_sha256": "3422fbeaf41aed24c2f192c48a8c538a6e64a70072cf717ceb6416eb23bfb02e",
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Contract.Division",
+  "ir": "Contract/Division.ir.json",
+  "lean": "Contract/Division.lean",
+  "arbitrary_inputs": [],
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 0,
+    "memory_cells": 0,
+    "clock": null
+  },
+  "nodes": 7,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\Division\\translation\\20261014T115611Z-9e3bcf28",
+  "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+  "reader_sha256": "40b8037a95ca2ada61390463412bbda780d36883be7a34f557c82bd059023141",
+  "driver_sha256": "3c5f5e28e89849d076468f8a120f02cf27c7bbd0501a9aa566f03157a3f78373",
+  "artifact_sha256": {
+    "before.json": "49f64cd5627039aba698680e2aec1c8baf08dc4d1659f539b3a96b0588af4041",
+    "exposed.json": "6598e45415375542509a06ca2fff33c366df2593ae929e69f5f43a3419814266",
+    "lowered.json": "49f64cd5627039aba698680e2aec1c8baf08dc4d1659f539b3a96b0588af4041",
+    "functional.smt2": "0202dc5e56c18d0976a5c5e5b05d951258eaaeb2a7b9a1b7571a8131e54b4987",
+    "Contract/Division.lean": "c6e7d8400190e9703cf1e659cbb7bb44267595c2736f6840736f0df2c2cb1512",
+    "Contract/Division.ir.json": "ad17264812c9adcbc1d5ca372825d9cda289b5088862dc182f96804e80d48706"
+  }
+}

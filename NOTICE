@@ -32,3 +32,16 @@ Apache-2.0 license and source checksum are retained in vendor/cde.
 Full XiangShan configuration integration uses immutable source dependencies
 listed in verification/xiangshan/config-dependencies.json. Fetched dependency
 sources and their original licenses remain in the project-local cache.
+
+The modern Chisel 7.3 elaboration validation also uses the unchanged Nanhu
+L2TlbPrefetch and AluDataModule under the same immutable dependency lock.
+Modern FIRRTL is parsed and normalized by the Apache-2.0 with LLVM-exception
+licensed CIRCT firtool 1.135.0; its generic MLIR SSA output is imported by a
+new reader. No CIRCT source implementation is copied into this project.
+
+The fixed-RTL frontend uses upstream Yosys 0.70 FunctionalIR and its existing
+SMT-LIB serializer, through the project-local YoWASP distribution. The bundled
+slang/sv-elab frontend performs SystemVerilog elaboration. Wheel SHA256 hashes
+are fixed in scripts/bootstrap_yosys.py; upstream and dependency licenses remain
+in the extracted wheel metadata. The Python reader and Lean exporter are new
+code; no Yosys, slang, sv-elab or Sparkle source implementation is vendored.

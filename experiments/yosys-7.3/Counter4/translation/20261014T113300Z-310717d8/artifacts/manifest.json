@@ -1,0 +1,41 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\Counter4\\original\\Chisel2LeanReference.v",
+  "source_sha256": "348826192ee7c1157911745889e4452290ad427327170a3b8f16ed0c0c8a5a11",
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Yosys.Counter4",
+  "ir": "Yosys/Counter4.ir.json",
+  "lean": "Yosys/Counter4.lean",
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 1,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "nodes": 24,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\Counter4\\translation\\20261014T113300Z-310717d8",
+  "semantics": "Two-state, single positive-edge clock. clk2fflogic global steps retain edges. Explicit initial state; unknown initial bits unconstrained. Reachable division by zero is rejected by execution domains.",
+  "reader_sha256": "5492b3f86161d1a4e8f85f32efe82ed1cbf2f8f3cd89e44142e549d974b9ff3a",
+  "driver_sha256": "9a686118296c1a7bb4e156e40275f5ad8c5fc8903b14a5a290af88ea9770a8fb",
+  "artifact_sha256": {
+    "before.json": "5ecea6c9fb7ab4ec56b484472b9e3cefea5c96b16b6beeeba880e42f0c73689d",
+    "lowered.json": "b64e727fee5dc35015249a75f893f3d68cea3db3cc76b13e49ae9802f767bb66",
+    "functional.smt2": "3fe1f3ba94da206f20151e9dd811b44de1f098661647f469e1dc1d89644ba1a5",
+    "Yosys/Counter4.lean": "356e4e71e14800ca6e3991397e43db8bb213d3dc47ce53be9602c3ee997a7638",
+    "Yosys/Counter4.ir.json": "349ad5d18315ac92fae85693434ff1f0faf7c19935b0802fee4c245f75653423"
+  }
+}

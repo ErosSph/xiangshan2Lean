@@ -1,0 +1,11 @@
+"builtin.module"() ({
+  "firrtl.circuit"() <{annotations = [], name = "Division"}> ({
+    "firrtl.module"() <{annotations = [], convention = #firrtl<convention scalarized>, domainInfo = [], layers = [], portAnnotations = [], portDirections = array<i1: false, false, false, true>, portLocations = [loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":4:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":5:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":6:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":7:12)], portNames = ["en", "a", "b", "q"], portSymbols = [], portTypes = [!firrtl.uint<1>, !firrtl.uint<8>, !firrtl.uint<8>, !firrtl.uint<8>], sym_name = "Division"}> ({
+    ^bb0(%arg0: !firrtl.uint<1> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":4:11), %arg1: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":5:11), %arg2: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":6:11), %arg3: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":7:12)):
+      %0 = "firrtl.div"(%arg1, %arg2) : (!firrtl.uint<8>, !firrtl.uint<8>) -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":8:24)
+      %1 = "firrtl.constant"() <{value = 7 : ui8}> : () -> !firrtl.const.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":8:35)
+      %2 = "firrtl.mux"(%arg0, %0, %1) : (!firrtl.uint<1>, !firrtl.uint<8>, !firrtl.const.uint<8>) -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":8:35)
+      "firrtl.matchingconnect"(%arg3, %2) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":8:5)
+    }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":3:10)
+  }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":2:1)
+}) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\Division.fir":0:0)

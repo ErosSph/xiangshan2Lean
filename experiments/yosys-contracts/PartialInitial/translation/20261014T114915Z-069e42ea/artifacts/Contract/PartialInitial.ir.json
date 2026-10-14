@@ -1,0 +1,335 @@
+{
+  "format": "chisel2lean-functional-v1",
+  "namespace": "Contract.PartialInitial",
+  "clock": "clock",
+  "symbolic_parameters": false,
+  "inputs": [
+    {
+      "name": "clock",
+      "field": "i0",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      }
+    },
+    {
+      "name": "en",
+      "field": "i1",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "name": "q",
+      "field": "o0",
+      "sort": {
+        "kind": "bits",
+        "width": 4
+      },
+      "node": 12
+    }
+  ],
+  "states": [
+    {
+      "name": "$auto$clk2fflogic.cc:92:sample_control_edge$6",
+      "field": "s0",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "initial": {
+        "mask": 1,
+        "value": 1
+      },
+      "node": 0
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$4",
+      "field": "s1",
+      "sort": {
+        "kind": "bits",
+        "width": 4
+      },
+      "initial": {
+        "mask": 15,
+        "value": 0
+      },
+      "node": 21
+    },
+    {
+      "name": "$auto$clk2fflogic.cc:108:sample_data$2",
+      "field": "s2",
+      "sort": {
+        "kind": "bits",
+        "width": 4
+      },
+      "initial": {
+        "mask": 10,
+        "value": 8
+      },
+      "node": 12
+    }
+  ],
+  "nodes": [
+    {
+      "id": 0,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "i0"
+    },
+    {
+      "id": 1,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 4
+      },
+      "args": [],
+      "field": "s2"
+    },
+    {
+      "id": 2,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 4
+      },
+      "args": [],
+      "field": "s1"
+    },
+    {
+      "id": 3,
+      "op": "state",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "s0"
+    },
+    {
+      "id": 4,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [
+        3,
+        0
+      ],
+      "line": 28
+    },
+    {
+      "id": 5,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 2
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 6,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        4,
+        5
+      ],
+      "line": 29
+    },
+    {
+      "id": 7,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 8,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 9,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [
+        6,
+        7,
+        8
+      ],
+      "line": 29
+    },
+    {
+      "id": 10,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 11,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        9,
+        10
+      ],
+      "line": 33
+    },
+    {
+      "id": 12,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 4
+      },
+      "args": [
+        11,
+        2,
+        1
+      ],
+      "line": 32
+    },
+    {
+      "id": 13,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 28
+      },
+      "args": [],
+      "value": 0
+    },
+    {
+      "id": 14,
+      "op": "concat",
+      "sort": {
+        "kind": "bits",
+        "width": 32
+      },
+      "args": [
+        13,
+        12
+      ],
+      "line": 36
+    },
+    {
+      "id": 15,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 32
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 16,
+      "op": "bvadd",
+      "sort": {
+        "kind": "bits",
+        "width": 32
+      },
+      "args": [
+        14,
+        15
+      ],
+      "line": 37
+    },
+    {
+      "id": 17,
+      "op": "extract",
+      "sort": {
+        "kind": "bits",
+        "width": 4
+      },
+      "args": [
+        16
+      ],
+      "offset": 0
+    },
+    {
+      "id": 18,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "field": "i1"
+    },
+    {
+      "id": 19,
+      "op": "constant",
+      "sort": {
+        "kind": "bits",
+        "width": 1
+      },
+      "args": [],
+      "value": 1
+    },
+    {
+      "id": 20,
+      "op": "=",
+      "sort": {
+        "kind": "bool"
+      },
+      "args": [
+        18,
+        19
+      ],
+      "line": 40
+    },
+    {
+      "id": 21,
+      "op": "ite",
+      "sort": {
+        "kind": "bits",
+        "width": 4
+      },
+      "args": [
+        20,
+        17,
+        12
+      ],
+      "line": 40
+    }
+  ],
+  "initialization": "Known bits from Yosys JSON; unknown bits remain caller-supplied. SMT initial assertions discarded.",
+  "hardware": {
+    "register_cells": 1,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "top": "T",
+  "arbitrary_inputs": []
+}

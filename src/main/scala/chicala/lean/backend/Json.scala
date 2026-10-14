@@ -29,8 +29,11 @@ object Json {
     case VectorType(n, e) => obj("kind" -> str("vec"), "size" -> param(n), "element" -> hwType(e))
     case InferType | _: InferBits => throw new IllegalArgumentException("Unresolved type cannot be serialized")
   }
-  def signal(s: Signal): String = obj("name" -> str(s.name), "field" -> str(LeanEmitter.field(s.name)),
-    "kind" -> str(s.kind), "type" -> hwType(s.tpe), "source" -> source(s.source))
+  def signal(s: Signal): String = {
+    val base = List("name" -> str(s.name), "field" -> str(LeanEmitter.field(s.name)),
+      "kind" -> str(s.kind), "type" -> hwType(s.tpe), "source" -> source(s.source))
+    obj((base ++ (if (s.sourcePath.isEmpty) Nil else List("source_path" -> arr(s.sourcePath.map(str))))): _*)
+  }
   def expression(e: TypedExpr): String = obj("kind" -> str(e.kind), "type" -> hwType(e.tpe),
     "name" -> str(e.name), "params" -> arr(e.params.map(param)), "args" -> arr(e.args.map(expression)))
   def module(n: Normalized, chiselVersion: Option[String] = Some("7.3.0"),
@@ -46,6 +49,14 @@ object Json {
     "next" -> arr(n.next.map { case (s, e) => obj("signal" -> str(s.name), "expression" -> expression(e)) }),
     "outputs" -> arr(n.outputs.map { case (s, e) => obj("signal" -> str(s.name), "expression" -> expression(e)) }),
     "resets" -> arr(n.resets.map { case (s, e) => obj("signal" -> str(s.name), "expression" -> expression(e)) }))
-    if (metadata.isEmpty) base else base.dropRight(1) + metadata.map { case (k, v) => "," + str(k) + ":" + v }.mkString + "}"
+    val preserved = if (n.module.preservedParameters.isEmpty) Nil else List("leanParameters" -> obj(
+      "format" -> str("chisel2lean-lean-parameters-v1"), "annotation" -> str("chisel2lean.LeanParam"),
+      "declarations" -> arr(n.module.preservedParameters.map(p => obj(
+        "owner" -> str(p.owner), "name" -> str(p.name), "kind" -> str(p.kind), "role" -> str(p.role),
+        "instance" -> arr(p.instance.map(str)), "expression" -> param(p.expression),
+        "dependencies" -> arr(n.module.parameters.map(_.name).filter(ParamSimplify.names(p.expression)).map(str)),
+        "source" -> source(p.source))))))
+    val extra = metadata ++ preserved
+    if (extra.isEmpty) base else base.dropRight(1) + extra.map { case (k, v) => "," + str(k) + ":" + v }.mkString + "}"
   }
 }

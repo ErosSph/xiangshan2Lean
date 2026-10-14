@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "module": "AnnotatedCounter",
+  "parameters": {
+    "n": 9
+  },
+  "cycles": 64,
+  "output_comparisons": 128,
+  "comparison": "executed Lean == official Chisel 7.3 RTL == independent integer specification"
+}

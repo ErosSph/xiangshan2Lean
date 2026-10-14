@@ -1,0 +1,29 @@
+[
+  {
+    "reset": true,
+    "inputs": {
+      "data.data": [1, 2],
+      "data.lanes": [[3, 4], [5, 6]],
+      "data.meta.code": [7, 8],
+      "data.meta.flag": [true, false],
+      "data.signed": [15, 3],
+      "data.valid": [true, true],
+      "enable": true,
+      "choose": false,
+      "index": 1
+    }
+  },
+  {
+    "inputs": {
+      "data.data": [6, 7],
+      "data.lanes": [[0, 1], [2, 3]],
+      "data.meta.code": [4, 5],
+      "data.meta.flag": [false, true],
+      "data.signed": [8, 9],
+      "data.valid": [false, true],
+      "enable": false,
+      "choose": false,
+      "index": 0
+    }
+  }
+]

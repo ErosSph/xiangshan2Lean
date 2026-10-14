@@ -1,0 +1,26 @@
+{
+  "format": "chisel2lean-official-elaboration-v1",
+  "module": "probes.SignedArithmetic",
+  "constructor": [
+    4
+  ],
+  "chisel_version": "7.3.0",
+  "configuration": "fixed",
+  "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+  "classpath_sha256": "bc462630147e51bd0da64d08bff00c4e52156423fe54dfeee1815d16a5e38bc8",
+  "artifacts_sha256": {
+    "design.fir": "301fad8acd0817105e8527b3aefca1f12bf28711c7260474acefe561564c0104",
+    "Chisel2LeanReference.v": "4ff9363553761b5c4f8872f5a976f1db7bd83b048080362a887b20bfa11c9790",
+    "ports.json": "3a189376b925f7c15712a6166678b7b1662861203be7ddb42c933299f8c9dc44"
+  },
+  "source_frontend_used": false,
+  "independent_chisel_elaborations": 2,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-7.3\\Signed4\\elaboration",
+  "jvm": {
+    "chisel_version": "7.3.0",
+    "scala_version": "2.13.15",
+    "class_sha256": {
+      "probes.SignedArithmetic": "bd8dae9e4bb4d89ca5b32d5293c967ffad87b31f83989c837cd8da1d3b393eea"
+    }
+  }
+}

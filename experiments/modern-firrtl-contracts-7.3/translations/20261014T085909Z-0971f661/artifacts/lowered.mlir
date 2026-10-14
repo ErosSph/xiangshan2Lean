@@ -1,0 +1,13 @@
+"builtin.module"() ({
+  "firrtl.circuit"() <{annotations = [], default_layer_specialization = #firrtl<layerspecialization enable>, name = "MultiClock"}> ({
+    "firrtl.module"() <{annotations = [], convention = #firrtl<convention scalarized>, domainInfo = [[], [], []], layers = [], portAnnotations = [[], [], []], portDirections = array<i1: false, false, true>, portLocations = [loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":4:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":5:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":6:12)], portNames = ["a", "b", "q"], portSymbols = [], portTypes = [!firrtl.clock, !firrtl.clock, !firrtl.uint<8>], sym_name = "MultiClock"}> ({
+    ^bb0(%arg0: !firrtl.clock loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":4:11), %arg1: !firrtl.clock loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":5:11), %arg2: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":6:12)):
+      %0 = "firrtl.reg"(%arg0) <{annotations = [], name = "r", nameKind = #firrtl<name_kind interesting_name>}> {firrtl.random_init_start = 0 : ui64} : (!firrtl.clock) -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":7:5)
+      %1 = "firrtl.reg"(%arg1) <{annotations = [], name = "s", nameKind = #firrtl<name_kind interesting_name>}> {firrtl.random_init_start = 8 : ui64} : (!firrtl.clock) -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":8:5)
+      %2 = "firrtl.constant"() <{value = 1 : ui8}> : () -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":9:16)
+      "firrtl.matchingconnect"(%0, %2) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":9:5)
+      "firrtl.matchingconnect"(%1, %0) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":10:5)
+      "firrtl.matchingconnect"(%arg2, %1) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":11:5)
+    }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":3:10)
+  }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":2:1)
+}) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\MultiClock.fir":0:0)

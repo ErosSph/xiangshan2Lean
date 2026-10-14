@@ -1,0 +1,53 @@
+{
+  "format": "chisel2lean-configuration-v1",
+  "module": "leanparam.AnnotatedConfiguration",
+  "parameters": {
+    "cfg_p_leanparam_SettingsKey_width": 9,
+    "cfg_p_leanparam_SettingsKey_enabled": true
+  },
+  "factories": {
+    "p": {
+      "class": "leanparam.TestConfig",
+      "args": [
+        9,
+        true
+      ]
+    }
+  },
+  "constructor": {},
+  "class_sha256": {
+    "leanparam.TestConfig": "4b3736676c76041ad338a19f492055680c90ff8ffd755ec9239b830a904047e8",
+    "leanparam.AnnotatedConfiguration": "91ba820fc4fffbd6cf748673ba45aea5f6b1532f1d598270f2bc9630464569ab"
+  },
+  "projection": [
+    {
+      "name": "cfg_p_leanparam_SettingsKey_width",
+      "kind": "Int",
+      "root": "p",
+      "key": "leanparam.SettingsKey",
+      "selectors": [
+        "width"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\tests\\fixtures\\leanparam\\Supported.scala",
+        "line": 55,
+        "column": 47
+      }
+    },
+    {
+      "name": "cfg_p_leanparam_SettingsKey_enabled",
+      "kind": "Bool",
+      "root": "p",
+      "key": "leanparam.SettingsKey",
+      "selectors": [
+        "enabled"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\tests\\fixtures\\leanparam\\Supported.scala",
+        "line": 56,
+        "column": 53
+      }
+    }
+  ],
+  "chisel_version": "7.3.0"
+}

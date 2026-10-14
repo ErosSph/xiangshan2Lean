@@ -1,0 +1,12 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "-Q",
+    "-T",
+    "-p",
+    "read_json /work/exposed.json; check -assert; write_json /work/lowered.json; write_functional_smt2 /work/functional.smt2"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-counter-proof\\translation\\20261014T115913Z-6a2c2ac4\\artifacts",
+  "started_at": "2026-10-14T11:59:17.603174+00:00"
+}

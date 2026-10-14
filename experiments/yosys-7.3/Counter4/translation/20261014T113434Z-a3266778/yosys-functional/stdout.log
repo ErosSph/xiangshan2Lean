@@ -1,0 +1,24 @@
+
+-- Running command `read_json /work/before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; check -assert; write_json /work/lowered.json; write_functional_smt2 /work/functional.smt2' --
+
+1. Executing JSON frontend.
+Importing module Chisel2LeanReference from JSON tree.
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Replacing Chisel2LeanReference.$flatten\Counter.$procdff$8 ($dff): CLK=\clock, D=$flatten\Counter.$0\cnt[3:0], Q=\c2l_port_1
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Chisel2LeanReference..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module Chisel2LeanReference...
+Found and reported 0 problems.
+
+6. Executing JSON backend.
+
+7. Executing Functional SMT Backend.
+Processing module `\Chisel2LeanReference`.

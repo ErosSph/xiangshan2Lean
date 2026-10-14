@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:30: error: [chisel2lean] @LeanParam must mark a primary constructor parameter, immutable scalar member val, or parameterless scalar def
+  @LeanParam def compute(x: Int): Int = n + x
+                  ^
+1 error

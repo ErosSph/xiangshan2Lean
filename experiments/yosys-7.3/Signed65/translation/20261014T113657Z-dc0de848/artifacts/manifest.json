@@ -1,0 +1,41 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\Signed65\\original\\Chisel2LeanReference.v",
+  "source_sha256": "2ff693226b4334329a093d408ba9c8ac2d629aa4bc17ffe7bf9542e3d02b61ce",
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Yosys.Signed65",
+  "ir": "Yosys/Signed65.ir.json",
+  "lean": "Yosys/Signed65.lean",
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 0,
+    "memory_cells": 0,
+    "clock": null
+  },
+  "nodes": 147,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-7.3\\Signed65\\translation\\20261014T113657Z-dc0de848",
+  "semantics": "Two-state, single positive-edge clock. clk2fflogic global steps retain edges. Explicit initial state; unknown initial bits unconstrained. Reachable division by zero is rejected by execution domains.",
+  "reader_sha256": "5492b3f86161d1a4e8f85f32efe82ed1cbf2f8f3cd89e44142e549d974b9ff3a",
+  "driver_sha256": "348722ddd8640f5428146b234cf0d30c62d5df267c31c1df8a3e45a3e066fb30",
+  "artifact_sha256": {
+    "before.json": "70a8fd243e1bc7bd8b2a3820b7bcb187dd841dd19e296a2e0192a22fd1d1cfdf",
+    "lowered.json": "70a8fd243e1bc7bd8b2a3820b7bcb187dd841dd19e296a2e0192a22fd1d1cfdf",
+    "functional.smt2": "347f020bf1724c900ef21a5f7f2ae499166993b6ee9309b614ba414ce9b5b2e3",
+    "Yosys/Signed65.lean": "1a1cf4e64a7d9ace3dff13325cb1ed4f4b6658cd18036efca8f5d9efe484924b",
+    "Yosys/Signed65.ir.json": "3541eb2cd203c3a5d915503c97e5083b90b3ec45c566556cb718494850d9d353"
+  }
+}

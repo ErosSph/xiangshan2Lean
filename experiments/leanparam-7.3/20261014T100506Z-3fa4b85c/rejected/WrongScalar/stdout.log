@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:6: error: [chisel2lean] @LeanParam supports Int and Boolean scalars; found String
+class WrongScalar(@LeanParam n: String) extends Module {
+                              ^
+1 error

@@ -1,0 +1,28 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "frontend_implementation": "CIRCT",
+  "firrtl_version": "6.0.0",
+  "source_firrtl_version": "6.0.0",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\ConditionalInvalid.fir",
+  "source_sha256": "f47de0c79d895208cfbd1c2e25c3204a8716c51f917292475bd2434b945f9ab2",
+  "compiler_sha256": "816caa79cb4d0f79177c7025c48318942b3c0a51ea2f04328725e893e5a47544",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.ConditionalInvalid",
+      "top": "ConditionalInvalid",
+      "ir": "FIRRTL/ConditionalInvalid.ir.json",
+      "lean": "FIRRTL/ConditionalInvalid.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261014T083928Z-2a91fbf1",
+  "circt_version": "1.135.0",
+  "circt_sha256": "afb77f160063de31ea3137502148365f920e8c0bdfa39673d14fac7d34d78939",
+  "parsed_mlir_sha256": "fabcc025943e9bd385f34821d2b62eb32a53722371ea8a977d272899ea4fd8d8",
+  "lowered_mlir_sha256": "6aff0b28dc1813ae167349f91bdb12409a397065a699f1fdabd9264fd837e89a",
+  "unsupported_effects_checked_before_optimization": true
+}

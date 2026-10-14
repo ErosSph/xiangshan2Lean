@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:20: error: [chisel2lean] @LeanParam cannot mark a mutable or lazy member
+  @LeanParam lazy val count: Int = n
+                       ^
+1 error

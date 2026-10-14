@@ -1,0 +1,16 @@
+"builtin.module"() ({
+  "firrtl.circuit"() <{annotations = [], name = "GatedClock"}> ({
+    "firrtl.module"() <{annotations = [], convention = #firrtl<convention scalarized>, domainInfo = [], layers = [], portAnnotations = [], portDirections = array<i1: false, false, true>, portLocations = [loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":4:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":5:11), loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":6:12)], portNames = ["clock", "en", "q"], portSymbols = [], portTypes = [!firrtl.clock, !firrtl.uint<1>, !firrtl.uint<8>], sym_name = "GatedClock"}> ({
+    ^bb0(%arg0: !firrtl.clock loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":4:11), %arg1: !firrtl.uint<1> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":5:11), %arg2: !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":6:12)):
+      %0 = "firrtl.asUInt"(%arg0) : (!firrtl.clock) -> !firrtl.uint<1> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":7:30)
+      %1 = "firrtl.and"(%0, %arg1) : (!firrtl.uint<1>, !firrtl.uint<1>) -> !firrtl.uint<1> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":7:30)
+      %2 = "firrtl.asClock"(%1) : (!firrtl.uint<1>) -> !firrtl.clock loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":7:30)
+      %3 = "firrtl.node"(%2) <{annotations = [], name = "gated", nameKind = #firrtl<name_kind interesting_name>}> : (!firrtl.clock) -> !firrtl.clock loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":7:5)
+      %4 = "firrtl.reg"(%3) <{annotations = [], name = "r", nameKind = #firrtl<name_kind interesting_name>}> : (!firrtl.clock) -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":8:5)
+      %5 = "firrtl.constant"() <{value = 1 : ui8}> : () -> !firrtl.const.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":9:16)
+      %6 = "firrtl.constCast"(%5) : (!firrtl.const.uint<8>) -> !firrtl.uint<8> loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":9:5)
+      "firrtl.matchingconnect"(%4, %6) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":9:5)
+      "firrtl.matchingconnect"(%arg2, %4) : (!firrtl.uint<8>, !firrtl.uint<8>) -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":10:5)
+    }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":3:10)
+  }) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":2:1)
+}) : () -> () loc("E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\GatedClock.fir":0:0)

@@ -10,7 +10,8 @@ import chicala.lean.backend.LeanEmitter
   * Helpers are pure definitions with the same input/old-state arguments.
   */
 object FirrtlLeanEmitter {
-  def emit(n: Normalized, contract: String): String = {
+  def emit(n: Normalized, contract: String,
+           provenance: String = "FIRRTL 1.5.6 frontend; Lean 4.19.0; IR v2; expression DAG."): String = {
     val ids = new IdentityHashMap[TypedExpr, String]()
     val seen = new IdentityHashMap[TypedExpr, java.lang.Boolean]()
     val nodes = mutable.ListBuffer.empty[TypedExpr]
@@ -33,7 +34,7 @@ object FirrtlLeanEmitter {
     val shared = n.copy(next = n.next.map { case (s, e) => s -> reference(e) },
       outputs = n.outputs.map { case (s, e) => s -> reference(e) },
       resets = n.resets.map { case (s, e) => s -> reference(e) })
-    val base = LeanEmitter.emit(shared, "FIRRTL 1.5.6 frontend; Lean 4.19.0; IR v2; expression DAG.", Some(contract))
+    val base = LeanEmitter.emit(shared, provenance, Some(contract))
     val index = base.indexOf("def step (")
     require(index >= 0, "Lean backend entry point changed")
     base.substring(0, index) + helpers + base.substring(index)

@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\leanparam\Rejected.scala:44: error: [chisel2lean] @LeanParam supports Int and Boolean scalars; found Seq[Int]
+  @LeanParam val sizes: Seq[Int] = Seq(n)
+                  ^
+1 error

@@ -1,0 +1,24 @@
+
+-- Running command `read_json /work/before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json /work/unconstrained.json' --
+
+1. Executing JSON frontend.
+Importing module Chisel2LeanReference from JSON tree.
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Modifying write port 0 on memory Chisel2LeanReference.QueueTop.queue.ram_ext.Memory: CLK=\clock, A=\QueueTop.queue.ram_ext.W0_addr, D=\c2l_port_1
+Replacing Chisel2LeanReference.$driver$QueueTop.queue.deq_ptr_value ($dff): CLK=\clock, D=$QueueTop.queue.deq_ptr_value$27, Q=\QueueTop.queue.deq_ptr_value
+Replacing Chisel2LeanReference.$driver$QueueTop.queue.enq_ptr_value ($dff): CLK=\clock, D=$QueueTop.queue.enq_ptr_value$26, Q=\QueueTop.queue.ram_ext.W0_addr
+Replacing Chisel2LeanReference.$driver$QueueTop.queue.maybe_full ($dff): CLK=\clock, D=$QueueTop.queue.maybe_full$28, Q=\QueueTop.queue.maybe_full
+Replacing Chisel2LeanReference.$driver$QueueTop.queue.ram_ext._R0_addr_d0 ($dff): CLK=\clock, D=\QueueTop.queue.ram_ext.R0_addr, Q=\QueueTop.queue.ram_ext._R0_addr_d0
+Replacing Chisel2LeanReference.$driver$QueueTop.queue.ram_ext._R0_en_d0 ($dff): CLK=\clock, D=1'1, Q=\QueueTop.queue.ram_ext._R0_en_d0
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Chisel2LeanReference..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing JSON backend.

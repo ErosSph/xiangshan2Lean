@@ -1,0 +1,1 @@
+module T(input en, input [3:0] a,b, output [3:0] q); assign q=en ? a/b : a; endmodule
