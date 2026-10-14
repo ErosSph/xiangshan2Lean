@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "compiler_sha256": "962c330ef5c04fd32326b150cd25230269f746d5de1b0bb641d850a39232fc4c",
+  "models": [
+    {
+      "module": "xiangshan.validation.ShiftHierarchy",
+      "lean_and_ir_unchanged": true,
+      "sha256": {
+        "ShiftHierarchy.lean": "b50bdd8d8739d69953943f6fd4907a56d0f0261c690326b37b920995ab0e14fa",
+        "ShiftHierarchy.ir.json": "a743140d112686042eb1a5da1093b6f4fcfa2ce8d38a89227c78b3ed162e0459"
+      }
+    },
+    {
+      "module": "xiangshan.validation.SfencePipeline",
+      "lean_and_ir_unchanged": true,
+      "sha256": {
+        "SfencePipeline.lean": "d193e8e853688f8e1ff3dae66c339910b9d1d1a6fce078699cfbc812141654d0",
+        "SfencePipeline.ir.json": "9e590f063966e7ee44a05406c6588865c0da30a26fb3a2e964aaa20e860db861"
+      }
+    },
+    {
+      "module": "xiangshan.backend.fu.RightShiftModule",
+      "lean_and_ir_unchanged": true,
+      "sha256": {
+        "RightShiftModule.lean": "6f04cb4fa83cf8334408f57ec953ae21e98e6e357b098956b45be3363bee6f73",
+        "RightShiftModule.ir.json": "98dfd1c4490479abe56cad1b1b9409af7a4d0d36626af2d478e017358744cb3b"
+      }
+    }
+  ]
+}

@@ -23,8 +23,36 @@ trait LeanSourceResolver {
     }
   }.traverse(tree)
 
-  case class ResolvedLeanSource(tree: ClassDef, metadata: String)
-  def resolveLeanSource(root: ClassDef): ResolvedLeanSource = new Resolver(root).run()
+  case class LeanConfigProjection(name: String, kind: String, root: String, key: String, fields: List[String], source: Source)
+  case class ResolvedLeanSource(tree: ClassDef, metadata: String,
+                                projections: List[LeanConfigProjection], requiredKeys: List[(String, String)])
+  private val resolvedSources = mutable.Map.empty[String, ResolvedLeanSource]
+  private val resolvingSources = mutable.Set.empty[String]
+
+  def needsLeanSourceResolution(c: ClassDef): Boolean = {
+    val customParent = c.impl.parents.exists(p =>
+      !Set("chisel3.Module", "chisel3.RawModule", "chisel3.Bundle")(p.tpe.typeSymbol.fullName))
+    val configuration = c.impl.body.collect { case d: DefDef if d.name == termNames.CONSTRUCTOR => d.vparamss.flatten }
+      .flatten.exists(p => p.tpt.tpe.baseClasses.exists(_.fullName == "org.chipsalliance.cde.config.Parameters"))
+    customParent || configuration
+  }
+
+  def resolveLeanSource(root: ClassDef): ResolvedLeanSource = {
+    val name = root.symbol.fullName
+    resolvedSources.get(name) match {
+      case Some(result) => result
+      case None =>
+        if (resolvingSources(name)) throw TranslationError(
+          Source(root.pos.source.file.path, root.pos.line, root.pos.column + 1),
+          "Recursive module/Bundle construction: " + name)
+        resolvingSources += name
+        try {
+          val result = new Resolver(root).run()
+          resolvedSources(name) = result
+          result
+        } finally { resolvingSources -= name }
+    }
+  }
 
   private class Resolver(root: ClassDef) {
     private def origin(t: Tree): Source = {
@@ -64,8 +92,7 @@ trait LeanSourceResolver {
     private val helpers = mutable.LinkedHashMap.empty[String, DefDef]
     private val usedGetters = mutable.LinkedHashSet.empty[(String, String)]
     private val requiredKeys = mutable.LinkedHashSet.empty[(String, String)]
-    private case class Projection(name: String, kind: String, root: String, key: String, fields: List[String], source: Source)
-    private val projections = mutable.LinkedHashMap.empty[(String, String, List[String]), Projection]
+    private val projections = mutable.LinkedHashMap.empty[(String, String, List[String]), LeanConfigProjection]
     private case class ConfigPath(root: String, key: String, fields: List[String])
     private val executionOrder = bases.reverse.flatMap(body)
     private val initializedAt = executionOrder.zipWithIndex.collect {
@@ -211,10 +238,48 @@ trait LeanSourceResolver {
         if (!name.matches("[a-zA-Z_][a-zA-Z0-9_]*") || roots.contains(name) || selected.contains(name))
           fail(t, "Configuration parameter name collision or unsupported identifier: " + name)
         if (projections.values.exists(_.name == name)) fail(t, "Ambiguous configuration field name: " + name)
-        Projection(name, k, p.root, p.key, p.fields, origin(t))
+        LeanConfigProjection(name, k, p.root, p.key, p.fields, origin(t))
       })
       requiredKeys += ((p.root, p.key))
-      Ident(TermName(entry.name)).setType(t.tpe).setPos(t.pos)
+      Ident(TermName(entry.name)).setType(if (k == "Int") definitions.IntTpe else definitions.BooleanTpe).setPos(t.pos)
+    }
+
+    /** Replace only source-known hardware constructors. Configuration objects
+      * stay in the real elaboration path; the Lean path passes their symbolic
+      * scalar projections, bound by the callee's original parameter positions.
+      */
+    private def lowerConstructor(t: Tree): Option[Tree] = {
+      if (!t.isInstanceOf[Apply]) return None
+      def unpack(x: Tree, args: List[Tree]): Option[(Tree, Tree, List[Tree])] = x match {
+        case Apply(f, as) => unpack(f, as ++ args)
+        case f @ Select(New(tpt), n) if n == termNames.CONSTRUCTOR => Some((f, tpt, args))
+        case _ => None
+      }
+      unpack(t, Nil).flatMap { case (fun, tpt, args) =>
+        val isHardwareClass = tpt.tpe.baseClasses.exists(s => Set("chisel3.RawModule", "chisel3.Bundle")(s.fullName))
+        val child = sourceClasses.get(tpt.tpe.typeSymbol.fullName).filterNot(_.symbol.isAnonymousClass)
+        if (!isHardwareClass) None
+        else child match {
+          case Some(c) if needsLeanSourceResolution(c) =>
+            val resolved = resolveLeanSource(c)
+            val originalParams = ctor(c).vparamss.flatten
+            if (args.size != originalParams.size) fail(t, "Cannot bind hardware constructor arguments")
+            val actual = originalParams.zip(args)
+            val configBindings = actual.collect { case (p, a) if cde(p.tpt.tpe) =>
+              clean(p.name) -> configRoot(a).getOrElse(fail(a,
+                "Hardware constructors require an unchanged constructor Parameters value; altered/local configurations are unsupported"))
+            }.toMap
+            resolved.requiredKeys.foreach { case (r, key) => requiredKeys += ((configBindings(r), key)) }
+            val plain = actual.collect { case (p, a) if !cde(p.tpt.tpe) => Lower.transform(a) }
+            val fields = resolved.projections.map { p =>
+              project(t, ConfigPath(configBindings(p.root), p.key, p.fields), p.kind)
+            }
+            Some(treeCopy.Apply(t.asInstanceOf[Apply], fun, plain ++ fields))
+          case None if args.exists(a => cde(a.tpe)) =>
+            fail(t, "Source of configured module/Bundle " + tpt.tpe.typeSymbol.fullName + " is required")
+          case _ => None
+        }
+      }
     }
 
     private object Lower extends Transformer {
@@ -235,6 +300,7 @@ trait LeanSourceResolver {
         try lower(original, t) finally { active = previous }
       }
       private def lower(original: Tree, t: Tree): Tree = {
+        lowerConstructor(t).foreach(result => return result)
         configPath(t) match {
           case Some(p) => kind(t.tpe) match {
             case Some(k) => return project(t, p, k)
@@ -320,7 +386,7 @@ trait LeanSourceResolver {
         "required_keys" -> Json.arr(requiredKeys.map { case (r, k) => Json.obj("root" -> Json.str(r), "key" -> Json.str(k)) }),
         "getters" -> Json.arr(usedGetters.map { case (o, n) => Json.str(o + "." + n) }),
         "sources" -> Json.arr(bases.map(c => Json.source(origin(c)))))
-      ResolvedLeanSource(result, metadata)
+      ResolvedLeanSource(result, metadata, projections.values.toList, requiredKeys.toList)
     }
 
     private def cdeRootIn(t: Tree): Boolean = {

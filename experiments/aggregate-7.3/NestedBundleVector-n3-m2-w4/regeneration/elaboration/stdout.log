@@ -1,0 +1,26 @@
+[warn] \tests\fixtures\aggregate\Supported.scala 111:10: [W004] Dynamic index with width 8 is too wide for Vec of size 3 (expected index width 2).
+[warn]     saved(index)(lane) := patch
+[warn]          ^
+[warn] \tests\fixtures\aggregate\Supported.scala 111:17: [W004] Dynamic index with width 8 is too wide for Vec of size 2 (expected index width 1).
+[warn]     saved(index)(lane) := patch
+[warn]                 ^
+[warn] \tests\fixtures\aggregate\Supported.scala 113:10: [W004] Dynamic index with width 8 is too wide for Vec of size 3 (expected index width 2).
+[warn]     saved(index)(lane).lanes(1) := saved(index)(lane).lanes(0)
+[warn]          ^
+[warn] \tests\fixtures\aggregate\Supported.scala 113:17: [W004] Dynamic index with width 8 is too wide for Vec of size 2 (expected index width 1).
+[warn]     saved(index)(lane).lanes(1) := saved(index)(lane).lanes(0)
+[warn]                 ^
+[warn] \tests\fixtures\aggregate\Supported.scala 113:41: [W004] Dynamic index with width 8 is too wide for Vec of size 3 (expected index width 2).
+[warn]     saved(index)(lane).lanes(1) := saved(index)(lane).lanes(0)
+[warn]                                         ^
+[warn] \tests\fixtures\aggregate\Supported.scala 113:48: [W004] Dynamic index with width 8 is too wide for Vec of size 2 (expected index width 1).
+[warn]     saved(index)(lane).lanes(1) := saved(index)(lane).lanes(0)
+[warn]                                                ^
+[warn] \tests\fixtures\aggregate\Supported.scala 116:20: [W004] Dynamic index with width 8 is too wide for Vec of size 3 (expected index width 2).
+[warn]   selected := saved(index)(lane)
+[warn]                    ^
+[warn] \tests\fixtures\aggregate\Supported.scala 116:27: [W004] Dynamic index with width 8 is too wide for Vec of size 2 (expected index width 1).
+[warn]   selected := saved(index)(lane)
+[warn]                           ^
+[warn] There were 8 warning(s) during hardware elaboration.
+Official Chisel 7.3.0 / CIRCT firtool RTL: E:\ICT\chisel2lean4\experiments\aggregate-7.3\NestedBundleVector-n3-m2-w4\regeneration\rtl\Chisel2LeanReference.v

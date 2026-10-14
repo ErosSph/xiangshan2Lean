@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "passed": 23,
+  "total": 23,
+  "compiler_sha256": "a0d8be5e20d68b539825c675550b08a8674174f4d1cc904fdf32e43add52894a",
+  "model_compiler_sha256": "d41765a6ab043d517e493028fa940275ee41e2dd92b2da29ed6b7f88bd4cbe7d",
+  "cases": [
+    {
+      "kind": "source-rejection",
+      "name": "MismatchBundleFields",
+      "status": "PASS"
+    },
+    {
+      "kind": "source-rejection",
+      "name": "MismatchAggregateShape",
+      "status": "PASS"
+    },
+    {
+      "kind": "source-rejection",
+      "name": "WriteThroughAlias",
+      "status": "PASS"
+    },
+    {
+      "kind": "source-rejection",
+      "name": "MuxClassMismatch",
+      "status": "PASS"
+    },
+    {
+      "kind": "source-rejection",
+      "name": "VecInitClassMismatch",
+      "status": "PASS"
+    },
+    {
+      "kind": "source-rejection",
+      "name": "MuxKindMismatch",
+      "status": "PASS"
+    },
+    {
+      "kind": "source-rejection",
+      "name": "EmptyBundleContract",
+      "status": "PASS"
+    },
+    {
+      "kind": "source-rejection",
+      "name": "MuxLengthContract",
+      "status": "PASS"
+    },
+    {
+      "kind": "source-rejection",
+      "name": "VecInitLengthContract",
+      "status": "PASS"
+    },
+    {
+      "kind": "aggregate-choice-domain",
+      "name": "MuxWidthContract",
+      "status": "PASS"
+    },
+    {
+      "kind": "aggregate-choice-domain",
+      "name": "VecInitWidthContract",
+      "status": "PASS"
+    },
+    {
+      "kind": "invalid-domain",
+      "name": "zero-n",
+      "status": "PASS"
+    },
+    {
+      "kind": "invalid-domain",
+      "name": "zero-w",
+      "status": "PASS"
+    },
+    {
+      "kind": "invalid-domain",
+      "name": "zero-m",
+      "status": "PASS"
+    },
+    {
+      "kind": "invalid-domain",
+      "name": "overflow-w",
+      "status": "PASS"
+    },
+    {
+      "kind": "invalid-domain",
+      "name": "out-of-int-range",
+      "status": "PASS"
+    },
+    {
+      "kind": "definedness",
+      "name": "outer-write",
+      "status": "PASS"
+    },
+    {
+      "kind": "definedness",
+      "name": "inner-write",
+      "status": "PASS"
+    },
+    {
+      "kind": "definedness",
+      "name": "outer-read",
+      "status": "PASS"
+    },
+    {
+      "kind": "definedness",
+      "name": "inner-read",
+      "status": "PASS"
+    },
+    {
+      "kind": "definedness",
+      "name": "inactive-write",
+      "status": "PASS"
+    },
+    {
+      "kind": "definedness",
+      "name": "reset-priority",
+      "status": "PASS"
+    },
+    {
+      "kind": "trace-layout",
+      "name": "bad-column-length",
+      "status": "PASS"
+    }
+  ]
+}

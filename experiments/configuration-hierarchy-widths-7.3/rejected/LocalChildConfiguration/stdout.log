@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\RejectedHierarchy.scala:10: error: [chisel2lean] Hardware constructors require an unchanged constructor Parameters value; altered/local configurations are unsupported
+  val leaf = Module(new ConfiguredLeaf(0)(new TestConfig(4, true, 0)))
+                                           ^
+1 error

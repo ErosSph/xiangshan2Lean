@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\Rejected.scala:35: error: [chisel2lean] Recursive inherited getter
+trait RecursiveWidth extends ConfigParams { override def laneWidth: Int = laneWidth + 1 }
+                                                                           ^
+1 error

@@ -85,9 +85,16 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
         val targets = leanTrees.toList.collect { case (name, (tree, pkg, true))
           if ChicalaConfig.module.isEmpty || ChicalaConfig.module == name || ChicalaConfig.module == name.split('.').last => name }
         val needed = scala.collection.mutable.LinkedHashSet.empty[String]
+        val resolvedTrees = scala.collection.mutable.Map.empty[String, Tree]
         def visit(name: String): Unit = if (!needed(name)) {
           needed += name
-          val tree = leanTrees(name)._1
+          val original = leanTrees(name)._1.asInstanceOf[ClassDef]
+          val tree = if (needsLeanSourceResolution(original)) {
+            val resolved = resolveLeanSource(original)
+            leanSourceMetadata(name) = resolved.metadata
+            resolved.tree
+          } else original
+          resolvedTrees(name) = tree
           new Traverser {
             override def traverse(t: Tree): Unit = {
               t match {
@@ -98,19 +105,11 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
             }
           }.traverse(tree)
         }
-        targets.foreach(visit)
+        targets.foreach(name => safely(leanTrees(name)._1) { visit(name) })
         needed.toList.reverse.foreach { name =>
           val (tree, pkg, isModule) = leanTrees(name)
           safely(tree) {
-            val c = tree.asInstanceOf[ClassDef]
-            val customParent = c.impl.parents.exists(p => !Set("chisel3.Module", "chisel3.RawModule", "chisel3.Bundle")(p.tpe.typeSymbol.fullName))
-            val config = c.impl.body.collect { case d: DefDef if d.name == termNames.CONSTRUCTOR => d.vparamss.flatten }
-              .flatten.exists(p => p.tpt.tpe.baseClasses.exists(_.fullName == "org.chipsalliance.cde.config.Parameters"))
-            if (isModule && (customParent || config)) {
-              val resolved = resolveLeanSource(c)
-              leanSourceMetadata(name) = resolved.metadata
-              applyOnTree(resolved.tree, pkg)
-            } else applyOnTree(tree, pkg)
+            resolvedTrees.get(name).foreach(applyOnTree(_, pkg))
           }
         }
         processTodos()
@@ -145,7 +144,7 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
                 val name = c.symbol.fullName
                 val pkg = c.symbol.owner.fullName
                 val bases = c.symbol.asClass.baseClasses.map(_.fullName)
-                val isBundle = bases.contains("chisel3.Bundle") && c.impl.parents.exists(_.tpe.typeSymbol.fullName == "chisel3.Bundle")
+                val isBundle = bases.contains("chisel3.Bundle") && !c.mods.isTrait && !c.symbol.isAbstractClass
                 val isModule = bases.contains("chisel3.RawModule") && !c.mods.isTrait && !c.symbol.isAbstractClass
                 if (isBundle || isModule) leanTrees(name) = (c, if (pkg == "<empty>") "" else pkg, isModule)
               case _ =>
@@ -163,7 +162,7 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
         else {
           val fullName = List(packageName, name.toString).filter(p => p.nonEmpty && p != "<empty>").mkString(".")
           val bases = tree.symbol.asClass.baseClasses.map(_.fullName)
-          val isBundle = bases.contains("chisel3.Bundle") && parents.exists(_.tpe.typeSymbol.fullName == "chisel3.Bundle")
+          val isBundle = bases.contains("chisel3.Bundle") && !mods.isTrait && !tree.symbol.isAbstractClass
           val isModule = bases.contains("chisel3.RawModule")
           if (isBundle || isModule) leanTrees(fullName) = (tree, if (packageName == "<empty>") "" else packageName, isModule)
         }

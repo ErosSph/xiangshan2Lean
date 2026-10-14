@@ -1,0 +1,62 @@
+{
+  "format": "chisel2lean-configuration-v1",
+  "module": "configuration.TwoConfigurations",
+  "parameters": {
+    "cfg_p_configuration_CoreKey_width": 5,
+    "cfg_other_configuration_CoreKey_width": 2
+  },
+  "factories": {
+    "p": {
+      "class": "configuration.TestConfig",
+      "args": [
+        5,
+        true,
+        0
+      ]
+    },
+    "other": {
+      "class": "configuration.TestConfig",
+      "args": [
+        2,
+        true,
+        0
+      ]
+    }
+  },
+  "constructor": {},
+  "class_sha256": {
+    "configuration.TestConfig": "7c3e863b5c70103b0648c240fe34e7277b75812712c3b3f410826435dd0f082a",
+    "configuration.TwoConfigurations": "71f1d41616e1d7d3b8a8b6e900b84079c6cb3d4be808808580934b37fb8cd148"
+  },
+  "projection": [
+    {
+      "name": "cfg_p_configuration_CoreKey_width",
+      "kind": "Int",
+      "root": "p",
+      "key": "configuration.CoreKey",
+      "selectors": [
+        "width"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+        "line": 46,
+        "column": 37
+      }
+    },
+    {
+      "name": "cfg_other_configuration_CoreKey_width",
+      "kind": "Int",
+      "root": "other",
+      "key": "configuration.CoreKey",
+      "selectors": [
+        "width"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+        "line": 47,
+        "column": 42
+      }
+    }
+  ],
+  "chisel_version": "7.3.0"
+}

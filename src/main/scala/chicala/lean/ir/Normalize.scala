@@ -41,6 +41,21 @@ object Normalize {
 
     private def process(statements: List[Statement], env: mutable.LinkedHashMap[String, Expr]): Unit =
       statements.foreach {
+        case IndexedAssign(name, indices, rhs, pos) =>
+          location = pos
+          val sig = byName.getOrElse(name, fail(s"Unknown connection target $name"))
+          if (sig.kind == "input") fail(s"Cannot drive input $name")
+          def update(value: Expr, tpe: HWType, path: List[VectorIndex]): Expr = path match {
+            case Nil => Resize(rhs, tpe)
+            case head :: tail => tpe match {
+              case VectorType(_, element) => head match {
+                case StaticIndex(i) => VecSet(value, i, update(VecGet(value, i), element, tail))
+                case DynamicIndex(i) => VecSetDynamic(value, i, update(VecGetDynamic(value, i), element, tail))
+              }
+              case _ => fail(s"Too many vector indices in connection to $name")
+            }
+          }
+          env(name) = update(env(name), sig.tpe, indices)
         case DynamicAssign(name, index, rhs, pos) =>
           location = pos
           val sig = byName.getOrElse(name, fail(s"Unknown connection target $name"))
@@ -139,6 +154,7 @@ object Normalize {
       case (BooleanType, BooleanType) => BooleanType
       case (x: BitsType, y: BitsType) if x.signed == y.signed =>
         BitsType(Width.max(x.width, y.width), x.signed)
+      case (VectorType(n, x), VectorType(m, y)) if n == m => VectorType(n, join(x, y))
       case _ if a == b => a
       case _ => fail(s"Incompatible Mux branches: $a and $b")
     }
@@ -391,6 +407,18 @@ object Normalize {
             case _ =>
           } }
         case DynamicAssign(_, i, rhs, src) => location = src; typed(i); typed(rhs)
+        case IndexedAssign(name, indices, rhs, src) =>
+          location = src
+          typed(rhs)
+          indices.foldLeft(byName(name).tpe) { (tpe, index) => tpe match {
+            case VectorType(n, element) =>
+              index match {
+                case StaticIndex(i) => requireDomain(POp("&&", List(POp(">=", List(i, PInt(0))), POp("<", List(i, n)))))
+                case DynamicIndex(i) => typed(i)
+              }
+              element
+            case _ => fail(s"Too many vector indices in connection to $name")
+          } }
         case Branch(HostBool(p), a, b, _) => underGuard(p)(audit(a)); underGuard(POp("!", List(p)))(audit(b))
         case Branch(c, a, b, src) => location = src; typed(c); audit(a); audit(b)
         case Generate(i, start, end, body, _) =>

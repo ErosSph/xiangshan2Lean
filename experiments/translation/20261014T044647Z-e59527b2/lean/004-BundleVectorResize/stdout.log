@@ -1,0 +1,8 @@
+E:\ICT\chisel2lean4\experiments\translation\20261014T044647Z-e59527b2\artifacts\aggregate\BundleVectorResize.lean:56:108: error: application type mismatch
+  inputs.data_lanes __elem
+argument
+  __elem
+has type
+  Fin (Int.toNat 2) : Type
+but is expected to have type
+  Fin p.n.toNat : Type

@@ -1,0 +1,48 @@
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:80:263: error: application type mismatch
+  inputs.a_lanes __elem __elem
+argument
+  __elem
+has type
+  Fin p.n.toNat : Type
+but is expected to have type
+  Fin (Int.toNat 2) : Type
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:80:394: error: application type mismatch
+  inputs.b_lanes __elem __elem
+argument
+  __elem
+has type
+  Fin p.n.toNat : Type
+but is expected to have type
+  Fin (Int.toNat 2) : Type
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:85:133: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  j
+has type
+  ?m.8635
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:85:133: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  j
+has type
+  ?m.8635
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:86:150: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  j
+has type
+  ?m.8974
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:86:150: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  j
+has type
+  ?m.8974
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:87:180: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  j
+has type
+  ?m.9423
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:87:180: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  j
+has type
+  ?m.9423
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:89:166: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  j
+has type
+  ?m.9859
+E:\ICT\chisel2lean4\experiments\translation\20261014T044747Z-4efcde7b\artifacts\aggregate\BundleVectorMux.lean:89:166: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  j
+has type
+  ?m.9859

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "test_top": "xiangshan.validation.ShiftHierarchy",
+  "parameters": {
+    "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 32
+  },
+  "cycles": 512,
+  "output_comparisons": 4096,
+  "comparison": "executed Lean == original-class official RTL == independent integer specification"
+}

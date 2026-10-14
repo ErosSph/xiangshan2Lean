@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "test_top": "xiangshan.validation.SfenceVectorPipeline",
+  "parameters": {
+    "n": 1,
+    "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits": 39,
+    "cfg_p_xiangshan_XSCoreParamsKey_AsidLength": 16
+  },
+  "cycles": 64,
+  "output_comparisons": 1270,
+  "configuration_snapshot": "experiments\\xiangshan-aggregate-7.3\\sfence-n1-addr39-asid16\\configuration.json"
+}

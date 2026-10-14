@@ -14,14 +14,20 @@ from simulate import eval_param, simulate
 from rtl import run_rtl
 
 
-def flat_outputs(values):
+def flat_outputs(values, signals=()):
     output = {}
-    def visit(name, value):
+    layouts = {s["name"]: s["source_path"] for s in signals if "source_path" in s}
+    def visit(name, value, indices=()):
         if isinstance(value, list):
             for index, item in enumerate(value):
-                visit(name + "." + str(index), item)
+                visit(name, item, (*indices, index))
         else:
-            output[name] = int(value)
+            if name in layouts:
+                positions = iter(indices)
+                path = ".".join(str(next(positions)) if part == "*" else part for part in layouts[name])
+            else:
+                path = ".".join([name, *map(str, indices)])
+            output[path] = int(value)
     for name, value in values.items():
         visit(name, value)
     return output
@@ -185,7 +191,7 @@ def run_case(ir_path, parameters, evidence):
         for sampling in ["pre", "post"]:
             if stateful and cycle == 0 and sampling == "pre":
                 continue  # RTL power-on state is not a known reset state.
-            a = flat_outputs(actual[sampling])
+            a = flat_outputs(actual[sampling], ir["signals"])
             b = expected[sampling]
             if a != b:
                 mismatch = {"cycle": cycle, "sampling": sampling, "lean": a, "rtl": b}

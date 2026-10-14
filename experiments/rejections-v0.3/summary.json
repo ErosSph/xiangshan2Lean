@@ -61,6 +61,12 @@
       "source_diagnostic": true
     },
     {
+      "module": "BundleConstructionConstraint",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
       "module": "Counter",
       "parameters": {
         "n": 0
@@ -173,6 +179,6 @@
       "kind": "undefined-collision"
     }
   ],
-  "passed": 25,
+  "passed": 26,
   "failed": 0
 }

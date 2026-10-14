@@ -93,6 +93,7 @@ lazy val reference = (project in file("reference"))
     scalacOptions ++= Seq("-language:reflectiveCalls", "-deprecation", "-feature"),
     Compile / unmanagedSourceDirectories += (LocalRootProject / baseDirectory).value / "audit" / "src" / "main" / "scala",
     Compile / unmanagedSourceDirectories += file("tests/fixtures/configuration").getAbsoluteFile,
+    Compile / unmanagedSourceDirectories += file("tests/fixtures/aggregate").getAbsoluteFile,
     writeReferenceClasspath := {
       val output = (LocalRootProject / baseDirectory).value / ".cache" / "reference-classpath.txt"
       val paths = (Compile / fullClasspath).value.files

@@ -140,11 +140,15 @@ object LeanEmitter {
         s"(fun $binding => ${expression(e.args.head, localMap)})"
       case "vecValues" =>
         val cases = e.args.zipWithIndex.map { case (v, i) => s"| $i => ${expression(v, locals)}" }.mkString(" ")
-        s"(fun j => match j.val with $cases | _ => default)"
+        s"(fun (j : Fin (${nat(e.tpe.asInstanceOf[VectorType].size, locals)})) => match j.val with $cases | _ => default)"
       case "vecGetDynamic" => s"(Chisel2Lean.Runtime.vecGet ${arg(0)} (Chisel2Lean.Runtime.vecIndex (${nat(e.params.head, locals)}) (${un(1)})))"
       case "vecSetDynamic" => s"(fun j => if j.val == Chisel2Lean.Runtime.vecIndex (${nat(e.params.head, locals)}) (${un(1)}) then ${arg(2)} else ${arg(0)} j)"
       case "vecResize" =>
-        s"(fun __elem => ${expression(e.args(1), locals + ("__vecElement" -> s"(${arg(0)} __elem)"))})"
+        val depth = locals.get("@vecResizeDepth").map(_.toInt).getOrElse(0)
+        val binding = if (depth == 0) "__elem" else "__elem_" + depth
+        val scope = locals ++ Map("@vecResizeDepth" -> (depth + 1).toString,
+          "__vecElement" -> s"(${arg(0)} $binding)")
+        s"(fun $binding => ${expression(e.args(1), scope)})"
       case "vecElement" => locals("__vecElement")
       case other => throw new IllegalArgumentException(s"Unsupported typed IR operation $other")
     }

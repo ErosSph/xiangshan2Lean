@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "module": "aggregate.BundleVectorWrites",
+  "parameters": {
+    "n": 3,
+    "w": 5,
+    "m": 3
+  },
+  "cycles": 96,
+  "output_comparisons": 4584,
+  "source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+  "ir_sha256": "c0bdc6f89767c66817e19520bded13a80a5070b668962a3e322412dbd202d648",
+  "lean_sha256": "d8e5a075ac50458db996f65cb33f9849be383375c0e9cb1dbf3b9e6b1b975f23"
+}

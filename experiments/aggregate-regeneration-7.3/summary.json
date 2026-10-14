@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "compiler_sha256": "a0d8be5e20d68b539825c675550b08a8674174f4d1cc904fdf32e43add52894a",
+  "identical_artifacts": 24,
+  "artifacts": [
+    {
+      "artifact": "configuration/ConfiguredBundlePipeline.ir.json",
+      "unchanged": true,
+      "previous_sha256": "f86db985a991061c8ccd1558a9806daa679d8dc46ba02525d75b22921cf06bab",
+      "regenerated_sha256": "f86db985a991061c8ccd1558a9806daa679d8dc46ba02525d75b22921cf06bab"
+    },
+    {
+      "artifact": "configuration/ConfiguredBundlePipeline.lean",
+      "unchanged": true,
+      "previous_sha256": "cc1d388cf942bbef786422fd04fd76b3be5f660e8da7c63485e137af3465e52e",
+      "regenerated_sha256": "cc1d388cf942bbef786422fd04fd76b3be5f660e8da7c63485e137af3465e52e"
+    },
+    {
+      "artifact": "configuration/ConfiguredHierarchy.ir.json",
+      "unchanged": true,
+      "previous_sha256": "ee2c23acda860d390e39243701c6076fccc489d8e077ae26f43c7ffd95c4c049",
+      "regenerated_sha256": "ee2c23acda860d390e39243701c6076fccc489d8e077ae26f43c7ffd95c4c049"
+    },
+    {
+      "artifact": "configuration/ConfiguredHierarchy.lean",
+      "unchanged": true,
+      "previous_sha256": "8113ef7e23c66c5c3ff6d8dae34cc6d137644f297cfab18f61081f5c9a73ce4a",
+      "regenerated_sha256": "8113ef7e23c66c5c3ff6d8dae34cc6d137644f297cfab18f61081f5c9a73ce4a"
+    },
+    {
+      "artifact": "configuration/ConfiguredLeaf.ir.json",
+      "unchanged": true,
+      "previous_sha256": "f33ea200fe53d23f979c296b99099b3873b7d8386da4f08dbfcce2c5046fed7c",
+      "regenerated_sha256": "f33ea200fe53d23f979c296b99099b3873b7d8386da4f08dbfcce2c5046fed7c"
+    },
+    {
+      "artifact": "configuration/ConfiguredLeaf.lean",
+      "unchanged": true,
+      "previous_sha256": "01e58ef29e0153b33717ce1c96dabe63022a9fe45bc8b675a6face97a980ec45",
+      "regenerated_sha256": "01e58ef29e0153b33717ce1c96dabe63022a9fe45bc8b675a6face97a980ec45"
+    },
+    {
+      "artifact": "configuration/ConfiguredPipeline.ir.json",
+      "unchanged": true,
+      "previous_sha256": "f73fc4f6159b0d7e98ef85c87a36413d55f35c70b91ece98190a9ac1aa11a6cc",
+      "regenerated_sha256": "f73fc4f6159b0d7e98ef85c87a36413d55f35c70b91ece98190a9ac1aa11a6cc"
+    },
+    {
+      "artifact": "configuration/ConfiguredPipeline.lean",
+      "unchanged": true,
+      "previous_sha256": "ab7656f82f2a6010c135a0bcb0b5b25c64ba9feefd91a174953ce40e32ec210f",
+      "regenerated_sha256": "ab7656f82f2a6010c135a0bcb0b5b25c64ba9feefd91a174953ce40e32ec210f"
+    },
+    {
+      "artifact": "configuration/ConfiguredStage.ir.json",
+      "unchanged": true,
+      "previous_sha256": "d182e5a476bc262e1546aefa69214c2741bb3c4d59eba09d8357988bfdefc778",
+      "regenerated_sha256": "d182e5a476bc262e1546aefa69214c2741bb3c4d59eba09d8357988bfdefc778"
+    },
+    {
+      "artifact": "configuration/ConfiguredStage.lean",
+      "unchanged": true,
+      "previous_sha256": "39b447662b033c52c34c2482fc78d930453e2d81ee241aa3d4761fea433df424",
+      "regenerated_sha256": "39b447662b033c52c34c2482fc78d930453e2d81ee241aa3d4761fea433df424"
+    },
+    {
+      "artifact": "configuration/InheritedPrimitive.ir.json",
+      "unchanged": true,
+      "previous_sha256": "5f38e7bfe9cc7cdff8a9dad06daa6c5fdc4bddb8ba634a648f1c25aa1058b814",
+      "regenerated_sha256": "5f38e7bfe9cc7cdff8a9dad06daa6c5fdc4bddb8ba634a648f1c25aa1058b814"
+    },
+    {
+      "artifact": "configuration/InheritedPrimitive.lean",
+      "unchanged": true,
+      "previous_sha256": "f9c9f48cc4bf21bc156f803bb82277aa992b056f7721a40300738157ef73a720",
+      "regenerated_sha256": "f9c9f48cc4bf21bc156f803bb82277aa992b056f7721a40300738157ef73a720"
+    },
+    {
+      "artifact": "configuration/ScalarDefaults.ir.json",
+      "unchanged": true,
+      "previous_sha256": "337e05a566a64183d624850e0b11372387b9cd5e97ac20793efd704969784e58",
+      "regenerated_sha256": "337e05a566a64183d624850e0b11372387b9cd5e97ac20793efd704969784e58"
+    },
+    {
+      "artifact": "configuration/ScalarDefaults.lean",
+      "unchanged": true,
+      "previous_sha256": "9261a121bdc354b90c806c206244469b8656a01e8109ff103d4a95657fea90bf",
+      "regenerated_sha256": "9261a121bdc354b90c806c206244469b8656a01e8109ff103d4a95657fea90bf"
+    },
+    {
+      "artifact": "configuration/TwoConfigurations.ir.json",
+      "unchanged": true,
+      "previous_sha256": "52e973bdc51ef837d921951571ac1e6fc5af896d6ab5f7c1564fd09933298431",
+      "regenerated_sha256": "52e973bdc51ef837d921951571ac1e6fc5af896d6ab5f7c1564fd09933298431"
+    },
+    {
+      "artifact": "configuration/TwoConfigurations.lean",
+      "unchanged": true,
+      "previous_sha256": "24ec518d7a3847a05871ae3f4ff86930eaae5a0997813af1b7b3635cb666ae8b",
+      "regenerated_sha256": "24ec518d7a3847a05871ae3f4ff86930eaae5a0997813af1b7b3635cb666ae8b"
+    },
+    {
+      "artifact": "xiangshan/validation/ShiftHierarchy.ir.json",
+      "unchanged": true,
+      "previous_sha256": "a743140d112686042eb1a5da1093b6f4fcfa2ce8d38a89227c78b3ed162e0459",
+      "regenerated_sha256": "a743140d112686042eb1a5da1093b6f4fcfa2ce8d38a89227c78b3ed162e0459"
+    },
+    {
+      "artifact": "xiangshan/validation/ShiftHierarchy.lean",
+      "unchanged": true,
+      "previous_sha256": "b50bdd8d8739d69953943f6fd4907a56d0f0261c690326b37b920995ab0e14fa",
+      "regenerated_sha256": "b50bdd8d8739d69953943f6fd4907a56d0f0261c690326b37b920995ab0e14fa"
+    },
+    {
+      "artifact": "xiangshan/validation/SfencePipeline.ir.json",
+      "unchanged": true,
+      "previous_sha256": "9e590f063966e7ee44a05406c6588865c0da30a26fb3a2e964aaa20e860db861",
+      "regenerated_sha256": "9e590f063966e7ee44a05406c6588865c0da30a26fb3a2e964aaa20e860db861"
+    },
+    {
+      "artifact": "xiangshan/validation/SfencePipeline.lean",
+      "unchanged": true,
+      "previous_sha256": "d193e8e853688f8e1ff3dae66c339910b9d1d1a6fce078699cfbc812141654d0",
+      "regenerated_sha256": "d193e8e853688f8e1ff3dae66c339910b9d1d1a6fce078699cfbc812141654d0"
+    },
+    {
+      "artifact": "xiangshan/backend/fu/RightShiftModule.ir.json",
+      "unchanged": true,
+      "previous_sha256": "98dfd1c4490479abe56cad1b1b9409af7a4d0d36626af2d478e017358744cb3b",
+      "regenerated_sha256": "98dfd1c4490479abe56cad1b1b9409af7a4d0d36626af2d478e017358744cb3b"
+    },
+    {
+      "artifact": "xiangshan/backend/fu/RightShiftModule.lean",
+      "unchanged": true,
+      "previous_sha256": "6f04cb4fa83cf8334408f57ec953ae21e98e6e357b098956b45be3363bee6f73",
+      "regenerated_sha256": "6f04cb4fa83cf8334408f57ec953ae21e98e6e357b098956b45be3363bee6f73"
+    },
+    {
+      "artifact": "xiangshan/validation/SfenceVectorPipeline.ir.json",
+      "unchanged": true,
+      "previous_sha256": "71d3e3f779b1a9b0afa3a32fd2423d1c98f320989a8248f710932905c0ce08ad",
+      "regenerated_sha256": "71d3e3f779b1a9b0afa3a32fd2423d1c98f320989a8248f710932905c0ce08ad"
+    },
+    {
+      "artifact": "xiangshan/validation/SfenceVectorPipeline.lean",
+      "unchanged": true,
+      "previous_sha256": "57c0fad8420456b8f1a027ce5eb5f7eb3ab5e48e8a1a0078e589cc2419b86f74",
+      "regenerated_sha256": "57c0fad8420456b8f1a027ce5eb5f7eb3ab5e48e8a1a0078e589cc2419b86f74"
+    }
+  ],
+  "meaning": "Previously tested IR and Lean source are byte-identical under the new compiler; previous RTL traces were not rerun here."
+}

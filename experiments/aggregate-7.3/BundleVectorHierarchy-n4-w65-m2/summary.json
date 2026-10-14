@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "module": "aggregate.BundleVectorHierarchy",
+  "parameters": {
+    "n": 4,
+    "w": 65,
+    "m": 2
+  },
+  "cycles": 64,
+  "output_comparisons": 3556,
+  "source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+  "ir_sha256": "99660d15c57d8f68521e68946795033cf521202396288aa89714321c5e092518",
+  "lean_sha256": "06382c8cbab79adb7c9ed7298be3e3a9d841c1208b780c9e64b45138a7fa56cd"
+}

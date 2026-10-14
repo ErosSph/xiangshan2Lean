@@ -1,0 +1,7 @@
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Contracts.scala:7: error: [chisel2lean] Empty Bundles are outside the supported source subset
+class EmptyPacket extends Bundle
+       ^
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Contracts.scala:66: error: Module or Bundle dependency could not be resolved
+class EmptyBundleContract extends Module {
+      ^
+2 errors

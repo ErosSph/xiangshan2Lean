@@ -1,0 +1,35 @@
+[warn] \tests\fixtures\aggregate\Supported.scala 47:22: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]   when(write) { saved(index) := patch }
+[warn]                      ^
+[warn] \tests\fixtures\aggregate\Supported.scala 49:10: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(index).data := saved(index).data + 1.U
+[warn]          ^
+[warn] \tests\fixtures\aggregate\Supported.scala 49:31: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(index).data := saved(index).data + 1.U
+[warn]                               ^
+[warn] \tests\fixtures\aggregate\Supported.scala 50:10: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(other).meta.code := patch.meta.code
+[warn]          ^
+[warn] \tests\fixtures\aggregate\Supported.scala 53:10: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(index).lanes(lane) := patch.lanes(lane)
+[warn]          ^
+[warn] \tests\fixtures\aggregate\Supported.scala 53:23: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(index).lanes(lane) := patch.lanes(lane)
+[warn]                       ^
+[warn] \tests\fixtures\aggregate\Supported.scala 53:44: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(index).lanes(lane) := patch.lanes(lane)
+[warn]                                            ^
+[warn] \tests\fixtures\aggregate\Supported.scala 54:10: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(other).lanes(otherLane) := data(other).lanes(otherLane)
+[warn]          ^
+[warn] \tests\fixtures\aggregate\Supported.scala 54:23: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(other).lanes(otherLane) := data(other).lanes(otherLane)
+[warn]                       ^
+[warn] \tests\fixtures\aggregate\Supported.scala 54:42: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(other).lanes(otherLane) := data(other).lanes(otherLane)
+[warn]                                          ^
+[warn] \tests\fixtures\aggregate\Supported.scala 54:55: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]     saved(other).lanes(otherLane) := data(other).lanes(otherLane)
+[warn]                                                       ^
+[warn] There were 11 warning(s) during hardware elaboration.
+Official Chisel 7.3.0 / CIRCT firtool RTL: E:\ICT\chisel2lean4\experiments\aggregate-7.3\BundleVectorWrites-n1-w1-m1\regeneration\rtl\Chisel2LeanReference.v

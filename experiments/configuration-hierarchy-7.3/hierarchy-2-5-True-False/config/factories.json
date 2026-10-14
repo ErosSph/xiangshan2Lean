@@ -1,0 +1,18 @@
+{
+  "p": {
+    "class": "configuration.TestConfig",
+    "args": [
+      2,
+      true,
+      1
+    ]
+  },
+  "other": {
+    "class": "configuration.TestConfig",
+    "args": [
+      5,
+      false,
+      3
+    ]
+  }
+}

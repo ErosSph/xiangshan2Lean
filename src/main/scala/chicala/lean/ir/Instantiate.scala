@@ -38,6 +38,10 @@ object Instantiate {
     def statements(xs: List[Statement], locals: Map[String, String] = Map.empty): List[Statement] = xs.map {
       case Assign(n, i, rhs, src) => Assign(prefix + "." + n, i.map(p(_, locals)), e(rhs, locals), src)
       case DynamicAssign(n, i, rhs, src) => DynamicAssign(prefix + "." + n, e(i, locals), e(rhs, locals), src)
+      case IndexedAssign(n, indices, rhs, src) => IndexedAssign(prefix + "." + n, indices.map {
+        case StaticIndex(i) => StaticIndex(p(i, locals))
+        case DynamicIndex(i) => DynamicIndex(e(i, locals))
+      }, e(rhs, locals), src)
       case Branch(c, a, b, src) => Branch(e(c, locals), statements(a, locals), statements(b, locals), src)
       case Generate(i, a, b, body, src) =>
         val fresh = prefix.replace('.', '_') + "__" + i
@@ -46,6 +50,7 @@ object Instantiate {
     child.copy(parameters = Nil, requirements = child.requirements.map(p(_)),
       signals = child.signals.map(s => s.copy(name = prefix + "." + s.name,
         kind = if (s.kind == "input" || s.kind == "output") "wire" else s.kind,
-        tpe = t(s.tpe), init = s.init.map(e(_)))), statements = statements(child.statements))
+        tpe = t(s.tpe), init = s.init.map(e(_)),
+        sourcePath = if (s.sourcePath.isEmpty) Nil else prefix.split('.').toList ++ s.sourcePath)), statements = statements(child.statements))
   }
 }

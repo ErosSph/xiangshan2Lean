@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\Rejected.scala:48: error: [chisel2lean] Overridden constructor vals are outside the initialization subset
+class OverrideVal(override val width: Int) extends WidthBase(width + 1)
+                                ^
+1 error

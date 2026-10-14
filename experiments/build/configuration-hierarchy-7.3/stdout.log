@@ -1,0 +1,15 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (11223 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] compiling 3 Scala sources to E:\ICT\chisel2lean4\target\scala-2.13\classes ...
+[info] done compiling
+[success] Total time: 34 s, completed 2026年10月14日 上午11:47:57
+[info] compiling 2 Scala sources to E:\ICT\chisel2lean4\reference\target\scala-2.13\classes ...
+[error] E:\ICT\chisel2lean4\tests\fixtures\configuration\Hierarchy.scala:39:19: method width in trait Aggregate cannot be accessed as a member of configuration.HasPacketTag with chisel3.Bundle from trait HasPacketTag in package configuration
+[error]   val tag = UInt((width + 1).W)
+[error]                   ^
+[error] one error found
+[error] (reference / Compile / compileIncremental) Compilation failed
+[error] Total time: 4 s, completed 2026年10月14日 上午11:48:01

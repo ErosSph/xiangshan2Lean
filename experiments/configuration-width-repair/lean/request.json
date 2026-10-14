@@ -1,0 +1,714 @@
+{
+  "parameters": {
+    "extra": 0,
+    "cfg_p_configuration_CoreKey_width": 5,
+    "cfg_other_configuration_CoreKey_width": 2
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "en": false,
+        "data.payload": 0,
+        "data.tag": 0,
+        "data.tail": 0,
+        "data.header.code": 0,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 0,
+        "data.tag": 2,
+        "data.tail": 1,
+        "data.header.code": 2,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 19,
+        "data.tag": 14,
+        "data.tail": 3,
+        "data.header.code": 24,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 30,
+        "data.tag": 15,
+        "data.tail": 8,
+        "data.header.code": 21,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 24,
+        "data.tag": 52,
+        "data.tail": 28,
+        "data.header.code": 10,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 30,
+        "data.tag": 56,
+        "data.tail": 21,
+        "data.header.code": 8,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 10,
+        "data.tag": 2,
+        "data.tail": 12,
+        "data.header.code": 23,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 25,
+        "data.tag": 12,
+        "data.tail": 2,
+        "data.header.code": 6,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 25,
+        "data.tag": 45,
+        "data.tail": 22,
+        "data.header.code": 6,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 21,
+        "data.tag": 33,
+        "data.tail": 26,
+        "data.header.code": 30,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 16,
+        "data.tag": 45,
+        "data.tail": 30,
+        "data.header.code": 31,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 3,
+        "data.tag": 29,
+        "data.tail": 9,
+        "data.header.code": 25,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 9,
+        "data.tag": 33,
+        "data.tail": 27,
+        "data.header.code": 24,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 3,
+        "data.tag": 36,
+        "data.tail": 16,
+        "data.header.code": 10,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 12,
+        "data.tag": 61,
+        "data.tail": 26,
+        "data.header.code": 9,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 5,
+        "data.tag": 18,
+        "data.tail": 24,
+        "data.header.code": 6,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 1,
+        "data.tag": 58,
+        "data.tail": 17,
+        "data.header.code": 31,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 13,
+        "data.tag": 13,
+        "data.tail": 21,
+        "data.header.code": 11,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 25,
+        "data.tag": 21,
+        "data.tail": 31,
+        "data.header.code": 6,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 5,
+        "data.tag": 50,
+        "data.tail": 26,
+        "data.header.code": 3,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 5,
+        "data.tag": 12,
+        "data.tail": 0,
+        "data.header.code": 18,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 8,
+        "data.tag": 6,
+        "data.tail": 31,
+        "data.header.code": 14,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 22,
+        "data.tag": 24,
+        "data.tail": 12,
+        "data.header.code": 5,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 29,
+        "data.tag": 1,
+        "data.tail": 2,
+        "data.header.code": 30,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 10,
+        "data.tag": 55,
+        "data.tail": 21,
+        "data.header.code": 23,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 14,
+        "data.tag": 3,
+        "data.tail": 5,
+        "data.header.code": 4,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 27,
+        "data.tag": 49,
+        "data.tail": 18,
+        "data.header.code": 11,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "en": true,
+        "data.payload": 7,
+        "data.tag": 27,
+        "data.tail": 11,
+        "data.header.code": 26,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 7,
+        "data.tag": 56,
+        "data.tail": 30,
+        "data.header.code": 31,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 29,
+        "data.tag": 16,
+        "data.tail": 20,
+        "data.header.code": 16,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 16,
+        "data.tag": 12,
+        "data.tail": 6,
+        "data.header.code": 12,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 27,
+        "data.tag": 46,
+        "data.tail": 29,
+        "data.header.code": 7,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 2,
+        "data.tag": 55,
+        "data.tail": 30,
+        "data.header.code": 19,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 14,
+        "data.tag": 59,
+        "data.tail": 5,
+        "data.header.code": 0,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 31,
+        "data.tag": 52,
+        "data.tail": 19,
+        "data.header.code": 8,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 1,
+        "data.tag": 30,
+        "data.tail": 19,
+        "data.header.code": 21,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 8,
+        "data.tag": 28,
+        "data.tail": 15,
+        "data.header.code": 23,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 9,
+        "data.tag": 5,
+        "data.tail": 4,
+        "data.header.code": 7,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 21,
+        "data.tag": 63,
+        "data.tail": 0,
+        "data.header.code": 25,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 7,
+        "data.tag": 26,
+        "data.tail": 7,
+        "data.header.code": 30,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 18,
+        "data.tag": 41,
+        "data.tail": 8,
+        "data.header.code": 19,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 8,
+        "data.tag": 45,
+        "data.tail": 16,
+        "data.header.code": 4,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 12,
+        "data.tag": 28,
+        "data.tail": 23,
+        "data.header.code": 4,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 19,
+        "data.tag": 24,
+        "data.tail": 23,
+        "data.header.code": 5,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 18,
+        "data.tag": 58,
+        "data.tail": 30,
+        "data.header.code": 16,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 24,
+        "data.tag": 21,
+        "data.tail": 15,
+        "data.header.code": 30,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 22,
+        "data.tag": 51,
+        "data.tail": 24,
+        "data.header.code": 22,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 8,
+        "data.tag": 4,
+        "data.tail": 26,
+        "data.header.code": 18,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 13,
+        "data.tag": 3,
+        "data.tail": 9,
+        "data.header.code": 26,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 12,
+        "data.tag": 51,
+        "data.tail": 18,
+        "data.header.code": 30,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 19,
+        "data.tag": 26,
+        "data.tail": 30,
+        "data.header.code": 22,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 2,
+        "data.tag": 49,
+        "data.tail": 13,
+        "data.header.code": 28,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 12,
+        "data.tag": 11,
+        "data.tail": 16,
+        "data.header.code": 13,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 8,
+        "data.tag": 20,
+        "data.tail": 15,
+        "data.header.code": 17,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 7,
+        "data.tag": 8,
+        "data.tail": 28,
+        "data.header.code": 28,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 13,
+        "data.tag": 46,
+        "data.tail": 28,
+        "data.header.code": 27,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 6,
+        "data.tag": 62,
+        "data.tail": 29,
+        "data.header.code": 4,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 14,
+        "data.tag": 42,
+        "data.tail": 26,
+        "data.header.code": 19,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 3,
+        "data.tag": 28,
+        "data.tail": 24,
+        "data.header.code": 20,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 5,
+        "data.tag": 62,
+        "data.tail": 1,
+        "data.header.code": 26,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 12,
+        "data.tag": 33,
+        "data.tail": 10,
+        "data.header.code": 6,
+        "data.header.valid": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": false,
+        "data.payload": 7,
+        "data.tag": 43,
+        "data.tail": 5,
+        "data.header.code": 19,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 9,
+        "data.tag": 55,
+        "data.tail": 5,
+        "data.header.code": 19,
+        "data.header.valid": 1
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "en": true,
+        "data.payload": 10,
+        "data.tag": 0,
+        "data.tail": 26,
+        "data.header.code": 28,
+        "data.header.valid": 0
+      }
+    }
+  ],
+  "initial_state": null
+}

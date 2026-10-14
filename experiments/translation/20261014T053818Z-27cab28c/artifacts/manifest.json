@@ -1,0 +1,29 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\verification\\xiangshan\\config\\reference\\Vector.scala",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Bundle.scala",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\XSCore.scala",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Parameters.scala"
+  ],
+  "modules": [
+    {
+      "module": "xiangshan.validation.SfenceVectorPipeline",
+      "namespace": "xiangshan.validation.SfenceVectorPipeline",
+      "ir": "xiangshan/validation/SfenceVectorPipeline.ir.json",
+      "lean": "xiangshan/validation/SfenceVectorPipeline.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\verification\\xiangshan\\config\\reference\\Vector.scala": "4969cabbb39be9a8d74c3d86d85a75554addfd2fc14202570d725d368eae3d91",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Bundle.scala": "3ddef7a02b3d22bed3eb96ee3bafc4e91f3ee7b1feb54739b14317389395f61a",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\XSCore.scala": "b1c34dede360f505759fa660f7391dff9ed0719cf388bd21840aa7641f55569f",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Parameters.scala": "5e1419aaad93e212f571672c5b0c46546c49cb3547667dbd3f9844b2705b63ad"
+  },
+  "compiler_sha256": "1fb9b941a4b84eb0320cfb345bbe99c9306975ea74bb2d76ead170fa86307446",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261014T053818Z-27cab28c"
+}

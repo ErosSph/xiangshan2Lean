@@ -31,6 +31,15 @@ trait STermImpls { self: ChicalaAst =>
   trait SSelectImpl { self: SSelect =>
     // FIXME
     val relatedIdents = RelatedIdents.empty
+
+    // Parameter expressions such as n + 1 store n as the receiver of a
+    // selection. Replacing only Apply arguments leaves a callee's n behind.
+    override def replaced(r: Map[String, MStatement]): SSelect = replacedThis(r) match {
+      case SSelect(from, name, tpe) => SSelect(from.replaced(r), name, tpe.replaced(r))
+      case _ =>
+        reportError(NoPosition, "`replaced` should keep data type not changed")
+        this
+    }
   }
 
   trait SBlockImpl { self: SBlock =>
@@ -58,6 +67,14 @@ trait STermImpls { self: ChicalaAst =>
   }
 
   trait SIfImpl { self: SIf =>
+    override def replaced(r: Map[String, MStatement]): SIf = replacedThis(r) match {
+      case SIf(cond, thenp, elsep, tpe) =>
+        SIf(cond.replaced(r), thenp.replaced(r), elsep.replaced(r), tpe.replaced(r))
+      case _ =>
+        reportError(NoPosition, "`replaced` should keep data type not changed")
+        this
+    }
+
     val relatedIdents = {
       val thenRI = thenp.relatedIdents
       val elseRI = elsep.relatedIdents

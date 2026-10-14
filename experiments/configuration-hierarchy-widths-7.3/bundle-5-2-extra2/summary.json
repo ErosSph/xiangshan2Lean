@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "module": "ConfiguredBundlePipeline",
+  "parameters": {
+    "extra": 2,
+    "cfg_p_configuration_CoreKey_width": 5,
+    "cfg_other_configuration_CoreKey_width": 2
+  },
+  "cycles": 64,
+  "label": "bundle-5-2-extra2",
+  "output_comparisons": 640,
+  "comparison": "executed Lean == original official RTL == independent specification"
+}

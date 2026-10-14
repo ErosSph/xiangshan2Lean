@@ -1,0 +1,356 @@
+[
+  {
+    "state": {
+      "saved.valid": [
+        true,
+        true
+      ],
+      "saved.signed": [
+        15,
+        3
+      ],
+      "saved.meta.flag": [
+        true,
+        false
+      ],
+      "saved.meta.code": [
+        7,
+        8
+      ],
+      "saved.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "saved.data": [
+        1,
+        2
+      ]
+    },
+    "pre": {
+      "selected.valid": true,
+      "selected.signed": 3,
+      "selected.meta.flag": false,
+      "selected.meta.code": 8,
+      "selected.lanes": [
+        5,
+        6
+      ],
+      "selected.data": 2,
+      "out.valid": [
+        true,
+        true
+      ],
+      "out.signed": [
+        15,
+        3
+      ],
+      "out.meta.flag": [
+        true,
+        false
+      ],
+      "out.meta.code": [
+        7,
+        8
+      ],
+      "out.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "out.data": [
+        1,
+        2
+      ],
+      "mixed.valid": [
+        true,
+        true
+      ],
+      "mixed.signed": [
+        15,
+        3
+      ],
+      "mixed.meta.flag": [
+        true,
+        false
+      ],
+      "mixed.meta.code": [
+        7,
+        8
+      ],
+      "mixed.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "mixed.data": [
+        1,
+        2
+      ]
+    },
+    "post": {
+      "selected.valid": true,
+      "selected.signed": 3,
+      "selected.meta.flag": false,
+      "selected.meta.code": 8,
+      "selected.lanes": [
+        5,
+        6
+      ],
+      "selected.data": 2,
+      "out.valid": [
+        true,
+        true
+      ],
+      "out.signed": [
+        15,
+        3
+      ],
+      "out.meta.flag": [
+        true,
+        false
+      ],
+      "out.meta.code": [
+        7,
+        8
+      ],
+      "out.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "out.data": [
+        1,
+        2
+      ],
+      "mixed.valid": [
+        true,
+        true
+      ],
+      "mixed.signed": [
+        15,
+        3
+      ],
+      "mixed.meta.flag": [
+        true,
+        false
+      ],
+      "mixed.meta.code": [
+        7,
+        8
+      ],
+      "mixed.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "mixed.data": [
+        1,
+        2
+      ]
+    },
+    "cycle": 0
+  },
+  {
+    "state": {
+      "saved.valid": [
+        true,
+        true
+      ],
+      "saved.signed": [
+        15,
+        3
+      ],
+      "saved.meta.flag": [
+        true,
+        false
+      ],
+      "saved.meta.code": [
+        7,
+        8
+      ],
+      "saved.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "saved.data": [
+        1,
+        2
+      ]
+    },
+    "pre": {
+      "selected.valid": true,
+      "selected.signed": 15,
+      "selected.meta.flag": true,
+      "selected.meta.code": 7,
+      "selected.lanes": [
+        3,
+        4
+      ],
+      "selected.data": 1,
+      "out.valid": [
+        true,
+        true
+      ],
+      "out.signed": [
+        15,
+        3
+      ],
+      "out.meta.flag": [
+        true,
+        false
+      ],
+      "out.meta.code": [
+        7,
+        8
+      ],
+      "out.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "out.data": [
+        1,
+        2
+      ],
+      "mixed.valid": [
+        true,
+        true
+      ],
+      "mixed.signed": [
+        15,
+        3
+      ],
+      "mixed.meta.flag": [
+        true,
+        false
+      ],
+      "mixed.meta.code": [
+        7,
+        8
+      ],
+      "mixed.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "mixed.data": [
+        1,
+        2
+      ]
+    },
+    "post": {
+      "selected.valid": true,
+      "selected.signed": 15,
+      "selected.meta.flag": true,
+      "selected.meta.code": 7,
+      "selected.lanes": [
+        3,
+        4
+      ],
+      "selected.data": 1,
+      "out.valid": [
+        true,
+        true
+      ],
+      "out.signed": [
+        15,
+        3
+      ],
+      "out.meta.flag": [
+        true,
+        false
+      ],
+      "out.meta.code": [
+        7,
+        8
+      ],
+      "out.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "out.data": [
+        1,
+        2
+      ],
+      "mixed.valid": [
+        true,
+        true
+      ],
+      "mixed.signed": [
+        15,
+        3
+      ],
+      "mixed.meta.flag": [
+        true,
+        false
+      ],
+      "mixed.meta.code": [
+        7,
+        8
+      ],
+      "mixed.lanes": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "mixed.data": [
+        1,
+        2
+      ]
+    },
+    "cycle": 1
+  }
+]

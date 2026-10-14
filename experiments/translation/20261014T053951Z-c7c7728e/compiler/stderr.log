@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Contracts.scala:32: error: [chisel2lean] Aggregate Mux requires identical symbolic Vec lengths; use a common length parameter
+  out := Mux(select, a, b)
+       ^
+1 error

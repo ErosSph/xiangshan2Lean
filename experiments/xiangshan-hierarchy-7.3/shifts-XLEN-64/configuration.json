@@ -1,0 +1,35 @@
+{
+  "format": "chisel2lean-configuration-v1",
+  "module": "xiangshan.validation.ShiftHierarchy",
+  "parameters": {
+    "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 64
+  },
+  "factories": {
+    "p": {
+      "class": "xiangshan.validation.NanhuCoreConfig",
+      "args": []
+    }
+  },
+  "constructor": {},
+  "class_sha256": {
+    "xiangshan.validation.NanhuCoreConfig": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762",
+    "xiangshan.validation.ShiftHierarchy": "a73fc6aa3b5b5d328fd0cabf497628b9951612efecc53a967e6763706f655e8f"
+  },
+  "projection": [
+    {
+      "name": "cfg_p_xiangshan_XSCoreParamsKey_XLEN",
+      "kind": "Int",
+      "root": "p",
+      "key": "xiangshan.XSCoreParamsKey",
+      "selectors": [
+        "XLEN"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Parameters.scala",
+        "line": 279,
+        "column": 26
+      }
+    }
+  ],
+  "chisel_version": "7.3.0"
+}

@@ -178,7 +178,9 @@ trait ValDefsReader { self: Scala2Reader =>
     ): (CircuitInfo, Option[WireDef]) = {
       if (isChisel3WireApply(func)) {
         assertError(args.length == 1, func.pos, "Should have only 1 arg in Wire()")
-        val sigType = SignalTypeLoader(cInfo, args.head).get.updatedPhysical(Wire)
+        val loaded = SignalTypeLoader(cInfo, args.head)
+        if (loaded.isEmpty && chicala.ChicalaConfig.backend == "lean") return (cInfo.settedDependentClassNotDef, None)
+        val sigType = loaded.get.updatedPhysical(Wire)
         val newInfo = cInfo.updatedVal(name, sigType)
         (newInfo, Some(WireDef(name, sigType)))
       } else if (isChisel3WireInitApply(func)) {
@@ -228,7 +230,9 @@ trait ValDefsReader { self: Scala2Reader =>
       if (isChisel3RegApply(func)) {
         assert(args.length == 1, "should have only 1 arg in Reg()")
 
-        val signalInfo = SignalTypeLoader(cInfo, args.head).get.updatedPhysical(Reg)
+        val loaded = SignalTypeLoader(cInfo, args.head)
+        if (loaded.isEmpty && chicala.ChicalaConfig.backend == "lean") return (cInfo.settedDependentClassNotDef, None)
+        val signalInfo = loaded.get.updatedPhysical(Reg)
         val newCInfo   = cInfo.updatedVal(name, signalInfo)
         (newCInfo, Some(RegDef(name, signalInfo)))
 
@@ -239,7 +243,9 @@ trait ValDefsReader { self: Scala2Reader =>
           val newCInfo   = cInfo.updatedVal(name, signalInfo)
           (newCInfo, Some(RegDef(name, signalInfo, Some(init))))
         } else if (args.length == 2 && chicala.ChicalaConfig.backend == "lean") {
-          val tpe = SignalTypeLoader(cInfo, args.head).get.updatedPhysical(Reg)
+          val loaded = SignalTypeLoader(cInfo, args.head)
+          if (loaded.isEmpty) return (cInfo.settedDependentClassNotDef, None)
+          val tpe = loaded.get.updatedPhysical(Reg)
           val init = MTermLoader(cInfo, args(1)).get._2.get
           (cInfo.updatedVal(name, tpe), Some(RegDef(name, tpe, Some(init))))
         } else {

@@ -1,0 +1,25 @@
+{
+  "command": [
+    "E:\\ICT\\.tools\\jdk-17.0.20.1+1\\bin\\java.exe",
+    "-Xmx2g",
+    "-XX:ActiveProcessorCount=4",
+    "-Dfile.encoding=UTF-8",
+    "-Dsbt.supershell=false",
+    "-Dsbt.log.noformat=true",
+    "-Dsbt.server.autostart=false",
+    "-Dsbt.override.build.repos=true",
+    "-Dsbt.repository.config=E:\\ICT\\chisel2lean4\\project\\repositories",
+    "-Dsbt.boot.directory=E:\\ICT\\chisel2lean4\\.cache\\sbt-boot",
+    "-Dsbt.global.base=E:\\ICT\\chisel2lean4\\.cache\\sbt-global",
+    "-Dsbt.ivy.home=E:\\ICT\\chisel2lean4\\.cache\\ivy",
+    "-jar",
+    "E:\\ICT\\chisel2lean4\\.tools\\sbt-launch-1.8.2.jar",
+    "writeToolClasspath",
+    "reference/writeReferenceClasspath",
+    "publishLocal",
+    "testcase/clean",
+    "testcase/compile"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4",
+  "started_at": "2026-10-14T04:14:00.211537+00:00"
+}

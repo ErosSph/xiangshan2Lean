@@ -14,3 +14,8 @@ class NanhuCoreConfig extends Config(new top.MinimalConfig(1).alter((site, here,
 class NanhuWidthConfig(width: Int, compressed: Boolean) extends Config(new NanhuCoreConfig().alter((site, here, up) => {
   case XSCoreParamsKey => up(XSCoreParamsKey).copy(XLEN = width, HasCExtension = compressed)
 }))
+
+/** Isolated Bundle width variations; these do not describe a complete core. */
+class NanhuAddressConfig(addressWidth: Int, asidWidth: Int) extends Config(new NanhuCoreConfig().alter((site, here, up) => {
+  case XSCoreParamsKey => up(XSCoreParamsKey).copy(VAddrBits = addressWidth, AsidLength = asidWidth)
+}))

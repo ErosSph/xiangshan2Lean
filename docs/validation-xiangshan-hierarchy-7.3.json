@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "toolchain": {
+    "format": "chisel2lean-source-dependencies-v1",
+    "scala_version": "2.13.15",
+    "chisel_version": "7.3.0",
+    "upstream_scala_version": "2.13.15",
+    "cache_directory": ".cache/xiangshan-dependencies-7.3",
+    "dependencies": [
+      {
+        "name": "xiangshan",
+        "repository": "OpenXiangShan/XiangShan",
+        "commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2"
+      },
+      {
+        "name": "rocket",
+        "repository": "OpenXiangShan/rocket-chip",
+        "commit": "0f09d1ab77adf6e57d42ef9b6ab1cb7c4cc8c654"
+      },
+      {
+        "name": "cde",
+        "repository": "chipsalliance/cde",
+        "commit": "52768c97a27b254c0cc0ac9401feb55b29e18c28"
+      },
+      {
+        "name": "hardfloat",
+        "repository": "ucb-bar/berkeley-hardfloat",
+        "commit": "d93aa570806013dea479a92ba9bb33d1f2d4f69f"
+      },
+      {
+        "name": "utility",
+        "repository": "OpenXiangShan/Utility",
+        "commit": "c8d424348b0a058753116558c3d7066dba375f17"
+      },
+      {
+        "name": "huancun",
+        "repository": "OpenXiangShan/HuanCun",
+        "commit": "65ef077373ecf398b4cecdea06b65ef9b8d79044"
+      },
+      {
+        "name": "difftest",
+        "repository": "OpenXiangShan/difftest",
+        "commit": "4a528c6c0c47097c8b0f7db5977591a5eba78512"
+      },
+      {
+        "name": "fudian",
+        "repository": "OpenXiangShan/fudian",
+        "commit": "e1bd4695ca7beb36a5ce7357e9527ad9e95b9ec1"
+      }
+    ]
+  },
+  "harnesses": "local validation tops; not upstream processor modules",
+  "unchanged_upstream_classes": [
+    "xiangshan.backend.fu.LeftShiftModule",
+    "xiangshan.backend.fu.RightShiftModule",
+    "xiangshan.SfenceBundle"
+  ],
+  "original_source_sha256": {
+    "xiangshan\\src\\main\\scala\\xiangshan\\backend\\fu\\Alu.scala": "3400084dc26d34b2d4ce796f93c80000d12c173746d0d7eba7c47e8f36825fdc",
+    "xiangshan\\src\\main\\scala\\xiangshan\\Bundle.scala": "3ddef7a02b3d22bed3eb96ee3bafc4e91f3ee7b1feb54739b14317389395f61a",
+    "xiangshan\\src\\main\\scala\\xiangshan\\XSCore.scala": "b1c34dede360f505759fa660f7391dff9ed0719cf388bd21840aa7641f55569f",
+    "xiangshan\\src\\main\\scala\\xiangshan\\Parameters.scala": "5e1419aaad93e212f571672c5b0c46546c49cb3547667dbd3f9844b2705b63ad"
+  },
+  "harness_sha256": "78b6b4bd8f4f3ef745ae5b2fbd22992987cfbfac935d37ec39c378012d734494",
+  "cases": [
+    {
+      "status": "PASS",
+      "test_top": "xiangshan.validation.ShiftHierarchy",
+      "parameters": {
+        "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 8
+      },
+      "cycles": 512,
+      "output_comparisons": 4096,
+      "comparison": "executed Lean == original-class official RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "test_top": "xiangshan.validation.ShiftHierarchy",
+      "parameters": {
+        "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 32
+      },
+      "cycles": 512,
+      "output_comparisons": 4096,
+      "comparison": "executed Lean == original-class official RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "test_top": "xiangshan.validation.ShiftHierarchy",
+      "parameters": {
+        "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 64
+      },
+      "cycles": 512,
+      "output_comparisons": 4096,
+      "comparison": "executed Lean == original-class official RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "test_top": "xiangshan.validation.SfencePipeline",
+      "parameters": {
+        "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits": 39,
+        "cfg_p_xiangshan_XSCoreParamsKey_AsidLength": 16
+      },
+      "cycles": 192,
+      "output_comparisons": 1920,
+      "comparison": "executed Lean == original-class official RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "test_top": "xiangshan.validation.SfencePipeline",
+      "parameters": {
+        "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits": 32,
+        "cfg_p_xiangshan_XSCoreParamsKey_AsidLength": 8
+      },
+      "cycles": 192,
+      "output_comparisons": 1920,
+      "comparison": "executed Lean == original-class official RTL == independent integer specification"
+    },
+    {
+      "status": "PASS",
+      "test_top": "xiangshan.validation.SfencePipeline",
+      "parameters": {
+        "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits": 48,
+        "cfg_p_xiangshan_XSCoreParamsKey_AsidLength": 12
+      },
+      "cycles": 192,
+      "output_comparisons": 1920,
+      "comparison": "executed Lean == original-class official RTL == independent integer specification"
+    }
+  ],
+  "configurations": 6,
+  "cycles": 2112,
+  "output_comparisons": 18048,
+  "formal_source_to_lean_equivalence_proof": false,
+  "generated_model_theorems_checked": 3,
+  "model_proof_evidence": "experiments/xiangshan-hierarchy-7.3/model-proof/result.json"
+}

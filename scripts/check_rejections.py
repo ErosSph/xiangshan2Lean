@@ -21,7 +21,7 @@ def main():
     output.mkdir(parents=True, exist_ok=True)
     cases = ["CombinationalCycle", "UnconnectedOutput", "ChangedReset", "ConditionalDeclaration",
              "HostSideEffect", "StringParameter", "MultipleMemoryWrites",
-             "UnconnectedChild", "RawState", "NonuniformVector"]
+             "UnconnectedChild", "RawState", "NonuniformVector", "BundleConstructionConstraint"]
     results = []
     for name in cases:
         directory = output / name

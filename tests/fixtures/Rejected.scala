@@ -115,3 +115,13 @@ class NonuniformVector(w: Int) extends RawModule {
   val v = VecInit(Seq.tabulate(w)(i => i.U))
   out := v
 }
+
+class RequiredBundle(w: Int) extends Bundle {
+  require(w > 0)
+  val data = UInt(w.W)
+}
+class BundleConstructionConstraint(w: Int) extends Module {
+  val in = IO(Input(new RequiredBundle(w)))
+  val out = IO(Output(UInt(w.W)))
+  out := in.data
+}

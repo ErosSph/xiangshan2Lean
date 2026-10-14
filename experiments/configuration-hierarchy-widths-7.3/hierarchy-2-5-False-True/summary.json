@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "module": "ConfiguredHierarchy",
+  "parameters": {
+    "inc": 1,
+    "cfg_p_configuration_CoreKey_width": 2,
+    "cfg_p_configuration_CoreKey_nested_offset": 1,
+    "cfg_p_configuration_CoreKey_enabled": false,
+    "cfg_other_configuration_CoreKey_width": 5,
+    "cfg_other_configuration_CoreKey_nested_offset": 3,
+    "cfg_other_configuration_CoreKey_enabled": true
+  },
+  "cycles": 72,
+  "label": "hierarchy-2-5-False-True",
+  "output_comparisons": 144,
+  "comparison": "executed Lean == original official RTL == independent specification"
+}

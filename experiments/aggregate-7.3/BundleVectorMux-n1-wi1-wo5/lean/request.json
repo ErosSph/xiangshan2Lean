@@ -1,0 +1,3082 @@
+{
+  "parameters": {
+    "n": 1,
+    "wi": 1,
+    "wo": 5
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": false
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          1
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          0
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          3
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          2
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          2
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          1
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          false
+        ],
+        "b.signed": [
+          3
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          1
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          0
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          1
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "a.meta.code": [
+          0
+        ],
+        "a.meta.flag": [
+          true
+        ],
+        "a.signed": [
+          3
+        ],
+        "a.valid": [
+          false
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          2
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          2
+        ],
+        "b.valid": [
+          false
+        ],
+        "choose": true
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "a.data": [
+          0
+        ],
+        "a.lanes": [
+          [
+            0,
+            1
+          ]
+        ],
+        "a.meta.code": [
+          3
+        ],
+        "a.meta.flag": [
+          false
+        ],
+        "a.signed": [
+          1
+        ],
+        "a.valid": [
+          true
+        ],
+        "b.data": [
+          0
+        ],
+        "b.lanes": [
+          [
+            0,
+            0
+          ]
+        ],
+        "b.meta.code": [
+          1
+        ],
+        "b.meta.flag": [
+          true
+        ],
+        "b.signed": [
+          0
+        ],
+        "b.valid": [
+          true
+        ],
+        "choose": true
+      }
+    }
+  ],
+  "initial_state": null
+}

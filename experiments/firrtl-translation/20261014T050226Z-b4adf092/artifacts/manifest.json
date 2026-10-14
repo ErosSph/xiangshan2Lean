@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\examples\\firrtl\\Counter4.fir",
+  "source_sha256": "60ca74e7be22f2a110471d97af915310b648f77b02a8762fc5db72369a3b14b5",
+  "compiler_sha256": "670d180dbc40965dbb682ea81b1a2c33de7b683cd74108a85ef7ef4215de2372",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.Counter",
+      "top": "Counter",
+      "ir": "FIRRTL/Counter.ir.json",
+      "lean": "FIRRTL/Counter.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261014T050226Z-b4adf092"
+}

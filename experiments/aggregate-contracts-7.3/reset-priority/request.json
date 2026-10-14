@@ -1,0 +1,74 @@
+{
+  "parameters": {
+    "n": 3,
+    "w": 2,
+    "m": 3
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "data.data": [
+          1,
+          1,
+          3
+        ],
+        "data.lanes": [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          3,
+          0
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          5,
+          4,
+          6
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ],
+        "patch.data": 1,
+        "patch.lanes": [
+          0,
+          3,
+          0
+        ],
+        "patch.meta.code": 0,
+        "patch.meta.flag": false,
+        "patch.signed": 5,
+        "patch.valid": true,
+        "write": true,
+        "overrideData": true,
+        "updateLanes": true,
+        "index": 3,
+        "other": 3,
+        "lane": 3,
+        "otherLane": 3
+      }
+    }
+  ],
+  "initial_state": null
+}

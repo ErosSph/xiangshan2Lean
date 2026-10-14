@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "module": "aggregate.BundleVectorPipeline",
+  "parameters": {
+    "n": 4,
+    "w": 65,
+    "m": 2
+  },
+  "cycles": 64,
+  "output_comparisons": 8001,
+  "source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+  "ir_sha256": "9c0d983c2ecb82061a86f3488fcae4e2bbd426e10d0179375b7a6f9c16c4eebd",
+  "lean_sha256": "ae9c4cc7da385ac56591453965aa34aeb68fd4b149165f269c319b820a6b9512"
+}

@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Rejected.scala:26: error: [chisel2lean] Connections through value aliases are unsupported; drive the original signal or Vec element
+  view.a := 1.U
+          ^
+1 error

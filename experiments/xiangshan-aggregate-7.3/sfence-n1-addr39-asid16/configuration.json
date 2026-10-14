@@ -1,0 +1,53 @@
+{
+  "format": "chisel2lean-configuration-v1",
+  "module": "xiangshan.validation.SfenceVectorPipeline",
+  "parameters": {
+    "n": 1,
+    "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits": 39,
+    "cfg_p_xiangshan_XSCoreParamsKey_AsidLength": 16
+  },
+  "factories": {
+    "p": {
+      "class": "xiangshan.validation.NanhuCoreConfig",
+      "args": []
+    }
+  },
+  "constructor": {
+    "n": 1
+  },
+  "class_sha256": {
+    "xiangshan.validation.NanhuCoreConfig": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762",
+    "xiangshan.validation.SfenceVectorPipeline": "a4498e085142d2fa80732aba27513470e62bd74ad8d2fc217bc4b5c4d0a59938"
+  },
+  "projection": [
+    {
+      "name": "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits",
+      "kind": "Int",
+      "root": "p",
+      "key": "xiangshan.XSCoreParamsKey",
+      "selectors": [
+        "VAddrBits"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\verification\\xiangshan\\config\\reference\\Vector.scala",
+        "line": 10,
+        "column": 34
+      }
+    },
+    {
+      "name": "cfg_p_xiangshan_XSCoreParamsKey_AsidLength",
+      "kind": "Int",
+      "root": "p",
+      "key": "xiangshan.XSCoreParamsKey",
+      "selectors": [
+        "AsidLength"
+      ],
+      "source": {
+        "file": "E:\\ICT\\chisel2lean4\\verification\\xiangshan\\config\\reference\\Vector.scala",
+        "line": 10,
+        "column": 34
+      }
+    }
+  ],
+  "chisel_version": "7.3.0"
+}

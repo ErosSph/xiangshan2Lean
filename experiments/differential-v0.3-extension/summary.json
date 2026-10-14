@@ -10,8 +10,8 @@
         "w": 1
       },
       "evidence": "experiments\\differential-v0.3-extension\\HierarchicalPipeline-w1",
-      "seconds": 11.74,
-      "fingerprint": "9b192dac4861dd92077094be5c4dc7aaa42c1a6ae69175f31bcabe5a67355d27"
+      "seconds": 7.45,
+      "fingerprint": "8d7577529c908b8937279b3a2b6b8e048ba470c2e4405ac2a0fca18601ad4511"
     },
     {
       "status": "PASS",
@@ -22,8 +22,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\HierarchicalPipeline-w3",
-      "seconds": 10.74,
-      "fingerprint": "6a6ee55b0750d7096f10477159044c6afe497cc5c4ed5f13ce47709cf49a4101"
+      "seconds": 6.8,
+      "fingerprint": "810750d58cb4f942444065dd99cd56ee1fbc14f39fd3b20845894b8f70638282"
     },
     {
       "status": "PASS",
@@ -34,8 +34,8 @@
         "w": 8
       },
       "evidence": "experiments\\differential-v0.3-extension\\HierarchicalPipeline-w8",
-      "seconds": 11.66,
-      "fingerprint": "3fb0f534b8b46c246ce1dd74e05a644e41d6c6953a6668bda3233c4464d21e95"
+      "seconds": 7.33,
+      "fingerprint": "2dd769d70907a4459e25b02244c286eaf489dd7271a36e72c22d6809015e84e7"
     },
     {
       "status": "PASS",
@@ -46,8 +46,8 @@
         "w": 2
       },
       "evidence": "experiments\\differential-v0.3-extension\\NestedHierarchy-w2",
-      "seconds": 10.02,
-      "fingerprint": "a4251fd42b992d533dce13709437f758240eb309046cc2eb87811eb7987da5f6"
+      "seconds": 5.17,
+      "fingerprint": "98b20a1a03d8af4a34dbdafc8daaea89e59829755ba62efe63ed9eec28772638"
     },
     {
       "status": "PASS",
@@ -58,8 +58,8 @@
         "w": 5
       },
       "evidence": "experiments\\differential-v0.3-extension\\NestedHierarchy-w5",
-      "seconds": 10.98,
-      "fingerprint": "16b66f9898679250b0ddfc4dc2ec35e8e2a9f59fcacb1a2ce5dc4a904ea62fb0"
+      "seconds": 5.47,
+      "fingerprint": "d65dfdef56bb941c0aeb349b86346fa0ff49a83f1e560a90fd183faa0a71143c"
     },
     {
       "status": "PASS",
@@ -71,8 +71,8 @@
         "invert": false
       },
       "evidence": "experiments\\differential-v0.3-extension\\HierarchicalComb-w1-invertFalse",
-      "seconds": 12.75,
-      "fingerprint": "217838863afc5ca3836b89d926cb56ec4ca802fe43fa92da60089e539d0798bc"
+      "seconds": 5.69,
+      "fingerprint": "1de61bcdb9fadae03cf844e0a2f17cb15857bd63ab4ef3b572330dbc19920e5c"
     },
     {
       "status": "PASS",
@@ -84,8 +84,8 @@
         "invert": true
       },
       "evidence": "experiments\\differential-v0.3-extension\\HierarchicalComb-w3-invertTrue",
-      "seconds": 13.11,
-      "fingerprint": "3c06ea889754a42a3ae6520cf839d9d5da2c6fa721a8e1394847bba1037105f2"
+      "seconds": 5.94,
+      "fingerprint": "60c6c65b96c988d179835163868ba6da851e280fb0fe027e19eea589bf94cece"
     },
     {
       "status": "PASS",
@@ -97,8 +97,8 @@
         "invert": false
       },
       "evidence": "experiments\\differential-v0.3-extension\\HierarchicalComb-w8-invertFalse",
-      "seconds": 13.36,
-      "fingerprint": "a8b2783fde536915a1b49882558018bfdcee3a08acade5dd0de41f2c94eec32d"
+      "seconds": 6.83,
+      "fingerprint": "d5fe295b8c30b95e8c31fddab9ef5ff5708eea1fb10ff976f3f269b3c60e49c1"
     },
     {
       "status": "PASS",
@@ -110,8 +110,8 @@
         "w": 1
       },
       "evidence": "experiments\\differential-v0.3-extension\\VectorReset-n1-w1",
-      "seconds": 13.48,
-      "fingerprint": "8dc3b6858b862b16ee34c4a00527e4c2876bcf8129e52ca1e9d6255a5355bfe7"
+      "seconds": 6.76,
+      "fingerprint": "61e0e3478c93fba20f887053815b5f09e836a178b15e7a77f1d7f21bedf254d9"
     },
     {
       "status": "PASS",
@@ -123,8 +123,8 @@
         "w": 4
       },
       "evidence": "experiments\\differential-v0.3-extension\\VectorReset-n3-w4",
-      "seconds": 17.92,
-      "fingerprint": "93a7ee3b25821c9ac3095d8684c2a8e9366744adb8be6c450a324360611d2f1f"
+      "seconds": 7.16,
+      "fingerprint": "4799ad5a6169ad5672c9dae1aa8b8ad9dfaacfbb53e552919d86900547c90f73"
     },
     {
       "status": "PASS",
@@ -136,8 +136,8 @@
         "w": 8
       },
       "evidence": "experiments\\differential-v0.3-extension\\VectorReset-n5-w8",
-      "seconds": 17.39,
-      "fingerprint": "cee6c07408e1981319d05db1cedf5555a98318c0f402f530651d8ddc32ab1353"
+      "seconds": 8.92,
+      "fingerprint": "169274ff8871c5f20a980fe0486d3299eb9fc25e18d1e18b5404b0f872b33971"
     },
     {
       "status": "PASS",
@@ -148,8 +148,8 @@
         "w": 1
       },
       "evidence": "experiments\\differential-v0.3-extension\\RegisterIdioms-w1",
-      "seconds": 11.05,
-      "fingerprint": "90b93e0f6afca2b379db966e3bab8e93c37d8c777f6dd299e3a04ab3b19a7f74"
+      "seconds": 6.64,
+      "fingerprint": "da2ef7aa0c6a98779c80a204ba7727fb87e09d3e34176d814612a35bbbbde9ef"
     },
     {
       "status": "PASS",
@@ -160,8 +160,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\RegisterIdioms-w3",
-      "seconds": 13.08,
-      "fingerprint": "7f36a9b828f89c8a119e0bc365d046944f5b5fb5456c9dadad78f26948390181"
+      "seconds": 6.38,
+      "fingerprint": "6b8151bbcecef3d9deccb7758c681807afcb36c550f6b218de289475242de81b"
     },
     {
       "status": "PASS",
@@ -172,8 +172,8 @@
         "w": 9
       },
       "evidence": "experiments\\differential-v0.3-extension\\RegisterIdioms-w9",
-      "seconds": 15.81,
-      "fingerprint": "4b4530ce814467caed6b6d53e3fe44520a76316d9c1847d98fd747289ddac7db"
+      "seconds": 7.22,
+      "fingerprint": "a681150b3fcaf3faf0694251cc665c95aca04c526998f13bdcec112de1cbadda"
     },
     {
       "status": "PASS",
@@ -184,8 +184,8 @@
         "w": 1
       },
       "evidence": "experiments\\differential-v0.3-extension\\BundlePipeline-w1",
-      "seconds": 14.69,
-      "fingerprint": "be06017bad3dd33f9a0d198021b249721b414c9e3f9f0628f5d06acc5db2763f"
+      "seconds": 6.67,
+      "fingerprint": "8f7f19af77faf27a4197d5df328125e7cdd5c0268a1ccd05182b2d52c3e89595"
     },
     {
       "status": "PASS",
@@ -196,8 +196,8 @@
         "w": 8
       },
       "evidence": "experiments\\differential-v0.3-extension\\BundlePipeline-w8",
-      "seconds": 11.0,
-      "fingerprint": "35031ee03de8623c9e1d9b8e4aa288a5aec2b26b198da4a5243f61c51c767f21"
+      "seconds": 5.95,
+      "fingerprint": "8fa9312fb60a5aea0ab50007bb95b4de4f02f62234a9dc7a562281a871de1503"
     },
     {
       "status": "PASS",
@@ -208,8 +208,8 @@
         "w": 2
       },
       "evidence": "experiments\\differential-v0.3-extension\\SwitchMachine-w2",
-      "seconds": 15.11,
-      "fingerprint": "0a8240c2f7c8b5156e167ebff574f1ee0bcb9cac861dd5c135f80fa320e9d388"
+      "seconds": 6.08,
+      "fingerprint": "c27dae35811aa4faefc2f40892da3c8b869e9effb739cf92c6ab7097953e125a"
     },
     {
       "status": "PASS",
@@ -220,8 +220,8 @@
         "w": 5
       },
       "evidence": "experiments\\differential-v0.3-extension\\SwitchMachine-w5",
-      "seconds": 17.5,
-      "fingerprint": "3316a5f6ec9d4de311f11cdacca7b37e9ac55dd7401634a19c656067724bc8f9"
+      "seconds": 6.78,
+      "fingerprint": "afb84348a7ae9044286128019a042e474ea7ac1443c08414c3e9ed0c45400787"
     },
     {
       "status": "PASS",
@@ -233,8 +233,8 @@
         "repeat": 1
       },
       "evidence": "experiments\\differential-v0.3-extension\\MoreBits-w2-repeat1",
-      "seconds": 14.34,
-      "fingerprint": "ea0940eefe695a59c575e418b346e99f84809f173e76e60296b05713462fbe8b"
+      "seconds": 7.47,
+      "fingerprint": "733e81317016d53933e64114ad4d3ee3600d57797b4e9636ef28bfdd5bbca3d9"
     },
     {
       "status": "PASS",
@@ -246,8 +246,8 @@
         "repeat": 4
       },
       "evidence": "experiments\\differential-v0.3-extension\\MoreBits-w3-repeat4",
-      "seconds": 14.0,
-      "fingerprint": "b2c9c70f84ce70aa33bbf78297a3237c2b065476ca3583d15cf9f336e38bcfa9"
+      "seconds": 6.62,
+      "fingerprint": "d9b09f282acc33f455e2db776aeb3f294e15813c7b1dd5839ba94a3cba60fb62"
     },
     {
       "status": "PASS",
@@ -259,8 +259,8 @@
         "repeat": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\MoreBits-w8-repeat3",
-      "seconds": 13.69,
-      "fingerprint": "3df90c65ef4cf66d517dbfe8731c5b9416adf58d79f9ad3eb88a21a2c0159176"
+      "seconds": 6.23,
+      "fingerprint": "31af6176589c5d53e02a30f1989ae613b6e6d755f3f79334b6f3c6e949112ac2"
     },
     {
       "status": "PASS",
@@ -271,8 +271,8 @@
         "w": 2
       },
       "evidence": "experiments\\differential-v0.3-extension\\SignedDivision-w2",
-      "seconds": 17.17,
-      "fingerprint": "2ef04a816121c8140d7be69c240d147c094fd447a269c3fc7305f967d1ccc8f0"
+      "seconds": 5.64,
+      "fingerprint": "e5638f24012785f744d7b22bbd0e1b6d8dc06e5da82a462c3c76ac7db7a7362e"
     },
     {
       "status": "PASS",
@@ -283,8 +283,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\SignedDivision-w3",
-      "seconds": 13.45,
-      "fingerprint": "b0396f5dbde6b4c05bfb95c4baf941beaa1389558d1310813ff3cc36a6076f28"
+      "seconds": 6.3,
+      "fingerprint": "5b9658960dec09ab2f6573b1505b252222069e78fae3b4a3f4c2ea8ab6d131ae"
     },
     {
       "status": "PASS",
@@ -295,8 +295,8 @@
         "w": 8
       },
       "evidence": "experiments\\differential-v0.3-extension\\SignedDivision-w8",
-      "seconds": 12.95,
-      "fingerprint": "d6a0b8d2dfa430398e6d914027359d7a1d1fde31479e20a65fca904c7f892962"
+      "seconds": 5.88,
+      "fingerprint": "0ad8acc2ced231dec3a2e5b6b7254ebeda6ae0f833244c9474672764e4f8b5cf"
     },
     {
       "status": "PASS",
@@ -307,8 +307,8 @@
         "w": 1
       },
       "evidence": "experiments\\differential-v0.3-extension\\HardwareHelper-w1",
-      "seconds": 11.38,
-      "fingerprint": "cccbae9c155fb73acadea79e479c67c6d073ca5089a91769ff4097349bc6b40f"
+      "seconds": 5.61,
+      "fingerprint": "a6200842cffef5a655db72305d6062726e2b296dbcf785ada59deaa69d1258a4"
     },
     {
       "status": "PASS",
@@ -319,8 +319,8 @@
         "w": 7
       },
       "evidence": "experiments\\differential-v0.3-extension\\HardwareHelper-w7",
-      "seconds": 15.44,
-      "fingerprint": "42b0b469ea57811fcab2124d8c5c629c0813bc740adacab8237c0c3ed8fe75eb"
+      "seconds": 6.11,
+      "fingerprint": "065f35cdef0cdce350f2369aa194b514bac343864363c28119df03be538fcae9"
     },
     {
       "status": "PASS",
@@ -332,8 +332,8 @@
         "w": 1
       },
       "evidence": "experiments\\differential-v0.3-extension\\PartialGenerate-n2-w1",
-      "seconds": 13.48,
-      "fingerprint": "3c6fc328fabdbdf11698d0030d7ee0530be754598cc3f3cad090c9ec835a170c"
+      "seconds": 8.84,
+      "fingerprint": "dc581c5f4e54ccf6b8d6d390eaff424269b8577ca6b660ee54c08eafff8a00ca"
     },
     {
       "status": "PASS",
@@ -345,8 +345,8 @@
         "w": 5
       },
       "evidence": "experiments\\differential-v0.3-extension\\PartialGenerate-n4-w5",
-      "seconds": 16.25,
-      "fingerprint": "80cfd37db0c0405e9b317c04177ba015d6c3f9c907a97f22c28758f2d8e98587"
+      "seconds": 7.48,
+      "fingerprint": "14da16320c22a5e34511873e037c9b18f4d934a581d956295ae744d7a3d8c128"
     },
     {
       "status": "PASS",
@@ -355,8 +355,8 @@
       "module": "LiteralVector",
       "parameters": {},
       "evidence": "experiments\\differential-v0.3-extension\\LiteralVector-",
-      "seconds": 12.53,
-      "fingerprint": "905983c2c8d4fbf8db19d76db8f57cb1582dce5e7758e114b6942d2d5ad7ab47"
+      "seconds": 5.83,
+      "fingerprint": "d4b7efd9faed4dd0a1d4d6bc19ad04712b8e0af05c0ce0fad6ade299a928cd35"
     },
     {
       "status": "PASS",
@@ -368,8 +368,8 @@
         "w": 1
       },
       "evidence": "experiments\\differential-v0.3-extension\\RegisterFile-n1-w1",
-      "seconds": 17.09,
-      "fingerprint": "2211a3317deb9be37f84732331e082f655843b5ef333872811bc5a2e3d9888e7"
+      "seconds": 6.06,
+      "fingerprint": "0c3625fc0f2db7f407f8fc577639d547fa1bb5f0c94630126e7e25093cc81bce"
     },
     {
       "status": "PASS",
@@ -381,8 +381,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\RegisterFile-n2-w3",
-      "seconds": 17.73,
-      "fingerprint": "211629f7c08674e75b969337e488ee8d4579a377e4f4473682d7057ff9a26ed9"
+      "seconds": 6.11,
+      "fingerprint": "859fe74533366c9b7d3f1ca38ad36733849ecd73f6d5d33536064bf02ce055f0"
     },
     {
       "status": "PASS",
@@ -394,8 +394,8 @@
         "w": 4
       },
       "evidence": "experiments\\differential-v0.3-extension\\RegisterFile-n3-w4",
-      "seconds": 12.03,
-      "fingerprint": "92b26c959c69f891a9166d0afcd8c47b593bbb60520d994c88308afdc2e7813a"
+      "seconds": 5.83,
+      "fingerprint": "b67b60b0abc36bc88d642525d654b7957d23eb8a152796f437d8a7028cb7b8b3"
     },
     {
       "status": "PASS",
@@ -407,8 +407,8 @@
         "w": 7
       },
       "evidence": "experiments\\differential-v0.3-extension\\RegisterFile-n8-w7",
-      "seconds": 17.02,
-      "fingerprint": "dda1011c493c91c82913b25b66d3862c5ef1f7367f4da038db387daf12b45117"
+      "seconds": 6.62,
+      "fingerprint": "1264d0bde3de8b7247047aed3b4e3e8d4ae5bd4ed09100e50021b72ce431dcc5"
     },
     {
       "status": "PASS",
@@ -420,8 +420,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\Fifo-depth2-w3",
-      "seconds": 16.39,
-      "fingerprint": "aeac5634b55911fde693abc54fef72e56c27a90b91f491c35db5e39da5f71cc7"
+      "seconds": 6.36,
+      "fingerprint": "59b90f25207852cf4d9efc9695bdcc3aa1f95f9e95c0345ec18cd5b3a798dd5e"
     },
     {
       "status": "PASS",
@@ -433,8 +433,8 @@
         "w": 4
       },
       "evidence": "experiments\\differential-v0.3-extension\\Fifo-depth3-w4",
-      "seconds": 15.78,
-      "fingerprint": "d58fef012c7486ee1539e590d91567d220a24664714d921e0d0064b248e2855a"
+      "seconds": 5.14,
+      "fingerprint": "69dfef22f89e31ceadadeeec1c4fa14061ffd5185c9463c935c5020b351b6916"
     },
     {
       "status": "PASS",
@@ -446,8 +446,8 @@
         "w": 7
       },
       "evidence": "experiments\\differential-v0.3-extension\\Fifo-depth8-w7",
-      "seconds": 17.58,
-      "fingerprint": "a19370706bdfdc8ac2f51714b3832dea7e63200f44a1c9c6af58f62011f48226"
+      "seconds": 5.66,
+      "fingerprint": "8f49c8e9fbef09e3b8de22573bef8fc82aabd89f57403741697c6263241dcca1"
     },
     {
       "status": "PASS",
@@ -458,8 +458,8 @@
         "w": 2
       },
       "evidence": "experiments\\differential-v0.3-extension\\ParameterLookup-w2",
-      "seconds": 11.91,
-      "fingerprint": "4b45cf3e984f952b318ea18212693ead70f003efc333e8fb78e45400bb740804"
+      "seconds": 6.97,
+      "fingerprint": "a93081b9df8aa06ff882947baef132effc35f34ac194dcc7936f65e5d9dc8ef9"
     },
     {
       "status": "PASS",
@@ -470,8 +470,8 @@
         "w": 8
       },
       "evidence": "experiments\\differential-v0.3-extension\\ParameterLookup-w8",
-      "seconds": 17.61,
-      "fingerprint": "7f44b97773d88117d9ea9dd70f896405e175cb49871fcb8f35b6f626f868dc16"
+      "seconds": 6.7,
+      "fingerprint": "2d4c701f0596e520ee0a6bd0c7ceffd7e32e09b5f778b69fa0a7e88f0c8e0132"
     },
     {
       "status": "PASS",
@@ -483,8 +483,8 @@
         "w": 2
       },
       "evidence": "experiments\\differential-v0.3-extension\\TabulatedVector-n1-w2",
-      "seconds": 16.33,
-      "fingerprint": "e8204e44e73c338d39b4bdc46372da0bcf93044dc633d726431e7327fd4ae6d4"
+      "seconds": 6.12,
+      "fingerprint": "ebe62e418625862e2da403b5a4fc8dface015eb0280073c18c74ea7cf7759486"
     },
     {
       "status": "PASS",
@@ -496,8 +496,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\TabulatedVector-n4-w3",
-      "seconds": 15.44,
-      "fingerprint": "c2e935880f21eb31d7536fc611dc21170e2e92aae16df1c76d745c19de91e7ad"
+      "seconds": 5.86,
+      "fingerprint": "672f6ee9663735cf01651a772fbad63a834493f52cbcac5b0a9faf8f9c67cc97"
     },
     {
       "status": "PASS",
@@ -509,8 +509,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\AsyncMemory-n2-w3",
-      "seconds": 14.42,
-      "fingerprint": "17ec328f0c221f767720f04aa961800efc97148074715c78d3693df24f3e86c8"
+      "seconds": 5.92,
+      "fingerprint": "fb13b5777b048fb87cdd0d0d362afbd529816b2899809227f12e75aa0298fea0"
     },
     {
       "status": "PASS",
@@ -522,8 +522,8 @@
         "w": 4
       },
       "evidence": "experiments\\differential-v0.3-extension\\AsyncMemory-n3-w4",
-      "seconds": 11.41,
-      "fingerprint": "7b1a435b2070a4f245a8bd1cfb132bd7e16b8789165b669ab021f6f6a15e2c62"
+      "seconds": 6.64,
+      "fingerprint": "8793b294491c22a4f65f374cb9bac9287b4b9cca97ab513b150173bfa64289fb"
     },
     {
       "status": "PASS",
@@ -535,8 +535,8 @@
         "w": 7
       },
       "evidence": "experiments\\differential-v0.3-extension\\AsyncMemory-n8-w7",
-      "seconds": 12.86,
-      "fingerprint": "f5be5e5a51f4541847f389db091431abd3c11bcfc59d2d71eba3bc4e24aae4b2"
+      "seconds": 7.61,
+      "fingerprint": "26b1ce161e896b3aa7a0d26c711340da451f7f1c5c5ee665aa4b02fe4a25fc92"
     },
     {
       "status": "PASS",
@@ -547,8 +547,8 @@
         "w": 2
       },
       "evidence": "experiments\\differential-v0.3-extension\\MuxPriorities-w2",
-      "seconds": 13.12,
-      "fingerprint": "c60889701e781e5c839cac80fa260f16fad7bafcc640da473eb00101e6c1b4d6"
+      "seconds": 7.27,
+      "fingerprint": "df95128bcd62d74b0c47857c97b16440e51b01b5fbfc0eb3f12e6fd8bbcfc45d"
     },
     {
       "status": "PASS",
@@ -559,8 +559,8 @@
         "w": 5
       },
       "evidence": "experiments\\differential-v0.3-extension\\MuxPriorities-w5",
-      "seconds": 10.16,
-      "fingerprint": "7d14d2f6dc973665f36eb1eff512b33081ae0ce42d6ce8be774cf3d4f07ef934"
+      "seconds": 5.78,
+      "fingerprint": "2ca6472e0db5e6c8501a9bfb688e69398638e9b183f737955b12e2e57f895399"
     },
     {
       "status": "PASS",
@@ -571,8 +571,8 @@
         "w": 9
       },
       "evidence": "experiments\\differential-v0.3-extension\\MuxPriorities-w9",
-      "seconds": 10.47,
-      "fingerprint": "47c29b6f63871374588baaff6ff2609abff62e58a4f42dd3538662f7aeb0077a"
+      "seconds": 5.95,
+      "fingerprint": "75c9a1ee1acb4e428a8b9be3901abfebc0128b5432d97f24e718b3eb95262c7a"
     },
     {
       "status": "PASS",
@@ -584,8 +584,8 @@
         "bWidth": 7
       },
       "evidence": "experiments\\differential-v0.3-extension\\Arithmetic-aWidth65-bWidth7",
-      "seconds": 12.66,
-      "fingerprint": "d318039b674bd8c90c9d100696dbf8b5d2f3b9e4be27c62d07d947c9fe4cf6ae"
+      "seconds": 5.86,
+      "fingerprint": "9e8868fa5bf287314b980291f748d7cf0560d4c04242926addc116b6786a9ed9"
     },
     {
       "status": "PASS",
@@ -597,8 +597,8 @@
         "bWidth": 65
       },
       "evidence": "experiments\\differential-v0.3-extension\\Arithmetic-aWidth128-bWidth65",
-      "seconds": 12.53,
-      "fingerprint": "3ce6846fa441fd51ab469ff5e4773e8d4994fde6e4e483ac4a59e3201cc4a114"
+      "seconds": 6.97,
+      "fingerprint": "c38df67fb213284c7d3d063b65bdba02eac74614dc062b647092077320ec90fb"
     },
     {
       "status": "PASS",
@@ -609,8 +609,8 @@
         "w": 65
       },
       "evidence": "experiments\\differential-v0.3-extension\\SignedArithmetic-w65",
-      "seconds": 12.34,
-      "fingerprint": "f66330465e5f13c8a9f9aefe5c042bef3284f3d09a382b7364d207e13d09f997"
+      "seconds": 7.19,
+      "fingerprint": "72450aa054d6a8ce2a9a2f44130e509de37e38890b8c65755e9d62e73a295292"
     },
     {
       "status": "PASS",
@@ -622,8 +622,8 @@
         "shift": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\ExtendedBits-w128-shift3",
-      "seconds": 12.27,
-      "fingerprint": "b28e1ebf9a1482dab3d8b4ce18ead3e5944a5b88a9e62231370e4f0c4bba61f1"
+      "seconds": 6.94,
+      "fingerprint": "8abdce560b80dcfba0dbc9684d5e068d0d1c858089350126604f88a99df2321f"
     },
     {
       "status": "PASS",
@@ -635,8 +635,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\SyncMemory-n2-w3",
-      "seconds": 12.45,
-      "fingerprint": "d3c96cb9748b15f6dcc78e28ea1fb700bf9163bab04afa53ccd7ef5fb882b2cf"
+      "seconds": 6.27,
+      "fingerprint": "ae485fade6cca8e20fc07e957c6e598824b9f7dd3d79b857441da5fd905856af"
     },
     {
       "status": "PASS",
@@ -648,8 +648,8 @@
         "w": 4
       },
       "evidence": "experiments\\differential-v0.3-extension\\SyncMemory-n3-w4",
-      "seconds": 12.23,
-      "fingerprint": "11fefbbc30bed8b4d5ec965ba30db61e5a698075713d2fd6319a70ec9877511e"
+      "seconds": 5.75,
+      "fingerprint": "145ff8eadc828c9c036fdede1d4490c893df05e89fc817d15998ceae920b08c0"
     },
     {
       "status": "PASS",
@@ -661,8 +661,8 @@
         "w": 65
       },
       "evidence": "experiments\\differential-v0.3-extension\\SyncMemory-n8-w65",
-      "seconds": 12.41,
-      "fingerprint": "06f67d23de61cdb6f11bb1dfa66237f4a9d6350d48c41593516802de212ad414"
+      "seconds": 5.97,
+      "fingerprint": "8a9bab90025754fa21975e71c040205bb760af26cec33dce7b68c09b16251dbd"
     },
     {
       "status": "PASS",
@@ -673,8 +673,8 @@
         "w": 2
       },
       "evidence": "experiments\\differential-v0.3-extension\\InferredRegisters-w2",
-      "seconds": 12.06,
-      "fingerprint": "4a9c26e06d3bce247b7aba479c8d1bfde427f31e884eb2876c62011d4b63a8fa"
+      "seconds": 5.72,
+      "fingerprint": "b3a49c820aacab18d234e30c5be855fb42c6a65554048b25a64324afc43dfa95"
     },
     {
       "status": "PASS",
@@ -685,8 +685,8 @@
         "w": 8
       },
       "evidence": "experiments\\differential-v0.3-extension\\InferredRegisters-w8",
-      "seconds": 9.62,
-      "fingerprint": "634e48beb5646f17454791bc976fbec09214108cca455f18634478a0adfeeb9e"
+      "seconds": 6.31,
+      "fingerprint": "df16d2234e0ef8ba8daeca0269fbfcf4f26eaaac7b8f0c5f6e00f26722266ec0"
     },
     {
       "status": "PASS",
@@ -697,8 +697,8 @@
         "w": 65
       },
       "evidence": "experiments\\differential-v0.3-extension\\InferredRegisters-w65",
-      "seconds": 11.95,
-      "fingerprint": "8a24c55c784edeee617e6fe1cdc2acd495a103497c3f92d8343fa2f8d9aef90c"
+      "seconds": 5.84,
+      "fingerprint": "fc6d0e6a2a277e8c833a19af4fbdaf815e30d71beaa653ea6e8f3c5b95ec5882"
     },
     {
       "status": "PASS",
@@ -710,8 +710,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\InferredVectorReset-n1-w3",
-      "seconds": 10.92,
-      "fingerprint": "03d551fad700fa023d7196d90fa6e0e63df3b3f43bbe761d85610d4496b28ded"
+      "seconds": 7.89,
+      "fingerprint": "d72a03b3b3ed40f6dadd3c7d8f5a7d30be3cedb8b218feaf6c3987df8645d303"
     },
     {
       "status": "PASS",
@@ -723,8 +723,8 @@
         "w": 8
       },
       "evidence": "experiments\\differential-v0.3-extension\\InferredVectorReset-n4-w8",
-      "seconds": 14.78,
-      "fingerprint": "dc46fd4c9f1aa6424e883047fe26934206b886d7b150761a86bb603d4351717a"
+      "seconds": 9.62,
+      "fingerprint": "83cdde6c273df9de39c3f75dab274af857b3c8d62b202ebaafefb40006d7e5a8"
     },
     {
       "status": "PASS",
@@ -735,8 +735,8 @@
         "w": 3
       },
       "evidence": "experiments\\differential-v0.3-extension\\AliasedInitializer-w3",
-      "seconds": 16.58,
-      "fingerprint": "6e75d262a96869e3ccd16f53c94a91e714e722a7023e804336ccce0f71def9bf"
+      "seconds": 7.94,
+      "fingerprint": "6d85904fcb103f6a459d26e351f454c78eb23407bce27c146e5cffd7f3a3b0a4"
     },
     {
       "status": "PASS",
@@ -747,8 +747,8 @@
         "w": 8
       },
       "evidence": "experiments\\differential-v0.3-extension\\AliasedInitializer-w8",
-      "seconds": 13.05,
-      "fingerprint": "f790b9cba110846e32747ecda62c0c77a07e47338444b611e948094ac426f819"
+      "seconds": 7.77,
+      "fingerprint": "2a2f4ca1a27a4a9d05bfb48d71815981a429e5e04b1561f3119bed9e5f51f742"
     }
   ],
   "passed": 60,

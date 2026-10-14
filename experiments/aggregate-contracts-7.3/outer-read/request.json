@@ -1,0 +1,60 @@
+{
+  "parameters": {
+    "n": 3,
+    "w": 2,
+    "m": 3
+  },
+  "trace": [
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          1,
+          3
+        ],
+        "data.lanes": [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          3,
+          0
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          5,
+          4,
+          6
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ],
+        "enable": false,
+        "choose": false,
+        "index": 3
+      }
+    }
+  ],
+  "initial_state": null
+}

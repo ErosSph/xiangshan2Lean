@@ -30,14 +30,13 @@ trait MTypesLoader { self: Scala2Reader =>
       case _ => UnknownSize
     }
 
-    private def getVecArgs(cInfo: CircuitInfo, args: List[Tree]): (CSize, SignalType) = {
+    private def getVecArgs(cInfo: CircuitInfo, args: List[Tree]): Option[(CSize, SignalType)] = {
       if (args.length == 2) {
         val size      = KnownSize(STermLoader(cInfo, args.head).get._2.get)
-        val cDataType = SignalTypeLoader(cInfo, args.tail.head).get
-        (size, cDataType)
+        SignalTypeLoader(cInfo, args.tail.head).map(size -> _)
       } else {
         reporter.error(args.head.pos, "Unknow arg of Vec")
-        (UnknownSize, SignalType.empty)
+        Some((UnknownSize, SignalType.empty))
       }
     }
 
@@ -81,8 +80,7 @@ trait MTypesLoader { self: Scala2Reader =>
                     case TermName("SInt") => Some(SInt.empty.updatedWidth(width))
                     case TermName("Bool") => Some(Bool.empty)
                     case TermName("Vec") =>
-                      val (size, sigType) = getVecArgs(cInfo, args)
-                      Some(Vec(size, Node, sigType))
+                      getVecArgs(cInfo, args).map { case (size, sigType) => Vec(size, Node, sigType) }
                     case _ =>
                       unprocessedTree(f, "SignalTypeLoader #1")
                       Some(SignalType.empty)

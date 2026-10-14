@@ -1,0 +1,446 @@
+{
+  "parameters": {
+    "inc": 1,
+    "cfg_p_configuration_CoreKey_width": 2,
+    "cfg_p_configuration_CoreKey_nested_offset": 1,
+    "cfg_p_configuration_CoreKey_enabled": false,
+    "cfg_other_configuration_CoreKey_width": 5,
+    "cfg_other_configuration_CoreKey_nested_offset": 3,
+    "cfg_other_configuration_CoreKey_enabled": true
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "data": 46
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 147
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 188
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 115
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 97
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 122
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 175
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 10
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 213
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 101
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 163
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 111
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 186
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 213
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 139
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 161
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 159
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 81
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 25
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 69
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 90
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 130
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 248
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 233
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 203
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 142
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 216
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 21
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 73
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 241
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 249
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "data": 95
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 105
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 187
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 217
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 188
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 213
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 175
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 221
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 176
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 133
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 107
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 36
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 252
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 106
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 225
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 229
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 222
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 204
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 132
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 19
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 16
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 206
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 16
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 187
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 70
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 240
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 174
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 28
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 109
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 218
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 132
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 149
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 241
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 65
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 221
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 153
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 38
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 73
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 246
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 70
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 13
+      }
+    }
+  ],
+  "initial_state": null
+}

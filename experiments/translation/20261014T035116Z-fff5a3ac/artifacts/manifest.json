@@ -1,0 +1,25 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Hierarchy.scala"
+  ],
+  "modules": [
+    {
+      "module": "configuration.ConfiguredBundlePipeline",
+      "namespace": "configuration.ConfiguredBundlePipeline",
+      "ir": "configuration/ConfiguredBundlePipeline.ir.json",
+      "lean": "configuration/ConfiguredBundlePipeline.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala": "255851781633178e7672046129b7eb71bb6718544b3f56609ce545b75deada1f",
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Hierarchy.scala": "9a110eadcaca6bf98aebd4b6ba50e1ea7506f41813ebcfcf4f9891be25c443c0"
+  },
+  "compiler_sha256": "c75acc4adeecb714dff55aa9f3079abce0fbe741dc0a66855f3840e05ada1341",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261014T035116Z-fff5a3ac"
+}

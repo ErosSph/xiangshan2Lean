@@ -1,0 +1,60 @@
+{
+  "cycle": 2,
+  "lean": {
+    "state": {
+      "saved.tail": 3,
+      "saved.tag": 14,
+      "saved.payload": 19,
+      "saved.header.valid": false,
+      "saved.header.code": 24
+    },
+    "pre": {
+      "out.tail": 1,
+      "out.tag": 2,
+      "out.payload": 0,
+      "out.header.valid": false,
+      "out.header.code": 2
+    },
+    "post": {
+      "out.tail": 3,
+      "out.tag": 14,
+      "out.payload": 3,
+      "out.header.valid": false,
+      "out.header.code": 0
+    },
+    "cycle": 2
+  },
+  "rtl": {
+    "cycle": 2,
+    "pre": {
+      "out.header.code": 2,
+      "out.header.valid": 0,
+      "out.payload": 0,
+      "out.tag": 2,
+      "out.tail": 1
+    },
+    "post": {
+      "out.header.code": 0,
+      "out.header.valid": 0,
+      "out.payload": 3,
+      "out.tag": 6,
+      "out.tail": 3
+    }
+  },
+  "expected": {
+    "pre": {
+      "out.payload": 0,
+      "out.tag": 2,
+      "out.tail": 1,
+      "out.header.code": 2,
+      "out.header.valid": 0
+    },
+    "post": {
+      "out.payload": 3,
+      "out.tag": 6,
+      "out.tail": 3,
+      "out.header.code": 0,
+      "out.header.valid": 0
+    }
+  }
+}

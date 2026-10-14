@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "module": "aggregate.BundleVectorConstruct",
+  "parameters": {
+    "n": 1,
+    "w": 1,
+    "m": 1
+  },
+  "cycles": 64,
+  "output_comparisons": 3840,
+  "source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840",
+  "ir_sha256": "578508af02d973478168b49492423438c1000fbac4f0d1a27b198dce3c41bce7",
+  "lean_sha256": "560174b63bf823fd7da95fbe0b8bb41594e2173b9c8085459f36296e2e6cd141",
+  "verification": "reused executed traces after byte-identical IR, Lean, runtime, regenerated official RTL and port-map checks",
+  "runtime_sha256": {
+    "lean\\Chisel2Lean\\Runtime.lean": "c7231b68724a14a3a676584501952155e39fd5d1ca5f35e70e8e4c611916ae5f",
+    "scripts\\simulate.py": "a2fbf25dce4db06712b2e25671b87e2ecc7465aec475320ee910ce027058236e"
+  },
+  "previous_source_sha256": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+}

@@ -1,0 +1,2826 @@
+{
+  "parameters": {
+    "n": 3,
+    "wi": 2,
+    "wo": 65
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "data.data": [
+          1,
+          0,
+          0
+        ],
+        "data.lanes": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          3,
+          4,
+          6
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          7,
+          4,
+          6
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          0,
+          3
+        ],
+        "data.lanes": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2,
+          0,
+          3
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          true
+        ],
+        "data.signed": [
+          0,
+          1,
+          7
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          1,
+          2
+        ],
+        "data.lanes": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          4,
+          2
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          true
+        ],
+        "data.signed": [
+          1,
+          0,
+          6
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          1,
+          0
+        ],
+        "data.lanes": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          6,
+          5
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          2,
+          3,
+          6
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          3,
+          3
+        ],
+        "data.lanes": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          0,
+          4,
+          7
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          false
+        ],
+        "data.signed": [
+          1,
+          4,
+          1
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          1,
+          0
+        ],
+        "data.lanes": [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          5,
+          3
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          0,
+          4,
+          1
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          2,
+          2
+        ],
+        "data.lanes": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0,
+          0,
+          4
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          5,
+          7,
+          2
+        ],
+        "data.valid": [
+          false,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          3,
+          2
+        ],
+        "data.lanes": [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          5,
+          3
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          0,
+          2,
+          1
+        ],
+        "data.valid": [
+          false,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          1,
+          1
+        ],
+        "data.lanes": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          5,
+          3
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          true
+        ],
+        "data.signed": [
+          4,
+          0,
+          0
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          2,
+          3
+        ],
+        "data.lanes": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1,
+          4,
+          7
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          0,
+          5,
+          5
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          1,
+          3
+        ],
+        "data.lanes": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          3,
+          2
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          false
+        ],
+        "data.signed": [
+          3,
+          1,
+          7
+        ],
+        "data.valid": [
+          false,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          3,
+          0
+        ],
+        "data.lanes": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          2,
+          7
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          2,
+          6,
+          7
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          2,
+          1
+        ],
+        "data.lanes": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          7,
+          1,
+          5
+        ],
+        "data.meta.flag": [
+          false,
+          false,
+          false
+        ],
+        "data.signed": [
+          5,
+          1,
+          6
+        ],
+        "data.valid": [
+          true,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          2,
+          2
+        ],
+        "data.lanes": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          0,
+          4,
+          5
+        ],
+        "data.meta.flag": [
+          false,
+          false,
+          true
+        ],
+        "data.signed": [
+          7,
+          2,
+          4
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          2,
+          0
+        ],
+        "data.lanes": [
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          1,
+          5,
+          3
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          7,
+          2,
+          0
+        ],
+        "data.valid": [
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          0,
+          2
+        ],
+        "data.lanes": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          2,
+          7
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          0,
+          5,
+          1
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          1,
+          2
+        ],
+        "data.lanes": [
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          2,
+          6
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          true
+        ],
+        "data.signed": [
+          5,
+          7,
+          1
+        ],
+        "data.valid": [
+          false,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          2,
+          1
+        ],
+        "data.lanes": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          7,
+          7
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          4,
+          6,
+          3
+        ],
+        "data.valid": [
+          false,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          0,
+          3
+        ],
+        "data.lanes": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          7,
+          0
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          4,
+          5,
+          0
+        ],
+        "data.valid": [
+          true,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          1,
+          3
+        ],
+        "data.lanes": [
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          4,
+          0
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          3,
+          1,
+          0
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          0,
+          2
+        ],
+        "data.lanes": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3,
+          1,
+          6
+        ],
+        "data.meta.flag": [
+          false,
+          false,
+          false
+        ],
+        "data.signed": [
+          2,
+          2,
+          3
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          2,
+          2
+        ],
+        "data.lanes": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1,
+          1,
+          3
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          true
+        ],
+        "data.signed": [
+          7,
+          5,
+          7
+        ],
+        "data.valid": [
+          false,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          0,
+          0
+        ],
+        "data.lanes": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          7,
+          4,
+          6
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          true
+        ],
+        "data.signed": [
+          6,
+          4,
+          5
+        ],
+        "data.valid": [
+          true,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          2,
+          2
+        ],
+        "data.lanes": [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          2,
+          3,
+          7
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          7,
+          4,
+          2
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          0,
+          3
+        ],
+        "data.lanes": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          0,
+          4,
+          1
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          true
+        ],
+        "data.signed": [
+          7,
+          6,
+          2
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          1,
+          1
+        ],
+        "data.lanes": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          2,
+          1
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          false
+        ],
+        "data.signed": [
+          4,
+          2,
+          2
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          2,
+          3
+        ],
+        "data.lanes": [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          4,
+          0
+        ],
+        "data.meta.flag": [
+          false,
+          false,
+          true
+        ],
+        "data.signed": [
+          6,
+          3,
+          1
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          0,
+          0
+        ],
+        "data.lanes": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          7,
+          6,
+          5
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          false
+        ],
+        "data.signed": [
+          7,
+          4,
+          0
+        ],
+        "data.valid": [
+          false,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          1,
+          1
+        ],
+        "data.lanes": [
+          [
+            3,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          7,
+          5
+        ],
+        "data.meta.flag": [
+          false,
+          false,
+          true
+        ],
+        "data.signed": [
+          2,
+          5,
+          7
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          1,
+          1
+        ],
+        "data.lanes": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          3,
+          0
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          2,
+          4,
+          4
+        ],
+        "data.valid": [
+          false,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          0,
+          1
+        ],
+        "data.lanes": [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1,
+          4,
+          4
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          4,
+          3,
+          5
+        ],
+        "data.valid": [
+          true,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          2,
+          3
+        ],
+        "data.lanes": [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          4,
+          6
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          4,
+          5,
+          3
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "data.data": [
+          1,
+          0,
+          1
+        ],
+        "data.lanes": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          2,
+          1
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          false
+        ],
+        "data.signed": [
+          2,
+          1,
+          3
+        ],
+        "data.valid": [
+          false,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          0,
+          0
+        ],
+        "data.lanes": [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          0,
+          4
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          1,
+          0,
+          7
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          1,
+          2
+        ],
+        "data.lanes": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0,
+          3,
+          7
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          false
+        ],
+        "data.signed": [
+          7,
+          7,
+          4
+        ],
+        "data.valid": [
+          false,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          1,
+          2
+        ],
+        "data.lanes": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          3,
+          4,
+          5
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          false
+        ],
+        "data.signed": [
+          1,
+          6,
+          1
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          2,
+          0
+        ],
+        "data.lanes": [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          2,
+          7
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          true
+        ],
+        "data.signed": [
+          3,
+          2,
+          1
+        ],
+        "data.valid": [
+          false,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          0,
+          3
+        ],
+        "data.lanes": [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          0,
+          5
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          false
+        ],
+        "data.signed": [
+          2,
+          4,
+          4
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          1,
+          3
+        ],
+        "data.lanes": [
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          7,
+          3,
+          1
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          true
+        ],
+        "data.signed": [
+          0,
+          0,
+          0
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          2,
+          0
+        ],
+        "data.lanes": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          1,
+          6
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          true
+        ],
+        "data.signed": [
+          2,
+          7,
+          1
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          1,
+          2
+        ],
+        "data.lanes": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          6,
+          5
+        ],
+        "data.meta.flag": [
+          false,
+          false,
+          false
+        ],
+        "data.signed": [
+          2,
+          4,
+          4
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          1,
+          3
+        ],
+        "data.lanes": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0,
+          3,
+          7
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          1,
+          3,
+          6
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          2,
+          2
+        ],
+        "data.lanes": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          5,
+          0
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          0,
+          3,
+          0
+        ],
+        "data.valid": [
+          true,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          1,
+          3
+        ],
+        "data.lanes": [
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          0,
+          5
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          false
+        ],
+        "data.signed": [
+          3,
+          3,
+          5
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          1,
+          2
+        ],
+        "data.lanes": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          2,
+          3,
+          3
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          1,
+          3,
+          0
+        ],
+        "data.valid": [
+          true,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          2,
+          2
+        ],
+        "data.lanes": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1,
+          0,
+          2
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          false
+        ],
+        "data.signed": [
+          0,
+          5,
+          4
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          0,
+          1
+        ],
+        "data.lanes": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          0,
+          1
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          true
+        ],
+        "data.signed": [
+          7,
+          7,
+          1
+        ],
+        "data.valid": [
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          3,
+          0
+        ],
+        "data.lanes": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2,
+          2,
+          1
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          false
+        ],
+        "data.signed": [
+          5,
+          3,
+          3
+        ],
+        "data.valid": [
+          true,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          1,
+          2
+        ],
+        "data.lanes": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          6,
+          1,
+          1
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          false
+        ],
+        "data.signed": [
+          4,
+          4,
+          4
+        ],
+        "data.valid": [
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          3,
+          2
+        ],
+        "data.lanes": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          0,
+          0
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          false
+        ],
+        "data.signed": [
+          0,
+          1,
+          3
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          2,
+          3
+        ],
+        "data.lanes": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1,
+          5,
+          2
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          false
+        ],
+        "data.signed": [
+          7,
+          5,
+          7
+        ],
+        "data.valid": [
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          0,
+          3
+        ],
+        "data.lanes": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          6,
+          7
+        ],
+        "data.meta.flag": [
+          false,
+          false,
+          true
+        ],
+        "data.signed": [
+          1,
+          5,
+          6
+        ],
+        "data.valid": [
+          true,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          2,
+          2
+        ],
+        "data.lanes": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0,
+          0,
+          2
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          true
+        ],
+        "data.signed": [
+          4,
+          5,
+          4
+        ],
+        "data.valid": [
+          false,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          1,
+          3
+        ],
+        "data.lanes": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3,
+          2,
+          1
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          false
+        ],
+        "data.signed": [
+          4,
+          1,
+          7
+        ],
+        "data.valid": [
+          false,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          3,
+          2
+        ],
+        "data.lanes": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          5,
+          4
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          true
+        ],
+        "data.signed": [
+          5,
+          7,
+          3
+        ],
+        "data.valid": [
+          false,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          0,
+          0
+        ],
+        "data.lanes": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0,
+          1,
+          3
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          6,
+          2,
+          2
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          3,
+          2
+        ],
+        "data.lanes": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          2,
+          1,
+          3
+        ],
+        "data.meta.flag": [
+          false,
+          false,
+          false
+        ],
+        "data.signed": [
+          4,
+          6,
+          5
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          0,
+          2
+        ],
+        "data.lanes": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1,
+          6,
+          7
+        ],
+        "data.meta.flag": [
+          true,
+          true,
+          true
+        ],
+        "data.signed": [
+          0,
+          0,
+          2
+        ],
+        "data.valid": [
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          2,
+          1,
+          1
+        ],
+        "data.lanes": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "data.meta.code": [
+          4,
+          7,
+          3
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          true
+        ],
+        "data.signed": [
+          7,
+          0,
+          0
+        ],
+        "data.valid": [
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          3,
+          2,
+          2
+        ],
+        "data.lanes": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0,
+          6,
+          7
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          true
+        ],
+        "data.signed": [
+          7,
+          3,
+          1
+        ],
+        "data.valid": [
+          true,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          3,
+          0
+        ],
+        "data.lanes": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          2,
+          3
+        ],
+        "data.meta.flag": [
+          true,
+          false,
+          true
+        ],
+        "data.signed": [
+          2,
+          5,
+          0
+        ],
+        "data.valid": [
+          false,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1,
+          0,
+          1
+        ],
+        "data.lanes": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          7,
+          1,
+          6
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          false
+        ],
+        "data.signed": [
+          0,
+          6,
+          6
+        ],
+        "data.valid": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0,
+          3,
+          1
+        ],
+        "data.lanes": [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          2,
+          5,
+          3
+        ],
+        "data.meta.flag": [
+          false,
+          true,
+          true
+        ],
+        "data.signed": [
+          7,
+          4,
+          0
+        ],
+        "data.valid": [
+          false,
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "data.data": [
+          2,
+          2,
+          0
+        ],
+        "data.lanes": [
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "data.meta.code": [
+          5,
+          6,
+          1
+        ],
+        "data.meta.flag": [
+          false,
+          false,
+          true
+        ],
+        "data.signed": [
+          6,
+          1,
+          6
+        ],
+        "data.valid": [
+          true,
+          false,
+          true
+        ]
+      }
+    }
+  ],
+  "initial_state": null
+}

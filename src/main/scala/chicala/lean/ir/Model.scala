@@ -87,10 +87,16 @@ final case class VecSetDynamic(value: Expr, index: Expr, rhs: Expr) extends Expr
 final case class Checked(value: Expr, condition: Expr) extends Expr
 final case class Undefined(name: String) extends Expr
 
-final case class Signal(name: String, kind: String, tpe: HWType, init: Option[Expr], source: Source)
+final case class Signal(name: String, kind: String, tpe: HWType, init: Option[Expr], source: Source,
+                        sourcePath: List[String] = Nil)
 sealed trait Statement { def source: Source }
 final case class Assign(name: String, index: Option[ParamExpr], rhs: Expr, source: Source) extends Statement
 final case class DynamicAssign(name: String, index: Expr, rhs: Expr, source: Source) extends Statement
+sealed trait VectorIndex
+final case class StaticIndex(value: ParamExpr) extends VectorIndex
+final case class DynamicIndex(value: Expr) extends VectorIndex
+/** Retain the lvalue path so partial writes compose with earlier connections. */
+final case class IndexedAssign(name: String, indices: List[VectorIndex], rhs: Expr, source: Source) extends Statement
 final case class Branch(cond: Expr, yes: List[Statement], no: List[Statement], source: Source) extends Statement
 final case class Generate(index: String, start: ParamExpr, end: ParamExpr,
                           body: List[Statement], source: Source) extends Statement

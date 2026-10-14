@@ -1,98 +1,95 @@
-# Chisel2Lean4
+# Chisel2Lean4：FIRRTL → Lean 4
 
-把 Chisel 模块转换成可以运行的 Lean 4 模型，用来检查电路行为，也方便在 Lean 中证明性质。
-模块的位宽等构造参数会保留下来，生成的模型可以使用不同的参数值。
+把官方 Chisel 工具展开后的 FIRRTL 电路转换成可运行的 Lean 4 模型，用来检查指定配置的硬件行为，也方便在 Lean 中证明性质。
+前端使用 Scala FIRRTL 1.5.6，生成模型使用 Lean 4.19.0。项目仍在开发中。
 
-目前使用 Chisel 7.3.0、Scala 2.13.15 和 Lean 4.19.0。
-项目还在开发中，支持范围见下文。
+## 两个入口有什么区别
+
+源码入口读取“怎样生成电路”，FIRRTL 入口读取“已经生成好的电路”。本页介绍 FIRRTL 入口。
+
+| 对比 | Chicala 源码入口 | FIRRTL 入口 |
+|---|---|---|
+| 输入 | Chisel 模块及相关源码 | 官方展开后的 `.fir` 电路文件 |
+| 配置参数 | 支持的参数保留在 Lean 中 | 参数已经落实成具体位宽和电路结构 |
+| 前端任务 | 解析 Scala、继承、配置读取和支持的生成结构 | 解析寄存器、连接、位运算和模块实例 |
+| 适合的工作 | 参数化建模和性质证明 | 指定配置的真实电路建模和验证 |
+
+例如，`Counter(n)` 按 `n=4` 展开后，本入口生成四位计数器模型。配置固定，但运行时输入仍可变化。
+
+源码入口使用 Chisel 7.3.0，已支持真实 CDE 配置在子模块间原样传递，以及支持范围内的 `XSBundle` 继承。
+用法和限制见 [源码与配置接入](docs/chisel7-configuration.md)。
+新增的 [Vec[Bundle] 支持](docs/vector-bundles.md) 可以保留参数化长度，处理聚合寄存器、动态字段读写和嵌套 Vec。
 
 ## 先跑一个例子
 
-需要 Java 17 和 Python 3.10 以上，并设置好 `JAVA_HOME`。
-在仓库根目录运行，首次构建需要联网：
+需要 Java 17、Python 3.10 以上，并设置好 `JAVA_HOME`。在仓库根目录运行，首次安装和构建需要联网：
 
 ```powershell
-python scripts/bootstrap.py
-python scripts/sbt.py writeToolClasspath reference/writeReferenceClasspath
+python scripts/bootstrap.py --sbt --lean
+python scripts/sbt.py classicFirrtl/writeFirrtlClasspath
 ```
 
-然后转换示例计数器，再运行一段输入序列：
+转换四位计数器，再执行一段输入序列：
 
 ```powershell
-python scripts/chisel2lean.py examples/Counter.scala --module Counter
-python scripts/simulate.py generated/Counter.ir.json --params n=4 --trace examples/direct-counter-trace.json
+python scripts/firrtl2lean.py examples/firrtl/Counter4.fir --out generated/firrtl-demo
+python scripts/firrtl_simulate.py generated/firrtl-demo/FIRRTL/Counter.ir.json --trace examples/firrtl/counter-trace.json --initial-state '{"cnt":0}' --evidence experiments/firrtl-demo-run
 ```
 
-转换会生成 `generated/Counter.lean` 和 `generated/Counter.ir.json`，并默认检查 Lean 代码能否编译。
-这里的 `n=4` 表示四位计数器；可以改成其他合法位宽。
-示例序列包含复位、计数和暂停，每拍边沿后的计数值是 `0, 1, 2, 2, 3, 0, 1`。
+生成的模型位于 `generated/firrtl-demo/FIRRTL/Counter.lean`，并默认经过 Lean 编译检查。
+示例每拍边沿后的计数值是 `0, 1, 2, 2, 0`，结果保存在 `experiments/firrtl-demo-run/result.json`。
 
-生成的 Lean 文件包含参数、输入、状态和输出。
-`step` 计算下一拍状态，`output` 计算当前输出，可以直接用它们写证明。
+复位信号放在轨迹的 `inputs` 中；寄存器初态必须显式提供，组合电路使用 `--initial-state '{}'`。
+本例的零初态是实验条件，不表示硬件保证零上电状态。
 
-## 转换自己的模块
+## 转换自己的电路
 
-把模块及其依赖的源码一起传入，`--module` 指定目标模块：
+先通过原工程的官方 Chisel 构建流程生成支持版本的 `.fir` 文件，然后运行：
 
 ```powershell
-python scripts/chisel2lean.py Design.scala Ports.scala --module mypkg.Design --out generated/my-design
+python scripts/firrtl2lean.py design.fir --top Design --out generated/design
 ```
 
-父类、trait 和子模块需要参与转换时，也要提供相应源码。
-额外依赖可以通过 `--classpath-file` 指定。真实 CDE 配置的用法见
-[配置接入说明](docs/chisel7-configuration.md)。
-
-另有一个入口可以把展开后的经典 FIRRTL 转成固定配置的 Lean 模型，
-用法和支持版本见 [FIRRTL 前端说明](docs/firrtl-frontend.md)。
+`--top` 指定目标模块，省略时使用文件声明的顶层。
+输出包含 `.lean`、`.ir.json`、规范化后的 FIRRTL 和来源清单。输入端口、状态字段以生成的 IR 为准。
 
 ## 怎么实现的
 
-源码入口走的是这条流程：
+`FIRRTL → 官方解析与规范化 → 硬件 IR → Lean 4`
 
-`Chisel 源码 → Scala 类型检查和 Chicala 前端 → 硬件中间模型 → Lean 4`
-
-转换器主体用 Scala 实现，Python 脚本负责构建、运行和验证。
-前端读取带类型的源码，中间模型整理端口、运算、连接和寄存器，处理位宽和状态更新规则。
-Lean 后端再把它们写成参数化的数据结构和 `step`、`output` 函数。
-
-香山部分使用真实的 CDE 依赖。转换器沿父类和 trait 查找配置 getter，
-把模块用到的标量字段变成 Lean 参数；运行具体配置时，再由真实 CDE 查询对应的值。
-FIRRTL 入口则读取已经展开的电路，接入同一套中间模型和 Lean 后端。
+官方 FIRRTL 库处理位宽推导、Bundle/Vec 展开和连接优先级；前端处理模块连接及寄存器，并复用已有的 IR 和 Lean 后端。
+生成模型中的 `step` 计算下一拍状态，`output` 计算当前输出。所有寄存器同时从旧状态和当前输入计算下一状态。
 
 ## 怎么检查结果
 
 ```powershell
-python scripts/validate.py
-python scripts/verify_xiangshan_config.py
+python scripts/verify_firrtl_frontend.py
+python scripts/check_firrtl_contracts.py
+python scripts/verify_firrtl_bridges.py
 ```
 
-第一条运行通用回归，比较 Lean 模型和原始 Chisel 生成的 RTL 输出。
-第二条会下载锁定的香山及依赖源码，构建真实配置框架，验证原始 `RightShiftModule`。
+分别运行行为回归、不支持输入与故障注入检查，以及指定配置下两端生成模型的 Lean 等价证明。
 RTL 仿真还需要 Verilator、C++ 编译器和 Make。
 
 现有验证记录：
 
-- [通用回归](docs/validation-chisel7.json)：51 个模型、128 组参数配置通过。
-- [配置与继承](docs/validation-configuration-7.3.json)：20 组配置通过。
-- [香山移位模块](docs/validation-xiangshan-config-7.3.json)：3 组配置、30,720 个周期的 Lean、RTL 和独立数学结果一致。
+- [FIRRTL 回归](docs/validation-firrtl.json)：22 项配置、34,155 个周期、595,699 次输出比较通过。
+- [香山 v2.1 验证](docs/validation-xiangshan-firrtl.json)：验证真实 RightShift 和 AluDataModule；ALU 含 10 个子模块，覆盖 128 个操作码值，完成 153,600 次输出比较。
+- [模型等价证明](docs/validation-firrtl-bridges.json)：四位 Counter 覆盖全部初态和任意长度的有限输入序列；64 位 RightShift 覆盖全部输入。
 
-这些结果覆盖已测试的案例。整个转换流程、所有合法参数和所有输入序列上的等价性还没有证明。
+回归包含历史 Chisel 3.5.6 展开产物，香山实验使用 v2.1 的 Chisel 3.5.3。
+有限测试和指定配置的模型等价证明，不构成整个转换流程的通用正确性证明。
 
 ## 目前的支持范围
 
-源码入口支持常见的单时钟设计，包括 UInt/SInt/Bool、同步寄存器、条件赋值、
-模块层次，以及支持范围内的 Bundle/Vec、生成循环和存储器。
-遇到不支持的写法会报错。具体构造见 [支持列表](docs/support-matrix.md)。
+支持经典 FIRRTL 文本版本至 1.1.0，以及旧的无版本头格式；支持常见 UInt/SInt 运算、Mux、聚合展开、多层模块和单时钟同步寄存器。
 
-真实香山的 `XSModule/CDE` 已经接入：可以解析支持范围内的父类、trait 和 getter，
-把硬件实际使用的 Int/Boolean 配置字段映射到 Lean 参数。
-`XSBundle` 继承、`Vec[Bundle]`、配置对象在子模块间传递和复杂配置计算仍需补齐。
-目前还不能自动转换整颗香山。
+暂不支持现代 FIRRTL 6.x、FIRRTL Mem/SyncReadMem、多时钟、门控时钟、异步复位、BlackBox/ExtModule 和验证语句。
+不支持的结构会报错；除零、无效 validif 等未定义观察会被执行器拒绝。
 
-更完整的使用演练见 [饱和累加器示例](docs/walkthrough-saturating.md)。
-位宽、复位和状态更新的约定见 [语义说明](docs/semantics.md)。
+详细用法、复位约定和香山实验复现步骤见 [FIRRTL 前端说明](docs/firrtl-frontend.md)。
 
 ## 来源与许可
 
-项目基于 [Chicala](https://github.com/iscas-tis/chicala)，在其源码前端上增加了 Lean 后端和验证工具。
-沿用 [Apache-2.0 许可证](LICENSE)，其他依赖与示例的来源见 [NOTICE](NOTICE)。
+项目基于 [Chicala](https://github.com/iscas-tis/chicala)，FIRRTL 前端的电路图组织和状态更新实现参考 [GSIM](https://github.com/OpenXiangShan/gsim)。
+保留 [Apache-2.0 许可证](LICENSE)，香山派生电路及其他依赖的来源和许可见 [NOTICE](NOTICE)。

@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\Hierarchy.scala:39: error: method width in trait Aggregate cannot be accessed as a member of configuration.HasPacketTag with chisel3.Bundle from trait HasPacketTag in package configuration
+  val tag = UInt((width + 1).W)
+                  ^
+1 error
