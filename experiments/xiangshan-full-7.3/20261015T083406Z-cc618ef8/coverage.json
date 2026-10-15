@@ -1,0 +1,65 @@
+{
+  "format": "xiangshan-whole-coverage-v1",
+  "config": "DefaultConfig",
+  "cores": 1,
+  "upstream_commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2",
+  "hardware_sources_modified": false,
+  "firrtl_sha256": "6e312e04ec7b7f9b4e8ba610083b2ba232461742fb004b1f9ccadf13a53c1f14",
+  "stages": {
+    "official_elaboration": "PASS",
+    "native_rtl_lowering": "PASS",
+    "whole_top_hierarchical_rtl_import": "PASS",
+    "whole_top_flat_rtl_normalization": "PASS",
+    "whole_top_clock_lowering": "PASS",
+    "whole_top_transfer_export": "PASS",
+    "whole_top_lean_compilation": "PASS",
+    "whole_top_rtl_differential": "NOT_RUN",
+    "whole_top_universal_equivalence": "NOT_PROVED"
+  },
+  "inventory": {
+    "format": "xiangshan-declaration-inventory-v2",
+    "semantics_checked": false,
+    "module_definitions": 19995,
+    "external_modules": 166,
+    "instance_declarations": 20080,
+    "register_declarations": 55835,
+    "memory_declarations": 1091,
+    "effect_statements": 8561,
+    "unresolved_module_names": [],
+    "scope": "Declarations in official elaboration. Counts include aggregate registers and are not flattened cell counts. No module is marked Lean-verified by this inventory."
+  },
+  "conversion_detail": {
+    "status": "LEAN_COMPILED",
+    "tool_exit_codes": {
+      "lean-check": 0,
+      "lean-runtime-check": 0
+    },
+    "reused_stages": [
+      "yosys-export",
+      "yosys-functional",
+      "yosys-prepare"
+    ]
+  },
+  "external_definition_counts": {
+    "DiffExtIntWriteback": 8,
+    "DiffExtFpWriteback": 8,
+    "DiffExtArchIntRegState": 1,
+    "DiffExtArchEvent": 1,
+    "DiffExtCSRState": 1,
+    "DiffExtNonRegInterruptPendingEvent": 1,
+    "DiffExtDebugMode": 1,
+    "DiffExtArchFpRegState": 1,
+    "DiffExtLrScEvent": 1,
+    "DiffExtInstrCommit": 6,
+    "DiffExtTrapEvent": 1,
+    "ClockGate": 136
+  },
+  "full_inventory": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\module-inventory-v2.json",
+  "evidence": {
+    "elaboration": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\summary.json",
+    "lowering": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\lowering-caller-state\\summary.json",
+    "rtl_import": "E:\\ICT\\chisel2lean4\\docs\\validation-xiangshan-native-import-7.3.json",
+    "conversion": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T150559Z-78159932\\summary.json"
+  },
+  "scope": "Fixed DefaultConfig/one core only when so configured. Declaration counts include pre-dedup and aggregate declarations. No module becomes Lean-verified merely by being listed or by passing Chisel/firtool."
+}

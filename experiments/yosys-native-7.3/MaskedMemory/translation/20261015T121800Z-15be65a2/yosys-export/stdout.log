@@ -1,0 +1,24 @@
+
+-- Running command `read_rtlil ./unconstrained.il; expose -evert -sep _ t:$print t:$assert t:$assume t:$cover t:$anyseq; delete w:c2l_effect_*_TRG; clean_zerowidth; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2' --
+
+1. Executing RTLIL frontend.
+Input filename: ./unconstrained.il
+
+2. Executing EXPOSE pass (exposing internal signals as outputs).
+New module port: MaskedMemory/c2l_undefined_0_Y ($anyseq)
+New module port: MaskedMemory/c2l_undefined_2_Y ($anyseq)
+New module port: MaskedMemory/c2l_undefined_3_Y ($anyseq)
+New module port: MaskedMemory/c2l_undefined_1_Y ($anyseq)
+Removing cell: MaskedMemory/c2l_undefined_0 ($anyseq)
+Removing cell: MaskedMemory/c2l_undefined_2 ($anyseq)
+Removing cell: MaskedMemory/c2l_undefined_3 ($anyseq)
+Removing cell: MaskedMemory/c2l_undefined_1 ($anyseq)
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module MaskedMemory...
+Found and reported 0 problems.
+
+4. Executing JSON backend.
+
+5. Executing Functional SMT Backend.
+Processing module `\MaskedMemory`.

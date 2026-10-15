@@ -1,0 +1,15 @@
+cd \MaskedMemory
+select -assert-none w:c2l_bridge_* c:c2l_bridge_*
+rename $auto$setundef.cc:550:execute$57 \c2l_bridge_undefined_0
+rename $auto$setundef.cc:550:execute$59 \c2l_bridge_undefined_1
+rename $auto$setundef.cc:550:execute$61 \c2l_bridge_undefined_2
+rename $auto$setundef.cc:550:execute$63 \c2l_bridge_undefined_3
+expose -evert -sep _ c:c2l_bridge_effect_* c:c2l_bridge_undefined_*
+rename \c2l_bridge_undefined_0_Y \c2l_undefined_0
+rename \c2l_bridge_undefined_1_Y \c2l_undefined_1
+rename \c2l_bridge_undefined_2_Y \c2l_undefined_2
+rename \c2l_bridge_undefined_3_Y \c2l_undefined_3
+delete w:c2l_bridge_effect_*_TRG
+clean_zerowidth
+cd ..
+select -clear

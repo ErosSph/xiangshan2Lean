@@ -1,0 +1,69 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format ./design.v --top Arbitrary; hierarchy -check -top Arbitrary; proc -noopt; flatten Arbitrary; hierarchy -check -top Arbitrary; opt_clean; memory_collect; write_json ./before.json' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    Arbitrary
+
+
+Build succeeded: 0 errors, 0 warnings
+<suppressed ~2 debug messages>
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \Arbitrary
+
+2.2. Analyzing design hierarchy..
+Top module:  \Arbitrary
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \Arbitrary
+
+5.2. Analyzing design hierarchy..
+Top module:  \Arbitrary
+Removed 0 unused modules.
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Arbitrary..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+7. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8. Executing JSON backend.

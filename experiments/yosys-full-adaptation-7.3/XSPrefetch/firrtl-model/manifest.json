@@ -1,0 +1,30 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "frontend_implementation": "CIRCT",
+  "firrtl_version": "6.0.0",
+  "source_firrtl_version": "6.0.0",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\original\\design.fir",
+  "source_sha256": "569e32dc9747d495141f6767f08501abba445543f3059a684528c9c205608e3a",
+  "compiler_sha256": "ae515ed8e48580399332c87a7b76406b7d18fb7790d8acbbd3170ecd00a4a7f4",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "Cross.XSPrefetch",
+      "top": "Chisel2LeanReference",
+      "ir": "Cross/XSPrefetch.ir.json",
+      "lean": "Cross/XSPrefetch.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\firrtl-translation\\20261015T091024Z-62a0677b",
+  "circt_version": "1.135.0",
+  "circt_sha256": "afb77f160063de31ea3137502148365f920e8c0bdfa39673d14fac7d34d78939",
+  "ssa_reader_sha256": "29f63f7d14452d69d50068f8abc7b160f22e445ca8b53781700f69a670b44e15",
+  "bridge_sha256": "cce076c4b722dce7fd7043f8e90094d7e35bbb1df7d9bef1a34d2ab6ebb1cd8e",
+  "parsed_mlir_sha256": "e1e5907e1b76728c1bb0d903195c4829496b2a7ebb6cbee379c35cfba759172c",
+  "lowered_mlir_sha256": "5709afa87430270dc3405c288690b6789c489e9c98cc8d93fd8880b5841118ab",
+  "unsupported_effects_checked_before_optimization": true
+}

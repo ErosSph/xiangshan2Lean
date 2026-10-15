@@ -1,0 +1,32 @@
+{
+  "format": "chisel2lean-yosys-hierarchy-v1",
+  "identity": {
+    "top": "ProjectTop",
+    "source_files_sha256": {
+      "include/width.svh": "b26d754f0c08462bea3b11a71938aac8539a2342ea0701c328a7b34cec1cb165",
+      "Lane.sv": "34d98ebd34f8079d137fe0dd2ac027042340283509b3bb50222e6868d2da7b5f",
+      "ProjectTop.sv": "6f28c96259d90b695b48b988bc1b01bebfe4616a457f779c2f46bee59f33d460"
+    },
+    "tool": {
+      "engine": "native",
+      "archive_sha256": "580a1bbe938f4af861ff49e42944dc00933d61d087693e43c316023ea07f6e1e",
+      "yosys_version": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)"
+    },
+    "stdio_staged_sha256": {},
+    "pipeline": "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy; hierarchy -check; proc -noopt; opt_clean; memory_collect"
+  },
+  "rtlil": {
+    "name": "hierarchy.il",
+    "sha256": "befd504dccdb7b8fa186a09f95eed543694fa84711b0b2f11244c4af74ff6d6e"
+  },
+  "producer": {
+    "command.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-checkpoint-7.3\\fresh-translation\\20261015T150308Z-5b285bf3\\yosys-hierarchy\\command.json",
+      "sha256": "28faa98f0d0ac18cce4907c67c72150128bc8644570bfe3b538ae1d0b1182bda"
+    },
+    "result.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-checkpoint-7.3\\fresh-translation\\20261015T150308Z-5b285bf3\\yosys-hierarchy\\result.json",
+      "sha256": "07e9a6cec2cec439fa0a2bcd540eda49efcaf42016e35926848d389da51c20a2"
+    }
+  }
+}

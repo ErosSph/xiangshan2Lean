@@ -1,0 +1,29 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "Large",
+    "--Mdir",
+    "obj_dir",
+    "Large.sv",
+    "trace.cpp"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-chunks-7.3\\Large",
+  "started_at": "2026-10-15T10:55:25.503373+00:00",
+  "pid": 22224,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T10:55:36.653111+00:00"
+}

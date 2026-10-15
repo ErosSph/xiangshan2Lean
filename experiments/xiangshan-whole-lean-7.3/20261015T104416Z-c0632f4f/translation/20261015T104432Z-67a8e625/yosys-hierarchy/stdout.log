@@ -1,0 +1,4 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy -f /work/project.f --top XSTop; hierarchy -check -top XSTop; proc -noopt; opt_clean; memory_collect; tee -o /work/hierarchy-stat.json stat -json; write_rtlil /work/hierarchy.il' --
+
+1. Executing SLANG frontend.

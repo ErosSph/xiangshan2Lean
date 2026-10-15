@@ -1,0 +1,49 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-project-7.3\\project",
+  "source_sha256": "d9bb3a837ccb3502738cc339f5545f0d9b777c7acac7b479ff70fabef63ecea4",
+  "source_files_sha256": {
+    "include/width.svh": "b26d754f0c08462bea3b11a71938aac8539a2342ea0701c328a7b34cec1cb165",
+    "Lane.sv": "34d98ebd34f8079d137fe0dd2ac027042340283509b3bb50222e6868d2da7b5f",
+    "ProjectTop.sv": "6f28c96259d90b695b48b988bc1b01bebfe4616a457f779c2f46bee59f33d460"
+  },
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Project.Top",
+  "ir": "Project/Top.ir.json",
+  "lean": "Project/Top.lean",
+  "arbitrary_inputs": [],
+  "frontend_keep_hierarchy": true,
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 1,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "nodes": 23,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-project-7.3\\translation\\20261015T092248Z-fb2de5cf",
+  "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+  "reader_sha256": "86ac879c61e891823c7d817f2544fbac05e8d40a228be499cd93b965b2e9406a",
+  "driver_sha256": "0a8f3838fc5655cf990f985359a99d763ae6208252746819bd0fbf48682ffd31",
+  "artifact_sha256": {
+    "before.json": "2a551089e605b6cff83780500605b2474bde624cebac86624ada26105385fd3c",
+    "exposed.json": "bb5d15a4d68817bf7f5dab125943937ab58091633bbc6fbf9d65879a02838921",
+    "lowered.json": "51c6a38a197c1bf3c7a18c492d34a726d808622d6bdce3fa0615f0a8ac10a80d",
+    "functional.smt2": "54e2b5dbc11cdbfccd90e1b27f2ed8b2d8a605a75a8686592faa82d0618c7d94",
+    "Project/Top.lean": "2b495e256ee3017a4f327e02a09c24e5bce2ab2c809d068fe83221ef62a93a4b",
+    "Project/Top.ir.json": "2f31efe490fb33b412e6ea84fb7dafd54ca069116598833f31d69ce1b5033e38"
+  }
+}

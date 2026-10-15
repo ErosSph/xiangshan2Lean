@@ -1,0 +1,13 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "-Q",
+    "-T",
+    "-p",
+    "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format -I \"/work/project\" -I \"/work/project/include\" \"/work/project/Lane.sv\" \"/work/project/ProjectTop.sv\" --top ProjectTop; hierarchy -check -top ProjectTop; proc -noopt; flatten; opt_clean; memory_collect; write_json /work/before.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-project-7.3\\translation\\20261015T084702Z-283c67d4\\artifacts",
+  "started_at": "2026-10-15T08:47:02.318009+00:00",
+  "pid": 32568
+}

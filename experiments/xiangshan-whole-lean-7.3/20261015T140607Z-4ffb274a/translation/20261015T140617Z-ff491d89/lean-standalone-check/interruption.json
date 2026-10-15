@@ -1,0 +1,12 @@
+{
+  "stopped_at": "2026-10-15T14:40:12.8232497Z",
+  "reason": "Stop after repeated real kernel deep-recursion errors; preserve source and diagnostics for representation repair",
+  "first_errors": [
+    "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T140607Z-4ffb274a\\translation\\20261015T140617Z-ff491d89\\artifacts\\XiangShan\\Whole.lean:81834:0: error: (kernel) deep recursion detected",
+    "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T140607Z-4ffb274a\\translation\\20261015T140617Z-ff491d89\\artifacts\\XiangShan\\Whole.lean:81852:0: error: (kernel) deep recursion detected",
+    "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T140607Z-4ffb274a\\translation\\20261015T140617Z-ff491d89\\artifacts\\XiangShan\\Whole.lean:81870:0: error: (kernel) deep recursion detected",
+    "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T140607Z-4ffb274a\\translation\\20261015T140617Z-ff491d89\\artifacts\\XiangShan\\Whole.lean:81888:0: error: (kernel) deep recursion detected",
+    "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T140607Z-4ffb274a\\translation\\20261015T140617Z-ff491d89\\artifacts\\XiangShan\\Whole.lean:81906:0: error: (kernel) deep recursion detected"
+  ],
+  "process_id": 31680
+}

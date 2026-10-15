@@ -1,0 +1,45 @@
+{
+  "format": "chisel2lean-stdio-compat-v1",
+  "files": {
+    "design.v": {
+      "original_sha256": "a2dc100d9c6eeca43843d5b7ecb4d2e83305ac5c5de6575336cca33c554e60c5",
+      "staged_sha256": "97b0b0c3f9587d302c054ea57b911720e514407498f8df110a897d4f9ad59ac5",
+      "events": [
+        {
+          "marker": "__C2L_STDIO_a2dc100d9c6eeca4_0__",
+          "file_descriptor": 2147483650,
+          "stream": "stderr",
+          "source": "design.v",
+          "line": 6,
+          "original_format_literal": "\"ERR q=%0d\\n\""
+        },
+        {
+          "marker": "__C2L_STDIO_a2dc100d9c6eeca4_1__",
+          "file_descriptor": 2147483649,
+          "stream": "stdout",
+          "source": "design.v",
+          "line": 7,
+          "original_format_literal": "\"OUT literal $fwrite(dynamic_fd) q=%0d\\n\""
+        }
+      ]
+    }
+  },
+  "markers": {
+    "__C2L_STDIO_a2dc100d9c6eeca4_0__": {
+      "marker": "__C2L_STDIO_a2dc100d9c6eeca4_0__",
+      "file_descriptor": 2147483650,
+      "stream": "stderr",
+      "source": "design.v",
+      "line": 6,
+      "original_format_literal": "\"ERR q=%0d\\n\""
+    },
+    "__C2L_STDIO_a2dc100d9c6eeca4_1__": {
+      "marker": "__C2L_STDIO_a2dc100d9c6eeca4_1__",
+      "file_descriptor": 2147483649,
+      "stream": "stdout",
+      "source": "design.v",
+      "line": 7,
+      "original_format_literal": "\"OUT literal $fwrite(dynamic_fd) q=%0d\\n\""
+    }
+  }
+}

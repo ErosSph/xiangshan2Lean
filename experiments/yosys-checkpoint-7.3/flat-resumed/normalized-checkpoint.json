@@ -1,0 +1,40 @@
+{
+  "format": "chisel2lean-yosys-hierarchy-v1",
+  "identity": {
+    "top": "ProjectTop",
+    "source_files_sha256": {
+      "include/width.svh": "b26d754f0c08462bea3b11a71938aac8539a2342ea0701c328a7b34cec1cb165",
+      "Lane.sv": "34d98ebd34f8079d137fe0dd2ac027042340283509b3bb50222e6868d2da7b5f",
+      "ProjectTop.sv": "6f28c96259d90b695b48b988bc1b01bebfe4616a457f779c2f46bee59f33d460"
+    },
+    "tool": {
+      "engine": "native",
+      "archive_sha256": "580a1bbe938f4af861ff49e42944dc00933d61d087693e43c316023ea07f6e1e",
+      "yosys_version": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)"
+    },
+    "stdio_staged_sha256": {},
+    "pipeline": "root-only flatten v1; hierarchy -check -top; opt_clean; memory_collect; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq",
+    "phase": "clock-normalized",
+    "clock_mode": "single",
+    "preserve_effects": false,
+    "keep_hierarchy": true
+  },
+  "rtlil": {
+    "name": "unconstrained.il",
+    "sha256": "f316eeae66aaefcfce04e75e603bfccb9908a4ed336a2025ab116d4e086f2d45"
+  },
+  "producer": {
+    "command.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-checkpoint-7.3\\flat-translation\\20261015T150321Z-4e093f91\\yosys-functional\\command.json",
+      "sha256": "7a3a6ba9febb738d210eebe442c6f2a0d23e17902ad3b5e67adc74ef4340fd2d"
+    },
+    "result.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-checkpoint-7.3\\flat-translation\\20261015T150321Z-4e093f91\\yosys-functional\\result.json",
+      "sha256": "838eec58a8b357bbb8c6edb968046b6adc10f988f76a3a663ae4f705fe7f0633"
+    }
+  },
+  "companions": {
+    "before.json": "01673b51e3275a001ea47a3b699d6221ee602d94e2870be3b0a080bb7499c9c0",
+    "unconstrained.json": "10ebfa7d94542620a0481a97db27cbfbcaa866a9c561a8376ba89eb0d0e1de09"
+  }
+}

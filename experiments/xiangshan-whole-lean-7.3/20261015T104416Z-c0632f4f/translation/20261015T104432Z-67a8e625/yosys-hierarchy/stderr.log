@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "E:\ICT\chisel2lean4\scripts\yosys_runner.py", line 31, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "E:\ICT\chisel2lean4\scripts\yosys_runner.py", line 27, in main
+    return yowasp_yosys.run_yosys(sys.argv[1:])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ICT\chisel2lean4\.tools\yowasp-0.70\yowasp_yosys\__init__.py", line 7, in run_yosys
+    return yowasp_runtime.run_wasm(__package__, "yosys.wasm", resources=["share"],
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ICT\chisel2lean4\.tools\yowasp-0.70\yowasp_runtime\__init__.py", line 151, in run_wasm
+    raise exception # re-raise to preserve backtrace
+    ^^^^^^^^^^^^^^^
+  File "E:\ICT\chisel2lean4\.tools\yowasp-0.70\yowasp_runtime\__init__.py", line 138, in run
+    app.exports(store)["_start"](store)
+  File "E:\ICT\chisel2lean4\.tools\yowasp-0.70\wasmtime\_func.py", line 93, in __call__
+    with enter_wasm(store) as trap:
+  File "D:\miniconda\Lib\contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "E:\ICT\chisel2lean4\.tools\yowasp-0.70\wasmtime\_func.py", line 238, in enter_wasm
+    raise trap_obj
+wasmtime._trap.Trap: error while executing at wasm backtrace:
+    0: 0x28755ec - yosys.wasm!abort
+    1: 0x2871435 - yosys.wasm!std::__terminate(void (*)())
+    2: 0x28713fd - yosys.wasm!std::terminate()
+    3: 0x104a96e - yosys.wasm!slang_frontend::SwitchHelper::~SwitchHelper()
+    4: 0x10c1294 - yosys.wasm!slang_frontend::StatementExecutor::handle(slang::ast::ConditionalStatement const&)
+    5: 0x10a95e7 - yosys.wasm!decltype(auto) slang::ast::Statement::visit<slang_frontend::StatementExecutor&>(slang_frontend::StatementExecutor&) const
+    6: 0x10c0759 - yosys.wasm!slang_frontend::StatementExecutor::handle(slang::ast::StatementList const&)
+    7: 0x10cad8b - yosys.wasm!decltype(auto) slang::ast::Statement::visit<slang_frontend::StatementExecutor>(slang_frontend::StatementExecutor&&) const
+    8: 0x10d08a3 - yosys.wasm!slang_frontend::PopulateNetlist::handle_ff_process(slang::ast::ProceduralBlockSymbol const&, slang::ast::SignalEventControl const&, slang::ast::StatementBlockSymbol const*, std::__2::vector<slang::ast::Statement const*, std::__2::allocator<slang::ast::Statement const*>>, slang::ast::Statement const&, std::__2::span<slang_frontend::TimingPatternInterpretor::AsyncBranch, 4294967295ul>)
+    9: 0x105e9a4 - yosys.wasm!slang_frontend::TimingPatternInterpretor::interpret_async_pattern(slang::ast::ProceduralBlockSymbol const&, std::__2::vector<slang::ast::SignalEventControl const*, std::__2::allocator<slang::ast::SignalEventControl const*>>, slang::ast::Statement const&)
+   10: 0x105de82 - yosys.wasm!slang_frontend::TimingPatternInterpretor::handle_always(slang::ast::ProceduralBlockSymbol const&)
+   11: 0x105fdd7 - yosys.wasm!slang_frontend::TimingPatternInterpretor::interpret(slang::ast::ProceduralBlockSymbol const&)
+   12: 0x10b7b2b - yosys.wasm!slang_frontend::PopulateNetlist::handle(slang::ast::ProceduralBlockSymbol const&)
+   13: 0x10b464f - yosys.wasm!decltype(auto) slang::ast::Symbol::visit<slang_frontend::PopulateNetlist&>(slang_frontend::PopulateNetlist&) const
+   14: 0x10b7727 - yosys.wasm!slang_frontend::PopulateNetlist::handle(slang::ast::InstanceBodySymbol const&)
+   15: 0x10b45fc - yosys.wasm!decltype(auto) slang::ast::Symbol::visit<slang_frontend::PopulateNetlist&>(slang_frontend::PopulateNetlist&) const
+   16: 0x10b4169 - yosys.wasm!slang_frontend::populate_netlist(slang_frontend::HierarchyQueue&, slang_frontend::NetlistContext&)
+   17: 0x103a416 - yosys.wasm!slang_frontend::SlangFrontend::execute(std::__2::basic_istream<char, std::__2::char_traits<char>>*&, std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::vector<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::allocator<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>>, Yosys::RTLIL::Design*)
+   18: 0x13017f - yosys.wasm!Yosys::Frontend::execute(std::__2::vector<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::allocator<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>>, Yosys::RTLIL::Design*)
+   19: 0x12d425 - yosys.wasm!Yosys::Pass::call(Yosys::RTLIL::Design*, std::__2::vector<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>, std::__2::allocator<std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>>>>)
+note: using the `WASMTIME_BACKTRACE_DETAILS=1` environment variable may show more debugging information
+
+Caused by:
+    wasm trap: wasm `unreachable` instruction executed
+

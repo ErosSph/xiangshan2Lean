@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format ./design.v --top Arbitrary; hierarchy -check -top Arbitrary; proc -noopt; flatten Arbitrary; hierarchy -check -top Arbitrary; opt_clean; memory_collect; write_json ./before.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-arbitrary-7.3\\json-translation\\20261015T134523Z-5795c194\\artifacts",
+  "started_at": "2026-10-15T13:45:23.715603+00:00",
+  "pid": 10912
+}

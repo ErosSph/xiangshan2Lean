@@ -1,0 +1,20 @@
+
+-- Running command `read_json ./before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json ./unconstrained.json' --
+
+1. Executing JSON frontend.
+Importing module MaskedMemory from JSON tree.
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Modifying write port 0 on memory MaskedMemory.mem: CLK=\clock, A=\addr0, D={ 4'x \data0 [3:0] }
+Modifying write port 1 on memory MaskedMemory.mem: CLK=\clock, A=\addr1, D={ 4'x \data1 [3:0] }
+Modifying write port 2 on memory MaskedMemory.mem: CLK=\clock, A=\addr0, D={ \data0 [7:4] 4'x }
+Modifying write port 3 on memory MaskedMemory.mem: CLK=\clock, A=\addr1, D={ \data1 [7:4] 4'x }
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \MaskedMemory..
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing JSON backend.

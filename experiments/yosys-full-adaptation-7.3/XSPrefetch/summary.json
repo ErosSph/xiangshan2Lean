@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "case": "XSPrefetch",
+  "module": "xiangshan.cache.mmu.L2TlbPrefetch",
+  "constructor": [
+    {
+      "class": "xiangshan.validation.NanhuCoreConfig",
+      "args": []
+    }
+  ],
+  "cycles": 768,
+  "output_comparisons": 4608,
+  "independent_integer_checks": 4608,
+  "firrtl_cross_comparisons": 4608,
+  "nodes": 280,
+  "state_fields": 33,
+  "hardware": {
+    "register_cells": 11,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "initial_state": {
+    "$auto$clk2fflogic.cc:92:sample_control_edge$16": 1,
+    "$auto$clk2fflogic.cc:108:sample_data$14": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$12": 0,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$26": 1,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$36": 1,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$46": 1,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$56": 1,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$66": 1,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$76": 1,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$86": 1,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$96": 1,
+    "$auto$clk2fflogic.cc:108:sample_data$24": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$22": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$34": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$32": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$44": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$42": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$54": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$52": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$64": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$62": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$74": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$72": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$84": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$82": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$94": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$92": 0,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$6": 1,
+    "$auto$clk2fflogic.cc:92:sample_control_edge$106": 1,
+    "$auto$clk2fflogic.cc:108:sample_data$4": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$2": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$104": 0,
+    "$auto$clk2fflogic.cc:108:sample_data$102": 0
+  },
+  "experiment_contract": "Unknown initial bits and explicit arbitrary inputs zero in this experiment; known Yosys auxiliary constraints retained. RTL --x-initial 0/--x-assign 0. No hardware power-on claim.",
+  "official_elaboration": {
+    "format": "chisel2lean-official-elaboration-v1",
+    "module": "xiangshan.cache.mmu.L2TlbPrefetch",
+    "constructor": [
+      {
+        "class": "xiangshan.validation.NanhuCoreConfig",
+        "args": []
+      }
+    ],
+    "chisel_version": "7.3.0",
+    "configuration": "fixed",
+    "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-classpath.txt",
+    "classpath_sha256": "e684d7dded8d6d008174aa04f787785234b48c1911fedc699b78371f44a5e4cd",
+    "artifacts_sha256": {
+      "design.fir": "569e32dc9747d495141f6767f08501abba445543f3059a684528c9c205608e3a",
+      "Chisel2LeanReference.v": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927",
+      "ports.json": "3ccca6a455e6e7cad919243fec801a5d5cac5a0901496b31d91718af857f28d6"
+    },
+    "source_frontend_used": false,
+    "independent_chisel_elaborations": 2,
+    "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\elaboration",
+    "jvm": {
+      "chisel_version": "7.3.0",
+      "scala_version": "2.13.15",
+      "class_sha256": {
+        "xiangshan.cache.mmu.L2TlbPrefetch": "8229b9101211f07bf5e88581d9cf439abc0addfe4ecbde508bb90e1c81d96568",
+        "xiangshan.validation.NanhuCoreConfig": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762"
+      }
+    }
+  },
+  "manifest": {
+    "format": "chisel2lean-yosys-manifest-v1",
+    "frontend": "yosys-functional",
+    "symbolic_parameters": false,
+    "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\original\\Chisel2LeanReference.v",
+    "source_sha256": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927",
+    "source_files_sha256": {
+      "design.v": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927"
+    },
+    "lean_version": "4.19.0",
+    "yosys_lock": {
+      "packages": {
+        "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+        "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+        "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+        "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+        "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+      },
+      "yosys_version": "0.70",
+      "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+      "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+    },
+    "namespace": "Yosys.XSPrefetch",
+    "ir": "Yosys/XSPrefetch.ir.json",
+    "lean": "Yosys/XSPrefetch.lean",
+    "arbitrary_inputs": [
+      {
+        "name": "c2l_undefined_0",
+        "width": 2,
+        "source": "$auto$setundef.cc:550:execute$111"
+      }
+    ],
+    "lean_checked": true,
+    "hardware": {
+      "register_cells": 11,
+      "memory_cells": 0,
+      "clock": "clock"
+    },
+    "nodes": 280,
+    "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\translation\\20261015T091005Z-b78490e5",
+    "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+    "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+    "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+    "artifact_sha256": {
+      "before.json": "cb906431a9fdcb7782a06233538fb9092eaea7cc5545399f290f8c0198a5bad5",
+      "exposed.json": "c3225c63051505e0cbc6e7b7221499bf41b1c190f2d3839a0cb6f2d95bff3ee1",
+      "lowered.json": "e6b57cc23670abaf42518676ebfb606aeced039ea167a4b5b1450802c3751149",
+      "functional.smt2": "ea50dec2e67b3fef04bd428e5a0cb112227bea0de019cf5114444f87b2e42f2a",
+      "Yosys/XSPrefetch.lean": "a8541a4c2514a39291e0606f009017d2223fc4e85a56b53a6061c23a9e77b414",
+      "Yosys/XSPrefetch.ir.json": "115f75d082ed957aa3c1c4df827493ad3aa9f5ba2c4a362e796e3cedcb7a8179"
+    }
+  },
+  "formal_translation_equivalence": false
+}

@@ -1,0 +1,194 @@
+{
+  "creator": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+  "modules": {
+    "ProjectTop": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "project\\ProjectTop.sv:2.8"
+      },
+      "ports": {
+        "clock": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "en": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "d": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 9, 10, 11, 12, 13 ]
+        }
+      },
+      "cells": {
+        "$flatten\\lane.$1": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "project\\Lane.sv:4.35-4.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4, 5, 6, 7, 8, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
+          }
+        },
+        "$flatten\\lane.$driver$q": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "project\\Lane.sv:4.1"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 46, 47, 48, 49, 50 ],
+            "Q": [ 9, 10, 11, 12, 13 ]
+          }
+        },
+        "$flatten\\lane.$procmux$1": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "project\\Lane.sv:4.32-4.39|project\\Lane.sv:4.25-4.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 10, 11, 12, 13 ],
+            "B": [ 14, 15, 16, 17, 18 ],
+            "S": [ 3 ],
+            "Y": [ 46, 47, 48, 49, 50 ]
+          }
+        },
+        "lane": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_src": "project\\ProjectTop.sv:3.6",
+            "hdlname": "lane",
+            "module": "Lane$ProjectTop.lane",
+            "module_src": "project\\Lane.sv:2.8"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        }
+      },
+      "netnames": {
+        "$flatten\\lane.$1y": {
+          "hide_name": 1,
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\lane.$procmux$1_Y": {
+          "hide_name": 1,
+          "bits": [ 46, 47, 48, 49, 50 ],
+          "attributes": {
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "clock",
+            "src": "project\\ProjectTop.sv:2.25"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8 ],
+          "attributes": {
+            "hdlname": "d",
+            "src": "project\\ProjectTop.sv:2.53"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "en",
+            "src": "project\\ProjectTop.sv:2.31"
+          }
+        },
+        "lane.clock": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "lane clock",
+            "src": "project\\Lane.sv:2.19"
+          }
+        },
+        "lane.d": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8 ],
+          "attributes": {
+            "hdlname": "lane d",
+            "src": "project\\Lane.sv:2.47"
+          }
+        },
+        "lane.en": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "lane en",
+            "src": "project\\Lane.sv:2.25"
+          }
+        },
+        "lane.q": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "hdlname": "lane q",
+            "init": "00000",
+            "src": "project\\Lane.sv:2.73"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "hdlname": "q",
+            "src": "project\\ProjectTop.sv:2.75"
+          }
+        }
+      }
+    }
+  }
+}

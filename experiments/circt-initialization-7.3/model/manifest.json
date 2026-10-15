@@ -1,0 +1,50 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\circt-initialization-7.3\\explicit-state\\ResetProbe.sv",
+  "source_sha256": "8cbc5568b3449b844f860d013ef11033affb82d44e65d1ed47b5ec57f2f2cb00",
+  "source_files_sha256": {
+    "design.v": "8cbc5568b3449b844f860d013ef11033affb82d44e65d1ed47b5ec57f2f2cb00"
+  },
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Initialization.Hardware",
+  "ir": "Initialization/Hardware.ir.json",
+  "lean": "Initialization/Hardware.lean",
+  "arbitrary_inputs": [],
+  "frontend_keep_hierarchy": false,
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 1,
+    "memory_cells": 0,
+    "clock": null,
+    "clock_mode": "global"
+  },
+  "nodes": 25,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\circt-initialization-7.3\\translation\\20261015T093719Z-8cc67622",
+  "semantics": "Two-state explicit global sampling steps using official clk2fflogic, including multiple clocks, gated clocks, negative edges, latches, and supported asynchronous FF controls. Inputs must satisfy the negative-hold-time and stable-reset-release contract of clk2fflogic. This is not arbitrary-delay or IEEE four-state simulation equivalence.",
+  "reader_sha256": "784f2dc07bc31c5ed62860df2333d693a87e10d89d0f3937c3cd13e77c8e0be8",
+  "driver_sha256": "a1171b98607e20256e894f5bd5c7736e123026fc36311b04e123c12bbf4cc669",
+  "chunk_emitter_sha256": "dbbe018a72b3f2dc6d6b86175430a0841995ae6384fffad20dc128720f352a9d",
+  "lean_emission": "single transfer function",
+  "artifact_sha256": {
+    "before.json": "857559c91a1b4e20a5d78ca789ea252021aea5bdd0b18c1608779c65f3b11f2f",
+    "exposed.json": "27d2192a8d93e228b69a01445ee20c59b19b9fca5dcab3e90f93c129f800a3c5",
+    "lowered.json": "4089619f207986e080ffa93f408fc83f615c865888132df02fa8ac38d1a153a2",
+    "functional.smt2": "74b88ef1d62078ce42dd5f7bb874e9e680e34bb1d30b2ac9ee3f007ca11edd48",
+    "Initialization/Hardware.lean": "f42caa800e198de6698a20fc5aecd2483604b6859442a3beebf3827a249a4998",
+    "Initialization/Hardware.ir.json": "50f0635f8c1bfda1ff838517bbdeeedd1deb829f98af675829091900e98e10ae"
+  }
+}

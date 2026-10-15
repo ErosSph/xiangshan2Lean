@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_rtlil ./hierarchy.il; hierarchy -check -top XSTop; flatten; opt_clean; memory_collect; write_json ./before.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T112312Z-f29af09c\\translation\\20261015T112414Z-edcd063e\\artifacts",
+  "started_at": "2026-10-15T11:25:53.669734+00:00",
+  "pid": 9284
+}

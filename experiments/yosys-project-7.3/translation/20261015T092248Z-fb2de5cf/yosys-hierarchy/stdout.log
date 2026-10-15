@@ -1,0 +1,127 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy -f /work/project.f --top ProjectTop; hierarchy -check -top ProjectTop; proc -noopt; opt_clean; memory_collect; tee -o /work/hierarchy-stat.json stat -json; write_rtlil /work/hierarchy.il' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    ProjectTop
+
+
+Build succeeded: 0 errors, 0 warnings
+<suppressed ~8 debug messages>
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ProjectTop
+Used module:     \Lane$ProjectTop.lane
+
+2.2. Analyzing design hierarchy..
+Top module:  \ProjectTop
+Used module:     \Lane$ProjectTop.lane
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\Lane$ProjectTop.lane.$0'.
+Cleaned up 1 empty switch.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\Lane$ProjectTop.lane.$0'.
+     1/1: $q$2
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\Lane$ProjectTop.lane.$0'.
+Removing empty process `Lane$ProjectTop.lane.$0'.
+Cleaned up 1 empty switch.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Lane$ProjectTop.lane..
+Finding unused cells or wires in module \ProjectTop..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+5. Executing MEMORY_COLLECT pass (generating $mem cells).
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\Lane$ProjectTop.lane": {
+         "num_wires":         6,
+         "num_wire_bits":     49,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 12,
+         "num_ports":         4,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$mux": 1
+         }
+      },
+      "\\ProjectTop": {
+         "num_wires":         4,
+         "num_wire_bits":     12,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 12,
+         "num_ports":         4,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Lane$ProjectTop.lane": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         10,
+         "num_wire_bits":     61,
+         "num_pub_wires":     8,
+         "num_pub_wire_bits": 24,
+         "num_ports":         8,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$mux": 1,
+            "Lane$ProjectTop.lane": 1
+         }
+      }
+}
+
+6. Executing RTLIL backend.
+Output filename: /work/hierarchy.il

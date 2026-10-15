@@ -8,7 +8,7 @@
 
 复用官方工具处理 Scala、香山配置和电路展开。我们实现 FunctionalIR 到 Lean 的导出器，用 `BitVec` 表示运算，用状态和更新函数表示寄存器、存储器。
 
-当前版本：Chisel 7.3.0、Yosys 0.70、Lean 4.19.0。
+当前版本：Chisel 7.3.0、Yosys 0.70（整颗导入另用原生 0.70+16）、Lean 4.19.0。
 
 ## 使用
 
@@ -26,6 +26,10 @@ python scripts/yosys2lean.py design.sv --top Design --out generated/design
 
 香山模块源码没有修改，只新增外围构建、配置适配和端口包装。使用真实 `MinimalConfig(1)`；[源码核对](docs/validation-xiangshan-source-audit-7.3.json)和[测试报告](docs/validation-yosys-7.3.json)可查。
 
-当前支持部分单时钟、两态电路，尚不能转换整颗香山。有限测试通过不代表所有输入序列的等价证明。
+默认使用单时钟；多时钟和检查语句可加 `--clock-mode global --effects preserve`，使用约定见[说明](docs/yosys-frontend.md)。
+
+整颗香山 `DefaultConfig` 单核已转成 Lean 并通过编译，运行对照仍在验证，见[完整香山](docs/xiangshan-whole.md)。有限测试通过不代表所有输入序列的等价证明。
+
+最新进度和接手步骤见[交接文档](docs/HANDOFF-2026-10-16.md)。整颗生成数据和工具缓存不随 Git 提交，可按说明重建。
 
 项目基于 Chicala，保留 [Apache-2.0 许可证](LICENSE)，来源见 [NOTICE](NOTICE)。

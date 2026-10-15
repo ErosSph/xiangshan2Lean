@@ -1,0 +1,107 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-hierarchy-7.3\\wasm\\Nested.sv",
+  "source_sha256": "5d0e8a99701f86c48bff946a9a222661c5955e90d5a1da9a81f264209ad44be3",
+  "source_files_sha256": {
+    "design.v": "5d0e8a99701f86c48bff946a9a222661c5955e90d5a1da9a81f264209ad44be3"
+  },
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Hierarchy.Nested",
+  "ir": "Hierarchy/Nested.ir.json",
+  "lean": "Hierarchy/Nested.lean",
+  "arbitrary_inputs": [
+    {
+      "name": "c2l_undefined_0",
+      "width": 8,
+      "source": "$auto$setundef.cc:550:execute$21"
+    },
+    {
+      "name": "c2l_undefined_1",
+      "width": 8,
+      "source": "$auto$setundef.cc:550:execute$23"
+    }
+  ],
+  "yosys_engine": "wasm",
+  "json_io": {
+    "preflight": "stream",
+    "expose": "stream"
+  },
+  "frontend_keep_hierarchy": true,
+  "reused_hierarchy": null,
+  "stdio_compatibility": {
+    "format": "chisel2lean-stdio-compat-v1",
+    "files": {},
+    "markers": {}
+  },
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 2,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "nodes": 62,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-hierarchy-7.3\\wasm\\translation\\20261015T114218Z-c4b5b9d5",
+  "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+  "reader_sha256": "9114229509e63c6e4fe21387ea1add0b5eafb64855569bfe360c880532b4b2e6",
+  "driver_sha256": "fa982154c8386ebe5eacbb5fef64beecb575d92391eb1a96a97b1462951193be",
+  "chunk_emitter_sha256": "0a360bcfa9f2a9d7353af1bcecec0061fcc833d12db9cbb175bcf91f93805310",
+  "record_emitter_sha256": "0b722c29d86ab01a08652fa0b3a4fe157f5e14efcc2d9c37b8ded80494978dcb",
+  "stdio_bridge_sha256": "33394ec6fe07f6154890b19c991932fd8fa35f114d550fcf276638c54bad8174",
+  "effect_bridge_sha256": "2f7549fbc14b02f3ed40653bbc17f75c0db54f82b7de6e6c8259da766778518b",
+  "hierarchy_bridge_sha256": "dd8b7d69c5596dfa71ebfb965ea4ab606afe447fbf896dd26d40ea8cfa923ac4",
+  "yosys_runner_sha256": "30966f1572c624e4b6fe33e2d81080e5dacfa94767517f5de5b75a13cdaadf19",
+  "json_bridge_sha256": "d64bb5922162c9db8b099ef8becd16a96a2e0c953e7ce4141ae5d0a5371548c1",
+  "json_reader_bootstrap_sha256": "55aa24e918b911512450ec95b0b5e8249e619110bb3b4c41c4c420874805bcd3",
+  "lean_emission": "single transfer function",
+  "lean_chunk_storage": "balanced typed products",
+  "lean_record_group_size": 16,
+  "artifact_sha256": {
+    "before.json": "15fd077635931b764547bc58b4bd0a158ca688dff309e786280b1c1c6291931f",
+    "exposed.json": "f48667bcde02dddf44bedfd71f1f2beb6aeb7c12780a5addf2f21dd118299c2d",
+    "lowered.json": "cb1e3c7a2b3eead73c1b1430e01ecce8c65dfd6e3df4917f7a218b508f3db136",
+    "functional.smt2": "98cf37cdb062b7ef1af5e68f0da5c7c14db83d81fcf2aeb2da73226eb386e872",
+    "Hierarchy/Nested.lean": "9ed54171b3b5b1694d1b9ae41a19c01c8a9d420b32c9e784f8729f966667cd74",
+    "Hierarchy/Nested.ir.json": "d5f8bc3ed950284fcb25d44b1676fd6b54960614f604b43bca21de25355020fb"
+  },
+  "json_stream_reader": {
+    "wheel": "ijson-3.4.0.post0-cp311-cp311-win_amd64.whl",
+    "wheel_sha256": "b39dbf87071f23a23c8077eea2ae7cfeeca9ff9ffec722dfc8b5f352e4dd729c",
+    "files": {
+      "ijson/benchmark.py": "3be1e654659e65be4bd6f040404f056ce96d03312c2047e9ccb0e4234f2707f5",
+      "ijson/common.py": "003d675248470fcd2f202b71e0698f96cbaf4b37c698b84541ac72a07c212e61",
+      "ijson/compat.py": "7bc32b403e3f176634b111e2c548d6d0e2795c8a4bb8d2a1a93428815cf714e6",
+      "ijson/dump.py": "ffa2cb4728dd04cff6e8dba291e91989584db34bb4fcefd2177267cbef95ed24",
+      "ijson/utils.py": "aa8655972f8427ec1be0c00ed549b60c13c21cd813b7b2baaa1ae15001397ded",
+      "ijson/utils35.py": "bb149cc1d4e6af19921dcd94c588185c178e2a404733ffea3515b8cee1abfdd9",
+      "ijson/version.py": "8dfcfe988f030f5fbb83a7444bc330133f125e4f951ee1d43a8dc1199bfa8af7",
+      "ijson/__init__.py": "9863c54fb76648c0e51b7989588b23e382becea5f5ce76142231276f877e84f5",
+      "ijson/backends/python.py": "11ed9bd15d6fed8d8fc4800eaf5776d76205dc73b6d437a132fb7f39a8c24198",
+      "ijson/backends/yajl.py": "2fbea4f0543d17644ea5a03a6c78c4442c2274667b68f9995174a97da929d2df",
+      "ijson/backends/yajl2.py": "fb30440e371cfe4953a8e98c44fbb44f092ff4ba31e17a507f51113022c51277",
+      "ijson/backends/yajl2_c.py": "1d6a9f88e24176fe228fd7cf5f462bbb408420034a8040e2dd937e8e9ebc3246",
+      "ijson/backends/yajl2_cffi.py": "0b5155142aeb1210165dd1681ed5d1312f6a055e58281cfa91ff3426065ff192",
+      "ijson/backends/_yajl2.cp311-win_amd64.pyd": "867dcaa014de3857faf5b26d234741b0977f0a68d3d0ca9cb82bc115bb9edcf2",
+      "ijson/backends/_yajl2_ctypes_common.py": "e8c5aab356d5ad0f37e068feefdc3dbee0b3f4ccb39601bdd8da59de9d38acf2",
+      "ijson/backends/__init__.py": "d787ccaf7c46d4d14cc6ff5c1fc65ec45aab5f967b76ba9e4d43c0fd5edb91d9",
+      "ijson-3.4.0.post0.dist-info/METADATA": "2eaedda9dfa52e3cd7fd908f49e7e9e861834aa1d308a84ac09174fb9fdd7bb1",
+      "ijson-3.4.0.post0.dist-info/RECORD": "2829213607487b0c29c892b10a98fc6a2cda602701d6a2183e282554ab03f721",
+      "ijson-3.4.0.post0.dist-info/top_level.txt": "608c3328e729de4464ad7bae793f58de9854d3739d9e8bf176c267a7906b4a4a",
+      "ijson-3.4.0.post0.dist-info/WHEEL": "24b38cb0fec5e6ab6402420dc79527cdb160b9ff02a997ab695f28d386f423c2",
+      "ijson-3.4.0.post0.dist-info/licenses/LICENSE.txt": "cb8ba2b01e4f031cc25572d83aa4fca399c92f83f73aaa3627d381a7e9d7adca"
+    }
+  }
+}

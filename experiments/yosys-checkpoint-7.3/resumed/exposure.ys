@@ -1,0 +1,7 @@
+cd \ProjectTop
+select -assert-none w:c2l_bridge_* c:c2l_bridge_*
+expose -evert -sep _ c:c2l_bridge_effect_* c:c2l_bridge_undefined_*
+delete w:c2l_bridge_effect_*_TRG
+clean_zerowidth
+cd ..
+select -clear

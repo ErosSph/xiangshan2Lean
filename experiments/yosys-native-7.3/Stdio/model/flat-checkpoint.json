@@ -1,0 +1,36 @@
+{
+  "format": "chisel2lean-yosys-hierarchy-v1",
+  "identity": {
+    "top": "Stdio",
+    "source_files_sha256": {
+      "design.v": "a2dc100d9c6eeca43843d5b7ecb4d2e83305ac5c5de6575336cca33c554e60c5"
+    },
+    "tool": {
+      "engine": "native",
+      "archive_sha256": "580a1bbe938f4af861ff49e42944dc00933d61d087693e43c316023ea07f6e1e",
+      "yosys_version": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)"
+    },
+    "stdio_staged_sha256": {
+      "design.v": "97b0b0c3f9587d302c054ea57b911720e514407498f8df110a897d4f9ad59ac5"
+    },
+    "pipeline": "root-only flatten v1; hierarchy -check -top; opt_clean; memory_collect",
+    "phase": "flat"
+  },
+  "rtlil": {
+    "name": "before.il",
+    "sha256": "0a549fb56e3841ed18ef8d58a715ec558f25852b4f2e27edc3e0360991fc6acd"
+  },
+  "producer": {
+    "command.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-native-7.3\\Stdio\\translation\\20261015T133714Z-110108b0\\yosys-prepare\\command.json",
+      "sha256": "6f0383e6cfac37060b961721e882c2f57c0d8b0ccf4ee2bb1bc41b436e88cae1"
+    },
+    "result.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-native-7.3\\Stdio\\translation\\20261015T133714Z-110108b0\\yosys-prepare\\result.json",
+      "sha256": "0592bcb245b6947fc644d7bae607ea4ff28257995f7e0546e370258ec86a0f50"
+    }
+  },
+  "companions": {
+    "before.json": "024c0f7b6c6a01f84182785e566bf5346fa63e99b03c4bde2fc20fb7b2ab8d00"
+  }
+}

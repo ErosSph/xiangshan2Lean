@@ -1,0 +1,47 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy -f /work/project.f --top XSTop; hierarchy -check -top XSTop; proc -noopt; opt_clean; memory_collect; tee -o /work/hierarchy-stat.json stat -json; write_rtlil /work/hierarchy.il' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    XSTop
+
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $fwrite(32'h80000002, "BUG_REPRODUCE: nested acquire perm alias\n");    // \\.cache\\xiangshan-dependencies-7.3\\huancun\\src\\main\\scala\\huancun\\noninclusive\\MSHR.scala:1367:15
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

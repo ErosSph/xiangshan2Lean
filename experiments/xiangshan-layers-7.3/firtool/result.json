@@ -1,0 +1,16 @@
+{
+  "command": [
+    "E:\\ICT\\chisel2lean4\\.tools\\firtool-1.135.0\\firtool-1.135.0\\bin\\firtool.exe",
+    "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-layers-7.3\\Layer.fir",
+    "--split-verilog",
+    "-o=E:\\ICT\\chisel2lean4\\experiments\\xiangshan-layers-7.3\\rtl",
+    "--default-layer-specialization=enable",
+    "--verification-flavor=immediate",
+    "--mlir-print-op-on-diagnostic=false"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4",
+  "started_at": "2026-10-15T09:04:10.427334+00:00",
+  "pid": 20904,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T09:04:10.473671+00:00"
+}

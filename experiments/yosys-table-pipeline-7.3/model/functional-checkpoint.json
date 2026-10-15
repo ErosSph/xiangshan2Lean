@@ -1,0 +1,42 @@
+{
+  "format": "chisel2lean-yosys-functional-v1",
+  "identity": {
+    "top": "Observed",
+    "source_files_sha256": {
+      "design.v": "48d24b875d4c55bea6927db99de53e315ff9a049e530134968c27306a71db32b"
+    },
+    "tool": {
+      "engine": "native",
+      "archive_sha256": "580a1bbe938f4af861ff49e42944dc00933d61d087693e43c316023ea07f6e1e",
+      "yosys_version": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)"
+    },
+    "stdio_staged_sha256": {
+      "design.v": "ad1860d4c29c00ed49a517fbe928ff70d81f55c63373d14adb69ed498b84b62e"
+    },
+    "pipeline": "root-only flatten v1; hierarchy -check -top; opt_clean; memory_collect; clk2fflogic -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq",
+    "phase": "functional-export",
+    "clock_mode": "single",
+    "preserve_effects": true,
+    "keep_hierarchy": false,
+    "exposure_pipeline": "cd \\Observed; select -assert-none w:c2l_effect_* c:c2l_effect_* w:c2l_undefined_* c:c2l_undefined_*; rename -hide t:$print t:$assert t:$assume t:$cover t:$anyseq; rename -enumerate -pattern c2l_effect_% t:$print t:$assert t:$assume t:$cover; rename -enumerate -pattern c2l_undefined_% t:$anyseq; write_json /work/named.json; expose -evert -sep _ t:$print t:$assert t:$assume t:$cover t:$anyseq; delete w:c2l_effect_*_TRG; delete w:c2l_effect_* s:0 %i; cd ..; select \\Observed; check -assert; write_json; write_functional_smt2"
+  },
+  "functional": {
+    "name": "functional.smt2",
+    "sha256": "df6164954333ff8dceba54eafe83783cf26c46be572079646491f271d4728efb"
+  },
+  "producer": {
+    "command.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-table-pipeline-7.3\\translation\\20261015T145955Z-04504cb6\\yosys-export\\command.json",
+      "sha256": "6b7577f16df3a483f23c67714553720ca55387ec68e16918a8fea9ea98162500"
+    },
+    "result.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-table-pipeline-7.3\\translation\\20261015T145955Z-04504cb6\\yosys-export\\result.json",
+      "sha256": "05fb1583faf6cd0c7648fbbc3ead71ead155aa4b3815c58ba3fd1bf2e01f7e2d"
+    }
+  },
+  "companions": {
+    "before.json": "4c0217dfbe417b69b552687d89ff44356ecb01f795b9d9686336558f5bf3bb47",
+    "named.json": "1463cd5899024a29038bc5ce9e5c34d2ef08d5d430c2f0bb89c5e284a0805994",
+    "lowered.json": "d96be7535a75067c9ab65a60d96ccded43632266f4d7261d6f80a04a89e6165f"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-effects-7.3\\DisabledCheck\\T.v",
+  "source_sha256": "14eb61a12a3614c2be96556b1de6f3429ab9553b8d2c0b307134d448ec52ecd0",
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Effects.DisabledCheck",
+  "ir": "Effects/DisabledCheck.ir.json",
+  "lean": "Effects/DisabledCheck.lean",
+  "arbitrary_inputs": [],
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 0,
+    "memory_cells": 0,
+    "clock": null
+  },
+  "nodes": 19,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-effects-7.3\\DisabledCheck\\translation\\20261015T083333Z-6c99ee74",
+  "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+  "reader_sha256": "8dc71a14b9d1f3803e509bb95f4249321b69f8d506f5cbff2218348f10846b49",
+  "driver_sha256": "db24e42e42bcb44aab2699c3181f8ad1e783ea4d2e4a7807c1301071f8590a36",
+  "artifact_sha256": {
+    "before.json": "64140e6f379267309ab154206a41a8720e50bcd335b1e2b87f6f48a99cbdbe7b",
+    "exposed.json": "39f7d7a9759c6b568921332011af91905414c9efe6daad7913baa3fa2ce9edb6",
+    "lowered.json": "5b678bf3d66e72f04d7bd220e9fa61d253fb161fef6e5437718389ff6c2d94df",
+    "functional.smt2": "903f80937247c6d90599c31b5ed2a6845955fb1147c1043474d0777ec481e0a1",
+    "Effects/DisabledCheck.lean": "c065df2c31e213c0095da41fe1a2badd4867b518fbcb48258348f45e862493b2",
+    "Effects/DisabledCheck.ir.json": "d1353d7deac8b4ad718dbd462f6cb5afff9b535a36d117c862be2c8a99c75f6f"
+  },
+  "effect_contract": "Official clock-event lowering; assertion/assumption failures reject execution; cover and print events are observable. Additional observation outputs are not original hardware ports.",
+  "effects": [
+    {
+      "cell": "$2",
+      "kind": "assert",
+      "source": "work/design.v:1.77-1.91",
+      "format": "",
+      "ports": {
+        "enable": "c2l_effect_0_enable",
+        "condition": "c2l_effect_0_condition"
+      },
+      "argument_width": 0,
+      "index": 0,
+      "fields": {
+        "enable": "o1",
+        "condition": "o2"
+      }
+    }
+  ],
+  "effect_bridge_sha256": "db24b02c82287e1282c153acaf5747099c7d325e0f13690406dd404d19a6ce0f"
+}

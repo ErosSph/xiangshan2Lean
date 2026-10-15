@@ -1,0 +1,13 @@
+cd \Stdio
+select -assert-none w:c2l_bridge_* c:c2l_bridge_*
+rename $1 \c2l_bridge_effect_0
+rename $3 \c2l_bridge_effect_1
+expose -evert -sep _ c:c2l_bridge_effect_* c:c2l_bridge_undefined_*
+rename \c2l_bridge_effect_0_EN \c2l_effect_0_enable
+rename \c2l_bridge_effect_0_ARGS \c2l_effect_0_arguments
+rename \c2l_bridge_effect_1_EN \c2l_effect_1_enable
+rename \c2l_bridge_effect_1_ARGS \c2l_effect_1_arguments
+delete w:c2l_bridge_effect_*_TRG
+clean_zerowidth
+cd ..
+select -clear

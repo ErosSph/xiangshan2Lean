@@ -1,0 +1,21 @@
+{
+  "format": "xiangshan-whole-lean-v1",
+  "config": "DefaultConfig",
+  "cores": 1,
+  "initialization_profile": "caller-state",
+  "stdio_compatibility": "Fixed standard-stream $fwrite preserved as observations; original RTL retained.",
+  "top": "XSTop",
+  "source_package": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T104416Z-c0632f4f\\source-package.json",
+  "lowering": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\lowering-caller-state\\summary.json",
+  "status": "REQUIRES_SUPPORT",
+  "rtl_units_and_headers": 982,
+  "lean_compilation": "NOT_REACHED",
+  "top_level_differential": "NOT_RUN",
+  "universal_equivalence": "NOT_PROVED",
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T104416Z-c0632f4f",
+  "tool_exit_codes": {
+    "yosys-hierarchy": 1
+  },
+  "diagnostic": "Yosys hierarchical RTL import failed; see E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T104416Z-c0632f4f\\translation\\20261015T104432Z-67a8e625\\yosys-hierarchy",
+  "blocking_diagnostics": []
+}

@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "complete_suite": true,
+  "cases": [
+    {
+      "case": "Clocks",
+      "status": "PASS",
+      "steps": 1120,
+      "chunk_size": 8,
+      "reference": "E:\\ICT\\chisel2lean4\\experiments\\yosys-clocks-7.3\\lean\\result.json",
+      "source_manifest_sha256": "67de9a494817491c447f7779f47ca3dbce61717493d0ec2487ee11a63d95d3dd"
+    },
+    {
+      "case": "MaskedMemory",
+      "status": "PASS",
+      "steps": 128,
+      "chunk_size": 8,
+      "reference": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\MaskedMemory\\lean\\result.json",
+      "source_manifest_sha256": "9514a534c46cf191bf2763568c70e87741d94e82c12452817d337bdc95c5d633"
+    },
+    {
+      "case": "Observed",
+      "status": "PASS",
+      "steps": 160,
+      "chunk_size": 8,
+      "reference": "E:\\ICT\\chisel2lean4\\experiments\\yosys-effects-7.3\\Observed\\valid-lean\\result.json",
+      "source_manifest_sha256": "5b7acddace5d33ba9ba01b3dc13d97a55f12d3b6b3f7b5a71dd9f2a1e357bbaf"
+    },
+    {
+      "case": "DisabledCheck",
+      "status": "PASS",
+      "steps": 2,
+      "chunk_size": 8,
+      "reference": "E:\\ICT\\chisel2lean4\\experiments\\yosys-effects-7.3\\DisabledCheck\\lean\\result.json",
+      "source_manifest_sha256": "1745be6089360cc817f3d35d2eccf177be7e4aa2206433dfcb49b80aaf2943ab"
+    },
+    {
+      "case": "Large",
+      "status": "PASS",
+      "nodes": 23557,
+      "state_fields": 1536,
+      "cycles": 64,
+      "output_bits": 8192,
+      "output_comparisons": 128,
+      "scope": "Fresh 512-lane stateful RTL; actual Lean, Verilator and integer comparison."
+    }
+  ],
+  "emitter_sha256": "0a360bcfa9f2a9d7353af1bcecec0061fcc833d12db9cbb175bcf91f93805310",
+  "scope": "Chunk cuts preserve values and domain predicates. Small cases replay prior RTL-checked traces; scale case uses a fresh RTL reference. No claim of whole-XiangShan capacity or universal equivalence."
+}

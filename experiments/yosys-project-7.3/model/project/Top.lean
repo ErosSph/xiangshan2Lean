@@ -1,0 +1,61 @@
+-- Generated from locked Yosys FunctionalIR. Fixed circuit; explicit initial state.
+import Lean
+set_option linter.unusedVariables false
+set_option maxRecDepth 65536
+set_option maxHeartbeats 0
+namespace Project.Top
+structure Inputs where
+  i0 : BitVec 1
+  i1 : BitVec 1
+  i2 : BitVec 5
+
+structure State where
+  s0 : BitVec 1
+  s1 : BitVec 5
+  s2 : BitVec 5
+
+structure Outputs where
+  o0 : BitVec 5
+
+structure Evaluation where
+  outputs : Outputs
+  nextState : State
+  outputDefined : Bool
+  transitionDefined : Bool
+
+def evaluate (inputs : Inputs) (state : State) : Evaluation :=
+  let n0 : BitVec 1 := inputs.i0
+  let n1 : BitVec 5 := state.s2
+  let n2 : BitVec 5 := state.s1
+  let n3 : BitVec 1 := state.s0
+  let n4 : BitVec 2 := (n3 ++ n0)
+  let n5 : BitVec 2 := (1#2)
+  let n6 : Bool := (n4 == n5)
+  let n7 : BitVec 1 := (1#1)
+  let n8 : BitVec 1 := (0#1)
+  let n9 : BitVec 1 := (if n6 then n7 else n8)
+  let n10 : BitVec 1 := (1#1)
+  let n11 : Bool := (n9 == n10)
+  let n12 : BitVec 5 := (if n11 then n2 else n1)
+  let n13 : BitVec 5 := inputs.i2
+  let n14 : BitVec 27 := (0#27)
+  let n15 : BitVec 32 := (n14 ++ n13)
+  let n16 : BitVec 32 := (1#32)
+  let n17 : BitVec 32 := (n15 + n16)
+  let n18 : BitVec 5 := (BitVec.extractLsb' 0 5 n17)
+  let n19 : BitVec 1 := inputs.i1
+  let n20 : BitVec 1 := (1#1)
+  let n21 : Bool := (n19 == n20)
+  let n22 : BitVec 5 := (if n21 then n18 else n12)
+  { outputs := { o0 := n12 }, nextState := { s0 := n0, s1 := n22, s2 := n12 },
+    outputDefined := true, transitionDefined := true }
+
+def step (inputs : Inputs) (state : State) : Outputs × State :=
+  let r := evaluate inputs state
+  (r.outputs, r.nextState)
+
+def initialValid (state : State) : Bool :=
+  ((state.s0 &&& (1#1)) == (1#1)) &&
+  ((state.s1 &&& (31#5)) == (0#5)) &&
+  ((state.s2 &&& (31#5)) == (0#5))
+end Project.Top

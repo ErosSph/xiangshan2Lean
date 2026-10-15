@@ -1,0 +1,37 @@
+
+-- Running command `read_rtlil ./unconstrained.il; cd \Observed; select -assert-none w:c2l_effect_* c:c2l_effect_* w:c2l_undefined_* c:c2l_undefined_*; rename -hide t:$print t:$assert t:$assume t:$cover t:$anyseq; rename -enumerate -pattern c2l_effect_% t:$print t:$assert t:$assume t:$cover; rename -enumerate -pattern c2l_undefined_% t:$anyseq; write_json ./named.json; expose -evert -sep _ t:$print t:$assert t:$assume t:$cover t:$anyseq; delete w:c2l_effect_*_TRG; delete w:c2l_effect_* s:0 %i; cd ..; select \Observed; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2' --
+
+1. Executing RTLIL frontend.
+Input filename: ./unconstrained.il
+
+2. Executing JSON backend.
+
+3. Executing EXPOSE pass (exposing internal signals as outputs).
+New module port: Observed/c2l_effect_0_ARGS ($print)
+New module port: Observed/c2l_effect_0_EN ($print)
+New module port: Observed/c2l_effect_0_TRG ($print)
+New module port: Observed/c2l_effect_1_ARGS ($print)
+New module port: Observed/c2l_effect_1_EN ($print)
+New module port: Observed/c2l_effect_1_TRG ($print)
+New module port: Observed/c2l_effect_2_A ($cover)
+New module port: Observed/c2l_effect_2_EN ($cover)
+New module port: Observed/c2l_effect_3_A ($assume)
+New module port: Observed/c2l_effect_3_EN ($assume)
+New module port: Observed/c2l_effect_4_A ($assert)
+New module port: Observed/c2l_effect_4_EN ($assert)
+New module port: Observed/c2l_undefined_0_Y ($anyseq)
+Removing cell: Observed/c2l_effect_0 ($print)
+Removing cell: Observed/c2l_effect_1 ($print)
+Removing cell: Observed/c2l_effect_2 ($cover)
+Removing cell: Observed/c2l_effect_3 ($assume)
+Removing cell: Observed/c2l_effect_4 ($assert)
+Removing cell: Observed/c2l_undefined_0 ($anyseq)
+
+4. Executing CHECK pass (checking for obvious problems).
+Checking module Observed...
+Found and reported 0 problems.
+
+5. Executing JSON backend.
+
+6. Executing Functional SMT Backend.
+Processing module `\Observed`.

@@ -1,0 +1,38 @@
+{
+  "format": "chisel2lean-yosys-hierarchy-v1",
+  "identity": {
+    "top": "Clocks",
+    "source_files_sha256": {
+      "design.v": "ea372f14a48fb4b4b7c6ca349e55e732d0fea91fc75123d541872639ea965313"
+    },
+    "tool": {
+      "engine": "native",
+      "archive_sha256": "580a1bbe938f4af861ff49e42944dc00933d61d087693e43c316023ea07f6e1e",
+      "yosys_version": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)"
+    },
+    "stdio_staged_sha256": {},
+    "pipeline": "root-only flatten v1; hierarchy -check -top; opt_clean; memory_collect; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq",
+    "phase": "clock-normalized",
+    "clock_mode": "global",
+    "preserve_effects": false,
+    "keep_hierarchy": true
+  },
+  "rtlil": {
+    "name": "unconstrained.il",
+    "sha256": "b5eab57aa71cbb2b1c08c8a6ccb2575a8b85c789f72e8495b214c0bfadc5588e"
+  },
+  "producer": {
+    "command.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-native-7.3\\Clocks\\translation\\20261015T133626Z-f0905af4\\yosys-functional\\command.json",
+      "sha256": "a6cea216ff21cac4b65a1684dd18f11bbe47d2e4c429dc5107651a6df9d9688e"
+    },
+    "result.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-native-7.3\\Clocks\\translation\\20261015T133626Z-f0905af4\\yosys-functional\\result.json",
+      "sha256": "5a19d07201d5880cdbc08b9876930666c3e901a4e5e147d9f942ca6f39c66d92"
+    }
+  },
+  "companions": {
+    "before.json": "44a04f9f55f2fa13510702683d725eb2cddc64bd5462dd656d73c50cf34e468d",
+    "unconstrained.json": "45561923d2b7fbdf6c8b459d2f9e023218dbf498c1158baa4b45400f616492bc"
+  }
+}

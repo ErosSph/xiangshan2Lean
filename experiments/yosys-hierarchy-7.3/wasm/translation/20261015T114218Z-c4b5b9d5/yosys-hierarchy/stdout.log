@@ -1,0 +1,238 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy /work/design.v --top Nested; hierarchy -check -top Nested; proc -noopt; opt_clean; memory_collect; tee -o /work/hierarchy-stat.json stat -json; write_rtlil /work/hierarchy.il' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    Nested
+
+
+Build succeeded: 0 errors, 0 warnings
+<suppressed ~36 debug messages>
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \Nested
+Used module:     \Branch$Nested.right
+Used module:         \Middle$Nested.right.middle
+Used module:             \Leaf$Nested.right.middle.leaf
+Used module:     \Branch$Nested.left
+Used module:         \Middle$Nested.left.middle
+Used module:             \Leaf$Nested.left.middle.leaf
+
+2.2. Analyzing design hierarchy..
+Top module:  \Nested
+Used module:     \Branch$Nested.right
+Used module:         \Middle$Nested.right.middle
+Used module:             \Leaf$Nested.right.middle.leaf
+Used module:     \Branch$Nested.left
+Used module:         \Middle$Nested.left.middle
+Used module:             \Leaf$Nested.left.middle.leaf
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\Leaf$Nested.right.middle.leaf.$0'.
+Found and cleaned up 1 empty switch in `\Leaf$Nested.left.middle.leaf.$0'.
+Cleaned up 2 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $0 in module Leaf$Nested.right.middle.leaf.
+Marked 2 switch rules as full_case in process $0 in module Leaf$Nested.left.middle.leaf.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~6 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\Leaf$Nested.right.middle.leaf.$0'.
+     1/2: $q$2
+     2/2: $q$3
+Creating decoders for process `\Leaf$Nested.left.middle.leaf.$0'.
+     1/2: $q$2
+     2/2: $q$3
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 3 empty switches in `\Leaf$Nested.right.middle.leaf.$0'.
+Removing empty process `Leaf$Nested.right.middle.leaf.$0'.
+Found and cleaned up 3 empty switches in `\Leaf$Nested.left.middle.leaf.$0'.
+Removing empty process `Leaf$Nested.left.middle.leaf.$0'.
+Cleaned up 6 empty switches.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Leaf$Nested.right.middle.leaf..
+Finding unused cells or wires in module \Leaf$Nested.left.middle.leaf..
+Finding unused cells or wires in module \Middle$Nested.right.middle..
+Finding unused cells or wires in module \Middle$Nested.left.middle..
+Finding unused cells or wires in module \Branch$Nested.right..
+Finding unused cells or wires in module \Branch$Nested.left..
+Finding unused cells or wires in module \Nested..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~2 debug messages>
+
+5. Executing MEMORY_COLLECT pass (generating $mem cells).
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\Leaf$Nested.right.middle.leaf": {
+         "num_wires":         9,
+         "num_wire_bits":     75,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$mux": 3
+         }
+      },
+      "\\Leaf$Nested.left.middle.leaf": {
+         "num_wires":         9,
+         "num_wire_bits":     75,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$mux": 3
+         }
+      },
+      "\\Middle$Nested.right.middle": {
+         "num_wires":         5,
+         "num_wire_bits":     19,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Leaf$Nested.right.middle.leaf": 1
+         }
+      },
+      "\\Middle$Nested.left.middle": {
+         "num_wires":         5,
+         "num_wire_bits":     19,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Leaf$Nested.left.middle.leaf": 1
+         }
+      },
+      "\\Branch$Nested.right": {
+         "num_wires":         5,
+         "num_wire_bits":     19,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Middle$Nested.right.middle": 1
+         }
+      },
+      "\\Branch$Nested.left": {
+         "num_wires":         5,
+         "num_wire_bits":     19,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Middle$Nested.left.middle": 1
+         }
+      },
+      "\\Nested": {
+         "num_wires":         8,
+         "num_wire_bits":     43,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 27,
+         "num_ports":         6,
+         "num_port_bits":     27,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_submodules":       2,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$xor": 1,
+            "Branch$Nested.left": 1,
+            "Branch$Nested.right": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         46,
+         "num_wire_bits":     269,
+         "num_pub_wires":     36,
+         "num_pub_wire_bits": 141,
+         "num_ports":         36,
+         "num_port_bits":     141,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         12,
+         "num_submodules":       2,
+         "num_cells_by_type": {
+            "$add": 3,
+            "$dff": 2,
+            "$mux": 6,
+            "$xor": 1,
+            "Branch$Nested.left": 1,
+            "Branch$Nested.right": 1
+         }
+      }
+}
+
+6. Executing RTLIL backend.
+Output filename: /work/hierarchy.il

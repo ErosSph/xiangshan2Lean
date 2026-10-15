@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy ./design.v --top Stdio; hierarchy -check -top Stdio; proc -noopt; opt_clean; memory_collect; tee -o ./hierarchy-stat.json stat -json; write_rtlil ./hierarchy.il"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-native-7.3\\Stdio\\translation\\20261015T121814Z-f1ffb7de\\artifacts",
+  "started_at": "2026-10-15T12:18:14.290544+00:00",
+  "pid": 36556
+}

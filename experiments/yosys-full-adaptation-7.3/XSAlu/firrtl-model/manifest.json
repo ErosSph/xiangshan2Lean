@@ -1,0 +1,30 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "frontend_implementation": "CIRCT",
+  "firrtl_version": "6.0.0",
+  "source_firrtl_version": "6.0.0",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSAlu\\original\\design.fir",
+  "source_sha256": "dca24a5b264f81015d6ec4555da213ceb3adfa15baf9b340616edc449edc27f8",
+  "compiler_sha256": "ae515ed8e48580399332c87a7b76406b7d18fb7790d8acbbd3170ecd00a4a7f4",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "Cross.XSAlu",
+      "top": "Chisel2LeanReference",
+      "ir": "Cross/XSAlu.ir.json",
+      "lean": "Cross/XSAlu.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSAlu\\firrtl-translation\\20261015T090939Z-f52d7914",
+  "circt_version": "1.135.0",
+  "circt_sha256": "afb77f160063de31ea3137502148365f920e8c0bdfa39673d14fac7d34d78939",
+  "ssa_reader_sha256": "29f63f7d14452d69d50068f8abc7b160f22e445ca8b53781700f69a670b44e15",
+  "bridge_sha256": "de43c0490f15ea6547ee6e2c4d85cbfb83720603535f0bcb42ec13198b8e500f",
+  "parsed_mlir_sha256": "efac4b7f80e77611ad615ecf5867f7492a47d58ec223b9e720267d557b3103e3",
+  "lowered_mlir_sha256": "bea3054c4c87b2e57392393381acaada0e66710241ad0f4644d2f2cf98f23913",
+  "unsupported_effects_checked_before_optimization": true
+}

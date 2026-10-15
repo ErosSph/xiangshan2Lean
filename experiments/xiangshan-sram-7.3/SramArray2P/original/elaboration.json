@@ -1,0 +1,26 @@
+{
+  "format": "chisel2lean-official-elaboration-v1",
+  "module": "xiangshan.validation.SramArrayValidation",
+  "constructor": [
+    false
+  ],
+  "chisel_version": "7.3.0",
+  "configuration": "fixed",
+  "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-classpath.txt",
+  "classpath_sha256": "9b77dec0a2d7a0fc4dd07beb53d0ade8bb8dcaf9eba4a25eb6ec5d87daf3d4e3",
+  "artifacts_sha256": {
+    "design.fir": "a6cd2c1ce1dbed93e49148361451057d0f905d3193644df40a418ff1a8104390",
+    "Chisel2LeanReference.v": "1cf2bf0de9bb192b4ee37c953df96a65efd5ff38808a3a0f26800efbf7ea8384",
+    "ports.json": "49b3d8af71d684a6cb81b01cb79af9cb392f46055e21c9c1dc833ee25c27f9b0"
+  },
+  "source_frontend_used": false,
+  "independent_chisel_elaborations": 2,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-sram-7.3\\SramArray2P\\elaboration",
+  "jvm": {
+    "chisel_version": "7.3.0",
+    "scala_version": "2.13.15",
+    "class_sha256": {
+      "xiangshan.validation.SramArrayValidation": "64f6e4a3b8da374b319c244e3119360c2df7ce2e5ceffcb899babbf182940eee"
+    }
+  }
+}

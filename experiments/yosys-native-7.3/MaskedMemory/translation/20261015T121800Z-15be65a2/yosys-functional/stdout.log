@@ -1,0 +1,23 @@
+
+-- Running command `read_rtlil ./before.il; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; select -assert-none w:c2l_effect_* w:c2l_undefined_* c:c2l_effect_* c:c2l_undefined_*; select -clear; rename -hide t:$print t:$assert t:$assume t:$cover t:$anyseq; rename -enumerate -pattern c2l_effect_% t:$print t:$assert t:$assume t:$cover; rename -enumerate -pattern c2l_undefined_% t:$anyseq; write_rtlil ./unconstrained.il; write_json ./unconstrained.json' --
+
+1. Executing RTLIL frontend.
+Input filename: ./before.il
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Modifying write port 0 on memory MaskedMemory.mem: CLK=\clock, A=\addr0, D={ 4'x \data0 [3:0] }
+Modifying write port 1 on memory MaskedMemory.mem: CLK=\clock, A=\addr1, D={ 4'x \data1 [3:0] }
+Modifying write port 2 on memory MaskedMemory.mem: CLK=\clock, A=\addr0, D={ \data0 [7:4] 4'x }
+Modifying write port 3 on memory MaskedMemory.mem: CLK=\clock, A=\addr1, D={ \data1 [7:4] 4'x }
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \MaskedMemory..
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing RTLIL backend.
+Output filename: ./unconstrained.il
+
+7. Executing JSON backend.

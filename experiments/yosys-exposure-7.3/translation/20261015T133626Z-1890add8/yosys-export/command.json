@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_rtlil ./unconstrained.il; cd \\Observed; select -assert-none w:c2l_effect_* c:c2l_effect_* w:c2l_undefined_* c:c2l_undefined_*; rename -hide t:$print t:$assert t:$assume t:$cover t:$anyseq; rename -enumerate -pattern c2l_effect_% t:$print t:$assert t:$assume t:$cover; rename -enumerate -pattern c2l_undefined_% t:$anyseq; write_json ./named.json; expose -evert -sep _ t:$print t:$assert t:$assume t:$cover t:$anyseq; delete w:c2l_effect_*_TRG; delete w:c2l_effect_* s:0 %i; cd ..; select \\Observed; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-exposure-7.3\\translation\\20261015T133626Z-1890add8\\artifacts",
+  "started_at": "2026-10-15T13:36:27.916970+00:00",
+  "pid": 24796
+}

@@ -1,0 +1,31 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "ProjectTop",
+    "--Mdir",
+    "obj_dir",
+    "ProjectTop.sv",
+    "Lane.sv",
+    "trace.cpp",
+    "-Iinclude"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-project-7.3\\project",
+  "started_at": "2026-10-15T09:23:08.902673+00:00",
+  "pid": 32532,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T09:23:23.626975+00:00"
+}

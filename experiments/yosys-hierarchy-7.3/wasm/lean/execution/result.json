@@ -1,0 +1,13 @@
+{
+  "command": [
+    "E:\\ICT\\chisel2lean4\\.tools\\lean-4.19.0-windows\\bin\\lean.exe",
+    "--run",
+    "E:\\ICT\\chisel2lean4\\experiments\\yosys-hierarchy-7.3\\wasm\\lean\\Run.lean",
+    "E:\\ICT\\chisel2lean4\\experiments\\yosys-hierarchy-7.3\\wasm\\lean\\request.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-hierarchy-7.3\\wasm\\model",
+  "started_at": "2026-10-15T11:42:35.555190+00:00",
+  "pid": 32792,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T11:42:40.503908+00:00"
+}

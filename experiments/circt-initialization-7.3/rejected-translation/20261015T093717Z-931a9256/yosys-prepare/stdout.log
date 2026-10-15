@@ -1,0 +1,12 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format /work/design.v --top ResetProbe; hierarchy -check -top ResetProbe; proc -noopt; flatten; opt_clean; memory_collect; write_json /work/before.json' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    ResetProbe
+
+      if (reset)
+          ^~~~~
+
+Build failed: 1 error, 0 warnings
+<suppressed ~5 debug messages>

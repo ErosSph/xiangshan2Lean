@@ -1,0 +1,86 @@
+{
+  "format": "chisel2lean-functional-v1",
+  "namespace": "Arbitrary.Json",
+  "clock": null,
+  "symbolic_parameters": false,
+  "inputs": [
+    {
+      "name": "a",
+      "field": "i0",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      }
+    },
+    {
+      "name": "c2l_undefined_0",
+      "field": "i1",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "name": "y",
+      "field": "o0",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "node": 2
+    }
+  ],
+  "states": [],
+  "nodes": [
+    {
+      "id": 0,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "i0"
+    },
+    {
+      "id": 1,
+      "op": "input",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [],
+      "field": "i1"
+    },
+    {
+      "id": 2,
+      "op": "bvxor",
+      "sort": {
+        "kind": "bits",
+        "width": 65
+      },
+      "args": [
+        0,
+        1
+      ],
+      "line": 20
+    }
+  ],
+  "initialization": "Known bits from Yosys JSON; unknown bits remain caller-supplied. SMT initial assertions discarded.",
+  "hardware": {
+    "register_cells": 0,
+    "memory_cells": 0,
+    "clock": null
+  },
+  "top": "Arbitrary",
+  "arbitrary_inputs": [
+    {
+      "name": "c2l_undefined_0",
+      "width": 65,
+      "source": "$auto$setundef.cc:550:execute$1"
+    }
+  ],
+  "lean_record_group_size": 16
+}

@@ -1,0 +1,6 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format -I "/work/project" -I "/work/project/include" "/work/project/Lane.sv" "/work/project/ProjectTop.sv" --top ProjectTop; hierarchy -check -top ProjectTop; proc -noopt; flatten; opt_clean; memory_collect; write_json /work/before.json' --
+
+1. Executing SLANG frontend.
+Warning: include directory '"/work/project"': No such file or directory [-Wcommand-line]
+Warning: include directory '"/work/project/include"': No such file or directory [-Wcommand-line]

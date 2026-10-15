@@ -1,0 +1,26 @@
+
+-- Running command `read_rtlil ./unconstrained.il; script ./exposure.ys; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2' --
+
+1. Executing RTLIL frontend.
+Input filename: ./unconstrained.il
+
+-- Executing script file `./exposure.ys' --
+Renaming cell $auto$setundef.cc:550:execute$161 to c2l_bridge_undefined_0 in module Clocks.
+Renaming cell $auto$setundef.cc:550:execute$163 to c2l_bridge_undefined_1 in module Clocks.
+
+2. Executing EXPOSE pass (exposing internal signals as outputs).
+New module port: Clocks/c2l_bridge_undefined_1_Y ($anyseq)
+New module port: Clocks/c2l_bridge_undefined_0_Y ($anyseq)
+Removing cell: Clocks/c2l_bridge_undefined_1 ($anyseq)
+Removing cell: Clocks/c2l_bridge_undefined_0 ($anyseq)
+Renaming wire c2l_bridge_undefined_0_Y to c2l_undefined_0 in module Clocks.
+Renaming wire c2l_bridge_undefined_1_Y to c2l_undefined_1 in module Clocks.
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module Clocks...
+Found and reported 0 problems.
+
+4. Executing JSON backend.
+
+5. Executing Functional SMT Backend.
+Processing module `\Clocks`.

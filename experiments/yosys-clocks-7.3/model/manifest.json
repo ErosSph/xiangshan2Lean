@@ -1,0 +1,58 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-clocks-7.3\\Clocks.sv",
+  "source_sha256": "ea372f14a48fb4b4b7c6ca349e55e732d0fea91fc75123d541872639ea965313",
+  "source_files_sha256": {
+    "design.v": "ea372f14a48fb4b4b7c6ca349e55e732d0fea91fc75123d541872639ea965313"
+  },
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Clocks.All",
+  "ir": "Clocks/All.ir.json",
+  "lean": "Clocks/All.lean",
+  "arbitrary_inputs": [
+    {
+      "name": "c2l_undefined_0",
+      "width": 8,
+      "source": "$auto$setundef.cc:550:execute$149"
+    },
+    {
+      "name": "c2l_undefined_1",
+      "width": 1,
+      "source": "$auto$setundef.cc:550:execute$151"
+    }
+  ],
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 14,
+    "memory_cells": 0,
+    "clock": null,
+    "clock_mode": "global"
+  },
+  "nodes": 208,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-clocks-7.3\\translation\\20261015T085753Z-be40ab81",
+  "semantics": "Two-state explicit global sampling steps using official clk2fflogic, including multiple clocks, gated clocks, negative edges, latches, and supported asynchronous FF controls. Inputs must satisfy the negative-hold-time and stable-reset-release contract of clk2fflogic. This is not arbitrary-delay or IEEE four-state simulation equivalence.",
+  "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+  "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+  "artifact_sha256": {
+    "before.json": "1e4f888e71ee34644e33a8668086dac720e366a24b70c65bc5345288ca987648",
+    "exposed.json": "4aa8e62eab41218acd5f90990ab2179e4b1b9082f2a5e9fcc57ee22fdf61ff53",
+    "lowered.json": "e2e58ce6ea6cae31f6e70f8e14307910c8ddbfc23eb6c26623342e4dcd243afd",
+    "functional.smt2": "ba50b0815b44f788febf6fb030a616b1cbffc0c158af9ad4d559a28e51fa97ac",
+    "Clocks/All.lean": "94e58faf4ea5a16338f1eea7addfd796da41271cb99b423009ff95f12ed0620c",
+    "Clocks/All.ir.json": "a085efd07de6dea3797b279b19de098890c3ded816f7ed908e466d74611beaa5"
+  }
+}

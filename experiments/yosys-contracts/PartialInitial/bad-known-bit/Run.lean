@@ -13,6 +13,7 @@ def decodeState (j : Lean.Json) : Except String State := do
   let v2 ← j.getObjValAs? Int "$auto$clk2fflogic.cc:108:sample_data$2"
   return { s0 := BitVec.ofInt 1 v0, s1 := BitVec.ofInt 4 v1, s2 := BitVec.ofInt 4 v2 }
 def encodeOutputs (o : Outputs) : Lean.Json := Lean.Json.mkObj [("q", Lean.toJson o.o0.toNat)]
+
 def unwrap (r : Except String α) : IO α :=
   match r with
   | .ok x => pure x

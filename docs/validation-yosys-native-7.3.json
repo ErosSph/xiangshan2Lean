@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "yosys_version": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+  "json_io": "stream",
+  "archive_sha256": "580a1bbe938f4af861ff49e42944dc00933d61d087693e43c316023ea07f6e1e",
+  "cases": [
+    {
+      "case": "Clocks",
+      "status": "PASS",
+      "steps": 1120,
+      "reference_sha256": "afc6e8903c9513e62df01127638b40bc55455e7aae1f116b9dc5d2ef63799a6f",
+      "model_manifest_sha256": "98b9aa5c8f465c3f3d4646585d1ae990cf634506d853bbb1051916198576e1a4"
+    },
+    {
+      "case": "MaskedMemory",
+      "status": "PASS",
+      "steps": 128,
+      "reference_sha256": "c6e5ebe67f2c3b1737fe4af36d4d78b0beb94a8be285e19b9da78350b6870a85",
+      "model_manifest_sha256": "ae39afd79a30e46cae0767caa98865059e47fa8cac5d49b803537c74b2a5536f"
+    },
+    {
+      "case": "Stdio",
+      "status": "PASS",
+      "steps": 48,
+      "reference_sha256": "bca0b9cfe336a7ac8b1d162cf700afd7afcda94bd9767cfe90e9ca8dea1ee07e",
+      "model_manifest_sha256": "6cec80f6aac840a9089cc87a34d8f9d5f2b6bc8c4794330700c7a596c785cce1"
+    }
+  ],
+  "scope": "Actual native-Yosys-generated Lean replays independently RTL-checked traces. Outputs compare exactly; observations compare kind, source, format, stream, predicates and argument values with local generated IDs normalized. Fixed initial and arbitrary-input choices; no full-chip or universal equivalence claim."
+}

@@ -4,4 +4,4 @@ g++    trace.o verilated.o verilated_threads.o VMaskedMemory__ALL.a    -pthread 
 make: Leaving directory 'E:/ICT/chisel2lean4/experiments/yosys-contracts/MaskedMemory/obj_dir'
 - V e r i l a t i o n   R e p o r t: Verilator 5.048 2026-04-26 rev vUNKNOWN-built20260428
 - Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
-- Verilator: Walltime 11.278 s (elab=0.000, cvt=0.000, bld=11.258); cpu 0.000 s on 2 threads; allocated 5.898 MB
+- Verilator: Walltime 5.367 s (elab=0.000, cvt=0.000, bld=5.148); cpu 0.000 s on 2 threads; allocated 12.578 MB

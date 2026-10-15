@@ -127,6 +127,7 @@ std::string wideHex(const WData* words, size_t count) {{
 }}
 int main(int argc, char** argv) {{
   Verilated::commandArgs(argc, argv);
+  {'Verilated::fatalOnError(false);' if metadata.get('assertions') else ''}
   V{top} dut;
   std::ifstream input("trace.csv");
   std::ofstream output("rtl-results.csv");
@@ -144,9 +145,11 @@ int main(int argc, char** argv) {{
     {'dut.reset = std::stoull(values[0]);' if has_reset else ''}
     {poke}
     dut.eval();
+    {'if (Verilated::gotError()) return 7;' if metadata.get('assertions') else ''}
     std::array<std::string, {len(outputs)}> pre = {{{sample}}};
     {'dut.clock = 1;' if has_clock else ''}
     dut.eval();
+    {'if (Verilated::gotError()) return 7;' if metadata.get('assertions') else ''}
     std::array<std::string, {len(outputs)}> post = {{{sample}}};
     output << cycle++;
     for (auto value : pre) output << ',' << value;
@@ -160,10 +163,27 @@ int main(int argc, char** argv) {{
 """
     (directory / "trace.cpp").write_text(code, encoding="utf-8")
     env = native_environment()
+    optimization = metadata.get('optimization', 2)
+    if optimization not in (0, 1, 2, 3):
+        raise ValueError('RTL compiler optimization must be between zero and three')
+    units = metadata.get('rtl_sources', [top + '.v'])
+    source_arguments = units
+    if len(units) > 128:
+        filelist = directory / 'c2l-reference.f'
+        filelist.write_text('\n'.join(json.dumps(str(path).replace('\\', '/')) for path in units) + '\n', encoding='utf-8')
+        source_arguments = ['-f', filelist.name]
     command = [*verilator_command(), "--cc", "--exe", "--build", "-j", "2",
                "-Wno-fatal", "--x-initial", "0", "--x-assign", "0",
-               "-CFLAGS", "-O2 -DVL_TIME_CONTEXT", "--top-module", top,
-               "--Mdir", "obj_dir", top + ".v", "trace.cpp"]
+               "-CFLAGS", f"-O{optimization} -DVL_TIME_CONTEXT", "--top-module", top,
+               "--Mdir", "obj_dir", *source_arguments, "trace.cpp"]
+    for name, flag in [('output_split', '--output-split'), ('output_split_cfuncs', '--output-split-cfuncs')]:
+        if name in metadata:
+            if not isinstance(metadata[name], int) or metadata[name] <= 0:
+                raise ValueError('RTL output splitting must be a positive integer')
+            command.extend([flag, str(metadata[name])])
+    command += ['-I' + str(p) for p in metadata.get('rtl_include_dirs', [])]
+    if metadata.get('assertions'):
+        command.insert(len(verilator_command()), '--assert')
     if result := run_logged(command, evidence / "verilator-build", cwd=directory, env=env, echo=False):
         return result, []
     executable = directory / "obj_dir" / ("V" + top + (".exe" if os.name == "nt" else ""))

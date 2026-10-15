@@ -1,0 +1,27 @@
+{
+  "format": "chisel2lean-official-elaboration-v1",
+  "module": "modernfixtures.HandshakeTop",
+  "constructor": [
+    65,
+    3
+  ],
+  "chisel_version": "7.3.0",
+  "configuration": "fixed",
+  "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+  "classpath_sha256": "2b21743f2c71872f753a1fc0628cad5ee2b1a6e9c355cbf661f4a00f34ff5950",
+  "artifacts_sha256": {
+    "design.fir": "dc15934e9c59f04860c6093a56dfa564a491ccbf7d9e0fe5b551362e35bd5068",
+    "Chisel2LeanReference.v": "5b175013270f6781060e066be486c97303c9743c212b061537bd2f01439c3d43",
+    "ports.json": "d59caa0d3bc75923a9e457c581663d9a8a79e177e62814e0f51bc576471be79e"
+  },
+  "source_frontend_used": false,
+  "independent_chisel_elaborations": 2,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Handshake65x3\\elaboration",
+  "jvm": {
+    "chisel_version": "7.3.0",
+    "scala_version": "2.13.15",
+    "class_sha256": {
+      "modernfixtures.HandshakeTop": "1926da5e01977290ac1dd631ca7c7361006887c22144f3e0fbc451041953437c"
+    }
+  }
+}

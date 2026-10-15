@@ -11,6 +11,7 @@ def decodeInputs (j : Lean.Json) : Except String Inputs := do
 def decodeState (j : Lean.Json) : Except String State := do
   return ⟨⟩
 def encodeOutputs (o : Outputs) : Lean.Json := Lean.Json.mkObj [("q", Lean.toJson o.o0.toNat)]
+
 def unwrap (r : Except String α) : IO α :=
   match r with
   | .ok x => pure x

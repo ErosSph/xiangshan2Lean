@@ -1,0 +1,19 @@
+{
+  "format": "chisel2lean-hardware-audit-v1",
+  "clock": "clock",
+  "cell_types": {
+    "$eq": 3,
+    "$sub": 2,
+    "$not": 5,
+    "$and": 4,
+    "$add": 2,
+    "$mux": 16,
+    "$ne": 1,
+    "$gt": 1,
+    "$dff": 3,
+    "$mem_v2": 1
+  },
+  "issues": [],
+  "status": "PREFLIGHT_PASS",
+  "scope": "Original normalized cells before clock lowering. PREFLIGHT_PASS is not a translation or equivalence claim."
+}

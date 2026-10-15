@@ -1,0 +1,18 @@
+
+-- Running command `read_json /work/before.json; clk2fflogic -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json /work/unconstrained.json' --
+
+1. Executing JSON frontend.
+Importing module T from JSON tree.
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \T..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing JSON backend.

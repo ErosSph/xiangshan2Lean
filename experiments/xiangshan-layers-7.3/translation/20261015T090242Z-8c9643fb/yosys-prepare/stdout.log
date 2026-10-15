@@ -1,0 +1,14 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format -f /work/project.f --top Layer; hierarchy -check -top Layer; proc -noopt; flatten; opt_clean; memory_collect; write_json /work/before.json' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    Layer
+
+          $error("Assertion failed\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          $fatal;
+          ^~~~~~
+
+Build failed: 2 errors, 0 warnings
+<suppressed ~4 debug messages>

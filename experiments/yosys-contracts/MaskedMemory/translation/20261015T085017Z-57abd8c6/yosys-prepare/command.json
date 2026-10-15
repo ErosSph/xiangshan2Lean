@@ -1,0 +1,13 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "-Q",
+    "-T",
+    "-p",
+    "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format /work/design.v --top MaskedMemory; hierarchy -check -top MaskedMemory; proc -noopt; flatten; opt_clean; memory_collect; write_json /work/before.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\MaskedMemory\\translation\\20261015T085017Z-57abd8c6\\artifacts",
+  "started_at": "2026-10-15T08:50:17.253645+00:00",
+  "pid": 26596
+}

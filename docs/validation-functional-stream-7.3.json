@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "models_compared": 22,
+  "models": [
+    {
+      "manifest": "experiments\\xiangshan-layers-7.3\\model\\manifest.json",
+      "nodes": 18,
+      "manifest_sha256": "c03f476279ef53550d8ea2ba1fcef57f21914beb26ad34210f7487a067468523",
+      "packed_node_column_bytes": 384
+    },
+    {
+      "manifest": "experiments\\xiangshan-sram-7.3\\SramArray1P\\model\\manifest.json",
+      "nodes": 137,
+      "manifest_sha256": "fa38eaf2469525466fef287b4f52aacaea61cba5d9754ba5dc6d7285450fd3d8",
+      "packed_node_column_bytes": 3074
+    },
+    {
+      "manifest": "experiments\\xiangshan-sram-7.3\\SramArray2P\\model\\manifest.json",
+      "nodes": 108,
+      "manifest_sha256": "4d6f24f15a8ca1f1fff3736f42940a7ec0a8e476cede5c7c47758ebfbb566f36",
+      "packed_node_column_bytes": 2392
+    },
+    {
+      "manifest": "experiments\\yosys-chunks-7.3\\Large\\model\\manifest.json",
+      "nodes": 23557,
+      "manifest_sha256": "5d97a9948a696b2895aa6c5667f842388588a5394e67c0a65bbd7ce26e80efbb",
+      "packed_node_column_bytes": 532574
+    },
+    {
+      "manifest": "experiments\\yosys-clocks-7.3\\model\\manifest.json",
+      "nodes": 208,
+      "manifest_sha256": "67de9a494817491c447f7779f47ca3dbce61717493d0ec2487ee11a63d95d3dd",
+      "packed_node_column_bytes": 4632
+    },
+    {
+      "manifest": "experiments\\yosys-contracts\\Division\\model\\manifest.json",
+      "nodes": 7,
+      "manifest_sha256": "652c4f48f47e3df0403d69cee0d988abec4e89e63fcabe91248b4aa9828130d7",
+      "packed_node_column_bytes": 158
+    },
+    {
+      "manifest": "experiments\\yosys-contracts\\ExplicitUnknown\\model\\manifest.json",
+      "nodes": 1,
+      "manifest_sha256": "fad886601fdbdae2b74c0d03ff52f503d31d774cf4a968d9c33725d258e608de",
+      "packed_node_column_bytes": 22
+    },
+    {
+      "manifest": "experiments\\yosys-contracts\\MaskedMemory\\model\\manifest.json",
+      "nodes": 152,
+      "manifest_sha256": "9514a534c46cf191bf2763568c70e87741d94e82c12452817d337bdc95c5d633",
+      "packed_node_column_bytes": 3388
+    },
+    {
+      "manifest": "experiments\\yosys-contracts\\PartialInitial\\model\\manifest.json",
+      "nodes": 22,
+      "manifest_sha256": "e6e9cc4ee0faddd010383e3886766c0b8be62ddc5a440f52f813f646c51c5e16",
+      "packed_node_column_bytes": 488
+    },
+    {
+      "manifest": "experiments\\yosys-effects-7.3\\DisabledCheck\\model\\manifest.json",
+      "nodes": 19,
+      "manifest_sha256": "1745be6089360cc817f3d35d2eccf177be7e4aa2206433dfcb49b80aaf2943ab",
+      "packed_node_column_bytes": 410
+    },
+    {
+      "manifest": "experiments\\yosys-effects-7.3\\Observed\\model\\manifest.json",
+      "nodes": 108,
+      "manifest_sha256": "5b7acddace5d33ba9ba01b3dc13d97a55f12d3b6b3f7b5a71dd9f2a1e357bbaf",
+      "packed_node_column_bytes": 2368
+    },
+    {
+      "manifest": "experiments\\yosys-exposure-7.3\\model\\manifest.json",
+      "nodes": 120,
+      "manifest_sha256": "124c4f6a21dcf81988e0dfaa6c9226d7d92b8fac8bb9091cbd7c9ef0d5ea5ee5",
+      "packed_node_column_bytes": 2632
+    },
+    {
+      "manifest": "experiments\\yosys-full-adaptation-7.3\\Counter4\\model\\manifest.json",
+      "nodes": 28,
+      "manifest_sha256": "1f519ad9a74a403a2c2dd916bb0fb17678aaaf3109d8e50e622d47234a49c1b3",
+      "packed_node_column_bytes": 624
+    },
+    {
+      "manifest": "experiments\\yosys-full-adaptation-7.3\\Handshake65x3\\model\\manifest.json",
+      "nodes": 128,
+      "manifest_sha256": "cc407ca8d1acd86f37f6d214e6d86f2a1030daf476afef95cb4c319b66bb6dac",
+      "packed_node_column_bytes": 2896
+    },
+    {
+      "manifest": "experiments\\yosys-full-adaptation-7.3\\Queue3\\model\\manifest.json",
+      "nodes": 164,
+      "manifest_sha256": "f0c59a3657eb8f12224ef949f1b3259f059a77870df6db21c27b3e3dc86464a1",
+      "packed_node_column_bytes": 3716
+    },
+    {
+      "manifest": "experiments\\yosys-full-adaptation-7.3\\Signed65\\model\\manifest.json",
+      "nodes": 149,
+      "manifest_sha256": "1556dd81b986e63ef3e11efe273fa4e7e8a84e9dd7b06e3fe5a1a404b8842f44",
+      "packed_node_column_bytes": 3830
+    },
+    {
+      "manifest": "experiments\\yosys-full-adaptation-7.3\\SyncQueue3\\model\\manifest.json",
+      "nodes": 202,
+      "manifest_sha256": "41137266d34d3ecd876350b51b7d11fa913000feef00cc8815910284966a9cf7",
+      "packed_node_column_bytes": 4564
+    },
+    {
+      "manifest": "experiments\\yosys-full-adaptation-7.3\\XSAlu\\model\\manifest.json",
+      "nodes": 1409,
+      "manifest_sha256": "bc7d80b04d7b35d302842970db71e5af3b738e9a01f873e68e274a93e8e4629d",
+      "packed_node_column_bytes": 34170
+    },
+    {
+      "manifest": "experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\model\\manifest.json",
+      "nodes": 280,
+      "manifest_sha256": "6a1f28360398767079632f06e5874d1fe04a293b118b0e75d3a6cd0c9bf99921",
+      "packed_node_column_bytes": 6332
+    },
+    {
+      "manifest": "experiments\\yosys-native-7.3\\Clocks\\model\\manifest.json",
+      "nodes": 208,
+      "manifest_sha256": "98b9aa5c8f465c3f3d4646585d1ae990cf634506d853bbb1051916198576e1a4",
+      "packed_node_column_bytes": 4632
+    },
+    {
+      "manifest": "experiments\\yosys-native-7.3\\MaskedMemory\\model\\manifest.json",
+      "nodes": 152,
+      "manifest_sha256": "ae39afd79a30e46cae0767caa98865059e47fa8cac5d49b803537c74b2a5536f",
+      "packed_node_column_bytes": 3388
+    },
+    {
+      "manifest": "experiments\\yosys-native-7.3\\Stdio\\model\\manifest.json",
+      "nodes": 48,
+      "manifest_sha256": "6cec80f6aac840a9089cc87a34d8f9d5f2b6bc8c4794330700c7a596c785cce1",
+      "packed_node_column_bytes": 1048
+    }
+  ],
+  "rejected": [
+    "unclosed tail",
+    "extra closing parenthesis",
+    "quoted atom"
+  ],
+  "reader_sha256": "62c6a9725f870aad218205e4781b96a3aadcab70f6cae7fbb108332004589224",
+  "scope": "Streaming and packed-node imports, serialized IR values and generated Lean source all equal the checked artifacts, including initial constraints and line locations. No initial SMT assertion is treated as hardware initialization."
+}

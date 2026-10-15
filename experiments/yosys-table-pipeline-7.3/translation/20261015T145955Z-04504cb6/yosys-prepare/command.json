@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format ./design.v --top Observed; hierarchy -check -top Observed; proc -noopt; flatten Observed; hierarchy -check -top Observed; opt_clean; memory_collect; write_rtlil ./before.il; write_json ./before.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-table-pipeline-7.3\\translation\\20261015T145955Z-04504cb6\\artifacts",
+  "started_at": "2026-10-15T14:59:55.648837+00:00",
+  "pid": 31672
+}

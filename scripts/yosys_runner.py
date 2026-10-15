@@ -4,6 +4,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import subprocess
 import sys
 
 from bootstrap_yosys import INSTALL
@@ -11,6 +12,10 @@ from common import ROOT
 
 
 def main():
+    if sys.argv[1:2] == ['--native']:
+        from bootstrap_native_yosys import INSTALL as NATIVE, environment, load_lock
+        load_lock()
+        return subprocess.call([str(NATIVE / 'bin/yosys.exe'), *sys.argv[2:]], env=environment())
     lock_path = INSTALL / "chisel2lean-lock.json"
     if not lock_path.is_file():
         raise RuntimeError("Run python scripts/bootstrap_yosys.py first")

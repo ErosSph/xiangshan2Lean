@@ -1,0 +1,21 @@
+{
+  "status": "PAUSED_BY_USER",
+  "reason": "User requested pause",
+  "time_utc": "2026-10-15T16:29:56.3410118Z",
+  "processes": [
+    {
+      "ProcessId": 13460,
+      "ParentProcessId": 4448,
+      "ExecutablePath": "D:\\miniconda\\python.exe",
+      "CreationDate": "2026-10-16T00:22:31.492357+08:00",
+      "CommandLine": "\"D:\\miniconda\\python.exe\" scripts/verify_xiangshan_whole.py --prepared experiments/xiangshan-whole-differential-7.3/20261015T151543Z-bb8931ad --reference-only"
+    },
+    {
+      "ProcessId": 12536,
+      "ParentProcessId": 13460,
+      "ExecutablePath": "C:\\msys64\\usr\\bin\\perl.exe",
+      "CreationDate": "2026-10-16T00:22:35.792475+08:00",
+      "CommandLine": "C:/msys64/usr/bin/perl.exe /mingw64/bin/verilator --assert --cc --exe --build -j 2 -Wno-fatal --x-initial 0 --x-assign 0 -CFLAGS \"-O0 -DVL_TIME_CONTEXT\" --top-module XSTop --Mdir obj_dir -f c2l-reference.f trace.cpp --output-split 10000 --output-split-cfuncs 5000 -IE:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-differential-7.3\\20261015T151543Z-bb8931ad\\rtl"
+    }
+  ]
+}

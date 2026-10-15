@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 8,
+  "output_comparisons": 2560,
+  "fields": {
+    "inputs": 483,
+    "states": 960,
+    "outputs": 480
+  },
+  "assertion_violation_detected_by_both": true,
+  "scope": "Grouped input clock update, state decoding, hardware output encoding and 160 preserved assertions; actual Lean, Verilator and integer comparison."
+}

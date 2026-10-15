@@ -1,0 +1,14 @@
+
+-- Running command `read_json /work/exposed.json; check -assert; write_json /work/lowered.json; write_functional_smt2 /work/functional.smt2' --
+
+1. Executing JSON frontend.
+Importing module Stdio from JSON tree.
+
+2. Executing CHECK pass (checking for obvious problems).
+Checking module Stdio...
+Found and reported 0 problems.
+
+3. Executing JSON backend.
+
+4. Executing Functional SMT Backend.
+Processing module `\Stdio`.

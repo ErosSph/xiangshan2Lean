@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "cycles_per_model": 96,
+  "models_compared": 5,
+  "independent_rtl_reference_sha256": "6c66aee883003e839a5cb696019f7de2f989cce791d9f87d5f53128aec1a5365",
+  "rejected": [
+    "modified included macro header",
+    "corrupted RTLIL",
+    "different pinned runtime",
+    "corrupted flat metadata companion",
+    "different clock/effect lowering contract: clock_mode",
+    "different clock/effect lowering contract: preserve_effects",
+    "corrupted FunctionalIR"
+  ],
+  "scope": "Fresh and resumed Lean execute the same independently RTL-checked hierarchical project trace. Reuse also checks source headers, preprocessing, tool identity and producer hashes."
+}

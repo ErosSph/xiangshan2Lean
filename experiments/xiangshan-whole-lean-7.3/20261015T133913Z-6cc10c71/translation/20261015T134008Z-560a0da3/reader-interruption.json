@@ -1,0 +1,6 @@
+{
+  "stopped_at": "2026-10-15T14:01:02.8672272Z",
+  "command_line": "\"D:\\miniconda\\python.exe\" scripts/convert_xiangshan.py experiments/xiangshan-full-7.3/20261015T083406Z-cc618ef8/lowering-caller-state/summary.json --normalized-checkpoint experiments/xiangshan-whole-lean-7.3/20261015T123250Z-f9c0159a/translation/20261015T123259Z-1f63e4eb/artifacts/normalized-checkpoint.json",
+  "reason": "Native full-chip FunctionalIR export succeeded; replace eager 1.24 GB SMT reader with validated streaming reader and resume from completed export",
+  "process_id": 30296
+}

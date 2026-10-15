@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "steps": 1120,
+  "output_comparisons": 6720,
+  "source_sha256": "ea372f14a48fb4b4b7c6ca349e55e732d0fea91fc75123d541872639ea965313",
+  "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+  "features": [
+    "two independent clocks",
+    "negative edge",
+    "simultaneous old-state reads",
+    "asynchronous reset",
+    "transparent latch",
+    "latch-based clock gate"
+  ],
+  "contract": "Explicit global sampling steps. Data and gate controls settle before active edges; reset release is separated from active edges. Unknown initial bits and arbitrary inputs are explicitly zero in this experiment.",
+  "scope": "Generated Lean executed and compared with independent Verilator and integer model; finite traces, not arbitrary-delay or universal equivalence."
+}

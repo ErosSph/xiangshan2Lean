@@ -1,0 +1,147 @@
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\Leaf$Nested.right.middle.leaf": {
+         "num_wires":         9,
+         "num_wire_bits":     75,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$mux": 3
+         }
+      },
+      "\\Leaf$Nested.left.middle.leaf": {
+         "num_wires":         9,
+         "num_wire_bits":     75,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$mux": 3
+         }
+      },
+      "\\Middle$Nested.right.middle": {
+         "num_wires":         5,
+         "num_wire_bits":     19,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Leaf$Nested.right.middle.leaf": 1
+         }
+      },
+      "\\Middle$Nested.left.middle": {
+         "num_wires":         5,
+         "num_wire_bits":     19,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Leaf$Nested.left.middle.leaf": 1
+         }
+      },
+      "\\Branch$Nested.right": {
+         "num_wires":         5,
+         "num_wire_bits":     19,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Middle$Nested.right.middle": 1
+         }
+      },
+      "\\Branch$Nested.left": {
+         "num_wires":         5,
+         "num_wire_bits":     19,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 19,
+         "num_ports":         5,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Middle$Nested.left.middle": 1
+         }
+      },
+      "\\Nested": {
+         "num_wires":         8,
+         "num_wire_bits":     43,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 27,
+         "num_ports":         6,
+         "num_port_bits":     27,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_submodules":       2,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$xor": 1,
+            "Branch$Nested.left": 1,
+            "Branch$Nested.right": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         46,
+         "num_wire_bits":     269,
+         "num_pub_wires":     36,
+         "num_pub_wire_bits": 141,
+         "num_ports":         36,
+         "num_port_bits":     141,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         12,
+         "num_submodules":       2,
+         "num_cells_by_type": {
+            "$add": 3,
+            "$dff": 2,
+            "$mux": 6,
+            "$xor": 1,
+            "Branch$Nested.left": 1,
+            "Branch$Nested.right": 1
+         }
+      }
+}
+

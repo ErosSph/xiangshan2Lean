@@ -1,0 +1,51 @@
+[
+  {
+    "ProcessId": 33436,
+    "ParentProcessId": 23876,
+    "ExecutablePath": "C:\\msys64\\mingw64\\bin\\verilator_bin.exe",
+    "CreationDate": "2026-10-16T00:22:36.839486+08:00",
+    "CommandLine": "C:\\msys64\\mingw64\\bin\\verilator_bin.exe --assert --cc --exe --build -j 2 -Wno-fatal --x-initial 0 --x-assign 0 -CFLAGS \"-O0 -DVL_TIME_CONTEXT\" --top-module XSTop --Mdir obj_dir -f c2l-reference.f trace.cpp --output-split 10000 --output-split-cfuncs 5000 -IE:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-differential-7.3\\20261015T151543Z-bb8931ad\\rtl"
+  },
+  {
+    "ProcessId": 10620,
+    "ParentProcessId": 33436,
+    "ExecutablePath": "C:\\Windows\\system32\\cmd.exe",
+    "CreationDate": "2026-10-16T00:27:31.295079+08:00",
+    "CommandLine": "C:\\Windows\\system32\\cmd.exe /c make -C obj_dir -f VXSTop.mk -j 2"
+  },
+  {
+    "ProcessId": 19764,
+    "ParentProcessId": 10620,
+    "ExecutablePath": "C:\\msys64\\mingw64\\bin\\make.exe",
+    "CreationDate": "2026-10-16T00:27:31.462986+08:00",
+    "CommandLine": "make  -C obj_dir -f VXSTop.mk -j 2"
+  },
+  {
+    "ProcessId": 34284,
+    "ParentProcessId": 19764,
+    "ExecutablePath": "C:\\msys64\\mingw64\\bin\\g++.exe",
+    "CreationDate": "2026-10-16T00:27:59.171376+08:00",
+    "CommandLine": "g++ -Os -I. -MMD -IC:/msys64/mingw64/share/verilator/include -IC:/msys64/mingw64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -O0 -DVL_TIME_CONTEXT -include VXSTop__pch.h.fast -c VXSTop_vm_classes_0.cpp"
+  },
+  {
+    "ProcessId": 33564,
+    "ParentProcessId": 34284,
+    "ExecutablePath": "C:\\msys64\\mingw64\\bin\\..\\lib\\gcc\\x86_64-w64-mingw32\\16.1.0\\cc1plus.exe",
+    "CreationDate": "2026-10-16T00:27:59.196742+08:00",
+    "CommandLine": "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/cc1plus.exe -quiet -I . -I C:/msys64/mingw64/share/verilator/include -I C:/msys64/mingw64/share/verilator/include/vltstd -iprefix C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/ -MMD VXSTop_vm_classes_0.d -D_REENTRANT -D VERILATOR=1 -D VM_COVERAGE=0 -D VM_SC=0 -D VM_TIMING=0 -D VM_TRACE=0 -D VM_TRACE_FST=0 -D VM_TRACE_VCD=0 -D VM_TRACE_SAIF=0 -D VL_TIME_CONTEXT -include VXSTop__pch.h.fast VXSTop_vm_classes_0.cpp -quiet -dumpbase VXSTop_vm_classes_0.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -Os -O0 -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wunused-but-set-parameter=0 -Wunused-but-set-variable=0 -Wno-unused-parameter -Wno-unused-variable -faligned-new=1 -fcf-protection=none -o C:\\Users\\erwin\\AppData\\Local\\Temp\\ccHLpwmm.s"
+  },
+  {
+    "ProcessId": 8052,
+    "ParentProcessId": 19764,
+    "ExecutablePath": "C:\\msys64\\mingw64\\bin\\g++.exe",
+    "CreationDate": "2026-10-16T00:28:00.424727+08:00",
+    "CommandLine": "g++ -Os -I. -MMD -IC:/msys64/mingw64/share/verilator/include -IC:/msys64/mingw64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -O0 -DVL_TIME_CONTEXT -include VXSTop__pch.h.fast -c VXSTop_vm_classes_1.cpp"
+  },
+  {
+    "ProcessId": 18544,
+    "ParentProcessId": 8052,
+    "ExecutablePath": "C:\\msys64\\mingw64\\bin\\..\\lib\\gcc\\x86_64-w64-mingw32\\16.1.0\\cc1plus.exe",
+    "CreationDate": "2026-10-16T00:28:00.452894+08:00",
+    "CommandLine": "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/cc1plus.exe -quiet -I . -I C:/msys64/mingw64/share/verilator/include -I C:/msys64/mingw64/share/verilator/include/vltstd -iprefix C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/ -MMD VXSTop_vm_classes_1.d -D_REENTRANT -D VERILATOR=1 -D VM_COVERAGE=0 -D VM_SC=0 -D VM_TIMING=0 -D VM_TRACE=0 -D VM_TRACE_FST=0 -D VM_TRACE_VCD=0 -D VM_TRACE_SAIF=0 -D VL_TIME_CONTEXT -include VXSTop__pch.h.fast VXSTop_vm_classes_1.cpp -quiet -dumpbase VXSTop_vm_classes_1.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -Os -O0 -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wunused-but-set-parameter=0 -Wunused-but-set-variable=0 -Wno-unused-parameter -Wno-unused-variable -faligned-new=1 -fcf-protection=none -o C:\\Users\\erwin\\AppData\\Local\\Temp\\ccSSsTzF.s"
+  }
+]

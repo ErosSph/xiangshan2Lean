@@ -1,0 +1,23 @@
+
+-- Running command `read_json /work/before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json /work/unconstrained.json' --
+
+1. Executing JSON frontend.
+Importing module Chisel2LeanReference from JSON tree.
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Modifying write port 0 on memory Chisel2LeanReference.SramArrayValidation.ram.array_ext.Memory: CLK=\c2l_port_0, A=\SramArrayValidation.ram.array_ext.RW0_addr, D={ 8'x \c2l_port_6 [7:0] }
+Modifying write port 1 on memory Chisel2LeanReference.SramArrayValidation.ram.array_ext.Memory: CLK=\c2l_port_0, A=\SramArrayValidation.ram.array_ext.RW0_addr, D={ \c2l_port_6 [15:8] 8'x }
+Replacing Chisel2LeanReference.$driver$SramArrayValidation.ram.array_ext._RW0_raddr_d0 ($dff): CLK=\c2l_port_0, D=\SramArrayValidation.ram.array_ext.RW0_addr, Q=\SramArrayValidation.ram.array_ext._RW0_raddr_d0
+Replacing Chisel2LeanReference.$driver$SramArrayValidation.ram.array_ext._RW0_ren_d0 ($dff): CLK=\c2l_port_0, D=\SramArrayValidation.ram.array_ext.RW0_en, Q=\SramArrayValidation.ram.array_ext._RW0_ren_d0
+Replacing Chisel2LeanReference.$driver$SramArrayValidation.ram.array_ext._RW0_rmode_d0 ($dff): CLK=\c2l_port_0, D=\SramArrayValidation.ram.array_ext.RW0_wmode, Q=\SramArrayValidation.ram.array_ext._RW0_rmode_d0
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Chisel2LeanReference..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing JSON backend.

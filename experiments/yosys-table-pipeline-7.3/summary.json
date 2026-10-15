@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "steps": 48,
+  "rejected_packets": [
+    "extra-byte",
+    "future-argument"
+  ],
+  "manifest_sha256": "a2a12aa86846d4afcbc5696715677aade73d0e3874530a8bb167eb0fd31ed1bf",
+  "reference_sha256": "2e770ef6df7d147d97a3b754ce67c854e29cf5cf51e949e294f5af11ba3e05fd",
+  "scope": "Actual CLI-generated table model compiles, validates all data and replays the independently RTL-checked literal-print/property trace. Malformed packet and future-node references fail Lean checking."
+}

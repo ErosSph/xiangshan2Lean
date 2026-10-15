@@ -1,0 +1,15 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "-Q",
+    "-T",
+    "-p",
+    "read_json /work/exposed.json; check -assert; write_json /work/lowered.json; write_functional_smt2 /work/functional.smt2"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-layers-7.3\\translation\\20261015T090410Z-fb0e7073\\artifacts",
+  "started_at": "2026-10-15T09:04:11.863442+00:00",
+  "pid": 23612,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T09:04:12.547579+00:00"
+}

@@ -1,0 +1,224 @@
+{
+  "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+  "modules": {
+    "Stdio": {
+      "attributes": {
+        "keep": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "work/design.v:1.8"
+      },
+      "ports": {
+        "clock": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "en": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "d": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 8, 9, 10, 11 ]
+        }
+      },
+      "cells": {
+        "$1": {
+          "hide_name": 1,
+          "type": "$print",
+          "parameters": {
+            "ARGS_WIDTH": "00000000000000000000000000000100",
+            "FORMAT": "__C2L_STDIO_9bd6fa1afacc4b96_0__ERR q={4:=0d-u}\n",
+            "PRIORITY": "11111111111111111111111111111111",
+            "TRG_ENABLE": "00000000000000000000000000000001",
+            "TRG_POLARITY": "1",
+            "TRG_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "work/design.v:6.5-6.76"
+          },
+          "port_directions": {
+            "ARGS": "input",
+            "EN": "input",
+            "TRG": "input"
+          },
+          "connections": {
+            "ARGS": [ 8, 9, 10, 11 ],
+            "EN": [ 12 ],
+            "TRG": [ 2 ]
+          }
+        },
+        "$3": {
+          "hide_name": 1,
+          "type": "$print",
+          "parameters": {
+            "ARGS_WIDTH": "00000000000000000000000000000100",
+            "FORMAT": "__C2L_STDIO_9bd6fa1afacc4b96_1__OUT literal $fwrite(dynamic_fd) q={4:=0d-u}\n",
+            "PRIORITY": "11111111111111111111111111111110",
+            "TRG_ENABLE": "00000000000000000000000000000001",
+            "TRG_POLARITY": "1",
+            "TRG_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "work/design.v:7.5-7.104"
+          },
+          "port_directions": {
+            "ARGS": "input",
+            "EN": "input",
+            "TRG": "input"
+          },
+          "connections": {
+            "ARGS": [ 8, 9, 10, 11 ],
+            "EN": [ 13 ],
+            "TRG": [ 2 ]
+          }
+        },
+        "$driver$q": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "work/design.v:4.1"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 14, 15, 16, 17 ],
+            "Q": [ 8, 9, 10, 11 ]
+          }
+        },
+        "$procmux$1": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "work/design.v:5.10-9.6|work/design.v:5.3-9.6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10, 11 ],
+            "B": [ 4, 5, 6, 7 ],
+            "S": [ 3 ],
+            "Y": [ 14, 15, 16, 17 ]
+          }
+        },
+        "$procmux$3": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "work/design.v:5.10-9.6|work/design.v:5.3-9.6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 3 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$procmux$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "work/design.v:5.10-9.6|work/design.v:5.3-9.6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 3 ],
+            "Y": [ 12 ]
+          }
+        }
+      },
+      "netnames": {
+        "$2": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "work/design.v:6.5-6.76"
+          }
+        },
+        "$4": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "work/design.v:7.5-7.104"
+          }
+        },
+        "$procmux$1_Y": {
+          "hide_name": 1,
+          "bits": [ 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "clock",
+            "src": "work/design.v:1.20"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7 ],
+          "attributes": {
+            "hdlname": "d",
+            "src": "work/design.v:1.43"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "en",
+            "src": "work/design.v:1.27"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11 ],
+          "attributes": {
+            "hdlname": "q",
+            "init": "0000",
+            "src": "work/design.v:1.63"
+          }
+        }
+      }
+    }
+  }
+}

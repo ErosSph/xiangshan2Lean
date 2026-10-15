@@ -1,0 +1,8 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format -f /work/project.f --top XSTop; hierarchy -check -top XSTop; proc -noopt; flatten; opt_clean; memory_collect; write_json /work/before.json' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    XSTop
+
+<suppressed ~637698 debug messages>

@@ -77,6 +77,8 @@ def run_logged(cmd: list[str], log_dir: Path, cwd: Path = ROOT,
     (log_dir / "command.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
     proc = subprocess.Popen(cmd, cwd=cwd, env=env, stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE, text=True, encoding="utf-8", errors="replace")
+    metadata["pid"] = proc.pid
+    (log_dir / "command.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
     lock = threading.Lock()
 
     def copy_stream(stream, name):

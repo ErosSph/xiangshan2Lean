@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_rtlil ./before.il; clk2fflogic -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_rtlil ./unconstrained.il; write_json ./unconstrained.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-exposure-7.3\\translation\\20261015T122812Z-e44833aa\\artifacts",
+  "started_at": "2026-10-15T12:28:12.612400+00:00",
+  "pid": 26528
+}

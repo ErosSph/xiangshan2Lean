@@ -1,0 +1,24 @@
+
+-- Running command `read_json /work/before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json /work/unconstrained.json' --
+
+1. Executing JSON frontend.
+Importing module Chisel2LeanReference from JSON tree.
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Replacing Chisel2LeanReference.$driver$HandshakeTop.chain_0.data ($dff): CLK=\clock, D=$HandshakeTop.chain_0.data$7, Q=\HandshakeTop.chain_1.io_in_bits
+Replacing Chisel2LeanReference.$driver$HandshakeTop.chain_0.valid ($dff): CLK=\clock, D=$HandshakeTop.chain_0.valid$5, Q=\HandshakeTop.chain_1.io_in_valid
+Replacing Chisel2LeanReference.$driver$HandshakeTop.chain_1.data ($dff): CLK=\clock, D=$HandshakeTop.chain_1.data$26, Q=\HandshakeTop.chain_2.io_in_bits
+Replacing Chisel2LeanReference.$driver$HandshakeTop.chain_1.valid ($dff): CLK=\clock, D=$HandshakeTop.chain_1.valid$24, Q=\HandshakeTop.chain_2.io_in_valid
+Replacing Chisel2LeanReference.$driver$HandshakeTop.chain_2.data ($dff): CLK=\clock, D=$HandshakeTop.chain_2.data$45, Q=\c2l_port_3
+Replacing Chisel2LeanReference.$driver$HandshakeTop.chain_2.valid ($dff): CLK=\clock, D=$HandshakeTop.chain_2.valid$43, Q=\c2l_port_5
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Chisel2LeanReference..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing JSON backend.

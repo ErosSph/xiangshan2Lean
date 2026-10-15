@@ -1,0 +1,4 @@
+
+-- Running command `read_json ./before.json; clk2fflogic -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json ./unconstrained.json' --
+
+1. Executing JSON frontend.

@@ -1,0 +1,18 @@
+
+-- Running command `read_rtlil ./unconstrained.il; script ./exposure.ys; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2' --
+
+1. Executing RTLIL frontend.
+Input filename: ./unconstrained.il
+
+-- Executing script file `./exposure.ys' --
+
+2. Executing EXPOSE pass (exposing internal signals as outputs).
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module ProjectTop...
+Found and reported 0 problems.
+
+4. Executing JSON backend.
+
+5. Executing Functional SMT Backend.
+Processing module `\ProjectTop`.

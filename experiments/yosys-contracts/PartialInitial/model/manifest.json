@@ -4,6 +4,9 @@
   "symbolic_parameters": false,
   "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\PartialInitial\\T.v",
   "source_sha256": "1ed5480a3234a38477cc63929a0b827b81bdf3f3be89c9e2a5febfff69dfd1a4",
+  "source_files_sha256": {
+    "design.v": "1ed5480a3234a38477cc63929a0b827b81bdf3f3be89c9e2a5febfff69dfd1a4"
+  },
   "lean_version": "4.19.0",
   "yosys_lock": {
     "packages": {
@@ -28,10 +31,10 @@
     "clock": "clock"
   },
   "nodes": 22,
-  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\PartialInitial\\translation\\20261014T115630Z-3a9e9cce",
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\PartialInitial\\translation\\20261015T085006Z-48f0d9b1",
   "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
-  "reader_sha256": "40b8037a95ca2ada61390463412bbda780d36883be7a34f557c82bd059023141",
-  "driver_sha256": "3c5f5e28e89849d076468f8a120f02cf27c7bbd0501a9aa566f03157a3f78373",
+  "reader_sha256": "8dc71a14b9d1f3803e509bb95f4249321b69f8d506f5cbff2218348f10846b49",
+  "driver_sha256": "78c1ce7e7c5e22a8ae312a633c1c76f5b51655c410ccf22d49bf4d919908156e",
   "artifact_sha256": {
     "before.json": "2b4d097e27477fdd8c504e72a97c16ba98b1a6fd62fb9e5d34b80ff8db2a82e6",
     "exposed.json": "f1461195b8078203d81c38a594f6ca703ed58d201c7800d2a75ce687d3028c24",

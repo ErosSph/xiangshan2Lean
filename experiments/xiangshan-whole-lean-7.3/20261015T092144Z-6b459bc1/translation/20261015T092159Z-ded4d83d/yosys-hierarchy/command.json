@@ -1,0 +1,13 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "-Q",
+    "-T",
+    "-p",
+    "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy -f /work/project.f --top XSTop; hierarchy -check -top XSTop; proc -noopt; opt_clean; memory_collect; tee -o /work/hierarchy-stat.json stat -json; write_rtlil /work/hierarchy.il"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T092144Z-6b459bc1\\translation\\20261015T092159Z-ded4d83d\\artifacts",
+  "started_at": "2026-10-15T09:23:06.197105+00:00",
+  "pid": 31944
+}

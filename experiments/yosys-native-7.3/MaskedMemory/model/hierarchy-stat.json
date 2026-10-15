@@ -1,0 +1,43 @@
+{
+   "creator": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\MaskedMemory": {
+         "num_wires":         23,
+         "num_wire_bits":     77,
+         "num_pub_wires":     11,
+         "num_pub_wire_bits": 37,
+         "num_ports":         11,
+         "num_port_bits":     37,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         13,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$logic_and": 4,
+            "$mem_v2": 1,
+            "$mux": 8
+         }
+      }
+   },
+      "design": {
+         "num_wires":         23,
+         "num_wire_bits":     77,
+         "num_pub_wires":     11,
+         "num_pub_wire_bits": 37,
+         "num_ports":         11,
+         "num_port_bits":     37,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         13,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$logic_and": 4,
+            "$mem_v2": 1,
+            "$mux": 8
+         }
+      }
+}
+

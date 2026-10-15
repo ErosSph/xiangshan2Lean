@@ -1,0 +1,11 @@
+cd \Clocks
+select -assert-none w:c2l_bridge_* c:c2l_bridge_*
+rename $auto$setundef.cc:550:execute$161 \c2l_bridge_undefined_0
+rename $auto$setundef.cc:550:execute$163 \c2l_bridge_undefined_1
+expose -evert -sep _ c:c2l_bridge_effect_* c:c2l_bridge_undefined_*
+rename \c2l_bridge_undefined_0_Y \c2l_undefined_0
+rename \c2l_bridge_undefined_1_Y \c2l_undefined_1
+delete w:c2l_bridge_effect_*_TRG
+clean_zerowidth
+cd ..
+select -clear

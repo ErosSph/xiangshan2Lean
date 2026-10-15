@@ -1,0 +1,35 @@
+
+-- Running command `read_rtlil ./hierarchy.il; hierarchy -check -top MaskedMemory; flatten MaskedMemory; hierarchy -check -top MaskedMemory; opt_clean; memory_collect; write_rtlil ./before.il; write_json ./before.json' --
+
+1. Executing RTLIL frontend.
+Input filename: ./hierarchy.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \MaskedMemory
+
+2.2. Analyzing design hierarchy..
+Top module:  \MaskedMemory
+Removed 0 unused modules.
+
+3. Executing FLATTEN pass (flatten design).
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \MaskedMemory
+
+4.2. Analyzing design hierarchy..
+Top module:  \MaskedMemory
+Removed 0 unused modules.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \MaskedMemory..
+
+6. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7. Executing RTLIL backend.
+Output filename: ./before.il
+
+8. Executing JSON backend.

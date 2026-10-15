@@ -1,0 +1,32 @@
+
+-- Running command `read_rtlil ./unconstrained.il; script ./exposure.ys; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2' --
+
+1. Executing RTLIL frontend.
+Input filename: ./unconstrained.il
+
+-- Executing script file `./exposure.ys' --
+Renaming cell $1 to c2l_bridge_effect_0 in module Stdio.
+Renaming cell $3 to c2l_bridge_effect_1 in module Stdio.
+
+2. Executing EXPOSE pass (exposing internal signals as outputs).
+New module port: Stdio/c2l_bridge_effect_1_ARGS ($print)
+New module port: Stdio/c2l_bridge_effect_1_TRG ($print)
+New module port: Stdio/c2l_bridge_effect_1_EN ($print)
+New module port: Stdio/c2l_bridge_effect_0_ARGS ($print)
+New module port: Stdio/c2l_bridge_effect_0_TRG ($print)
+New module port: Stdio/c2l_bridge_effect_0_EN ($print)
+Removing cell: Stdio/c2l_bridge_effect_1 ($print)
+Removing cell: Stdio/c2l_bridge_effect_0 ($print)
+Renaming wire c2l_bridge_effect_0_EN to c2l_effect_0_enable in module Stdio.
+Renaming wire c2l_bridge_effect_0_ARGS to c2l_effect_0_arguments in module Stdio.
+Renaming wire c2l_bridge_effect_1_EN to c2l_effect_1_enable in module Stdio.
+Renaming wire c2l_bridge_effect_1_ARGS to c2l_effect_1_arguments in module Stdio.
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module Stdio...
+Found and reported 0 problems.
+
+4. Executing JSON backend.
+
+5. Executing Functional SMT Backend.
+Processing module `\Stdio`.

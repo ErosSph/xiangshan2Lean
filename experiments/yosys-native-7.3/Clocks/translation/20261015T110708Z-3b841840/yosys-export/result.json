@@ -1,0 +1,16 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_json ./exposed.json; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-native-7.3\\Clocks\\translation\\20261015T110708Z-3b841840\\artifacts",
+  "started_at": "2026-10-15T11:07:12.017916+00:00",
+  "pid": 28320,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T11:07:12.862438+00:00"
+}

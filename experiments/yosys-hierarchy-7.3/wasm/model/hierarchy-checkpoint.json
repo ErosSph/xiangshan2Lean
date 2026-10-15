@@ -1,0 +1,30 @@
+{
+  "format": "chisel2lean-yosys-hierarchy-v1",
+  "identity": {
+    "top": "Nested",
+    "source_files_sha256": {
+      "design.v": "5d0e8a99701f86c48bff946a9a222661c5955e90d5a1da9a81f264209ad44be3"
+    },
+    "tool": {
+      "engine": "wasm",
+      "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f",
+      "yosys_version": "0.70"
+    },
+    "stdio_staged_sha256": {},
+    "pipeline": "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy; hierarchy -check; proc -noopt; opt_clean; memory_collect"
+  },
+  "rtlil": {
+    "name": "hierarchy.il",
+    "sha256": "4436ed7b9c1e86e97b62252bf22989dc88e48c000095bf842f4a67318b075143"
+  },
+  "producer": {
+    "command.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-hierarchy-7.3\\wasm\\translation\\20261015T114218Z-c4b5b9d5\\yosys-hierarchy\\command.json",
+      "sha256": "604a1d27e91da112c5e1e58a971bb1e8f0af999622ec2b20546f99156bb9fc1f"
+    },
+    "result.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-hierarchy-7.3\\wasm\\translation\\20261015T114218Z-c4b5b9d5\\yosys-hierarchy\\result.json",
+      "sha256": "7ad3b42166cdc8d5abb442e9090ff0a35399e3833c079ee6ecabf8779ed04d0a"
+    }
+  }
+}

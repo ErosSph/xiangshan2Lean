@@ -1,0 +1,29 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "Nested",
+    "--Mdir",
+    "obj_dir",
+    "Nested.sv",
+    "trace.cpp"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-hierarchy-7.3\\wasm",
+  "started_at": "2026-10-15T11:42:40.537870+00:00",
+  "pid": 35168,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T11:43:20.403133+00:00"
+}

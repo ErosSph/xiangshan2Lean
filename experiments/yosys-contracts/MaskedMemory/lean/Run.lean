@@ -40,6 +40,7 @@ def decodeState (j : Lean.Json) : Except String State := do
   if v16.size != 4 then throw "Memory initial state has wrong size"
   return { s0 := BitVec.ofInt 1 v0, s1 := BitVec.ofInt 1 v1, s2 := BitVec.ofInt 1 v2, s3 := BitVec.ofInt 1 v3, s4 := BitVec.ofInt 8 v4, s5 := BitVec.ofInt 8 v5, s6 := BitVec.ofInt 8 v6, s7 := BitVec.ofInt 8 v7, s8 := BitVec.ofInt 8 v8, s9 := BitVec.ofInt 2 v9, s10 := BitVec.ofInt 8 v10, s11 := BitVec.ofInt 2 v11, s12 := BitVec.ofInt 8 v12, s13 := BitVec.ofInt 2 v13, s14 := BitVec.ofInt 8 v14, s15 := BitVec.ofInt 2 v15, s16 := (fun address => BitVec.ofInt 8 (v16[address.toNat]!)) }
 def encodeOutputs (o : Outputs) : Lean.Json := Lean.Json.mkObj [("q", Lean.toJson o.o0.toNat)]
+
 def unwrap (r : Except String α) : IO α :=
   match r with
   | .ok x => pure x

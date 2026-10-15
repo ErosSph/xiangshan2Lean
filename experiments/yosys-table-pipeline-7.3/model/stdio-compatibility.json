@@ -1,0 +1,29 @@
+{
+  "format": "chisel2lean-stdio-compat-v1",
+  "files": {
+    "design.v": {
+      "original_sha256": "48d24b875d4c55bea6927db99de53e315ff9a049e530134968c27306a71db32b",
+      "staged_sha256": "ad1860d4c29c00ed49a517fbe928ff70d81f55c63373d14adb69ed498b84b62e",
+      "events": [
+        {
+          "marker": "__C2L_STDIO_48d24b875d4c55be_0__",
+          "file_descriptor": 2147483649,
+          "stream": "stdout",
+          "source": "design.v",
+          "line": 9,
+          "original_format_literal": "\"VALUE=%0d\\n\""
+        }
+      ]
+    }
+  },
+  "markers": {
+    "__C2L_STDIO_48d24b875d4c55be_0__": {
+      "marker": "__C2L_STDIO_48d24b875d4c55be_0__",
+      "file_descriptor": 2147483649,
+      "stream": "stdout",
+      "source": "design.v",
+      "line": 9,
+      "original_format_literal": "\"VALUE=%0d\\n\""
+    }
+  }
+}

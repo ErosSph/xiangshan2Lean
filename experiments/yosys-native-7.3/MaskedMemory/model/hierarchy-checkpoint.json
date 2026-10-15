@@ -1,0 +1,30 @@
+{
+  "format": "chisel2lean-yosys-hierarchy-v1",
+  "identity": {
+    "top": "MaskedMemory",
+    "source_files_sha256": {
+      "design.v": "32a01d7fd330dce9cd1ebb30e4e06e0af6070576262e27b1b8567d13da7638f2"
+    },
+    "tool": {
+      "engine": "native",
+      "archive_sha256": "580a1bbe938f4af861ff49e42944dc00933d61d087693e43c316023ea07f6e1e",
+      "yosys_version": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)"
+    },
+    "stdio_staged_sha256": {},
+    "pipeline": "read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy; hierarchy -check; proc -noopt; opt_clean; memory_collect"
+  },
+  "rtlil": {
+    "name": "hierarchy.il",
+    "sha256": "3597fcddb75488fd91c4fac833c5bbe99f5a67b06ed326af9cdb718ebf0b1ff2"
+  },
+  "producer": {
+    "command.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-native-7.3\\MaskedMemory\\translation\\20261015T133652Z-e40177e9\\yosys-hierarchy\\command.json",
+      "sha256": "d140b9bcbf0532a25787b748645f26b116807a7f66aa220c07d108c5e4fd4187"
+    },
+    "result.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-native-7.3\\MaskedMemory\\translation\\20261015T133652Z-e40177e9\\yosys-hierarchy\\result.json",
+      "sha256": "01c4a600af0dda7b8abf15770091a71c67d8f5777e0f5f9b3d5a157d5ebf4332"
+    }
+  }
+}

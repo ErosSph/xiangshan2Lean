@@ -1,0 +1,15 @@
+{
+  "format": "xiangshan-whole-lean-v1",
+  "config": "DefaultConfig",
+  "cores": 1,
+  "top": "XSTop",
+  "source_package": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T091642Z-d10a247f\\source-package.json",
+  "lowering": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\lowering-immediate\\summary.json",
+  "status": "REQUIRES_SUPPORT",
+  "rtl_units_and_headers": 982,
+  "lean_compilation": "FAIL",
+  "top_level_differential": "NOT_RUN",
+  "universal_equivalence": "NOT_PROVED",
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T091642Z-d10a247f",
+  "diagnostic": "Yosys RTL normalization failed; see E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T091642Z-d10a247f\\translation\\20261015T091646Z-fb5b02a2\\yosys-prepare"
+}

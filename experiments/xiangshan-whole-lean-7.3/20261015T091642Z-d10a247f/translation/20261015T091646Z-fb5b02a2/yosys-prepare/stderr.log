@@ -1,0 +1,8 @@
+ERROR: Expected to find parameter \A_SIGNED in internal cell \XSTop.$1695991 ($or) at /workspace/YoWASP/yosys/yosys-src/kernel/rtlil.cc:1624:
+  cell $or $1695991
+    parameter \A_WIDTH 1
+    parameter \B_WIDTH 1
+    connect \A \core_with_l2.core.ctrlBlock.ssit._GEN_145
+    connect \B $1689850y
+  end
+

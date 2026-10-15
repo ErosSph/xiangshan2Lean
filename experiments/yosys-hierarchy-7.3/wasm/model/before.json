@@ -1,0 +1,755 @@
+{
+  "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+  "modules": {
+    "Nested": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "work/design.v:11.8"
+      },
+      "ports": {
+        "a": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        "b": {
+          "direction": "output",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "clock": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "en": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "d": {
+          "direction": "input",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ]
+        }
+      },
+      "cells": {
+        "$0": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "work/design.v:12.52-12.55"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "B": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+            "Y": [ 29, 30, 31, 32, 33, 34, 35, 36 ]
+          }
+        },
+        "$1": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "work/design.v:13.53-13.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+            "Y": [ 37, 38, 39, 40, 41, 42, 43, 44 ]
+          }
+        },
+        "$flatten\\left.middle.leaf.$1": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "work/design.v:3.56-3.59"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 29, 30, 31, 32, 33, 34, 35, 36, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76 ]
+          }
+        },
+        "$flatten\\left.middle.leaf.$driver$q": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "work/design.v:3.1"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 19 ],
+            "D": [ 77, 78, 79, 80, 81, 82, 83, 84 ],
+            "Q": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+          }
+        },
+        "$flatten\\left.middle.leaf.$procmux$10": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "work/design.v:3.53-3.60|work/design.v:3.46-3.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ 45, 46, 47, 48, 49, 50, 51, 52 ],
+            "S": [ 20 ],
+            "Y": [ 85, 86, 87, 88, 89, 90, 91, 92 ]
+          }
+        },
+        "$flatten\\left.middle.leaf.$procmux$13": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "work/design.v:3.35-3.40|work/design.v:3.25-3.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 85, 86, 87, 88, 89, 90, 91, 92 ],
+            "B": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "S": [ 18 ],
+            "Y": [ 93, 94, 95, 96, 97, 98, 99, 100 ]
+          }
+        },
+        "$flatten\\left.middle.leaf.$procmux$17": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "work/design.v:3.35-3.40|work/design.v:3.25-3.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 93, 94, 95, 96, 97, 98, 99, 100 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 18 ],
+            "Y": [ 77, 78, 79, 80, 81, 82, 83, 84 ]
+          }
+        },
+        "$flatten\\right.middle.leaf.$1": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000100000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "work/design.v:3.56-3.59"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 38, 39, 40, 41, 42, 43, 44, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132 ]
+          }
+        },
+        "$flatten\\right.middle.leaf.$driver$q": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "work/design.v:3.1"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 19 ],
+            "D": [ 133, 134, 135, 136, 137, 138, 139, 140 ],
+            "Q": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+          }
+        },
+        "$flatten\\right.middle.leaf.$procmux$1": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "work/design.v:3.53-3.60|work/design.v:3.46-3.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "B": [ 101, 102, 103, 104, 105, 106, 107, 108 ],
+            "S": [ 20 ],
+            "Y": [ 141, 142, 143, 144, 145, 146, 147, 148 ]
+          }
+        },
+        "$flatten\\right.middle.leaf.$procmux$4": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "work/design.v:3.35-3.40|work/design.v:3.25-3.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 141, 142, 143, 144, 145, 146, 147, 148 ],
+            "B": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "S": [ 18 ],
+            "Y": [ 149, 150, 151, 152, 153, 154, 155, 156 ]
+          }
+        },
+        "$flatten\\right.middle.leaf.$procmux$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "work/design.v:3.35-3.40|work/design.v:3.25-3.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 149, 150, 151, 152, 153, 154, 155, 156 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 18 ],
+            "Y": [ 133, 134, 135, 136, 137, 138, 139, 140 ]
+          }
+        },
+        "left": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_src": "work/design.v:12.8",
+            "hdlname": "left",
+            "module": "Branch$Nested.left",
+            "module_src": "work/design.v:8.8"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "left.middle": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_src": "work/design.v:9.8",
+            "hdlname": "left middle",
+            "module": "Middle$Nested.left.middle",
+            "module_src": "work/design.v:5.8"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "left.middle.leaf": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_src": "work/design.v:6.6",
+            "hdlname": "left middle leaf",
+            "module": "Leaf$Nested.left.middle.leaf",
+            "module_src": "work/design.v:1.8"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "right": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_src": "work/design.v:13.8",
+            "hdlname": "right",
+            "module": "Branch$Nested.right",
+            "module_src": "work/design.v:8.8"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "right.middle": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_src": "work/design.v:9.8",
+            "hdlname": "right middle",
+            "module": "Middle$Nested.right.middle",
+            "module_src": "work/design.v:5.8"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "right.middle.leaf": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_src": "work/design.v:6.6",
+            "hdlname": "right middle leaf",
+            "module": "Leaf$Nested.right.middle.leaf",
+            "module_src": "work/design.v:1.8"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        }
+      },
+      "netnames": {
+        "$flatten\\left.middle.leaf.$1y": {
+          "hide_name": 1,
+          "bits": [ 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\left.middle.leaf.$procmux$10_Y": {
+          "hide_name": 1,
+          "bits": [ 85, 86, 87, 88, 89, 90, 91, 92 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\left.middle.leaf.$procmux$13_Y": {
+          "hide_name": 1,
+          "bits": [ 93, 94, 95, 96, 97, 98, 99, 100 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\left.middle.leaf.$procmux$17_Y": {
+          "hide_name": 1,
+          "bits": [ 77, 78, 79, 80, 81, 82, 83, 84 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\right.middle.leaf.$1y": {
+          "hide_name": 1,
+          "bits": [ 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\right.middle.leaf.$procmux$1_Y": {
+          "hide_name": 1,
+          "bits": [ 141, 142, 143, 144, 145, 146, 147, 148 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\right.middle.leaf.$procmux$4_Y": {
+          "hide_name": 1,
+          "bits": [ 149, 150, 151, 152, 153, 154, 155, 156 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\right.middle.leaf.$procmux$8_Y": {
+          "hide_name": 1,
+          "bits": [ 133, 134, 135, 136, 137, 138, 139, 140 ],
+          "attributes": {
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "hdlname": "a",
+            "src": "work/design.v:11.63"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "hdlname": "b",
+            "src": "work/design.v:11.65"
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "clock",
+            "src": "work/design.v:11.21"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+          "attributes": {
+            "hdlname": "d",
+            "src": "work/design.v:11.48"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "hdlname": "en",
+            "src": "work/design.v:11.33"
+          }
+        },
+        "left.clock": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "left clock",
+            "src": "work/design.v:8.21"
+          }
+        },
+        "left.d": {
+          "hide_name": 0,
+          "bits": [ 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+            "hdlname": "left d",
+            "src": "work/design.v:8.48"
+          }
+        },
+        "left.en": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "hdlname": "left en",
+            "src": "work/design.v:8.33"
+          }
+        },
+        "left.middle.clock": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "left middle clock",
+            "src": "work/design.v:5.21"
+          }
+        },
+        "left.middle.d": {
+          "hide_name": 0,
+          "bits": [ 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+            "hdlname": "left middle d",
+            "src": "work/design.v:5.48"
+          }
+        },
+        "left.middle.en": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "hdlname": "left middle en",
+            "src": "work/design.v:5.33"
+          }
+        },
+        "left.middle.leaf.clock": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "left middle leaf clock",
+            "src": "work/design.v:1.19"
+          }
+        },
+        "left.middle.leaf.d": {
+          "hide_name": 0,
+          "bits": [ 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+            "hdlname": "left middle leaf d",
+            "src": "work/design.v:1.46"
+          }
+        },
+        "left.middle.leaf.en": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "hdlname": "left middle leaf en",
+            "src": "work/design.v:1.31"
+          }
+        },
+        "left.middle.leaf.q": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "hdlname": "left middle leaf q",
+            "init": "00000000",
+            "src": "work/design.v:1.65"
+          }
+        },
+        "left.middle.leaf.reset": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "hdlname": "left middle leaf reset",
+            "src": "work/design.v:1.25"
+          }
+        },
+        "left.middle.q": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "hdlname": "left middle q",
+            "src": "work/design.v:5.63"
+          }
+        },
+        "left.middle.reset": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "hdlname": "left middle reset",
+            "src": "work/design.v:5.27"
+          }
+        },
+        "left.q": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "hdlname": "left q",
+            "src": "work/design.v:8.63"
+          }
+        },
+        "left.reset": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "hdlname": "left reset",
+            "src": "work/design.v:8.27"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "hdlname": "reset",
+            "src": "work/design.v:11.27"
+          }
+        },
+        "right.clock": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "right clock",
+            "src": "work/design.v:8.21"
+          }
+        },
+        "right.d": {
+          "hide_name": 0,
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44 ],
+          "attributes": {
+            "hdlname": "right d",
+            "src": "work/design.v:8.48"
+          }
+        },
+        "right.en": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "hdlname": "right en",
+            "src": "work/design.v:8.33"
+          }
+        },
+        "right.middle.clock": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "right middle clock",
+            "src": "work/design.v:5.21"
+          }
+        },
+        "right.middle.d": {
+          "hide_name": 0,
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44 ],
+          "attributes": {
+            "hdlname": "right middle d",
+            "src": "work/design.v:5.48"
+          }
+        },
+        "right.middle.en": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "hdlname": "right middle en",
+            "src": "work/design.v:5.33"
+          }
+        },
+        "right.middle.leaf.clock": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "right middle leaf clock",
+            "src": "work/design.v:1.19"
+          }
+        },
+        "right.middle.leaf.d": {
+          "hide_name": 0,
+          "bits": [ 37, 38, 39, 40, 41, 42, 43, 44 ],
+          "attributes": {
+            "hdlname": "right middle leaf d",
+            "src": "work/design.v:1.46"
+          }
+        },
+        "right.middle.leaf.en": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "hdlname": "right middle leaf en",
+            "src": "work/design.v:1.31"
+          }
+        },
+        "right.middle.leaf.q": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "hdlname": "right middle leaf q",
+            "init": "00000000",
+            "src": "work/design.v:1.65"
+          }
+        },
+        "right.middle.leaf.reset": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "hdlname": "right middle leaf reset",
+            "src": "work/design.v:1.25"
+          }
+        },
+        "right.middle.q": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "hdlname": "right middle q",
+            "src": "work/design.v:5.63"
+          }
+        },
+        "right.middle.reset": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "hdlname": "right middle reset",
+            "src": "work/design.v:5.27"
+          }
+        },
+        "right.q": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "hdlname": "right q",
+            "src": "work/design.v:8.63"
+          }
+        },
+        "right.reset": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "hdlname": "right reset",
+            "src": "work/design.v:8.27"
+          }
+        }
+      }
+    }
+  }
+}

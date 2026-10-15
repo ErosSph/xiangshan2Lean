@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "output_comparisons": 96,
+  "events": {
+    "stdout": 32,
+    "stderr": 32
+  },
+  "original_rtl_sha256": "a2dc100d9c6eeca43843d5b7ecb4d2e83305ac5c5de6575336cca33c554e60c5",
+  "original_rtl_modified": false,
+  "dynamic_descriptor_rejected": true,
+  "scope": "Fixed standard-stream $fwrite with literal format; original Verilator output streams and pre-NBA arguments compared with Lean events. No arbitrary files, DPI or generic system-task support."
+}

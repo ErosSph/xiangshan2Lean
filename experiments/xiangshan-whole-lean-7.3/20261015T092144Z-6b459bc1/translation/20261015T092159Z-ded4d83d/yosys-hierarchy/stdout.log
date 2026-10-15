@@ -1,0 +1,48 @@
+
+-- Running command `read_slang --threads 1 --no-proc --no-synthesis-define --no-default-translate-off-format --keep-hierarchy -f /work/project.f --top XSTop; hierarchy -check -top XSTop; proc -noopt; opt_clean; memory_collect; tee -o /work/hierarchy-stat.json stat -json; write_rtlil /work/hierarchy.il' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    XSTop
+
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\system\\SoC.scala:293:9
+          ^~~~~
+      if (reset)        // \\.cache\\xiangshan-dependencies-7.3\\utility\\src\\main\\scala\\utility\\IntBuffer.scala:13:25
+          ^~~~~
+      if (reset)        // \\.cache\\xiangshan-dependencies-7.3\\utility\\src\\main\\scala\\utility\\IntBuffer.scala:13:25
+          ^~~~~
+      if (reset)        // \\.cache\\xiangshan-dependencies-7.3\\utility\\src\\main\\scala\\utility\\ResetGen.scala:28:7
+          ^~~~~
+      if (reset)        // \\.cache\\xiangshan-dependencies-7.3\\utility\\src\\main\\scala\\utility\\ResetGen.scala:28:7
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\Xbar.scala:71:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\Xbar.scala:71:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\Xbar.scala:71:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\Xbar.scala:71:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\Xbar.scala:71:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\CacheCork.scala:34:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\WidthWidget.scala:22:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\amba\\axi4\\Deinterleaver.scala:44:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\ToAXI4.scala:96:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\SourceShrinker.scala:35:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\ToAXI4.scala:96:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\devices\\tilelink\\Error.scala:18:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\tilelink\\FIFOFixer.scala:44:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\amba\\axi4\\ToTL.scala:73:9
+          ^~~~~
+      if (reset) begin  // \\.cache\\xiangshan-dependencies-7.3\\rocket\\src\\main\\scala\\amba\\axi4\\Fragmenter.scala:33:9
+          ^~~~~
+<suppressed ~450275 debug messages>

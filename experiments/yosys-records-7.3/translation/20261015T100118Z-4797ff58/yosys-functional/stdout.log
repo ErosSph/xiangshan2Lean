@@ -1,0 +1,178 @@
+
+-- Running command `read_json /work/before.json; clk2fflogic -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json /work/unconstrained.json' --
+
+1. Executing JSON frontend.
+Importing module Many from JSON tree.
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Replacing Many.$driver$q0 ($dff): CLK=\clock, D=$procmux$1757_Y, Q=\q0
+Replacing Many.$driver$q1 ($dff): CLK=\clock, D=$procmux$1746_Y, Q=\q1
+Replacing Many.$driver$q10 ($dff): CLK=\clock, D=$procmux$1647_Y, Q=\q10
+Replacing Many.$driver$q100 ($dff): CLK=\clock, D=$procmux$657_Y, Q=\q100
+Replacing Many.$driver$q101 ($dff): CLK=\clock, D=$procmux$646_Y, Q=\q101
+Replacing Many.$driver$q102 ($dff): CLK=\clock, D=$procmux$635_Y, Q=\q102
+Replacing Many.$driver$q103 ($dff): CLK=\clock, D=$procmux$624_Y, Q=\q103
+Replacing Many.$driver$q104 ($dff): CLK=\clock, D=$procmux$613_Y, Q=\q104
+Replacing Many.$driver$q105 ($dff): CLK=\clock, D=$procmux$602_Y, Q=\q105
+Replacing Many.$driver$q106 ($dff): CLK=\clock, D=$procmux$591_Y, Q=\q106
+Replacing Many.$driver$q107 ($dff): CLK=\clock, D=$procmux$580_Y, Q=\q107
+Replacing Many.$driver$q108 ($dff): CLK=\clock, D=$procmux$569_Y, Q=\q108
+Replacing Many.$driver$q109 ($dff): CLK=\clock, D=$procmux$558_Y, Q=\q109
+Replacing Many.$driver$q11 ($dff): CLK=\clock, D=$procmux$1636_Y, Q=\q11
+Replacing Many.$driver$q110 ($dff): CLK=\clock, D=$procmux$547_Y, Q=\q110
+Replacing Many.$driver$q111 ($dff): CLK=\clock, D=$procmux$536_Y, Q=\q111
+Replacing Many.$driver$q112 ($dff): CLK=\clock, D=$procmux$525_Y, Q=\q112
+Replacing Many.$driver$q113 ($dff): CLK=\clock, D=$procmux$514_Y, Q=\q113
+Replacing Many.$driver$q114 ($dff): CLK=\clock, D=$procmux$503_Y, Q=\q114
+Replacing Many.$driver$q115 ($dff): CLK=\clock, D=$procmux$492_Y, Q=\q115
+Replacing Many.$driver$q116 ($dff): CLK=\clock, D=$procmux$481_Y, Q=\q116
+Replacing Many.$driver$q117 ($dff): CLK=\clock, D=$procmux$470_Y, Q=\q117
+Replacing Many.$driver$q118 ($dff): CLK=\clock, D=$procmux$459_Y, Q=\q118
+Replacing Many.$driver$q119 ($dff): CLK=\clock, D=$procmux$448_Y, Q=\q119
+Replacing Many.$driver$q12 ($dff): CLK=\clock, D=$procmux$1625_Y, Q=\q12
+Replacing Many.$driver$q120 ($dff): CLK=\clock, D=$procmux$437_Y, Q=\q120
+Replacing Many.$driver$q121 ($dff): CLK=\clock, D=$procmux$426_Y, Q=\q121
+Replacing Many.$driver$q122 ($dff): CLK=\clock, D=$procmux$415_Y, Q=\q122
+Replacing Many.$driver$q123 ($dff): CLK=\clock, D=$procmux$404_Y, Q=\q123
+Replacing Many.$driver$q124 ($dff): CLK=\clock, D=$procmux$393_Y, Q=\q124
+Replacing Many.$driver$q125 ($dff): CLK=\clock, D=$procmux$382_Y, Q=\q125
+Replacing Many.$driver$q126 ($dff): CLK=\clock, D=$procmux$371_Y, Q=\q126
+Replacing Many.$driver$q127 ($dff): CLK=\clock, D=$procmux$360_Y, Q=\q127
+Replacing Many.$driver$q128 ($dff): CLK=\clock, D=$procmux$349_Y, Q=\q128
+Replacing Many.$driver$q129 ($dff): CLK=\clock, D=$procmux$338_Y, Q=\q129
+Replacing Many.$driver$q13 ($dff): CLK=\clock, D=$procmux$1614_Y, Q=\q13
+Replacing Many.$driver$q130 ($dff): CLK=\clock, D=$procmux$327_Y, Q=\q130
+Replacing Many.$driver$q131 ($dff): CLK=\clock, D=$procmux$316_Y, Q=\q131
+Replacing Many.$driver$q132 ($dff): CLK=\clock, D=$procmux$305_Y, Q=\q132
+Replacing Many.$driver$q133 ($dff): CLK=\clock, D=$procmux$294_Y, Q=\q133
+Replacing Many.$driver$q134 ($dff): CLK=\clock, D=$procmux$283_Y, Q=\q134
+Replacing Many.$driver$q135 ($dff): CLK=\clock, D=$procmux$272_Y, Q=\q135
+Replacing Many.$driver$q136 ($dff): CLK=\clock, D=$procmux$261_Y, Q=\q136
+Replacing Many.$driver$q137 ($dff): CLK=\clock, D=$procmux$250_Y, Q=\q137
+Replacing Many.$driver$q138 ($dff): CLK=\clock, D=$procmux$239_Y, Q=\q138
+Replacing Many.$driver$q139 ($dff): CLK=\clock, D=$procmux$228_Y, Q=\q139
+Replacing Many.$driver$q14 ($dff): CLK=\clock, D=$procmux$1603_Y, Q=\q14
+Replacing Many.$driver$q140 ($dff): CLK=\clock, D=$procmux$217_Y, Q=\q140
+Replacing Many.$driver$q141 ($dff): CLK=\clock, D=$procmux$206_Y, Q=\q141
+Replacing Many.$driver$q142 ($dff): CLK=\clock, D=$procmux$195_Y, Q=\q142
+Replacing Many.$driver$q143 ($dff): CLK=\clock, D=$procmux$184_Y, Q=\q143
+Replacing Many.$driver$q144 ($dff): CLK=\clock, D=$procmux$173_Y, Q=\q144
+Replacing Many.$driver$q145 ($dff): CLK=\clock, D=$procmux$162_Y, Q=\q145
+Replacing Many.$driver$q146 ($dff): CLK=\clock, D=$procmux$151_Y, Q=\q146
+Replacing Many.$driver$q147 ($dff): CLK=\clock, D=$procmux$140_Y, Q=\q147
+Replacing Many.$driver$q148 ($dff): CLK=\clock, D=$procmux$129_Y, Q=\q148
+Replacing Many.$driver$q149 ($dff): CLK=\clock, D=$procmux$118_Y, Q=\q149
+Replacing Many.$driver$q15 ($dff): CLK=\clock, D=$procmux$1592_Y, Q=\q15
+Replacing Many.$driver$q150 ($dff): CLK=\clock, D=$procmux$107_Y, Q=\q150
+Replacing Many.$driver$q151 ($dff): CLK=\clock, D=$procmux$96_Y, Q=\q151
+Replacing Many.$driver$q152 ($dff): CLK=\clock, D=$procmux$85_Y, Q=\q152
+Replacing Many.$driver$q153 ($dff): CLK=\clock, D=$procmux$74_Y, Q=\q153
+Replacing Many.$driver$q154 ($dff): CLK=\clock, D=$procmux$63_Y, Q=\q154
+Replacing Many.$driver$q155 ($dff): CLK=\clock, D=$procmux$52_Y, Q=\q155
+Replacing Many.$driver$q156 ($dff): CLK=\clock, D=$procmux$41_Y, Q=\q156
+Replacing Many.$driver$q157 ($dff): CLK=\clock, D=$procmux$30_Y, Q=\q157
+Replacing Many.$driver$q158 ($dff): CLK=\clock, D=$procmux$19_Y, Q=\q158
+Replacing Many.$driver$q159 ($dff): CLK=\clock, D=$procmux$8_Y, Q=\q159
+Replacing Many.$driver$q16 ($dff): CLK=\clock, D=$procmux$1581_Y, Q=\q16
+Replacing Many.$driver$q17 ($dff): CLK=\clock, D=$procmux$1570_Y, Q=\q17
+Replacing Many.$driver$q18 ($dff): CLK=\clock, D=$procmux$1559_Y, Q=\q18
+Replacing Many.$driver$q19 ($dff): CLK=\clock, D=$procmux$1548_Y, Q=\q19
+Replacing Many.$driver$q2 ($dff): CLK=\clock, D=$procmux$1735_Y, Q=\q2
+Replacing Many.$driver$q20 ($dff): CLK=\clock, D=$procmux$1537_Y, Q=\q20
+Replacing Many.$driver$q21 ($dff): CLK=\clock, D=$procmux$1526_Y, Q=\q21
+Replacing Many.$driver$q22 ($dff): CLK=\clock, D=$procmux$1515_Y, Q=\q22
+Replacing Many.$driver$q23 ($dff): CLK=\clock, D=$procmux$1504_Y, Q=\q23
+Replacing Many.$driver$q24 ($dff): CLK=\clock, D=$procmux$1493_Y, Q=\q24
+Replacing Many.$driver$q25 ($dff): CLK=\clock, D=$procmux$1482_Y, Q=\q25
+Replacing Many.$driver$q26 ($dff): CLK=\clock, D=$procmux$1471_Y, Q=\q26
+Replacing Many.$driver$q27 ($dff): CLK=\clock, D=$procmux$1460_Y, Q=\q27
+Replacing Many.$driver$q28 ($dff): CLK=\clock, D=$procmux$1449_Y, Q=\q28
+Replacing Many.$driver$q29 ($dff): CLK=\clock, D=$procmux$1438_Y, Q=\q29
+Replacing Many.$driver$q3 ($dff): CLK=\clock, D=$procmux$1724_Y, Q=\q3
+Replacing Many.$driver$q30 ($dff): CLK=\clock, D=$procmux$1427_Y, Q=\q30
+Replacing Many.$driver$q31 ($dff): CLK=\clock, D=$procmux$1416_Y, Q=\q31
+Replacing Many.$driver$q32 ($dff): CLK=\clock, D=$procmux$1405_Y, Q=\q32
+Replacing Many.$driver$q33 ($dff): CLK=\clock, D=$procmux$1394_Y, Q=\q33
+Replacing Many.$driver$q34 ($dff): CLK=\clock, D=$procmux$1383_Y, Q=\q34
+Replacing Many.$driver$q35 ($dff): CLK=\clock, D=$procmux$1372_Y, Q=\q35
+Replacing Many.$driver$q36 ($dff): CLK=\clock, D=$procmux$1361_Y, Q=\q36
+Replacing Many.$driver$q37 ($dff): CLK=\clock, D=$procmux$1350_Y, Q=\q37
+Replacing Many.$driver$q38 ($dff): CLK=\clock, D=$procmux$1339_Y, Q=\q38
+Replacing Many.$driver$q39 ($dff): CLK=\clock, D=$procmux$1328_Y, Q=\q39
+Replacing Many.$driver$q4 ($dff): CLK=\clock, D=$procmux$1713_Y, Q=\q4
+Replacing Many.$driver$q40 ($dff): CLK=\clock, D=$procmux$1317_Y, Q=\q40
+Replacing Many.$driver$q41 ($dff): CLK=\clock, D=$procmux$1306_Y, Q=\q41
+Replacing Many.$driver$q42 ($dff): CLK=\clock, D=$procmux$1295_Y, Q=\q42
+Replacing Many.$driver$q43 ($dff): CLK=\clock, D=$procmux$1284_Y, Q=\q43
+Replacing Many.$driver$q44 ($dff): CLK=\clock, D=$procmux$1273_Y, Q=\q44
+Replacing Many.$driver$q45 ($dff): CLK=\clock, D=$procmux$1262_Y, Q=\q45
+Replacing Many.$driver$q46 ($dff): CLK=\clock, D=$procmux$1251_Y, Q=\q46
+Replacing Many.$driver$q47 ($dff): CLK=\clock, D=$procmux$1240_Y, Q=\q47
+Replacing Many.$driver$q48 ($dff): CLK=\clock, D=$procmux$1229_Y, Q=\q48
+Replacing Many.$driver$q49 ($dff): CLK=\clock, D=$procmux$1218_Y, Q=\q49
+Replacing Many.$driver$q5 ($dff): CLK=\clock, D=$procmux$1702_Y, Q=\q5
+Replacing Many.$driver$q50 ($dff): CLK=\clock, D=$procmux$1207_Y, Q=\q50
+Replacing Many.$driver$q51 ($dff): CLK=\clock, D=$procmux$1196_Y, Q=\q51
+Replacing Many.$driver$q52 ($dff): CLK=\clock, D=$procmux$1185_Y, Q=\q52
+Replacing Many.$driver$q53 ($dff): CLK=\clock, D=$procmux$1174_Y, Q=\q53
+Replacing Many.$driver$q54 ($dff): CLK=\clock, D=$procmux$1163_Y, Q=\q54
+Replacing Many.$driver$q55 ($dff): CLK=\clock, D=$procmux$1152_Y, Q=\q55
+Replacing Many.$driver$q56 ($dff): CLK=\clock, D=$procmux$1141_Y, Q=\q56
+Replacing Many.$driver$q57 ($dff): CLK=\clock, D=$procmux$1130_Y, Q=\q57
+Replacing Many.$driver$q58 ($dff): CLK=\clock, D=$procmux$1119_Y, Q=\q58
+Replacing Many.$driver$q59 ($dff): CLK=\clock, D=$procmux$1108_Y, Q=\q59
+Replacing Many.$driver$q6 ($dff): CLK=\clock, D=$procmux$1691_Y, Q=\q6
+Replacing Many.$driver$q60 ($dff): CLK=\clock, D=$procmux$1097_Y, Q=\q60
+Replacing Many.$driver$q61 ($dff): CLK=\clock, D=$procmux$1086_Y, Q=\q61
+Replacing Many.$driver$q62 ($dff): CLK=\clock, D=$procmux$1075_Y, Q=\q62
+Replacing Many.$driver$q63 ($dff): CLK=\clock, D=$procmux$1064_Y, Q=\q63
+Replacing Many.$driver$q64 ($dff): CLK=\clock, D=$procmux$1053_Y, Q=\q64
+Replacing Many.$driver$q65 ($dff): CLK=\clock, D=$procmux$1042_Y, Q=\q65
+Replacing Many.$driver$q66 ($dff): CLK=\clock, D=$procmux$1031_Y, Q=\q66
+Replacing Many.$driver$q67 ($dff): CLK=\clock, D=$procmux$1020_Y, Q=\q67
+Replacing Many.$driver$q68 ($dff): CLK=\clock, D=$procmux$1009_Y, Q=\q68
+Replacing Many.$driver$q69 ($dff): CLK=\clock, D=$procmux$998_Y, Q=\q69
+Replacing Many.$driver$q7 ($dff): CLK=\clock, D=$procmux$1680_Y, Q=\q7
+Replacing Many.$driver$q70 ($dff): CLK=\clock, D=$procmux$987_Y, Q=\q70
+Replacing Many.$driver$q71 ($dff): CLK=\clock, D=$procmux$976_Y, Q=\q71
+Replacing Many.$driver$q72 ($dff): CLK=\clock, D=$procmux$965_Y, Q=\q72
+Replacing Many.$driver$q73 ($dff): CLK=\clock, D=$procmux$954_Y, Q=\q73
+Replacing Many.$driver$q74 ($dff): CLK=\clock, D=$procmux$943_Y, Q=\q74
+Replacing Many.$driver$q75 ($dff): CLK=\clock, D=$procmux$932_Y, Q=\q75
+Replacing Many.$driver$q76 ($dff): CLK=\clock, D=$procmux$921_Y, Q=\q76
+Replacing Many.$driver$q77 ($dff): CLK=\clock, D=$procmux$910_Y, Q=\q77
+Replacing Many.$driver$q78 ($dff): CLK=\clock, D=$procmux$899_Y, Q=\q78
+Replacing Many.$driver$q79 ($dff): CLK=\clock, D=$procmux$888_Y, Q=\q79
+Replacing Many.$driver$q8 ($dff): CLK=\clock, D=$procmux$1669_Y, Q=\q8
+Replacing Many.$driver$q80 ($dff): CLK=\clock, D=$procmux$877_Y, Q=\q80
+Replacing Many.$driver$q81 ($dff): CLK=\clock, D=$procmux$866_Y, Q=\q81
+Replacing Many.$driver$q82 ($dff): CLK=\clock, D=$procmux$855_Y, Q=\q82
+Replacing Many.$driver$q83 ($dff): CLK=\clock, D=$procmux$844_Y, Q=\q83
+Replacing Many.$driver$q84 ($dff): CLK=\clock, D=$procmux$833_Y, Q=\q84
+Replacing Many.$driver$q85 ($dff): CLK=\clock, D=$procmux$822_Y, Q=\q85
+Replacing Many.$driver$q86 ($dff): CLK=\clock, D=$procmux$811_Y, Q=\q86
+Replacing Many.$driver$q87 ($dff): CLK=\clock, D=$procmux$800_Y, Q=\q87
+Replacing Many.$driver$q88 ($dff): CLK=\clock, D=$procmux$789_Y, Q=\q88
+Replacing Many.$driver$q89 ($dff): CLK=\clock, D=$procmux$778_Y, Q=\q89
+Replacing Many.$driver$q9 ($dff): CLK=\clock, D=$procmux$1658_Y, Q=\q9
+Replacing Many.$driver$q90 ($dff): CLK=\clock, D=$procmux$767_Y, Q=\q90
+Replacing Many.$driver$q91 ($dff): CLK=\clock, D=$procmux$756_Y, Q=\q91
+Replacing Many.$driver$q92 ($dff): CLK=\clock, D=$procmux$745_Y, Q=\q92
+Replacing Many.$driver$q93 ($dff): CLK=\clock, D=$procmux$734_Y, Q=\q93
+Replacing Many.$driver$q94 ($dff): CLK=\clock, D=$procmux$723_Y, Q=\q94
+Replacing Many.$driver$q95 ($dff): CLK=\clock, D=$procmux$712_Y, Q=\q95
+Replacing Many.$driver$q96 ($dff): CLK=\clock, D=$procmux$701_Y, Q=\q96
+Replacing Many.$driver$q97 ($dff): CLK=\clock, D=$procmux$690_Y, Q=\q97
+Replacing Many.$driver$q98 ($dff): CLK=\clock, D=$procmux$679_Y, Q=\q98
+Replacing Many.$driver$q99 ($dff): CLK=\clock, D=$procmux$668_Y, Q=\q99
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Many..
+Removed 480 unused cells and 640 unused wires.
+<suppressed ~481 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing JSON backend.

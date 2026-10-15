@@ -1,0 +1,49 @@
+{
+   "creator": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\Clocks": {
+         "num_wires":         19,
+         "num_wire_bits":     82,
+         "num_pub_wires":     14,
+         "num_pub_wire_bits": 63,
+         "num_ports":         12,
+         "num_port_bits":     61,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         20,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$aldff": 1,
+            "$and": 1,
+            "$dff": 4,
+            "$dlatch": 9,
+            "$logic_not": 1,
+            "$mux": 4
+         }
+      }
+   },
+      "design": {
+         "num_wires":         19,
+         "num_wire_bits":     82,
+         "num_pub_wires":     14,
+         "num_pub_wire_bits": 63,
+         "num_ports":         12,
+         "num_port_bits":     61,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         20,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$aldff": 1,
+            "$and": 1,
+            "$dff": 4,
+            "$dlatch": 9,
+            "$logic_not": 1,
+            "$mux": 4
+         }
+      }
+}
+

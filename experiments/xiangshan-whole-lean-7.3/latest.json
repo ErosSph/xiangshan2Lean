@@ -1,0 +1,18 @@
+{
+  "format": "xiangshan-whole-lean-v1",
+  "config": "DefaultConfig",
+  "cores": 1,
+  "yosys_engine": "native",
+  "initialization_profile": "caller-state",
+  "stdio_compatibility": "Fixed standard-stream $fwrite preserved as observations; original RTL retained.",
+  "top": "XSTop",
+  "source_package": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T150559Z-78159932\\source-package.json",
+  "lowering": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\lowering-caller-state\\summary.json",
+  "status": "LEAN_COMPILED",
+  "rtl_units_and_headers": 982,
+  "lean_compilation": "PASS",
+  "top_level_differential": "NOT_RUN",
+  "universal_equivalence": "NOT_PROVED",
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T150559Z-78159932",
+  "ir": "E:\\ICT\\chisel2lean4\\generated\\xiangshan-whole\\XiangShan\\Whole.ir.json"
+}

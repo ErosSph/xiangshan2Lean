@@ -1,0 +1,38 @@
+{
+  "format": "chisel2lean-yosys-hierarchy-v1",
+  "identity": {
+    "top": "Arbitrary",
+    "source_files_sha256": {
+      "design.v": "14c5e6ffff592b77859d6912f8c94375502c3866f8e2a833aa2c39952f23ee5f"
+    },
+    "tool": {
+      "engine": "native",
+      "archive_sha256": "580a1bbe938f4af861ff49e42944dc00933d61d087693e43c316023ea07f6e1e",
+      "yosys_version": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)"
+    },
+    "stdio_staged_sha256": {},
+    "pipeline": "root-only flatten v1; hierarchy -check -top; opt_clean; memory_collect; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq",
+    "phase": "clock-normalized",
+    "clock_mode": "single",
+    "preserve_effects": false,
+    "keep_hierarchy": false
+  },
+  "rtlil": {
+    "name": "unconstrained.il",
+    "sha256": "5aa020802a9d95b945beaa96bb9e17a13e42b1c9ac2d65817874a13f3499d4b0"
+  },
+  "producer": {
+    "command.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-arbitrary-7.3\\rtlil-translation\\20261015T134508Z-05f71d4b\\yosys-functional\\command.json",
+      "sha256": "9bb6134a37090cb76d6bb12f0e6690ca257776d77d9bb1a5ab6ad29963ac1991"
+    },
+    "result.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-arbitrary-7.3\\rtlil-translation\\20261015T134508Z-05f71d4b\\yosys-functional\\result.json",
+      "sha256": "8536a24baee821e29a05b8289a7270e83c7612b1b3d806486be3b2652d27c79c"
+    }
+  },
+  "companions": {
+    "before.json": "0ae8bd472db9d2769803ff11c39cee5c28b485e839f925d50d4b7f5a23ceec37",
+    "unconstrained.json": "39be6116d45ac18b6fc68d6cb582e8b970bb7bb4de0c14f2c95de93e898e1667"
+  }
+}

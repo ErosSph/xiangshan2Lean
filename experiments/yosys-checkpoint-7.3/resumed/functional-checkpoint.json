@@ -1,0 +1,42 @@
+{
+  "format": "chisel2lean-yosys-functional-v1",
+  "identity": {
+    "top": "ProjectTop",
+    "source_files_sha256": {
+      "include/width.svh": "b26d754f0c08462bea3b11a71938aac8539a2342ea0701c328a7b34cec1cb165",
+      "Lane.sv": "34d98ebd34f8079d137fe0dd2ac027042340283509b3bb50222e6868d2da7b5f",
+      "ProjectTop.sv": "6f28c96259d90b695b48b988bc1b01bebfe4616a457f779c2f46bee59f33d460"
+    },
+    "tool": {
+      "engine": "native",
+      "archive_sha256": "580a1bbe938f4af861ff49e42944dc00933d61d087693e43c316023ea07f6e1e",
+      "yosys_version": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)"
+    },
+    "stdio_staged_sha256": {},
+    "pipeline": "root-only flatten v1; hierarchy -check -top; opt_clean; memory_collect; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq",
+    "phase": "functional-export",
+    "clock_mode": "single",
+    "preserve_effects": false,
+    "keep_hierarchy": true,
+    "exposure_pipeline": "cd \\ProjectTop; select -assert-none w:c2l_effect_* c:c2l_effect_* w:c2l_undefined_* c:c2l_undefined_*; rename -hide t:$print t:$assert t:$assume t:$cover t:$anyseq; rename -enumerate -pattern c2l_effect_% t:$print t:$assert t:$assume t:$cover; rename -enumerate -pattern c2l_undefined_% t:$anyseq; write_json /work/named.json; expose -evert -sep _ t:$print t:$assert t:$assume t:$cover t:$anyseq; delete w:c2l_effect_*_TRG; delete w:c2l_effect_* s:0 %i; cd ..; select \\ProjectTop; check -assert; write_json; write_functional_smt2"
+  },
+  "functional": {
+    "name": "functional.smt2",
+    "sha256": "fb6a75e2ec3448ca54cc276ce66a9c20139ca0be93f6b9ea77484049d4e75505"
+  },
+  "producer": {
+    "command.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-checkpoint-7.3\\resumed-translation\\20261015T150315Z-db14db93\\yosys-export\\command.json",
+      "sha256": "6a25ffb719e24c4a37a4e4953a773aee4c9167e5dd48478349d0264ecb56cc30"
+    },
+    "result.json": {
+      "path": "E:\\ICT\\chisel2lean4\\experiments\\yosys-checkpoint-7.3\\resumed-translation\\20261015T150315Z-db14db93\\yosys-export\\result.json",
+      "sha256": "b47050bca8ad9a48cf9eee1a50f0ccd24e991d8c497e176f4ce0dda8211a7b32"
+    }
+  },
+  "companions": {
+    "before.json": "01673b51e3275a001ea47a3b699d6221ee602d94e2870be3b0a080bb7499c9c0",
+    "named.json": "10ebfa7d94542620a0481a97db27cbfbcaa866a9c561a8376ba89eb0d0e1de09",
+    "lowered.json": "10ebfa7d94542620a0481a97db27cbfbcaa866a9c561a8376ba89eb0d0e1de09"
+  }
+}

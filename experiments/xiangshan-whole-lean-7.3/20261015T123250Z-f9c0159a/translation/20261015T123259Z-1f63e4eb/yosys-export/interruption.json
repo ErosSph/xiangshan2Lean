@@ -1,0 +1,6 @@
+{
+  "stopped_at": "2026-10-15T13:32:03.4134091Z",
+  "command_line": "E:\\ICT\\chisel2lean4\\.tools\\oss-cad-suite-20261014\\bin\\yosys.exe -Q -T -p \"read_rtlil ./unconstrained.il; script ./exposure.ys; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2\"",
+  "process_id": 31224,
+  "reason": "Replace slow per-cell exposure renames with official bulk passes; successful preparation and clock lowering retained"
+}

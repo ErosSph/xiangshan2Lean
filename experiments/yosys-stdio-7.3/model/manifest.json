@@ -1,0 +1,140 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-stdio-7.3\\Stdio.sv",
+  "source_sha256": "a2dc100d9c6eeca43843d5b7ecb4d2e83305ac5c5de6575336cca33c554e60c5",
+  "source_files_sha256": {
+    "design.v": "a2dc100d9c6eeca43843d5b7ecb4d2e83305ac5c5de6575336cca33c554e60c5"
+  },
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "Stdio.Observed",
+  "ir": "Stdio/Observed.ir.json",
+  "lean": "Stdio/Observed.lean",
+  "arbitrary_inputs": [],
+  "frontend_keep_hierarchy": false,
+  "stdio_compatibility": {
+    "format": "chisel2lean-stdio-compat-v1",
+    "files": {
+      "design.v": {
+        "original_sha256": "a2dc100d9c6eeca43843d5b7ecb4d2e83305ac5c5de6575336cca33c554e60c5",
+        "staged_sha256": "b609c4bfc29efceecc571a4eb3b0513599eb9761105fbe0ee59af793f80f86fc",
+        "events": [
+          {
+            "marker": "__C2L_STDIO_9bd6fa1afacc4b96_0__",
+            "file_descriptor": 2147483650,
+            "stream": "stderr",
+            "source": "design.v",
+            "line": 6,
+            "original_format_literal": "\"ERR q=%0d\\n\""
+          },
+          {
+            "marker": "__C2L_STDIO_9bd6fa1afacc4b96_1__",
+            "file_descriptor": 2147483649,
+            "stream": "stdout",
+            "source": "design.v",
+            "line": 7,
+            "original_format_literal": "\"OUT literal $fwrite(dynamic_fd) q=%0d\\n\""
+          }
+        ]
+      }
+    },
+    "markers": {
+      "__C2L_STDIO_9bd6fa1afacc4b96_0__": {
+        "marker": "__C2L_STDIO_9bd6fa1afacc4b96_0__",
+        "file_descriptor": 2147483650,
+        "stream": "stderr",
+        "source": "design.v",
+        "line": 6,
+        "original_format_literal": "\"ERR q=%0d\\n\""
+      },
+      "__C2L_STDIO_9bd6fa1afacc4b96_1__": {
+        "marker": "__C2L_STDIO_9bd6fa1afacc4b96_1__",
+        "file_descriptor": 2147483649,
+        "stream": "stdout",
+        "source": "design.v",
+        "line": 7,
+        "original_format_literal": "\"OUT literal $fwrite(dynamic_fd) q=%0d\\n\""
+      }
+    }
+  },
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 1,
+    "memory_cells": 0,
+    "clock": "clock"
+  },
+  "nodes": 48,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-stdio-7.3\\translation\\20261015T104120Z-a7ba1be7",
+  "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+  "reader_sha256": "eb14bc67673db35be56967688005860603af806f99b1e2220822b3dcefabcc8d",
+  "driver_sha256": "6da92d62bab377f94d57d57266535ac40e28754241c14663529cd1625e0d4ebf",
+  "chunk_emitter_sha256": "0a360bcfa9f2a9d7353af1bcecec0061fcc833d12db9cbb175bcf91f93805310",
+  "record_emitter_sha256": "0b722c29d86ab01a08652fa0b3a4fe157f5e14efcc2d9c37b8ded80494978dcb",
+  "stdio_bridge_sha256": "33394ec6fe07f6154890b19c991932fd8fa35f114d550fcf276638c54bad8174",
+  "effect_bridge_sha256": "1d1e40a4d15269411efe4e911f84e11108bd72b2deb20384495ca4b74cca3a17",
+  "lean_emission": "single transfer function",
+  "lean_chunk_storage": "balanced typed products",
+  "lean_record_group_size": 16,
+  "artifact_sha256": {
+    "before.json": "f4cc33a9958315eb561b4a76001bee25cc0893a89f48dd24bf4a062e8711d2ab",
+    "exposed.json": "4eabcb771713f9eb80bf867ddc93b6e1e0b3b2e9d6d7421477f4eeb8311e74ca",
+    "lowered.json": "99487f68021dba326507177a71c9f8ffa334d9a453bd03c983957204d647a7b5",
+    "functional.smt2": "0e840ad6d9f45db929bed8af66b427685cceb2023a5761e4659717971f1bf354",
+    "Stdio/Observed.lean": "2fabb71a6ae396163d9bce217ababed1090915ec4207d25ae447daaaeeddfffd",
+    "Stdio/Observed.ir.json": "668376e2b676a50d60c83b77c7e3d90014acd23e6f06164ddb10f217db8ec233"
+  },
+  "effect_contract": "Official clock-event lowering; assertion/assumption failures reject execution; cover and print events are observable. Additional observation outputs are not original hardware ports.",
+  "effects": [
+    {
+      "cell": "$1",
+      "kind": "print",
+      "source": "work/design.v:6.5-6.76",
+      "format": "ERR q={4:=0d-u}\n",
+      "ports": {
+        "enable": "c2l_effect_0_enable",
+        "arguments": "c2l_effect_0_arguments"
+      },
+      "argument_width": 4,
+      "file_descriptor": 2147483650,
+      "stream": "stderr",
+      "original_format_literal": "\"ERR q=%0d\\n\"",
+      "index": 0,
+      "fields": {
+        "enable": "o1",
+        "arguments": "o2"
+      }
+    },
+    {
+      "cell": "$3",
+      "kind": "print",
+      "source": "work/design.v:7.5-7.104",
+      "format": "OUT literal $fwrite(dynamic_fd) q={4:=0d-u}\n",
+      "ports": {
+        "enable": "c2l_effect_1_enable",
+        "arguments": "c2l_effect_1_arguments"
+      },
+      "argument_width": 4,
+      "file_descriptor": 2147483649,
+      "stream": "stdout",
+      "original_format_literal": "\"OUT literal $fwrite(dynamic_fd) q=%0d\\n\"",
+      "index": 1,
+      "fields": {
+        "enable": "o3",
+        "arguments": "o4"
+      }
+    }
+  ]
+}

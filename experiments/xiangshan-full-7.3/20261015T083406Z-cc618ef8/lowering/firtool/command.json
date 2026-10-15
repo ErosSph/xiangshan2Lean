@@ -1,0 +1,15 @@
+{
+  "command": [
+    "E:\\ICT\\chisel2lean4\\.tools\\firtool-1.135.0\\firtool-1.135.0\\bin\\firtool.exe",
+    "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\rtl\\XSTop.fir",
+    "-O=release",
+    "--disable-annotation-unknown",
+    "--split-verilog",
+    "--export-module-hierarchy",
+    "--mlir-disable-threading",
+    "-o=E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\lowering\\rtl"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\lowering",
+  "started_at": "2026-10-15T08:39:11.306071+00:00",
+  "pid": 16748
+}

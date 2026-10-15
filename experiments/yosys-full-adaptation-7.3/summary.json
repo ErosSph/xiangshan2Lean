@@ -1,0 +1,868 @@
+{
+  "status": "PASS",
+  "complete_suite": true,
+  "chisel_version": "7.3.0",
+  "lean_version": "4.19.0",
+  "configurations": 7,
+  "cycles": 18841,
+  "output_comparisons": 115500,
+  "independent_integer_checks": 92418,
+  "firrtl_cross_comparisons": 105260,
+  "cases": [
+    {
+      "status": "PASS",
+      "case": "Counter4",
+      "module": "probes.Counter",
+      "constructor": [
+        4
+      ],
+      "cycles": 256,
+      "output_comparisons": 512,
+      "independent_integer_checks": 512,
+      "firrtl_cross_comparisons": 512,
+      "nodes": 28,
+      "state_fields": 3,
+      "hardware": {
+        "register_cells": 1,
+        "memory_cells": 0,
+        "clock": "clock"
+      },
+      "initial_state": {
+        "$auto$clk2fflogic.cc:92:sample_control_edge$6": 1,
+        "$auto$clk2fflogic.cc:108:sample_data$4": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$2": 0
+      },
+      "experiment_contract": "Unknown initial bits and explicit arbitrary inputs zero in this experiment; known Yosys auxiliary constraints retained. RTL --x-initial 0/--x-assign 0. No hardware power-on claim.",
+      "official_elaboration": {
+        "format": "chisel2lean-official-elaboration-v1",
+        "module": "probes.Counter",
+        "constructor": [
+          4
+        ],
+        "chisel_version": "7.3.0",
+        "configuration": "fixed",
+        "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+        "classpath_sha256": "2b21743f2c71872f753a1fc0628cad5ee2b1a6e9c355cbf661f4a00f34ff5950",
+        "artifacts_sha256": {
+          "design.fir": "72689fcd945bdb75296773fef0116c87894d38a3921653cc8603aa6dbb83fe44",
+          "Chisel2LeanReference.v": "348826192ee7c1157911745889e4452290ad427327170a3b8f16ed0c0c8a5a11",
+          "ports.json": "f00f98e36ca6b63bf129f06037b49328b05d5cc7f982589c0f94ae9bada41cb4"
+        },
+        "source_frontend_used": false,
+        "independent_chisel_elaborations": 2,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Counter4\\elaboration",
+        "jvm": {
+          "chisel_version": "7.3.0",
+          "scala_version": "2.13.15",
+          "class_sha256": {
+            "probes.Counter": "acf86f080170fc66c47d25d9f5abd25b19649ed90c6ba882a8dbac36eb3bed4b"
+          }
+        }
+      },
+      "manifest": {
+        "format": "chisel2lean-yosys-manifest-v1",
+        "frontend": "yosys-functional",
+        "symbolic_parameters": false,
+        "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Counter4\\original\\Chisel2LeanReference.v",
+        "source_sha256": "348826192ee7c1157911745889e4452290ad427327170a3b8f16ed0c0c8a5a11",
+        "source_files_sha256": {
+          "design.v": "348826192ee7c1157911745889e4452290ad427327170a3b8f16ed0c0c8a5a11"
+        },
+        "lean_version": "4.19.0",
+        "yosys_lock": {
+          "packages": {
+            "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+            "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+            "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+            "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+            "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+          },
+          "yosys_version": "0.70",
+          "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+          "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+        },
+        "namespace": "Yosys.Counter4",
+        "ir": "Yosys/Counter4.ir.json",
+        "lean": "Yosys/Counter4.lean",
+        "arbitrary_inputs": [
+          {
+            "name": "c2l_undefined_0",
+            "width": 4,
+            "source": "$auto$setundef.cc:550:execute$11"
+          }
+        ],
+        "lean_checked": true,
+        "hardware": {
+          "register_cells": 1,
+          "memory_cells": 0,
+          "clock": "clock"
+        },
+        "nodes": 28,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Counter4\\translation\\20261015T090727Z-5eae213b",
+        "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+        "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+        "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+        "artifact_sha256": {
+          "before.json": "c99cc63272d4fe5db4b3fb1ed899717af81c48657ebe8858bfbb8e3fe5141476",
+          "exposed.json": "ef14eaef791ead98a57ea3e4dd97ccd6e1bd69b7e033a23d148c52a909850bc6",
+          "lowered.json": "a24f92f5d956cce37a08fdda33061fabeee18b9cd5f5e2b1e4324462cfc4f0c7",
+          "functional.smt2": "5dc3fc89bb20091c331b781b326c027fb59bfd4ff5482b7d57f918864dac4433",
+          "Yosys/Counter4.lean": "93c2289279ff76d0d5308deaafc40ce1fb9335cdde1750cc716f48980c8eacd1",
+          "Yosys/Counter4.ir.json": "87717c542d61b083b170e2f6451637f199cc530d9d4d04dbd3d44c71fa6e7cec"
+        }
+      },
+      "formal_translation_equivalence": false
+    },
+    {
+      "status": "PASS",
+      "case": "Handshake65x3",
+      "module": "modernfixtures.HandshakeTop",
+      "constructor": [
+        65,
+        3
+      ],
+      "cycles": 384,
+      "output_comparisons": 2304,
+      "independent_integer_checks": 2304,
+      "firrtl_cross_comparisons": 2304,
+      "nodes": 128,
+      "state_fields": 18,
+      "hardware": {
+        "register_cells": 6,
+        "memory_cells": 0,
+        "clock": "clock"
+      },
+      "initial_state": {
+        "$auto$clk2fflogic.cc:92:sample_control_edge$6": 1,
+        "$auto$clk2fflogic.cc:108:sample_data$4": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$2": 0,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$36": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$26": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$16": 1,
+        "$auto$clk2fflogic.cc:108:sample_data$34": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$32": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$24": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$22": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$14": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$12": 0,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$46": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$56": 1,
+        "$auto$clk2fflogic.cc:108:sample_data$44": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$42": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$54": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$52": 0
+      },
+      "experiment_contract": "Unknown initial bits and explicit arbitrary inputs zero in this experiment; known Yosys auxiliary constraints retained. RTL --x-initial 0/--x-assign 0. No hardware power-on claim.",
+      "official_elaboration": {
+        "format": "chisel2lean-official-elaboration-v1",
+        "module": "modernfixtures.HandshakeTop",
+        "constructor": [
+          65,
+          3
+        ],
+        "chisel_version": "7.3.0",
+        "configuration": "fixed",
+        "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+        "classpath_sha256": "2b21743f2c71872f753a1fc0628cad5ee2b1a6e9c355cbf661f4a00f34ff5950",
+        "artifacts_sha256": {
+          "design.fir": "dc15934e9c59f04860c6093a56dfa564a491ccbf7d9e0fe5b551362e35bd5068",
+          "Chisel2LeanReference.v": "5b175013270f6781060e066be486c97303c9743c212b061537bd2f01439c3d43",
+          "ports.json": "d59caa0d3bc75923a9e457c581663d9a8a79e177e62814e0f51bc576471be79e"
+        },
+        "source_frontend_used": false,
+        "independent_chisel_elaborations": 2,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Handshake65x3\\elaboration",
+        "jvm": {
+          "chisel_version": "7.3.0",
+          "scala_version": "2.13.15",
+          "class_sha256": {
+            "modernfixtures.HandshakeTop": "1926da5e01977290ac1dd631ca7c7361006887c22144f3e0fbc451041953437c"
+          }
+        }
+      },
+      "manifest": {
+        "format": "chisel2lean-yosys-manifest-v1",
+        "frontend": "yosys-functional",
+        "symbolic_parameters": false,
+        "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Handshake65x3\\original\\Chisel2LeanReference.v",
+        "source_sha256": "5b175013270f6781060e066be486c97303c9743c212b061537bd2f01439c3d43",
+        "source_files_sha256": {
+          "design.v": "5b175013270f6781060e066be486c97303c9743c212b061537bd2f01439c3d43"
+        },
+        "lean_version": "4.19.0",
+        "yosys_lock": {
+          "packages": {
+            "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+            "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+            "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+            "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+            "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+          },
+          "yosys_version": "0.70",
+          "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+          "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+        },
+        "namespace": "Yosys.Handshake65x3",
+        "ir": "Yosys/Handshake65x3.ir.json",
+        "lean": "Yosys/Handshake65x3.lean",
+        "arbitrary_inputs": [
+          {
+            "name": "c2l_undefined_0",
+            "width": 1,
+            "source": "$auto$setundef.cc:550:execute$61"
+          },
+          {
+            "name": "c2l_undefined_1",
+            "width": 1,
+            "source": "$auto$setundef.cc:550:execute$63"
+          },
+          {
+            "name": "c2l_undefined_2",
+            "width": 1,
+            "source": "$auto$setundef.cc:550:execute$65"
+          }
+        ],
+        "lean_checked": true,
+        "hardware": {
+          "register_cells": 6,
+          "memory_cells": 0,
+          "clock": "clock"
+        },
+        "nodes": 128,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Handshake65x3\\translation\\20261015T090751Z-a831eae4",
+        "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+        "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+        "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+        "artifact_sha256": {
+          "before.json": "a2085624210d3298e15ce388268539e659037131581275132b63ebd7abf2f674",
+          "exposed.json": "44bfa969d3683592a6016d2be43f477ee3f211eafc2e112e9fff65323cfbe627",
+          "lowered.json": "24e6bc8024a7ba607925d21b0431905e16965d25da77738e9dcf917cc59713d3",
+          "functional.smt2": "2ef398542aceb987a4852de69a05ad800cf53622b74630c43d6095d350fcda45",
+          "Yosys/Handshake65x3.lean": "31c1122ebfb4bc17c188afd722c8a486b4986f1a8b15b74c86ea25363f5c06b4",
+          "Yosys/Handshake65x3.ir.json": "96769f1a7e1e911416010d878edbec6993805aa6c9e8ef0486d76e15502615bf"
+        }
+      },
+      "formal_translation_equivalence": false
+    },
+    {
+      "status": "PASS",
+      "case": "Signed65",
+      "module": "probes.SignedArithmetic",
+      "constructor": [
+        65
+      ],
+      "cycles": 153,
+      "output_comparisons": 1836,
+      "independent_integer_checks": 1836,
+      "firrtl_cross_comparisons": 1836,
+      "nodes": 149,
+      "state_fields": 0,
+      "hardware": {
+        "register_cells": 0,
+        "memory_cells": 0,
+        "clock": null
+      },
+      "initial_state": {},
+      "experiment_contract": "Unknown initial bits and explicit arbitrary inputs zero in this experiment; known Yosys auxiliary constraints retained. RTL --x-initial 0/--x-assign 0. No hardware power-on claim.",
+      "official_elaboration": {
+        "format": "chisel2lean-official-elaboration-v1",
+        "module": "probes.SignedArithmetic",
+        "constructor": [
+          65
+        ],
+        "chisel_version": "7.3.0",
+        "configuration": "fixed",
+        "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+        "classpath_sha256": "2b21743f2c71872f753a1fc0628cad5ee2b1a6e9c355cbf661f4a00f34ff5950",
+        "artifacts_sha256": {
+          "design.fir": "63e41e9ac1046ac81f102715d27b7b7ab92c2af40908d0f61a418c1c604b457f",
+          "Chisel2LeanReference.v": "2ff693226b4334329a093d408ba9c8ac2d629aa4bc17ffe7bf9542e3d02b61ce",
+          "ports.json": "6d80eb08f829e24578da70accbb412b325671691e225095c1d4013e9c1424d1f"
+        },
+        "source_frontend_used": false,
+        "independent_chisel_elaborations": 2,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Signed65\\elaboration",
+        "jvm": {
+          "chisel_version": "7.3.0",
+          "scala_version": "2.13.15",
+          "class_sha256": {
+            "probes.SignedArithmetic": "bd8dae9e4bb4d89ca5b32d5293c967ffad87b31f83989c837cd8da1d3b393eea"
+          }
+        }
+      },
+      "manifest": {
+        "format": "chisel2lean-yosys-manifest-v1",
+        "frontend": "yosys-functional",
+        "symbolic_parameters": false,
+        "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Signed65\\original\\Chisel2LeanReference.v",
+        "source_sha256": "2ff693226b4334329a093d408ba9c8ac2d629aa4bc17ffe7bf9542e3d02b61ce",
+        "source_files_sha256": {
+          "design.v": "2ff693226b4334329a093d408ba9c8ac2d629aa4bc17ffe7bf9542e3d02b61ce"
+        },
+        "lean_version": "4.19.0",
+        "yosys_lock": {
+          "packages": {
+            "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+            "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+            "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+            "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+            "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+          },
+          "yosys_version": "0.70",
+          "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+          "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+        },
+        "namespace": "Yosys.Signed65",
+        "ir": "Yosys/Signed65.ir.json",
+        "lean": "Yosys/Signed65.lean",
+        "arbitrary_inputs": [],
+        "lean_checked": true,
+        "hardware": {
+          "register_cells": 0,
+          "memory_cells": 0,
+          "clock": null
+        },
+        "nodes": 149,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Signed65\\translation\\20261015T090815Z-2110269c",
+        "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+        "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+        "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+        "artifact_sha256": {
+          "before.json": "9bcca48a7c397c91da5f030df6751fa5cbf711169a7cee21864d9fa63ffb9d7c",
+          "exposed.json": "44d81d0fae584e7ce6a1dcafa2a4aac62ca23d22830767101af8d55d91daa11d",
+          "lowered.json": "9bcca48a7c397c91da5f030df6751fa5cbf711169a7cee21864d9fa63ffb9d7c",
+          "functional.smt2": "8abf19709b1e80267128e2e129206a33c5bcf098294f442ab7c9c4df55aa4693",
+          "Yosys/Signed65.lean": "f1f2d68089ef36087afb87c9e17d0318ed68d13c03701b145aae095037cb6eec",
+          "Yosys/Signed65.ir.json": "25fe878e389e702b0087dd87e34cd5dfbe882f97fdcec44027cb6fc5aed63780"
+        }
+      },
+      "formal_translation_equivalence": false
+    },
+    {
+      "status": "PASS",
+      "case": "XSAlu",
+      "module": "xiangshan.backend.fu.AluDataModule",
+      "constructor": [
+        {
+          "class": "xiangshan.validation.NanhuCoreConfig",
+          "args": []
+        }
+      ],
+      "cycles": 16000,
+      "output_comparisons": 96000,
+      "independent_integer_checks": 73500,
+      "firrtl_cross_comparisons": 96000,
+      "nodes": 1409,
+      "state_fields": 0,
+      "hardware": {
+        "register_cells": 0,
+        "memory_cells": 0,
+        "clock": null
+      },
+      "initial_state": {},
+      "experiment_contract": "Unknown initial bits and explicit arbitrary inputs zero in this experiment; known Yosys auxiliary constraints retained. RTL --x-initial 0/--x-assign 0. No hardware power-on claim.",
+      "official_elaboration": {
+        "format": "chisel2lean-official-elaboration-v1",
+        "module": "xiangshan.backend.fu.AluDataModule",
+        "constructor": [
+          {
+            "class": "xiangshan.validation.NanhuCoreConfig",
+            "args": []
+          }
+        ],
+        "chisel_version": "7.3.0",
+        "configuration": "fixed",
+        "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-classpath.txt",
+        "classpath_sha256": "e684d7dded8d6d008174aa04f787785234b48c1911fedc699b78371f44a5e4cd",
+        "artifacts_sha256": {
+          "design.fir": "dca24a5b264f81015d6ec4555da213ceb3adfa15baf9b340616edc449edc27f8",
+          "Chisel2LeanReference.v": "f32b09044ef7c407d5e16824e5a313f5ebfa3e954f9e3a55bba40e26365fc82c",
+          "ports.json": "508345cd4bbb92e6b680af4f167c66614a6254ce8e1a3feff477c3dad840c7de"
+        },
+        "source_frontend_used": false,
+        "independent_chisel_elaborations": 2,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSAlu\\elaboration",
+        "jvm": {
+          "chisel_version": "7.3.0",
+          "scala_version": "2.13.15",
+          "class_sha256": {
+            "xiangshan.backend.fu.AluDataModule": "98c1f345f9d8b5954c3f7e86d5047d81b5838cdc2fd697cd359094e9ffa26c3a",
+            "xiangshan.validation.NanhuCoreConfig": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762"
+          }
+        }
+      },
+      "manifest": {
+        "format": "chisel2lean-yosys-manifest-v1",
+        "frontend": "yosys-functional",
+        "symbolic_parameters": false,
+        "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSAlu\\original\\Chisel2LeanReference.v",
+        "source_sha256": "f32b09044ef7c407d5e16824e5a313f5ebfa3e954f9e3a55bba40e26365fc82c",
+        "source_files_sha256": {
+          "design.v": "f32b09044ef7c407d5e16824e5a313f5ebfa3e954f9e3a55bba40e26365fc82c"
+        },
+        "lean_version": "4.19.0",
+        "yosys_lock": {
+          "packages": {
+            "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+            "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+            "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+            "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+            "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+          },
+          "yosys_version": "0.70",
+          "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+          "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+        },
+        "namespace": "Yosys.XSAlu",
+        "ir": "Yosys/XSAlu.ir.json",
+        "lean": "Yosys/XSAlu.lean",
+        "arbitrary_inputs": [],
+        "lean_checked": true,
+        "hardware": {
+          "register_cells": 0,
+          "memory_cells": 0,
+          "clock": null
+        },
+        "nodes": 1409,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSAlu\\translation\\20261015T090847Z-a31e8a46",
+        "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+        "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+        "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+        "artifact_sha256": {
+          "before.json": "490d5332a524eccc055d1a79c1db8ebfed9d745d97148cf56040a6decf0e518d",
+          "exposed.json": "4bf9dad85cd4edbc6fd0d1c4962c5f743ca78553e2acc0ad14ed3186d3f2872e",
+          "lowered.json": "490d5332a524eccc055d1a79c1db8ebfed9d745d97148cf56040a6decf0e518d",
+          "functional.smt2": "d221a0eb74ddc7e417a04e2bd1f2362783729a959a370d3be0b5b9f4750fb0ea",
+          "Yosys/XSAlu.lean": "a8b13653ddfd30639bf5d37673fcc765db7cdbc77760c3edfcdb939818305b04",
+          "Yosys/XSAlu.ir.json": "5cff658053bece7d01a72d1cfa4125ea8fa9f143c62f5b3b64a6f8b1669ff210"
+        }
+      },
+      "formal_translation_equivalence": false
+    },
+    {
+      "status": "PASS",
+      "case": "XSPrefetch",
+      "module": "xiangshan.cache.mmu.L2TlbPrefetch",
+      "constructor": [
+        {
+          "class": "xiangshan.validation.NanhuCoreConfig",
+          "args": []
+        }
+      ],
+      "cycles": 768,
+      "output_comparisons": 4608,
+      "independent_integer_checks": 4608,
+      "firrtl_cross_comparisons": 4608,
+      "nodes": 280,
+      "state_fields": 33,
+      "hardware": {
+        "register_cells": 11,
+        "memory_cells": 0,
+        "clock": "clock"
+      },
+      "initial_state": {
+        "$auto$clk2fflogic.cc:92:sample_control_edge$16": 1,
+        "$auto$clk2fflogic.cc:108:sample_data$14": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$12": 0,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$26": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$36": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$46": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$56": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$66": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$76": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$86": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$96": 1,
+        "$auto$clk2fflogic.cc:108:sample_data$24": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$22": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$34": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$32": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$44": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$42": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$54": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$52": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$64": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$62": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$74": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$72": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$84": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$82": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$94": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$92": 0,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$6": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$106": 1,
+        "$auto$clk2fflogic.cc:108:sample_data$4": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$2": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$104": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$102": 0
+      },
+      "experiment_contract": "Unknown initial bits and explicit arbitrary inputs zero in this experiment; known Yosys auxiliary constraints retained. RTL --x-initial 0/--x-assign 0. No hardware power-on claim.",
+      "official_elaboration": {
+        "format": "chisel2lean-official-elaboration-v1",
+        "module": "xiangshan.cache.mmu.L2TlbPrefetch",
+        "constructor": [
+          {
+            "class": "xiangshan.validation.NanhuCoreConfig",
+            "args": []
+          }
+        ],
+        "chisel_version": "7.3.0",
+        "configuration": "fixed",
+        "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-classpath.txt",
+        "classpath_sha256": "e684d7dded8d6d008174aa04f787785234b48c1911fedc699b78371f44a5e4cd",
+        "artifacts_sha256": {
+          "design.fir": "569e32dc9747d495141f6767f08501abba445543f3059a684528c9c205608e3a",
+          "Chisel2LeanReference.v": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927",
+          "ports.json": "3ccca6a455e6e7cad919243fec801a5d5cac5a0901496b31d91718af857f28d6"
+        },
+        "source_frontend_used": false,
+        "independent_chisel_elaborations": 2,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\elaboration",
+        "jvm": {
+          "chisel_version": "7.3.0",
+          "scala_version": "2.13.15",
+          "class_sha256": {
+            "xiangshan.cache.mmu.L2TlbPrefetch": "8229b9101211f07bf5e88581d9cf439abc0addfe4ecbde508bb90e1c81d96568",
+            "xiangshan.validation.NanhuCoreConfig": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762"
+          }
+        }
+      },
+      "manifest": {
+        "format": "chisel2lean-yosys-manifest-v1",
+        "frontend": "yosys-functional",
+        "symbolic_parameters": false,
+        "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\original\\Chisel2LeanReference.v",
+        "source_sha256": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927",
+        "source_files_sha256": {
+          "design.v": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927"
+        },
+        "lean_version": "4.19.0",
+        "yosys_lock": {
+          "packages": {
+            "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+            "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+            "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+            "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+            "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+          },
+          "yosys_version": "0.70",
+          "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+          "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+        },
+        "namespace": "Yosys.XSPrefetch",
+        "ir": "Yosys/XSPrefetch.ir.json",
+        "lean": "Yosys/XSPrefetch.lean",
+        "arbitrary_inputs": [
+          {
+            "name": "c2l_undefined_0",
+            "width": 2,
+            "source": "$auto$setundef.cc:550:execute$111"
+          }
+        ],
+        "lean_checked": true,
+        "hardware": {
+          "register_cells": 11,
+          "memory_cells": 0,
+          "clock": "clock"
+        },
+        "nodes": 280,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\translation\\20261015T091005Z-b78490e5",
+        "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+        "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+        "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+        "artifact_sha256": {
+          "before.json": "cb906431a9fdcb7782a06233538fb9092eaea7cc5545399f290f8c0198a5bad5",
+          "exposed.json": "c3225c63051505e0cbc6e7b7221499bf41b1c190f2d3839a0cb6f2d95bff3ee1",
+          "lowered.json": "e6b57cc23670abaf42518676ebfb606aeced039ea167a4b5b1450802c3751149",
+          "functional.smt2": "ea50dec2e67b3fef04bd428e5a0cb112227bea0de019cf5114444f87b2e42f2a",
+          "Yosys/XSPrefetch.lean": "a8541a4c2514a39291e0606f009017d2223fc4e85a56b53a6061c23a9e77b414",
+          "Yosys/XSPrefetch.ir.json": "115f75d082ed957aa3c1c4df827493ad3aa9f5ba2c4a362e796e3cedcb7a8179"
+        }
+      },
+      "formal_translation_equivalence": false
+    },
+    {
+      "status": "PASS",
+      "case": "Queue3",
+      "module": "modernfixtures.QueueTop",
+      "constructor": [
+        8,
+        3,
+        false
+      ],
+      "cycles": 640,
+      "output_comparisons": 5120,
+      "independent_integer_checks": 4829,
+      "firrtl_cross_comparisons": 0,
+      "nodes": 164,
+      "state_fields": 14,
+      "hardware": {
+        "register_cells": 3,
+        "memory_cells": 1,
+        "clock": "clock"
+      },
+      "initial_state": {
+        "$auto$clk2fflogic.cc:92:sample_control_edge$28": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$18": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$38": 1,
+        "$auto$clk2fflogic.cc:192:execute$2": 1,
+        "$auto$clk2fflogic.cc:108:sample_data$26": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$24": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$16": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$14": 0,
+        "$auto$clk2fflogic.cc:207:execute$6": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$36": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$34": 0,
+        "$auto$clk2fflogic.cc:213:execute$10": 0,
+        "$auto$clk2fflogic.cc:210:execute$8": 0,
+        "QueueTop.queue.ram_ext.Memory": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "experiment_contract": "Unknown initial bits and explicit arbitrary inputs zero in this experiment; known Yosys auxiliary constraints retained. RTL --x-initial 0/--x-assign 0. No hardware power-on claim.",
+      "official_elaboration": {
+        "format": "chisel2lean-official-elaboration-v1",
+        "module": "modernfixtures.QueueTop",
+        "constructor": [
+          8,
+          3,
+          false
+        ],
+        "chisel_version": "7.3.0",
+        "configuration": "fixed",
+        "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+        "classpath_sha256": "2b21743f2c71872f753a1fc0628cad5ee2b1a6e9c355cbf661f4a00f34ff5950",
+        "artifacts_sha256": {
+          "design.fir": "63a778563a5c388c651c7e9aab987615d261bb489af51c8a771fe8e783b069dc",
+          "Chisel2LeanReference.v": "7978d23e386549b38d020973c403f4f4d56332415722013705e83b20719cebe4",
+          "ports.json": "d96d47870cf34430fc91225e7c531bf0f0df0bcceeca87e30a9c41e89bf38c26"
+        },
+        "source_frontend_used": false,
+        "independent_chisel_elaborations": 2,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Queue3\\elaboration",
+        "jvm": {
+          "chisel_version": "7.3.0",
+          "scala_version": "2.13.15",
+          "class_sha256": {
+            "modernfixtures.QueueTop": "99f96b8a9ebc00427575cc36a9ac4a71b7e3fbe407be7af42ee0ef610085d1e5"
+          }
+        }
+      },
+      "manifest": {
+        "format": "chisel2lean-yosys-manifest-v1",
+        "frontend": "yosys-functional",
+        "symbolic_parameters": false,
+        "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Queue3\\original\\Chisel2LeanReference.v",
+        "source_sha256": "7978d23e386549b38d020973c403f4f4d56332415722013705e83b20719cebe4",
+        "source_files_sha256": {
+          "design.v": "7978d23e386549b38d020973c403f4f4d56332415722013705e83b20719cebe4"
+        },
+        "lean_version": "4.19.0",
+        "yosys_lock": {
+          "packages": {
+            "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+            "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+            "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+            "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+            "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+          },
+          "yosys_version": "0.70",
+          "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+          "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+        },
+        "namespace": "Yosys.Queue3",
+        "ir": "Yosys/Queue3.ir.json",
+        "lean": "Yosys/Queue3.lean",
+        "arbitrary_inputs": [
+          {
+            "name": "c2l_undefined_0",
+            "width": 8,
+            "source": "$auto$setundef.cc:550:execute$43"
+          },
+          {
+            "name": "c2l_undefined_1",
+            "width": 2,
+            "source": "$auto$setundef.cc:550:execute$45"
+          },
+          {
+            "name": "c2l_undefined_2",
+            "width": 2,
+            "source": "$auto$setundef.cc:550:execute$47"
+          },
+          {
+            "name": "c2l_undefined_3",
+            "width": 1,
+            "source": "$auto$setundef.cc:550:execute$49"
+          }
+        ],
+        "lean_checked": true,
+        "hardware": {
+          "register_cells": 3,
+          "memory_cells": 1,
+          "clock": "clock"
+        },
+        "nodes": 164,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\Queue3\\translation\\20261015T091036Z-21c2c9c6",
+        "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+        "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+        "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+        "artifact_sha256": {
+          "before.json": "59f7420bfed18c1d679e83a9c7b65413a401af869e8d4734d5bd0bea376a41c0",
+          "exposed.json": "910be99a738f737ddc87dc4503259eafdf7410068e6365a7e12e274a5138c1da",
+          "lowered.json": "d515aa8c0834560dc741d4cd1777e2b4dca83954a78285e3a3a0756a3d380af6",
+          "functional.smt2": "24631d37e94de7749852eb0df4953c3b4d39b741680a2bc3f9519b304f7ad043",
+          "Yosys/Queue3.lean": "938876ea4b14f9e90cfe22c7353fdea38293a7c37587b8fe609e51cbe3408e27",
+          "Yosys/Queue3.ir.json": "9ca9511f9bf8aa4d169dfa315f7f906812595cf5171f1a8e396a324be3717b69"
+        }
+      },
+      "formal_translation_equivalence": false
+    },
+    {
+      "status": "PASS",
+      "case": "SyncQueue3",
+      "module": "modernfixtures.QueueTop",
+      "constructor": [
+        8,
+        3,
+        true
+      ],
+      "cycles": 640,
+      "output_comparisons": 5120,
+      "independent_integer_checks": 4829,
+      "firrtl_cross_comparisons": 0,
+      "nodes": 202,
+      "state_fields": 20,
+      "hardware": {
+        "register_cells": 5,
+        "memory_cells": 1,
+        "clock": "clock"
+      },
+      "initial_state": {
+        "$auto$clk2fflogic.cc:92:sample_control_edge$18": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$28": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$48": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$38": 1,
+        "$auto$clk2fflogic.cc:192:execute$2": 1,
+        "$auto$clk2fflogic.cc:92:sample_control_edge$58": 1,
+        "$auto$clk2fflogic.cc:108:sample_data$16": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$14": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$26": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$24": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$46": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$44": 0,
+        "$auto$clk2fflogic.cc:207:execute$6": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$36": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$34": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$56": 0,
+        "$auto$clk2fflogic.cc:108:sample_data$54": 0,
+        "$auto$clk2fflogic.cc:213:execute$10": 0,
+        "$auto$clk2fflogic.cc:210:execute$8": 0,
+        "QueueTop.queue.ram_ext.Memory": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "experiment_contract": "Unknown initial bits and explicit arbitrary inputs zero in this experiment; known Yosys auxiliary constraints retained. RTL --x-initial 0/--x-assign 0. No hardware power-on claim.",
+      "official_elaboration": {
+        "format": "chisel2lean-official-elaboration-v1",
+        "module": "modernfixtures.QueueTop",
+        "constructor": [
+          8,
+          3,
+          true
+        ],
+        "chisel_version": "7.3.0",
+        "configuration": "fixed",
+        "classpath_file": "E:\\ICT\\chisel2lean4\\.cache\\reference-classpath.txt",
+        "classpath_sha256": "2b21743f2c71872f753a1fc0628cad5ee2b1a6e9c355cbf661f4a00f34ff5950",
+        "artifacts_sha256": {
+          "design.fir": "2589060060ce2f479f4a5615eae5558497eb187e6b3d8d4f5cd835675ac90a8d",
+          "Chisel2LeanReference.v": "6509e4f9798d72ad5220028e5f5de214c6476249222dd210c1a530cb83c95c6d",
+          "ports.json": "d96d47870cf34430fc91225e7c531bf0f0df0bcceeca87e30a9c41e89bf38c26"
+        },
+        "source_frontend_used": false,
+        "independent_chisel_elaborations": 2,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\SyncQueue3\\elaboration",
+        "jvm": {
+          "chisel_version": "7.3.0",
+          "scala_version": "2.13.15",
+          "class_sha256": {
+            "modernfixtures.QueueTop": "99f96b8a9ebc00427575cc36a9ac4a71b7e3fbe407be7af42ee0ef610085d1e5"
+          }
+        }
+      },
+      "manifest": {
+        "format": "chisel2lean-yosys-manifest-v1",
+        "frontend": "yosys-functional",
+        "symbolic_parameters": false,
+        "source": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\SyncQueue3\\original\\Chisel2LeanReference.v",
+        "source_sha256": "6509e4f9798d72ad5220028e5f5de214c6476249222dd210c1a530cb83c95c6d",
+        "source_files_sha256": {
+          "design.v": "6509e4f9798d72ad5220028e5f5de214c6476249222dd210c1a530cb83c95c6d"
+        },
+        "lean_version": "4.19.0",
+        "yosys_lock": {
+          "packages": {
+            "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+            "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+            "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+            "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+            "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+          },
+          "yosys_version": "0.70",
+          "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+          "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+        },
+        "namespace": "Yosys.SyncQueue3",
+        "ir": "Yosys/SyncQueue3.ir.json",
+        "lean": "Yosys/SyncQueue3.lean",
+        "arbitrary_inputs": [
+          {
+            "name": "c2l_undefined_0",
+            "width": 8,
+            "source": "$auto$setundef.cc:550:execute$63"
+          },
+          {
+            "name": "c2l_undefined_1",
+            "width": 2,
+            "source": "$auto$setundef.cc:550:execute$65"
+          },
+          {
+            "name": "c2l_undefined_2",
+            "width": 2,
+            "source": "$auto$setundef.cc:550:execute$67"
+          },
+          {
+            "name": "c2l_undefined_3",
+            "width": 1,
+            "source": "$auto$setundef.cc:550:execute$69"
+          }
+        ],
+        "lean_checked": true,
+        "hardware": {
+          "register_cells": 5,
+          "memory_cells": 1,
+          "clock": "clock"
+        },
+        "nodes": 202,
+        "evidence": "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\SyncQueue3\\translation\\20261015T091056Z-47a2b481",
+        "semantics": "Two-state completion, single positive-edge clock. clk2fflogic retains edges. Explicit initial state; unknown initial bits unconstrained. Data X/Z and undriven nets become explicit arbitrary inputs using setundef -anyseq. Reachable division by zero is rejected by execution domains. Not IEEE four-state simulation equivalence.",
+        "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+        "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+        "artifact_sha256": {
+          "before.json": "4486ec0a2aa69dabd205703af15ba254d39e84ac475570ccd57df7982b97bab8",
+          "exposed.json": "486b40a174f525b435ae5b88e4dc3d8d152cca4620fc03c8c73404e0967c59b5",
+          "lowered.json": "c8158350b0b59f12361e36c7db02301c5f6f0f52a40f7c1aa1b79871936a7070",
+          "functional.smt2": "8f2d49f7b386ade4355348c31e6eb79456def720fd1f064458d545a5d00323c4",
+          "Yosys/SyncQueue3.lean": "3fed74bd65c6d066ef74f8dca35004778d90e4fe7285aba239948ae6d50d5cc4",
+          "Yosys/SyncQueue3.ir.json": "d28e98b748d093537ed0fdab167ee1df53c0c3c3dfbede0163a6ce02c9d3042e"
+        }
+      },
+      "formal_translation_equivalence": false
+    }
+  ]
+}

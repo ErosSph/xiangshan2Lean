@@ -1,0 +1,7 @@
+
+-- Running command `read_rtlil ./unconstrained.il; script ./exposure.ys; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2' --
+
+1. Executing RTLIL frontend.
+Input filename: ./unconstrained.il
+
+-- Executing script file `./exposure.ys' --

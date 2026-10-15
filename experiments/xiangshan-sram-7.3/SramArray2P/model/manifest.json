@@ -1,0 +1,63 @@
+{
+  "format": "chisel2lean-yosys-manifest-v1",
+  "frontend": "yosys-functional",
+  "symbolic_parameters": false,
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-sram-7.3\\SramArray2P\\original\\Chisel2LeanReference.v",
+  "source_sha256": "1cf2bf0de9bb192b4ee37c953df96a65efd5ff38808a3a0f26800efbf7ea8384",
+  "source_files_sha256": {
+    "design.v": "1cf2bf0de9bb192b4ee37c953df96a65efd5ff38808a3a0f26800efbf7ea8384"
+  },
+  "lean_version": "4.19.0",
+  "yosys_lock": {
+    "packages": {
+      "yowasp_yosys-0.70.0.0.post1259-py3-none-any.whl": "38a5ce6af95045b5b1ad795de7a73cfe88cf70c19f7b95f027f4a377a85310c0",
+      "yowasp_runtime-1.96-py3-none-any.whl": "4ff456a4a6dff9d689c7feac9f68fb1492bed4cf873450d7b41259fa31645783",
+      "wasmtime-47.0.1-py3-none-win_amd64.whl": "4e46a4a29092a2ac1001159d5673e2a23996f4474261c791401867b1630429f4",
+      "platformdirs-4.13.0-py3-none-any.whl": "3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1",
+      "click-8.5.0-py3-none-any.whl": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "yosys_version": "0.70",
+    "upstream": "https://github.com/YosysHQ/yosys/tree/v0.70",
+    "wasm_sha256": "a35c25e046acdccbbebe315d93fff65fd64747141a540ecc7e602549d154eb4f"
+  },
+  "namespace": "SRAM.SramArray2P",
+  "ir": "SRAM/SramArray2P.ir.json",
+  "lean": "SRAM/SramArray2P.lean",
+  "arbitrary_inputs": [
+    {
+      "name": "c2l_undefined_0",
+      "width": 8,
+      "source": "$auto$setundef.cc:550:execute$45"
+    },
+    {
+      "name": "c2l_undefined_1",
+      "width": 8,
+      "source": "$auto$setundef.cc:550:execute$47"
+    },
+    {
+      "name": "c2l_undefined_2",
+      "width": 16,
+      "source": "$auto$setundef.cc:550:execute$49"
+    }
+  ],
+  "lean_checked": true,
+  "hardware": {
+    "register_cells": 2,
+    "memory_cells": 1,
+    "clock": null,
+    "clock_mode": "global"
+  },
+  "nodes": 108,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-sram-7.3\\SramArray2P\\translation\\20261015T091530Z-48df6139",
+  "semantics": "Two-state explicit global sampling steps using official clk2fflogic, including multiple clocks, gated clocks, negative edges, latches, and supported asynchronous FF controls. Inputs must satisfy the negative-hold-time and stable-reset-release contract of clk2fflogic. This is not arbitrary-delay or IEEE four-state simulation equivalence.",
+  "reader_sha256": "5d6e9445db19e04c85ac161aa78f13bb51f29df7cf29a83c2b47b238a8b28d48",
+  "driver_sha256": "cab38cd0bc0ff273e178a2a6923c79e699791081dd00fff232b1dd65d15369b3",
+  "artifact_sha256": {
+    "before.json": "9adb11fbf0690f3850f067b58d419aab0515439e8e3d58e6c0c3f46376c1e679",
+    "exposed.json": "eaf7a742a069609d8347d8ccd8e7bffb4dcfb82c9a30d5ff6ca01275107d8b5b",
+    "lowered.json": "e41a99603bd8a708025add4f328729393a18e27209f65ad19fff6d66c1ce1799",
+    "functional.smt2": "98f352191474d8230fb4a5fec4150c58194a95aeabcde4f32da467ef380394d3",
+    "SRAM/SramArray2P.lean": "0ef2218e32c2035830dac56adb0a79bb2145e5a049684e9ba9dfd9a4e6b35628",
+    "SRAM/SramArray2P.ir.json": "7bfe2a1f0051d16356fd94263f16fb5ffe1d0747783cfd4d01954d01529a6e79"
+  }
+}

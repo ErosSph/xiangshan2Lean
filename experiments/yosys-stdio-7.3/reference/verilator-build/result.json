@@ -1,0 +1,29 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "Stdio",
+    "--Mdir",
+    "obj_dir",
+    "Stdio.sv",
+    "trace.cpp"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-stdio-7.3",
+  "started_at": "2026-10-15T10:41:33.516490+00:00",
+  "pid": 29840,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T10:42:10.664753+00:00"
+}

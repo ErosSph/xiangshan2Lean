@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "clocked-checks-and-events",
+      "status": "PASS",
+      "cycles": 160,
+      "output_comparisons": 320,
+      "print_events": 155
+    },
+    {
+      "case": "assert-violation-detected-by-both-executors",
+      "status": "PASS"
+    },
+    {
+      "case": "assume-violation-detected-by-both-executors",
+      "status": "PASS"
+    },
+    {
+      "case": "disabled-check-does-not-observe-undefined-condition",
+      "status": "PASS"
+    }
+  ],
+  "effect_contract": "Official chformal/clk2fflogic lowering. Enabled checks inspect pre-NBA values. Assertions and assumptions reject execution on failure; cover conditions and print arguments are retained as observations.",
+  "scope": "Single direct positive-edge clock and combinational effects. Generic DPI/system tasks and temporal SVA are not covered."
+}

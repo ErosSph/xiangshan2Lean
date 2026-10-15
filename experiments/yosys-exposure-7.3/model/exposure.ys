@@ -1,0 +1,23 @@
+cd \Observed
+select -assert-none w:c2l_bridge_* c:c2l_bridge_*
+rename $12 \c2l_bridge_effect_0
+rename $15 \c2l_bridge_effect_1
+rename $17 \c2l_bridge_effect_2
+rename $6 \c2l_bridge_effect_3
+rename $9 \c2l_bridge_effect_4
+rename $auto$setundef.cc:550:execute$109 \c2l_bridge_undefined_0
+expose -evert -sep _ c:c2l_bridge_effect_* c:c2l_bridge_undefined_*
+rename \c2l_bridge_effect_0_EN \c2l_effect_0_enable
+rename \c2l_bridge_effect_0_A \c2l_effect_0_condition
+rename \c2l_bridge_effect_1_EN \c2l_effect_1_enable
+rename \c2l_bridge_effect_2_EN \c2l_effect_2_enable
+rename \c2l_bridge_effect_2_ARGS \c2l_effect_2_arguments
+rename \c2l_bridge_effect_3_EN \c2l_effect_3_enable
+rename \c2l_bridge_effect_3_A \c2l_effect_3_condition
+rename \c2l_bridge_effect_4_EN \c2l_effect_4_enable
+rename \c2l_bridge_effect_4_A \c2l_effect_4_condition
+rename \c2l_bridge_undefined_0_Y \c2l_undefined_0
+delete w:c2l_bridge_effect_*_TRG
+delete w:c2l_bridge_* s:0 %i
+cd ..
+select -clear

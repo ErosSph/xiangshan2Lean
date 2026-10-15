@@ -1,0 +1,53 @@
+
+-- Running command `read_rtlil ./hierarchy.il; hierarchy -check -top Nested; flatten Nested; hierarchy -check -top Nested; opt_clean; memory_collect; write_json ./before.json' --
+
+1. Executing RTLIL frontend.
+Input filename: ./hierarchy.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \Nested
+Used module:     \Branch$Nested.right
+Used module:         \Middle$Nested.right.middle
+Used module:             \Leaf$Nested.right.middle.leaf
+Used module:     \Branch$Nested.left
+Used module:         \Middle$Nested.left.middle
+Used module:             \Leaf$Nested.left.middle.leaf
+
+2.2. Analyzing design hierarchy..
+Top module:  \Nested
+Used module:     \Branch$Nested.right
+Used module:         \Middle$Nested.right.middle
+Used module:             \Leaf$Nested.right.middle.leaf
+Used module:     \Branch$Nested.left
+Used module:         \Middle$Nested.left.middle
+Used module:             \Leaf$Nested.left.middle.leaf
+Removed 0 unused modules.
+
+3. Executing FLATTEN pass (flatten design).
+<suppressed ~6 debug messages>
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \Nested
+
+4.2. Analyzing design hierarchy..
+Top module:  \Nested
+Removing unused module `\Leaf$Nested.right.middle.leaf'.
+Removing unused module `\Leaf$Nested.left.middle.leaf'.
+Removing unused module `\Middle$Nested.right.middle'.
+Removing unused module `\Middle$Nested.left.middle'.
+Removing unused module `\Branch$Nested.right'.
+Removing unused module `\Branch$Nested.left'.
+Removed 6 unused modules.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Nested..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+6. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7. Executing JSON backend.

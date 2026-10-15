@@ -1,0 +1,53 @@
+
+-- Running command `read_rtlil ./unconstrained.il; script ./exposure.ys; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2' --
+
+1. Executing RTLIL frontend.
+Input filename: ./unconstrained.il
+
+-- Executing script file `./exposure.ys' --
+Renaming cell $12 to c2l_bridge_effect_0 in module Observed.
+Renaming cell $15 to c2l_bridge_effect_1 in module Observed.
+Renaming cell $17 to c2l_bridge_effect_2 in module Observed.
+Renaming cell $6 to c2l_bridge_effect_3 in module Observed.
+Renaming cell $9 to c2l_bridge_effect_4 in module Observed.
+Renaming cell $auto$setundef.cc:550:execute$109 to c2l_bridge_undefined_0 in module Observed.
+
+2. Executing EXPOSE pass (exposing internal signals as outputs).
+New module port: Observed/c2l_bridge_undefined_0_Y ($anyseq)
+New module port: Observed/c2l_bridge_effect_1_ARGS ($print)
+New module port: Observed/c2l_bridge_effect_1_TRG ($print)
+New module port: Observed/c2l_bridge_effect_1_EN ($print)
+New module port: Observed/c2l_bridge_effect_0_EN ($cover)
+New module port: Observed/c2l_bridge_effect_0_A ($cover)
+New module port: Observed/c2l_bridge_effect_4_EN ($assume)
+New module port: Observed/c2l_bridge_effect_4_A ($assume)
+New module port: Observed/c2l_bridge_effect_3_EN ($assert)
+New module port: Observed/c2l_bridge_effect_3_A ($assert)
+New module port: Observed/c2l_bridge_effect_2_ARGS ($print)
+New module port: Observed/c2l_bridge_effect_2_TRG ($print)
+New module port: Observed/c2l_bridge_effect_2_EN ($print)
+Removing cell: Observed/c2l_bridge_undefined_0 ($anyseq)
+Removing cell: Observed/c2l_bridge_effect_1 ($print)
+Removing cell: Observed/c2l_bridge_effect_0 ($cover)
+Removing cell: Observed/c2l_bridge_effect_4 ($assume)
+Removing cell: Observed/c2l_bridge_effect_3 ($assert)
+Removing cell: Observed/c2l_bridge_effect_2 ($print)
+Renaming wire c2l_bridge_effect_0_EN to c2l_effect_0_enable in module Observed.
+Renaming wire c2l_bridge_effect_0_A to c2l_effect_0_condition in module Observed.
+Renaming wire c2l_bridge_effect_1_EN to c2l_effect_1_enable in module Observed.
+Renaming wire c2l_bridge_effect_2_EN to c2l_effect_2_enable in module Observed.
+Renaming wire c2l_bridge_effect_2_ARGS to c2l_effect_2_arguments in module Observed.
+Renaming wire c2l_bridge_effect_3_EN to c2l_effect_3_enable in module Observed.
+Renaming wire c2l_bridge_effect_3_A to c2l_effect_3_condition in module Observed.
+Renaming wire c2l_bridge_effect_4_EN to c2l_effect_4_enable in module Observed.
+Renaming wire c2l_bridge_effect_4_A to c2l_effect_4_condition in module Observed.
+Renaming wire c2l_bridge_undefined_0_Y to c2l_undefined_0 in module Observed.
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module Observed...
+Found and reported 0 problems.
+
+4. Executing JSON backend.
+
+5. Executing Functional SMT Backend.
+Processing module `\Observed`.

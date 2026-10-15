@@ -1,0 +1,16 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_rtlil ./hierarchy.il; hierarchy -check -top ProjectTop; flatten ProjectTop; hierarchy -check -top ProjectTop; opt_clean; memory_collect; write_rtlil ./before.il; write_json ./before.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-checkpoint-7.3\\resumed-translation\\20261015T122824Z-379b334a\\artifacts",
+  "started_at": "2026-10-15T12:28:24.927282+00:00",
+  "pid": 30532,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T12:28:25.357005+00:00"
+}

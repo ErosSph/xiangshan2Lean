@@ -1,0 +1,39 @@
+
+-- Running command `read_rtlil ./hierarchy.il; hierarchy -check -top ProjectTop; flatten ProjectTop; hierarchy -check -top ProjectTop; opt_clean; memory_collect; write_rtlil ./before.il; write_json ./before.json' --
+
+1. Executing RTLIL frontend.
+Input filename: ./hierarchy.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ProjectTop
+Used module:     \Lane$ProjectTop.lane
+
+2.2. Analyzing design hierarchy..
+Top module:  \ProjectTop
+Used module:     \Lane$ProjectTop.lane
+Removed 0 unused modules.
+
+3. Executing FLATTEN pass (flatten design).
+<suppressed ~1 debug messages>
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \ProjectTop
+
+4.2. Analyzing design hierarchy..
+Top module:  \ProjectTop
+Removing unused module `\Lane$ProjectTop.lane'.
+Removed 1 unused modules.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ProjectTop..
+
+6. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7. Executing RTLIL backend.
+Output filename: ./before.il
+
+8. Executing JSON backend.

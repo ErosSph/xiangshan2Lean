@@ -1,0 +1,32 @@
+
+-- Running command `read_json ./before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json ./unconstrained.json' --
+
+1. Executing JSON frontend.
+Importing module Clocks from JSON tree.
+
+2. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Replacing Clocks.$10 ($dlatch): EN=$6 [2], D=$7 [2], Q=\l [2]
+Replacing Clocks.$11 ($dlatch): EN=$6 [3], D=$7 [3], Q=\l [3]
+Replacing Clocks.$12 ($dlatch): EN=$6 [4], D=$7 [4], Q=\l [4]
+Replacing Clocks.$13 ($dlatch): EN=$6 [5], D=$7 [5], Q=\l [5]
+Replacing Clocks.$14 ($dlatch): EN=$6 [6], D=$7 [6], Q=\l [6]
+Replacing Clocks.$15 ($dlatch): EN=$6 [7], D=$7 [7], Q=\l [7]
+Replacing Clocks.$21 ($dlatch): EN=$19, D=$20, Q=\gate_open
+Replacing Clocks.$8 ($dlatch): EN=$6 [0], D=$7 [0], Q=\l [0]
+Replacing Clocks.$9 ($dlatch): EN=$6 [1], D=$7 [1], Q=\l [1]
+Replacing Clocks.$driver$a ($aldff): CLK=\c1, D=\d, Q=\a
+Replacing Clocks.$driver$crossed ($dff): CLK=\c1, D=\n, Q=\crossed
+Replacing Clocks.$driver$g ($dff): CLK=\gated_clock, D=\d, Q=\g
+Replacing Clocks.$driver$n ($dff): CLK=\c2, D=\d, Q=\n
+Replacing Clocks.$driver$p ($dff): CLK=\c1, D=\d, Q=\p
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Clocks..
+Removed 0 unused cells and 14 unused wires.
+<suppressed ~1 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing JSON backend.

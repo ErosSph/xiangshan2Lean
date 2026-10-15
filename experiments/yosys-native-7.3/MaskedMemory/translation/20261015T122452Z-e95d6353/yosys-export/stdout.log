@@ -1,0 +1,34 @@
+
+-- Running command `read_rtlil ./unconstrained.il; script ./exposure.ys; check -assert; write_json ./lowered.json; write_functional_smt2 ./functional.smt2' --
+
+1. Executing RTLIL frontend.
+Input filename: ./unconstrained.il
+
+-- Executing script file `./exposure.ys' --
+Renaming cell $auto$setundef.cc:550:execute$57 to c2l_bridge_undefined_0 in module MaskedMemory.
+Renaming cell $auto$setundef.cc:550:execute$59 to c2l_bridge_undefined_1 in module MaskedMemory.
+Renaming cell $auto$setundef.cc:550:execute$61 to c2l_bridge_undefined_2 in module MaskedMemory.
+Renaming cell $auto$setundef.cc:550:execute$63 to c2l_bridge_undefined_3 in module MaskedMemory.
+
+2. Executing EXPOSE pass (exposing internal signals as outputs).
+New module port: MaskedMemory/c2l_bridge_undefined_3_Y ($anyseq)
+New module port: MaskedMemory/c2l_bridge_undefined_1_Y ($anyseq)
+New module port: MaskedMemory/c2l_bridge_undefined_0_Y ($anyseq)
+New module port: MaskedMemory/c2l_bridge_undefined_2_Y ($anyseq)
+Removing cell: MaskedMemory/c2l_bridge_undefined_3 ($anyseq)
+Removing cell: MaskedMemory/c2l_bridge_undefined_1 ($anyseq)
+Removing cell: MaskedMemory/c2l_bridge_undefined_0 ($anyseq)
+Removing cell: MaskedMemory/c2l_bridge_undefined_2 ($anyseq)
+Renaming wire c2l_bridge_undefined_0_Y to c2l_undefined_0 in module MaskedMemory.
+Renaming wire c2l_bridge_undefined_1_Y to c2l_undefined_1 in module MaskedMemory.
+Renaming wire c2l_bridge_undefined_2_Y to c2l_undefined_2 in module MaskedMemory.
+Renaming wire c2l_bridge_undefined_3_Y to c2l_undefined_3 in module MaskedMemory.
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module MaskedMemory...
+Found and reported 0 problems.
+
+4. Executing JSON backend.
+
+5. Executing Functional SMT Backend.
+Processing module `\MaskedMemory`.

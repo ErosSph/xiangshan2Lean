@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": 0,
+      "steps": 256,
+      "data_sha256": "34a1f08e4fd716d511c2cd0014d3236359b7248de17638e76be515c06a118b92",
+      "reference_sha256": "d2a68b929c31037dd11b4552e11b94202848aeff1ff62d378d2a254f93d6d275"
+    },
+    {
+      "case": 1,
+      "steps": 153,
+      "data_sha256": "da3371277e3b965dbb516ecc89b27f2226038b77b0ba15d4c5b0a05ecfb355fa",
+      "reference_sha256": "d7e50fabaf3ad3c1356001a25701f245503201bb721e506429466b6d227d86b0"
+    },
+    {
+      "case": 2,
+      "steps": 384,
+      "data_sha256": "68f8dbd9c1773eabfed60d283082dad73299cefafc994fb322558f2909a73a30",
+      "reference_sha256": "40cb365744c37321fa927cbf26d88be444d70c06f4b01216338074a04e7d1eea"
+    },
+    {
+      "case": 3,
+      "steps": 640,
+      "data_sha256": "66bb192b37e5db8c8720614f7af146b44690f66c9b8da685d388746502ce6ff9",
+      "reference_sha256": "1fc9780889d3860f809914f4a2761b04b5e0f634c4ad724a4fda8c0cfda34365"
+    },
+    {
+      "case": 4,
+      "steps": 640,
+      "data_sha256": "b3a6a45d174599e18638399a1f7d06887e9217fe690d139f15a8ff53c6a9aeff",
+      "reference_sha256": "43a29636674fa41b2dff2af0973382a50700b0dbb5fcff3731178871074bd5ce"
+    },
+    {
+      "case": 5,
+      "steps": 1120,
+      "data_sha256": "9a24e4009d18b17bf0363f2c1125f558fd56022f6b6464a1b6f348aae41d9d2e",
+      "reference_sha256": "b0db90eddbd2030514efdfe1fe64de65aeed94c5c74f4251ca7465bac224f004"
+    },
+    {
+      "case": 6,
+      "steps": 128,
+      "data_sha256": "cf5a00c68abfe828fbb5c8b57384e3138e7413083ba5d564d751ef4222ddd8dd",
+      "reference_sha256": "263bee515db36ebf9dbfe33ae5f7da520af4f3a535ca553adc950cdcc2728381"
+    },
+    {
+      "case": 7,
+      "steps": 1,
+      "data_sha256": "13e55a5f20e2d76f34e9ae97ef4b00e384c1fe2e1658098696141181b4691ae3",
+      "reference_sha256": "aed22bd44aa37bd95361a53110b7d0b846f82e64401ed6fb5090a85e3d17d297"
+    },
+    {
+      "case": 8,
+      "steps": 160,
+      "data_sha256": "49edb78e38fdbcbff0714c406d7940b1ee94d1dd81ebff9b2534decfe9bdd3d6",
+      "reference_sha256": "a913ee4ca9b9c759945a969029a036434ccc0a3145c4f513a45d423954501fa9"
+    },
+    {
+      "case": 9,
+      "steps": 2,
+      "data_sha256": "44fa1fad117ef3b13d1a2e0a32eb51e650aab87ad37b1cb33728c36e7e3e9c99",
+      "reference_sha256": "94491aec6af709edb403dcdeaced825cb80defdd8e000f9bca873f4d43a0eaa8"
+    },
+    {
+      "case": 10,
+      "steps": 48,
+      "data_sha256": "34dd2e25ae88010c9efdb15f9349ea784f374a8ed933d0f66c93ce02f438b959",
+      "reference_sha256": "ec7601dddee7e357d249f7cfa5e69835becfc2d881fa36ddfbce214ef372b90b"
+    },
+    {
+      "case": 11,
+      "steps": 801,
+      "data_sha256": "b692acad64b4814a01a9249a8d26f2533b13d60e41fdac2f9ede0e53b65a1b22",
+      "reference_sha256": "28d03282bc11fea46aa2dd003399446741bed4cdd7e70f4085b02dcc985a4612"
+    },
+    {
+      "case": 12,
+      "steps": 907,
+      "data_sha256": "b3b07cceba8839328e78166f2e66a63bf509eea64f18944ef6d4d1169b74e151",
+      "reference_sha256": "15ecd627807bf05f14f84b2a85529ee5f3b69426d0d12a7186da18d45298cf26"
+    }
+  ],
+  "runner_manifest_sha256": "43303545089cd17c1c56017b0f1a716483db7add897dcec78f30fd8a58bb0980",
+  "scope": "The same Lean definitions compiled by the pinned Lean/Clang toolchain reproduce every output and observation of the bytecode models and their RTL/initial-state contract references."
+}

@@ -1,0 +1,25 @@
+{
+  "format": "xiangshan-whole-lean-v1",
+  "config": "DefaultConfig",
+  "cores": 1,
+  "yosys_engine": "native",
+  "initialization_profile": "caller-state",
+  "stdio_compatibility": "Fixed standard-stream $fwrite preserved as observations; original RTL retained.",
+  "top": "XSTop",
+  "source_package": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T140607Z-4ffb274a\\source-package.json",
+  "lowering": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-full-7.3\\20261015T083406Z-cc618ef8\\lowering-caller-state\\summary.json",
+  "status": "REQUIRES_RESOURCES",
+  "rtl_units_and_headers": 982,
+  "lean_compilation": "NOT_REACHED",
+  "top_level_differential": "NOT_RUN",
+  "universal_equivalence": "NOT_PROVED",
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T140607Z-4ffb274a",
+  "tool_exit_codes": {},
+  "diagnostic": "",
+  "reused_stages": [
+    "yosys-export",
+    "yosys-functional",
+    "yosys-prepare"
+  ],
+  "blocking_diagnostics": []
+}

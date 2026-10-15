@@ -1,0 +1,60 @@
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\Lane$ProjectTop.lane": {
+         "num_wires":         6,
+         "num_wire_bits":     49,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 12,
+         "num_ports":         4,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$mux": 1
+         }
+      },
+      "\\ProjectTop": {
+         "num_wires":         4,
+         "num_wire_bits":     12,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 12,
+         "num_ports":         4,
+         "num_port_bits":     12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "Lane$ProjectTop.lane": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         10,
+         "num_wire_bits":     61,
+         "num_pub_wires":     8,
+         "num_pub_wire_bits": 24,
+         "num_ports":         8,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$mux": 1,
+            "Lane$ProjectTop.lane": 1
+         }
+      }
+}
+

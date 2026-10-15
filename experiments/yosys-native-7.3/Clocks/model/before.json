@@ -1,0 +1,645 @@
+{
+  "creator": "Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+  "modules": {
+    "Clocks": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "design.v:1.8"
+      },
+      "ports": {
+        "a": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "c1": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "c2": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "latch_en": {
+          "direction": "input",
+          "bits": [ 13 ]
+        },
+        "gate_en": {
+          "direction": "input",
+          "bits": [ 14 ]
+        },
+        "d": {
+          "direction": "input",
+          "bits": [ 15, 16, 17, 18, 19, 20, 21, 22 ]
+        },
+        "p": {
+          "direction": "output",
+          "bits": [ 23, 24, 25, 26, 27, 28, 29, 30 ]
+        },
+        "n": {
+          "direction": "output",
+          "bits": [ 31, 32, 33, 34, 35, 36, 37, 38 ]
+        },
+        "l": {
+          "direction": "output",
+          "bits": [ 39, 40, 41, 42, 43, 44, 45, 46 ]
+        },
+        "g": {
+          "direction": "output",
+          "bits": [ 47, 48, 49, 50, 51, 52, 53, 54 ]
+        },
+        "crossed": {
+          "direction": "output",
+          "bits": [ 55, 56, 57, 58, 59, 60, 61, 62 ]
+        }
+      },
+      "cells": {
+        "$10": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:10.1"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 63 ],
+            "EN": [ 64 ],
+            "Q": [ 41 ]
+          }
+        },
+        "$11": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:10.1"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 65 ],
+            "EN": [ 66 ],
+            "Q": [ 42 ]
+          }
+        },
+        "$12": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:10.1"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 67 ],
+            "EN": [ 68 ],
+            "Q": [ 43 ]
+          }
+        },
+        "$13": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:10.1"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 69 ],
+            "EN": [ 70 ],
+            "Q": [ 44 ]
+          }
+        },
+        "$14": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:10.1"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 71 ],
+            "EN": [ 72 ],
+            "Q": [ 45 ]
+          }
+        },
+        "$15": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:10.1"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 73 ],
+            "EN": [ 74 ],
+            "Q": [ 46 ]
+          }
+        },
+        "$17": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:11.17-11.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "Y": [ 75 ]
+          }
+        },
+        "$21": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:11.1"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 76 ],
+            "EN": [ 77 ],
+            "Q": [ 78 ]
+          }
+        },
+        "$22": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:12.20-12.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 78 ],
+            "Y": [ 79 ]
+          }
+        },
+        "$8": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:10.1"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 80 ],
+            "EN": [ 81 ],
+            "Q": [ 39 ]
+          }
+        },
+        "$9": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:10.1"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 82 ],
+            "EN": [ 83 ],
+            "Q": [ 40 ]
+          }
+        },
+        "$driver$a": {
+          "hide_name": 1,
+          "type": "$aldff",
+          "parameters": {
+            "ALOAD_POLARITY": "00000000000000000000000000000001",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "design.v:9.1"
+          },
+          "port_directions": {
+            "AD": "input",
+            "ALOAD": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "AD": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "ALOAD": [ 10 ],
+            "CLK": [ 11 ],
+            "D": [ 15, 16, 17, 18, 19, 20, 21, 22 ],
+            "Q": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+          }
+        },
+        "$driver$crossed": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "design.v:7.1"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 11 ],
+            "D": [ 31, 32, 33, 34, 35, 36, 37, 38 ],
+            "Q": [ 55, 56, 57, 58, 59, 60, 61, 62 ]
+          }
+        },
+        "$driver$g": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "design.v:13.1"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 79 ],
+            "D": [ 15, 16, 17, 18, 19, 20, 21, 22 ],
+            "Q": [ 47, 48, 49, 50, 51, 52, 53, 54 ]
+          }
+        },
+        "$driver$n": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "design.v:8.1"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 12 ],
+            "D": [ 15, 16, 17, 18, 19, 20, 21, 22 ],
+            "Q": [ 31, 32, 33, 34, 35, 36, 37, 38 ]
+          }
+        },
+        "$driver$p": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "design.v:7.1"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 11 ],
+            "D": [ 15, 16, 17, 18, 19, 20, 21, 22 ],
+            "Q": [ 23, 24, 25, 26, 27, 28, 29, 30 ]
+          }
+        },
+        "$procmux$11": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:11.22-11.43|design.v:11.14-11.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 75 ],
+            "Y": [ 77 ]
+          }
+        },
+        "$procmux$3": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "design.v:10.27-10.34|design.v:10.14-10.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 15, 16, 17, 18, 19, 20, 21, 22 ],
+            "S": [ 13 ],
+            "Y": [ 80, 82, 63, 65, 67, 69, 71, 73 ]
+          }
+        },
+        "$procmux$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "design.v:10.27-10.34|design.v:10.14-10.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "S": [ 13 ],
+            "Y": [ 81, 83, 64, 66, 68, 70, 72, 74 ]
+          }
+        },
+        "$procmux$9": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "design.v:11.22-11.43|design.v:11.14-11.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 14 ],
+            "S": [ 75 ],
+            "Y": [ 76 ]
+          }
+        }
+      },
+      "netnames": {
+        "$17y": {
+          "hide_name": 1,
+          "bits": [ 75 ],
+          "attributes": {
+          }
+        },
+        "$19": {
+          "hide_name": 1,
+          "bits": [ 77 ],
+          "attributes": {
+          }
+        },
+        "$20": {
+          "hide_name": 1,
+          "bits": [ 76 ],
+          "attributes": {
+          }
+        },
+        "$6": {
+          "hide_name": 1,
+          "bits": [ 81, 83, 64, 66, 68, 70, 72, 74 ],
+          "attributes": {
+          }
+        },
+        "$7": {
+          "hide_name": 1,
+          "bits": [ 80, 82, 63, 65, 67, 69, 71, 73 ],
+          "attributes": {
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "hdlname": "a",
+            "init": "00000000",
+            "src": "design.v:4.26"
+          }
+        },
+        "c1": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "hdlname": "c1",
+            "src": "design.v:2.9"
+          }
+        },
+        "c2": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "hdlname": "c2",
+            "src": "design.v:2.13"
+          }
+        },
+        "crossed": {
+          "hide_name": 0,
+          "bits": [ 55, 56, 57, 58, 59, 60, 61, 62 ],
+          "attributes": {
+            "hdlname": "crossed",
+            "init": "00000000",
+            "src": "design.v:4.35"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 15, 16, 17, 18, 19, 20, 21, 22 ],
+          "attributes": {
+            "hdlname": "d",
+            "src": "design.v:3.15"
+          }
+        },
+        "g": {
+          "hide_name": 0,
+          "bits": [ 47, 48, 49, 50, 51, 52, 53, 54 ],
+          "attributes": {
+            "hdlname": "g",
+            "init": "00000000",
+            "src": "design.v:4.32"
+          }
+        },
+        "gate_en": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "hdlname": "gate_en",
+            "src": "design.v:2.34"
+          }
+        },
+        "gate_open": {
+          "hide_name": 0,
+          "bits": [ 78 ],
+          "attributes": {
+            "hdlname": "gate_open",
+            "init": "0",
+            "src": "design.v:5.5"
+          }
+        },
+        "gated_clock": {
+          "hide_name": 0,
+          "bits": [ 79 ],
+          "attributes": {
+            "hdlname": "gated_clock",
+            "src": "design.v:12.6"
+          }
+        },
+        "l": {
+          "hide_name": 0,
+          "bits": [ 39, 40, 41, 42, 43, 44, 45, 46 ],
+          "attributes": {
+            "hdlname": "l",
+            "init": "00000000",
+            "src": "design.v:4.29"
+          }
+        },
+        "latch_en": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "hdlname": "latch_en",
+            "src": "design.v:2.24"
+          }
+        },
+        "n": {
+          "hide_name": 0,
+          "bits": [ 31, 32, 33, 34, 35, 36, 37, 38 ],
+          "attributes": {
+            "hdlname": "n",
+            "init": "00000000",
+            "src": "design.v:4.23"
+          }
+        },
+        "p": {
+          "hide_name": 0,
+          "bits": [ 23, 24, 25, 26, 27, 28, 29, 30 ],
+          "attributes": {
+            "hdlname": "p",
+            "init": "00000000",
+            "src": "design.v:4.20"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "hdlname": "reset",
+            "src": "design.v:2.17"
+          }
+        }
+      }
+    }
+  }
+}

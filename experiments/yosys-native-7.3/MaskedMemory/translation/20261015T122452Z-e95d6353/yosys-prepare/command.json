@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_rtlil ./hierarchy.il; hierarchy -check -top MaskedMemory; flatten MaskedMemory; hierarchy -check -top MaskedMemory; opt_clean; memory_collect; write_rtlil ./before.il; write_json ./before.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-native-7.3\\MaskedMemory\\translation\\20261015T122452Z-e95d6353\\artifacts",
+  "started_at": "2026-10-15T12:24:52.827306+00:00",
+  "pid": 35928
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "outcomes": [
+    {
+      "case": "valid",
+      "lean_exit": 0,
+      "rtl_exit": 0
+    },
+    {
+      "case": "invalid",
+      "lean_exit": 1,
+      "rtl_exit": 7
+    }
+  ],
+  "scope": "Original Chisel ifelsefatal intrinsic inside nested verification layers; all layers enabled by official firtool, actual Lean and Verilator execution."
+}

@@ -1,0 +1,22 @@
+work/project/SoCMisc.sv:3112: ERROR: reading net state during design initialization unsupported
+work/project/IntBuffer_2.sv:73: ERROR: reading net state during design initialization unsupported
+work/project/IntBuffer_2.sv:73: ERROR: reading net state during design initialization unsupported
+work/project/ResetGen.sv:72: ERROR: reading net state during design initialization unsupported
+work/project/ResetGen.sv:72: ERROR: reading net state during design initialization unsupported
+work/project/TLXbar.sv:379: ERROR: reading net state during design initialization unsupported
+work/project/TLXbar_1.sv:408: ERROR: reading net state during design initialization unsupported
+work/project/TLXbar_2.sv:890: ERROR: reading net state during design initialization unsupported
+work/project/TLXbar_3.sv:189: ERROR: reading net state during design initialization unsupported
+work/project/TLXbar_4.sv:255: ERROR: reading net state during design initialization unsupported
+work/project/TLCacheCork.sv:1469: ERROR: reading net state during design initialization unsupported
+work/project/TLWidthWidget.sv:367: ERROR: reading net state during design initialization unsupported
+work/project/AXI4Deinterleaver.sv:2506: ERROR: reading net state during design initialization unsupported
+work/project/TLToAXI4.sv:973: ERROR: reading net state during design initialization unsupported
+work/project/TLSourceShrinker.sv:167: ERROR: reading net state during design initialization unsupported
+work/project/TLToAXI4_1.sv:207: ERROR: reading net state during design initialization unsupported
+work/project/TLError.sv:126: ERROR: reading net state during design initialization unsupported
+work/project/TLFIFOFixer.sv:13040: ERROR: reading net state during design initialization unsupported
+work/project/AXI4ToTL.sv:944: ERROR: reading net state during design initialization unsupported
+work/project/AXI4Fragmenter.sv:495: ERROR: reading net state during design initialization unsupported
+ERROR: too many errors emitted, stopping now [--error-limit=]
+ERROR: Assert `!entered' failed in /workspace/YoWASP/yosys/yosys-src/frontends/slang/lib/src/statements.h:284.

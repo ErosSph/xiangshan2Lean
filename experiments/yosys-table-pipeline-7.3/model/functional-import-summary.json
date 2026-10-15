@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "stage": "typed FunctionalIR import",
+  "nodes": 120,
+  "inputs": 5,
+  "outputs": 10,
+  "states": 17,
+  "node_storage": "packed columns",
+  "packed_column_bytes": 2632,
+  "ir": "TablePipeline/Observed.ir.json",
+  "lean_compilation": "NOT_REACHED"
+}

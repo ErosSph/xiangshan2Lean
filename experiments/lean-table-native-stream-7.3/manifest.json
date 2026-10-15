@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "request_format": "jsonl-v1",
+  "runtime_sha256": "75da19ef08a2168b68e263cf292d0b099980b4470a391b9da38fe6efcd5df146",
+  "runner_source_sha256": "840cc41ef3b4702b8f21073d35a69cb7994b90171875c2dbd9f6b3253f791ca7",
+  "executable": "E:\\ICT\\chisel2lean4\\experiments\\lean-table-native-stream-7.3\\run-table.exe",
+  "executable_sha256": "f953ddd55179ffb0c8a04320259381c9b1a51f24105be39622d41d2645d2f7bc",
+  "tools_sha256": {
+    "lean.exe": "f59b0c515f65dbf96526279d77fb43152f76bdd77f5fb94f387b75139fafe68c",
+    "leanc.exe": "44249c561aeab8cde3f93d1b48abaceb3d20ddb7721eab001988c76591fbbb86",
+    "clang.exe": "1fc5c404c7f90b517053eae053bb1ca39580d6e9f322302b302ab29c1a238850",
+    "libleanshared.dll": "be79037cb5e0b477f0014d6d19d147676137e17258236b2400876f06acbcfa88",
+    "libleanshared_1.dll": "77db54d1d915b8edcbff31b05223bc138a901ba7fb16c7a2ba85576834748d67"
+  },
+  "scope": "Native compilation of the same Lean evaluator and validated binary decoder; no circuit-specific rewrite."
+}

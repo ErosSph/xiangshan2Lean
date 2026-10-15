@@ -1,0 +1,13 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "-Q",
+    "-T",
+    "-p",
+    "read_rtlil /work/hierarchy.il; hierarchy -check -top Nested; flatten Nested; hierarchy -check -top Nested; opt_clean; memory_collect; write_json /work/before.json"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-hierarchy-7.3\\wasm\\translation\\20261015T114218Z-c4b5b9d5\\artifacts",
+  "started_at": "2026-10-15T11:42:23.510453+00:00",
+  "pid": 22788
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "E:\\ICT\\chisel2lean4\\.tools\\firtool-1.135.0\\firtool-1.135.0\\bin\\firtool.exe",
+    "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\original\\design.fir",
+    "--parse-only",
+    "--mlir-print-op-generic",
+    "--mlir-print-local-scope",
+    "--mlir-print-debuginfo",
+    "-o",
+    "E:\\ICT\\chisel2lean4\\experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\firrtl-translation\\20261015T091024Z-62a0677b\\artifacts\\parsed.mlir"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4",
+  "started_at": "2026-10-15T09:10:24.479551+00:00",
+  "pid": 16468,
+  "exit_code": 0,
+  "ended_at": "2026-10-15T09:10:24.512031+00:00"
+}

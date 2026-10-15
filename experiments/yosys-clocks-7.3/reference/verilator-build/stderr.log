@@ -1,0 +1,12 @@
+%Warning-COMBDLY: Clocks.sv:10:29: Non-blocking assignment '<=' in combinational logic process
+                                 : ... This will be executed as a blocking assignment '='!
+   10 | always_latch if(latch_en) l <= d;
+      |                             ^~
+                  ... For warning description see https://verilator.org/warn/COMBDLY?v=5.048
+                  ... Use "/* verilator lint_off COMBDLY */" and lint_on around source to disable this message.
+                  *** See https://verilator.org/warn/COMBDLY?v=5.048 before disabling this,
+                  else you may end up with different sim results.
+%Warning-COMBDLY: Clocks.sv:11:32: Non-blocking assignment '<=' in combinational logic process
+                                 : ... This will be executed as a blocking assignment '='!
+   11 | always_latch if(!c1) gate_open <= gate_en;
+      |                                ^~

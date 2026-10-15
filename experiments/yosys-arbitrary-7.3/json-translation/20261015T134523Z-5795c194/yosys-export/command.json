@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\miniconda\\python.exe",
+    "E:\\ICT\\chisel2lean4\\scripts\\yosys_runner.py",
+    "--native",
+    "-Q",
+    "-T",
+    "-p",
+    "read_json ./exposed.json; check -assert; write_json ./lowered.json; select Arbitrary; write_functional_smt2 ./functional.smt2"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\yosys-arbitrary-7.3\\json-translation\\20261015T134523Z-5795c194\\artifacts",
+  "started_at": "2026-10-15T13:45:24.559649+00:00",
+  "pid": 29416
+}
