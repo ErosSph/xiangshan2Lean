@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "positive": [
+    {
+      "name": "AluGaps",
+      "status": "PASS",
+      "samples": 512,
+      "output_bit_positions": 47616,
+      "state_bit_positions": 0,
+      "source_sha256": "1fbd61ab4a1a200ba9ee71993ec630ed151ec27f5e3b14c596603965249fcc9b",
+      "manifest": "AluGaps\\translation\\fourstate-manifest.json",
+      "manifest_sha256": "a589275eef3ab32e1f08031b856e16eb9612d571bdf57bf1a5beba620567178d"
+    },
+    {
+      "name": "AluGapsState",
+      "status": "PASS",
+      "samples": 256,
+      "output_bit_positions": 2560,
+      "state_bit_positions": 2048,
+      "source_sha256": "91fe92165ac345bceea907f08c2aa251be454b0a94e4a42309c0a2bc43ea1ef6",
+      "manifest": "AluGapsState\\translation\\fourstate-manifest.json",
+      "manifest_sha256": "d711654b0013dab4992c2ae998645d4285ea5b28e32b816b0589ba7c73d56003"
+    }
+  ],
+  "rejections": [
+    {
+      "case": "VariableInitialization",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\VariableInitialization.sv:1:34: initializer unsupported (Declarator)"
+    },
+    {
+      "case": "MultipleInitializedDrivers",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\MultipleInitializedDrivers.sv:1:44: multiple drivers: T.n (ContinuousAssign)"
+    },
+    {
+      "case": "InitializedCycle",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\InitializedCycle.sv:1:33: combinational cycle: T.n (Net)"
+    },
+    {
+      "case": "ZeroReplication",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\ZeroReplication.sv:1:44: error: replication constant can only be zero inside of a concatenation\nmodule T(input a,output [1:0] y);assign y={0{a}};endmodule\n                                           ^\nE:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\ZeroReplication.sv:1:59: warning: no newline at end of file [-Wnewline-eof]\nmodule T(input a,output [1:0] y);assign y={0{a}};endmodule\n                                                          ^\n"
+    },
+    {
+      "case": "RuntimeReplication",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\RuntimeReplication.sv:1:58: error: reference to non-constant variable 'n' is not allowed in a constant expression\nmodule T(input [3:0] n,input a,output [3:0] y);assign y={n{a}};endmodule\n                                                         ^\nE:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\RuntimeReplication.sv:1:22: note: declared here\nmodule T(input [3:0] n,input a,output [3:0] y);assign y={n{a}};endmodule\n                     ^\nE:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\RuntimeReplication.sv:1:73: warning: no newline at end of file [-Wnewline-eof]\nmodule T(input [3:0] n,input a,output [3:0] y);assign y={n{a}};endmodule\n                                                                        ^\n"
+    },
+    {
+      "case": "UnknownReplication",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\UnknownReplication.sv:1:44: error: value must not have any unknown bits\nmodule T(input a,output [3:0] y);assign y={2'bxx{a}};endmodule\n                                           ^~~~~\nE:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\UnknownReplication.sv:1:63: warning: no newline at end of file [-Wnewline-eof]\nmodule T(input a,output [3:0] y);assign y={2'bxx{a}};endmodule\n                                                              ^\n"
+    },
+    {
+      "case": "PackedPort",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\PackedPort.sv:1:27: two packed dimensions supported only for internal wires (Net)"
+    },
+    {
+      "case": "PackedRegister",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\PackedRegister.sv:1:51: two packed dimensions supported only for internal wires (Variable)"
+    },
+    {
+      "case": "UnpackedMemory",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\UnpackedMemory.sv:1:33: unpacked dimensions unsupported (Declarator)"
+    },
+    {
+      "case": "DynamicScalarBit",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\DynamicScalarBit.sv:1:59: nonnegative decimal literal index required (IdentifierName)"
+    },
+    {
+      "case": "DeadRuntimeMultiply",
+      "status": "PASS",
+      "diagnostic": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\DeadRuntimeMultiply.sv:1:54: error: expected ';'\nmodule T(input a,b,output [1:0] y);wire [1:0] n=1'b0?(a*b):a;assign y=n;endmodule\n                                                     ^\nE:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\DeadRuntimeMultiply.sv:1:61: error: expected a declaration name\nmodule T(input a,b,output [1:0] y);wire [1:0] n=1'b0?(a*b):a;assign y=n;endmodule\n                                                            ^\nE:\\projects\\xiangshan2Lean\\experiments\\fourstate\\xiangshan-alu\\gaps-v5-sequential-20261016T181344Z-edf58758\\rejections\\DeadRuntimeMultiply.sv:1:82: warning: no newline at end of file [-Wnewline-eof]\nmodule T(input a,b,output [1:0] y);wire [1:0] n=1'b0?(a*b):a;assign y=n;endmodule\n                                                                                 ^\n"
+    }
+  ]
+}

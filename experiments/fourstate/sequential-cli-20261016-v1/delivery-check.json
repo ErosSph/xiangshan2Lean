@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "reports": [
+    {
+      "report": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\sequential\\20261016T143541Z-a8360f4b\\summary.json",
+      "sha256": "873fb4e21266c8fa22310623f31ec09528182169b80b3f54aaa08f58638ebb15",
+      "artifacts": 845
+    },
+    {
+      "report": "E:\\projects\\xiangshan2Lean\\experiments\\fourstate\\combinational-regression\\20261016T143439Z-a13f7cb1\\summary.json",
+      "sha256": "61a62ccbcdecf0d865d4683e1886f8b6d923da3656949034da2a7f9e03bf404d",
+      "artifacts": 817
+    }
+  ],
+  "current_implementation_matches_sequential_snapshot": true,
+  "cli_matches_original_rtl": true,
+  "original_v1_replay_unchanged": true,
+  "document_links_and_syntax_checked": true,
+  "shared_backend_changed": false
+}

@@ -1,0 +1,44 @@
+{
+  "HierarchyTop": {
+    "states": {
+      "HierarchyTop.u0.bank[0].q": [4, true, 1, 4],
+      "HierarchyTop.u0.bank[1].q": [4, true, 1, 4],
+      "HierarchyTop.u1.bank[0].q": [4, true, 1, 4],
+      "HierarchyTop.u1.bank[1].q": [4, true, 1, 4],
+      "HierarchyTop.u8.bank[0].q": [8, true, 1, 8],
+      "HierarchyTop.u8.bank[1].q": [8, true, 1, 8],
+      "HierarchyTop.u65.bank[0].q": [65, true, 1, 65],
+      "HierarchyTop.u65.bank[1].q": [65, true, 1, 65],
+      "HierarchyTop.middle.u0.bank[0].q": [4, true, 1, 4],
+      "HierarchyTop.middle.u0.bank[1].q": [4, true, 1, 4],
+      "HierarchyTop.middle.u1.bank[0].q": [4, true, 1, 4],
+      "HierarchyTop.middle.u1.bank[1].q": [4, true, 1, 4],
+      "HierarchyTop.narrow_to_wide.bank[0].q": [4, true, 1, 4],
+      "HierarchyTop.narrow_to_wide.bank[1].q": [4, true, 1, 4]
+    },
+    "instance_parameters": {
+      "HierarchyTop.u0": {"W": 4, "STYLE": 0, "STEP": 0},
+      "HierarchyTop.u1": {"W": 4, "STYLE": 0, "STEP": 0},
+      "HierarchyTop.u8": {"W": 8, "STYLE": 1, "STEP": -1},
+      "HierarchyTop.u65": {"W": 65, "STYLE": 2, "STEP": -1},
+      "HierarchyTop.middle.u0": {"W": 4, "STYLE": 0, "STEP": 0},
+      "HierarchyTop.middle.u1": {"W": 4, "STYLE": 1, "STEP": 0},
+      "HierarchyTop.narrow_to_wide": {"W": 4, "STYLE": 0, "STEP": 0}
+    },
+    "local_parameters": {"HierarchyTop.u65.DB": 65, "HierarchyTop.u8.LG": 2},
+    "ports": {"b": [8, true, 0, 7], "wide": [65, true, 68, 4]}
+  },
+  "HierarchySwap": {
+    "states": {"HierarchySwap.u0.q": [1, false, 0, 0], "HierarchySwap.u1.q": [1, false, 0, 0]},
+    "instance_parameters": {}, "local_parameters": {}, "ports": {}
+  },
+  "PathCollision": {
+    "states": {"PathCollision.a.b.q": [1, false, 0, 0], "PathCollision.a_b.q": [1, false, 0, 0]},
+    "instance_parameters": {}, "local_parameters": {}, "ports": {}
+  },
+  "HierarchyComb": {
+    "states": {},
+    "instance_parameters": {"HierarchyComb.c4": {"W": 4}, "HierarchyComb.c8": {"W": 8}, "HierarchyComb.c65": {"W": 65}},
+    "local_parameters": {}, "ports": {"b": [8, false, 0, 7]}
+  }
+}

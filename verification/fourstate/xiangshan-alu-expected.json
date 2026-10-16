@@ -1,0 +1,26 @@
+{
+  "top": "AluDataModule",
+  "ports": {
+    "io_src_0": ["input", 64, false],
+    "io_src_1": ["input", 64, false],
+    "io_func": ["input", 7, false],
+    "io_pred_taken": ["input", 1, false],
+    "io_isBranch": ["input", 1, false],
+    "io_result": ["output", 64, false],
+    "io_taken": ["output", 1, false],
+    "io_mispredict": ["output", 1, false]
+  },
+  "states": [],
+  "instances": {
+    "AluDataModule.leftShiftModule": "LeftShiftModule",
+    "AluDataModule.rightShiftModule": "RightShiftModule",
+    "AluDataModule.addModule": "AddModule",
+    "AluDataModule.subModule": "SubModule",
+    "AluDataModule.leftShiftWordModule": "LeftShiftWordModule",
+    "AluDataModule.rightShiftWordModule": "RightShiftWordModule",
+    "AluDataModule.shiftResSel": "ShiftResultSelect",
+    "AluDataModule.miscResSel": "MiscResultSelect",
+    "AluDataModule.wordResSel": "WordResultSelect",
+    "AluDataModule.aluResSel": "AluResSel"
+  }
+}

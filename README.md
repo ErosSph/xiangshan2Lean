@@ -20,6 +20,8 @@ python scripts/yosys2lean.py design.sv --top Design --out generated/design
 
 生成 `generated/design/Yosys/Design.lean`，默认检查 Lean 编译。安装和完整示例见 [使用说明](docs/yosys-frontend.md)。
 
+独立四态实验入口已验证组合逻辑及单时钟同步复位子集，采用显式状态转移，不替换默认二态流程，见 [四态使用与协作约定](docs/fourstate-frontend.md)。
+
 ## 验证
 
 已通过 7 组配置、115,500 次 RTL 输出比较，包括 Counter、流水线、存储器 Queue，以及香山的 `AluDataModule` 和 `L2TlbPrefetch`。

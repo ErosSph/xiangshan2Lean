@@ -1,0 +1,2270 @@
+[
+  {
+    "sample": 0,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 1,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 2,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 3,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 4,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 5,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 6,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    }
+  },
+  {
+    "sample": 7,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    }
+  },
+  {
+    "sample": 8,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    }
+  },
+  {
+    "sample": 9,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    }
+  },
+  {
+    "sample": 10,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    }
+  },
+  {
+    "sample": 11,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    }
+  },
+  {
+    "sample": 12,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    }
+  },
+  {
+    "sample": 13,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    }
+  },
+  {
+    "sample": 14,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0011",
+        "widened": "00100",
+        "decreased": "0010",
+        "negated": "1101"
+      },
+      "states": {
+        "q": "0011"
+      }
+    }
+  },
+  {
+    "sample": 15,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0011",
+        "widened": "00100",
+        "decreased": "0010",
+        "negated": "1101"
+      },
+      "states": {
+        "q": "0011"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0011",
+        "widened": "00100",
+        "decreased": "0010",
+        "negated": "1101"
+      },
+      "states": {
+        "q": "0011"
+      }
+    }
+  },
+  {
+    "sample": 16,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0011",
+        "widened": "00100",
+        "decreased": "0010",
+        "negated": "1101"
+      },
+      "states": {
+        "q": "0011"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0011",
+        "widened": "00100",
+        "decreased": "0010",
+        "negated": "1101"
+      },
+      "states": {
+        "q": "0011"
+      }
+    }
+  },
+  {
+    "sample": 17,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0011",
+        "widened": "00100",
+        "decreased": "0010",
+        "negated": "1101"
+      },
+      "states": {
+        "q": "0011"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0011",
+        "widened": "00100",
+        "decreased": "0010",
+        "negated": "1101"
+      },
+      "states": {
+        "q": "0011"
+      }
+    }
+  },
+  {
+    "sample": 18,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0011",
+        "widened": "00100",
+        "decreased": "0010",
+        "negated": "1101"
+      },
+      "states": {
+        "q": "0011"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0100",
+        "widened": "00101",
+        "decreased": "0011",
+        "negated": "1100"
+      },
+      "states": {
+        "q": "0100"
+      }
+    }
+  },
+  {
+    "sample": 19,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0100",
+        "widened": "00101",
+        "decreased": "0011",
+        "negated": "1100"
+      },
+      "states": {
+        "q": "0100"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0100",
+        "widened": "00101",
+        "decreased": "0011",
+        "negated": "1100"
+      },
+      "states": {
+        "q": "0100"
+      }
+    }
+  },
+  {
+    "sample": 20,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0100",
+        "widened": "00101",
+        "decreased": "0011",
+        "negated": "1100"
+      },
+      "states": {
+        "q": "0100"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0100",
+        "widened": "00101",
+        "decreased": "0011",
+        "negated": "1100"
+      },
+      "states": {
+        "q": "0100"
+      }
+    }
+  },
+  {
+    "sample": 21,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0100",
+        "widened": "00101",
+        "decreased": "0011",
+        "negated": "1100"
+      },
+      "states": {
+        "q": "0100"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0100",
+        "widened": "00101",
+        "decreased": "0011",
+        "negated": "1100"
+      },
+      "states": {
+        "q": "0100"
+      }
+    }
+  },
+  {
+    "sample": 22,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0100",
+        "widened": "00101",
+        "decreased": "0011",
+        "negated": "1100"
+      },
+      "states": {
+        "q": "0100"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0101",
+        "widened": "00110",
+        "decreased": "0100",
+        "negated": "1011"
+      },
+      "states": {
+        "q": "0101"
+      }
+    }
+  },
+  {
+    "sample": 23,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0101",
+        "widened": "00110",
+        "decreased": "0100",
+        "negated": "1011"
+      },
+      "states": {
+        "q": "0101"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0101",
+        "widened": "00110",
+        "decreased": "0100",
+        "negated": "1011"
+      },
+      "states": {
+        "q": "0101"
+      }
+    }
+  },
+  {
+    "sample": 24,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0101",
+        "widened": "00110",
+        "decreased": "0100",
+        "negated": "1011"
+      },
+      "states": {
+        "q": "0101"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0101",
+        "widened": "00110",
+        "decreased": "0100",
+        "negated": "1011"
+      },
+      "states": {
+        "q": "0101"
+      }
+    }
+  },
+  {
+    "sample": 25,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0101",
+        "widened": "00110",
+        "decreased": "0100",
+        "negated": "1011"
+      },
+      "states": {
+        "q": "0101"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0101",
+        "widened": "00110",
+        "decreased": "0100",
+        "negated": "1011"
+      },
+      "states": {
+        "q": "0101"
+      }
+    }
+  },
+  {
+    "sample": 26,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0101",
+        "widened": "00110",
+        "decreased": "0100",
+        "negated": "1011"
+      },
+      "states": {
+        "q": "0101"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0110",
+        "widened": "00111",
+        "decreased": "0101",
+        "negated": "1010"
+      },
+      "states": {
+        "q": "0110"
+      }
+    }
+  },
+  {
+    "sample": 27,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0110",
+        "widened": "00111",
+        "decreased": "0101",
+        "negated": "1010"
+      },
+      "states": {
+        "q": "0110"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0110",
+        "widened": "00111",
+        "decreased": "0101",
+        "negated": "1010"
+      },
+      "states": {
+        "q": "0110"
+      }
+    }
+  },
+  {
+    "sample": 28,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0110",
+        "widened": "00111",
+        "decreased": "0101",
+        "negated": "1010"
+      },
+      "states": {
+        "q": "0110"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0110",
+        "widened": "00111",
+        "decreased": "0101",
+        "negated": "1010"
+      },
+      "states": {
+        "q": "0110"
+      }
+    }
+  },
+  {
+    "sample": 29,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0110",
+        "widened": "00111",
+        "decreased": "0101",
+        "negated": "1010"
+      },
+      "states": {
+        "q": "0110"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0110",
+        "widened": "00111",
+        "decreased": "0101",
+        "negated": "1010"
+      },
+      "states": {
+        "q": "0110"
+      }
+    }
+  },
+  {
+    "sample": 30,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0110",
+        "widened": "00111",
+        "decreased": "0101",
+        "negated": "1010"
+      },
+      "states": {
+        "q": "0110"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0111",
+        "widened": "01000",
+        "decreased": "0110",
+        "negated": "1001"
+      },
+      "states": {
+        "q": "0111"
+      }
+    }
+  },
+  {
+    "sample": 31,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0111",
+        "widened": "01000",
+        "decreased": "0110",
+        "negated": "1001"
+      },
+      "states": {
+        "q": "0111"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0111",
+        "widened": "01000",
+        "decreased": "0110",
+        "negated": "1001"
+      },
+      "states": {
+        "q": "0111"
+      }
+    }
+  },
+  {
+    "sample": 32,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0111",
+        "widened": "01000",
+        "decreased": "0110",
+        "negated": "1001"
+      },
+      "states": {
+        "q": "0111"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0111",
+        "widened": "01000",
+        "decreased": "0110",
+        "negated": "1001"
+      },
+      "states": {
+        "q": "0111"
+      }
+    }
+  },
+  {
+    "sample": 33,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0111",
+        "widened": "01000",
+        "decreased": "0110",
+        "negated": "1001"
+      },
+      "states": {
+        "q": "0111"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0111",
+        "widened": "01000",
+        "decreased": "0110",
+        "negated": "1001"
+      },
+      "states": {
+        "q": "0111"
+      }
+    }
+  },
+  {
+    "sample": 34,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0111",
+        "widened": "01000",
+        "decreased": "0110",
+        "negated": "1001"
+      },
+      "states": {
+        "q": "0111"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1000",
+        "widened": "01001",
+        "decreased": "0111",
+        "negated": "1000"
+      },
+      "states": {
+        "q": "1000"
+      }
+    }
+  },
+  {
+    "sample": 35,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1000",
+        "widened": "01001",
+        "decreased": "0111",
+        "negated": "1000"
+      },
+      "states": {
+        "q": "1000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1000",
+        "widened": "01001",
+        "decreased": "0111",
+        "negated": "1000"
+      },
+      "states": {
+        "q": "1000"
+      }
+    }
+  },
+  {
+    "sample": 36,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1000",
+        "widened": "01001",
+        "decreased": "0111",
+        "negated": "1000"
+      },
+      "states": {
+        "q": "1000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1000",
+        "widened": "01001",
+        "decreased": "0111",
+        "negated": "1000"
+      },
+      "states": {
+        "q": "1000"
+      }
+    }
+  },
+  {
+    "sample": 37,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1000",
+        "widened": "01001",
+        "decreased": "0111",
+        "negated": "1000"
+      },
+      "states": {
+        "q": "1000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1000",
+        "widened": "01001",
+        "decreased": "0111",
+        "negated": "1000"
+      },
+      "states": {
+        "q": "1000"
+      }
+    }
+  },
+  {
+    "sample": 38,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "1000",
+        "widened": "01001",
+        "decreased": "0111",
+        "negated": "1000"
+      },
+      "states": {
+        "q": "1000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1001",
+        "widened": "01010",
+        "decreased": "1000",
+        "negated": "0111"
+      },
+      "states": {
+        "q": "1001"
+      }
+    }
+  },
+  {
+    "sample": 39,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1001",
+        "widened": "01010",
+        "decreased": "1000",
+        "negated": "0111"
+      },
+      "states": {
+        "q": "1001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1001",
+        "widened": "01010",
+        "decreased": "1000",
+        "negated": "0111"
+      },
+      "states": {
+        "q": "1001"
+      }
+    }
+  },
+  {
+    "sample": 40,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1001",
+        "widened": "01010",
+        "decreased": "1000",
+        "negated": "0111"
+      },
+      "states": {
+        "q": "1001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1001",
+        "widened": "01010",
+        "decreased": "1000",
+        "negated": "0111"
+      },
+      "states": {
+        "q": "1001"
+      }
+    }
+  },
+  {
+    "sample": 41,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1001",
+        "widened": "01010",
+        "decreased": "1000",
+        "negated": "0111"
+      },
+      "states": {
+        "q": "1001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1001",
+        "widened": "01010",
+        "decreased": "1000",
+        "negated": "0111"
+      },
+      "states": {
+        "q": "1001"
+      }
+    }
+  },
+  {
+    "sample": 42,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "1001",
+        "widened": "01010",
+        "decreased": "1000",
+        "negated": "0111"
+      },
+      "states": {
+        "q": "1001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    }
+  },
+  {
+    "sample": 43,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    }
+  },
+  {
+    "sample": 44,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    }
+  },
+  {
+    "sample": 45,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    }
+  },
+  {
+    "sample": 46,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    }
+  },
+  {
+    "sample": 47,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    }
+  },
+  {
+    "sample": 48,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    }
+  },
+  {
+    "sample": 49,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    }
+  },
+  {
+    "sample": 50,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1100",
+        "widened": "01101",
+        "decreased": "1011",
+        "negated": "0100"
+      },
+      "states": {
+        "q": "1100"
+      }
+    }
+  },
+  {
+    "sample": 51,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1100",
+        "widened": "01101",
+        "decreased": "1011",
+        "negated": "0100"
+      },
+      "states": {
+        "q": "1100"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1100",
+        "widened": "01101",
+        "decreased": "1011",
+        "negated": "0100"
+      },
+      "states": {
+        "q": "1100"
+      }
+    }
+  },
+  {
+    "sample": 52,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1100",
+        "widened": "01101",
+        "decreased": "1011",
+        "negated": "0100"
+      },
+      "states": {
+        "q": "1100"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1100",
+        "widened": "01101",
+        "decreased": "1011",
+        "negated": "0100"
+      },
+      "states": {
+        "q": "1100"
+      }
+    }
+  },
+  {
+    "sample": 53,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1100",
+        "widened": "01101",
+        "decreased": "1011",
+        "negated": "0100"
+      },
+      "states": {
+        "q": "1100"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1100",
+        "widened": "01101",
+        "decreased": "1011",
+        "negated": "0100"
+      },
+      "states": {
+        "q": "1100"
+      }
+    }
+  },
+  {
+    "sample": 54,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "1100",
+        "widened": "01101",
+        "decreased": "1011",
+        "negated": "0100"
+      },
+      "states": {
+        "q": "1100"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1101",
+        "widened": "01110",
+        "decreased": "1100",
+        "negated": "0011"
+      },
+      "states": {
+        "q": "1101"
+      }
+    }
+  },
+  {
+    "sample": 55,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1101",
+        "widened": "01110",
+        "decreased": "1100",
+        "negated": "0011"
+      },
+      "states": {
+        "q": "1101"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1101",
+        "widened": "01110",
+        "decreased": "1100",
+        "negated": "0011"
+      },
+      "states": {
+        "q": "1101"
+      }
+    }
+  },
+  {
+    "sample": 56,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1101",
+        "widened": "01110",
+        "decreased": "1100",
+        "negated": "0011"
+      },
+      "states": {
+        "q": "1101"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1101",
+        "widened": "01110",
+        "decreased": "1100",
+        "negated": "0011"
+      },
+      "states": {
+        "q": "1101"
+      }
+    }
+  },
+  {
+    "sample": 57,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1101",
+        "widened": "01110",
+        "decreased": "1100",
+        "negated": "0011"
+      },
+      "states": {
+        "q": "1101"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1101",
+        "widened": "01110",
+        "decreased": "1100",
+        "negated": "0011"
+      },
+      "states": {
+        "q": "1101"
+      }
+    }
+  },
+  {
+    "sample": 58,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "1101",
+        "widened": "01110",
+        "decreased": "1100",
+        "negated": "0011"
+      },
+      "states": {
+        "q": "1101"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1110",
+        "widened": "01111",
+        "decreased": "1101",
+        "negated": "0010"
+      },
+      "states": {
+        "q": "1110"
+      }
+    }
+  },
+  {
+    "sample": 59,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1110",
+        "widened": "01111",
+        "decreased": "1101",
+        "negated": "0010"
+      },
+      "states": {
+        "q": "1110"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1110",
+        "widened": "01111",
+        "decreased": "1101",
+        "negated": "0010"
+      },
+      "states": {
+        "q": "1110"
+      }
+    }
+  },
+  {
+    "sample": 60,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1110",
+        "widened": "01111",
+        "decreased": "1101",
+        "negated": "0010"
+      },
+      "states": {
+        "q": "1110"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1110",
+        "widened": "01111",
+        "decreased": "1101",
+        "negated": "0010"
+      },
+      "states": {
+        "q": "1110"
+      }
+    }
+  },
+  {
+    "sample": 61,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1110",
+        "widened": "01111",
+        "decreased": "1101",
+        "negated": "0010"
+      },
+      "states": {
+        "q": "1110"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1110",
+        "widened": "01111",
+        "decreased": "1101",
+        "negated": "0010"
+      },
+      "states": {
+        "q": "1110"
+      }
+    }
+  },
+  {
+    "sample": 62,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "1110",
+        "widened": "01111",
+        "decreased": "1101",
+        "negated": "0010"
+      },
+      "states": {
+        "q": "1110"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1111",
+        "widened": "10000",
+        "decreased": "1110",
+        "negated": "0001"
+      },
+      "states": {
+        "q": "1111"
+      }
+    }
+  },
+  {
+    "sample": 63,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1111",
+        "widened": "10000",
+        "decreased": "1110",
+        "negated": "0001"
+      },
+      "states": {
+        "q": "1111"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1111",
+        "widened": "10000",
+        "decreased": "1110",
+        "negated": "0001"
+      },
+      "states": {
+        "q": "1111"
+      }
+    }
+  },
+  {
+    "sample": 64,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1111",
+        "widened": "10000",
+        "decreased": "1110",
+        "negated": "0001"
+      },
+      "states": {
+        "q": "1111"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1111",
+        "widened": "10000",
+        "decreased": "1110",
+        "negated": "0001"
+      },
+      "states": {
+        "q": "1111"
+      }
+    }
+  },
+  {
+    "sample": 65,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1111",
+        "widened": "10000",
+        "decreased": "1110",
+        "negated": "0001"
+      },
+      "states": {
+        "q": "1111"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1111",
+        "widened": "10000",
+        "decreased": "1110",
+        "negated": "0001"
+      },
+      "states": {
+        "q": "1111"
+      }
+    }
+  },
+  {
+    "sample": 66,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "1111",
+        "widened": "10000",
+        "decreased": "1110",
+        "negated": "0001"
+      },
+      "states": {
+        "q": "1111"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 67,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 68,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 69,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    }
+  },
+  {
+    "sample": 70,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0000",
+        "widened": "00001",
+        "decreased": "1111",
+        "negated": "0000"
+      },
+      "states": {
+        "q": "0000"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    }
+  },
+  {
+    "sample": 71,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    }
+  },
+  {
+    "sample": 72,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    }
+  },
+  {
+    "sample": 73,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    }
+  },
+  {
+    "sample": 74,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0001",
+        "widened": "00010",
+        "decreased": "0000",
+        "negated": "1111"
+      },
+      "states": {
+        "q": "0001"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    }
+  },
+  {
+    "sample": 75,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    }
+  },
+  {
+    "sample": 76,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    }
+  },
+  {
+    "sample": 77,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    }
+  },
+  {
+    "sample": 78,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "0010",
+        "widened": "00011",
+        "decreased": "0001",
+        "negated": "1110"
+      },
+      "states": {
+        "q": "0010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    }
+  },
+  {
+    "sample": 79,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    }
+  },
+  {
+    "sample": 80,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    }
+  },
+  {
+    "sample": 81,
+    "clock": 0,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    }
+  },
+  {
+    "sample": 82,
+    "clock": 1,
+    "rising": true,
+    "pre": {
+      "outputs": {
+        "q": "1010",
+        "widened": "01011",
+        "decreased": "1001",
+        "negated": "0110"
+      },
+      "states": {
+        "q": "1010"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    }
+  },
+  {
+    "sample": 83,
+    "clock": 1,
+    "rising": false,
+    "pre": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    },
+    "post": {
+      "outputs": {
+        "q": "1011",
+        "widened": "01100",
+        "decreased": "1010",
+        "negated": "0101"
+      },
+      "states": {
+        "q": "1011"
+      }
+    }
+  }
+]

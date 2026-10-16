@@ -25,3 +25,21 @@ an implicit support promise.
 
 The user explicitly authorized upgrading the whole project to Chisel 7.3 on
 2026-10-13. Preserve earlier version evidence as historical and revalidate.
+
+## Four-state development and collaboration
+
+The collaborator maintains the two-state mainline on the server; local work
+develops an independent four-state extension. Keep the default two-state flow
+unchanged. Preserve both contributors' uncommitted work; inspect the worktree
+before editing and never overwrite unrelated changes.
+
+Use a separate four-state entrypoint and artifact directories. Keep design,
+encoding, interface, support scope, evidence and blockers in
+[the four-state frontend document](docs/fourstate-frontend.md), and update it
+with related implementation changes. Distinguish design, implementation and
+verification; do not claim unexecuted tests passed or rewrite old reports.
+
+Before changing shared backends, IR, runtimes or CLI interfaces, document the
+exact scope, compatibility and required regressions, then obtain coordination
+confirmation from the human user before implementation. Local four-state work
+does not authorize changes to the collaborator's server environment.

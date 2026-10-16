@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\lenovo\\miniconda3\\python.exe",
+    "-B",
+    "scripts/fourstate2lean.py",
+    "verification/fourstate/Operators.sv",
+    "--top",
+    "Operators",
+    "--out",
+    "generated/fourstate/operators-example-v1"
+  ],
+  "cwd": "E:\\projects\\xiangshan2Lean",
+  "started_at": "2026-10-16T14:13:14.274282+00:00",
+  "pid": 34984,
+  "exit_code": 0,
+  "ended_at": "2026-10-16T14:13:19.030266+00:00"
+}
