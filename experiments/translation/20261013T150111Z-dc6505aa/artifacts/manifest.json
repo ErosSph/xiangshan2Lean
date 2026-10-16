@@ -1,0 +1,27 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\backend\\fu\\Alu.scala",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\XSCore.scala",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Parameters.scala"
+  ],
+  "modules": [
+    {
+      "module": "xiangshan.backend.fu.RightShiftModule",
+      "namespace": "xiangshan.backend.fu.RightShiftModule",
+      "ir": "xiangshan/backend/fu/RightShiftModule.ir.json",
+      "lean": "xiangshan/backend/fu/RightShiftModule.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\backend\\fu\\Alu.scala": "3400084dc26d34b2d4ce796f93c80000d12c173746d0d7eba7c47e8f36825fdc",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\XSCore.scala": "b1c34dede360f505759fa660f7391dff9ed0719cf388bd21840aa7641f55569f",
+    "E:\\ICT\\chisel2lean4\\.cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Parameters.scala": "5e1419aaad93e212f571672c5b0c46546c49cb3547667dbd3f9844b2705b63ad"
+  },
+  "compiler_sha256": "ea2b19d39da2c88e65f65932c3ceebf698a8f67c4a5395611ecca18b9bf8c4b1",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T150111Z-dc6505aa"
+}

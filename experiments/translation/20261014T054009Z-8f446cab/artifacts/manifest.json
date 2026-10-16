@@ -1,0 +1,23 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\aggregate\\Contracts.scala"
+  ],
+  "modules": [
+    {
+      "module": "aggregateContracts.VecInitWidthContract",
+      "namespace": "aggregateContracts.VecInitWidthContract",
+      "ir": "aggregateContracts/VecInitWidthContract.ir.json",
+      "lean": "aggregateContracts/VecInitWidthContract.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\aggregate\\Contracts.scala": "411673afafee9c0c4c0445dd10fea08ee0cb66f624c4a317b6bd882723a1e30d"
+  },
+  "compiler_sha256": "a0d8be5e20d68b539825c675550b08a8674174f4d1cc904fdf32e43add52894a",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261014T054009Z-8f446cab"
+}

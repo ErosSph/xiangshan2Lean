@@ -1,0 +1,21 @@
+{
+  "case": "SignedArithmetic-w65",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\SignedArithmetic-w65",
+  "passed": true,
+  "firrtl_sha256": "2d54559d57928dfd3f0d95624d780f8c553aff734b0bb68af5cf73215b29bea9",
+  "cycles": 48,
+  "output_comparisons": 576,
+  "initial_state": {},
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "io.a": "io_a",
+    "io.b": "io_b",
+    "io.extended": "io_extended",
+    "io.less": "io_less",
+    "io.product": "io_product",
+    "io.shr": "io_shr",
+    "io.sum": "io_sum",
+    "io.wide": "io_wide"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "widths": [
+    1,
+    8,
+    65,
+    127,
+    256
+  ],
+  "samples": 208,
+  "models": [
+    {
+      "backend": "source",
+      "engine": "bytecode",
+      "samples": 208,
+      "output_comparisons": 6240,
+      "manifest_sha256": "15e109049586e11cbbca123079fc0e1e5c0d69fe666e0fad2658bf6fe8ef26f6"
+    },
+    {
+      "backend": "table",
+      "engine": "bytecode",
+      "samples": 208,
+      "output_comparisons": 6240,
+      "manifest_sha256": "5bd11ff04b62ad07174bc7c496c0d4fe2e63cd3975b9b9d19a3433182b841bac"
+    },
+    {
+      "backend": "table",
+      "engine": "native",
+      "samples": 208,
+      "output_comparisons": 6240,
+      "manifest_sha256": "5bd11ff04b62ad07174bc7c496c0d4fe2e63cd3975b9b9d19a3433182b841bac"
+    }
+  ],
+  "maximum_shift_count": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+  "runtime_sha256": "4cde7f082e77dd896513ee59354cac3d84141ac1747150ba41ace5bab4f46306",
+  "proof_source_sha256": "ee6cffe4ff0c0e3d75fe30190dd73e552b9fd5b61d4f97e9f5b51dfff3f0fc40",
+  "proof_log_sha256": "dd597a17695c0d05c59c3a394f9e85e3ef0641801c500ad58b70d8a425da5a57",
+  "original_rtl_sha256": "4a8078ccb1cadf434cb9b3da2d1edbe0dfadf9dafdbb5ca50110e08b1dee2979",
+  "scope": "Lean checks three generic equalities for all widths/counts. Source, table bytecode and native table evaluation match independent Verilator and integer traces, including 256-bit shift counts. This is not whole-chip equivalence."
+}

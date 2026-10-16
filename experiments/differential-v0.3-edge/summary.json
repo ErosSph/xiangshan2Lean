@@ -1,0 +1,212 @@
+{
+  "suite": "edge",
+  "cases": [
+    {
+      "status": "PASS",
+      "cycles": 2,
+      "compared_output_values": 4,
+      "module": "ElaborationWidth",
+      "parameters": {
+        "n": 1
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ElaborationWidth-n1",
+      "seconds": 4.75,
+      "fingerprint": "a8dd9ba6f44675b199782c4077fb45ae91ce362ffb4462726be74dd34639f8fe"
+    },
+    {
+      "status": "PASS",
+      "cycles": 4,
+      "compared_output_values": 8,
+      "module": "ElaborationWidth",
+      "parameters": {
+        "n": 2
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ElaborationWidth-n2",
+      "seconds": 4.98,
+      "fingerprint": "f985d3a5ed8201f736389cd02c565251dff202a361abd25cd73ba5e0c31d37f0"
+    },
+    {
+      "status": "PASS",
+      "cycles": 8,
+      "compared_output_values": 16,
+      "module": "ElaborationWidth",
+      "parameters": {
+        "n": 3
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ElaborationWidth-n3",
+      "seconds": 4.84,
+      "fingerprint": "b80dc6b9f4e187b40bacacb406ca41fef3da7a13d43d5480afbb70cd988f1941"
+    },
+    {
+      "status": "PASS",
+      "cycles": 16,
+      "compared_output_values": 32,
+      "module": "ElaborationWidth",
+      "parameters": {
+        "n": 4
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ElaborationWidth-n4",
+      "seconds": 5.39,
+      "fingerprint": "3805a334faa5f53fe74951dd785b148796faae4e7234c1594902d4ac03177395"
+    },
+    {
+      "status": "PASS",
+      "cycles": 128,
+      "compared_output_values": 256,
+      "module": "ElaborationWidth",
+      "parameters": {
+        "n": 7
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ElaborationWidth-n7",
+      "seconds": 6.55,
+      "fingerprint": "7e0ba2bcd50ec878f03e303f0c9eaaa684e2ec76cbece275797921651519e9a9"
+    },
+    {
+      "status": "PASS",
+      "cycles": 2,
+      "compared_output_values": 4,
+      "module": "ElaborationLiteral",
+      "parameters": {
+        "n": 1
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ElaborationLiteral-n1",
+      "seconds": 6.42,
+      "fingerprint": "a22c474610ea1145be59903fd3bbc6cb6c6f034029c64e6ba3255691ad9d294a"
+    },
+    {
+      "status": "PASS",
+      "cycles": 8,
+      "compared_output_values": 16,
+      "module": "ElaborationLiteral",
+      "parameters": {
+        "n": 3
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ElaborationLiteral-n3",
+      "seconds": 6.42,
+      "fingerprint": "75141e7fd2e7c476fc537b725bbf1c636db11be94c94ffd106b29c5a48f83c3c"
+    },
+    {
+      "status": "PASS",
+      "cycles": 16,
+      "compared_output_values": 32,
+      "module": "ElaborationLiteral",
+      "parameters": {
+        "n": 4
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ElaborationLiteral-n4",
+      "seconds": 5.56,
+      "fingerprint": "a0279197539ca9d92a572de0de9a62b8234da1fcf286b32ed33c323d04b73c5a"
+    },
+    {
+      "status": "PASS",
+      "cycles": 8,
+      "compared_output_values": 112,
+      "module": "ExtendedBits",
+      "parameters": {
+        "w": 0,
+        "shift": 1
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ExtendedBits-w0-shift1",
+      "seconds": 6.0,
+      "fingerprint": "870faaea42c73ca118d506416fb0924a0e317e6e574442834c3ca42fe3b4068b"
+    },
+    {
+      "status": "PASS",
+      "cycles": 16,
+      "compared_output_values": 224,
+      "module": "ExtendedBits",
+      "parameters": {
+        "w": 1,
+        "shift": 2
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ExtendedBits-w1-shift2",
+      "seconds": 5.89,
+      "fingerprint": "f8bc8ebed90e863c17fd26e071388cf0c4349230b6353bef15518c798a556771"
+    },
+    {
+      "status": "PASS",
+      "cycles": 64,
+      "compared_output_values": 896,
+      "module": "ExtendedBits",
+      "parameters": {
+        "w": 3,
+        "shift": 0
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ExtendedBits-w3-shift0",
+      "seconds": 6.17,
+      "fingerprint": "47679c06f8e92f81c2bd9e2146a717006981ba2dc1f3460aca21a0137e3c2307"
+    },
+    {
+      "status": "PASS",
+      "cycles": 64,
+      "compared_output_values": 896,
+      "module": "ExtendedBits",
+      "parameters": {
+        "w": 3,
+        "shift": 5
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ExtendedBits-w3-shift5",
+      "seconds": 6.75,
+      "fingerprint": "11898da373ec8caf90595e9ad73a4c01ec64a5305ea9d0d84412b74030300236"
+    },
+    {
+      "status": "PASS",
+      "cycles": 4,
+      "compared_output_values": 16,
+      "module": "ReservedPorts",
+      "parameters": {},
+      "evidence": "experiments\\differential-v0.3-edge\\ReservedPorts-",
+      "seconds": 6.12,
+      "fingerprint": "e12b82e44d16a8943f696f92205f79242ea172456a8dc63e446b08073bc446b7"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "BoolState",
+      "parameters": {},
+      "evidence": "experiments\\differential-v0.3-edge\\BoolState-",
+      "seconds": 6.06,
+      "fingerprint": "dc8dd45dc9bdbb51e6f46fda6edb2b7cf5cc05eb6217b75261d8c18639dd5133"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "ResetFromInput",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\ResetFromInput-w3",
+      "seconds": 6.03,
+      "fingerprint": "24202055bd0b895589b92b14fe8d976d014b29ff78f6ab1964f7c9fbec4b5b95"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 190,
+      "module": "MixedReset",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\MixedReset-w3",
+      "seconds": 6.16,
+      "fingerprint": "2cc064b63aee03534c5f2b45d9b0b38675bfdc9351f10a7aa668c5c070d79e33"
+    },
+    {
+      "status": "PASS",
+      "cycles": 8,
+      "compared_output_values": 16,
+      "module": "NamedBundle",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-edge\\NamedBundle-w3",
+      "seconds": 6.59,
+      "fingerprint": "fd186985fcb0b6a0316a9e75e2b879da0789d1694c4cfecec05764c0884a1b85"
+    }
+  ],
+  "passed": 17,
+  "failed": 0,
+  "formal_equivalence_proof": false
+}

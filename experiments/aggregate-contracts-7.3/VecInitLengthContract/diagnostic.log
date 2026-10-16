@@ -1,0 +1,5 @@
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Contracts.scala:40: error: [chisel2lean] Aggregate VecInit requires identical symbolic Vec lengths; use a common length parameter
+  out := VecInit(Seq(a, b))
+       ^
+1 error
+Translation failed; evidence: E:\ICT\chisel2lean4\experiments\translation\20261014T053956Z-4c63c54d

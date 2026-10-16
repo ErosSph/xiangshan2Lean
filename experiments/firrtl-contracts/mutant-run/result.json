@@ -1,0 +1,28 @@
+[
+  {
+    "state": {},
+    "pre": {
+      "subBorrow": 0,
+      "signedNot": 3,
+      "signedAnd": 20,
+      "negUnsigned": 15,
+      "negSigned": 0,
+      "logicalOvershift": 0,
+      "cvtUnsigned": 1,
+      "arithmeticShift": 4,
+      "addCarry": 2
+    },
+    "post": {
+      "subBorrow": 0,
+      "signedNot": 3,
+      "signedAnd": 20,
+      "negUnsigned": 15,
+      "negSigned": 0,
+      "logicalOvershift": 0,
+      "cvtUnsigned": 1,
+      "arithmeticShift": 4,
+      "addCarry": 2
+    },
+    "cycle": 0
+  }
+]

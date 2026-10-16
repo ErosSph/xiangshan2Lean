@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "module": "aggregate.NestedBundleVector",
+  "parameters": {
+    "n": 1,
+    "m": 1,
+    "w": 1
+  },
+  "cycles": 64,
+  "output_comparisons": 1778,
+  "source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+  "ir_sha256": "a35ef7514a6ae9c4a5e768dcc3cb18e5cd110eaf0475d84109f63b5d09e4da07",
+  "lean_sha256": "cbd694395f5b5ac6f0fdfbaff86594bb4b43876b8568fdf302fbe738a795d897"
+}

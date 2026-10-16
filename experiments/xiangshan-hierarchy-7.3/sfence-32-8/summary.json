@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "test_top": "xiangshan.validation.SfencePipeline",
+  "parameters": {
+    "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits": 32,
+    "cfg_p_xiangshan_XSCoreParamsKey_AsidLength": 8
+  },
+  "cycles": 192,
+  "output_comparisons": 1920,
+  "comparison": "executed Lean == original-class official RTL == independent integer specification"
+}

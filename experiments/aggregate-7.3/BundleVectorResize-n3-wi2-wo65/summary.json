@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "module": "aggregate.BundleVectorResize",
+  "parameters": {
+    "n": 3,
+    "wi": 2,
+    "wo": 65
+  },
+  "cycles": 64,
+  "output_comparisons": 2688,
+  "source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+  "ir_sha256": "9ab5cd52be1c85279ebf5ddb2e5564edbbf138716b9b4ffb3c82b4e3fef12cc7",
+  "lean_sha256": "82c74096df5af9d7e6ea67ed215c92588f45386e156f6478280bc04a215e714f"
+}

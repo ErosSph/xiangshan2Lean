@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "AsyncMemory",
+  "parameters": {
+    "n": 2,
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\AsyncMemory-n2-w3",
+  "seconds": 5.92,
+  "fingerprint": "fb13b5777b048fb87cdd0d0d362afbd529816b2899809227f12e75aa0298fea0"
+}

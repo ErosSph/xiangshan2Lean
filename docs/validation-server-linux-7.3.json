@@ -1,0 +1,282 @@
+{
+  "status": "PASS_SHORT_SCENARIOS",
+  "checked_at": "2026-10-16T06:31:31.167523+00:00",
+  "system": "Ubuntu 20.04.6 LTS",
+  "machine": "x86_64",
+  "kernel": "5.4.0-42-generic",
+  "logical_cpus": 128,
+  "reported_memory": {
+    "total": "1.0 TiB",
+    "available_at_initial_check": "619 GiB"
+  },
+  "remote_directory": "/data2/home/lvhongqing/cgt/chisel2lean",
+  "mapped_directory": "Z:/chisel2lean",
+  "archive_sha256": "329f0d3699b2a8b8edb0cd9c9cae86f90de89daf368d88a29c84c0b745103bf0",
+  "server_archive_hash_check": "PASS",
+  "server_bundle_inventory": {
+    "status": "PASS",
+    "files": 1347,
+    "bytes": 1739206617,
+    "bundle_manifest_sha256": "02edd3046c0898ee50141aa1cc77517b2f3f23cbf0d0de22037a43d2745e6b24"
+  },
+  "python": {
+    "path": "/data2/home/lvhongqing/miniconda3/bin/python",
+    "version": "3.13.12",
+    "installation": "Existing account-local interpreter; system Python 3.8.10 preserved."
+  },
+  "lean_installation": "PASS",
+  "verilator_source": {
+    "tag": "v5.048",
+    "commit": "d0aa828c217410fffc73d92077b6f4f54830357c",
+    "build_jobs": 8,
+    "installation": "Project-local; existing system Verilator 4.028 preserved.",
+    "build_status": "PASS"
+  },
+  "server_selftest": {
+    "status": "PASS",
+    "samples": 48,
+    "outputs_and_observations": "PASS",
+    "invalid_property_rejected": "PASS",
+    "fresh_rtl": "PASS",
+    "execution": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/selftest/20261016T061755Z-7f485204",
+    "scope": "Small fixture only; whole-chip acceptance is separate."
+  },
+  "whole_chip_acceptance": "PASS_SHORT_SCENARIOS",
+  "instruction_execution": "NOT_TESTED",
+  "universal_equivalence": "NOT_PROVED",
+  "scope": "Two finite complete-top physical-output scenarios; not program execution or universal equivalence.",
+  "host_doctor": {
+    "status": "PASS",
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+    "lean": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+    "lean_executable": "/data2/home/lvhongqing/cgt/chisel2lean/.tools/lean-4.19.0-linux/bin/lean",
+    "lean_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "leanc_sha256": "39a4d993906671c6b2eec9e75053aff3917fd1d4530706f32a273aa8f283ab41",
+    "make": {
+      "path": "/usr/bin/make",
+      "sha256": "0d4e89c3b814ce99c4900b2a4c758ab780303ae98dddd71ab0dd82ec0ca07fa6"
+    },
+    "g++": {
+      "path": "/usr/bin/g++",
+      "sha256": "c3aca044e5531c0c17f9713d0deb6f885f21b500153ce6d173d53fd28bd55b0c"
+    },
+    "verilator": "Verilator 5.048 2026-04-26 rev v5.048"
+  },
+  "lean_release_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+  "work_directory": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01",
+  "evidence_directory": "E:\\ICT\\.migration\\20261016-full-local-project\\server-run",
+  "whole_lean_scenario": {
+    "status": "PASS",
+    "result": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/lean/20261016T042440Z-27f869ca/result.json",
+    "result_sha256": "a8f36f37f766565165c5986a119fc63d5e1a731bc7976481dc33ea1b2ff849a8",
+    "samples": 96,
+    "bundle_manifest_sha256": "02edd3046c0898ee50141aa1cc77517b2f3f23cbf0d0de22037a43d2745e6b24",
+    "scope": "Complete saved scenario executed in Lean; independent RTL comparison remains separate."
+  },
+  "resource_summary": {
+    "status": "COMPLETED",
+    "exit_code": 1,
+    "peak_sum_rss_kib": 6579988,
+    "sampling_seconds": 5,
+    "measurement": "Sum of per-process RSS; includes shared pages in more than one process."
+  },
+  "active_source_doctor": {
+    "status": "PASS",
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+    "lean": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+    "lean_executable": "/data2/home/lvhongqing/cgt/chisel2lean/.tools/lean-4.19.0-linux/bin/lean",
+    "lean_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "leanc_sha256": "39a4d993906671c6b2eec9e75053aff3917fd1d4530706f32a273aa8f283ab41",
+    "make": {
+      "path": "/usr/bin/make",
+      "sha256": "0d4e89c3b814ce99c4900b2a4c758ab780303ae98dddd71ab0dd82ec0ca07fa6"
+    },
+    "g++": {
+      "path": "/usr/bin/g++",
+      "sha256": "c3aca044e5531c0c17f9713d0deb6f885f21b500153ce6d173d53fd28bd55b0c"
+    },
+    "verilator": "Verilator 5.048 2026-04-26 rev v5.048"
+  },
+  "previous_whole_original_rtl": {
+    "build_exit_code": 0,
+    "execution_exit_code": 7,
+    "failure": "Time-zero assertion failures in original MSHR_64.sv; cause not yet diagnosed. No RTL/Lean equivalence is claimed."
+  },
+  "whole_original_rtl": {
+    "status": "PASS",
+    "result": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/rtl/20261016T062504Z-9b40efba/result.json",
+    "result_sha256": "17aa83e7025ec222ebddf12eafaf7207701d34e0dcaf129126f3925aa4c443cb",
+    "samples": 96,
+    "bundle_manifest_sha256": "02edd3046c0898ee50141aa1cc77517b2f3f23cbf0d0de22037a43d2745e6b24",
+    "startup": {
+      "mode": "explicit-input-settle",
+      "initial_inputs": {
+        "dma_0_aw_valid": 0,
+        "dma_0_aw_bits_id": 0,
+        "dma_0_aw_bits_addr": 0,
+        "dma_0_aw_bits_len": 0,
+        "dma_0_aw_bits_size": 0,
+        "dma_0_aw_bits_burst": 0,
+        "dma_0_aw_bits_lock": 0,
+        "dma_0_aw_bits_cache": 0,
+        "dma_0_aw_bits_prot": 0,
+        "dma_0_aw_bits_qos": 0,
+        "dma_0_w_valid": 0,
+        "dma_0_w_bits_data": 0,
+        "dma_0_w_bits_strb": 0,
+        "dma_0_w_bits_last": 0,
+        "dma_0_b_ready": 0,
+        "dma_0_ar_valid": 0,
+        "dma_0_ar_bits_id": 0,
+        "dma_0_ar_bits_addr": 0,
+        "dma_0_ar_bits_len": 0,
+        "dma_0_ar_bits_size": 0,
+        "dma_0_ar_bits_burst": 0,
+        "dma_0_ar_bits_lock": 0,
+        "dma_0_ar_bits_cache": 0,
+        "dma_0_ar_bits_prot": 0,
+        "dma_0_ar_bits_qos": 0,
+        "dma_0_r_ready": 0,
+        "peripheral_0_aw_ready": 0,
+        "peripheral_0_w_ready": 0,
+        "peripheral_0_b_valid": 0,
+        "peripheral_0_b_bits_id": 0,
+        "peripheral_0_b_bits_resp": 0,
+        "peripheral_0_ar_ready": 0,
+        "peripheral_0_r_valid": 0,
+        "peripheral_0_r_bits_id": 0,
+        "peripheral_0_r_bits_data": 0,
+        "peripheral_0_r_bits_resp": 0,
+        "peripheral_0_r_bits_last": 0,
+        "memory_0_aw_ready": 0,
+        "memory_0_w_ready": 0,
+        "memory_0_b_valid": 0,
+        "memory_0_b_bits_id": 0,
+        "memory_0_b_bits_resp": 0,
+        "memory_0_ar_ready": 0,
+        "memory_0_r_valid": 0,
+        "memory_0_r_bits_id": 0,
+        "memory_0_r_bits_data": 0,
+        "memory_0_r_bits_resp": 0,
+        "memory_0_r_bits_last": 0,
+        "io_clock": 0,
+        "io_reset": 0,
+        "io_sram_config": 0,
+        "io_extIntrs": 0,
+        "io_pll0_lock": 0,
+        "io_systemjtag_jtag_TCK": 0,
+        "io_systemjtag_jtag_TMS": 0,
+        "io_systemjtag_jtag_TDI": 0,
+        "io_systemjtag_reset": 0,
+        "io_systemjtag_mfr_id": 0,
+        "io_systemjtag_part_number": 0,
+        "io_systemjtag_version": 0,
+        "io_cacheable_check_req_0_valid": 0,
+        "io_cacheable_check_req_0_bits_addr": 0,
+        "io_cacheable_check_req_0_bits_size": 0,
+        "io_cacheable_check_req_0_bits_cmd": 0,
+        "io_cacheable_check_req_1_valid": 0,
+        "io_cacheable_check_req_1_bits_addr": 0,
+        "io_cacheable_check_req_1_bits_size": 0,
+        "io_cacheable_check_req_1_bits_cmd": 0
+      },
+      "sampled": false,
+      "internal_state": "Verilator --x-initial 0; no internal state is assigned by the driver",
+      "assertions_enabled": true
+    },
+    "driver": {
+      "implementation_sha256": "3cee3c5750497f0595178725e6eddc61213d35065c83fcb4df6c4fd8e47661ac",
+      "harness_sha256": "7c6ae377fcce711ca3b74197b19ee9fb10618c9b1dff204f5c619ecf4866d253",
+      "trace_sha256": "9e0378a0a91c40b591f855929130850e4ee2895338fbbec7d119cbab8e87c36d"
+    },
+    "execution": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/rtl/20261016T062504Z-9b40efba",
+    "physical_trace_sha256": "ca2a012d49013513d5712c53a510bc8bebcd2292c9382eac2b6b68894055ac5d",
+    "scope": "Complete original RTL scenario executed; Lean comparison remains separate."
+  },
+  "whole_chip_scenarios": [
+    {
+      "name": "reset-jtag-stalled-axi",
+      "status": "PASS",
+      "samples": 96,
+      "output_ports": 81,
+      "output_comparisons": 15552,
+      "report": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/acceptance.json",
+      "report_sha256": "15ea45946d0320eff71707c456f3237636401a82b858d65016edd6c562cf2570",
+      "driver": {
+        "implementation_sha256": "3cee3c5750497f0595178725e6eddc61213d35065c83fcb4df6c4fd8e47661ac",
+        "harness_sha256": "7c6ae377fcce711ca3b74197b19ee9fb10618c9b1dff204f5c619ecf4866d253",
+        "trace_sha256": "9e0378a0a91c40b591f855929130850e4ee2895338fbbec7d119cbab8e87c36d"
+      }
+    },
+    {
+      "name": "asynchronous-reset-reassertion",
+      "status": "PASS",
+      "samples": 96,
+      "output_ports": 81,
+      "output_comparisons": 15552,
+      "report": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/scenarios/20261016T062353Z-c45d1dd6/acceptance.json",
+      "report_sha256": "14597f86a3a6b6cb5c9d9cd4fb6ecc6578c7837f933bca86af17b5716048a1d8",
+      "driver": {
+        "implementation_sha256": "3cee3c5750497f0595178725e6eddc61213d35065c83fcb4df6c4fd8e47661ac",
+        "harness_sha256": "7c6ae377fcce711ca3b74197b19ee9fb10618c9b1dff204f5c619ecf4866d253",
+        "trace_sha256": "bc2ceb1f01e66310992a74ff8f311f16d20b0afff8d3bc4bcc106bd750ce86da"
+      }
+    }
+  ],
+  "whole_chip_output_comparisons": 31104,
+  "historical_run_observation": {
+    "SampledAt": "2026-10-16T12:23:22.829134+08:00",
+    "SumRssGiB": 2.59,
+    "ActiveProcesses": [
+      {
+        "pid": 3793832,
+        "command": "lean"
+      },
+      {
+        "pid": 3780818,
+        "command": "python"
+      },
+      {
+        "pid": 3780810,
+        "command": "bash"
+      },
+      {
+        "pid": 3780816,
+        "command": "time"
+      }
+    ],
+    "SampleAfterSshDisconnect": true
+  },
+  "active_run_processes": [],
+  "current_entry_doctor": {
+    "status": "PASS",
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+    "lean": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+    "lean_executable": "/data2/home/lvhongqing/cgt/chisel2lean/.tools/lean-4.19.0-linux/bin/lean",
+    "lean_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "leanc_sha256": "39a4d993906671c6b2eec9e75053aff3917fd1d4530706f32a273aa8f283ab41",
+    "make": {
+      "path": "/usr/bin/make",
+      "sha256": "0d4e89c3b814ce99c4900b2a4c758ab780303ae98dddd71ab0dd82ec0ca07fa6"
+    },
+    "g++": {
+      "path": "/usr/bin/g++",
+      "sha256": "c3aca044e5531c0c17f9713d0deb6f885f21b500153ce6d173d53fd28bd55b0c"
+    },
+    "verilator": "Verilator 5.048 2026-04-26 rev v5.048"
+  },
+  "latest_regression": {
+    "status": "PASS",
+    "tests": 16,
+    "includes": "Real RTL reset-edge reproduction, valid edge replay, illegal input rejection; scenario input/initial-state guards; migration guards.",
+    "log": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/diagnosis-initial-reset/all-tests.stderr",
+    "log_sha256": "16dbed768fbfb858945f50e92ef0b882c03c2b59ecec0fca0cdb79a4efff5966"
+  },
+  "latest_whole_report": "validation-xiangshan-whole-differential-7.3.json"
+}

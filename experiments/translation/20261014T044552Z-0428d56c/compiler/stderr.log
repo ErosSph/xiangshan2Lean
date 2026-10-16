@@ -1,0 +1,5 @@
+error: unknow data type `aggregate.Packet` in SignalTypeLoader.fromTpt
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Supported.scala:59: error: [chisel2lean] Frontend could not represent this module: NoSuchElementException: None.get
+class BundleVectorConstruct(n: Int, w: Int, m: Int) extends Module {
+      ^
+2 errors

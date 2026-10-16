@@ -1,0 +1,757 @@
+{
+  "suite": "extension",
+  "cases": [
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "HierarchicalPipeline",
+      "parameters": {
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\HierarchicalPipeline-w1",
+      "seconds": 7.45,
+      "fingerprint": "8d7577529c908b8937279b3a2b6b8e048ba470c2e4405ac2a0fca18601ad4511"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "HierarchicalPipeline",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\HierarchicalPipeline-w3",
+      "seconds": 6.8,
+      "fingerprint": "810750d58cb4f942444065dd99cd56ee1fbc14f39fd3b20845894b8f70638282"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "HierarchicalPipeline",
+      "parameters": {
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\HierarchicalPipeline-w8",
+      "seconds": 7.33,
+      "fingerprint": "2dd769d70907a4459e25b02244c286eaf489dd7271a36e72c22d6809015e84e7"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "NestedHierarchy",
+      "parameters": {
+        "w": 2
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\NestedHierarchy-w2",
+      "seconds": 5.17,
+      "fingerprint": "98b20a1a03d8af4a34dbdafc8daaea89e59829755ba62efe63ed9eec28772638"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "NestedHierarchy",
+      "parameters": {
+        "w": 5
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\NestedHierarchy-w5",
+      "seconds": 5.47,
+      "fingerprint": "d65dfdef56bb941c0aeb349b86346fa0ff49a83f1e560a90fd183faa0a71143c"
+    },
+    {
+      "status": "PASS",
+      "cycles": 2,
+      "compared_output_values": 4,
+      "module": "HierarchicalComb",
+      "parameters": {
+        "w": 1,
+        "invert": false
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\HierarchicalComb-w1-invertFalse",
+      "seconds": 5.69,
+      "fingerprint": "1de61bcdb9fadae03cf844e0a2f17cb15857bd63ab4ef3b572330dbc19920e5c"
+    },
+    {
+      "status": "PASS",
+      "cycles": 8,
+      "compared_output_values": 16,
+      "module": "HierarchicalComb",
+      "parameters": {
+        "w": 3,
+        "invert": true
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\HierarchicalComb-w3-invertTrue",
+      "seconds": 5.94,
+      "fingerprint": "60c6c65b96c988d179835163868ba6da851e280fb0fe027e19eea589bf94cece"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 96,
+      "module": "HierarchicalComb",
+      "parameters": {
+        "w": 8,
+        "invert": false
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\HierarchicalComb-w8-invertFalse",
+      "seconds": 6.83,
+      "fingerprint": "d5fe295b8c30b95e8c31fddab9ef5ff5708eea1fb10ff976f3f269b3c60e49c1"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "VectorReset",
+      "parameters": {
+        "n": 1,
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\VectorReset-n1-w1",
+      "seconds": 6.76,
+      "fingerprint": "61e0e3478c93fba20f887053815b5f09e836a178b15e7a77f1d7f21bedf254d9"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 285,
+      "module": "VectorReset",
+      "parameters": {
+        "n": 3,
+        "w": 4
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\VectorReset-n3-w4",
+      "seconds": 7.16,
+      "fingerprint": "4799ad5a6169ad5672c9dae1aa8b8ad9dfaacfbb53e552919d86900547c90f73"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 475,
+      "module": "VectorReset",
+      "parameters": {
+        "n": 5,
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\VectorReset-n5-w8",
+      "seconds": 8.92,
+      "fingerprint": "169274ff8871c5f20a980fe0486d3299eb9fc25e18d1e18b5404b0f872b33971"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "RegisterIdioms",
+      "parameters": {
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\RegisterIdioms-w1",
+      "seconds": 6.64,
+      "fingerprint": "da2ef7aa0c6a98779c80a204ba7727fb87e09d3e34176d814612a35bbbbde9ef"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "RegisterIdioms",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\RegisterIdioms-w3",
+      "seconds": 6.38,
+      "fingerprint": "6b8151bbcecef3d9deccb7758c681807afcb36c550f6b218de289475242de81b"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "RegisterIdioms",
+      "parameters": {
+        "w": 9
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\RegisterIdioms-w9",
+      "seconds": 7.22,
+      "fingerprint": "a681150b3fcaf3faf0694251cc665c95aca04c526998f13bdcec112de1cbadda"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 190,
+      "module": "BundlePipeline",
+      "parameters": {
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\BundlePipeline-w1",
+      "seconds": 6.67,
+      "fingerprint": "8f7f19af77faf27a4197d5df328125e7cdd5c0268a1ccd05182b2d52c3e89595"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 190,
+      "module": "BundlePipeline",
+      "parameters": {
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\BundlePipeline-w8",
+      "seconds": 5.95,
+      "fingerprint": "8fa9312fb60a5aea0ab50007bb95b4de4f02f62234a9dc7a562281a871de1503"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "SwitchMachine",
+      "parameters": {
+        "w": 2
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\SwitchMachine-w2",
+      "seconds": 6.08,
+      "fingerprint": "c27dae35811aa4faefc2f40892da3c8b869e9effb739cf92c6ab7097953e125a"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "SwitchMachine",
+      "parameters": {
+        "w": 5
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\SwitchMachine-w5",
+      "seconds": 6.78,
+      "fingerprint": "afb84348a7ae9044286128019a042e474ea7ac1443c08414c3e9ed0c45400787"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 672,
+      "module": "MoreBits",
+      "parameters": {
+        "w": 2,
+        "repeat": 1
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\MoreBits-w2-repeat1",
+      "seconds": 7.47,
+      "fingerprint": "733e81317016d53933e64114ad4d3ee3600d57797b4e9636ef28bfdd5bbca3d9"
+    },
+    {
+      "status": "PASS",
+      "cycles": 43,
+      "compared_output_values": 602,
+      "module": "MoreBits",
+      "parameters": {
+        "w": 3,
+        "repeat": 4
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\MoreBits-w3-repeat4",
+      "seconds": 6.62,
+      "fingerprint": "d9b09f282acc33f455e2db776aeb3f294e15813c7b1dd5839ba94a3cba60fb62"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 672,
+      "module": "MoreBits",
+      "parameters": {
+        "w": 8,
+        "repeat": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\MoreBits-w8-repeat3",
+      "seconds": 6.23,
+      "fingerprint": "31af6176589c5d53e02a30f1989ae613b6e6d755f3f79334b6f3c6e949112ac2"
+    },
+    {
+      "status": "PASS",
+      "cycles": 12,
+      "compared_output_values": 48,
+      "module": "SignedDivision",
+      "parameters": {
+        "w": 2
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\SignedDivision-w2",
+      "seconds": 5.64,
+      "fingerprint": "e5638f24012785f744d7b22bbd0e1b6d8dc06e5da82a462c3c76ac7db7a7362e"
+    },
+    {
+      "status": "PASS",
+      "cycles": 56,
+      "compared_output_values": 224,
+      "module": "SignedDivision",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\SignedDivision-w3",
+      "seconds": 6.3,
+      "fingerprint": "5b9658960dec09ab2f6573b1505b252222069e78fae3b4a3f4c2ea8ab6d131ae"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 192,
+      "module": "SignedDivision",
+      "parameters": {
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\SignedDivision-w8",
+      "seconds": 5.88,
+      "fingerprint": "0ad8acc2ced231dec3a2e5b6b7254ebeda6ae0f833244c9474672764e4f8b5cf"
+    },
+    {
+      "status": "PASS",
+      "cycles": 2,
+      "compared_output_values": 4,
+      "module": "HardwareHelper",
+      "parameters": {
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\HardwareHelper-w1",
+      "seconds": 5.61,
+      "fingerprint": "a6200842cffef5a655db72305d6062726e2b296dbcf785ada59deaa69d1258a4"
+    },
+    {
+      "status": "PASS",
+      "cycles": 128,
+      "compared_output_values": 256,
+      "module": "HardwareHelper",
+      "parameters": {
+        "w": 7
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\HardwareHelper-w7",
+      "seconds": 6.11,
+      "fingerprint": "065f35cdef0cdce350f2369aa194b514bac343864363c28119df03be538fcae9"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 192,
+      "module": "PartialGenerate",
+      "parameters": {
+        "n": 2,
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\PartialGenerate-n2-w1",
+      "seconds": 8.84,
+      "fingerprint": "dc581c5f4e54ccf6b8d6d390eaff424269b8577ca6b660ee54c08eafff8a00ca"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 384,
+      "module": "PartialGenerate",
+      "parameters": {
+        "n": 4,
+        "w": 5
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\PartialGenerate-n4-w5",
+      "seconds": 7.48,
+      "fingerprint": "14da16320c22a5e34511873e037c9b18f4d934a581d956295ae744d7a3d8c128"
+    },
+    {
+      "status": "PASS",
+      "cycles": 8,
+      "compared_output_values": 48,
+      "module": "LiteralVector",
+      "parameters": {},
+      "evidence": "experiments\\differential-v0.3-extension\\LiteralVector-",
+      "seconds": 5.83,
+      "fingerprint": "d4b7efd9faed4dd0a1d4d6bc19ad04712b8e0af05c0ce0fad6ade299a928cd35"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "RegisterFile",
+      "parameters": {
+        "n": 1,
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\RegisterFile-n1-w1",
+      "seconds": 6.06,
+      "fingerprint": "0c3625fc0f2db7f407f8fc577639d547fa1bb5f0c94630126e7e25093cc81bce"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "RegisterFile",
+      "parameters": {
+        "n": 2,
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\RegisterFile-n2-w3",
+      "seconds": 6.11,
+      "fingerprint": "859fe74533366c9b7d3f1ca38ad36733849ecd73f6d5d33536064bf02ce055f0"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "RegisterFile",
+      "parameters": {
+        "n": 3,
+        "w": 4
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\RegisterFile-n3-w4",
+      "seconds": 5.83,
+      "fingerprint": "b67b60b0abc36bc88d642525d654b7957d23eb8a152796f437d8a7028cb7b8b3"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "RegisterFile",
+      "parameters": {
+        "n": 8,
+        "w": 7
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\RegisterFile-n8-w7",
+      "seconds": 6.62,
+      "fingerprint": "1264d0bde3de8b7247047aed3b4e3e8d4ae5bd4ed09100e50021b72ce431dcc5"
+    },
+    {
+      "status": "PASS",
+      "cycles": 61,
+      "compared_output_values": 363,
+      "module": "Fifo",
+      "parameters": {
+        "depth": 2,
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\Fifo-depth2-w3",
+      "seconds": 6.36,
+      "fingerprint": "59b90f25207852cf4d9efc9695bdcc3aa1f95f9e95c0345ec18cd5b3a798dd5e"
+    },
+    {
+      "status": "PASS",
+      "cycles": 64,
+      "compared_output_values": 381,
+      "module": "Fifo",
+      "parameters": {
+        "depth": 3,
+        "w": 4
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\Fifo-depth3-w4",
+      "seconds": 5.14,
+      "fingerprint": "69dfef22f89e31ceadadeeec1c4fa14061ffd5185c9463c935c5020b351b6916"
+    },
+    {
+      "status": "PASS",
+      "cycles": 79,
+      "compared_output_values": 471,
+      "module": "Fifo",
+      "parameters": {
+        "depth": 8,
+        "w": 7
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\Fifo-depth8-w7",
+      "seconds": 5.66,
+      "fingerprint": "8f49c8e9fbef09e3b8de22573bef8fc82aabd89f57403741697c6263241dcca1"
+    },
+    {
+      "status": "PASS",
+      "cycles": 64,
+      "compared_output_values": 128,
+      "module": "ParameterLookup",
+      "parameters": {
+        "w": 2
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\ParameterLookup-w2",
+      "seconds": 6.97,
+      "fingerprint": "a93081b9df8aa06ff882947baef132effc35f34ac194dcc7936f65e5d9dc8ef9"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 96,
+      "module": "ParameterLookup",
+      "parameters": {
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\ParameterLookup-w8",
+      "seconds": 6.7,
+      "fingerprint": "2d4c701f0596e520ee0a6bd0c7ceffd7e32e09b5f778b69fa0a7e88f0c8e0132"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 96,
+      "module": "TabulatedVector",
+      "parameters": {
+        "n": 1,
+        "w": 2
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\TabulatedVector-n1-w2",
+      "seconds": 6.12,
+      "fingerprint": "ebe62e418625862e2da403b5a4fc8dface015eb0280073c18c74ea7cf7759486"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 384,
+      "module": "TabulatedVector",
+      "parameters": {
+        "n": 4,
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\TabulatedVector-n4-w3",
+      "seconds": 5.86,
+      "fingerprint": "672f6ee9663735cf01651a772fbad63a834493f52cbcac5b0a9faf8f9c67cc97"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "AsyncMemory",
+      "parameters": {
+        "n": 2,
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\AsyncMemory-n2-w3",
+      "seconds": 5.92,
+      "fingerprint": "fb13b5777b048fb87cdd0d0d362afbd529816b2899809227f12e75aa0298fea0"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "AsyncMemory",
+      "parameters": {
+        "n": 3,
+        "w": 4
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\AsyncMemory-n3-w4",
+      "seconds": 6.64,
+      "fingerprint": "8793b294491c22a4f65f374cb9bac9287b4b9cca97ab513b150173bfa64289fb"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "AsyncMemory",
+      "parameters": {
+        "n": 8,
+        "w": 7
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\AsyncMemory-n8-w7",
+      "seconds": 7.61,
+      "fingerprint": "26b1ce161e896b3aa7a0d26c711340da451f7f1c5c5ee665aa4b02fe4a25fc92"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 384,
+      "module": "MuxPriorities",
+      "parameters": {
+        "w": 2
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\MuxPriorities-w2",
+      "seconds": 7.27,
+      "fingerprint": "df95128bcd62d74b0c47857c97b16440e51b01b5fbfc0eb3f12e6fd8bbcfc45d"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 384,
+      "module": "MuxPriorities",
+      "parameters": {
+        "w": 5
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\MuxPriorities-w5",
+      "seconds": 5.78,
+      "fingerprint": "2ca6472e0db5e6c8501a9bfb688e69398638e9b183f737955b12e2e57f895399"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 384,
+      "module": "MuxPriorities",
+      "parameters": {
+        "w": 9
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\MuxPriorities-w9",
+      "seconds": 5.95,
+      "fingerprint": "75c9a1ee1acb4e428a8b9be3901abfebc0128b5432d97f24e718b3eb95262c7a"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 864,
+      "module": "Arithmetic",
+      "parameters": {
+        "aWidth": 65,
+        "bWidth": 7
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\Arithmetic-aWidth65-bWidth7",
+      "seconds": 5.86,
+      "fingerprint": "9e8868fa5bf287314b980291f748d7cf0560d4c04242926addc116b6786a9ed9"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 864,
+      "module": "Arithmetic",
+      "parameters": {
+        "aWidth": 128,
+        "bWidth": 65
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\Arithmetic-aWidth128-bWidth65",
+      "seconds": 6.97,
+      "fingerprint": "c38df67fb213284c7d3d063b65bdba02eac74614dc062b647092077320ec90fb"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 576,
+      "module": "SignedArithmetic",
+      "parameters": {
+        "w": 65
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\SignedArithmetic-w65",
+      "seconds": 7.19,
+      "fingerprint": "72450aa054d6a8ce2a9a2f44130e509de37e38890b8c65755e9d62e73a295292"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 672,
+      "module": "ExtendedBits",
+      "parameters": {
+        "w": 128,
+        "shift": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\ExtendedBits-w128-shift3",
+      "seconds": 6.94,
+      "fingerprint": "8abdce560b80dcfba0dbc9684d5e068d0d1c858089350126604f88a99df2321f"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "SyncMemory",
+      "parameters": {
+        "n": 2,
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\SyncMemory-n2-w3",
+      "seconds": 6.27,
+      "fingerprint": "ae485fade6cca8e20fc07e957c6e598824b9f7dd3d79b857441da5fd905856af"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "SyncMemory",
+      "parameters": {
+        "n": 3,
+        "w": 4
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\SyncMemory-n3-w4",
+      "seconds": 5.75,
+      "fingerprint": "145ff8eadc828c9c036fdede1d4490c893df05e89fc817d15998ceae920b08c0"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "SyncMemory",
+      "parameters": {
+        "n": 8,
+        "w": 65
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\SyncMemory-n8-w65",
+      "seconds": 5.97,
+      "fingerprint": "8a9bab90025754fa21975e71c040205bb760af26cec33dce7b68c09b16251dbd"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "InferredRegisters",
+      "parameters": {
+        "w": 2
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\InferredRegisters-w2",
+      "seconds": 5.72,
+      "fingerprint": "b3a49c820aacab18d234e30c5be855fb42c6a65554048b25a64324afc43dfa95"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "InferredRegisters",
+      "parameters": {
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\InferredRegisters-w8",
+      "seconds": 6.31,
+      "fingerprint": "df16d2234e0ef8ba8daeca0269fbfcf4f26eaaac7b8f0c5f6e00f26722266ec0"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "InferredRegisters",
+      "parameters": {
+        "w": 65
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\InferredRegisters-w65",
+      "seconds": 5.84,
+      "fingerprint": "fc6d0e6a2a277e8c833a19af4fbdaf815e30d71beaa653ea6e8f3c5b95ec5882"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "InferredVectorReset",
+      "parameters": {
+        "n": 1,
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\InferredVectorReset-n1-w3",
+      "seconds": 7.89,
+      "fingerprint": "d72a03b3b3ed40f6dadd3c7d8f5a7d30be3cedb8b218feaf6c3987df8645d303"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 380,
+      "module": "InferredVectorReset",
+      "parameters": {
+        "n": 4,
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\InferredVectorReset-n4-w8",
+      "seconds": 9.62,
+      "fingerprint": "83cdde6c273df9de39c3f75dab274af857b3c8d62b202ebaafefb40006d7e5a8"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "AliasedInitializer",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\AliasedInitializer-w3",
+      "seconds": 7.94,
+      "fingerprint": "6d85904fcb103f6a459d26e351f454c78eb23407bce27c146e5cffd7f3a3b0a4"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 95,
+      "module": "AliasedInitializer",
+      "parameters": {
+        "w": 8
+      },
+      "evidence": "experiments\\differential-v0.3-extension\\AliasedInitializer-w8",
+      "seconds": 7.77,
+      "fingerprint": "2a2f4ca1a27a4a9d05bfb48d71815981a429e5e04b1561f3119bed9e5f51f742"
+    }
+  ],
+  "passed": 60,
+  "failed": 0,
+  "formal_equivalence_proof": false
+}

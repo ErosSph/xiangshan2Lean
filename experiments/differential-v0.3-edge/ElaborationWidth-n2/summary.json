@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 4,
+  "compared_output_values": 8,
+  "module": "ElaborationWidth",
+  "parameters": {
+    "n": 2
+  },
+  "evidence": "experiments\\differential-v0.3-edge\\ElaborationWidth-n2",
+  "seconds": 4.98,
+  "fingerprint": "f985d3a5ed8201f736389cd02c565251dff202a361abd25cd73ba5e0c31d37f0"
+}

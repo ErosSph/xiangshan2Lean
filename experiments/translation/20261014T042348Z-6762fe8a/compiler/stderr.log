@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\Rejected.scala:44: error: [chisel2lean] Overloaded inherited methods are unsupported
+  val y = IO(Output(UInt(width.W)))
+                          ^
+1 error

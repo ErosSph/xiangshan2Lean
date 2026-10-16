@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "finished_at": "2026-10-16T05:52:41.078712+00:00",
+  "original_bytes": 106254861756,
+  "original_files": 167222,
+  "archive_bytes": 8767353750,
+  "archive_sha256": "1f15e45e855b872f8d3d53d99692ba703b0873789f20ca63905825c558008898",
+  "manifest_sha256": "0115b714f958539bdc785475499035ef07876bcd9d09b624304009579cb0500f",
+  "server_backup": "/data2/home/lvhongqing/cgt/chisel2lean/windows-backup/20261016-full-local-project",
+  "server_source": "/data2/home/lvhongqing/cgt/chisel2lean/source/20261016-full-local-project/ICT/chisel2lean4",
+  "local_source": "E:\\ICT\\chisel2lean4",
+  "retained_source_files": 7898,
+  "retained_source_bytes": 84512717,
+  "retained_local_hash_check": "PASS",
+  "local_git_fsck": "PASS",
+  "server_git_fsck": "PASS",
+  "restored_source_tests": "PASS (7 tests)",
+  "primary_project_after_cleanup": {
+    "bytes": 36350704,
+    "files": 2770
+  },
+  "cleanup": {
+    "status": "PASS",
+    "apply": true,
+    "archive_sha256": "1f15e45e855b872f8d3d53d99692ba703b0873789f20ca63905825c558008898",
+    "before_free_bytes": 2493370368,
+    "files": 159324,
+    "bytes": 106170349039,
+    "retained_files": 7898,
+    "links": 5,
+    "skipped": [],
+    "started_at": "2026-10-16T05:42:16.673804+00:00",
+    "after_free_bytes": 108794179584,
+    "finished_at": "2026-10-16T05:50:50.462736+00:00",
+    "reclaimed_free_bytes": 106300809216
+  },
+  "drive_free_after_cleanup": 109016731648,
+  "credentials_in_project_files": false,
+  "active_source_tools": "PASS",
+  "retained_hash_scope": "Retained original files checked before adding migration notes and updating validation status.",
+  "whole_validation": "Lean 96 samples PASS; original RTL startup assertions FAILED; no whole-chip equivalence claim."
+}

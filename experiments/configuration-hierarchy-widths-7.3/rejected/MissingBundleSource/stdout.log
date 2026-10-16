@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\RejectedHierarchy.scala:16: error: [chisel2lean] Source of configured module/Bundle configuration.ConfiguredHeader is required
+  val data = IO(Input(new ConfiguredHeader))
+                       ^
+1 error

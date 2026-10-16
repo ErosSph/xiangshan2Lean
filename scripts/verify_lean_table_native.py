@@ -13,6 +13,9 @@ from yosys2lean import digest, write
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--runner', type=Path, default=ROOT / 'experiments/lean-table-native-7.3')
+    parser.add_argument('--evidence', type=Path)
+    parser.add_argument('--report', type=Path)
+    parser.add_argument('--cases', type=int, default=13, choices=range(1, 18))
     args = parser.parse_args()
     runner_folder = args.runner.resolve()
     report = json.loads((runner_folder / 'manifest.json').read_text(encoding='utf-8'))
@@ -23,9 +26,9 @@ def main():
         assert digest(tools / name) == expected
     env = os.environ.copy()
     env['PATH'] = str(tools) + os.pathsep + env.get('PATH', '')
-    base = ROOT / ('experiments/yosys-table-native-stream-7.3' if report.get('request_format') == 'jsonl-v1' else 'experiments/yosys-table-native-7.3')
+    base = args.evidence.resolve() if args.evidence else ROOT / ('experiments/yosys-table-native-stream-7.3' if report.get('request_format') == 'jsonl-v1' else 'experiments/yosys-table-native-7.3')
     cases = []
-    for index in range(13):
+    for index in range(args.cases):
         reference = ROOT / 'experiments/yosys-table-7.3' / str(index)
         model = reference / 'model'
         binary = next(model.rglob('*.circuit.bin'))
@@ -52,7 +55,10 @@ def main():
     result = {'status': 'PASS', 'cases': cases, 'runner_manifest_sha256': digest(runner_folder / 'manifest.json'),
               'scope': 'The same Lean definitions compiled by the pinned Lean/Clang toolchain reproduce every output and observation of the bytecode models and their RTL/initial-state contract references.'}
     write(base / 'summary.json', result)
-    write(ROOT / ('docs/validation-lean-table-native-stream-7.3.json' if report.get('request_format') == 'jsonl-v1' else 'docs/validation-lean-table-native-7.3.json'), result)
+    if args.report:
+        write(args.report.resolve(), result)
+    elif not args.evidence:
+        write(ROOT / ('docs/validation-lean-table-native-stream-7.3.json' if report.get('request_format') == 'jsonl-v1' else 'docs/validation-lean-table-native-7.3.json'), result)
     print(json.dumps({'status': 'PASS', 'cases': len(cases), 'steps': sum(case['steps'] for case in cases)}, indent=2))
 
 

@@ -1,0 +1,26 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "OriginalRightShiftReference",
+    "--Mdir",
+    "obj_dir",
+    "OriginalRightShiftReference.v",
+    "trace.cpp"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-right-shift\\negative-control\\comparison\\reference\\rtl",
+  "started_at": "2026-10-13T09:13:37.566254+00:00"
+}

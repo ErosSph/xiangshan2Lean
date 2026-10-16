@@ -1,0 +1,59 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\aggregate\\Supported.scala"
+  ],
+  "modules": [
+    {
+      "module": "aggregate.BundleVectorConstruct",
+      "namespace": "aggregate.BundleVectorConstruct",
+      "ir": "aggregate/BundleVectorConstruct.ir.json",
+      "lean": "aggregate/BundleVectorConstruct.lean"
+    },
+    {
+      "module": "aggregate.BundleVectorHierarchy",
+      "namespace": "aggregate.BundleVectorHierarchy",
+      "ir": "aggregate/BundleVectorHierarchy.ir.json",
+      "lean": "aggregate/BundleVectorHierarchy.lean"
+    },
+    {
+      "module": "aggregate.BundleVectorMux",
+      "namespace": "aggregate.BundleVectorMux",
+      "ir": "aggregate/BundleVectorMux.ir.json",
+      "lean": "aggregate/BundleVectorMux.lean"
+    },
+    {
+      "module": "aggregate.BundleVectorPipeline",
+      "namespace": "aggregate.BundleVectorPipeline",
+      "ir": "aggregate/BundleVectorPipeline.ir.json",
+      "lean": "aggregate/BundleVectorPipeline.lean"
+    },
+    {
+      "module": "aggregate.BundleVectorResize",
+      "namespace": "aggregate.BundleVectorResize",
+      "ir": "aggregate/BundleVectorResize.ir.json",
+      "lean": "aggregate/BundleVectorResize.lean"
+    },
+    {
+      "module": "aggregate.BundleVectorWrites",
+      "namespace": "aggregate.BundleVectorWrites",
+      "ir": "aggregate/BundleVectorWrites.ir.json",
+      "lean": "aggregate/BundleVectorWrites.lean"
+    },
+    {
+      "module": "aggregate.NestedBundleVector",
+      "namespace": "aggregate.NestedBundleVector",
+      "ir": "aggregate/NestedBundleVector.ir.json",
+      "lean": "aggregate/NestedBundleVector.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\aggregate\\Supported.scala": "c39846303593c0870056d53d7ebf85115ad55ff6549de7af85953b93085d2840"
+  },
+  "compiler_sha256": "80d492c670c2bff7706ab432e749884b3cd33769500e4862ee94c0a22e6342c0",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261014T052802Z-a941143a"
+}

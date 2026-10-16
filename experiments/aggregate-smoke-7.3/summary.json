@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "chisel_version": "7.3.0",
+  "lean_version": "4.19.0",
+  "comparison": "executed Lean == official original Chisel RTL == independent integer specification",
+  "configurations": 3,
+  "cycles": 288,
+  "output_comparisons": 11078,
+  "compiler_sha256": "65eeeeefb2f3ec2878853dec378f30d0505f6c77aa01730b007e84d4ef5e043f",
+  "formal_equivalence_proof": false,
+  "cases": [
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorWrites",
+      "parameters": {
+        "n": 1,
+        "w": 1,
+        "m": 1
+      },
+      "cycles": 96,
+      "output_comparisons": 1146,
+      "source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "ir_sha256": "c0bdc6f89767c66817e19520bded13a80a5070b668962a3e322412dbd202d648",
+      "lean_sha256": "d8e5a075ac50458db996f65cb33f9849be383375c0e9cb1dbf3b9e6b1b975f23"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorWrites",
+      "parameters": {
+        "n": 3,
+        "w": 5,
+        "m": 3
+      },
+      "cycles": 96,
+      "output_comparisons": 4584,
+      "source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "ir_sha256": "c0bdc6f89767c66817e19520bded13a80a5070b668962a3e322412dbd202d648",
+      "lean_sha256": "d8e5a075ac50458db996f65cb33f9849be383375c0e9cb1dbf3b9e6b1b975f23"
+    },
+    {
+      "status": "PASS",
+      "module": "aggregate.BundleVectorWrites",
+      "parameters": {
+        "n": 4,
+        "w": 65,
+        "m": 2
+      },
+      "cycles": 96,
+      "output_comparisons": 5348,
+      "source_sha256": "a921dab4b497893499366e48968d78ebb0a2a3b098c57e16df2cfd8d0c089e58",
+      "ir_sha256": "c0bdc6f89767c66817e19520bded13a80a5070b668962a3e322412dbd202d648",
+      "lean_sha256": "d8e5a075ac50458db996f65cb33f9849be383375c0e9cb1dbf3b9e6b1b975f23"
+    }
+  ]
+}

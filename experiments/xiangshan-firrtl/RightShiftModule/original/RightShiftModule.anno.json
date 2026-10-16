@@ -1,0 +1,34 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"E:\\ICT\\chisel2lean4\\experiments\\xiangshan-firrtl\\RightShiftModule\\original"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~RightShiftModule|RightShiftModule>io_srl",
+    "sources":[
+      "~RightShiftModule|RightShiftModule>io_srlSrc",
+      "~RightShiftModule|RightShiftModule>io_shamt"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~RightShiftModule|RightShiftModule>io_sra",
+    "sources":[
+      "~RightShiftModule|RightShiftModule>io_shamt",
+      "~RightShiftModule|RightShiftModule>io_sraSrc"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~RightShiftModule|RightShiftModule>io_revSrl",
+    "sources":[
+      "~RightShiftModule|RightShiftModule>io_srlSrc",
+      "~RightShiftModule|RightShiftModule>io_revShamt"
+    ]
+  }
+]

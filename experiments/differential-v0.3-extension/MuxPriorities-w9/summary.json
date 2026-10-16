@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 384,
+  "module": "MuxPriorities",
+  "parameters": {
+    "w": 9
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\MuxPriorities-w9",
+  "seconds": 5.95,
+  "fingerprint": "75c9a1ee1acb4e428a8b9be3901abfebc0128b5432d97f24e718b3eb95262c7a"
+}

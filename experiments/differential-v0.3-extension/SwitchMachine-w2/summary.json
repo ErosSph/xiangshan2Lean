@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "SwitchMachine",
+  "parameters": {
+    "w": 2
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\SwitchMachine-w2",
+  "seconds": 6.08,
+  "fingerprint": "c27dae35811aa4faefc2f40892da3c8b869e9effb739cf92c6ab7097953e125a"
+}

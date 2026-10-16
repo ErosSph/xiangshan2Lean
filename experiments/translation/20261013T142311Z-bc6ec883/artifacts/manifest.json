@@ -1,0 +1,333 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Advanced.scala",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Control.scala",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Designs.scala",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Features.scala",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Hierarchy.scala",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Mainstream.scala",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Memories.scala",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Muxes.scala",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Probes.scala"
+  ],
+  "modules": [
+    {
+      "module": "probes.AliasedInitializer",
+      "namespace": "probes.AliasedInitializer",
+      "ir": "probes/AliasedInitializer.ir.json",
+      "lean": "probes/AliasedInitializer.lean"
+    },
+    {
+      "module": "probes.Arithmetic",
+      "namespace": "probes.Arithmetic",
+      "ir": "probes/Arithmetic.ir.json",
+      "lean": "probes/Arithmetic.lean"
+    },
+    {
+      "module": "probes.AsyncMemory",
+      "namespace": "probes.AsyncMemory",
+      "ir": "probes/AsyncMemory.ir.json",
+      "lean": "probes/AsyncMemory.lean"
+    },
+    {
+      "module": "probes.BitOperations",
+      "namespace": "probes.BitOperations",
+      "ir": "probes/BitOperations.ir.json",
+      "lean": "probes/BitOperations.lean"
+    },
+    {
+      "module": "probes.BoolGate",
+      "namespace": "probes.BoolGate",
+      "ir": "probes/BoolGate.ir.json",
+      "lean": "probes/BoolGate.lean"
+    },
+    {
+      "module": "probes.BoolState",
+      "namespace": "probes.BoolState",
+      "ir": "probes/BoolState.ir.json",
+      "lean": "probes/BoolState.lean"
+    },
+    {
+      "module": "probes.BundlePipeline",
+      "namespace": "probes.BundlePipeline",
+      "ir": "probes/BundlePipeline.ir.json",
+      "lean": "probes/BundlePipeline.lean"
+    },
+    {
+      "module": "probes.CombinationalDependencies",
+      "namespace": "probes.CombinationalDependencies",
+      "ir": "probes/CombinationalDependencies.ir.json",
+      "lean": "probes/CombinationalDependencies.lean"
+    },
+    {
+      "module": "probes.CombLane",
+      "namespace": "probes.CombLane",
+      "ir": "probes/CombLane.ir.json",
+      "lean": "probes/CombLane.lean"
+    },
+    {
+      "module": "probes.ConditionalPriority",
+      "namespace": "probes.ConditionalPriority",
+      "ir": "probes/ConditionalPriority.ir.json",
+      "lean": "probes/ConditionalPriority.lean"
+    },
+    {
+      "module": "probes.Counter",
+      "namespace": "probes.Counter",
+      "ir": "probes/Counter.ir.json",
+      "lean": "probes/Counter.lean"
+    },
+    {
+      "module": "probes.DirectCounter",
+      "namespace": "probes.DirectCounter",
+      "ir": "probes/DirectCounter.ir.json",
+      "lean": "probes/DirectCounter.lean"
+    },
+    {
+      "module": "probes.DualRegister",
+      "namespace": "probes.DualRegister",
+      "ir": "probes/DualRegister.ir.json",
+      "lean": "probes/DualRegister.lean"
+    },
+    {
+      "module": "probes.ElaborationLiteral",
+      "namespace": "probes.ElaborationLiteral",
+      "ir": "probes/ElaborationLiteral.ir.json",
+      "lean": "probes/ElaborationLiteral.lean"
+    },
+    {
+      "module": "probes.ElaborationWidth",
+      "namespace": "probes.ElaborationWidth",
+      "ir": "probes/ElaborationWidth.ir.json",
+      "lean": "probes/ElaborationWidth.lean"
+    },
+    {
+      "module": "probes.EnabledRegister",
+      "namespace": "probes.EnabledRegister",
+      "ir": "probes/EnabledRegister.ir.json",
+      "lean": "probes/EnabledRegister.lean"
+    },
+    {
+      "module": "probes.ExtendedBits",
+      "namespace": "probes.ExtendedBits",
+      "ir": "probes/ExtendedBits.ir.json",
+      "lean": "probes/ExtendedBits.lean"
+    },
+    {
+      "module": "probes.Fifo",
+      "namespace": "probes.Fifo",
+      "ir": "probes/Fifo.ir.json",
+      "lean": "probes/Fifo.lean"
+    },
+    {
+      "module": "probes.HardwareHelper",
+      "namespace": "probes.HardwareHelper",
+      "ir": "probes/HardwareHelper.ir.json",
+      "lean": "probes/HardwareHelper.lean"
+    },
+    {
+      "module": "probes.HelperWidth",
+      "namespace": "probes.HelperWidth",
+      "ir": "probes/HelperWidth.ir.json",
+      "lean": "probes/HelperWidth.lean"
+    },
+    {
+      "module": "probes.HierarchicalComb",
+      "namespace": "probes.HierarchicalComb",
+      "ir": "probes/HierarchicalComb.ir.json",
+      "lean": "probes/HierarchicalComb.lean"
+    },
+    {
+      "module": "probes.HierarchicalPipeline",
+      "namespace": "probes.HierarchicalPipeline",
+      "ir": "probes/HierarchicalPipeline.ir.json",
+      "lean": "probes/HierarchicalPipeline.lean"
+    },
+    {
+      "module": "probes.InferredRegisters",
+      "namespace": "probes.InferredRegisters",
+      "ir": "probes/InferredRegisters.ir.json",
+      "lean": "probes/InferredRegisters.lean"
+    },
+    {
+      "module": "probes.InferredVectorReset",
+      "namespace": "probes.InferredVectorReset",
+      "ir": "probes/InferredVectorReset.ir.json",
+      "lean": "probes/InferredVectorReset.lean"
+    },
+    {
+      "module": "probes.LiteralVector",
+      "namespace": "probes.LiteralVector",
+      "ir": "probes/LiteralVector.ir.json",
+      "lean": "probes/LiteralVector.lean"
+    },
+    {
+      "module": "probes.MixedReset",
+      "namespace": "probes.MixedReset",
+      "ir": "probes/MixedReset.ir.json",
+      "lean": "probes/MixedReset.lean"
+    },
+    {
+      "module": "probes.MoreBits",
+      "namespace": "probes.MoreBits",
+      "ir": "probes/MoreBits.ir.json",
+      "lean": "probes/MoreBits.lean"
+    },
+    {
+      "module": "probes.MuxPriorities",
+      "namespace": "probes.MuxPriorities",
+      "ir": "probes/MuxPriorities.ir.json",
+      "lean": "probes/MuxPriorities.lean"
+    },
+    {
+      "module": "probes.NamedBundle",
+      "namespace": "probes.NamedBundle",
+      "ir": "probes/NamedBundle.ir.json",
+      "lean": "probes/NamedBundle.lean"
+    },
+    {
+      "module": "probes.NestedHierarchy",
+      "namespace": "probes.NestedHierarchy",
+      "ir": "probes/NestedHierarchy.ir.json",
+      "lean": "probes/NestedHierarchy.lean"
+    },
+    {
+      "module": "probes.ParamChoice",
+      "namespace": "probes.ParamChoice",
+      "ir": "probes/ParamChoice.ir.json",
+      "lean": "probes/ParamChoice.lean"
+    },
+    {
+      "module": "probes.ParameterLookup",
+      "namespace": "probes.ParameterLookup",
+      "ir": "probes/ParameterLookup.ir.json",
+      "lean": "probes/ParameterLookup.lean"
+    },
+    {
+      "module": "probes.ParamExpression",
+      "namespace": "probes.ParamExpression",
+      "ir": "probes/ParamExpression.ir.json",
+      "lean": "probes/ParamExpression.lean"
+    },
+    {
+      "module": "probes.PartialGenerate",
+      "namespace": "probes.PartialGenerate",
+      "ir": "probes/PartialGenerate.ir.json",
+      "lean": "probes/PartialGenerate.lean"
+    },
+    {
+      "module": "probes.PipelineLane",
+      "namespace": "probes.PipelineLane",
+      "ir": "probes/PipelineLane.ir.json",
+      "lean": "probes/PipelineLane.lean"
+    },
+    {
+      "module": "probes.Priority",
+      "namespace": "probes.Priority",
+      "ir": "probes/Priority.ir.json",
+      "lean": "probes/Priority.lean"
+    },
+    {
+      "module": "probes.RegisterFile",
+      "namespace": "probes.RegisterFile",
+      "ir": "probes/RegisterFile.ir.json",
+      "lean": "probes/RegisterFile.lean"
+    },
+    {
+      "module": "probes.RegisterIdioms",
+      "namespace": "probes.RegisterIdioms",
+      "ir": "probes/RegisterIdioms.ir.json",
+      "lean": "probes/RegisterIdioms.lean"
+    },
+    {
+      "module": "probes.RenamedAccumulator",
+      "namespace": "probes.RenamedAccumulator",
+      "ir": "probes/RenamedAccumulator.ir.json",
+      "lean": "probes/RenamedAccumulator.lean"
+    },
+    {
+      "module": "probes.ReservedPorts",
+      "namespace": "probes.ReservedPorts",
+      "ir": "probes/ReservedPorts.ir.json",
+      "lean": "probes/ReservedPorts.lean"
+    },
+    {
+      "module": "probes.ResetFromInput",
+      "namespace": "probes.ResetFromInput",
+      "ir": "probes/ResetFromInput.ir.json",
+      "lean": "probes/ResetFromInput.lean"
+    },
+    {
+      "module": "probes.SignedArithmetic",
+      "namespace": "probes.SignedArithmetic",
+      "ir": "probes/SignedArithmetic.ir.json",
+      "lean": "probes/SignedArithmetic.lean"
+    },
+    {
+      "module": "probes.SignedDivision",
+      "namespace": "probes.SignedDivision",
+      "ir": "probes/SignedDivision.ir.json",
+      "lean": "probes/SignedDivision.lean"
+    },
+    {
+      "module": "probes.SwitchMachine",
+      "namespace": "probes.SwitchMachine",
+      "ir": "probes/SwitchMachine.ir.json",
+      "lean": "probes/SwitchMachine.lean"
+    },
+    {
+      "module": "probes.SyncMemory",
+      "namespace": "probes.SyncMemory",
+      "ir": "probes/SyncMemory.ir.json",
+      "lean": "probes/SyncMemory.lean"
+    },
+    {
+      "module": "probes.TabulatedVector",
+      "namespace": "probes.TabulatedVector",
+      "ir": "probes/TabulatedVector.ir.json",
+      "lean": "probes/TabulatedVector.lean"
+    },
+    {
+      "module": "probes.VecIndex",
+      "namespace": "probes.VecIndex",
+      "ir": "probes/VecIndex.ir.json",
+      "lean": "probes/VecIndex.lean"
+    },
+    {
+      "module": "probes.VecLoop",
+      "namespace": "probes.VecLoop",
+      "ir": "probes/VecLoop.ir.json",
+      "lean": "probes/VecLoop.lean"
+    },
+    {
+      "module": "probes.VecRegisters",
+      "namespace": "probes.VecRegisters",
+      "ir": "probes/VecRegisters.ir.json",
+      "lean": "probes/VecRegisters.lean"
+    },
+    {
+      "module": "probes.VectorReset",
+      "namespace": "probes.VectorReset",
+      "ir": "probes/VectorReset.ir.json",
+      "lean": "probes/VectorReset.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Advanced.scala": "b07355195817d7c3cbdf242bf8bd64e3fe697cdb9b6ea8ee46e3c0cc87595717",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Control.scala": "9c99bc45984bca25c311474cf2b4000c0fe197bd16d7af884c9a1caf705c9177",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Designs.scala": "a1a4d6e6c34c0d4c915f6b9c28fe00ed78e68df47ee4b42b8d643ca3795ef924",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Features.scala": "e76a9d6934e5795256246287f64618d305e8734012f068ec6875a55b1f674ae9",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Hierarchy.scala": "932e73ff307498c1d19f4d9e17f74200d8217f94980d7abc003c2a44604702cc",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Mainstream.scala": "b4fc93ef161dcf45112b8948f12f035d7d2cfb68e8965d5321ae55bd9648c21b",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Memories.scala": "8a36eaa495046b0e5c3bb3301f83da741334897cc6d1c4af93c4903bd2262b29",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Muxes.scala": "956d6b911ec174a0e13f16964e618d8d347dd46b96abd878a2896dc69e04d432",
+    "E:\\ICT\\chisel2lean4\\audit\\src\\main\\scala\\Probes.scala": "87b4086c1579f4bda1df9e1a3cf3a34585fcbe07dce6b766b246266a5818721e"
+  },
+  "compiler_sha256": "8ec56360b65326a2ef174cca427c35359235589d36c92434d783719a39486581",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T142311Z-bc6ec883"
+}

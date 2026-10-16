@@ -1,0 +1,67 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala",
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Hierarchy.scala"
+  ],
+  "modules": [
+    {
+      "module": "configuration.ConfiguredBundlePipeline",
+      "namespace": "configuration.ConfiguredBundlePipeline",
+      "ir": "configuration/ConfiguredBundlePipeline.ir.json",
+      "lean": "configuration/ConfiguredBundlePipeline.lean"
+    },
+    {
+      "module": "configuration.ConfiguredHierarchy",
+      "namespace": "configuration.ConfiguredHierarchy",
+      "ir": "configuration/ConfiguredHierarchy.ir.json",
+      "lean": "configuration/ConfiguredHierarchy.lean"
+    },
+    {
+      "module": "configuration.ConfiguredLeaf",
+      "namespace": "configuration.ConfiguredLeaf",
+      "ir": "configuration/ConfiguredLeaf.ir.json",
+      "lean": "configuration/ConfiguredLeaf.lean"
+    },
+    {
+      "module": "configuration.ConfiguredPipeline",
+      "namespace": "configuration.ConfiguredPipeline",
+      "ir": "configuration/ConfiguredPipeline.ir.json",
+      "lean": "configuration/ConfiguredPipeline.lean"
+    },
+    {
+      "module": "configuration.ConfiguredStage",
+      "namespace": "configuration.ConfiguredStage",
+      "ir": "configuration/ConfiguredStage.ir.json",
+      "lean": "configuration/ConfiguredStage.lean"
+    },
+    {
+      "module": "configuration.InheritedPrimitive",
+      "namespace": "configuration.InheritedPrimitive",
+      "ir": "configuration/InheritedPrimitive.ir.json",
+      "lean": "configuration/InheritedPrimitive.lean"
+    },
+    {
+      "module": "configuration.ScalarDefaults",
+      "namespace": "configuration.ScalarDefaults",
+      "ir": "configuration/ScalarDefaults.ir.json",
+      "lean": "configuration/ScalarDefaults.lean"
+    },
+    {
+      "module": "configuration.TwoConfigurations",
+      "namespace": "configuration.TwoConfigurations",
+      "ir": "configuration/TwoConfigurations.ir.json",
+      "lean": "configuration/TwoConfigurations.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Supported.scala": "255851781633178e7672046129b7eb71bb6718544b3f56609ce545b75deada1f",
+    "E:\\ICT\\chisel2lean4\\tests\\fixtures\\configuration\\Hierarchy.scala": "e2264874e8c6e0999b3e6defad8e3885023a5ebcf4014d60dabde8c92fa0bd35"
+  },
+  "compiler_sha256": "c75acc4adeecb714dff55aa9f3079abce0fbe741dc0a66855f3840e05ada1341",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261014T035519Z-ecaad3d9"
+}

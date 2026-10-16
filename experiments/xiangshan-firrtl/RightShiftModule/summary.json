@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "module": "RightShiftModule",
+  "commit": "f0d8a1cf543c113433ff98140b6d77055d930deb",
+  "framework_shim": false,
+  "configuration": "top.MinimalConfig(1); bind XSCoreParamsKey to XSTileKey.head",
+  "signals": 13,
+  "submodule_instances": 0,
+  "cycles": 1408,
+  "output_comparisons": 8448,
+  "independent_math_checks": 8448,
+  "opcode_values_covered": null,
+  "formal_translation_equivalence": false
+}

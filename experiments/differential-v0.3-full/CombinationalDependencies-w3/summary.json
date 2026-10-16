@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 16,
+  "compared_output_values": 32,
+  "module": "CombinationalDependencies",
+  "parameters": {
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.3-full\\CombinationalDependencies-w3",
+  "seconds": 5.22,
+  "fingerprint": "44daa4c8e95924dc52199cabf5f5958ee641b933b3a5bfff3e2255ef95315b51"
+}

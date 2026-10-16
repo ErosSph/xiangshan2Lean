@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\.cache\xiangshan-dependencies-7.3\xiangshan\src\main\scala\xiangshan\Bundle.scala:369: warning: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `connectDispatchData`'s return type [quickfixable]
+  def connectDispatchData(data: RobDispatchData) {
+                                                 ^
+1 warning

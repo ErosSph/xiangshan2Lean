@@ -1,0 +1,10 @@
+{
+  "module": "probes.ElaborationWidth",
+  "parameters": {
+    "n": 2
+  },
+  "seed": 20261013,
+  "cycles": 4,
+  "sampling": "before/after rising edge",
+  "comparison_start": "post first reset/warm-up edge for stateful modules"
+}

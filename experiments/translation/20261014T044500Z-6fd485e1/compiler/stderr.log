@@ -1,0 +1,16 @@
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Supported.scala:106: error: [chisel2lean] Frontend could not represent this module: NoSuchElementException: None.get
+class BundleVectorHierarchy(n: Int, w: Int, m: Int) extends Module {
+      ^
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Supported.scala:87: error: [chisel2lean] Frontend could not represent this module: NoSuchElementException: None.get
+class NestedBundleVector(n: Int, m: Int, w: Int) extends Module {
+      ^
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Supported.scala:80: error: [chisel2lean] Frontend could not represent this module: NoSuchElementException: None.get
+class BundleVectorResize(n: Int, wi: Int, wo: Int) extends Module {
+      ^
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Supported.scala:59: error: [chisel2lean] Frontend could not represent this module: NoSuchElementException: None.get
+class BundleVectorConstruct(n: Int, w: Int, m: Int) extends Module {
+      ^
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Supported.scala:34: error: [chisel2lean] Frontend could not represent this module: NoSuchElementException: None.get
+class BundleVectorWrites(n: Int, w: Int, m: Int) extends Module {
+      ^
+5 errors

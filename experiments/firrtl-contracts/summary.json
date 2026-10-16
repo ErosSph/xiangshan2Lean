@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "rejections": [
+    {
+      "case": "Memory",
+      "rejected": true,
+      "diagnostic": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\Memory.fir:6:4: FIRRTL: Memory ports/latencies are not supported by the FIRRTL frontend yet"
+    },
+    {
+      "case": "InvalidCharacter",
+      "rejected": true,
+      "diagnostic": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\InvalidCharacter.fir:4:21: FIRRTL lexical error: token recognition error at: '\u00a7'"
+    },
+    {
+      "case": "AsyncReset",
+      "rejected": true,
+      "diagnostic": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\AsyncReset.fir:4:4: FIRRTL: Asynchronous reset is unsupported"
+    },
+    {
+      "case": "MultiClock",
+      "rejected": true,
+      "diagnostic": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\MultiClock.fir:9:4: FIRRTL: Multiple top-level clock inputs are unsupported"
+    },
+    {
+      "case": "BlackBox",
+      "rejected": true,
+      "diagnostic": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\BlackBox.fir:6:4: FIRRTL: BlackBox/ExtModule External requires an explicit semantics model"
+    },
+    {
+      "case": "ClockGate",
+      "rejected": true,
+      "diagnostic": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\ClockGate.fir:7:4: FIRRTL: Expected a scalar reference, got asClock(and(asUInt(clock), en))"
+    },
+    {
+      "case": "Assertion",
+      "rejected": true,
+      "diagnostic": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\Assertion.fir:7:4: FIRRTL: Unsupported statement assert(clock, en, UInt<1>(\"h1\"), \"contract\") @[E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\Assertion.fir 7:4]"
+    },
+    {
+      "case": "ModernVersion",
+      "rejected": true,
+      "diagnostic": "FIRRTL frontend failed: FIRRTL version 6.0.0 is not supported (greater than 1.1.0)"
+    }
+  ],
+  "undefined_division_rejected": true,
+  "false_validif_rejected": true,
+  "negative_control": {
+    "detected": true,
+    "fault": "replace signed negation output with zero",
+    "expected": 4,
+    "mutant_actual": 0,
+    "production_unchanged": true
+  }
+}

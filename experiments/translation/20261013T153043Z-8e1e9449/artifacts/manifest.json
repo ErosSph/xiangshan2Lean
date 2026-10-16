@@ -1,0 +1,23 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\experiments\\chisel7-wireinit\\WireProbe.scala"
+  ],
+  "modules": [
+    {
+      "module": "wireprobe.WireProbe",
+      "namespace": "wireprobe.WireProbe",
+      "ir": "wireprobe/WireProbe.ir.json",
+      "lean": "wireprobe/WireProbe.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\experiments\\chisel7-wireinit\\WireProbe.scala": "6bf0d2ab7576383616f1b864e87a699a2d745865fb788ffcdbd5b2b9244279ed"
+  },
+  "compiler_sha256": "696ae04d5cf58f50cbbb0b89ca65867872ecc4820ff1af4d5a5555107b8699f9",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T153043Z-8e1e9449"
+}

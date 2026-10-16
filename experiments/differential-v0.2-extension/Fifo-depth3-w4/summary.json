@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 64,
+  "compared_output_values": 381,
+  "module": "Fifo",
+  "parameters": {
+    "depth": 3,
+    "w": 4
+  },
+  "evidence": "experiments\\differential-v0.2-extension\\Fifo-depth3-w4",
+  "seconds": 12.38,
+  "fingerprint": "7310e444f1397382245cd49828dd85bd1bfd502c23f25693bc4fcb6846f31ac1"
+}

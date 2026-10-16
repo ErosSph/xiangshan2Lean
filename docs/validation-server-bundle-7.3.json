@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "archive_sha256": "329f0d3699b2a8b8edb0cd9c9cae86f90de89daf368d88a29c84c0b745103bf0",
+  "bundle_manifest_sha256": "02edd3046c0898ee50141aa1cc77517b2f3f23cbf0d0de22037a43d2745e6b24",
+  "commands": [
+    {
+      "case": "archive-integrity",
+      "exit_code": 0,
+      "expected_failure": false
+    },
+    {
+      "case": "host-tools",
+      "exit_code": 0,
+      "expected_failure": false
+    },
+    {
+      "case": "prepare-relocated-model",
+      "exit_code": 0,
+      "expected_failure": false
+    },
+    {
+      "case": "native-and-fresh-rtl-smoke",
+      "exit_code": 0,
+      "expected_failure": false
+    },
+    {
+      "case": "reject-incomplete-whole-acceptance",
+      "exit_code": 1,
+      "expected_failure": true
+    },
+    {
+      "case": "reject-changed-transfer-packet",
+      "exit_code": 1,
+      "expected_failure": true
+    },
+    {
+      "case": "reject-changed-working-packet",
+      "exit_code": 1,
+      "expected_failure": true
+    },
+    {
+      "case": "restored-transfer-integrity",
+      "exit_code": 0,
+      "expected_failure": false
+    }
+  ],
+  "selftest": {
+    "status": "PASS",
+    "samples": 48,
+    "outputs_and_observations": "PASS",
+    "invalid_property_rejected": "PASS",
+    "fresh_rtl": "PASS",
+    "execution": "E:\\ICT\\chisel2lean4\\dist\\server-relocation-work-20261016-v2\\selftest\\20261015T182803Z-adc31cb0",
+    "scope": "Small fixture only; whole-chip acceptance is separate."
+  },
+  "trace_comparison_rejections": [
+    "missing-sample",
+    "wrong-output-bit",
+    "missing-output-port",
+    "wrong-cycle-index"
+  ],
+  "work_directory": "E:\\ICT\\chisel2lean4\\dist\\server-relocation-work-20261016-v2",
+  "execution_host": "Windows x86_64",
+  "target_server_execution": "NOT_RUN",
+  "whole_chip_acceptance": "NOT_RUN",
+  "scope": "Actual bundle relocated to a different directory, host-compiled and executed on the small fixture against fresh independent RTL. Transfer/work packet corruption and incomplete/incorrect traces are rejected. Target OS/architecture remains unconfirmed."
+}

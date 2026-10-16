@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 384,
+  "module": "PartialGenerate",
+  "parameters": {
+    "n": 4,
+    "w": 5
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\PartialGenerate-n4-w5",
+  "seconds": 7.48,
+  "fingerprint": "14da16320c22a5e34511873e037c9b18f4d934a581d956295ae744d7a3d8c128"
+}

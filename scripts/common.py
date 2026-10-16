@@ -43,12 +43,32 @@ def java_executable() -> str:
 
 
 def lean_executable() -> str:
+    configured = os.environ.get('CHISEL2LEAN_LEAN')
+    if configured:
+        executable = Path(configured).expanduser().resolve()
+        if not executable.is_file():
+            raise RuntimeError('CHISEL2LEAN_LEAN must name an installed Lean executable')
+        return str(executable)
     suffix = "lean.exe" if os.name == "nt" else "lean"
     platform = "windows" if os.name == "nt" else "linux"
     path = ROOT / ".tools" / f"lean-{LEAN_VERSION}-{platform}" / "bin" / suffix
     if path.is_file():
         return str(path)
     raise RuntimeError("Pinned Lean not installed; run python scripts/bootstrap.py --lean")
+
+
+def lean_runtime_files(executable: str | None = None) -> dict[str, Path]:
+    """Record host binaries and shared libraries relative to the Lean bin dir."""
+    lean = Path(executable or lean_executable()).resolve()
+    directory = lean.parent
+    suffix = '.exe' if os.name == 'nt' else ''
+    files = {lean, *(directory / (name + suffix) for name in ('leanc', 'clang', 'ld.lld'))}
+    files.update(directory.glob('*.dll'))
+    for library_directory in (directory.parent / 'lib', directory.parent / 'lib/lean'):
+        for pattern in ('*.so', '*.so.*', '*.dylib'):
+            files.update(library_directory.glob(pattern))
+    return {Path(os.path.relpath(path, directory)).as_posix(): path
+            for path in sorted(files) if path.is_file()}
 
 
 def sbt_command(commands: list[str]) -> tuple[list[str], dict[str, str]]:

@@ -12,6 +12,7 @@ import gc
 from bootstrap_json_stream import reader
 from common import ROOT
 from rtl import run_emitted_rtl
+from trace_compare import compare_rows
 from yosys2lean import digest, write
 from yosys_json import ports
 from yosys_simulate import experiment_initial, simulate_yosys
@@ -68,9 +69,11 @@ def prepare(package_path, checkpoint_path, cycles, evidence):
         shutil.copy2(source, target)
     metadata = {'top': 'XSTop', 'clocked': False, 'assertions': True,
         'rtl_sources': [name for name in sorted(hashes) if Path(name).suffix in {'.v', '.sv'}],
-        'rtl_include_dirs': [str(rtl)], 'output_split': 10000, 'output_split_cfuncs': 5000, 'optimization': 0,
+        'rtl_include_dirs': [str(rtl)], 'output_split': 10000, 'output_split_cfuncs': 5000,
+        'output_groups': 0, 'optimization': 0,
         'ports': [{'name': name, 'rtl_name': name, 'width': len(port['bits']), 'direction': port['direction']}
                   for name, port in interface.items()]}
+    metadata['initial_inputs'] = {p['name']: 0 for p in metadata['ports'] if p['direction'] == 'input'}
     trace = trace_for(interface, cycles)
     write(evidence / 'ports.json', metadata)
     write(evidence / 'trace.json', trace)
@@ -167,18 +170,14 @@ def run(prepared, model, native_runner=None):
     trace = json.loads((folder / 'trace.json').read_text(encoding='utf-8'))
     native = reference(prepared)
     actual = lean_reference(prepared, model, native_runner)
-    assert len(actual) == len(native) == len(trace)
-    for sample, (lean, rtl) in enumerate(zip(actual, native)):
-        for phase in ('pre', 'post'):
-            if lean[phase] != rtl[phase]:
-                differences = {name: {'lean': lean[phase][name], 'rtl': value} for name, value in rtl[phase].items()
-                               if lean[phase].get(name) != value}
-                prepared.update(status='MISMATCH', first_sample=sample, phase=phase, differences=differences)
-                write(folder / 'summary.json', prepared)
-                raise AssertionError('Whole XSTop mismatch at sample ' + str(sample))
+    comparison = compare_rows(actual, native, [p['name'] for p in metadata['ports'] if p['direction'] == 'output'], len(trace))
+    if comparison['status'] != 'PASS':
+        prepared.update(comparison)
+        write(folder / 'summary.json', prepared)
+        raise AssertionError('Whole XSTop comparison failed: ' + comparison['status'])
     for name, expected in prepared['source_files_sha256'].items():
         assert digest(folder / 'rtl' / name) == expected, 'Original hardware source changed: ' + name
-    prepared.update(status='PASS', output_comparisons=len(trace) * 2 * sum(p['direction'] == 'output' for p in metadata['ports']),
+    prepared.update(status='PASS', output_comparisons=comparison['output_comparisons'],
                     model_manifest_sha256=digest(model / 'manifest.json'), original_hardware_source_modified=False)
     write(folder / 'summary.json', prepared)
     write(ROOT / 'docs/validation-xiangshan-whole-differential-7.3.json', prepared)
@@ -196,8 +195,11 @@ def main():
     parser.add_argument('--reference-only', action='store_true')
     parser.add_argument('--lean-only', action='store_true')
     parser.add_argument('--native-runner', type=Path)
+    parser.add_argument('--rtl-jobs', type=int, help='Limit original RTL compiler parallelism')
     parser.add_argument('--evidence', type=Path, default=ROOT / 'experiments/xiangshan-whole-differential-7.3')
     args = parser.parse_args()
+    if args.rtl_jobs is not None and args.rtl_jobs < 1:
+        parser.error('RTL jobs must be positive')
     if args.prepared:
         prepared = json.loads((args.prepared.resolve() / 'summary.json').read_text(encoding='utf-8'))
     else:
@@ -206,6 +208,17 @@ def main():
         attempt = dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%SZ') + '-' + uuid.uuid4().hex[:8]
         prepared = prepare(args.source_package.resolve(), args.functional_checkpoint.resolve(), args.cycles,
                            args.evidence.resolve() / attempt)
+    metadata_path = Path(prepared['evidence']) / 'ports.json'
+    metadata = json.loads(metadata_path.read_text(encoding='utf-8'))
+    previous = dict(metadata)
+    if args.rtl_jobs is not None:
+        metadata['jobs'] = args.rtl_jobs
+    # Recent Verilator defaults concatenate the split files into build-job
+    # groups. For XSTop those groups are hundreds of MB each; keep the splits.
+    metadata['output_groups'] = 0
+    metadata.setdefault('initial_inputs', {p['name']: 0 for p in metadata['ports'] if p['direction'] == 'input'})
+    if metadata != previous:
+        write(metadata_path, metadata)
     if args.lean_only:
         actual = lean_reference(prepared, args.model.resolve(), args.native_runner)
         prepared = {**prepared, 'status': 'LEAN_EXECUTED', 'samples_executed': len(actual)}

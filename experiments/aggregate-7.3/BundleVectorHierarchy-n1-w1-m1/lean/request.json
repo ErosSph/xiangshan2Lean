@@ -1,0 +1,1610 @@
+{
+  "parameters": {
+    "n": 1,
+    "w": 1,
+    "m": 1
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          1
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          1
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          3
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          1
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          2
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          3
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            1
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          false
+        ],
+        "data.signed": [
+          2
+        ],
+        "data.valid": [
+          true
+        ]
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "data.data": [
+          0
+        ],
+        "data.lanes": [
+          [
+            0
+          ]
+        ],
+        "data.meta.code": [
+          0
+        ],
+        "data.meta.flag": [
+          true
+        ],
+        "data.signed": [
+          0
+        ],
+        "data.valid": [
+          false
+        ]
+      }
+    }
+  ],
+  "initial_state": null
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 475,
+  "module": "VectorReset",
+  "parameters": {
+    "n": 5,
+    "w": 8
+  },
+  "evidence": "experiments\\differential-v0.2-extension\\VectorReset-n5-w8",
+  "seconds": 15.7,
+  "fingerprint": "52ef4f6b498addf03a2bc072ceeaf60d2343e08875da4b731feba9b037cc9143"
+}

@@ -1,0 +1,490 @@
+{
+  "parameters": {
+    "n": 3,
+    "w": 4,
+    "k": 2
+  },
+  "trace": [
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          14,
+          6,
+          10
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          15,
+          3,
+          13
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          1,
+          7,
+          2
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          0,
+          7,
+          3
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          7,
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          14,
+          15,
+          4
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          1,
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          5,
+          10,
+          12
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          13,
+          10,
+          15
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          15,
+          15,
+          13
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          14,
+          12,
+          7
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          9,
+          0,
+          4
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          13,
+          7,
+          3
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          1,
+          14,
+          2
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          15,
+          14,
+          4
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          0,
+          13,
+          0
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          13,
+          6,
+          11
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          6,
+          7,
+          1
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          15,
+          2,
+          9
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          1,
+          6,
+          9
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          4,
+          14,
+          4
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          11,
+          12,
+          4
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          2,
+          0,
+          14
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          6,
+          14,
+          2
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          12,
+          3,
+          14
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          10,
+          9,
+          11
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          14,
+          15,
+          12
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          1,
+          8,
+          6
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          7,
+          11,
+          9
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          8,
+          8,
+          5
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          11,
+          8,
+          6
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          7,
+          10,
+          6
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          6,
+          7,
+          0
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          3,
+          10,
+          2
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          8,
+          14,
+          12
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          11,
+          14,
+          5
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          7,
+          11,
+          11
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          4,
+          10,
+          10
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          13,
+          0,
+          10
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          6,
+          2,
+          12
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          11,
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          13,
+          2,
+          6
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          10,
+          4,
+          1
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          12,
+          1,
+          10
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          0,
+          14,
+          9
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          7,
+          7,
+          5
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          13,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "in": [
+          13,
+          12,
+          10
+        ]
+      }
+    }
+  ],
+  "initial_state": null
+}

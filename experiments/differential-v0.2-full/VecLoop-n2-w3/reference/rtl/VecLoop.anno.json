@@ -1,0 +1,24 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"E:\\ICT\\chisel2lean\\experiments\\differential-v0.2-full\\VecLoop-n2-w3\\reference\\rtl"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~VecLoop|VecLoop>io_out_1",
+    "sources":[
+      "~VecLoop|VecLoop>io_in_1"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~VecLoop|VecLoop>io_out_0",
+    "sources":[
+      "~VecLoop|VecLoop>io_in_0"
+    ]
+  }
+]

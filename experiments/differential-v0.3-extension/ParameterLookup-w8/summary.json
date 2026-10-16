@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 96,
+  "module": "ParameterLookup",
+  "parameters": {
+    "w": 8
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\ParameterLookup-w8",
+  "seconds": 6.7,
+  "fingerprint": "2d4c701f0596e520ee0a6bd0c7ceffd7e32e09b5f778b69fa0a7e88f0c8e0132"
+}

@@ -1,0 +1,5 @@
+[warn] \tests\fixtures\aggregate\Supported.scala 30:20: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]   selected := saved(index)
+[warn]                    ^
+[warn] There were 1 warning(s) during hardware elaboration.
+Official Chisel 7.3.0 / CIRCT firtool RTL: E:\ICT\chisel2lean4\experiments\aggregate-7.3\BundleVectorPipeline-n1-w1-m1\reference\rtl\Chisel2LeanReference.v

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 190,
+  "module": "BundlePipeline",
+  "parameters": {
+    "w": 8
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\BundlePipeline-w8",
+  "seconds": 5.95,
+  "fingerprint": "8fa9312fb60a5aea0ab50007bb95b4de4f02f62234a9dc7a562281a871de1503"
+}

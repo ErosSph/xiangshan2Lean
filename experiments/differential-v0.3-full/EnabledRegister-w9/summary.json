@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "EnabledRegister",
+  "parameters": {
+    "w": 9
+  },
+  "evidence": "experiments\\differential-v0.3-full\\EnabledRegister-w9",
+  "seconds": 5.67,
+  "fingerprint": "74971c074c1009e06a33dca974b360d2985c37cf5ce2abd9a689b92812232424"
+}

@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\division.fir",
+  "source_sha256": "f48017242d783baba97653a28bf49762f5b3ed6e720cd3bc860298c298cf5595",
+  "compiler_sha256": "670d180dbc40965dbb682ea81b1a2c33de7b683cd74108a85ef7ef4215de2372",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.Division",
+      "top": "Division",
+      "ir": "FIRRTL/Division.ir.json",
+      "lean": "FIRRTL/Division.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261014T050957Z-6489a7b7"
+}

@@ -1,0 +1,12 @@
+{
+  "module": "probes.VecIndex",
+  "parameters": {
+    "n": 3,
+    "w": 4,
+    "k": 0
+  },
+  "seed": 20261013,
+  "cycles": 48,
+  "sampling": "before/after rising edge",
+  "comparison_start": "post first reset/warm-up edge for stateful modules"
+}

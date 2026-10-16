@@ -1,0 +1,121 @@
+{
+  "parameters": {
+    "aWidth": 1,
+    "bWidth": 2
+  },
+  "trace": [
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 0,
+        "io.choose": false
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 0,
+        "io.choose": true
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 1,
+        "io.choose": false
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 1,
+        "io.choose": true
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 2,
+        "io.choose": false
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 2,
+        "io.choose": true
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 3,
+        "io.choose": false
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 0,
+        "io.b": 3,
+        "io.choose": true
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 0,
+        "io.choose": false
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 0,
+        "io.choose": true
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 1,
+        "io.choose": false
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 1,
+        "io.choose": true
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 2,
+        "io.choose": false
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 2,
+        "io.choose": true
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 3,
+        "io.choose": false
+      }
+    },
+    {
+      "inputs": {
+        "io.a": 1,
+        "io.b": 3,
+        "io.choose": true
+      }
+    }
+  ],
+  "initial_state": null
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "NestedHierarchy",
+  "parameters": {
+    "w": 2
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\NestedHierarchy-w2",
+  "seconds": 5.17,
+  "fingerprint": "98b20a1a03d8af4a34dbdafc8daaea89e59829755ba62efe63ed9eec28772638"
+}

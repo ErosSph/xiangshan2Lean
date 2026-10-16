@@ -1,0 +1,7 @@
+E:\ICT\chisel2lean4\tests\fixtures\Rejected.scala:120: error: [chisel2lean] Bundle constructor statements, including require and connections, are unsupported; place constraints in the enclosing Module
+  require(w > 0)
+          ^
+E:\ICT\chisel2lean4\tests\fixtures\Rejected.scala:123: error: Module or Bundle dependency could not be resolved
+class BundleConstructionConstraint(w: Int) extends Module {
+      ^
+2 errors

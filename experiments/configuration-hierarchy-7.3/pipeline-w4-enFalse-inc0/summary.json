@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "module": "ConfiguredPipeline",
+  "parameters": {
+    "inc": 0,
+    "cfg_p_configuration_CoreKey_width": 4,
+    "cfg_p_configuration_CoreKey_enabled": false,
+    "cfg_p_configuration_CoreKey_nested_offset": 3
+  },
+  "cycles": 64,
+  "output_comparisons": 128,
+  "comparison": "executed Lean == original official RTL == independent specification"
+}

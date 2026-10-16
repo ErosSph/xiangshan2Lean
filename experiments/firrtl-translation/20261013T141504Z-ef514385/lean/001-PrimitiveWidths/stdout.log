@@ -1,0 +1,8 @@
+E:\ICT\chisel2lean4\experiments\firrtl-translation\20261013T141504Z-ef514385\artifacts\FIRRTL\PrimitiveWidths.lean:77:14: error: application type mismatch
+  BitVec.not c2lFirrtlNode13
+argument
+  c2lFirrtlNode13
+has type
+  (p : Params) → Inputs p → State p → BitVec (Int.toNat 3) : Type
+but is expected to have type
+  BitVec ?m.2871 : Type

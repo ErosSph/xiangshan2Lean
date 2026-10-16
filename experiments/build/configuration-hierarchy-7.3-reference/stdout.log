@@ -1,0 +1,27 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (11223 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] compiling 2 Scala sources to E:\ICT\chisel2lean4\reference\target\scala-2.13\classes ...
+[error] E:\ICT\chisel2lean4\tests\fixtures\configuration\Hierarchy.scala:38:16: class ConfiguredPayload inherits conflicting members:
+[error]   private[package chisel3] def width: chisel3.Width (defined in trait Aggregate) and
+[error]   def width: Int (defined in trait ConfigParams)
+[error]   (note: this can be resolved by declaring an `override` in class ConfiguredPayload.)
+[error] abstract class ConfiguredPayload(implicit val p: Parameters) extends Bundle with ConfigParams {
+[error]                ^
+[error] E:\ICT\chisel2lean4\tests\fixtures\configuration\Hierarchy.scala:44:7: class ConfiguredHeader inherits conflicting members:
+[error]   private[package chisel3] def width: chisel3.Width (defined in trait Aggregate) and
+[error]   def width: Int (defined in trait ConfigParams)
+[error]   (note: this can be resolved by declaring an `override` in class ConfiguredHeader.)
+[error] class ConfiguredHeader(implicit val p: Parameters) extends Bundle with ConfigParams {
+[error]       ^
+[error] E:\ICT\chisel2lean4\tests\fixtures\configuration\Hierarchy.scala:48:7: class ConfiguredPacket inherits conflicting members:
+[error]   private[package chisel3] def width: chisel3.Width (defined in trait Aggregate) and
+[error]   def width: Int (defined in trait ConfigParams)
+[error]   (note: this can be resolved by declaring an `override` in class ConfiguredPacket.)
+[error] class ConfiguredPacket(extra: Int)(implicit p: Parameters)
+[error]       ^
+[error] three errors found
+[error] (reference / Compile / compileIncremental) Compilation failed
+[error] Total time: 14 s, completed 2026年10月14日 上午11:50:32

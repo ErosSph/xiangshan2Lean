@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "parameters": {
+    "w": 4
+  },
+  "cycles": 18,
+  "compared_output_values": 70,
+  "comparison": "mathematical expectation == executed Lean == official RTL",
+  "initial_sampling": "post first reset edge; subsequent pre and post edges"
+}

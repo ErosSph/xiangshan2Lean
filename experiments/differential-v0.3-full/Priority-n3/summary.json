@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "Priority",
+  "parameters": {
+    "n": 3
+  },
+  "evidence": "experiments\\differential-v0.3-full\\Priority-n3",
+  "seconds": 7.86,
+  "fingerprint": "0dc7577931ea9f1af7c1386ee5b6617253f46fb004cdf66cddfd28016a050bc3"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 96,
+  "module": "ParamExpression",
+  "parameters": {
+    "n": 9
+  },
+  "evidence": "experiments\\differential-v0.3-full\\ParamExpression-n9",
+  "seconds": 4.95,
+  "fingerprint": "bf51047aa521e08afb93c67fa6325ff7b153be5e6dc1594022db8722547b8131"
+}

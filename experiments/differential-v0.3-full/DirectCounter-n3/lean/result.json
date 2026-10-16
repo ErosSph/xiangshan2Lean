@@ -1,0 +1,158 @@
+[
+  {
+    "state": {
+      "cnt": 0
+    },
+    "pre": {
+      "q": 0
+    },
+    "post": {
+      "q": 0
+    },
+    "cycle": 0
+  },
+  {
+    "state": {
+      "cnt": 1
+    },
+    "pre": {
+      "q": 0
+    },
+    "post": {
+      "q": 1
+    },
+    "cycle": 1
+  },
+  {
+    "state": {
+      "cnt": 2
+    },
+    "pre": {
+      "q": 1
+    },
+    "post": {
+      "q": 2
+    },
+    "cycle": 2
+  },
+  {
+    "state": {
+      "cnt": 3
+    },
+    "pre": {
+      "q": 2
+    },
+    "post": {
+      "q": 3
+    },
+    "cycle": 3
+  },
+  {
+    "state": {
+      "cnt": 4
+    },
+    "pre": {
+      "q": 3
+    },
+    "post": {
+      "q": 4
+    },
+    "cycle": 4
+  },
+  {
+    "state": {
+      "cnt": 5
+    },
+    "pre": {
+      "q": 4
+    },
+    "post": {
+      "q": 5
+    },
+    "cycle": 5
+  },
+  {
+    "state": {
+      "cnt": 6
+    },
+    "pre": {
+      "q": 5
+    },
+    "post": {
+      "q": 6
+    },
+    "cycle": 6
+  },
+  {
+    "state": {
+      "cnt": 7
+    },
+    "pre": {
+      "q": 6
+    },
+    "post": {
+      "q": 7
+    },
+    "cycle": 7
+  },
+  {
+    "state": {
+      "cnt": 0
+    },
+    "pre": {
+      "q": 7
+    },
+    "post": {
+      "q": 0
+    },
+    "cycle": 8
+  },
+  {
+    "state": {
+      "cnt": 1
+    },
+    "pre": {
+      "q": 0
+    },
+    "post": {
+      "q": 1
+    },
+    "cycle": 9
+  },
+  {
+    "state": {
+      "cnt": 2
+    },
+    "pre": {
+      "q": 1
+    },
+    "post": {
+      "q": 2
+    },
+    "cycle": 10
+  },
+  {
+    "state": {
+      "cnt": 2
+    },
+    "pre": {
+      "q": 2
+    },
+    "post": {
+      "q": 2
+    },
+    "cycle": 11
+  },
+  {
+    "state": {
+      "cnt": 0
+    },
+    "pre": {
+      "q": 2
+    },
+    "post": {
+      "q": 0
+    },
+    "cycle": 12
+  }
+]

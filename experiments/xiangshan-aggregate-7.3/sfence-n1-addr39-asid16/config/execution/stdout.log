@@ -1,0 +1,15 @@
+[warn] \verification\xiangshan\config\reference\Vector.scala 18:23: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]   when(enable) { saved(index) := patch }
+[warn]                       ^
+[warn] \verification\xiangshan\config\reference\Vector.scala 19:32: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]   when(overrideAddress) { saved(index).bits.addr := saved(index).bits.addr + 1.U }
+[warn]                                ^
+[warn] \verification\xiangshan\config\reference\Vector.scala 19:58: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]   when(overrideAddress) { saved(index).bits.addr := saved(index).bits.addr + 1.U }
+[warn]                                                          ^
+[warn] \verification\xiangshan\config\reference\Vector.scala 21:20: [W004] Dynamic index with width 8 is too wide for Vec of size 1 (expected index width 0).
+[warn]   selected := saved(index)
+[warn]                    ^
+[warn] There were 4 warning(s) during hardware elaboration.
+Official Chisel 7.3.0 / CIRCT firtool RTL: E:\ICT\chisel2lean4\experiments\xiangshan-aggregate-7.3\sfence-n1-addr39-asid16\rtl\Chisel2LeanReference.v
+Real CDE fields materialized: {"n":1,"cfg_p_xiangshan_XSCoreParamsKey_VAddrBits":39,"cfg_p_xiangshan_XSCoreParamsKey_AsidLength":16}

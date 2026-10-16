@@ -1,0 +1,674 @@
+[
+  {
+    "state": {
+      "r": 0
+    },
+    "pre": {
+      "sequential": 0,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 0,
+      "combinational": 1
+    },
+    "cycle": 0
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 0,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 1
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 3
+    },
+    "cycle": 2
+  },
+  {
+    "state": {
+      "r": 4
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 4,
+      "combinational": 3
+    },
+    "cycle": 3
+  },
+  {
+    "state": {
+      "r": 5
+    },
+    "pre": {
+      "sequential": 4,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 5,
+      "combinational": 3
+    },
+    "cycle": 4
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 5,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 5
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 3
+    },
+    "cycle": 6
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "cycle": 7
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 8
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 9
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 10
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 11
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 12
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "cycle": 13
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 14
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 2
+    },
+    "cycle": 15
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 16
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 3
+    },
+    "cycle": 17
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 18
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 3
+    },
+    "cycle": 19
+  },
+  {
+    "state": {
+      "r": 4
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 4,
+      "combinational": 2
+    },
+    "cycle": 20
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 4,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 21
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 3
+    },
+    "cycle": 22
+  },
+  {
+    "state": {
+      "r": 4
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 4,
+      "combinational": 2
+    },
+    "cycle": 23
+  },
+  {
+    "state": {
+      "r": 0
+    },
+    "pre": {
+      "sequential": 4,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 0,
+      "combinational": 1
+    },
+    "cycle": 24
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 0,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 25
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 26
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 2
+    },
+    "cycle": 27
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "cycle": 28
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 29
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 30
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 2
+    },
+    "cycle": 31
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 3
+    },
+    "cycle": 32
+  },
+  {
+    "state": {
+      "r": 4
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 4,
+      "combinational": 2
+    },
+    "cycle": 33
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 4,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 34
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 35
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 1,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "cycle": 36
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "cycle": 37
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 38
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 3
+    },
+    "cycle": 39
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 40
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 41
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 42
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 43
+  },
+  {
+    "state": {
+      "r": 3
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 2
+    },
+    "post": {
+      "sequential": 3,
+      "combinational": 2
+    },
+    "cycle": 44
+  },
+  {
+    "state": {
+      "r": 4
+    },
+    "pre": {
+      "sequential": 3,
+      "combinational": 3
+    },
+    "post": {
+      "sequential": 4,
+      "combinational": 3
+    },
+    "cycle": 45
+  },
+  {
+    "state": {
+      "r": 2
+    },
+    "pre": {
+      "sequential": 4,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "cycle": 46
+  },
+  {
+    "state": {
+      "r": 1
+    },
+    "pre": {
+      "sequential": 2,
+      "combinational": 1
+    },
+    "post": {
+      "sequential": 1,
+      "combinational": 1
+    },
+    "cycle": 47
+  }
+]

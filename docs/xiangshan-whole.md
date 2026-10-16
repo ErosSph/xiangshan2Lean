@@ -3,6 +3,10 @@
 目标是将原工程固定配置的整个 `XSTop` 转成 Lean，首先使用 `DefaultConfig`、单核。
 原版 Scala、CDE、trait 和 SRAM 实现由原工程和官方编译器处理，不改写成简化硬件。
 
+2026-10-16：完整 `DefaultConfig` 单核已在 Linux 服务器完成 Lean/原始 RTL 短场景对照，
+81 个输出、两组场景共 192 个采样点，31,104 项比较一致。[验收汇总](validation-xiangshan-whole-differential-7.3.json)保留两组结果路径和哈希，
+操作见[服务器说明](server.md)。尚未验收指令或完整程序运行，也没有所有输入序列上的等价证明。
+
 完整 `top.TopMain` 展开已成功，包含 19,995 个模块声明、55,835 个寄存器声明、1,091 个存储器声明。
 这些是优化、去重前的声明数，寄存器也可能包含聚合类型，不能当成物理单元数量。
 各阶段结果以[完整记录](validation-xiangshan-full-7.3.json)为准；展开成功不表示 Lean 转换或等价验证成功。
@@ -36,7 +40,7 @@ python scripts/audit_xiangshan.py <展开目录>/summary.json --lowering <RTL降
 整个顶层的[扁平化、时钟及存储器降低](validation-xiangshan-normalization-7.3.json)也已通过，产生约 1.75 GB 的 RTLIL。
 [完整 FunctionalIR 导出](validation-xiangshan-functional-7.3.json)和[整颗 Lean 编译](validation-xiangshan-whole-lean-7.3.json)已成功。
 Lean 实际解码并校验了 7,902,969 个节点、523,808 个状态字段；这些状态包括时钟采样辅助状态。
-整颗 RTL 运行对照仍在验证，还没有指令执行和所有输入序列上的等价证明。
+整颗 RTL 短场景对照已通过，还没有指令执行和所有输入序列上的等价证明。
 固定标准流的 14 处 `$fwrite` 在暂存副本中转接为可观察日志，原始 RTL 保留；不支持的系统任务仍报错。
 成功导入会产生带哈希的层次检查点，重试时可加 `--hierarchy-checkpoint <检查点文件>`。
 也可用 `--flat-checkpoint` 从扁平化后恢复、`--normalized-checkpoint` 从时钟和存储器降低后恢复，
@@ -54,6 +58,9 @@ Lean 实际解码并校验了 7,902,969 个节点、523,808 个状态字段；�
 没有额外定义 `SYNTHESIS` 或 `DIFFTEST`；条件编译按原始代码和头文件执行，不能据此声称已模拟启用后的 DPI 环境。
 
 `caller-state` 使用官方 `--disable-all-randomization`，未知初态由调用者提供，复位由转换后的状态语义处理。
+RTL 验证驱动先以明确的全零输入求值一次，再施加保存轨迹中的复位，保证异步复位确实产生上升沿。
+它不直接写内部寄存器，也不关闭断言；这次启动求值单独记录在 `startup.json`，不计入 96 个比较采样点。
+此前驱动在首次求值前就将复位置为 1，Verilator 没有识别到该复位边沿，导致下游 MSHR 在首个时钟边沿断言失败。
 不能把关闭初始化后的 RTL 仿真当作默认 RTL 的时间零行为：两者在首个事件前可能不同。
 [初始化回归](validation-circt-initialization-7.3.json)直接以默认原始 RTL 为参照，覆盖初始复位高、低及非零复位值；
 这项小型回归不是整颗设计的初始化等价证明。
@@ -78,12 +85,19 @@ Lean 实际解码并校验了 7,902,969 个节点、523,808 个状态字段；�
 [17 组、22,080 步回归](validation-yosys-table-7.3.json)与已有 RTL/初态契约参照一致。
 原生执行器由官方 Lean/Clang 编译同一份 Lean 代码，[13 组回归](validation-lean-table-native-7.3.json)与字节码结果一致。
 
-完整模型在 `generated/xiangshan-whole/XiangShan/Whole.lean`，执行接口在相邻的 `Whole.table.json`。
+大移位量现在限制到电路位宽，避免 Lean 先分配巨大的自然数再截断。三类移位均有任意位宽和移位量的 Lean 等价证明；
+[专项测试](validation-bounded-shifts-7.3.json)比较了 208 组输入、三种 Lean 执行方式与独立 RTL。
+新原生执行器也通过了[17 组、22,080 步回归](validation-lean-table-native-bounded-7.3.json)。
+整颗换执行器时，`scripts/recheck_lean_table.py` 核对原电路数据不变并重新编译；
+[篡改拒绝测试](validation-table-recheck-7.3.json)覆盖入口、接口、IR、二进制、十六进制、解释器及来源清单。
+
+本次更新解释器后，完整模型在 `generated/xiangshan-whole-bounded/XiangShan/Whole.lean`，执行接口在相邻的 `Whole.table.json`。
+它已重新通过 Lean 编译和全部 7,902,969 个节点的数据校验，旧模型仍保留。
 准备包含完整初态和输入的请求后，可使用：
 
 ```powershell
-python scripts/build_lean_table_runner.py
-python scripts/yosys_simulate.py generated/xiangshan-whole/XiangShan/Whole.table.json --request request.json --native-runner experiments/lean-table-native-7.3
+python scripts/build_lean_table_runner.py --out experiments/lean-table-native-bounded-v2-7.3
+python scripts/yosys_simulate.py generated/xiangshan-whole-bounded/XiangShan/Whole.table.json --request request.json --native-runner experiments/lean-table-native-bounded-v2-7.3
 ```
 
 整颗测试入口为 `scripts/verify_xiangshan_whole.py`。它复制并核对原始 RTL，再执行独立 Verilator 对照；

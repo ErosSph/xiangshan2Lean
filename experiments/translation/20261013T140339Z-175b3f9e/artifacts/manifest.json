@@ -1,0 +1,23 @@
+{
+  "format": "chisel2lean-manifest-v2",
+  "version": "0.2.0",
+  "lean_version": "4.19.0",
+  "chisel_version": "7.3.0",
+  "sources": [
+    "E:\\ICT\\chisel2lean4\\examples\\xiangshan\\RightShiftModule.scala"
+  ],
+  "modules": [
+    {
+      "module": "xiangshan.backend.fu.RightShiftModule",
+      "namespace": "xiangshan.backend.fu.RightShiftModule",
+      "ir": "xiangshan/backend/fu/RightShiftModule.ir.json",
+      "lean": "xiangshan/backend/fu/RightShiftModule.lean"
+    }
+  ],
+  "source_sha256": {
+    "E:\\ICT\\chisel2lean4\\examples\\xiangshan\\RightShiftModule.scala": "8f28bd3b13781c334581d1d9269f9efa41282fe05c35ca9fb74a12216229a968"
+  },
+  "compiler_sha256": "13e21589890ba2ccd43619904b5e823376e5456648661121956dee23768d0763",
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\translation\\20261013T140339Z-175b3f9e"
+}

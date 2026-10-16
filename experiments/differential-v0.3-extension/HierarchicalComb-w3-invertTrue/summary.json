@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 8,
+  "compared_output_values": 16,
+  "module": "HierarchicalComb",
+  "parameters": {
+    "w": 3,
+    "invert": true
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\HierarchicalComb-w3-invertTrue",
+  "seconds": 5.94,
+  "fingerprint": "60c6c65b96c988d179835163868ba6da851e280fb0fe027e19eea589bf94cece"
+}

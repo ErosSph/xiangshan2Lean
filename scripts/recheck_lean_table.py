@@ -55,6 +55,14 @@ def prepare(source, output):
 def check(output):
     prepared = json.loads((output / 'recheck.json').read_text(encoding='utf-8'))
     original = json.loads((output / 'upstream-manifest.json').read_text(encoding='utf-8'))
+    source_manifest = Path(prepared['source_manifest'])
+    if digest(source_manifest) != prepared['source_manifest_sha256'] or original != json.loads(source_manifest.read_text(encoding='utf-8')):
+        raise ValueError('Original model manifest changed')
+    for name in {original['lean'], original['ir'], original['interface'],
+                 original['table']['binary'], original['table']['hexadecimal']}:
+        artifact = (output / name).resolve()
+        if not artifact.is_relative_to(output) or digest(artifact) != original['artifact_sha256'][artifact.relative_to(output).as_posix()]:
+            raise ValueError('Prepared circuit artifact differs from the checked original: ' + name)
     runtime = output / original['table']['runtime']
     lean = output / original['lean']
     if digest(runtime) != prepared['runtime_sha256']:
@@ -72,6 +80,8 @@ def check(output):
     audits = [json.loads(line[len(prefix):]) for line in (output / 'evidence/lean-check/stdout.log').read_text(encoding='utf-8').splitlines() if line.startswith(prefix)]
     if audits != [prepared['counts']]:
         raise ValueError('Lean did not validate the complete unchanged packet')
+    prepared.update(status='PASS', lean_compilation='PASS', complete_data_validation='PASS',
+                    check_refresher_sha256=digest(Path(__file__)))
     manifest = copy.deepcopy(original)
     manifest.update(table_runtime_sha256=prepared['runtime_sha256'], evidence=str(output / 'evidence'),
                     source_table_manifest={'path': prepared['source_manifest'], 'sha256': prepared['source_manifest_sha256']},
@@ -80,7 +90,6 @@ def check(output):
               manifest['table']['binary'], manifest['table']['hexadecimal']]
     manifest['artifact_sha256'] = {(output / name).relative_to(output).as_posix(): digest(output / name) for name in assets}
     write(output / 'manifest.json', manifest)
-    prepared.update(status='PASS', lean_compilation='PASS', complete_data_validation='PASS')
     write(output / 'recheck.json', prepared)
     return prepared
 

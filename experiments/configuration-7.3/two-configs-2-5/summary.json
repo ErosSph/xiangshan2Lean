@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "module": "TwoConfigurations",
+  "parameters": {
+    "cfg_p_configuration_CoreKey_width": 2,
+    "cfg_other_configuration_CoreKey_width": 5
+  },
+  "cycles": 4,
+  "output_comparisons": 8,
+  "comparison": "executed Lean == original official RTL == independent specification"
+}

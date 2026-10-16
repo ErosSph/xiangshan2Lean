@@ -1,0 +1,65 @@
+[
+  {
+    "cycle": 0,
+    "pre": {
+      "io.q": 0
+    },
+    "post": {
+      "io.q": 0
+    }
+  },
+  {
+    "cycle": 1,
+    "pre": {
+      "io.q": 0
+    },
+    "post": {
+      "io.q": 1
+    }
+  },
+  {
+    "cycle": 2,
+    "pre": {
+      "io.q": 1
+    },
+    "post": {
+      "io.q": 0
+    }
+  },
+  {
+    "cycle": 3,
+    "pre": {
+      "io.q": 0
+    },
+    "post": {
+      "io.q": 1
+    }
+  },
+  {
+    "cycle": 4,
+    "pre": {
+      "io.q": 1
+    },
+    "post": {
+      "io.q": 0
+    }
+  },
+  {
+    "cycle": 5,
+    "pre": {
+      "io.q": 0
+    },
+    "post": {
+      "io.q": 0
+    }
+  },
+  {
+    "cycle": 6,
+    "pre": {
+      "io.q": 0
+    },
+    "post": {
+      "io.q": 0
+    }
+  }
+]

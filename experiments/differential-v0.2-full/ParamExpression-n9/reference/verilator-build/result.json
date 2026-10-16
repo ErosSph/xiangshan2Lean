@@ -1,0 +1,28 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "ParamExpression",
+    "--Mdir",
+    "obj_dir",
+    "ParamExpression.v",
+    "trace.cpp"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean\\experiments\\differential-v0.2-full\\ParamExpression-n9\\reference\\rtl",
+  "started_at": "2026-10-13T03:24:55.704975+00:00",
+  "exit_code": 0,
+  "ended_at": "2026-10-13T03:25:00.030292+00:00"
+}

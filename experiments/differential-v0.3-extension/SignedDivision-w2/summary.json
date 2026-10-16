@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 12,
+  "compared_output_values": 48,
+  "module": "SignedDivision",
+  "parameters": {
+    "w": 2
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\SignedDivision-w2",
+  "seconds": 5.64,
+  "fingerprint": "e5638f24012785f744d7b22bbd0e1b6d8dc06e5da82a462c3c76ac7db7a7362e"
+}

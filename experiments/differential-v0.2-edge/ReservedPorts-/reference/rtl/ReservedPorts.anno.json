@@ -1,0 +1,26 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"E:\\ICT\\chisel2lean\\experiments\\differential-v0.2-edge\\ReservedPorts-\\reference\\rtl"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~ReservedPorts|ReservedPorts>bit",
+    "sources":[
+      "~ReservedPorts|ReservedPorts>clock",
+      "~ReservedPorts|ReservedPorts>reset"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~ReservedPorts|ReservedPorts>class",
+    "sources":[
+      "~ReservedPorts|ReservedPorts>clock",
+      "~ReservedPorts|ReservedPorts>reset"
+    ]
+  }
+]

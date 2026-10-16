@@ -1,0 +1,509 @@
+{
+  "status": "PASS",
+  "configurations": 32,
+  "cases": [
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 1,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w1-enFalse-inc0",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 1,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w1-enFalse-inc2",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 1,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w1-enTrue-inc0",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 1,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w1-enTrue-inc2",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w4-enFalse-inc0",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w4-enFalse-inc2",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w4-enTrue-inc0",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w4-enTrue-inc2",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 8,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w8-enFalse-inc0",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 8,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w8-enFalse-inc2",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 0,
+        "cfg_p_configuration_CoreKey_width": 8,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w8-enTrue-inc0",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredPipeline",
+      "parameters": {
+        "inc": 2,
+        "cfg_p_configuration_CoreKey_width": 8,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_p_configuration_CoreKey_nested_offset": 3
+      },
+      "cycles": 64,
+      "label": "pipeline-w8-enTrue-inc2",
+      "output_comparisons": 128,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "TwoConfigurations",
+      "parameters": {
+        "cfg_p_configuration_CoreKey_width": 2,
+        "cfg_other_configuration_CoreKey_width": 5
+      },
+      "cycles": 4,
+      "label": "two-configs-2-5",
+      "output_comparisons": 8,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "TwoConfigurations",
+      "parameters": {
+        "cfg_p_configuration_CoreKey_width": 5,
+        "cfg_other_configuration_CoreKey_width": 2
+      },
+      "cycles": 32,
+      "label": "two-configs-5-2",
+      "output_comparisons": 64,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "TwoConfigurations",
+      "parameters": {
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_other_configuration_CoreKey_width": 4
+      },
+      "cycles": 16,
+      "label": "two-configs-4-4",
+      "output_comparisons": 32,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "InheritedPrimitive",
+      "parameters": {
+        "n": 1
+      },
+      "cycles": 4,
+      "label": "inherited-n1",
+      "output_comparisons": 8,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "InheritedPrimitive",
+      "parameters": {
+        "n": 3
+      },
+      "cycles": 16,
+      "label": "inherited-n3",
+      "output_comparisons": 32,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "InheritedPrimitive",
+      "parameters": {
+        "n": 6
+      },
+      "cycles": 128,
+      "label": "inherited-n6",
+      "output_comparisons": 256,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ScalarDefaults",
+      "parameters": {
+        "cfg_p_configuration_ScalarKey": 5,
+        "cfg_p_configuration_FlagKey": false
+      },
+      "cycles": 32,
+      "label": "scalar-defaults-False",
+      "output_comparisons": 64,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ScalarDefaults",
+      "parameters": {
+        "cfg_p_configuration_ScalarKey": 5,
+        "cfg_p_configuration_FlagKey": true
+      },
+      "cycles": 32,
+      "label": "scalar-defaults-True",
+      "output_comparisons": 64,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredHierarchy",
+      "parameters": {
+        "inc": 1,
+        "cfg_p_configuration_CoreKey_width": 2,
+        "cfg_p_configuration_CoreKey_nested_offset": 1,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_other_configuration_CoreKey_width": 5,
+        "cfg_other_configuration_CoreKey_nested_offset": 3,
+        "cfg_other_configuration_CoreKey_enabled": true
+      },
+      "cycles": 72,
+      "label": "hierarchy-2-5-True-True",
+      "output_comparisons": 144,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredHierarchy",
+      "parameters": {
+        "inc": 1,
+        "cfg_p_configuration_CoreKey_width": 2,
+        "cfg_p_configuration_CoreKey_nested_offset": 1,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_other_configuration_CoreKey_width": 5,
+        "cfg_other_configuration_CoreKey_nested_offset": 3,
+        "cfg_other_configuration_CoreKey_enabled": true
+      },
+      "cycles": 72,
+      "label": "hierarchy-2-5-False-True",
+      "output_comparisons": 144,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredHierarchy",
+      "parameters": {
+        "inc": 1,
+        "cfg_p_configuration_CoreKey_width": 2,
+        "cfg_p_configuration_CoreKey_nested_offset": 1,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_other_configuration_CoreKey_width": 5,
+        "cfg_other_configuration_CoreKey_nested_offset": 3,
+        "cfg_other_configuration_CoreKey_enabled": false
+      },
+      "cycles": 72,
+      "label": "hierarchy-2-5-True-False",
+      "output_comparisons": 144,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredHierarchy",
+      "parameters": {
+        "inc": 1,
+        "cfg_p_configuration_CoreKey_width": 5,
+        "cfg_p_configuration_CoreKey_nested_offset": 1,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_other_configuration_CoreKey_width": 2,
+        "cfg_other_configuration_CoreKey_nested_offset": 3,
+        "cfg_other_configuration_CoreKey_enabled": true
+      },
+      "cycles": 72,
+      "label": "hierarchy-5-2-True-True",
+      "output_comparisons": 144,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredHierarchy",
+      "parameters": {
+        "inc": 1,
+        "cfg_p_configuration_CoreKey_width": 5,
+        "cfg_p_configuration_CoreKey_nested_offset": 1,
+        "cfg_p_configuration_CoreKey_enabled": false,
+        "cfg_other_configuration_CoreKey_width": 2,
+        "cfg_other_configuration_CoreKey_nested_offset": 3,
+        "cfg_other_configuration_CoreKey_enabled": true
+      },
+      "cycles": 72,
+      "label": "hierarchy-5-2-False-True",
+      "output_comparisons": 144,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredHierarchy",
+      "parameters": {
+        "inc": 1,
+        "cfg_p_configuration_CoreKey_width": 5,
+        "cfg_p_configuration_CoreKey_nested_offset": 1,
+        "cfg_p_configuration_CoreKey_enabled": true,
+        "cfg_other_configuration_CoreKey_width": 2,
+        "cfg_other_configuration_CoreKey_nested_offset": 3,
+        "cfg_other_configuration_CoreKey_enabled": false
+      },
+      "cycles": 72,
+      "label": "hierarchy-5-2-True-False",
+      "output_comparisons": 144,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredBundlePipeline",
+      "parameters": {
+        "extra": 0,
+        "cfg_p_configuration_CoreKey_width": 2,
+        "cfg_other_configuration_CoreKey_width": 5
+      },
+      "cycles": 64,
+      "label": "bundle-2-5-extra0",
+      "output_comparisons": 640,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredBundlePipeline",
+      "parameters": {
+        "extra": 2,
+        "cfg_p_configuration_CoreKey_width": 2,
+        "cfg_other_configuration_CoreKey_width": 5
+      },
+      "cycles": 64,
+      "label": "bundle-2-5-extra2",
+      "output_comparisons": 640,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredBundlePipeline",
+      "parameters": {
+        "extra": 0,
+        "cfg_p_configuration_CoreKey_width": 5,
+        "cfg_other_configuration_CoreKey_width": 2
+      },
+      "cycles": 64,
+      "label": "bundle-5-2-extra0",
+      "output_comparisons": 640,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredBundlePipeline",
+      "parameters": {
+        "extra": 2,
+        "cfg_p_configuration_CoreKey_width": 5,
+        "cfg_other_configuration_CoreKey_width": 2
+      },
+      "cycles": 64,
+      "label": "bundle-5-2-extra2",
+      "output_comparisons": 640,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredBundlePipeline",
+      "parameters": {
+        "extra": 0,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_other_configuration_CoreKey_width": 4
+      },
+      "cycles": 64,
+      "label": "bundle-4-4-extra0",
+      "output_comparisons": 640,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    },
+    {
+      "status": "PASS",
+      "module": "ConfiguredBundlePipeline",
+      "parameters": {
+        "extra": 2,
+        "cfg_p_configuration_CoreKey_width": 4,
+        "cfg_other_configuration_CoreKey_width": 4
+      },
+      "cycles": 64,
+      "label": "bundle-4-4-extra2",
+      "output_comparisons": 640,
+      "comparison": "executed Lean == original official RTL == independent specification"
+    }
+  ],
+  "rejections": [
+    {
+      "module": "DynamicKey",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "CollectionField",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "EagerInherited",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "ForwardValue",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "ExplicitSuper",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "RecursiveGetter",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "OverloadedGetter",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "OverrideVal",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "LocalChildConfiguration",
+      "status": "PASS",
+      "source_diagnostic": true
+    },
+    {
+      "module": "MissingBundleSource",
+      "status": "PASS",
+      "source_diagnostic": true
+    }
+  ],
+  "evidence_directory": "E:\\ICT\\chisel2lean4\\experiments\\configuration-hierarchy-widths-7.3",
+  "source_sha256": {
+    "tests/fixtures/configuration/Supported.scala": "255851781633178e7672046129b7eb71bb6718544b3f56609ce545b75deada1f",
+    "tests/fixtures/configuration/Hierarchy.scala": "1fb3c9f2db3e0a718d8a2b6b16bdac6f534c2051b7cc575b168a34be8a7ed8ec"
+  },
+  "compiler_sha256": "962c330ef5c04fd32326b150cd25230269f746d5de1b0bb641d850a39232fc4c",
+  "cycles": 1848,
+  "output_comparisons": 6768,
+  "swapped_child_configuration_roots_detected": true,
+  "formal_source_to_lean_equivalence_proof": false
+}

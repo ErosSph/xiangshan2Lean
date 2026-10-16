@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\aggregate\Contracts.scala:55: error: [chisel2lean] Chisel 7.3 aggregate VecInit requires the same Bundle/Vec element classes
+  out := VecInit(Seq(a, b))
+       ^
+1 error

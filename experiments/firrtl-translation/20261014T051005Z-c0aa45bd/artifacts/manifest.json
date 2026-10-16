@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-contracts\\validif.fir",
+  "source_sha256": "520642ec1cb67b0ae38a98c4b7e5771f338bd1e3e7cabebb8f2f99f1b0cb5090",
+  "compiler_sha256": "670d180dbc40965dbb682ea81b1a2c33de7b683cd74108a85ef7ef4215de2372",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.ConditionalValue",
+      "top": "ConditionalValue",
+      "ir": "FIRRTL/ConditionalValue.ir.json",
+      "lean": "FIRRTL/ConditionalValue.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261014T051005Z-c0aa45bd"
+}

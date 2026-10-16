@@ -1,0 +1,4 @@
+E:\ICT\chisel2lean4\tests\fixtures\configuration\Rejected.scala:6: error: [chisel2lean] Constructor parameters must be Int, Boolean, or real CDE Parameters
+class DynamicKey(key: Field[Core])(implicit val p: Parameters) extends Module {
+                  ^
+1 error

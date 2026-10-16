@@ -1,0 +1,17 @@
+{
+  "case": "ResetFromInput-w3",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-edge\\ResetFromInput-w3",
+  "passed": true,
+  "firrtl_sha256": "518ebb62dbc50b217b21b4c87a141c468524cd68afad54ed8933461b850340cb",
+  "cycles": 48,
+  "output_comparisons": 95,
+  "initial_state": {
+    "r": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "in": "in",
+    "out": "out"
+  }
+}

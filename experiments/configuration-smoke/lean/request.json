@@ -1,0 +1,83 @@
+{
+  "parameters": {
+    "inc": 1,
+    "cfg_p_configuration_CoreKey_width": 4,
+    "cfg_p_configuration_CoreKey_enabled": true,
+    "cfg_p_configuration_CoreKey_nested_offset": 3
+  },
+  "trace": [
+    {
+      "reset": true,
+      "inputs": {
+        "data": 0
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 3
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 6
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 9
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 12
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 15
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 18
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 21
+      }
+    },
+    {
+      "reset": true,
+      "inputs": {
+        "data": 24
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 27
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 30
+      }
+    },
+    {
+      "reset": false,
+      "inputs": {
+        "data": 1
+      }
+    }
+  ],
+  "initial_state": null
+}

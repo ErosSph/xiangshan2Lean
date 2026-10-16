@@ -1,0 +1,156 @@
+{
+  "parameters": {
+    "n": 3,
+    "w": 2,
+    "m": 3
+  },
+  "trace": [
+    {
+      "reset": false,
+      "inputs": {
+        "data.data": [
+          [
+            1,
+            1,
+            3
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            3
+          ]
+        ],
+        "data.lanes": [
+          [
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        ],
+        "data.meta.code": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            4,
+            6
+          ],
+          [
+            1,
+            6,
+            6
+          ]
+        ],
+        "data.meta.flag": [
+          [
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            true,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ]
+        ],
+        "data.signed": [
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            1,
+            5,
+            7
+          ]
+        ],
+        "data.valid": [
+          [
+            false,
+            true,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ]
+        ],
+        "patch.data": 0,
+        "patch.lanes": [
+          1,
+          1
+        ],
+        "patch.meta.code": 5,
+        "patch.meta.flag": false,
+        "patch.signed": 5,
+        "patch.valid": true,
+        "write": false,
+        "index": 0,
+        "lane": 3
+      }
+    }
+  ],
+  "initial_state": null
+}

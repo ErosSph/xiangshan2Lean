@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 16,
+  "compared_output_values": 32,
+  "module": "HelperWidth",
+  "parameters": {
+    "n": 3
+  },
+  "evidence": "experiments\\differential-v0.2-full\\HelperWidth-n3",
+  "seconds": 19.09,
+  "fingerprint": "ca2de10bd25e3e64d82b6547e1f3a6746bab9665f50ed6b26798941b9b097512"
+}

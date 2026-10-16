@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\HierarchicalPipeline-w8\\reference\\rtl\\HierarchicalPipeline.fir",
+  "source_sha256": "d6c2be33391680e73609ba8849643d63ed401d475e517fc3fd49acd26b58ea58",
+  "compiler_sha256": "40937bde440f25efce307092d88ce4cb3c4afe623d02f93576c699c22f8d417b",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.HierarchicalPipeline",
+      "top": "HierarchicalPipeline",
+      "ir": "FIRRTL/HierarchicalPipeline.ir.json",
+      "lean": "FIRRTL/HierarchicalPipeline.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T134951Z-076fcbb0"
+}

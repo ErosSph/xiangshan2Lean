@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 95,
+  "module": "InferredRegisters",
+  "parameters": {
+    "w": 8
+  },
+  "evidence": "experiments\\differential-v0.2-extension\\InferredRegisters-w8",
+  "seconds": 19.42,
+  "fingerprint": "1cd231c149e2df7497a3ea21f1341fba017851ac6a6bfbe954d6b9f5878355d5"
+}

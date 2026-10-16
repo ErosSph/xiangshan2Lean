@@ -1,0 +1,70 @@
+[info] welcome to sbt 1.8.2 (Eclipse Adoptium Java 17.0.20.1)
+[info] loading project definition from E:\ICT\chisel2lean4\project
+[info] loading settings for project root from build.sbt ...
+[info] resolving key references (10449 settings) ...
+[info] set current project to chicala (in build file:/E:/ICT/chisel2lean4/)
+[info] compiling 25 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build\difftest\target\scala-2.13\classes ...
+[info] compiling 20 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build\hardfloat\target\scala-2.13\classes ...
+[info] compiling 1 Scala source to E:\ICT\chisel2lean4\.cache\xiangshan-build\macros\target\scala-2.13\classes ...
+[info] compiling 15 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build\fudian\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source to E:\ICT\chisel2lean4\.cache\xiangshan-build\cde\target\scala-2.13\classes ...
+[info] done compiling
+[warn] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies\fudian\src\main\scala\fudian\FPToInt.scala:55:12: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+[warn]   io.to_s2.sel_lpath
+[warn]            ^
+[info] done compiling
+[warn] 5 deprecations (since 2.13.0); re-run with -deprecation for details
+[warn] two warnings found
+[info] done compiling
+[warn] 7 deprecations
+[warn] 1 deprecation (since 2.13.0)
+[warn] 8 deprecations in total; re-run with -deprecation for details
+[warn] three warnings found
+[info] done compiling
+[info] compiling 316 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build\rocket\target\scala-2.13\classes ...
+[warn] 9 deprecations
+[warn] 67 deprecations (since 2.13.0)
+[warn] 1 deprecation (since 2.13.7)
+[warn] 52 deprecations (since CDE 0.1)
+[warn] 1 deprecation (since Chisel 3.5)
+[warn] 42 deprecations (since Chisel 3.6)
+[warn] 172 deprecations in total; re-run with -deprecation for details
+[warn] 19 feature warnings; re-run with -feature for details
+[warn] 8 warnings found
+[info] done compiling
+[info] compiling 35 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build\utility\target\scala-2.13\classes ...
+[warn] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies\utility\src\main\scala\utility\TLUtils\TLLogger.scala:91:5: match may not be exhaustive.
+[warn] It would fail on the following input: TLBundleE()
+[warn]     chn match {
+[warn]     ^
+[warn] 2 deprecations (since 2.13.0)
+[warn] 1 deprecation (since Chisel 3.6)
+[warn] 3 deprecations in total; re-run with -deprecation for details
+[warn] four warnings found
+[info] done compiling
+[info] compiling 43 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build\huancun\target\scala-2.13\classes ...
+[warn] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies\huancun\src\main\scala\huancun\Slice.scala:436:44: non-variable type argument huancun.noninclusive.MSHR in type pattern Seq[huancun.noninclusive.MSHR] (the underlying of Seq[huancun.noninclusive.MSHR]) is unchecked since it is eliminated by erasure
+[warn]     case (dir: noninclusive.Directory, ms: Seq[noninclusive.MSHR]) =>
+[warn]                                            ^
+[warn] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies\huancun\src\main\scala\huancun\Slice.scala:451:38: non-variable type argument huancun.inclusive.MSHR in type pattern Seq[huancun.inclusive.MSHR] (the underlying of Seq[huancun.inclusive.MSHR]) is unchecked since it is eliminated by erasure
+[warn]     case (_: inclusive.Directory, _: Seq[inclusive.MSHR]) =>
+[warn]                                      ^
+[warn] 1 deprecation
+[warn] 6 deprecations (since 2.13.0)
+[warn] 1 deprecation (since Chisel 3.5)
+[warn] 8 deprecations (since Chisel 3.6)
+[warn] 16 deprecations in total; re-run with -deprecation for details
+[warn] 3 feature warnings; re-run with -feature for details
+[warn] 8 warnings found
+[info] done compiling
+[info] compiling 195 Scala sources to E:\ICT\chisel2lean4\.cache\xiangshan-build\xiangshan\target\scala-2.13\classes ...
+[error] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies\xiangshan\src\main\scala\xiangshan\cache\mmu\MMUConst.scala:149:19: stable identifier required, but HasPtwConst.this.l2tlbParams.l2nWays found.
+[error]   val l2tlbParams.l2nWays = l2tlbParams.l2nWays
+[error]                   ^
+[error] E:\ICT\chisel2lean4\.cache\xiangshan-dependencies\xiangshan\src\main\scala\xiangshan\cache\mmu\MMUConst.scala:158:19: stable identifier required, but HasPtwConst.this.l2tlbParams.l3nWays found.
+[error]   val l2tlbParams.l3nWays = l2tlbParams.l3nWays
+[error]                   ^
+[error] two errors found
+[error] (xiangshanFramework / Compile / compileIncremental) Compilation failed
+[error] Total time: 312 s (05:12), completed 2026年10月13日 下午9:44:57

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 190,
+  "module": "ConditionalPriority",
+  "parameters": {
+    "w": 1
+  },
+  "evidence": "experiments\\differential-v0.3-control\\ConditionalPriority-w1",
+  "seconds": 5.81,
+  "fingerprint": "194313fec70520090080fa996c0a6336e2a84188119386aeaeba48d382c1e442"
+}

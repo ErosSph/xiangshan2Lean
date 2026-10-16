@@ -1,0 +1,44 @@
+{
+  "suite": "control",
+  "cases": [
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 190,
+      "module": "ConditionalPriority",
+      "parameters": {
+        "w": 1
+      },
+      "evidence": "experiments\\differential-v0.3-control\\ConditionalPriority-w1",
+      "seconds": 5.81,
+      "fingerprint": "194313fec70520090080fa996c0a6336e2a84188119386aeaeba48d382c1e442"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 190,
+      "module": "ConditionalPriority",
+      "parameters": {
+        "w": 3
+      },
+      "evidence": "experiments\\differential-v0.3-control\\ConditionalPriority-w3",
+      "seconds": 5.88,
+      "fingerprint": "d9d60c977e562e2009c283939426ff028ae5c0e6c7d8fd07af8a411a8bbcf76c"
+    },
+    {
+      "status": "PASS",
+      "cycles": 48,
+      "compared_output_values": 190,
+      "module": "ConditionalPriority",
+      "parameters": {
+        "w": 7
+      },
+      "evidence": "experiments\\differential-v0.3-control\\ConditionalPriority-w7",
+      "seconds": 5.81,
+      "fingerprint": "ab88b610c0758c235a73330061abeb01ec4ebf4b7cdf44af041249ad87c8c9b4"
+    }
+  ],
+  "passed": 3,
+  "failed": 0,
+  "formal_equivalence_proof": false
+}

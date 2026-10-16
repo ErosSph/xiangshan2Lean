@@ -1,0 +1,8 @@
+{
+  "module": "probes.BoolState",
+  "parameters": {},
+  "seed": 20261013,
+  "cycles": 48,
+  "sampling": "before/after rising edge",
+  "comparison_start": "post first reset/warm-up edge for stateful modules"
+}

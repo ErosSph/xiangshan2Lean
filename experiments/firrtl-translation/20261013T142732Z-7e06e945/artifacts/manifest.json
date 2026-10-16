@@ -1,0 +1,21 @@
+{
+  "format": "chisel2lean-firrtl-manifest-v1",
+  "frontend": "firrtl",
+  "firrtl_version": "1.5.6",
+  "lean_version": "4.19.0",
+  "source": "E:\\ICT\\chisel2lean4\\examples\\firrtl\\PrimitiveWidths.fir",
+  "source_sha256": "4aa48cfb91cbc22af99478315aa5ba3107a513711608b390273175f28deb9a86",
+  "compiler_sha256": "bacf056d5839a33f7a1dc43710e1b24aa33d75b2f6d2125677ff3a5025a7092f",
+  "configuration": "already-elaborated",
+  "symbolic_parameters": false,
+  "modules": [
+    {
+      "module": "FIRRTL.PrimitiveWidths",
+      "top": "PrimitiveWidths",
+      "ir": "FIRRTL/PrimitiveWidths.ir.json",
+      "lean": "FIRRTL/PrimitiveWidths.lean"
+    }
+  ],
+  "lean_checked": true,
+  "evidence": "E:\\ICT\\chisel2lean4\\experiments\\firrtl-translation\\20261013T142732Z-7e06e945"
+}

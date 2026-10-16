@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "configurations": 3,
+  "cycles": 192,
+  "output_comparisons": 6985,
+  "comparison": "executed Lean == original SfenceBundle official RTL == independent specification",
+  "original_bundle": "xiangshan.SfenceBundle",
+  "local_test_top": true,
+  "upstream_dependencies": "verification/xiangshan/config-dependencies.json",
+  "source_sha256": {
+    "verification\\xiangshan\\config\\reference\\Vector.scala": "4969cabbb39be9a8d74c3d86d85a75554addfd2fc14202570d725d368eae3d91",
+    ".cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Bundle.scala": "3ddef7a02b3d22bed3eb96ee3bafc4e91f3ee7b1feb54739b14317389395f61a",
+    ".cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\XSCore.scala": "b1c34dede360f505759fa660f7391dff9ed0719cf388bd21840aa7641f55569f",
+    ".cache\\xiangshan-dependencies-7.3\\xiangshan\\src\\main\\scala\\xiangshan\\Parameters.scala": "5e1419aaad93e212f571672c5b0c46546c49cb3547667dbd3f9844b2705b63ad"
+  },
+  "compiler_sha256": "e8e7ed78e2e4b2e07ae36412a66a52f6397966a2feef02f38501849e4a8ac983",
+  "formal_equivalence_proof": false,
+  "cases": [
+    {
+      "status": "PASS",
+      "test_top": "xiangshan.validation.SfenceVectorPipeline",
+      "parameters": {
+        "n": 1,
+        "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits": 39,
+        "cfg_p_xiangshan_XSCoreParamsKey_AsidLength": 16
+      },
+      "cycles": 64,
+      "output_comparisons": 1270,
+      "configuration_snapshot": "experiments\\xiangshan-aggregate-7.3\\sfence-n1-addr39-asid16\\configuration.json"
+    },
+    {
+      "status": "PASS",
+      "test_top": "xiangshan.validation.SfenceVectorPipeline",
+      "parameters": {
+        "n": 3,
+        "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits": 32,
+        "cfg_p_xiangshan_XSCoreParamsKey_AsidLength": 8
+      },
+      "cycles": 64,
+      "output_comparisons": 2540,
+      "configuration_snapshot": "experiments\\xiangshan-aggregate-7.3\\sfence-n3-addr32-asid8\\configuration.json"
+    },
+    {
+      "status": "PASS",
+      "test_top": "xiangshan.validation.SfenceVectorPipeline",
+      "parameters": {
+        "n": 4,
+        "cfg_p_xiangshan_XSCoreParamsKey_VAddrBits": 48,
+        "cfg_p_xiangshan_XSCoreParamsKey_AsidLength": 12
+      },
+      "cycles": 64,
+      "output_comparisons": 3175,
+      "configuration_snapshot": "experiments\\xiangshan-aggregate-7.3\\sfence-n4-addr48-asid12\\configuration.json"
+    }
+  ]
+}

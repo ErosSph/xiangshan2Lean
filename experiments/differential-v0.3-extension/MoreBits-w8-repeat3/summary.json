@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 672,
+  "module": "MoreBits",
+  "parameters": {
+    "w": 8,
+    "repeat": 3
+  },
+  "evidence": "experiments\\differential-v0.3-extension\\MoreBits-w8-repeat3",
+  "seconds": 6.23,
+  "fingerprint": "31af6176589c5d53e02a30f1989ae613b6e6d755f3f79334b6f3c6e949112ac2"
+}

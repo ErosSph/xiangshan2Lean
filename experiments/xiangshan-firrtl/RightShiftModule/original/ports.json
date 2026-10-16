@@ -1,0 +1,69 @@
+{
+  "top": "RightShiftModule",
+  "clocked": true,
+  "ports": [
+    {
+      "name": "clock",
+      "rtl_name": "clock",
+      "direction": "input",
+      "width": 1,
+      "signed": false
+    },
+    {
+      "name": "reset",
+      "rtl_name": "reset",
+      "direction": "input",
+      "width": 1,
+      "signed": false
+    },
+    {
+      "name": "io_shamt",
+      "rtl_name": "io_shamt",
+      "direction": "input",
+      "width": 6,
+      "signed": false
+    },
+    {
+      "name": "io_revShamt",
+      "rtl_name": "io_revShamt",
+      "direction": "input",
+      "width": 6,
+      "signed": false
+    },
+    {
+      "name": "io_srlSrc",
+      "rtl_name": "io_srlSrc",
+      "direction": "input",
+      "width": 64,
+      "signed": false
+    },
+    {
+      "name": "io_sraSrc",
+      "rtl_name": "io_sraSrc",
+      "direction": "input",
+      "width": 64,
+      "signed": false
+    },
+    {
+      "name": "io_srl",
+      "rtl_name": "io_srl",
+      "direction": "output",
+      "width": 64,
+      "signed": false
+    },
+    {
+      "name": "io_sra",
+      "rtl_name": "io_sra",
+      "direction": "output",
+      "width": 64,
+      "signed": false
+    },
+    {
+      "name": "io_revSrl",
+      "rtl_name": "io_revSrl",
+      "direction": "output",
+      "width": 64,
+      "signed": false
+    }
+  ]
+}

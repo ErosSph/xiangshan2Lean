@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "parameters": {
+    "XLEN": 64
+  },
+  "cycles": 8960,
+  "compared_output_values": 53760,
+  "actual_processor_configuration": true,
+  "coverage": "corner patterns, walking ones/zeros, every 6-bit amount, uncorrelated random inputs",
+  "comparison": "integer specification == executed Lean == original-class official RTL",
+  "lean_parameters": {
+    "cfg_p_xiangshan_XSCoreParamsKey_XLEN": 64
+  },
+  "real_CDE": true,
+  "original_full_source": true
+}

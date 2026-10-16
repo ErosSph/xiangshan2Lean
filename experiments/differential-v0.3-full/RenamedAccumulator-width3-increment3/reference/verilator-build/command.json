@@ -1,0 +1,26 @@
+{
+  "command": [
+    "C:/msys64/usr/bin/perl.exe",
+    "/mingw64/bin/verilator",
+    "--cc",
+    "--exe",
+    "--build",
+    "-j",
+    "2",
+    "-Wno-fatal",
+    "--x-initial",
+    "0",
+    "--x-assign",
+    "0",
+    "-CFLAGS",
+    "-O2 -DVL_TIME_CONTEXT",
+    "--top-module",
+    "Chisel2LeanReference",
+    "--Mdir",
+    "obj_dir",
+    "Chisel2LeanReference.v",
+    "trace.cpp"
+  ],
+  "cwd": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.3-full\\RenamedAccumulator-width3-increment3\\reference\\rtl",
+  "started_at": "2026-10-14T05:03:19.441150+00:00"
+}

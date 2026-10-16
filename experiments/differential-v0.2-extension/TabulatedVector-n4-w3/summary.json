@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "compared_output_values": 384,
+  "module": "TabulatedVector",
+  "parameters": {
+    "n": 4,
+    "w": 3
+  },
+  "evidence": "experiments\\differential-v0.2-extension\\TabulatedVector-n4-w3",
+  "seconds": 14.02,
+  "fingerprint": "c6ac5fad30b261be2a98883f68fb26ce9366cdd318489854fc24847eef593777"
+}

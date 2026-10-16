@@ -1,0 +1,19 @@
+{
+  "case": "HierarchicalPipeline-w8",
+  "source_evidence": "E:\\ICT\\chisel2lean4\\experiments\\differential-v0.2-extension\\HierarchicalPipeline-w8",
+  "passed": true,
+  "firrtl_sha256": "d6c2be33391680e73609ba8849643d63ed401d475e517fc3fd49acd26b58ea58",
+  "cycles": 48,
+  "output_comparisons": 95,
+  "initial_state": {
+    "a.r": 0,
+    "b.r": 0
+  },
+  "comparison": "FIRRTL Lean == source Lean == archived original RTL",
+  "interface_mapping": {
+    "reset": "reset",
+    "in": "in",
+    "en": "en",
+    "out": "out"
+  }
+}

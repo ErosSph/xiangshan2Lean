@@ -1,0 +1,184 @@
+{
+  "cases": [
+    {
+      "module": "CombinationalCycle",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "UnconnectedOutput",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "ChangedReset",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "ConditionalDeclaration",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "HostSideEffect",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "StringParameter",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "MultipleMemoryWrites",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "UnconnectedChild",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "RawState",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "NonuniformVector",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "BundleConstructionConstraint",
+      "status": "PASS",
+      "exit_code": 1,
+      "source_diagnostic": true
+    },
+    {
+      "module": "Counter",
+      "parameters": {
+        "n": 0
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "Counter",
+      "parameters": {
+        "n": 2147483648
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "Counter",
+      "parameters": {
+        "n": 2147483647
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "HelperWidth",
+      "parameters": {
+        "n": 2147483647
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "RenamedAccumulator",
+      "parameters": {
+        "width": 2,
+        "increment": 4
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "VecIndex",
+      "parameters": {
+        "n": 3,
+        "w": 4,
+        "k": 3
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "VecIndex",
+      "parameters": {
+        "n": 3,
+        "w": 4,
+        "k": -1
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "Fifo",
+      "parameters": {
+        "depth": 1,
+        "w": 3
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "VectorReset",
+      "parameters": {
+        "n": 0,
+        "w": 3
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "HierarchicalPipeline",
+      "parameters": {
+        "w": 0
+      },
+      "status": "PASS",
+      "kind": "invalid-domain"
+    },
+    {
+      "module": "SignedDivision",
+      "status": "PASS",
+      "kind": "undefined-trace"
+    },
+    {
+      "module": "MoreBits",
+      "status": "PASS",
+      "kind": "undefined-trace"
+    },
+    {
+      "module": "RegisterFile",
+      "status": "PASS",
+      "kind": "undefined-trace"
+    },
+    {
+      "module": "SyncMemory",
+      "status": "PASS",
+      "kind": "undefined-disabled"
+    },
+    {
+      "module": "SyncMemory",
+      "status": "PASS",
+      "kind": "undefined-collision"
+    }
+  ],
+  "passed": 26,
+  "failed": 0
+}

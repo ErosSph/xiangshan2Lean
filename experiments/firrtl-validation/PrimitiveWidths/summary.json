@@ -1,0 +1,8 @@
+{
+  "case": "PrimitiveWidths",
+  "passed": true,
+  "cycles": 32768,
+  "output_comparisons": 589824,
+  "exhaustive_input_bits": 15,
+  "comparison": "FIRRTL Lean == fresh official RTL == independent integer specification"
+}
