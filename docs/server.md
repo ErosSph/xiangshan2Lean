@@ -7,7 +7,9 @@
 整颗 `DefaultConfig` 单核已通过短场景对照：81 个输出、两组场景共 192 个采样点，31,104 项比较一致。
 两组报告路径和哈希见[验收汇总](validation-xiangshan-whole-differential-7.3.json)，基础场景报告是
 `runs/20261016-linux-01/acceptance.json`。工具和来源见[Linux 记录](validation-server-linux-7.3.json)。
-目前尚未验收指令/完整程序运行，也没有所有输入序列的等价证明。
+短整数程序已通过 RTL／Lean／Spike 三方对照：9 条实际提交、4,284 个采样点、10,958,472 项输出及只读观测值比较一致。
+缓存、基础异常、Sv39，以及访存等待期间的外部中断程序已通过 RTL／Spike，其 Lean 对照仍在进行。
+`accept-program` 可连续执行 RTL、Spike 和 Lean，并保存最终验收状态，使用见[程序验证](program-validation.md)。所有输入序列上的等价证明尚未完成。
 
 ## 使用
 

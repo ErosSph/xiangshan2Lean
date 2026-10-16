@@ -25,6 +25,8 @@ from sv_stdio import normalize_stdio
 from yosys_hierarchy import identity as hierarchy_identity, normalized_identity, functional_identity, reuse_checkpoint, save_checkpoint
 from yosys_json import audit as stream_audit, expose as stream_expose
 from yosys_expose import bulk_plan
+from yosys_observations import (load as load_observations, plan as observation_plan,
+                               check_ports as check_observation_ports, original_ports as original_observation_ports)
 
 
 def write(path, value):
@@ -67,7 +69,8 @@ BRIDGE_FILES = {
     'hierarchy_bridge_sha256': 'yosys_hierarchy.py', 'yosys_runner_sha256': 'yosys_runner.py',
     'json_bridge_sha256': 'yosys_json.py', 'json_reader_bootstrap_sha256': 'bootstrap_json_stream.py',
     'exposure_bridge_sha256': 'yosys_expose.py', 'functional_stream_sha256': 'functional_stream.py',
-    'functional_node_storage_sha256': 'functional_nodes.py', 'table_emitter_sha256': 'lean_table.py'}
+    'functional_node_storage_sha256': 'functional_nodes.py', 'table_emitter_sha256': 'lean_table.py',
+    'observation_bridge_sha256': 'yosys_observations.py'}
 BRIDGE_SOURCES = {filename: (ROOT / 'scripts' / filename).read_bytes() for filename in BRIDGE_FILES.values()}
 BRIDGE_HASHES = {name: hashlib.sha256(BRIDGE_SOURCES[filename]).hexdigest() for name, filename in BRIDGE_FILES.items()}
 BRIDGE_SOURCES['Functional.lean'] = (ROOT / 'lean/Chisel2Lean/Functional.lean').read_bytes()
@@ -136,8 +139,10 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
                     evidence: Path | None = None, check=True, preserve_effects=False, clock_mode="single",
                     keep_hierarchy=False, stdio_compat=False, yosys_engine='wasm', hierarchy_checkpoint=None,
                     json_io='auto', yosys_transport='auto', flat_checkpoint=None, normalized_checkpoint=None,
-                    functional_io='auto', functional_checkpoint=None, lean_backend='auto'):
+                    functional_io='auto', functional_checkpoint=None, lean_backend='auto',
+                    observations=None, merge_known_state=False):
     source, output = source.resolve(), output.resolve()
+    observations = load_observations(observations)
     if clock_mode not in {"single", "global"}:
         raise ValueError("Clock mode must be single or global")
     if stdio_compat and not preserve_effects:
@@ -171,6 +176,8 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
     attempt = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")+"-"+uuid.uuid4().hex[:8]
     log = (evidence or ROOT / "experiments/yosys-translation").resolve()/attempt
     stage=log/"artifacts"; stage.mkdir(parents=True)
+    observation_files = [stage / 'observation-original-ports.txt'] if observations else []
+    observation_names = tuple(path.name for path in observation_files)
     write(log / 'bridge-hashes.json', BRIDGE_HASHES)
     (log / 'bridge-source').mkdir()
     for filename, content in BRIDGE_SOURCES.items():
@@ -188,7 +195,14 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
         if yosys_engine == 'native':
             script = script.replace('/work/', './')
         progress(name)
-        code = run_logged([*runner, '-p', script], log / name, cwd=stage, echo=False)
+        script_file = stage / (name + '.ys')
+        script_file.write_text(script + '\n', encoding='utf-8')
+        script_hash = digest(script_file)
+        write(log / name / 'script.json', {'path': str(script_file), 'sha256': script_hash})
+        mapped = './' + script_file.name if yosys_engine == 'native' else '/work/' + script_file.name
+        code = run_logged([*runner, '-s', mapped], log / name, cwd=stage, echo=False)
+        if digest(script_file) != script_hash:
+            raise ValueError('Yosys script changed during execution')
         if code == 0:
             completed.append(name)
         progress(name, 'PASS' if code == 0 else 'FAIL')
@@ -203,15 +217,20 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
     signature = hierarchy_identity(top, source_files, stdio, yosys_engine, lock)
     flat_signature = {**signature, 'phase': 'flat',
                       'pipeline': 'root-only flatten v1; hierarchy -check -top; opt_clean; memory_collect'}
-    normalized_signature = normalized_identity(signature, clock_mode, preserve_effects, keep_hierarchy)
-    functional_signature = functional_identity(normalized_signature, bulk_plan(top))
+    if observations:
+        flat_signature['read_only_observations'] = observations
+        flat_signature['read_only_observation_pipeline'] = 'exact-rename-bulk-expose-v3'
+    normalized_signature = normalized_identity(signature, clock_mode, preserve_effects, keep_hierarchy,
+                                               merge_known_state, observations)
+    exposure_pipeline = bulk_plan(top)
+    functional_signature = functional_identity(normalized_signature, exposure_pipeline)
     reused_normalized = None
     reused_functional = None
     if hierarchy_checkpoint or flat_checkpoint or normalized_checkpoint or functional_checkpoint:
         progress('checkpoint-validation')
     if functional_checkpoint:
         reused_functional = reuse_checkpoint(Path(functional_checkpoint), stage / 'functional.smt2', functional_signature,
-                                             required_companions=('before.json', 'named.json', 'lowered.json'),
+                                             required_companions=('before.json', 'named.json', 'lowered.json', *observation_names),
                                              artifact_kind='functional')
         for phase in ('yosys-prepare', 'yosys-functional', 'yosys-export'):
             write(log / phase / 'reused.json', reused_functional)
@@ -220,7 +239,7 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
         functional_producer = Path(original['producer']['result.json']['path']).parent
     if normalized_checkpoint:
         reused_normalized = reuse_checkpoint(Path(normalized_checkpoint), stage / 'unconstrained.il', normalized_signature,
-                                             required_companions=('before.json', 'unconstrained.json'))
+                                             required_companions=('before.json', 'unconstrained.json', *observation_names))
         write(log / 'yosys-prepare/reused.json', reused_normalized)
         write(log / 'yosys-functional/reused.json', reused_normalized)
         completed.extend(('yosys-prepare', 'yosys-functional'))
@@ -242,12 +261,15 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
         save_checkpoint(stage / 'hierarchy-checkpoint.json', stage / 'hierarchy.il', signature,
                         producer)
         first = f'read_rtlil /work/hierarchy.il; hierarchy -check -top {top}; flatten {top}; hierarchy -check -top {top}; opt_clean; memory_collect; write_json /work/before.json'
+    if observations:
+        first = first.replace('opt_clean; memory_collect; write_json /work/before.json',
+                              observation_plan(top, observations) + '; opt_clean; memory_collect; write_json /work/before.json')
     if rtlil_transport:
         first = first.replace('write_json /work/before.json', 'write_rtlil /work/before.il; write_json /work/before.json')
     reused_flat = None
     if flat_checkpoint:
         reused_flat = reuse_checkpoint(Path(flat_checkpoint), stage / 'before.il', flat_signature,
-                                       required_companions=('before.json',))
+                                       required_companions=('before.json', *observation_names))
         write(log / 'yosys-prepare/reused.json', reused_flat)
         original = json.loads(Path(flat_checkpoint).read_text(encoding='utf-8'))
         flat_producer = Path(original['producer']['result.json']['path']).parent
@@ -257,14 +279,19 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
         flat_producer = log / 'yosys-prepare'
     if rtlil_transport and not normalized_checkpoint and not functional_checkpoint:
         save_checkpoint(stage / 'flat-checkpoint.json', stage / 'before.il', flat_signature, flat_producer,
-                        companions=[stage / 'before.json'])
+                        companions=[stage / 'before.json', *observation_files])
     modes = {}
     def streaming(path, phase):
         enabled = json_io == 'stream' or (json_io == 'auto' and path.stat().st_size > 64 * 1024 * 1024)
         modes[phase] = 'stream' if enabled else 'memory'
         return enabled
     progress('hardware-preflight')
+    original_ports = original_observation_ports(observation_files[0], top) if observations else None
     if streaming(stage / 'before.json', 'preflight'):
+        if observations:
+            from bootstrap_json_stream import reader
+            from yosys_json import ports
+            check_observation_ports(ports(stage / 'before.json', top, reader()), observations, original_ports)
         clock, hardware, report = stream_audit(stage / 'before.json', top, clock, preserve_effects, clock_mode)
         write(stage / 'hardware-audit.json', report)
         if report['issues']:
@@ -272,6 +299,7 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
     else:
         data=json.loads((stage/"before.json").read_text(encoding='utf-8'))
         module=data['modules'][top]
+        check_observation_ports(module['ports'], observations, original_ports)
         if clock is None:
             clock=next((n for n in ('clock','clk') if n in module['ports'] and module['ports'][n]['direction']=='input'),None)
         write(stage / 'hardware-audit.json', audit_hardware(module, clock, preserve_effects, clock_mode))
@@ -280,6 +308,10 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
     gc.collect()
     # Official lowering retains edge detection. Never silently abstract/gate a clock.
     second='read_json /work/before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json /work/unconstrained.json'
+    if merge_known_state:
+        # Limit merging to lowered FFs. In particular, independent unknown
+        # memories/arbitrary sources and repeated effect events must survive.
+        second = second.replace('memory_nordff; opt_clean', 'memory_nordff; opt_merge -keepdc t:$ff; opt_clean')
     if preserve_effects:
         second = second.replace(' -nolower', '')
     if rtlil_transport:
@@ -291,7 +323,7 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
         normalized_producer = log / 'yosys-functional'
     if rtlil_transport and not functional_checkpoint:
         save_checkpoint(stage / 'normalized-checkpoint.json', stage / 'unconstrained.il', normalized_signature,
-                        normalized_producer, companions=[stage / 'before.json', stage / 'unconstrained.json'])
+                        normalized_producer, companions=[stage / 'before.json', stage / 'unconstrained.json', *observation_files])
     def exposure_metadata(path, everted=False):
         if streaming(path, 'expose'):
             return stream_expose(path, None if everted else stage / 'exposed.json', top,
@@ -308,7 +340,7 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
     gc.collect()
     final=f'read_json /work/exposed.json; check -assert; write_json /work/lowered.json; select {top}; write_functional_smt2 /work/functional.smt2'
     if rtlil_transport:
-        final = ('read_rtlil /work/unconstrained.il; ' + bulk_plan(top) + '; check -assert; '
+        final = ('read_rtlil /work/unconstrained.il; ' + exposure_pipeline + '; check -assert; '
                  'write_json /work/lowered.json; write_functional_smt2 /work/functional.smt2')
     if not functional_checkpoint:
         if run_yosys(final, 'yosys-export'):
@@ -316,7 +348,7 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
         functional_producer = log / 'yosys-export'
     if rtlil_transport:
         save_checkpoint(stage / 'functional-checkpoint.json', stage / 'functional.smt2', functional_signature,
-                        functional_producer, companions=[stage / 'before.json', stage / 'named.json', stage / 'lowered.json'],
+                        functional_producer, companions=[stage / 'before.json', stage / 'named.json', stage / 'lowered.json', *observation_files],
                         artifact_kind='functional')
         shutil.copy2(stage / 'lowered.json', stage / 'exposed.json')
         progress('exposure-metadata')
@@ -401,6 +433,8 @@ def translate_yosys(source: Path, output: Path, top: str, namespace="Yosys.Desig
               "interface":interface_path.relative_to(stage).as_posix() if interface_path else None,
               "yosys_transport":'rtlil' if rtlil_transport else 'json',
               "frontend_keep_hierarchy":keep_hierarchy,
+              "read_only_observations":observations,
+              "merge_known_state":merge_known_state,
               "reused_hierarchy":reused_hierarchy,
               "reused_flat":reused_flat,
               "reused_normalized":reused_normalized,
@@ -458,9 +492,11 @@ def main():
     parser.add_argument('--functional-io', choices=['auto', 'stream', 'memory'], default='auto')
     parser.add_argument('--functional-checkpoint', type=Path, help='Resume Lean generation from an identical verified FunctionalIR export')
     parser.add_argument('--lean-backend', choices=['auto', 'source', 'table'], default='auto')
+    parser.add_argument('--observations', type=Path, help='JSON list of exact internal wires to expose as read-only outputs')
+    parser.add_argument('--merge-known-state', action='store_true', help='Run official opt_merge -keepdc before undefined inputs are introduced')
     parser.add_argument("--check",action=argparse.BooleanOptionalAction,default=True)
     args=parser.parse_args()
-    translate_yosys(args.source,args.out,args.top,args.namespace,args.clock,args.evidence,args.check,args.effects=="preserve",args.clock_mode,args.keep_hierarchy,args.stdio_compat,args.yosys_engine,args.hierarchy_checkpoint,args.json_io,args.yosys_transport,args.flat_checkpoint,args.normalized_checkpoint,args.functional_io,args.functional_checkpoint,args.lean_backend)
+    translate_yosys(args.source,args.out,args.top,args.namespace,args.clock,args.evidence,args.check,args.effects=="preserve",args.clock_mode,args.keep_hierarchy,args.stdio_compat,args.yosys_engine,args.hierarchy_checkpoint,args.json_io,args.yosys_transport,args.flat_checkpoint,args.normalized_checkpoint,args.functional_io,args.functional_checkpoint,args.lean_backend,args.observations,args.merge_known_state)
     return 0
 
 

@@ -29,12 +29,19 @@ def identity(top, source_files, stdio, engine, lock):
             'pipeline': PIPELINE}
 
 
-def normalized_identity(signature, clock_mode, preserve_effects, keep_hierarchy):
-    return {**signature, 'phase': 'clock-normalized', 'clock_mode': clock_mode,
+def normalized_identity(signature, clock_mode, preserve_effects, keep_hierarchy,
+                        merge_known_state=False, observations=None):
+    result = {**signature, 'phase': 'clock-normalized', 'clock_mode': clock_mode,
             'preserve_effects': preserve_effects, 'keep_hierarchy': keep_hierarchy,
             'pipeline': ('root-only flatten v1; hierarchy -check -top; opt_clean; memory_collect; '
                          'clk2fflogic ' + ('' if preserve_effects else '-nolower ') +
-                         '-nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq')}
+                         '-nopeepopt; memory_nordff; ' +
+                         ('opt_merge -keepdc t:$ff; ' if merge_known_state else '') +
+                         'opt_clean; setundef -undriven -anyseq')}
+    if observations:
+        result['read_only_observations'] = observations
+        result['read_only_observation_pipeline'] = 'exact-rename-bulk-expose-v3'
+    return result
 
 
 def functional_identity(signature, exposure):
@@ -52,6 +59,11 @@ def save_checkpoint(path, rtlil, expected, producer, companions=None, artifact_k
         raise ValueError('Keep a hierarchy checkpoint beside its RTLIL file')
     evidence = {name: {'path': str((producer / name).resolve()), 'sha256': digest(producer / name)}
                 for name in ('command.json', 'result.json')}
+    if (producer / 'script.json').is_file():
+        script = json.loads((producer / 'script.json').read_text(encoding='utf-8'))
+        if digest(Path(script['path'])) != script['sha256']:
+            raise ValueError('Checkpoint Yosys script changed')
+        evidence['script.ys'] = script
     report = {'format': 'chisel2lean-yosys-' + ('hierarchy' if artifact_kind == 'rtlil' else 'functional') + '-v1',
               'identity': expected, artifact_kind: {'name': rtlil.name, 'sha256': digest(rtlil)}, 'producer': evidence}
     if companions:
