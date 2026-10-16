@@ -1,0 +1,695 @@
+{
+  "status": "PARTIAL_PROGRAM_ACCEPTANCE",
+  "generated_at_utc": "2026-10-16T13:05:13.183891+00:00",
+  "upstream_commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2",
+  "config": "DefaultConfig",
+  "cores": 1,
+  "original_hardware_modified": false,
+  "spike_commit": "530af85d83781a3dae31a4ace84a573ec255fefa",
+  "accepted_three_way_program_cases": [
+    "20261016T101731Z-987a78a9",
+    "20261016T120908Z-af230d5e"
+  ],
+  "cases": [
+    {
+      "case": "20261016T092533Z-59f12c33",
+      "source": "smoke.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 8723,
+        "samples": 34892,
+        "signature": 1,
+        "committed": 28,
+        "peripheral_reads": 28,
+        "dram_reads": 4,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T092533Z-59f12c33/execution.json",
+        "sha256": "637d80878ee2d94b6bfa7baaae613b8487b9f36bc68122f9ce7e939195f402a3"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 28,
+        "integer_writebacks": 17,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RECORDED"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T092533Z-59f12c33/isa-comparison/summary.json",
+      "isa_receipt_sha256": "aeff35895780845279ae11863099f223f8fe52f994eeec62b255c2a419ec1bb3",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T092533Z-59f12c33/lean-port-replay/summary.json",
+          "sha256": "b1c8ca839345eed7474238341b19d375a7b8a5e37d98ff366fde44bb196b7f84",
+          "status": "RUNNING",
+          "scope": "physical ports",
+          "samples_expected": 34892,
+          "progress": {
+            "samples": 16640,
+            "expected": 34892,
+            "elapsed_seconds": 12515.32334112376
+          }
+        }
+      ]
+    },
+    {
+      "case": "20261016T093532Z-de7f9610",
+      "source": "smoke.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 8723,
+        "samples": 34892,
+        "signature": 1,
+        "committed": 28,
+        "peripheral_reads": 28,
+        "dram_reads": 4,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T093532Z-de7f9610/execution.json",
+        "sha256": "637d80878ee2d94b6bfa7baaae613b8487b9f36bc68122f9ce7e939195f402a3"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 28,
+        "integer_writebacks": 17,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T093532Z-de7f9610/isa-comparison/summary.json",
+      "isa_receipt_sha256": "8ba0da2961a10e686bb9b34d6ef0714b66d619b3f2a70867d6d68b7531cb9416",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T093532Z-de7f9610/lean-retirement-replay/summary.json",
+          "sha256": "4963eabea97ab8166a8a7f67c23f5d84d3e79bafd8d3d52a0403f047082b0b24",
+          "status": "RUNNING",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples_expected": 34892,
+          "progress": {
+            "samples": 15104,
+            "expected": 34892,
+            "committed": 20,
+            "elapsed_seconds": 9931.42594361864
+          }
+        }
+      ]
+    },
+    {
+      "case": "20261016T094353Z-60ca14fd",
+      "source": "cache.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 39810,
+        "samples": 159240,
+        "signature": 1,
+        "committed": 592,
+        "peripheral_reads": 592,
+        "dram_reads": 256,
+        "dram_writes": 68,
+        "dram_read_beats": 512,
+        "dram_write_beats": 136,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T094353Z-60ca14fd/execution.json",
+        "sha256": "b99bc18aa6cdaf23e4efa5fc1550c0c7fb21dc4c989a0f2aed8bcc0c2f5569e8"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 592,
+        "integer_writebacks": 332,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RECORDED"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T094353Z-60ca14fd/isa-comparison/summary.json",
+      "isa_receipt_sha256": "b597f8d74bf476d6051e41b8541c34567c681cd1048e0140658feda4a9d393da",
+      "writeback": {
+        "status": "PASS",
+        "external_dram_write_requests": 68,
+        "bytes_compared": 4096,
+        "scope": "Final external DRAM bytes versus Spike for this write-once cache test; cache-resident bytes are not claimed to be written back."
+      },
+      "interrupt_interleaving": null,
+      "lean_runs": []
+    },
+    {
+      "case": "20261016T094353Z-615e5910",
+      "source": "traps.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 2048,
+        "samples": 8192,
+        "signature": 1,
+        "committed": 25,
+        "peripheral_reads": 27,
+        "dram_reads": 0,
+        "dram_writes": 0,
+        "dram_read_beats": 0,
+        "dram_write_beats": 0,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T094353Z-615e5910/execution.json",
+        "sha256": "776e7d4ba46d703bfc7630c5cc8102270bb970cc2069ce1b1756b283ceb81d39"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 25,
+        "integer_writebacks": 16,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RECORDED"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T094353Z-615e5910/isa-comparison/summary.json",
+      "isa_receipt_sha256": "dee6f54e462a4875def410183dd01167c6f1329407172b5509a89be90f83b986",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": []
+    },
+    {
+      "case": "20261016T095826Z-327366e5",
+      "source": "sv39.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 10842,
+        "samples": 43368,
+        "signature": 1,
+        "committed": 73,
+        "peripheral_reads": 74,
+        "dram_reads": 8,
+        "dram_writes": 0,
+        "dram_read_beats": 16,
+        "dram_write_beats": 0,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T095826Z-327366e5/execution.json",
+        "sha256": "e62acce057a59fc56b9a2926fb33e5f042e7529301da4aa66f3dc591d994c762"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 73,
+        "integer_writebacks": 51,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T095826Z-327366e5/isa-comparison/summary.json",
+      "isa_receipt_sha256": "922eca0b2be40faaa5dd8b072d2108d0742a8c6d1df1ac48b9e6e1f57ba8de81",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": []
+    },
+    {
+      "case": "20261016T100743Z-69b5658f",
+      "source": "smoke.S",
+      "dram_text": true,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 8647,
+        "samples": 34588,
+        "signature": 1,
+        "committed": 32,
+        "peripheral_reads": 3,
+        "dram_reads": 12,
+        "dram_writes": 0,
+        "dram_read_beats": 24,
+        "dram_write_beats": 0,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T100743Z-69b5658f/execution.json",
+        "sha256": "a8840275a7cec7504025ffe7862b65aff65a1b4edaf5098c2b1297ace9917051"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 32,
+        "integer_writebacks": 19,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T100743Z-69b5658f/isa-comparison/summary.json",
+      "isa_receipt_sha256": "0d4507624138ee14264864f8ca5a5fc06a957ae2ead83affbf659a994b233ad6",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T100743Z-69b5658f/lean-retirement-replay/summary.json",
+          "sha256": "1ecbb3bc98d9084c42890f8d104989365aa9aa293943adab1abce8042c261c45",
+          "status": "RUNNING",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples_expected": 34588,
+          "progress": {
+            "samples": 11776,
+            "expected": 34588,
+            "committed": 3,
+            "elapsed_seconds": 3334.3981423443183
+          }
+        }
+      ]
+    },
+    {
+      "case": "20261016T101127Z-b2eb86c9",
+      "source": "cache.S",
+      "dram_text": true,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 23526,
+        "samples": 94104,
+        "signature": 1,
+        "committed": 602,
+        "peripheral_reads": 3,
+        "dram_reads": 265,
+        "dram_writes": 83,
+        "dram_read_beats": 530,
+        "dram_write_beats": 166,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T101127Z-b2eb86c9/execution.json",
+        "sha256": "94f55fc8966e97787871395189e672259d8c04fd1d4f938a468d3f328fd26a5d"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 602,
+        "integer_writebacks": 334,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T101127Z-b2eb86c9/isa-comparison/summary.json",
+      "isa_receipt_sha256": "84a41be645b1644ece2de5923f2f368d8bda6319d8b5ea6d72005534f62aeec1",
+      "writeback": {
+        "status": "PASS",
+        "external_dram_write_requests": 83,
+        "bytes_compared": 4212,
+        "scope": "Final external DRAM bytes versus Spike for this write-once cache test; cache-resident bytes are not claimed to be written back."
+      },
+      "interrupt_interleaving": null,
+      "lean_runs": []
+    },
+    {
+      "case": "20261016T101731Z-987a78a9",
+      "source": "integer.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 1071,
+        "samples": 4284,
+        "signature": 1,
+        "committed": 9,
+        "peripheral_reads": 9,
+        "dram_reads": 0,
+        "dram_writes": 0,
+        "dram_read_beats": 0,
+        "dram_write_beats": 0,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T101731Z-987a78a9/execution.json",
+        "sha256": "b1875cfca5e9030ed65f3c083c98a7fc8f47da5b350155d5750df64612bede11"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 9,
+        "integer_writebacks": 5,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T101731Z-987a78a9/isa-comparison/summary.json",
+      "isa_receipt_sha256": "45a9ac38ffbfe8676cceb94bca3cb773e158447301891077359bf1040bd85b84",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T101731Z-987a78a9/lean-retirement-guarded/summary.json",
+          "sha256": "8ec53f7572f693f1215008d02a2fc550d31400482c9c1d8c8b96a3f6af98ae2e",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 4284,
+          "samples_expected": 4284,
+          "committed": 9,
+          "wire_comparisons": 10958472
+        },
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T101731Z-987a78a9/lean-retirement-owned/summary.json",
+          "sha256": "11085ed9d9285640d5ea9fe5b42e5a85140a2ce51feae2458e4493fdf2537be5",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 4284,
+          "samples_expected": 4284,
+          "committed": 9,
+          "wire_comparisons": 10958472
+        },
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T101731Z-987a78a9/lean-retirement-replay/summary.json",
+          "sha256": "f7994d154f7041fe75a2ea9fe2ad9ca8513368e6f08c02ffad2f1b742de11c4c",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 4284,
+          "samples_expected": 4284,
+          "committed": 9,
+          "wire_comparisons": 10958472
+        },
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T101731Z-987a78a9/lean-retirement-sparse/summary.json",
+          "sha256": "4c5acd8d090f451095fb5ffbcf281d7683cfaee15231b566d3ac94d8a5debe6a",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 4284,
+          "samples_expected": 4284,
+          "committed": 9,
+          "wire_comparisons": 10958472
+        },
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T101731Z-987a78a9/lean-retirement-updates/summary.json",
+          "sha256": "adac5999d3167f35aad8184314ae6d1e39b3bea466748701449a812777e540db",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 4284,
+          "samples_expected": 4284,
+          "committed": 9,
+          "wire_comparisons": 10958472
+        }
+      ]
+    },
+    {
+      "case": "20261016T120530Z-d4bf2849",
+      "source": "interrupt.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 3592,
+        "samples": 14368,
+        "signature": 1,
+        "committed": 43,
+        "peripheral_reads": 45,
+        "dram_reads": 0,
+        "dram_writes": 0,
+        "dram_read_beats": 0,
+        "dram_write_beats": 0,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120530Z-d4bf2849/execution.json",
+        "sha256": "a3c9eac62a133ef48ed48eb5d4fc567512b0a02af44f99b1ae0966f9e8078e17"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 43,
+        "integer_writebacks": 27,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120530Z-d4bf2849/isa-comparison/summary.json",
+      "isa_receipt_sha256": "5f5e410418bfbbc1476e9c12af70c37434b3b2546b3e87d2877047811902f57e",
+      "writeback": null,
+      "interrupt_interleaving": {
+        "status": "OBSERVED",
+        "assert_cycle": 1749,
+        "accepted_cycle": 2323,
+        "committed_before_interrupt": 21,
+        "mepc": 268435540,
+        "actual_read_response_cycle": 2250,
+        "reference_policy": "Inject MEIP at the observed precise retirement boundary; Spike has no cycle model. Actual pin timing is retained for RTL/Lean replay."
+      },
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120530Z-d4bf2849/lean-retirement-replay/summary.json",
+          "sha256": "3c9840585311094240a008afd7db51ff7cb94bb5fa5422b7b8de2bb1958cead8",
+          "status": "RUNNING",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples_expected": 14368,
+          "progress": {
+            "samples": 12032,
+            "expected": 14368,
+            "committed": 32,
+            "elapsed_seconds": 3311.4641972836107
+          }
+        }
+      ]
+    },
+    {
+      "case": "20261016T120908Z-9d49b1d9",
+      "source": "sv39.S",
+      "dram_text": true,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 9071,
+        "samples": 36284,
+        "signature": 1,
+        "committed": 83,
+        "peripheral_reads": 3,
+        "dram_reads": 20,
+        "dram_writes": 0,
+        "dram_read_beats": 40,
+        "dram_write_beats": 0,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-9d49b1d9/execution.json",
+        "sha256": "1b958c5ce084ebbcbcfddda6556efae9de57386abeb4a716fe2107866ef181d6"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 83,
+        "integer_writebacks": 53,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-9d49b1d9/isa-comparison/summary.json",
+      "isa_receipt_sha256": "227f97ed2ed069fa201a34f6abad13bc0a3a8753fa302103af7fbabb2c2a3a02",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-9d49b1d9/lean-retirement-replay/summary.json",
+          "sha256": "003879271092cd3e5550860249616dcca396f7e4d420364ef400ae0fb959ae7c",
+          "status": "RUNNING",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples_expected": 36284,
+          "progress": {
+            "samples": 12032,
+            "expected": 36284,
+            "committed": 3,
+            "elapsed_seconds": 3264.929575265385
+          }
+        }
+      ]
+    },
+    {
+      "case": "20261016T120908Z-af230d5e",
+      "source": "traps.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 2048,
+        "samples": 8192,
+        "signature": 1,
+        "committed": 25,
+        "peripheral_reads": 27,
+        "dram_reads": 0,
+        "dram_writes": 0,
+        "dram_read_beats": 0,
+        "dram_write_beats": 0,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-af230d5e/execution.json",
+        "sha256": "776e7d4ba46d703bfc7630c5cc8102270bb970cc2069ce1b1756b283ceb81d39"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 25,
+        "integer_writebacks": 16,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-af230d5e/isa-comparison/summary.json",
+      "isa_receipt_sha256": "35617e7b2376808ac8441681ea01508b95d2f3265c7d3cdfc2fedd520f4b21e3",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-af230d5e/lean-retirement-replay/summary.json",
+          "sha256": "cd8669953fc83d2d6b506d048153ebf1f60760f60afa8dc296210e90c82306b3",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 8192,
+          "samples_expected": 8192,
+          "committed": 25,
+          "wire_comparisons": 20955136
+        }
+      ]
+    },
+    {
+      "case": "20261016T120908Z-bda4b6c3",
+      "source": "cache.S",
+      "dram_text": true,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 23526,
+        "samples": 94104,
+        "signature": 1,
+        "committed": 602,
+        "peripheral_reads": 3,
+        "dram_reads": 265,
+        "dram_writes": 83,
+        "dram_read_beats": 530,
+        "dram_write_beats": 166,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-bda4b6c3/execution.json",
+        "sha256": "94f55fc8966e97787871395189e672259d8c04fd1d4f938a468d3f328fd26a5d"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 602,
+        "integer_writebacks": 334,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-bda4b6c3/isa-comparison/summary.json",
+      "isa_receipt_sha256": "97e617c65bc9329e821eaf50b2ea3da8f75ce583c34cf224f701f08149535bce",
+      "writeback": {
+        "status": "PASS",
+        "external_dram_write_requests": 83,
+        "bytes_compared": 4212,
+        "scope": "Final external DRAM bytes versus Spike for this write-once cache test; cache-resident bytes are not claimed to be written back."
+      },
+      "interrupt_interleaving": null,
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-bda4b6c3/lean-retirement-replay/summary.json",
+          "sha256": "989072b5ede8378f9753154a402a5863df369ddb79de8f8ab5e9e3a3a41fcfb1",
+          "status": "RUNNING",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples_expected": 94104,
+          "progress": {
+            "samples": 11776,
+            "expected": 94104,
+            "committed": 3,
+            "elapsed_seconds": 3182.2926614517346
+          }
+        }
+      ]
+    },
+    {
+      "case": "20261016T122101Z-83c522f5",
+      "source": "arithmetic.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 5293,
+        "samples": 21172,
+        "signature": 1,
+        "committed": 88,
+        "peripheral_reads": 90,
+        "dram_reads": 0,
+        "dram_writes": 0,
+        "dram_read_beats": 0,
+        "dram_write_beats": 0,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T122101Z-83c522f5/execution.json",
+        "sha256": "cd60cade2e03b6a9d87d5d3506e06851546a691cd47b9cc1251e14a0ad819f3d"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 88,
+        "integer_writebacks": 65,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T122101Z-83c522f5/isa-comparison/summary.json",
+      "isa_receipt_sha256": "980595c014e37fce56ac1c060fb4c2455aa36cda4f778ebeae8571d7fac81e0b",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T122101Z-83c522f5/lean-retirement-replay/summary.json",
+          "sha256": "0898771f6e7d736bd97c37f97d7ad12f33703450896d20d8488ae03bc945710f",
+          "status": "RUNNING",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples_expected": 21172,
+          "progress": {
+            "samples": 9216,
+            "expected": 21172,
+            "committed": 33,
+            "elapsed_seconds": 2568.587583743967
+          }
+        }
+      ]
+    },
+    {
+      "case": "20261016T122101Z-8794b366",
+      "source": "floating.S",
+      "dram_text": false,
+      "rtl": {
+        "status": "RTL_PROGRAM_COMPLETED",
+        "cycles": 4847,
+        "samples": 19388,
+        "signature": 1,
+        "committed": 79,
+        "peripheral_reads": 79,
+        "dram_reads": 0,
+        "dram_writes": 0,
+        "dram_read_beats": 0,
+        "dram_write_beats": 0,
+        "receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T122101Z-8794b366/execution.json",
+        "sha256": "e15d5ee446a88a9ce85af480bcda37d5e0fa3f505079e38a33b023b473239a9d"
+      },
+      "isa": {
+        "status": "RTL_SPIKE_PC_GPR_PASS",
+        "committed_instructions": 79,
+        "integer_writebacks": 49,
+        "retired_pc_comparison": "PASS",
+        "integer_writeback_comparison": "PASS",
+        "reconstructed_gprs_after_every_commit": "PASS",
+        "actual_retired_instruction_bits": "NOT_OBSERVED",
+        "full_fp_csr_state_comparison": "NOT_RUN"
+      },
+      "isa_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T122101Z-8794b366/isa-comparison/summary.json",
+      "isa_receipt_sha256": "e35d79fb6dd0e379dfe35865e607655e747a99e3c15af93c4b3bb5ae7541b35b",
+      "writeback": null,
+      "interrupt_interleaving": null,
+      "lean_runs": [
+        {
+          "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T122101Z-8794b366/lean-retirement-replay/summary.json",
+          "sha256": "85a35d5a24fde0a98f4845f894e5157663a0ab8d39729e11a2d1e73b6333a5e8",
+          "status": "RUNNING",
+          "scope": "physical ports, selected internal wires and actual retirement",
+          "samples_expected": 19388,
+          "progress": {
+            "samples": 9216,
+            "expected": 19388,
+            "committed": 32,
+            "elapsed_seconds": 2556.4257491640747
+          }
+        }
+      ]
+    }
+  ],
+  "observed_model": {
+    "manifest": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/model-observed-v4/manifest.json",
+    "sha256": "5d19953b80ff7b765d7ebeb96d88f8c17511d1b24bc8d4448b46132736489a8d",
+    "lean_checked": true,
+    "nodes": 7475907,
+    "read_only_taps": 1198
+  },
+  "pending": [
+    "Complete longer Lean program/retirement comparisons",
+    "Broader interrupt/event schedules",
+    "Broader ISA and privileged-state coverage"
+  ],
+  "universal_equivalence": "NOT_PROVED",
+  "scope": "Finite fixed-configuration tests. RTL/Spike success never implies Lean success; only completed RTL_LEAN_RETIREMENT_PASS receipts count as three-way program acceptance."
+}

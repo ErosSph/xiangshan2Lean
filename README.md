@@ -30,7 +30,8 @@ python scripts/yosys2lean.py design.sv --top Design --out generated/design
 
 默认使用单时钟；多时钟和检查语句可加 `--clock-mode global --effects preserve`，使用约定见[说明](docs/yosys-frontend.md)。
 
-整颗香山 `DefaultConfig` 单核已完成转换、Lean 编译和原始 RTL 对照：两组场景共 192 个采样点、31,104 项输出比较一致。原始硬件未修改，见[完整香山](docs/xiangshan-whole.md)。尚未验收完整程序运行，有限测试也不代表所有输入序列的等价证明。
+整颗香山 `DefaultConfig` 单核已完成转换、Lean 编译和短整数程序的 RTL／Lean／Spike 三方对照：9 条提交、4,284 个采样点全部一致，原始硬件未修改。
+缓存、异常、Sv39、访存等待期间的外部中断用例已通过 RTL／Spike，较长的 Lean 对照继续进行，见[程序验证](docs/program-validation.md)。有限测试不代表所有输入序列的等价证明。
 
 最新进度和接手步骤见[交接文档](docs/HANDOFF-2026-10-16.md)。整颗生成数据和工具缓存不随 Git 提交，可按说明重建。
 转到服务器继续验证，使用[迁移说明](docs/server.md)中的数据包和分步入口。
@@ -38,3 +39,7 @@ python scripts/yosys2lean.py design.sv --top Design --out generated/design
 项目基于 Chicala，保留 [Apache-2.0 许可证](LICENSE)，来源见 [NOTICE](NOTICE)。
 
 本机现仅保留源码和文档，大型数据与验证已迁到服务器，见 [迁移说明](MIGRATION.md)。
+
+## TODO
+
+- [ ] 在明确的初态、时钟、复位和接口规则下，无论输入什么数据、以什么合法顺序到达、运行多少拍，原始 RTL 和生成的 Lean 都产生相同的可观察行为。
