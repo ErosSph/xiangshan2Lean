@@ -13,18 +13,25 @@
 
 ## 已有用例
 
-| 程序 | 内容 |
-| --- | --- |
-| `integer.S` | 运算、分支的两种结果、跳转、提交 |
-| `arithmetic.S` | 有符号／无符号乘除法、除零、溢出、移位边界和压缩指令 |
-| `floating.S` | F/D 运算、开方、融合运算、转换、NaN 和异常标志；通过 GPR 检查结果 |
-| `smoke.S` | 循环、冷读、读写和 fence |
-| `cache.S` | 写入 64 条冲突缓存行，再读回；检查真实 DRAM 写回数据 |
-| `traps.S` | M 态 ecall、非法指令、异常处理和 mret |
-| `sv39.S` | MPRV/Sv39 页表遍历、译址读写、缺页异常和返回 |
-| `interrupt.S` | AXI 读应答延迟期间拉高外部中断，经 PLIC 领取、完成中断并 mret，检查读回数据 |
+八类对应以下八个裸机汇编测试程序：
 
-2026-10-17 核查：表中八种程序均已通过完整 RTL／Lean／Spike 三方对照，共九次独立运行，包含 `smoke.S` 的 ROM 和 DRAM 两种取指方式。
+1. **基础运算、分支和跳转**：[integer.S](../verification/xiangshan/programs/integer.S)——加法、条件分支和跳转。
+
+2. **乘除法与压缩指令**：[arithmetic.S](../verification/xiangshan/programs/arithmetic.S)——有符号／无符号运算、除零、溢出、移位边界及 16 位指令。
+
+3. **浮点运算**：[floating.S](../verification/xiangshan/programs/floating.S)——F/D 运算、开方、融合运算、转换、NaN 和部分异常标志。
+
+4. **访存、循环与 fence**：[smoke.S](../verification/xiangshan/programs/smoke.S)——冷读、写入后读回、循环及访存屏障。
+
+5. **Cache 冲突、逐出与写回**：[cache.S](../verification/xiangshan/programs/cache.S)——写入、读回 64 条冲突缓存行，检查实际 DRAM 写回。
+
+6. **M 态异常处理**：[traps.S](../verification/xiangshan/programs/traps.S)——ecall、非法指令、异常处理及 mret 返回。
+
+7. **MPRV／Sv39 地址翻译**：[sv39.S](../verification/xiangshan/programs/sv39.S)——页表遍历、译址读写、缺页异常及返回。
+
+8. **外部中断与访存等待交错**：[interrupt.S](../verification/xiangshan/programs/interrupt.S)——读应答等待期间拉高中断，检查 PLIC 领取、完成及中断返回。
+
+2026-10-17 核查：上述八种程序均已通过完整 RTL／Lean／Spike 三方对照，共九次独立运行，包含 `smoke.S` 的 ROM 和 DRAM 两种取指方式。
 缓存用例也已完成：602 条实际提交、94,104 个采样点、240,718,032 项输出及只读观测值比较一致，并检查了实际外部 DRAM 写回数据。
 报告、轨迹、程序镜像、原始 RTL、模型和执行器哈希核对通过；缓存的完整 Lean 输出文件也已重新计算哈希和行数。
 最新逐项状态见[服务器测试记录](validation-programs-server-7.3.json)，本次完整性核查见[核查记录](validation-program-audit-2026-10-17.json)。

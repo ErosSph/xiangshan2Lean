@@ -31,7 +31,7 @@ python scripts/yosys2lean.py design.sv --top Design --out generated/design
 默认使用单时钟；多时钟和检查语句可加 `--clock-mode global --effects preserve`，使用约定见[说明](docs/yosys-frontend.md)。
 
 整颗香山 `DefaultConfig` 单核已完成转换和 Lean 编译。基础运算、乘除法与压缩指令、浮点、访存、缓存逐出写回、异常、MPRV/Sv39 和外部中断程序已全部通过 RTL／Lean／Spike 三方对照，原始硬件未修改。
-本轮八种程序共九次独立运行，结果和用法见[程序验证](docs/program-validation.md)。有限测试不代表所有输入序列的等价证明。
+本轮八类裸机汇编测试程序共九次独立运行，具体程序、验证范围和用法见[程序验证](docs/program-validation.md#已有用例)。有限测试不代表所有输入序列的等价证明。
 
 最新进度和接手步骤见[交接文档](docs/HANDOFF-2026-10-16.md)。整颗生成数据和工具缓存不随 Git 提交，可按说明重建。
 转到服务器继续验证，使用[迁移说明](docs/server.md)中的数据包和分步入口。
