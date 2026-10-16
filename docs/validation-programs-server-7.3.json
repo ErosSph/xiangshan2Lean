@@ -1,14 +1,21 @@
 {
   "status": "PARTIAL_PROGRAM_ACCEPTANCE",
-  "generated_at_utc": "2026-10-16T13:05:13.183891+00:00",
+  "generated_at_utc": "2026-10-16T19:05:57.403510+00:00",
   "upstream_commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2",
   "config": "DefaultConfig",
   "cores": 1,
   "original_hardware_modified": false,
   "spike_commit": "530af85d83781a3dae31a4ace84a573ec255fefa",
   "accepted_three_way_program_cases": [
+    "20261016T093532Z-de7f9610",
+    "20261016T100743Z-69b5658f",
     "20261016T101731Z-987a78a9",
-    "20261016T120908Z-af230d5e"
+    "20261016T120530Z-d4bf2849",
+    "20261016T120908Z-9d49b1d9",
+    "20261016T120908Z-af230d5e",
+    "20261016T120908Z-bda4b6c3",
+    "20261016T122101Z-83c522f5",
+    "20261016T122101Z-8794b366"
   ],
   "cases": [
     {
@@ -43,15 +50,12 @@
       "lean_runs": [
         {
           "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T092533Z-59f12c33/lean-port-replay/summary.json",
-          "sha256": "b1c8ca839345eed7474238341b19d375a7b8a5e37d98ff366fde44bb196b7f84",
-          "status": "RUNNING",
+          "sha256": "0889c8873b155837502a2357a5f7ab563c7edbc31a8bd0422d00ad03d6d0908b",
+          "status": "RTL_LEAN_PORTS_PASS",
           "scope": "physical ports",
+          "samples": 34892,
           "samples_expected": 34892,
-          "progress": {
-            "samples": 16640,
-            "expected": 34892,
-            "elapsed_seconds": 12515.32334112376
-          }
+          "output_comparisons": 5652504
         }
       ]
     },
@@ -87,16 +91,13 @@
       "lean_runs": [
         {
           "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T093532Z-de7f9610/lean-retirement-replay/summary.json",
-          "sha256": "4963eabea97ab8166a8a7f67c23f5d84d3e79bafd8d3d52a0403f047082b0b24",
-          "status": "RUNNING",
+          "sha256": "dae3746273fd576211dec9d75f7e247cb45c92eabd8ad75d004ab173f8df03a0",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
           "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 34892,
           "samples_expected": 34892,
-          "progress": {
-            "samples": 15104,
-            "expected": 34892,
-            "committed": 20,
-            "elapsed_seconds": 9931.42594361864
-          }
+          "committed": 28,
+          "wire_comparisons": 89253736
         }
       ]
     },
@@ -242,16 +243,13 @@
       "lean_runs": [
         {
           "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T100743Z-69b5658f/lean-retirement-replay/summary.json",
-          "sha256": "1ecbb3bc98d9084c42890f8d104989365aa9aa293943adab1abce8042c261c45",
-          "status": "RUNNING",
+          "sha256": "6583aa9109fe431d0b7c4da486cfd2cb527069c49eaac446430fa6d991f3db26",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
           "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 34588,
           "samples_expected": 34588,
-          "progress": {
-            "samples": 11776,
-            "expected": 34588,
-            "committed": 3,
-            "elapsed_seconds": 3334.3981423443183
-          }
+          "committed": 32,
+          "wire_comparisons": 88476104
         }
       ]
     },
@@ -422,16 +420,13 @@
       "lean_runs": [
         {
           "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120530Z-d4bf2849/lean-retirement-replay/summary.json",
-          "sha256": "3c9840585311094240a008afd7db51ff7cb94bb5fa5422b7b8de2bb1958cead8",
-          "status": "RUNNING",
+          "sha256": "2a4dce1be6c50b0770f88716b673bdd29c52bcfad7bbdf73729211e26318d8a7",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
           "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 14368,
           "samples_expected": 14368,
-          "progress": {
-            "samples": 12032,
-            "expected": 14368,
-            "committed": 32,
-            "elapsed_seconds": 3311.4641972836107
-          }
+          "committed": 43,
+          "wire_comparisons": 36753344
         }
       ]
     },
@@ -470,16 +465,13 @@
       "lean_runs": [
         {
           "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-9d49b1d9/lean-retirement-replay/summary.json",
-          "sha256": "003879271092cd3e5550860249616dcca396f7e4d420364ef400ae0fb959ae7c",
-          "status": "RUNNING",
+          "sha256": "13d9add8317f04da56560fcc17f79506ef503b2948920acc503d0b5e671be460",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
           "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 36284,
           "samples_expected": 36284,
-          "progress": {
-            "samples": 12032,
-            "expected": 36284,
-            "committed": 3,
-            "elapsed_seconds": 3264.929575265385
-          }
+          "committed": 83,
+          "wire_comparisons": 92814472
         }
       ]
     },
@@ -568,16 +560,13 @@
       "lean_runs": [
         {
           "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T120908Z-bda4b6c3/lean-retirement-replay/summary.json",
-          "sha256": "989072b5ede8378f9753154a402a5863df369ddb79de8f8ab5e9e3a3a41fcfb1",
-          "status": "RUNNING",
+          "sha256": "4e78e0157378c1ec57bc2507bf55a096b0bb97ae60baa2d4968823c4382b6931",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
           "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 94104,
           "samples_expected": 94104,
-          "progress": {
-            "samples": 11776,
-            "expected": 94104,
-            "committed": 3,
-            "elapsed_seconds": 3182.2926614517346
-          }
+          "committed": 602,
+          "wire_comparisons": 240718032
         }
       ]
     },
@@ -616,16 +605,13 @@
       "lean_runs": [
         {
           "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T122101Z-83c522f5/lean-retirement-replay/summary.json",
-          "sha256": "0898771f6e7d736bd97c37f97d7ad12f33703450896d20d8488ae03bc945710f",
-          "status": "RUNNING",
+          "sha256": "db688de19bcc4379cfbd1bcf42a377405533f05960534a10f00ead4042cc9aa5",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
           "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 21172,
           "samples_expected": 21172,
-          "progress": {
-            "samples": 9216,
-            "expected": 21172,
-            "committed": 33,
-            "elapsed_seconds": 2568.587583743967
-          }
+          "committed": 88,
+          "wire_comparisons": 54157976
         }
       ]
     },
@@ -664,20 +650,19 @@
       "lean_runs": [
         {
           "path": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/programs/20261016T122101Z-8794b366/lean-retirement-replay/summary.json",
-          "sha256": "85a35d5a24fde0a98f4845f894e5157663a0ab8d39729e11a2d1e73b6333a5e8",
-          "status": "RUNNING",
+          "sha256": "8d1e0c4c4c92ca657f7d7571d8a554a94b140e02910ba05013c6311bc957380d",
+          "status": "RTL_LEAN_RETIREMENT_PASS",
           "scope": "physical ports, selected internal wires and actual retirement",
+          "samples": 19388,
           "samples_expected": 19388,
-          "progress": {
-            "samples": 9216,
-            "expected": 19388,
-            "committed": 32,
-            "elapsed_seconds": 2556.4257491640747
-          }
+          "committed": 79,
+          "wire_comparisons": 49594504
         }
       ]
     }
   ],
+  "finite_batch_status": "PASS",
+  "finite_batch_receipt": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/program-acceptance-batch-03.json",
   "observed_model": {
     "manifest": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/model-observed-v4/manifest.json",
     "sha256": "5d19953b80ff7b765d7ebeb96d88f8c17511d1b24bc8d4448b46132736489a8d",
@@ -686,7 +671,7 @@
     "read_only_taps": 1198
   },
   "pending": [
-    "Complete longer Lean program/retirement comparisons",
+    "Longer realistic programs and retirement workloads",
     "Broader interrupt/event schedules",
     "Broader ISA and privileged-state coverage"
   ],

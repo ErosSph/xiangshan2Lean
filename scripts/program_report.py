@@ -49,14 +49,18 @@ def collect(work, output):
     accepted = [case['case'] for case in cases if any(run['status'] == 'RTL_LEAN_RETIREMENT_PASS' for run in case['lean_runs'])]
     model = work / 'model-observed-v4/manifest.json'
     model_info = read(model)
+    batches = sorted(work.glob('program-acceptance-batch-*.json'))
+    latest_batch = batches[-1] if batches else None
     result = {'status':'PARTIAL_PROGRAM_ACCEPTANCE' if accepted else 'IN_PROGRESS',
               'generated_at_utc':datetime.now(timezone.utc).isoformat(),
               'upstream_commit':'997cd5b35cfbd26586674aa553d0f04b27914cb2','config':'DefaultConfig','cores':1,
               'original_hardware_modified':False,'spike_commit':'530af85d83781a3dae31a4ace84a573ec255fefa',
               'accepted_three_way_program_cases':accepted,'cases':cases,
+              'finite_batch_status':read(latest_batch)['status'] if latest_batch else 'NOT_SCHEDULED',
+              'finite_batch_receipt':str(latest_batch) if latest_batch else None,
               'observed_model':{'manifest':str(model),'sha256':digest(model),'lean_checked':model_info['lean_checked'],
                                 'nodes':model_info['nodes'],'read_only_taps':len(model_info['read_only_observations'])},
-              'pending':['Complete longer Lean program/retirement comparisons','Broader interrupt/event schedules','Broader ISA and privileged-state coverage'],
+              'pending':['Longer realistic programs and retirement workloads','Broader interrupt/event schedules','Broader ISA and privileged-state coverage'],
               'universal_equivalence':'NOT_PROVED',
               'scope':'Finite fixed-configuration tests. RTL/Spike success never implies Lean success; only completed RTL_LEAN_RETIREMENT_PASS receipts count as three-way program acceptance.'}
     output.parent.mkdir(parents=True, exist_ok=True)

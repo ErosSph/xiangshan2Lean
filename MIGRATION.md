@@ -11,4 +11,5 @@
 
 大型转换与验证在 SSH 登录后的服务器执行。现有验证入口位于 `/data2/home/lvhongqing/cgt/chisel2lean`，使用 `./server.sh`。
 整颗 `DefaultConfig` 单核的短场景对照已通过：81 个输出、两组场景共 192 个采样点，31,104 项比较一致。
-两组报告见[验收汇总](docs/validation-xiangshan-whole-differential-7.3.json)。复位启动问题已修复，原始硬件未修改；完整程序运行尚未验收。
+两组报告见[验收汇总](docs/validation-xiangshan-whole-differential-7.3.json)。复位启动问题已修复，原始硬件未修改。
+2026-10-17 八种程序、九次独立运行已全部通过完整三方对照，包含缓存逐出写回长用例，最新结果见[程序验证](docs/program-validation.md)。
