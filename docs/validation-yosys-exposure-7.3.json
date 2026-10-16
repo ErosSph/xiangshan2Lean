@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "cycles": 48,
+  "output_comparisons": 96,
+  "literal_prints": 30,
+  "original_rtl_sha256": "48d24b875d4c55bea6927db99de53e315ff9a049e530134968c27306a71db32b",
+  "assertion_lean_exit": 1,
+  "assertion_native_exit": 7,
+  "scope": "Official RTLIL transport and expose pass retain assertion/assumption/cover and literal/no-argument prints. Original RTL remains unchanged; Lean and RTL both reject an intentional violation."
+}

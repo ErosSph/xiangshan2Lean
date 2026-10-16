@@ -13,6 +13,9 @@ final case class POp(op: String, args: List[ParamExpr], wrap32: Boolean = false)
 final case class PIf(cond: ParamExpr, yes: ParamExpr, no: ParamExpr) extends ParamExpr
 final case class PForall(index: String, size: ParamExpr, condition: ParamExpr) extends ParamExpr
 final case class Parameter(name: String, kind: String)
+/** An explicit source annotation and its expression in the module's parameters. */
+final case class PreservedParameter(owner: String, name: String, kind: String, role: String,
+                                    expression: ParamExpr, source: Source, instance: List[String] = Nil)
 
 object ParamSimplify {
   def apply(p: ParamExpr): ParamExpr = p match {
@@ -101,7 +104,8 @@ final case class Branch(cond: Expr, yes: List[Statement], no: List[Statement], s
 final case class Generate(index: String, start: ParamExpr, end: ParamExpr,
                           body: List[Statement], source: Source) extends Statement
 final case class Module(name: String, parameters: List[Parameter], requirements: List[ParamExpr],
-                        signals: List[Signal], statements: List[Statement], source: Source)
+                        signals: List[Signal], statements: List[Statement], source: Source,
+                        preservedParameters: List[PreservedParameter] = Nil)
 
 /** Every expression in the emission IR has its resolved hardware type. */
 final case class TypedExpr(kind: String, tpe: HWType, args: List[TypedExpr] = Nil,

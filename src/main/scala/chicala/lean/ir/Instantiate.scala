@@ -48,6 +48,7 @@ object Instantiate {
         Generate(fresh, p(a, locals), p(b, locals), statements(body, locals + (i -> fresh)), src)
     }
     child.copy(parameters = Nil, requirements = child.requirements.map(p(_)),
+      preservedParameters = child.preservedParameters.map(m => m.copy(expression = p(m.expression), instance = prefix :: m.instance)),
       signals = child.signals.map(s => s.copy(name = prefix + "." + s.name,
         kind = if (s.kind == "input" || s.kind == "output") "wire" else s.kind,
         tpe = t(s.tpe), init = s.init.map(e(_)),

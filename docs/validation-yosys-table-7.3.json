@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "reference": "experiments\\yosys-full-adaptation-7.3\\Counter4",
+      "steps": 256,
+      "nodes": 28,
+      "data_bytes": 412,
+      "reference_sha256": "aaa75b7a3cd45734f4f203c6350f0c79f95bfa91ab288fc382f6aed1c1bae6ae",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-full-adaptation-7.3\\Signed65",
+      "steps": 153,
+      "nodes": 149,
+      "data_bytes": 1397,
+      "reference_sha256": "15739c645cf82adff93e3e2ea37671a45dfb7ab76d16a5fa73e0146bc2b28819",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-full-adaptation-7.3\\Handshake65x3",
+      "steps": 384,
+      "nodes": 128,
+      "data_bytes": 1909,
+      "reference_sha256": "44e2d0c80b8af2959f928997e1ffbb818ff8ba669d28e243023ad557bf297fa6",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-full-adaptation-7.3\\Queue3",
+      "steps": 640,
+      "nodes": 164,
+      "data_bytes": 1969,
+      "reference_sha256": "0e95d82333e4001fbcc01e0e424f370cea0e7d5d0516b6f4b423a33d78c62a23",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-full-adaptation-7.3\\SyncQueue3",
+      "steps": 640,
+      "nodes": 202,
+      "data_bytes": 2549,
+      "reference_sha256": "e918b6fe38e794b8752160b217c8038f05de0be959cc791df6922ccd1ddf75c7",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-clocks-7.3",
+      "steps": 1120,
+      "nodes": 208,
+      "data_bytes": 3652,
+      "reference_sha256": "afc6e8903c9513e62df01127638b40bc55455e7aae1f116b9dc5d2ef63799a6f",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-contracts\\MaskedMemory",
+      "steps": 128,
+      "nodes": 152,
+      "data_bytes": 1865,
+      "reference_sha256": "c6e5ebe67f2c3b1737fe4af36d4d78b0beb94a8be285e19b9da78350b6870a85",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-contracts\\PartialInitial",
+      "steps": 1,
+      "nodes": 22,
+      "data_bytes": 334,
+      "reference_sha256": "37fc07a6fe14d5726319c439acde817f6e077d35ea4f09daeafebabc90a1a6b2",
+      "reference_kind": "partial-initial-state contract"
+    },
+    {
+      "reference": "experiments\\yosys-effects-7.3\\Observed",
+      "steps": 160,
+      "nodes": 108,
+      "data_bytes": 1817,
+      "reference_sha256": "5bf18e0059f514643b8a785b468fb474c9205e48b18a48ed32ffb6d9372cff6e",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-effects-7.3\\DisabledCheck",
+      "steps": 2,
+      "nodes": 19,
+      "data_bytes": 254,
+      "reference_sha256": "a458b3626290ba4fe82bc7f2bda2b3781af11084da65043bd67b9d4475a3e893",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-stdio-7.3",
+      "steps": 48,
+      "nodes": 48,
+      "data_bytes": 1013,
+      "reference_sha256": "bca0b9cfe336a7ac8b1d162cf700afd7afcda94bd9767cfe90e9ca8dea1ee07e",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\xiangshan-sram-7.3\\SramArray1P",
+      "steps": 801,
+      "nodes": 137,
+      "data_bytes": 1957,
+      "reference_sha256": "799111b17e863b5094c3bda0109c1eb7307f0df1b084eddc4e8d701d22b9a9ac",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\xiangshan-sram-7.3\\SramArray2P",
+      "steps": 907,
+      "nodes": 108,
+      "data_bytes": 1594,
+      "reference_sha256": "c7a3066e84886352de48d2e25e9e8447e7b0689442c59470054bbddea8f92c40",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-full-adaptation-7.3\\XSAlu",
+      "steps": 16000,
+      "nodes": 1409,
+      "data_bytes": 12685,
+      "reference_sha256": "b641c3cb0016181a0ddac33d522439bb7946348368d164a57c3636f66bcb345a",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-full-adaptation-7.3\\XSPrefetch",
+      "steps": 768,
+      "nodes": 280,
+      "data_bytes": 3965,
+      "reference_sha256": "f59e931cd8b28fb603fd6b5ea64060ed170aadc81a77012fc296613ac6fb1e5e",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-chunks-7.3\\Large",
+      "steps": 64,
+      "nodes": 23557,
+      "data_bytes": 289521,
+      "reference_sha256": "75978c8a3be630d704178dd183f92289ce4c4aa9b12117262cae72ccf67ee38d",
+      "reference_kind": "RTL-checked trace"
+    },
+    {
+      "reference": "experiments\\yosys-records-7.3",
+      "steps": 8,
+      "nodes": 7203,
+      "data_bytes": 125573,
+      "reference_sha256": "0009d7dc3e8a689349c94a5800f78f31fa9e34397c9471bebe01c3100b7f7fa8",
+      "reference_kind": "RTL-checked trace"
+    }
+  ],
+  "runtime_sha256": "75da19ef08a2168b68e263cf292d0b099980b4470a391b9da38fe6efcd5df146",
+  "negative_cases": [
+    "experiments\\yosys-contracts\\PartialInitial/bad-known-bit",
+    "experiments\\yosys-effects-7.3\\Observed/assert-lean",
+    "experiments\\yosys-effects-7.3\\Observed/assume-lean"
+  ],
+  "scope": "Compiled, decoded and type-validated Lean table models execute existing RTL-checked traces and the partial-initial-state contract, comparing every output and observation. Invalid known bits, assertions and assumptions are rejected. Not a universal equivalence proof."
+}

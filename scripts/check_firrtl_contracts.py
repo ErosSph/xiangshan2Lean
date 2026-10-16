@@ -14,6 +14,8 @@ from firrtl_simulate import simulate_firrtl
 if __name__ == "__main__":
     evidence = ROOT / "experiments" / "firrtl-contracts"
     evidence.mkdir(parents=True, exist_ok=True)
+    translation_logs = evidence / "translations"
+    translation_logs.mkdir(exist_ok=True)
     fixtures = {
         "Memory": ('''circuit Memory :
   module Memory :
@@ -100,9 +102,9 @@ circuit ModernVersion :
     for name, (text, diagnostic) in fixtures.items():
         source = evidence / (name + ".fir")
         source.write_text(text, encoding="utf-8")
-        before = set((ROOT / "experiments/firrtl-translation").iterdir())
-        code = translate_firrtl(source, evidence / name)
-        attempts = set((ROOT / "experiments/firrtl-translation").iterdir()) - before
+        before = set(translation_logs.iterdir())
+        code = translate_firrtl(source, evidence / name, frontend="classic", evidence=translation_logs)
+        attempts = set(translation_logs.iterdir()) - before
         if code == 0 or len(attempts) != 1:
             raise RuntimeError("Unsupported fixture unexpectedly translated: " + name)
         stderr = (next(iter(attempts)) / "compiler/stderr.log").read_text(encoding="utf-8")

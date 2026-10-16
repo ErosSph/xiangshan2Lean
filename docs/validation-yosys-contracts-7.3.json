@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "checks": 14,
+  "results": [
+    {
+      "case": "AsyncReset",
+      "status": "PASS",
+      "diagnostic": "work/design.v:1.48: Asynchronous reset, latches and unrecognized sequential cells are unsupported ($aldff)"
+    },
+    {
+      "case": "TwoClocks",
+      "status": "PASS",
+      "diagnostic": "work/design.v:1.82: Only one direct, positive-edge clock is supported ($dff)"
+    },
+    {
+      "case": "GatedClock",
+      "status": "PASS",
+      "diagnostic": "work/design.v:1.62: Only one direct, positive-edge clock is supported ($dff)"
+    },
+    {
+      "case": "NegativeEdge",
+      "status": "PASS",
+      "diagnostic": "work/design.v:1.41: Only one direct, positive-edge clock is supported ($dff)"
+    },
+    {
+      "case": "Latch",
+      "status": "PASS",
+      "diagnostic": "work/design.v:1.38: Asynchronous reset, latches and unrecognized sequential cells are unsupported ($dlatch)"
+    },
+    {
+      "case": "Assertion",
+      "status": "PASS",
+      "diagnostic": "work/design.v:1.73-1.83: Verification, simulation effects and arbitrary-value cells need a separate contract ($check)"
+    },
+    {
+      "case": "BlackBox",
+      "status": "PASS",
+      "diagnostic": "Yosys RTL normalization failed; see E:\\ICT\\chisel2lean4\\experiments\\yosys-contracts\\BlackBox\\translation\\20261015T084924Z-864d9dc7\\yosys-prepare"
+    },
+    {
+      "case": "MemoryOffset",
+      "status": "PASS",
+      "diagnostic": "work/design.v:1.84: The current memory importer requires a zero-based memory with at least two words ($mem_v2)"
+    },
+    {
+      "case": "SingleWordMemory",
+      "status": "PASS",
+      "diagnostic": "work/design.v:1.69: The current memory importer requires a zero-based memory with at least two words ($mem_v2)"
+    },
+    {
+      "case": "ExplicitUnknown",
+      "status": "PASS"
+    },
+    {
+      "case": "Division",
+      "status": "PASS"
+    },
+    {
+      "case": "PartialInitial",
+      "status": "PASS"
+    },
+    {
+      "case": "MaskedMemory",
+      "status": "PASS",
+      "cycles": 128,
+      "comparisons": 256
+    },
+    {
+      "case": "AddToSubMutation",
+      "status": "PASS",
+      "detected": true
+    }
+  ]
+}

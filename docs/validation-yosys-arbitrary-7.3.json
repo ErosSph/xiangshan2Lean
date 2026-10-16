@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "original_rtl_sha256": "14c5e6ffff592b77859d6912f8c94375502c3866f8e2a833aa2c39952f23ee5f",
+  "models": [
+    {
+      "transport": "rtlil",
+      "steps": 128,
+      "manifest_sha256": "a1410781f71db8676332aaf342f324d2f8575ba158e00d72a09714972b1929f4"
+    },
+    {
+      "transport": "json",
+      "steps": 128,
+      "manifest_sha256": "550cf7c08f91476f282c5d74992eb9d82ce86f7f9986398b216c969daff8019d"
+    }
+  ],
+  "scope": "Actual Lean evaluation of 65 unknown bits as caller-supplied values, including nonzero high bits. Both official bulk RTLIL exposure and JSON cuts match independent XOR arithmetic. This checks two-state completions, not four-state RTL equivalence."
+}

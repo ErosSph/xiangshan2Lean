@@ -7,7 +7,10 @@
 测试通过 6 组配置，详见 chisel7-configuration.md。
 Vec[Bundle] 扩展另通过 23 组通用配置、3 组真实 XSBundle 配置及
 23 项边界检查，详见 vector-bundles.md。
-下表按语言构造定义能力；电路名称只是回归样例。
+下表按语言构造定义源码入口的能力；电路名称只是回归样例。
+现代官方展开入口的范围单独记录在 [modern-firrtl.md](modern-firrtl.md)：
+Scala 集合、泛型、循环实例化和复杂 CDE 构造可由原工程实际执行，
+其输出为固定配置模型，仍受支持的硬件操作、时钟和存储器范围限制。
 
 | 构造 | 实现状态 | 回归样例/限制 |
 |---|---|---|
@@ -19,6 +22,7 @@ Vec[Bundle] 扩展另通过 23 组通用配置、3 组真实 XSBundle 配置及
 | Bundle / XSBundle 父类、trait 与嵌套命名 Bundle | 已实现子集 | 继承字段展开、整体连接和寄存器；需要所有相关源码 |
 | 真实香山 XSModule / HasXSParameter | 已验证叶模块 | 原始完整 Alu.scala 的 RightShiftModule；真实完整配置依赖 |
 | Int / Boolean 参数、require | 已实现 | Counter、BoolGate；Int 范围/溢出反例 |
+| `@LeanParam` 静态注解 | 已实现标量子集 | 构造参数、纯标量成员和 CDE getter，追踪继承及子模块绑定；见 [lean-param.md](lean-param.md)，不增加实例数组/Option 布局支持 |
 | 参数 +、-、*、/、%、负号、比较、布尔表达式 | 已实现 | Int 回绕，纯参数表达式，条件合法域 |
 | 纯参数辅助函数和不可变参数别名 | 已实现 | HelperWidth；递归/副作用不支持 |
 | 参数化 UInt / SInt / Bool | 已实现 | Arithmetic、SignedArithmetic、BoolState |

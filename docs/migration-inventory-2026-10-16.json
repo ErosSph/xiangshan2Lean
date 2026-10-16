@@ -1,0 +1,737 @@
+{
+  "base": "E:\\ICT",
+  "elapsed_seconds": 7.2,
+  "total_bytes": 106254748408,
+  "top_level": {
+    "chisel2lean4": {
+      "bytes": 101055640401,
+      "files": 99773,
+      "directories": 15272
+    },
+    "chisel2lean": {
+      "bytes": 3618465538,
+      "files": 29239,
+      "directories": 4987
+    },
+    ".tools": {
+      "bytes": 1079711787,
+      "files": 2709,
+      "directories": 634
+    },
+    ".publish": {
+      "bytes": 229061804,
+      "files": 20665,
+      "directories": 6008
+    },
+    "xiangshan2Lean": {
+      "bytes": 180679852,
+      "files": 14561,
+      "directories": 3910
+    },
+    "chisel-example": {
+      "bytes": 73029580,
+      "files": 190,
+      "directories": 352
+    },
+    "chisel2lean4-upload.zip": {
+      "bytes": 12943975,
+      "files": 1,
+      "directories": 0
+    },
+    "firrtl2lean-pilot": {
+      "bytes": 4832365,
+      "files": 72,
+      "directories": 16
+    },
+    ".publication": {
+      "bytes": 381735,
+      "files": 4,
+      "directories": 2
+    },
+    "verify-chisel.ps1": {
+      "bytes": 829,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel-env.ps1": {
+      "bytes": 377,
+      "files": 1,
+      "directories": 0
+    },
+    ".gitignore": {
+      "bytes": 165,
+      "files": 1,
+      "directories": 0
+    }
+  },
+  "second_level": {
+    "chisel2lean4/experiments": {
+      "bytes": 75836102927,
+      "files": 66271,
+      "directories": 9867
+    },
+    "chisel2lean4/generated": {
+      "bytes": 16958758133,
+      "files": 1578,
+      "directories": 102
+    },
+    "chisel2lean4/dist": {
+      "bytes": 6998405202,
+      "files": 2970,
+      "directories": 251
+    },
+    "chisel2lean/.tools": {
+      "bytes": 2870064258,
+      "files": 5835,
+      "directories": 605
+    },
+    "chisel2lean4/.cache": {
+      "bytes": 1215227666,
+      "files": 26615,
+      "directories": 4095
+    },
+    "chisel2lean/experiments": {
+      "bytes": 360989644,
+      "files": 18338,
+      "directories": 3190
+    },
+    ".tools/cache": {
+      "bytes": 343810563,
+      "files": 2200,
+      "directories": 540
+    },
+    "chisel2lean/.cache": {
+      "bytes": 340157431,
+      "files": 2546,
+      "directories": 580
+    },
+    ".tools/jdk-17.0.20.1+1": {
+      "bytes": 317546460,
+      "files": 492,
+      "directories": 88
+    },
+    ".tools/downloads": {
+      "bytes": 248015180,
+      "files": 2,
+      "directories": 1
+    },
+    ".publish/xiangshan2Lean-main-20261015": {
+      "bytes": 226155862,
+      "files": 20661,
+      "directories": 6007
+    },
+    ".tools/sbt": {
+      "bytes": 170338428,
+      "files": 11,
+      "directories": 3
+    },
+    "xiangshan2Lean/experiments": {
+      "bytes": 161972368,
+      "files": 12270,
+      "directories": 3563
+    },
+    "chisel-example/target": {
+      "bytes": 60122594,
+      "files": 99,
+      "directories": 221
+    },
+    "chisel2lean/target": {
+      "bytes": 29136076,
+      "files": 1002,
+      "directories": 158
+    },
+    "chisel2lean4/target": {
+      "bytes": 26217022,
+      "files": 1039,
+      "directories": 159
+    },
+    "xiangshan2Lean/.git": {
+      "bytes": 16687211,
+      "files": 1987,
+      "directories": 276
+    },
+    "chisel2lean4-upload.zip": {
+      "bytes": 12943975,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel-example/null": {
+      "bytes": 11711488,
+      "files": 1,
+      "directories": 6
+    },
+    "chisel2lean4/.git": {
+      "bytes": 11259336,
+      "files": 42,
+      "directories": 274
+    },
+    "chisel2lean/generated": {
+      "bytes": 9196769,
+      "files": 157,
+      "directories": 3
+    },
+    "firrtl2lean-pilot/evidence": {
+      "bytes": 4783998,
+      "files": 66,
+      "directories": 14
+    },
+    "chisel2lean4/test_run_dir": {
+      "bytes": 3987027,
+      "files": 451,
+      "directories": 48
+    },
+    "chisel2lean/test_run_dir": {
+      "bytes": 3344806,
+      "files": 333,
+      "directories": 22
+    },
+    "chisel2lean/dist": {
+      "bytes": 2962220,
+      "files": 2,
+      "directories": 1
+    },
+    "chisel2lean4/scripts": {
+      "bytes": 1608002,
+      "files": 172,
+      "directories": 2
+    },
+    "chisel2lean4/reference": {
+      "bytes": 1558328,
+      "files": 227,
+      "directories": 103
+    },
+    ".publish/update-20261016-plan.json": {
+      "bytes": 1355036,
+      "files": 1,
+      "directories": 0
+    },
+    ".publish/update-20261016-index-manifest.json": {
+      "bytes": 1197081,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel-example/obj_dir": {
+      "bytes": 1096170,
+      "files": 24,
+      "directories": 1
+    },
+    "xiangshan2Lean/RELEASE.json": {
+      "bytes": 720866,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/RELEASE.json": {
+      "bytes": 720866,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/reference": {
+      "bytes": 700737,
+      "files": 712,
+      "directories": 93
+    },
+    "chisel2lean4/testcase": {
+      "bytes": 574750,
+      "files": 72,
+      "directories": 96
+    },
+    "chisel2lean/testcase": {
+      "bytes": 551298,
+      "files": 72,
+      "directories": 96
+    },
+    "xiangshan2Lean/generated": {
+      "bytes": 452065,
+      "files": 105,
+      "directories": 3
+    },
+    "chisel2lean4/docs": {
+      "bytes": 449333,
+      "files": 83,
+      "directories": 3
+    },
+    "chisel2lean/.git": {
+      "bytes": 428694,
+      "files": 30,
+      "directories": 18
+    },
+    ".publication/chisel2lean4": {
+      "bytes": 381735,
+      "files": 4,
+      "directories": 1
+    },
+    "chisel2lean4/src": {
+      "bytes": 351960,
+      "files": 70,
+      "directories": 22
+    },
+    ".publish/update-20261016-plan.paths": {
+      "bytes": 346739,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/src": {
+      "bytes": 308905,
+      "files": 68,
+      "directories": 22
+    },
+    "chisel2lean/src": {
+      "bytes": 269174,
+      "files": 62,
+      "directories": 21
+    },
+    "chisel2lean/audit": {
+      "bytes": 212497,
+      "files": 36,
+      "directories": 76
+    },
+    "chisel2lean/scripts": {
+      "bytes": 179678,
+      "files": 24,
+      "directories": 2
+    },
+    "xiangshan2Lean/scripts": {
+      "bytes": 158450,
+      "files": 27,
+      "directories": 1
+    },
+    "chisel2lean4/verification": {
+      "bytes": 136418,
+      "files": 28,
+      "directories": 11
+    },
+    "chisel2lean4/project": {
+      "bytes": 134615,
+      "files": 57,
+      "directories": 113
+    },
+    "xiangshan2Lean/docs": {
+      "bytes": 134521,
+      "files": 27,
+      "directories": 3
+    },
+    "xiangshan2Lean/verification": {
+      "bytes": 127203,
+      "files": 20,
+      "directories": 9
+    },
+    "chisel2lean/project": {
+      "bytes": 111450,
+      "files": 57,
+      "directories": 113
+    },
+    "chisel-example/project": {
+      "bytes": 96593,
+      "files": 56,
+      "directories": 113
+    },
+    "chisel2lean/docs": {
+      "bytes": 69506,
+      "files": 14,
+      "directories": 3
+    },
+    "chisel2lean/lean": {
+      "bytes": 55001,
+      "files": 2,
+      "directories": 2
+    },
+    "firrtl2lean-pilot/classes": {
+      "bytes": 28769,
+      "files": 3,
+      "directories": 1
+    },
+    "chisel2lean4/lean": {
+      "bytes": 27099,
+      "files": 2,
+      "directories": 2
+    },
+    "xiangshan2Lean/testcase": {
+      "bytes": 22684,
+      "files": 10,
+      "directories": 12
+    },
+    "chisel2lean4/annotations": {
+      "bytes": 22380,
+      "files": 40,
+      "directories": 98
+    },
+    "chisel2lean4/tests": {
+      "bytes": 21855,
+      "files": 11,
+      "directories": 5
+    },
+    "xiangshan2Lean/vendor": {
+      "bytes": 19246,
+      "files": 3,
+      "directories": 3
+    },
+    "chisel2lean4/vendor": {
+      "bytes": 19246,
+      "files": 3,
+      "directories": 3
+    },
+    "xiangshan2Lean/audit": {
+      "bytes": 16731,
+      "files": 9,
+      "directories": 4
+    },
+    "chisel2lean4/audit": {
+      "bytes": 16731,
+      "files": 9,
+      "directories": 4
+    },
+    "chisel2lean/README.md": {
+      "bytes": 12022,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/LICENSE": {
+      "bytes": 11558,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/LICENSE": {
+      "bytes": 11558,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/LICENSE": {
+      "bytes": 11558,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/examples": {
+      "bytes": 10642,
+      "files": 20,
+      "directories": 6
+    },
+    "xiangshan2Lean/reference": {
+      "bytes": 10008,
+      "files": 2,
+      "directories": 4
+    },
+    "chisel2lean4/build.sbt": {
+      "bytes": 9712,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/examples": {
+      "bytes": 9675,
+      "files": 15,
+      "directories": 3
+    },
+    "firrtl2lean-pilot/run.py": {
+      "bytes": 8565,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/build.sbt": {
+      "bytes": 8482,
+      "files": 1,
+      "directories": 0
+    },
+    "firrtl2lean-pilot/FirrtlToLean.scala": {
+      "bytes": 7216,
+      "files": 1,
+      "directories": 0
+    },
+    ".publish/publish-update-20261016.py": {
+      "bytes": 7086,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/tests": {
+      "bytes": 6627,
+      "files": 3,
+      "directories": 3
+    },
+    "xiangshan2Lean/README.md": {
+      "bytes": 4575,
+      "files": 1,
+      "directories": 0
+    },
+    "firrtl2lean-pilot/README.txt": {
+      "bytes": 3817,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/build.sbt": {
+      "bytes": 3268,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/tests": {
+      "bytes": 2728,
+      "files": 1,
+      "directories": 2
+    },
+    "chisel2lean4/NOTICE": {
+      "bytes": 2583,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/TASKS.md": {
+      "bytes": 2288,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/TASKS.md": {
+      "bytes": 2288,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/TASKS.md": {
+      "bytes": 2288,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/lean": {
+      "bytes": 1977,
+      "files": 1,
+      "directories": 2
+    },
+    "chisel2lean4/README.md": {
+      "bytes": 1934,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/NOTICE": {
+      "bytes": 1735,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/AGENTS.md": {
+      "bytes": 1558,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/AGENTS.md": {
+      "bytes": 1558,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/examples": {
+      "bytes": 1473,
+      "files": 5,
+      "directories": 1
+    },
+    "chisel2lean/AGENTS.md": {
+      "bytes": 1405,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel-example/src": {
+      "bytes": 1253,
+      "files": 2,
+      "directories": 5
+    },
+    "chisel-example/generated": {
+      "bytes": 963,
+      "files": 6,
+      "directories": 5
+    },
+    "verify-chisel.ps1": {
+      "bytes": 829,
+      "files": 1,
+      "directories": 0
+    },
+    ".tools/bin": {
+      "bytes": 727,
+      "files": 2,
+      "directories": 1
+    },
+    "chisel2lean/NOTICE": {
+      "bytes": 508,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel-example/build.sbt": {
+      "bytes": 487,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/.gitignore": {
+      "bytes": 453,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/Makefile": {
+      "bytes": 382,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel-env.ps1": {
+      "bytes": 377,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/Makefile": {
+      "bytes": 365,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/Makefile": {
+      "bytes": 365,
+      "files": 1,
+      "directories": 0
+    },
+    ".tools/user-environment-before.json": {
+      "bytes": 356,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/.gitignore": {
+      "bytes": 331,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/.gitignore": {
+      "bytes": 331,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/chisel2lean4.ps1": {
+      "bytes": 192,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/chisel2lean4.ps1": {
+      "bytes": 192,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/chisel2lean4.ps1": {
+      "bytes": 192,
+      "files": 1,
+      "directories": 0
+    },
+    ".gitignore": {
+      "bytes": 165,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/.scalafmt.conf": {
+      "bytes": 119,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/.scalafmt.conf": {
+      "bytes": 112,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/.scalafmt.conf": {
+      "bytes": 112,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/project": {
+      "bytes": 94,
+      "files": 2,
+      "directories": 1
+    },
+    "chisel2lean4/.gitattributes": {
+      "bytes": 83,
+      "files": 1,
+      "directories": 0
+    },
+    ".tools/sbt-repositories": {
+      "bytes": 73,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel-example/.sbtopts": {
+      "bytes": 32,
+      "files": 1,
+      "directories": 0
+    },
+    "xiangshan2Lean/lean-toolchain": {
+      "bytes": 25,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean4/lean-toolchain": {
+      "bytes": 25,
+      "files": 1,
+      "directories": 0
+    },
+    "chisel2lean/lean-toolchain": {
+      "bytes": 25,
+      "files": 1,
+      "directories": 0
+    },
+    ".publication": {
+      "bytes": 0,
+      "files": 0,
+      "directories": 1
+    },
+    ".publish": {
+      "bytes": 0,
+      "files": 0,
+      "directories": 1
+    },
+    ".tools": {
+      "bytes": 0,
+      "files": 0,
+      "directories": 1
+    },
+    "chisel-example": {
+      "bytes": 0,
+      "files": 0,
+      "directories": 1
+    },
+    "chisel2lean": {
+      "bytes": 0,
+      "files": 0,
+      "directories": 1
+    },
+    "chisel2lean4": {
+      "bytes": 0,
+      "files": 0,
+      "directories": 1
+    },
+    "firrtl2lean-pilot": {
+      "bytes": 0,
+      "files": 0,
+      "directories": 1
+    },
+    "xiangshan2Lean": {
+      "bytes": 0,
+      "files": 0,
+      "directories": 1
+    },
+    "chisel2lean4/firrtl_frontend": {
+      "bytes": 0,
+      "files": 0,
+      "directories": 7
+    }
+  },
+  "reparse_points": [
+    {
+      "path": "chisel2lean4\\.tools",
+      "target": "E:\\ICT\\chisel2lean\\.tools",
+      "tag": 2684354563
+    },
+    {
+      "path": "chisel2lean4\\.cache\\coursier",
+      "target": "E:\\ICT\\chisel2lean\\.cache\\coursier",
+      "tag": 2684354563
+    },
+    {
+      "path": "chisel2lean4\\.cache\\ivy",
+      "target": "E:\\ICT\\chisel2lean\\.cache\\ivy",
+      "tag": 2684354563
+    },
+    {
+      "path": "chisel2lean4\\.cache\\sbt-boot",
+      "target": "E:\\ICT\\chisel2lean\\.cache\\sbt-boot",
+      "tag": 2684354563
+    },
+    {
+      "path": "chisel2lean4\\.cache\\sbt-global",
+      "target": "E:\\ICT\\chisel2lean\\.cache\\sbt-global",
+      "tag": 2684354563
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "cycles": 96,
+  "output_comparisons": 192,
+  "source_files": {
+    "include/width.svh": "b26d754f0c08462bea3b11a71938aac8539a2342ea0701c328a7b34cec1cb165",
+    "Lane.sv": "34d98ebd34f8079d137fe0dd2ac027042340283509b3bb50222e6868d2da7b5f",
+    "ProjectTop.sv": "6f28c96259d90b695b48b988bc1b01bebfe4616a457f779c2f46bee59f33d460"
+  },
+  "scope": "RTL directory with two modules and an included macro header; actual Lean/Verilator and integer comparison."
+}

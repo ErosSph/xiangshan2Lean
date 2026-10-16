@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "stage": "whole original XSTop FunctionalIR export",
+  "top": "XSTop",
+  "config": "DefaultConfig",
+  "cores": 1,
+  "original_hardware_source_modified": false,
+  "source_units_and_headers": 982,
+  "functional_bytes": 1242147517,
+  "functional_sha256": "692cdee890bfa35c2df6503cca92918f6102fb8e27214bf27f2b97e161ec9289",
+  "checkpoint": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T133913Z-6cc10c71\\translation\\20261015T134008Z-560a0da3\\artifacts\\functional-checkpoint.json",
+  "producer": "E:\\ICT\\chisel2lean4\\experiments\\xiangshan-whole-lean-7.3\\20261015T133913Z-6cc10c71\\translation\\20261015T134008Z-560a0da3\\yosys-export",
+  "tool_exit_code": 0,
+  "lean_compilation": "NOT_REACHED",
+  "whole_top_differential": "NOT_RUN",
+  "universal_equivalence": "NOT_PROVED",
+  "scope": "Complete official native export with top-only selection and check -assert. Reader was separately interrupted for streaming upgrade. This records FunctionalIR export, not Lean compilation or equivalence."
+}

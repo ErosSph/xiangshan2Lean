@@ -58,6 +58,7 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
     private val leanTrees = scala.collection.mutable.LinkedHashMap.empty[String, (Tree, String, Boolean)]
     private val leanDefinitions = scala.collection.mutable.Map.empty[String, (ModuleDef, Tree)]
     private val leanSourceMetadata = scala.collection.mutable.Map.empty[String, String]
+    private val leanParameterBindings = scala.collection.mutable.Map.empty[String, List[LeanParamBinding]]
 
     private def safely(tree: Tree)(body: => Unit): Unit = try body catch {
       case e: TranslationError =>
@@ -75,7 +76,7 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
       }
       cache.getOrElseUpdate(name, {
         val (definition, root) = leanDefinitions.getOrElse(name, throw new IllegalArgumentException("Module source unavailable: " + name))
-        adaptToLean(definition, root, child => emitLean(child, cache, stack + name))
+        adaptToLean(definition, root, child => emitLean(child, cache, stack + name), leanParameterBindings.getOrElse(name, Nil))
       })
     }
 
@@ -92,6 +93,7 @@ class ChiselToScalaComponent(val global: Global) extends PluginComponent {
           val tree = if (needsLeanSourceResolution(original)) {
             val resolved = resolveLeanSource(original)
             leanSourceMetadata(name) = resolved.metadata
+            leanParameterBindings(name) = resolved.leanParameters
             resolved.tree
           } else original
           resolvedTrees(name) = tree

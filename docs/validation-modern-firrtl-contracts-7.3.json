@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "checks": 13,
+  "cases": [
+    {
+      "case": "Memory",
+      "rejected": true,
+      "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085909Z-b154f8fc"
+    },
+    {
+      "case": "AsyncReset",
+      "rejected": true,
+      "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085909Z-8e4d4335"
+    },
+    {
+      "case": "MultiClock",
+      "rejected": true,
+      "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085909Z-0971f661"
+    },
+    {
+      "case": "GatedClock",
+      "rejected": true,
+      "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085911Z-c69cfe7d"
+    },
+    {
+      "case": "DeadAssertion",
+      "rejected": true,
+      "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085913Z-92a04f61"
+    },
+    {
+      "case": "BlackBox",
+      "rejected": true,
+      "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085913Z-6bbcf45e"
+    },
+    {
+      "case": "UnknownVersion",
+      "rejected": true,
+      "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085913Z-7c6e0d17"
+    },
+    {
+      "case": "InvalidCharacter",
+      "rejected": true,
+      "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085913Z-40ffb8da"
+    },
+    {
+      "case": "ConditionalInvalid",
+      "rejected": true,
+      "evidence": "E:\\ICT\\chisel2lean4\\experiments\\modern-firrtl-contracts-7.3\\translations\\20261014T085914Z-4e0dabaa"
+    },
+    {
+      "case": "inactive-division",
+      "passed": true
+    },
+    {
+      "case": "active-division",
+      "passed": true
+    },
+    {
+      "case": "valid-division",
+      "passed": true
+    },
+    {
+      "case": "constant-zero-division",
+      "passed": true
+    }
+  ],
+  "compiler_sha256": "ae515ed8e48580399332c87a7b76406b7d18fb7790d8acbbd3170ecd00a4a7f4",
+  "unsupported_effects_rejected_before_optimization": true,
+  "formal_translation_equivalence": false
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "config": "DefaultConfig",
+  "cores": 1,
+  "top": "XSTop",
+  "counts": {
+    "nodes": 7902969,
+    "inputs": 63162,
+    "states": 523808,
+    "outputs": 16453
+  },
+  "runtime_sha256": "4cde7f082e77dd896513ee59354cac3d84141ac1747150ba41ace5bab4f46306",
+  "original_manifest_sha256": "88bbf8905ce46d4d91e70a8331f15fbdb60d30236acf2887bb3b9ddc8d4390c1",
+  "updated_manifest_sha256": "f30a4600506ef8174111224e9e973d4ed5310d52dda97485c485b5e535ebc1f3",
+  "lean_compilation": "PASS",
+  "complete_data_validation": "PASS",
+  "whole_execution": "INTERRUPTED_MEMORY_PRESSURE",
+  "whole_rtl_differential": "NOT_RUN",
+  "universal_equivalence": "NOT_PROVED",
+  "evidence": "E:\\ICT\\chisel2lean4\\generated\\xiangshan-whole-bounded"
+}

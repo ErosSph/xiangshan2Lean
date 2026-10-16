@@ -25,7 +25,7 @@ object GenerateRTL {
     emit(() => constructor.newInstance(values.map(_.asInstanceOf[AnyRef]): _*).asInstanceOf[RawModule], args(0), args(1))
   }
 
-  def emit(factory: () => RawModule, moduleName: String, output: String): Unit = {
+  def emit(factory: () => RawModule, moduleName: String, output: String, emitChirrtl: Boolean = false): Unit = {
     val directory = Paths.get(output).toAbsolutePath
     Files.createDirectories(directory)
     var original: RawModule = null
@@ -55,6 +55,13 @@ object GenerateRTL {
     }
     var elaborated: RawModule = null
     def create(): RawModule = { elaborated = new ReferencePorts; elaborated }
+    if (emitChirrtl) {
+      val chirrtl = ChiselStage.emitCHIRRTL(create())
+      Files.writeString(directory.resolve("design.fir"), chirrtl, StandardCharsets.UTF_8)
+      // A fresh official elaboration produces the independent RTL reference.
+      // Clear the per-elaboration port mirror before creating the wrapper again.
+      mirrored = Nil
+    }
     val verilog = ChiselStage.emitSystemVerilog(create(), Array.empty[String],
       Array("--disable-all-randomization", "--default-layer-specialization=enable"))
     val top = elaborated.desiredName

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "module_levels": 4,
+  "cycles": 96,
+  "output_comparisons": 384,
+  "yosys_engine": "wasm",
+  "scope": "Root-only official flattening, repeated child types, and registered cross-feedback; real Lean, unmodified native RTL and simultaneous-update integer oracle."
+}

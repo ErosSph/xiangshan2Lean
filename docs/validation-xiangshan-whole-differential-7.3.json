@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-16T06:31:31.167523+00:00",
+  "top": "XSTop",
+  "config": "DefaultConfig",
+  "cores": 1,
+  "upstream_commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2",
+  "scope": "Two finite complete-top physical-output scenarios; not program execution or universal equivalence.",
+  "model_counts": {
+    "nodes": 7902969,
+    "inputs": 63162,
+    "states": 523808,
+    "outputs": 16453
+  },
+  "physical_inputs": 68,
+  "physical_outputs": 81,
+  "total_samples": 192,
+  "output_comparisons": 31104,
+  "original_hardware_modified": false,
+  "assertions_enabled": true,
+  "bundle_manifest_sha256": "02edd3046c0898ee50141aa1cc77517b2f3f23cbf0d0de22037a43d2745e6b24",
+  "cases": [
+    {
+      "name": "reset-jtag-stalled-axi",
+      "status": "PASS",
+      "samples": 96,
+      "output_ports": 81,
+      "output_comparisons": 15552,
+      "report": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/acceptance.json",
+      "report_sha256": "15ea45946d0320eff71707c456f3237636401a82b858d65016edd6c562cf2570",
+      "driver": {
+        "implementation_sha256": "3cee3c5750497f0595178725e6eddc61213d35065c83fcb4df6c4fd8e47661ac",
+        "harness_sha256": "7c6ae377fcce711ca3b74197b19ee9fb10618c9b1dff204f5c619ecf4866d253",
+        "trace_sha256": "9e0378a0a91c40b591f855929130850e4ee2895338fbbec7d119cbab8e87c36d"
+      }
+    },
+    {
+      "name": "asynchronous-reset-reassertion",
+      "status": "PASS",
+      "samples": 96,
+      "output_ports": 81,
+      "output_comparisons": 15552,
+      "report": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/scenarios/20261016T062353Z-c45d1dd6/acceptance.json",
+      "report_sha256": "14597f86a3a6b6cb5c9d9cd4fb6ecc6578c7837f933bca86af17b5716048a1d8",
+      "driver": {
+        "implementation_sha256": "3cee3c5750497f0595178725e6eddc61213d35065c83fcb4df6c4fd8e47661ac",
+        "harness_sha256": "7c6ae377fcce711ca3b74197b19ee9fb10618c9b1dff204f5c619ecf4866d253",
+        "trace_sha256": "bc2ceb1f01e66310992a74ff8f311f16d20b0afff8d3bc4bcc106bd750ce86da"
+      }
+    }
+  ],
+  "startup": {
+    "mode": "explicit-input-settle",
+    "all_physical_inputs": 0,
+    "evaluations_before_first_trace_row": 1,
+    "sampled": false,
+    "internal_state_assigned_by_driver": false,
+    "unknown_rtl_initial_bits": 0,
+    "lean_initial_state": "Identical recorded caller state; known sampling-helper constraints retained.",
+    "initial_header_sha256": "dd9ef1f3226b9718b0159e498f360272201000f38016714c2a7d55ae7c7aca3e",
+    "arbitrary_inputs": 63094,
+    "arbitrary_choice": 0
+  },
+  "diagnosis": {
+    "original_failure": "First main rising edge (sample 2); no initial reset edge was detected by Verilator, leaving downstream reset low.",
+    "evidence": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/diagnosis-initial-reset/result.json",
+    "original_failed_execution": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/rtl/20261016T042942Z-98e4fbfd",
+    "repair": "Settle declared zero inputs, then apply the original trace; retain original RTL and assertions."
+  },
+  "regression": {
+    "status": "PASS",
+    "tests": 16,
+    "includes": "Real RTL reset-edge reproduction, valid edge replay, illegal input rejection; scenario input/initial-state guards; migration guards.",
+    "log": "/data2/home/lvhongqing/cgt/chisel2lean/runs/20261016-linux-01/diagnosis-initial-reset/all-tests.stderr",
+    "log_sha256": "16dbed768fbfb858945f50e92ef0b882c03c2b59ecec0fca0cdb79a4efff5966"
+  },
+  "instruction_execution": "NOT_TESTED",
+  "universal_equivalence": "NOT_PROVED",
+  "logic": "Two-state explicit samples.",
+  "additional_limits": [
+    "One pinned DefaultConfig single-core Nanhu revision.",
+    "AXI response and instruction/program execution have not been accepted.",
+    "Unknown/initial-data choices are the recorded zero experiment; arbitrary initial states are not proved."
+  ]
+}

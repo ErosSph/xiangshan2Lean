@@ -1,0 +1,203 @@
+-- Generated from locked Yosys FunctionalIR. Fixed circuit; explicit initial state.
+import Lean
+set_option linter.unusedVariables false
+set_option maxRecDepth 65536
+set_option maxHeartbeats 0
+namespace Yosys.Handshake65x3
+structure Inputs where
+  i0 : BitVec 1
+  i1 : BitVec 1
+  i2 : BitVec 65
+  i3 : BitVec 1
+  i4 : BitVec 1
+  i5 : BitVec 1
+  i6 : BitVec 1
+  i7 : BitVec 1
+
+structure StateGroup0 where
+  s0 : BitVec 1
+  s1 : BitVec 65
+  s2 : BitVec 65
+  s3 : BitVec 1
+  s4 : BitVec 1
+  s5 : BitVec 1
+  s6 : BitVec 1
+  s7 : BitVec 1
+  s8 : BitVec 65
+  s9 : BitVec 65
+  s10 : BitVec 1
+  s11 : BitVec 1
+  s12 : BitVec 1
+  s13 : BitVec 1
+  s14 : BitVec 65
+  s15 : BitVec 65
+
+structure StateGroup1 where
+  s16 : BitVec 1
+  s17 : BitVec 1
+
+structure State where
+  g0 : StateGroup0
+  g1 : StateGroup1
+
+structure Outputs where
+  o0 : BitVec 1
+  o1 : BitVec 65
+  o2 : BitVec 1
+
+structure Evaluation where
+  outputs : Outputs
+  nextState : State
+  outputDefined : Bool
+  transitionDefined : Bool
+
+def evaluate (inputs : Inputs) (state : State) : Evaluation :=
+  let n0 : BitVec 1 := inputs.i1
+  let n1 : BitVec 65 := state.g0.s2
+  let n2 : BitVec 65 := state.g0.s1
+  let n3 : BitVec 1 := state.g0.s0
+  let n4 : BitVec 2 := (n3 ++ n0)
+  let n5 : BitVec 2 := (1#2)
+  let n6 : Bool := (n4 == n5)
+  let n7 : BitVec 1 := (1#1)
+  let n8 : BitVec 1 := (0#1)
+  let n9 : BitVec 1 := (if n6 then n7 else n8)
+  let n10 : BitVec 1 := (1#1)
+  let n11 : Bool := (n9 == n10)
+  let n12 : BitVec 65 := (if n11 then n2 else n1)
+  let n13 : BitVec 65 := inputs.i2
+  let n14 : BitVec 1 := state.g0.s11
+  let n15 : BitVec 1 := state.g0.s10
+  let n16 : BitVec 1 := state.g0.s5
+  let n17 : BitVec 2 := (n16 ++ n0)
+  let n18 : BitVec 2 := (1#2)
+  let n19 : Bool := (n17 == n18)
+  let n20 : BitVec 1 := (1#1)
+  let n21 : BitVec 1 := (0#1)
+  let n22 : BitVec 1 := (if n19 then n20 else n21)
+  let n23 : BitVec 1 := (1#1)
+  let n24 : Bool := (n22 == n23)
+  let n25 : BitVec 1 := (if n24 then n15 else n14)
+  let n26 : BitVec 1 := (~~~n25)
+  let n27 : BitVec 1 := state.g0.s7
+  let n28 : BitVec 1 := state.g0.s6
+  let n29 : BitVec 1 := state.g0.s3
+  let n30 : BitVec 2 := (n29 ++ n0)
+  let n31 : BitVec 2 := (1#2)
+  let n32 : Bool := (n30 == n31)
+  let n33 : BitVec 1 := (1#1)
+  let n34 : BitVec 1 := (0#1)
+  let n35 : BitVec 1 := (if n32 then n33 else n34)
+  let n36 : BitVec 1 := (1#1)
+  let n37 : Bool := (n35 == n36)
+  let n38 : BitVec 1 := (if n37 then n28 else n27)
+  let n39 : BitVec 1 := (~~~n38)
+  let n40 : BitVec 1 := state.g1.s17
+  let n41 : BitVec 1 := state.g1.s16
+  let n42 : BitVec 1 := state.g0.s13
+  let n43 : BitVec 2 := (n42 ++ n0)
+  let n44 : BitVec 2 := (1#2)
+  let n45 : Bool := (n43 == n44)
+  let n46 : BitVec 1 := (1#1)
+  let n47 : BitVec 1 := (0#1)
+  let n48 : BitVec 1 := (if n45 then n46 else n47)
+  let n49 : BitVec 1 := (1#1)
+  let n50 : Bool := (n48 == n49)
+  let n51 : BitVec 1 := (if n50 then n41 else n40)
+  let n52 : BitVec 1 := (~~~n51)
+  let n53 : BitVec 1 := inputs.i4
+  let n54 : BitVec 1 := (n52 ||| n53)
+  let n55 : BitVec 1 := (n39 ||| n54)
+  let n56 : BitVec 1 := (n26 ||| n55)
+  let n57 : BitVec 1 := inputs.i3
+  let n58 : BitVec 1 := (n56 &&& n57)
+  let n59 : BitVec 1 := (1#1)
+  let n60 : Bool := (n58 == n59)
+  let n61 : BitVec 65 := (if n60 then n13 else n12)
+  let n62 : BitVec 1 := (1#1)
+  let n63 : Bool := (n55 == n62)
+  let n64 : BitVec 1 := (if n63 then n25 else n38)
+  let n65 : BitVec 1 := inputs.i5
+  let n66 : BitVec 1 := inputs.i0
+  let n67 : BitVec 1 := (1#1)
+  let n68 : Bool := (n66 == n67)
+  let n69 : BitVec 1 := (if n68 then n65 else n64)
+  let n70 : BitVec 1 := (1#1)
+  let n71 : Bool := (n66 == n70)
+  let n72 : BitVec 1 := (0#1)
+  let n73 : BitVec 1 := (if n71 then n72 else n69)
+  let n74 : BitVec 65 := state.g0.s9
+  let n75 : BitVec 65 := state.g0.s8
+  let n76 : BitVec 1 := state.g0.s4
+  let n77 : BitVec 2 := (n76 ++ n0)
+  let n78 : BitVec 2 := (1#2)
+  let n79 : Bool := (n77 == n78)
+  let n80 : BitVec 1 := (1#1)
+  let n81 : BitVec 1 := (0#1)
+  let n82 : BitVec 1 := (if n79 then n80 else n81)
+  let n83 : BitVec 1 := (1#1)
+  let n84 : Bool := (n82 == n83)
+  let n85 : BitVec 65 := (if n84 then n75 else n74)
+  let n86 : BitVec 1 := (n55 &&& n25)
+  let n87 : BitVec 1 := (1#1)
+  let n88 : Bool := (n86 == n87)
+  let n89 : BitVec 65 := (if n88 then n12 else n85)
+  let n90 : BitVec 1 := (1#1)
+  let n91 : Bool := (n56 == n90)
+  let n92 : BitVec 1 := (if n91 then n57 else n25)
+  let n93 : BitVec 1 := inputs.i6
+  let n94 : BitVec 1 := (1#1)
+  let n95 : Bool := (n66 == n94)
+  let n96 : BitVec 1 := (if n95 then n93 else n92)
+  let n97 : BitVec 1 := (1#1)
+  let n98 : Bool := (n66 == n97)
+  let n99 : BitVec 1 := (0#1)
+  let n100 : BitVec 1 := (if n98 then n99 else n96)
+  let n101 : BitVec 65 := state.g0.s15
+  let n102 : BitVec 65 := state.g0.s14
+  let n103 : BitVec 1 := state.g0.s12
+  let n104 : BitVec 2 := (n103 ++ n0)
+  let n105 : BitVec 2 := (1#2)
+  let n106 : Bool := (n104 == n105)
+  let n107 : BitVec 1 := (1#1)
+  let n108 : BitVec 1 := (0#1)
+  let n109 : BitVec 1 := (if n106 then n107 else n108)
+  let n110 : BitVec 1 := (1#1)
+  let n111 : Bool := (n109 == n110)
+  let n112 : BitVec 65 := (if n111 then n102 else n101)
+  let n113 : BitVec 1 := (n54 &&& n38)
+  let n114 : BitVec 1 := (1#1)
+  let n115 : Bool := (n113 == n114)
+  let n116 : BitVec 65 := (if n115 then n85 else n112)
+  let n117 : BitVec 1 := (1#1)
+  let n118 : Bool := (n54 == n117)
+  let n119 : BitVec 1 := (if n118 then n38 else n51)
+  let n120 : BitVec 1 := inputs.i7
+  let n121 : BitVec 1 := (1#1)
+  let n122 : Bool := (n66 == n121)
+  let n123 : BitVec 1 := (if n122 then n120 else n119)
+  let n124 : BitVec 1 := (1#1)
+  let n125 : Bool := (n66 == n124)
+  let n126 : BitVec 1 := (0#1)
+  let n127 : BitVec 1 := (if n125 then n126 else n123)
+  { outputs := { o0 := n56, o1 := n112, o2 := n51 }, nextState := { g0 := { s0 := n0, s1 := n61, s2 := n12, s3 := n0, s4 := n0, s5 := n0, s6 := n73, s7 := n38, s8 := n89, s9 := n85, s10 := n100, s11 := n25, s12 := n0, s13 := n0, s14 := n116, s15 := n112 }, g1 := { s16 := n127, s17 := n51 } },
+    outputDefined := true, transitionDefined := true }
+
+def step (inputs : Inputs) (state : State) : Outputs × State :=
+  let r := evaluate inputs state
+  (r.outputs, r.nextState)
+
+def initialValid (state : State) : Bool :=
+  ((state.g0.s0 &&& (1#1)) == (1#1)) &&
+  ((state.g0.s1 &&& (36893488147419103231#65)) == (0#65)) &&
+  ((state.g0.s3 &&& (1#1)) == (1#1)) &&
+  ((state.g0.s4 &&& (1#1)) == (1#1)) &&
+  ((state.g0.s5 &&& (1#1)) == (1#1)) &&
+  ((state.g0.s6 &&& (1#1)) == (0#1)) &&
+  ((state.g0.s8 &&& (36893488147419103231#65)) == (0#65)) &&
+  ((state.g0.s10 &&& (1#1)) == (0#1)) &&
+  ((state.g0.s12 &&& (1#1)) == (1#1)) &&
+  ((state.g0.s13 &&& (1#1)) == (1#1)) &&
+  ((state.g0.s14 &&& (36893488147419103231#65)) == (0#65)) &&
+  ((state.g1.s16 &&& (1#1)) == (0#1))
+end Yosys.Handshake65x3

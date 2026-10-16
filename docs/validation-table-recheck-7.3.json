@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "rejected_changed_assets": [
+    "Chisel2Lean\\Functional.lean",
+    "TablePipeline/Observed.ir.json",
+    "TablePipeline/Observed.lean",
+    "TablePipeline/Observed.table.json",
+    "TablePipeline\\Observed.circuit.bin",
+    "TablePipeline\\Observed.circuit.hex",
+    "upstream-manifest.json"
+  ],
+  "model_manifest_sha256": "d74e519f36e62ebb60dd943d3cbc3200b3d67d72925efd30f3b39e9f2142a62d",
+  "runtime_sha256": "4cde7f082e77dd896513ee59354cac3d84141ac1747150ba41ace5bab4f46306",
+  "scope": "Unchanged packet recompiled and completely validated by Lean with the updated evaluator. Modified Lean entry, interface, IR, binary, hex, runtime and upstream manifest are rejected before compilation."
+}

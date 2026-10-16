@@ -6,13 +6,14 @@ import chicala.convert.frontend.Scala2Reader
 import chicala.lean.ir.{Module => IRModule, Signal => IRSignal, Statement => IRStatement, Expr => IRExpr, Assign => IRAssign, _}
 
 /** Adapter from the reused Chicala source AST, before DependencySort. */
-trait LeanAdapter { self: Scala2Reader =>
+trait LeanAdapter { self: Scala2Reader with LeanSourceResolver =>
   val global: Global
   import global._
 
-  def adaptToLean(module: ModuleDef, root: Tree, child: String => IRModule): IRModule = new Adapter(module, root, child).build()
+  def adaptToLean(module: ModuleDef, root: Tree, child: String => IRModule,
+                  leanParameters: List[LeanParamBinding] = Nil): IRModule = new Adapter(module, root, child, leanParameters).build()
 
-  private class Adapter(module: ModuleDef, root: Tree, child: String => IRModule) {
+  private class Adapter(module: ModuleDef, root: Tree, child: String => IRModule, leanParameters: List[LeanParamBinding]) {
     private def source(pos: Position): Source = {
       val p = if (pos.isDefined) pos else root.pos
       Source(p.source.file.path, p.line, p.column + 1)
@@ -24,6 +25,8 @@ trait LeanAdapter { self: Scala2Reader =>
     }
     private def fail(detail: String): Nothing = throw TranslationError(location, detail)
     private val aliases = mutable.Map.empty[String, ParamExpr]
+    private val markedAliases = leanParameters.map(p => p.alias -> p).toMap
+    private val preservedParameters = mutable.ListBuffer.empty[PreservedParameter]
     private var indexSerial = 0
     private def freshIndex(name: String): String = { indexSerial += 1; name + "__" + indexSerial }
     private val hardwareAliases = mutable.Map.empty[String, IRExpr]
@@ -537,7 +540,20 @@ trait LeanAdapter { self: Scala2Reader =>
           Nil
         case SValDef(name, _, rhs, false) if rhs != EmptyMTerm =>
           // Validate unused host computations too, so side effects cannot disappear.
-          aliases(name.toString) = parameter(rhs, locals)
+          val marker = markedAliases.get(name.toString)
+          val value = try parameter(rhs, locals) catch {
+            case e: TranslationError if marker.nonEmpty =>
+              val m = marker.get
+              throw TranslationError(m.source, "@LeanParam " + m.owner + "." + m.name + ": " + e.detail)
+          }
+          aliases(name.toString) = value
+          marker.foreach { m =>
+            val dependencies = ParamSimplify.names(value)
+            if (dependencies.isEmpty || !dependencies.subsetOf(parameterNames))
+              throw TranslationError(m.source, "@LeanParam " + m.owner + "." + m.name +
+                " must derive from symbolic constructor parameters or supported CDE scalar fields; a constant cannot introduce a parameter family")
+            preservedParameters += PreservedParameter(m.owner, m.name, m.kind, m.role, value, m.source)
+          }
           Nil
         case _: SDefDef => Nil
         case EnumDef(names, tpe) =>
@@ -567,6 +583,7 @@ trait LeanAdapter { self: Scala2Reader =>
           val instance = Instantiate(definition, s.name.toString, bindings)
           signals ++= instance.signals
           requirements ++= instance.requirements
+          preservedParameters ++= instance.preservedParameters
           instance.statements
         case _ => fail(s"Unsupported hardware statement: $s")
       }
@@ -595,7 +612,8 @@ trait LeanAdapter { self: Scala2Reader =>
       }
       if (signals.exists(_.kind == "reg") && !root.symbol.asClass.baseClasses.exists(_.fullName == "chisel3.Module"))
         fail("Clocked state requires the implicit clock of Module; explicit RawModule clocks are unsupported")
-      IRModule(module.fullName.stripPrefix("."), parameters, requirements.toList, signals.toList, body ++ memorySteps, source(root.pos))
+      IRModule(module.fullName.stripPrefix("."), parameters, requirements.toList, signals.toList,
+        body ++ memorySteps, source(root.pos), preservedParameters.toList)
     }
   }
 }

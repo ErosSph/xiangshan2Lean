@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "initial_reset": 0,
+      "steps": 130,
+      "status": "PASS",
+      "randomization_disabled_rtl_time_zero_difference_steps": []
+    },
+    {
+      "initial_reset": 1,
+      "steps": 130,
+      "status": "PASS",
+      "randomization_disabled_rtl_time_zero_difference_steps": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "source_sha256": "167006c3f0c5cf10d3136c30371e5579d2141ad704cffc306a41505617a5f615",
+  "profile": "Official firtool --disable-all-randomization; explicit caller-supplied unknown initial state, reset behavior retained.",
+  "time_zero_contract": "Removing CIRCT initializers can change the emitted RTL before its first clock/reset event when reset starts high. The Lean model uses official clk2fflogic level reset semantics and is checked against the original/default RTL at EVERY sampling step. Randomization-disabled RTL is additionally compared after the first active clock edge.",
+  "scope": "Nonzero asynchronous reset value; reset initially high or low, assertion without clock, and stable release. Actual Lean compared with original/default CIRCT RTL plus integer model at every step. No claim of reproducing randomized power-on simulation or a universal initialization equivalence theorem."
+}

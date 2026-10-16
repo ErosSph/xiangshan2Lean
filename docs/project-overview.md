@@ -6,6 +6,8 @@
 
 源码入口目前使用 Chisel 7.3.0、Scala 2.13.15 和 Lean 4.19.0；官方 RTL 参考使用 CIRCT firtool 1.135.0。
 经典 FIRRTL 入口使用独立的 Scala FIRRTL 1.5.6 工具环境，生成的模型同样使用 Lean 4.19.0。
+现代 FIRRTL 入口现已接入 Chisel 7.3 官方展开结果，使用固定 CIRCT 完成规范化，
+再通过 SSA 导入同一个硬件 IR。用法见 [现代入口](modern-firrtl.md)。
 项目还在开发中，当前支持范围和证明范围见下文。
 
 ## 两个入口有什么区别
@@ -159,12 +161,14 @@ python scripts/verify_xiangshan_firrtl.py
 | FIRRTL 错误检测 | 8 类不支持输入、未定义操作和行为故障注入检出 | [契约与故障注入](validation-firrtl-contracts.json) |
 | FIRRTL 端真实香山 v2.1 | RightShift 和 AluDataModule；合计 27,008 周期、162,048 次输出比较 | [香山 FIRRTL 验证](validation-xiangshan-firrtl.json) |
 | 指定配置的两端模型证明 | Counter n=4、RightShift XLEN=64 | [模型桥接证明](validation-firrtl-bridges.json) |
+| Chisel 7.3 现代展开入口 | 9 组配置；18,610 拍、110,424 次输出比较，含原始 L2TlbPrefetch 和 AluDataModule | [现代入口验证](validation-modern-firrtl-7.3.json) |
+| 同源码、同 Chisel 7.3 的模型证明 | Counter n=4，全部初态与任意有限输入序列 | [现代桥接证明](validation-modern-bridge-7.3.json) |
 
 香山 `AluDataModule` 实验包含 10 个子模块、710 个信号，覆盖全部 128 个操作码值；该模块单独比较了 153,600 次输出。
 源码端 RightShift 的 64 位配置采用实际处理器配置，8/32 位是孤立模块的测试变体。
 层次验证使用本地测试顶层，组合未改写的香山移位子模块和 SfenceBundle；不表示验证了上游完整处理器模块。
 经典 FIRRTL 回归包含历史 Chisel 3.5.6 展开产物及新的原语 RTL 对照；香山 FIRRTL 实验使用 v2.1 的 Chisel 3.5.3。
-这些记录不表示现代 Chisel 7.3 FIRRTL 已通过本入口验收。
+上述经典实验与新的 Chisel 7.3 现代入口实验分别记录，不能互相代替。
 
 ## Lean 和原电路的一致性
 
@@ -188,8 +192,10 @@ Lean 类型检查确认生成程序可接受；与官方 RTL 的行为比较确�
 模块内部新建或改变配置、Bundle 独立构造语句和复杂配置计算仍需补齐。
 具体构造和限制见 [支持列表](support-matrix.md)。
 
-FIRRTL 入口支持经典文本版本至 1.1.0，以及旧的无版本头格式；支持常见组合逻辑、聚合展开、多层实例和单时钟同步寄存器。
-现代 FIRRTL 6.x、FIRRTL Mem/SyncReadMem、多时钟、门控时钟、异步复位、BlackBox/ExtModule 和验证语句暂不支持。
+FIRRTL 入口支持经典文本版本至 1.1.0，以及旧的无版本头格式；现代路线主要验收 Chisel 7.3 的 6.0.0 格式。
+支持常见组合逻辑、聚合展开、多层实例和单时钟同步寄存器。
+FIRRTL Mem/SyncReadMem、多时钟、门控时钟、异步复位、BlackBox/ExtModule 和验证语句暂不支持。
+现代路线额外拒绝显式 DontCare/invalidvalue，避免官方规范化过程消除未定义条件。
 由寄存器组成的 FIFO、寄存器文件已有回归，这与直接支持 FIRRTL 存储器不同。
 不支持的写法明确报错；除零、无效 validif 等未定义观察由执行器检查并拒绝。
 
@@ -199,9 +205,10 @@ FIRRTL 入口支持经典文本版本至 1.1.0，以及旧的无版本头格式�
 
 ## 两条路线接下来怎样结合
 
-两端已经共用 IR 和后端，并有指定模型的桥接证明。
-源码端的最新香山实验与 FIRRTL 端的 v2.1 实验使用不同版本，尚未形成同一现代工程的自动双入口证明链。
-后续工作是适配现代 FIRRTL，锁定同一份源码和同一个真实配置，生成参数快照、两端模型和官方 RTL，再明确映射端口、状态及复位并逐模块验证。
+两端已经共用 IR 和后端。现代入口现已对同一份 Chisel 7.3 Counter 源码生成模型，
+并建立四位配置下的任意有限序列模型等价证明；新的香山实验也使用同一锁定的
+Nanhu 工程和真实配置生成官方 RTL。香山本身尚未建立完整的源码/现代入口双向证明链。
+接下来优先补存储器、未定义条件传播和更大的握手队列，再扩大状态及复位对应证明。
 
 对于时序电路，证明需要建立初态或有效复位后的状态对应关系，证明状态对应时输出一致，并证明每拍更新保持对应关系。
 由此可归纳得到任意长度输入序列上的一致性。

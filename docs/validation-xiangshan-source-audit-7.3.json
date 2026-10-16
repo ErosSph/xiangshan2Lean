@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "repository": "OpenXiangShan/XiangShan",
+  "commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2",
+  "url": "https://codeload.github.com/OpenXiangShan/XiangShan/tar.gz/997cd5b35cfbd26586674aa553d0f04b27914cb2",
+  "archive_sha256": "e0f38af477c9fa349f351823e09b6d53e13f4ce1e8cd9caeec8960c1f6975759",
+  "archive_matches_original_fetch": true,
+  "upstream_regular_files": 234,
+  "identical_regular_files": 234,
+  "identical_scala_files": 193,
+  "modified_files": [],
+  "missing_files": [],
+  "additional_files": [],
+  "important_sources": {
+    "src/main/scala/xiangshan/backend/fu/Alu.scala": {
+      "sha256": "3400084dc26d34b2d4ce796f93c80000d12c173746d0d7eba7c47e8f36825fdc",
+      "matches_upstream": true
+    },
+    "src/main/scala/xiangshan/cache/mmu/L2TlbPrefetch.scala": {
+      "sha256": "12262f8f45ea9287fe2d14edfe7b013633031ce4ef8f1b9f106b1beb8b6a35d9",
+      "matches_upstream": true
+    },
+    "src/main/scala/xiangshan/XSCore.scala": {
+      "sha256": "b1c34dede360f505759fa660f7391dff9ed0719cf388bd21840aa7641f55569f",
+      "matches_upstream": true
+    },
+    "src/main/scala/top/Configs.scala": {
+      "sha256": "024ead1b33e816cc23f1466389b5c5711a280095c54e3e2976d35d6ee553b39c",
+      "matches_upstream": true
+    }
+  },
+  "compiled_classes_match_recorded_tests": {
+    "XSAlu": {
+      "xiangshan.backend.fu.AluDataModule": {
+        "expected": "98c1f345f9d8b5954c3f7e86d5047d81b5838cdc2fd697cd359094e9ffa26c3a",
+        "current": "98c1f345f9d8b5954c3f7e86d5047d81b5838cdc2fd697cd359094e9ffa26c3a",
+        "matches": true
+      },
+      "xiangshan.validation.NanhuCoreConfig": {
+        "expected": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762",
+        "current": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762",
+        "matches": true
+      }
+    },
+    "XSPrefetch": {
+      "xiangshan.cache.mmu.L2TlbPrefetch": {
+        "expected": "8229b9101211f07bf5e88581d9cf439abc0addfe4ecbde508bb90e1c81d96568",
+        "current": "8229b9101211f07bf5e88581d9cf439abc0addfe4ecbde508bb90e1c81d96568",
+        "matches": true
+      },
+      "xiangshan.validation.NanhuCoreConfig": {
+        "expected": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762",
+        "current": "2988a00a4c215aa73d9e483cc3be5d6e6ba4e50b27a3528a8794434e50f3a762",
+        "matches": true
+      }
+    }
+  },
+  "local_integration_files": [
+    "build.sbt",
+    "verification/xiangshan/config/reference/Configurations.scala",
+    "reference/src/main/scala/GenerateRTL.scala",
+    "reference/src/main/scala/ElaborateChisel.scala"
+  ],
+  "scope": "Source identity and recorded module/config class identity; not a hardware equivalence proof."
+}

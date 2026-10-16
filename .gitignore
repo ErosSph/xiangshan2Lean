@@ -25,6 +25,10 @@ __pycache__/
 generated/
 .lake/
 dist/
+runs/
 experiments/**/source-and-ir/
 experiments/**/rtl/
 experiments/**/obj_dir/
+experiments/xiangshan-full-7.3/
+experiments/xiangshan-whole-lean-7.3/
+experiments/xiangshan-frontend-debug-7.3/

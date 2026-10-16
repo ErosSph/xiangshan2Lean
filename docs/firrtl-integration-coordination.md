@@ -8,6 +8,9 @@
   ChiselToScalaComponent；使用 writeToolClasspath 和 .cache/tool-classpath.txt。
 - FIRRTL 1.5.6 路线：lean/firrtl/*.scala、scripts/firrtl*.py、verify_firrtl*.py；
   使用 classicFirrtl/writeFirrtlClasspath 和 .cache/firrtl-classpath.txt。
+- 现代展开路线：circt_frontend.py 使用固定 firtool 1.135.0 完成官方规范化，
+  CirctMain 按标量 SSA 导入已有适配器，复用 classicFirrtl 的独立后端 JVM；
+  该 JVM 中不加入 Chisel 7 依赖，也不让经典编译器重新推导现代输入。
 - 两个依赖集合在不同 JVM 中运行。Chisel 7 的 firrtl 序列化类不能与完整
   Scala FIRRTL 1.x 混入同一 classpath。
 - 本次共享后端修改只增加可选工具链/契约/JSON 来源参数，保留原调用方式。
@@ -24,4 +27,8 @@ CounterBridge 和 RightShiftBridge 显式映射端口及状态，在给定配置
 
 真实工程测试另选官方香山 v2.1 的完整依赖与 MinimalConfig(1)，独立记录
 Chisel 3.5.3/Scala 2.12.13/Mill 0.9.8，不冒充此前 nanhu 快照的验证。
-现代 FIRRTL/CHIRRTL 输入目前需新增版本适配，遇到未知版本明确失败。
+现代 FIRRTL/CHIRRTL 已接入 Chisel 7.3 的 6.0.0 格式，输入版本限制为
+2.0.0 到 6.0.0；未知未来版本明确失败。现代路线的香山验证单独记录，
+不覆盖存储器、异步/多时钟、验证语句和显式未知值。
+ModernCounterBridge 对同一份 Chisel 7.3 源码的两条入口建立固定四位配置的
+任意有限序列模型等价证明，仍不是完整编译器正确性证明。

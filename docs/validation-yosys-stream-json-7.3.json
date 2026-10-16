@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "models": [
+    "experiments\\yosys-full-adaptation-7.3\\Counter4\\model\\manifest.json",
+    "experiments\\yosys-full-adaptation-7.3\\Handshake65x3\\model\\manifest.json",
+    "experiments\\yosys-full-adaptation-7.3\\Queue3\\model\\manifest.json",
+    "experiments\\yosys-full-adaptation-7.3\\Signed65\\model\\manifest.json",
+    "experiments\\yosys-full-adaptation-7.3\\SyncQueue3\\model\\manifest.json",
+    "experiments\\yosys-full-adaptation-7.3\\XSAlu\\model\\manifest.json",
+    "experiments\\yosys-full-adaptation-7.3\\XSPrefetch\\model\\manifest.json",
+    "experiments\\yosys-clocks-7.3\\model\\manifest.json",
+    "experiments\\xiangshan-sram-7.3\\SramArray1P\\model\\manifest.json",
+    "experiments\\xiangshan-sram-7.3\\SramArray2P\\model\\manifest.json",
+    "experiments\\yosys-effects-7.3\\Observed\\model\\manifest.json",
+    "experiments\\yosys-effects-7.3\\DisabledCheck\\model\\manifest.json",
+    "experiments\\yosys-stdio-7.3\\model\\manifest.json",
+    "experiments\\yosys-contracts\\MaskedMemory\\model\\manifest.json",
+    "experiments\\yosys-contracts\\PartialInitial\\model\\manifest.json",
+    "experiments\\yosys-contracts\\ExplicitUnknown\\model\\manifest.json"
+  ],
+  "exact_json_models_compared": 16,
+  "scope": "Every JSON value, wire bit ID, connection, initial constraint and retained cell equals existing RTL-checked artifacts after streaming edits. This checks memory layout changes, not whole-chip or universal equivalence."
+}

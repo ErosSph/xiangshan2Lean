@@ -86,6 +86,9 @@ def translate(sources: list[Path], output: Path, module: str | None,
                 "source_sha256": {str(s.resolve()): hashlib.sha256(s.read_bytes()).hexdigest() for s in sources},
                 "compiler_sha256": hashlib.sha256(plugin.read_bytes()).hexdigest(),
                 "lean_checked": check, "evidence": str(log)}
+    annotation_jars = [Path(p) for p in classpath.split(os.pathsep) if Path(p).name == "chisel2lean-annotations.jar"]
+    if annotation_jars:
+        manifest["annotation_sha256"] = hashlib.sha256(annotation_jars[0].read_bytes()).hexdigest()
     (stage / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     output.mkdir(parents=True, exist_ok=True)
     for path in stage.rglob("*"):

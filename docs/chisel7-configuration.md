@@ -18,6 +18,9 @@ Java 17 和 CIRCT firtool 1.135.0。升级前 v0.2 的报告保留为历史记�
 不会将一个选定配置的值硬编码进模型；未使用的 Seq、Option、函数等复杂
 配置字段不进入 Lean Params。
 
+可以在模块构造参数或纯标量 getter 上使用 [`@LeanParam`](lean-param.md)，显式要求保留其符号表达式。
+例如 `@LeanParam def width: Int = p(CoreKey).width` 会沿真实 CDE 查询记录依赖；注解不实现集合配置或条件硬件布局。
+
 例如原始香山代码保持如下声明：
 
 ```scala
@@ -153,8 +156,12 @@ python scripts/verify_xiangshan_config.py --skip-build
 eager 配置 val、递归/重载 helper、动态 Field key、被硬件使用的集合/Option
 配置、配置对象的任意宿主计算。继承的纯配置 getter 使用 `def`。
 原样传递构造配置的子模块和 XSBundle 继承已纳入上述子集。
-模块内改变配置、Vec[Bundle]、Bundle 独立构造语句等仍未支持；
+模块内改变配置、Bundle 独立构造语句等仍未支持；
 不能据此声称已转换整颗香山处理器。
+
+上面的限制针对保留符号参数的源码路线。新增的
+[官方展开入口](modern-firrtl.md) 可由实际 Chisel 工程执行更复杂的配置和 Scala
+构造，再将支持范围内的硬件转成固定配置 Lean 模型；两种能力分别验收。
 
 Lean 类型检查、规格定理和有限 RTL 对照并不构成 Scala/CDE/Chisel 到 Lean
 全过程、所有合法参数和所有输入序列的等价证明。报告保持这一限制为 false。

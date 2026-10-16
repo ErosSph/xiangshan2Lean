@@ -7,7 +7,12 @@ lazy val writeReferenceClasspath = taskKey[File]("Write the independent official
 lazy val writeXiangshanClasspath = taskKey[File]("Write the real XiangShan/CDE elaboration classpath")
 lazy val writeFirrtlClasspath = taskKey[File]("Write the isolated classic FIRRTL reader classpath")
 
+// A plain Scala annotation library; source users need no compiler or macro dependency.
+lazy val leanAnnotations = (project in file("annotations"))
+  .settings(name := "chisel2lean-annotations")
+
 lazy val root = (project in file("."))
+  .dependsOn(leanAnnotations)
   .settings(
     name := "chicala",
     Compile / unmanagedSources ~= (_.filterNot(_.getPath.replace('\\', '/').contains("/lean/firrtl/"))),
@@ -24,12 +29,19 @@ lazy val root = (project in file("."))
       val output = baseDirectory.value / ".cache" / "tool-classpath.txt"
       val jar = (Compile / packageBin).value
       val dependencies = (Compile / dependencyClasspath).value.files
+      val annotationJar = (leanAnnotations / Compile / packageBin).value
+      val annotationDigest = java.security.MessageDigest.getInstance("SHA-256").digest(java.nio.file.Files.readAllBytes(annotationJar.toPath))
+        .map(b => f"${b & 0xff}%02x").mkString
+      val annotationSnapshot = baseDirectory.value / ".cache" / "annotations" / annotationDigest / "chisel2lean-annotations.jar"
+      if (!annotationSnapshot.exists) { IO.createDirectory(annotationSnapshot.getParentFile); IO.copyFile(annotationJar, annotationSnapshot) }
+      val annotationClasses = (leanAnnotations / Compile / classDirectory).value
       val digest = java.security.MessageDigest.getInstance("SHA-256").digest(java.nio.file.Files.readAllBytes(jar.toPath))
         .map(b => f"${b & 0xff}%02x").mkString
       val snapshot = baseDirectory.value / ".cache" / "compiler" / digest / "chicala.jar"
       if (!snapshot.exists) { IO.createDirectory(snapshot.getParentFile); IO.copyFile(jar, snapshot) }
       val temporary = output.getParentFile / "tool-classpath.tmp"
-      IO.write(temporary, (snapshot +: dependencies).map(_.getAbsolutePath).mkString(java.io.File.pathSeparator))
+      IO.write(temporary, (snapshot +: dependencies.map(p => if (p == annotationClasses) annotationSnapshot else p))
+        .map(_.getAbsolutePath).mkString(java.io.File.pathSeparator))
       java.nio.file.Files.move(temporary.toPath, output.toPath, java.nio.file.StandardCopyOption.REPLACE_EXISTING,
         java.nio.file.StandardCopyOption.ATOMIC_MOVE)
       output
@@ -86,7 +98,7 @@ lazy val audit = (project in file("audit"))
   )
 
 lazy val reference = (project in file("reference"))
-  .dependsOn(cdeRuntime)
+  .dependsOn(cdeRuntime, leanAnnotations)
   .settings(
     libraryDependencies += "org.chipsalliance" %% "chisel" % chiselVersion,
     addCompilerPlugin("org.chipsalliance" % "chisel-plugin" % chiselVersion cross CrossVersion.full),
@@ -94,6 +106,7 @@ lazy val reference = (project in file("reference"))
     Compile / unmanagedSourceDirectories += (LocalRootProject / baseDirectory).value / "audit" / "src" / "main" / "scala",
     Compile / unmanagedSourceDirectories += file("tests/fixtures/configuration").getAbsoluteFile,
     Compile / unmanagedSourceDirectories += file("tests/fixtures/aggregate").getAbsoluteFile,
+    Compile / unmanagedSourceDirectories += file("tests/fixtures/leanparam").getAbsoluteFile,
     writeReferenceClasspath := {
       val output = (LocalRootProject / baseDirectory).value / ".cache" / "reference-classpath.txt"
       val paths = (Compile / fullClasspath).value.files
@@ -149,13 +162,14 @@ lazy val xsFudian = (project in file(".cache/xiangshan-build-7.3/fudian"))
   .settings(xsSettings)
   .settings(Compile / unmanagedSourceDirectories := Seq(xsSources("fudian")))
 lazy val xiangshanFramework = (project in file(".cache/xiangshan-build-7.3/xiangshan"))
-  .dependsOn(xsRocket, xsUtility, xsHuancun, xsDifftest, xsFudian)
+  .dependsOn(xsRocket, xsUtility, xsHuancun, xsDifftest, xsFudian, leanAnnotations)
   .settings(xsSettings)
   .settings(
     libraryDependencies ++= Seq("org.scalatest" %% "scalatest" % "3.2.19",
       "io.circe" %% "circe-yaml" % "0.16.1", "io.circe" %% "circe-generic-extras" % "0.14.4"),
     Compile / unmanagedSourceDirectories := Seq(xsSources("xiangshan"), file("verification/xiangshan/config/reference")),
     Compile / unmanagedSources ++= Seq(file("reference/src/main/scala/GenerateRTL.scala").getAbsoluteFile,
+      file("reference/src/main/scala/ElaborateChisel.scala").getAbsoluteFile,
       file("reference/src/main/scala/ConfiguredModule.scala").getAbsoluteFile),
     writeXiangshanClasspath := {
       val output = file(".cache/xiangshan-classpath.txt")
