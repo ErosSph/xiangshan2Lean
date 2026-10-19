@@ -33,13 +33,13 @@ ALLOWED = set(OPS) | {
     'UnaryMinusExpression', 'UnaryPlusExpression'}
 
 
-def parse(source: Path, top: str, mode='combinational', clock=None):
+def parse(source: Path, top: str, mode='combinational', clock=None, *, defines=(), include_dirs=(), preprocessing=None, async_reset=None, bounded_memories=False, bounded_events=False, event_clocks=(), immediate_assertions=False):
     if mode not in ('combinational', 'sequential') or (mode == 'sequential') != bool(clock):
         raise ValueError('Sequential mode requires --clock; combinational mode forbids it')
     sequential = mode == 'sequential'
-    if source.is_dir():
+    if source.is_dir() or defines or include_dirs or preprocessing is not None or async_reset is not None or bounded_memories or bounded_events or event_clocks or immediate_assertions:
         from fourstate_elaborated import parse as parse_elaborated
-        return parse_elaborated(source, top, mode, clock)
+        return parse_elaborated(source, top, mode, clock, defines=defines, include_dirs=include_dirs, preprocessing=preprocessing, async_reset=async_reset, bounded_memories=bounded_memories, bounded_events=bounded_events, event_clocks=event_clocks, immediate_assertions=immediate_assertions)
     allowed = ALLOWED | ({'RegType', 'AlwaysBlock', 'AlwaysFFBlock', 'TimingControlStatement',
         'EventControlWithExpression', 'ParenthesizedEventExpression', 'SignalEventExpression',
         'SequentialBlockStatement', 'ConditionalStatement', 'ElseClause', 'ExpressionStatement',
@@ -47,21 +47,35 @@ def parse(source: Path, top: str, mode='combinational', clock=None):
     s = load_parser()
     source = source.resolve()
     raw = source.read_text(encoding='utf-8')
-    # Directives are rejected before preprocessing, including in inactive branches.
+    # Macro-bearing files go through official preprocessing and symbol binding.
     uncommented = re.sub(r'/\*.*?\*/|//[^\n]*', lambda m: ''.join('\n' if c == '\n' else ' ' for c in m[0]), raw, flags=re.S)
     if '`' in uncommented:
-        offset = uncommented.index('`')
-        line = uncommented.count('\n', 0, offset) + 1
-        column = offset - uncommented.rfind('\n', 0, offset)
-        raise ValueError(f'{source}:{line}:{column}: unsupported preprocessor directive or macro')
+        from fourstate_elaborated import parse as parse_elaborated
+        return parse_elaborated(source, top, mode, clock)
     tree = s.syntax.SyntaxTree.fromFile(str(source))
     sm = tree.sourceManager
     structural, modules_seen = [], []
+    def _syntax_parents(n):
+        parent = n.parent
+        while parent is not None:
+            yield parent
+            parent = parent.parent
     def inspect(n):
         if isinstance(n, s.syntax.SyntaxNode):
             k = str(n.kind).split('.')[-1]
             if k == 'ModuleDeclaration':
                 modules_seen.append(n)
+            if sequential and any(getattr(n, attr, None) is not None for attr in ('label', 'blockName', 'endBlockName')):
+                # Labels and nested scopes belong to slang's bound block AST.
+                structural.append(n)
+            if sequential and (k == 'DataDeclaration' or
+                    (k == 'AssignmentExpression' and str(n.parent.kind).split('.')[-1] != 'ContinuousAssign')):
+                # Let official symbol binding handle local scopes and blocking
+                # order; do not duplicate that environment in the flat parser.
+                if k == 'AssignmentExpression' or any(
+                        str(p.kind).split('.')[-1] in ('AlwaysBlock', 'AlwaysFFBlock')
+                        for p in _syntax_parents(n)):
+                    structural.append(n)
             if ('Generate' in k or k in ('HierarchyInstantiation', 'ParameterDeclaration', 'ParameterPortList', 'LocalParameterDeclaration')):
                 structural.append(n)
             if k in ('MultipleConcatenationExpression', 'UnaryBitwiseAndExpression', 'UnaryBitwiseOrExpression'):
@@ -369,7 +383,9 @@ def parse(source: Path, top: str, mode='combinational', clock=None):
             arg = expr(invocation_argument(n))
             return fit(n, arg, target, effective_signed)
         if k == 'CastExpression':
-            arg = expr(n.right)
+            # A size cast supplies its own width to context-determined operands.
+            # Keep the outer assignment width outside this cast boundary.
+            arg = expr(n.right, natural_width)
             cast = fit(n, arg, natural_width)
             return fit(n, cast, target, effective_signed)
         if k in OPS or k in ARITHMETIC:

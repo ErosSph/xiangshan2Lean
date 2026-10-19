@@ -67,18 +67,18 @@ assert/stop/printf 等尚未纳入本入口的语义范围，给出诊断，不�
 
 ## 验收证据
 
-`python scripts/verify_firrtl_frontend.py` 比较新模型、已有源码模型及已归档的
+`python scripts/verification/two_state/verify_firrtl_frontend.py` 比较新模型、已有源码模型及已归档的
 独立原始 RTL 实验。原语用例另外运行新的官方 FIRRTL→Verilog→Verilator
 路径和独立整数规格：22 个配置，34,155 拍，595,699 次输出比较；其中
 PrimitiveWidths 穷举完整 15 位输入空间的 32,768 种组合。
 详见 [validation-firrtl.json](validation-firrtl.json)。
 
-`python scripts/check_firrtl_contracts.py` 检查不支持结构、非法字符、新文本
+`python scripts/verification/two_state/check_firrtl_contracts.py` 检查不支持结构、非法字符、新文本
 版本、除零、false validif 和行为故障注入。故意把有符号取负输出改成零后，
 模型仍通过类型检查，但行为比较检出错误；生产模型不受改动。
 详见 [validation-firrtl-contracts.json](validation-firrtl-contracts.json)。
 
-`python scripts/verify_firrtl_bridges.py` 重新生成两端模型，并检查：
+`python scripts/verification/two_state/verify_firrtl_bridges.py` 重新生成两端模型，并检查：
 
 - 4 位 Counter：全部初态、所有使能/复位输入，以及任意长度的有限序列。
 - 64 位 RightShift：全部数据位模式、所有六位移位量和两种复位值；同时
@@ -99,7 +99,7 @@ PrimitiveWidths 穷举完整 15 位输入空间的 32,768 种组合。
 python scripts/prepare_xiangshan_firrtl.py
 python scripts/build_xiangshan_firrtl.py --module RightShiftModule
 python scripts/build_xiangshan_firrtl.py --module AluDataModule
-python scripts/verify_xiangshan_firrtl.py
+python scripts/verification/two_state/verify_xiangshan_firrtl.py
 ```
 
 准备与构建需要联网。源码、依赖和工具位于本项目缓存；新增的唯一香山源码

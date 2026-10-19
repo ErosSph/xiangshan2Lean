@@ -1,0 +1,3169 @@
+{
+  "format": "xiangshan-prefetch-fourstate-directed-v1",
+  "task": "F1.2",
+  "base_fixture": "verification/fourstate/xiangshan-prefetch-smoke.json",
+  "f11_root": "experiments/fourstate/pf-smoke/20261017T055729Z-37be4039",
+  "f11_summary_sha256": "54b96902e92e7f70256011e386d809e47c99663129071c53aa43072fcdb271f9",
+  "f11_manifest_sha256": "d064c807030c07513413fc85d9302c07fff3d8a3a3aa53d648aaaa1d4881e1d5",
+  "expectation_basis": "Literal directed preconditions and postconditions derived from actual L2TlbPrefetch RTL control flow; no converter or runtime output is used to generate expectations.",
+  "required_coverage": [
+    "history.slot0.insert",
+    "history.slot1.insert",
+    "history.slot2.insert",
+    "history.slot3.insert",
+    "history.slot0.replace",
+    "nba.old-pending-before-new",
+    "compare.known-equal-reject",
+    "compare.known-unequal-accept",
+    "reset.data-write-and-control-priority",
+    "reset.unreset-data-hold",
+    "stall.all-registers",
+    "clock.no-edge-reset-assert",
+    "reset.synchronous-clear",
+    "clock.no-edge-reset-release",
+    "flush.sfence-fire-input-wrap",
+    "flush.refill-after-clear",
+    "flush.satp-fire-input",
+    "flush.both-sources",
+    "reset.flush-conflict",
+    "unknown.input-valid-x",
+    "unknown.output-ready-x",
+    "unknown.reset-x-else",
+    "unknown.input-valid-z",
+    "unknown.output-ready-z",
+    "unknown.reset-z-else",
+    "unknown.flush-sfence-x",
+    "flush.known-one-masks-sfence-x",
+    "unknown.flush-sfence-z",
+    "flush.known-one-masks-sfence-z",
+    "unknown.flush-satp-x",
+    "flush.known-one-masks-satp-x",
+    "unknown.flush-satp-z",
+    "flush.known-one-masks-satp-z",
+    "history.unknown-valid-x",
+    "compare.known-mismatch-masks-valid-x",
+    "compare.unknown-word-x",
+    "compare.definite-mismatch-overrides-word-x",
+    "history.unknown-valid-z",
+    "compare.known-mismatch-masks-valid-z",
+    "compare.unknown-word-z",
+    "compare.definite-mismatch-overrides-word-z",
+    "history.invalid-masks-unknown-word",
+    "compare.history-low-bits-ignored",
+    "history.unknown-index-0x",
+    "history.unknown-index-1z",
+    "history.unknown-index-xz",
+    "history.unknown-index-zz",
+    "vpn.low-three-ignored",
+    "vpn.carry",
+    "vpn.modulo-overflow",
+    "vpn.low-xz-ignored",
+    "vpn.high-x-produces-x",
+    "vpn.high-z-produces-x",
+    "stall.unknown-data-held"
+  ],
+  "cases": [
+    {
+      "id": "ring",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000000001000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "insert-0",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "1"
+          }
+        },
+        {
+          "name": "insert-1",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000011000",
+            "io_out_ready": "1"
+          }
+        },
+        {
+          "name": "insert-2",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000100000",
+            "io_out_ready": "1"
+          }
+        },
+        {
+          "name": "insert-3",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000101000",
+            "io_out_ready": "1"
+          }
+        },
+        {
+          "name": "insert-0",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000110000",
+            "io_out_ready": "1"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "history.slot0.insert",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Handshake stores the old pending word in this slot and advances the two-bit index.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.next_req": "000000000000000000000001000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000001000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_0": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req"
+          ]
+        },
+        {
+          "id": "history.slot1.insert",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "Handshake stores the old pending word in this slot and advances the two-bit index.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000011000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.next_req": "000000000000000000000011000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_reqs_1": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_1": "1",
+            "L2TlbPrefetch.old_index": "10",
+            "L2TlbPrefetch.next_req": "000000000000000000000100000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_1": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req"
+          ]
+        },
+        {
+          "id": "history.slot2.insert",
+          "cycle": 2,
+          "sampling": "rise",
+          "description": "Handshake stores the old pending word in this slot and advances the two-bit index.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000100000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_index": "10",
+            "L2TlbPrefetch.next_req": "000000000000000000000100000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_reqs_2": "000000000000000000000100000",
+            "L2TlbPrefetch.old_v_2": "1",
+            "L2TlbPrefetch.old_index": "11",
+            "L2TlbPrefetch.next_req": "000000000000000000000101000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_2": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req"
+          ]
+        },
+        {
+          "id": "history.slot3.insert",
+          "cycle": 3,
+          "sampling": "rise",
+          "description": "Handshake stores the old pending word in this slot and advances the two-bit index.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000101000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_index": "11",
+            "L2TlbPrefetch.next_req": "000000000000000000000101000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_reqs_3": "000000000000000000000101000",
+            "L2TlbPrefetch.old_v_3": "1",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.next_req": "000000000000000000000110000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2"
+          ],
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_3": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req"
+          ]
+        },
+        {
+          "id": "history.slot0.replace",
+          "cycle": 4,
+          "sampling": "rise",
+          "description": "Handshake stores the old pending word in this slot and advances the two-bit index.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000110000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.next_req": "000000000000000000000110000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000110000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.next_req": "000000000000000000000111000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_0": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req"
+          ]
+        },
+        {
+          "id": "nba.old-pending-before-new",
+          "cycle": 2,
+          "sampling": "rise",
+          "description": "Simultaneous input and output must not store the newly computed pending word.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000100000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "10",
+            "L2TlbPrefetch.next_req": "000000000000000000000100000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_reqs_2": "000000000000000000000100000",
+            "L2TlbPrefetch.next_req": "000000000000000000000101000",
+            "L2TlbPrefetch.old_index": "11"
+          },
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_2": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.next_req"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dedup",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000000011000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "duplicate",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "different",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000011000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "compare.known-equal-reject",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Matching valid history suppresses valid, while input still updates next_req.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.next_req": "000000000000000000001000000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.v": "0"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.next_req"
+          ],
+          "post_outputs": {
+            "io_out_valid": "0",
+            "io_out_bits_vpn": "000000000000000000000011000"
+          }
+        },
+        {
+          "id": "compare.known-unequal-accept",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "A nonduplicate input is accepted.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000011000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.v": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000100000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.next_req",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reset-data",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "1",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "10",
+        "L2TlbPrefetch.next_req": "10xz10xz10xz10xz10xz10xz10z",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "reset-with-fire-and-input",
+          "inputs": {
+            "reset": "1",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000111000",
+            "io_out_ready": "1"
+          }
+        },
+        {
+          "name": "reset-without-enables",
+          "inputs": {
+            "reset": "1",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "reset.data-write-and-control-priority",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Reset clears control but does not guard history or next_req data writes.",
+          "rising": true,
+          "inputs": {
+            "reset": "1",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000111000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "10",
+            "L2TlbPrefetch.next_req": "10xz10xz10xz10xz10xz10xz10z",
+            "L2TlbPrefetch.v": "1"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_reqs_2": "10xz10xz10xz10xz10xz10xz10z",
+            "L2TlbPrefetch.next_req": "000000000000000000001000000"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_2": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.next_req",
+            "L2TlbPrefetch.old_index"
+          ]
+        },
+        {
+          "id": "reset.unreset-data-hold",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "Without their enables the five unreset data registers retain their previous exact bits.",
+          "rising": true,
+          "inputs": {
+            "reset": "1",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.next_req": "000000000000000000001000000",
+            "L2TlbPrefetch.v": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.v": "0"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.old_v_1",
+            "L2TlbPrefetch.old_v_2",
+            "L2TlbPrefetch.old_v_3",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stall-sync",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "1",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "01",
+        "L2TlbPrefetch.next_req": "000000000000000000001010000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "stall",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "high_reset": "1"
+        },
+        {
+          "name": "reset",
+          "inputs": {
+            "reset": "1",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "high_reset": "0"
+        }
+      ],
+      "checks": [
+        {
+          "id": "stall.all-registers",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Backpressure and no new input hold every original register.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.next_req": "000000000000000000001010000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.next_req": "000000000000000000001010000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.old_v_1",
+            "L2TlbPrefetch.old_v_2",
+            "L2TlbPrefetch.old_v_3",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req",
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "clock.no-edge-reset-assert",
+          "cycle": 0,
+          "sampling": "hold-high",
+          "description": "Asserting synchronous reset at high clock does not clear state.",
+          "rising": false,
+          "inputs": {
+            "reset": "1",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "1"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.old_v_1",
+            "L2TlbPrefetch.old_v_2",
+            "L2TlbPrefetch.old_v_3",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req",
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "reset.synchronous-clear",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "The next rising edge applies the synchronous reset only to control.",
+          "rising": true,
+          "inputs": {
+            "reset": "1",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "1"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.v": "0"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ]
+        },
+        {
+          "id": "clock.no-edge-reset-release",
+          "cycle": 1,
+          "sampling": "hold-high",
+          "description": "Releasing reset at high clock leaves zeroed control unchanged.",
+          "rising": false,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.v": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.v": "0"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.old_v_1",
+            "L2TlbPrefetch.old_v_2",
+            "L2TlbPrefetch.old_v_3",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flush",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000000001000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000000010000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000000011000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000000100000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "1",
+        "L2TlbPrefetch.old_v_2": "1",
+        "L2TlbPrefetch.old_v_3": "1",
+        "L2TlbPrefetch.old_index": "11",
+        "L2TlbPrefetch.next_req": "000000000000000000001010000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "sfence-input-and-fire",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001011000",
+            "io_out_ready": "1"
+          }
+        },
+        {
+          "name": "refill",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001100000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "satp-input-and-fire",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001101000",
+            "io_out_ready": "1"
+          }
+        },
+        {
+          "name": "both-flush",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001110000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "reset-and-flush",
+          "inputs": {
+            "reset": "1",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001111000",
+            "io_out_ready": "1"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "flush.sfence-fire-input-wrap",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "SFENCE clears valid flags but a concurrent fire writes data and advances/wraps the index.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001011000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "11",
+            "L2TlbPrefetch.next_req": "000000000000000000001010000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_reqs_3": "000000000000000000001010000",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.next_req": "000000000000000000001100000"
+          },
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_3": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req",
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "flush.refill-after-clear",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "The first request after clearing history is accepted.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001100000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.old_v_0": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.next_req": "000000000000000000001101000",
+            "L2TlbPrefetch.old_index": "00"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ]
+        },
+        {
+          "id": "flush.satp-fire-input",
+          "cycle": 2,
+          "sampling": "rise",
+          "description": "SATP change has the same flush priority, with the old request still stored.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001101000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.next_req": "000000000000000000001101000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000001101000",
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.next_req": "000000000000000000001110000"
+          },
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_0": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.next_req",
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "flush.both-sources",
+          "cycle": 3,
+          "sampling": "rise",
+          "description": "Both flush sources suppress a new pending valid while retaining data-write behavior.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001110000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.next_req": "000000000000000000001110000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.next_req": "000000000000000000001111000"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.next_req"
+          ]
+        },
+        {
+          "id": "reset.flush-conflict",
+          "cycle": 4,
+          "sampling": "rise",
+          "description": "Reset dominates the index while next_req still takes the enabled input.",
+          "rising": true,
+          "inputs": {
+            "reset": "1",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000001111000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.next_req": "000000000000000000001111000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.next_req": "000000000000000000010000000"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-x",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "01",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "unknown-input-valid",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "x",
+            "io_in_bits_vpn": "000000000000000000000001000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.input-valid-x",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "An unknown procedural enable does not write next_req; the Boolean valid expression becomes X.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "x",
+            "io_in_bits_vpn": "000000000000000000000001000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000001000000",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_index": "01"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000001000000",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "01"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ready-x",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "1",
+        "L2TlbPrefetch.old_v_2": "1",
+        "L2TlbPrefetch.old_v_3": "1",
+        "L2TlbPrefetch.old_index": "01",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-output-ready",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "x"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.output-ready-x",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown fire does not take procedural history/index assignments, but pending valid becomes X.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "x"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.next_req": "000000000000000000001000000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_v_1": "1",
+            "L2TlbPrefetch.old_v_2": "1",
+            "L2TlbPrefetch.old_v_3": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reset-x",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000000001000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-reset-else",
+          "inputs": {
+            "reset": "x",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.reset-x-else",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "A procedural reset X/Z takes else, so a known fire inserts history and increments the index.",
+          "rising": true,
+          "inputs": {
+            "reset": "x",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.next_req": "000000000000000000000001000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000001000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "0"
+          },
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_0": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-z",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "01",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "unknown-input-valid",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "z",
+            "io_in_bits_vpn": "000000000000000000000001000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.input-valid-z",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "An unknown procedural enable does not write next_req; the Boolean valid expression becomes X.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "z",
+            "io_in_bits_vpn": "000000000000000000000001000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000001000000",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_index": "01"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000001000000",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "01"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ready-z",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "1",
+        "L2TlbPrefetch.old_v_2": "1",
+        "L2TlbPrefetch.old_v_3": "1",
+        "L2TlbPrefetch.old_index": "01",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-output-ready",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "z"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.output-ready-z",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown fire does not take procedural history/index assignments, but pending valid becomes X.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "z"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.next_req": "000000000000000000001000000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_v_1": "1",
+            "L2TlbPrefetch.old_v_2": "1",
+            "L2TlbPrefetch.old_v_3": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reset-z",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000000001000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-reset-else",
+          "inputs": {
+            "reset": "z",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.reset-z-else",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "A procedural reset X/Z takes else, so a known fire inserts history and increments the index.",
+          "rising": true,
+          "inputs": {
+            "reset": "z",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "00",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.next_req": "000000000000000000000001000"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000001000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_index": "01",
+            "L2TlbPrefetch.v": "0"
+          },
+          "copy_old_state": {
+            "L2TlbPrefetch.old_reqs_0": "L2TlbPrefetch.next_req"
+          },
+          "changed_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fl-sfence-x",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "1",
+        "L2TlbPrefetch.old_v_2": "1",
+        "L2TlbPrefetch.old_v_3": "1",
+        "L2TlbPrefetch.old_index": "10",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-flush",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "x",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "known-one-dominates",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "x",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.flush-sfence-x",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown flush contaminates all currently valid flags and the pending valid.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "x",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_v_1": "1",
+            "L2TlbPrefetch.old_v_2": "1",
+            "L2TlbPrefetch.old_v_3": "1",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.old_v_1": "x",
+            "L2TlbPrefetch.old_v_2": "x",
+            "L2TlbPrefetch.old_v_3": "x",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.old_v_1",
+            "L2TlbPrefetch.old_v_2",
+            "L2TlbPrefetch.old_v_3",
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "flush.known-one-masks-sfence-x",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "A known one on the other flush input dominates X/Z and clears flags deterministically.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "x",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fl-sfence-z",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "1",
+        "L2TlbPrefetch.old_v_2": "1",
+        "L2TlbPrefetch.old_v_3": "1",
+        "L2TlbPrefetch.old_index": "10",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-flush",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "z",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "known-one-dominates",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "z",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.flush-sfence-z",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown flush contaminates all currently valid flags and the pending valid.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "z",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_v_1": "1",
+            "L2TlbPrefetch.old_v_2": "1",
+            "L2TlbPrefetch.old_v_3": "1",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.old_v_1": "x",
+            "L2TlbPrefetch.old_v_2": "x",
+            "L2TlbPrefetch.old_v_3": "x",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.old_v_1",
+            "L2TlbPrefetch.old_v_2",
+            "L2TlbPrefetch.old_v_3",
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "flush.known-one-masks-sfence-z",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "A known one on the other flush input dominates X/Z and clears flags deterministically.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "z",
+            "io_csr_satp_changed": "1",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fl-satp-x",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "1",
+        "L2TlbPrefetch.old_v_2": "1",
+        "L2TlbPrefetch.old_v_3": "1",
+        "L2TlbPrefetch.old_index": "10",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-flush",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "x",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "known-one-dominates",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "x",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.flush-satp-x",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown flush contaminates all currently valid flags and the pending valid.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "x",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_v_1": "1",
+            "L2TlbPrefetch.old_v_2": "1",
+            "L2TlbPrefetch.old_v_3": "1",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.old_v_1": "x",
+            "L2TlbPrefetch.old_v_2": "x",
+            "L2TlbPrefetch.old_v_3": "x",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.old_v_1",
+            "L2TlbPrefetch.old_v_2",
+            "L2TlbPrefetch.old_v_3",
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "flush.known-one-masks-satp-x",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "A known one on the other flush input dominates X/Z and clears flags deterministically.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "x",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fl-satp-z",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "1",
+        "L2TlbPrefetch.old_v_2": "1",
+        "L2TlbPrefetch.old_v_3": "1",
+        "L2TlbPrefetch.old_index": "10",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-flush",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "z",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "known-one-dominates",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "z",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "unknown.flush-satp-z",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown flush contaminates all currently valid flags and the pending valid.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "z",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.old_v_1": "1",
+            "L2TlbPrefetch.old_v_2": "1",
+            "L2TlbPrefetch.old_v_3": "1",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.old_v_1": "x",
+            "L2TlbPrefetch.old_v_2": "x",
+            "L2TlbPrefetch.old_v_3": "x",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.old_v_1",
+            "L2TlbPrefetch.old_v_2",
+            "L2TlbPrefetch.old_v_3",
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "flush.known-one-masks-satp-z",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "A known one on the other flush input dominates X/Z and clears flags deterministically.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "1",
+            "io_csr_satp_changed": "z",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.v": "x",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_index": "10"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hist-v-x",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000000011000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "x",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "equal-with-unknown-valid",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "unequal-masks-unknown-valid",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000011000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "history.unknown-valid-x",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "A matching history word with X/Z valid makes duplicate detection and output valid X.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.v": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.v": "x"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "compare.known-mismatch-masks-valid-x",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "A definite word mismatch masks the unknown valid bit and accepts the input.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000011000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.v": "x"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000100000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hist-word-x",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "x00000000000000000000011000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "uncertain-equality",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "definite-mismatch",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000001000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "compare.unknown-word-x",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "With all known compared bits equal, the unknown history MSB causes equality X.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "x00000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.v": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.v": "x"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "compare.definite-mismatch-overrides-word-x",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "A known low compared bit differs, so equality is false despite the unknown MSB.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000001000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "x00000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.v": "x"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000010000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hist-v-z",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000000011000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "z",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "equal-with-unknown-valid",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "unequal-masks-unknown-valid",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000011000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "history.unknown-valid-z",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "A matching history word with X/Z valid makes duplicate detection and output valid X.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "z",
+            "L2TlbPrefetch.v": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.v": "x"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "compare.known-mismatch-masks-valid-z",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "A definite word mismatch masks the unknown valid bit and accepts the input.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000011000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.v": "x"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000100000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hist-word-z",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "z00000000000000000000011000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "uncertain-equality",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "definite-mismatch",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000001000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "compare.unknown-word-z",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "With all known compared bits equal, the unknown history MSB causes equality X.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "z00000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.v": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.v": "x"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        },
+        {
+          "id": "compare.definite-mismatch-overrides-word-z",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "A known low compared bit differs, so equality is false despite the unknown MSB.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000001000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "z00000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.v": "x"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000010000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hist-disabled",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "xzxzxzxzxzxzxzxzxzxzxzxzxzx",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000000001000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "unknown-history-invalid",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "history.invalid-masks-unknown-word",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "An invalid history slot cannot veto input even when its compared word is all X/Z.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "xzxzxzxzxzxzxzxzxzxzxzxzxzx",
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.v": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hist-low-xz",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000000011xz1",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "1",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "ignored-low-history-bits",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "compare.history-low-bits-ignored",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "History comparison reads bits 26:3; low X/Z bits do not prevent a definite duplicate.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_reqs_0": "000000000000000000000011xz1",
+            "L2TlbPrefetch.old_v_0": "1",
+            "L2TlbPrefetch.v": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.v": "0"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.next_req"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "idx-0x",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "0x",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-index-fire",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "history.unknown-index-0x",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown selection does not write any data slot; valid decoding and index arithmetic retain exact four-state behavior.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "0x",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_index": "xx",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.old_v_1": "x",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "idx-1z",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "1z",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-index-fire",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "history.unknown-index-1z",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown selection does not write any data slot; valid decoding and index arithmetic retain exact four-state behavior.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "1z",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_index": "xx",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "x",
+            "L2TlbPrefetch.old_v_3": "x"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "idx-xz",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "xz",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-index-fire",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "history.unknown-index-xz",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown selection does not write any data slot; valid decoding and index arithmetic retain exact four-state behavior.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "xz",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_index": "xx",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.old_v_1": "x",
+            "L2TlbPrefetch.old_v_2": "x",
+            "L2TlbPrefetch.old_v_3": "x"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "idx-zz",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "zz",
+        "L2TlbPrefetch.next_req": "000000000000000000001000000",
+        "L2TlbPrefetch.v": "1"
+      },
+      "cycles": [
+        {
+          "name": "unknown-index-fire",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "history.unknown-index-zz",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Unknown selection does not write any data slot; valid decoding and index arithmetic retain exact four-state behavior.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "1"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.old_index": "zz",
+            "L2TlbPrefetch.v": "1",
+            "L2TlbPrefetch.old_v_0": "0",
+            "L2TlbPrefetch.old_v_1": "0",
+            "L2TlbPrefetch.old_v_2": "0",
+            "L2TlbPrefetch.old_v_3": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.old_index": "xx",
+            "L2TlbPrefetch.v": "0",
+            "L2TlbPrefetch.old_v_0": "x",
+            "L2TlbPrefetch.old_v_1": "x",
+            "L2TlbPrefetch.old_v_2": "x",
+            "L2TlbPrefetch.old_v_3": "x"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.next_req"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vpn-arith",
+      "initial": {
+        "L2TlbPrefetch.old_reqs_0": "000000000000000000001000000",
+        "L2TlbPrefetch.old_reqs_1": "000000000000000000001001000",
+        "L2TlbPrefetch.old_reqs_2": "000000000000000000001010000",
+        "L2TlbPrefetch.old_reqs_3": "000000000000000000001011000",
+        "L2TlbPrefetch.old_v_0": "0",
+        "L2TlbPrefetch.old_v_1": "0",
+        "L2TlbPrefetch.old_v_2": "0",
+        "L2TlbPrefetch.old_v_3": "0",
+        "L2TlbPrefetch.old_index": "00",
+        "L2TlbPrefetch.next_req": "000000000000000000000000000",
+        "L2TlbPrefetch.v": "0"
+      },
+      "cycles": [
+        {
+          "name": "low-three-ignored",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000000111",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "carry",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000011111111111",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "overflow",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "111111111111111111111111111",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "low-xz-ignored",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010xz1",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "x-in-high-operand",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "x00000000000000000000010000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "z-in-high-operand",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "z00000000000000000000010000",
+            "io_out_ready": "0"
+          }
+        },
+        {
+          "name": "hold-unknown-result",
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "id": "vpn.low-three-ignored",
+          "cycle": 0,
+          "sampling": "rise",
+          "description": "Check an independently specified 24-bit increment and concatenated three zero low bits.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000000111",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000000000",
+            "L2TlbPrefetch.old_v_0": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000001000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.next_req"
+          ],
+          "post_outputs": {
+            "io_out_valid": "1",
+            "io_out_bits_vpn": "000000000000000000000001000"
+          }
+        },
+        {
+          "id": "vpn.carry",
+          "cycle": 1,
+          "sampling": "rise",
+          "description": "Check an independently specified 24-bit increment and concatenated three zero low bits.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000011111111111",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000001000",
+            "L2TlbPrefetch.old_v_0": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000100000000000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.next_req"
+          ],
+          "post_outputs": {
+            "io_out_valid": "1",
+            "io_out_bits_vpn": "000000000000000100000000000"
+          }
+        },
+        {
+          "id": "vpn.modulo-overflow",
+          "cycle": 2,
+          "sampling": "rise",
+          "description": "Check an independently specified 24-bit increment and concatenated three zero low bits.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "111111111111111111111111111",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.next_req": "000000000000000100000000000",
+            "L2TlbPrefetch.old_v_0": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000000000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.next_req"
+          ],
+          "post_outputs": {
+            "io_out_valid": "1",
+            "io_out_bits_vpn": "000000000000000000000000000"
+          }
+        },
+        {
+          "id": "vpn.low-xz-ignored",
+          "cycle": 3,
+          "sampling": "rise",
+          "description": "Check an independently specified 24-bit increment and concatenated three zero low bits.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "000000000000000000000010xz1",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000000000",
+            "L2TlbPrefetch.old_v_0": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.next_req"
+          ],
+          "post_outputs": {
+            "io_out_valid": "1",
+            "io_out_bits_vpn": "000000000000000000000011000"
+          }
+        },
+        {
+          "id": "vpn.high-x-produces-x",
+          "cycle": 4,
+          "sampling": "rise",
+          "description": "Check an independently specified 24-bit increment and concatenated three zero low bits.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "x00000000000000000000010000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.next_req": "000000000000000000000011000",
+            "L2TlbPrefetch.old_v_0": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "xxxxxxxxxxxxxxxxxxxxxxxx000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "changed_states": [
+            "L2TlbPrefetch.next_req"
+          ],
+          "post_outputs": {
+            "io_out_valid": "1",
+            "io_out_bits_vpn": "xxxxxxxxxxxxxxxxxxxxxxxx000"
+          }
+        },
+        {
+          "id": "vpn.high-z-produces-x",
+          "cycle": 5,
+          "sampling": "rise",
+          "description": "Check an independently specified 24-bit increment and concatenated three zero low bits.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "1",
+            "io_in_bits_vpn": "z00000000000000000000010000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.next_req": "xxxxxxxxxxxxxxxxxxxxxxxx000",
+            "L2TlbPrefetch.old_v_0": "0"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "xxxxxxxxxxxxxxxxxxxxxxxx000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3"
+          ],
+          "post_outputs": {
+            "io_out_valid": "1",
+            "io_out_bits_vpn": "xxxxxxxxxxxxxxxxxxxxxxxx000"
+          }
+        },
+        {
+          "id": "stall.unknown-data-held",
+          "cycle": 6,
+          "sampling": "rise",
+          "description": "No new valid input and backpressure hold the unknown pending data exactly.",
+          "rising": true,
+          "inputs": {
+            "reset": "0",
+            "io_sfence_valid": "0",
+            "io_csr_satp_changed": "0",
+            "io_in_valid": "0",
+            "io_in_bits_vpn": "000000000000000000000000000",
+            "io_out_ready": "0"
+          },
+          "pre_states": {
+            "L2TlbPrefetch.next_req": "xxxxxxxxxxxxxxxxxxxxxxxx000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "post_states": {
+            "L2TlbPrefetch.next_req": "xxxxxxxxxxxxxxxxxxxxxxxx000",
+            "L2TlbPrefetch.v": "1"
+          },
+          "hold_states": [
+            "L2TlbPrefetch.old_reqs_0",
+            "L2TlbPrefetch.old_reqs_1",
+            "L2TlbPrefetch.old_reqs_2",
+            "L2TlbPrefetch.old_reqs_3",
+            "L2TlbPrefetch.old_v_0",
+            "L2TlbPrefetch.old_v_1",
+            "L2TlbPrefetch.old_v_2",
+            "L2TlbPrefetch.old_v_3",
+            "L2TlbPrefetch.old_index",
+            "L2TlbPrefetch.next_req",
+            "L2TlbPrefetch.v"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -121,9 +121,9 @@ python scripts/yosys_simulate.py experiments/yosys-7.3/Queue3/model/Yosys/Queue3
 
 ```powershell
 python scripts/fetch_xiangshan_dependencies.py
-python scripts/verify_yosys.py
-python scripts/check_yosys_contracts.py
-python scripts/verify_yosys_proof.py
+python scripts/verification/two_state/verify_yosys.py
+python scripts/verification/two_state/check_yosys_contracts.py
+python scripts/verification/two_state/verify_yosys_proof.py
 ```
 
 行为比较需要现有 Verilator、C++ 编译器和 Make。实验重新执行官方 Chisel 展开和 RTL，

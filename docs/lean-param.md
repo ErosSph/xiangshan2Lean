@@ -55,7 +55,7 @@ python scripts/chisel2lean.py examples/leanparam/Counter.scala --module example.
 验证命令：
 
 ```powershell
-python scripts/verify_leanparam.py
+python scripts/verification/two_state/verify_leanparam.py
 ```
 
 该命令实际运行 Lean 和独立的官方 Chisel RTL，并与整数规格比较，同时检查参数追踪和拒绝诊断。

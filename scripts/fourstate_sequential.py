@@ -15,6 +15,9 @@ def state_ports(mapping):
 
 
 def validate(mapping, trace, initial):
+    if 'events' in mapping:
+        from fourstate_events import validate as validate_events
+        return validate_events(mapping, trace, initial)
     from fourstate_simulate import encode_trace
     states = mapping['states']
     if not isinstance(initial, dict) or set(initial) != {p['name'] for p in states}:
@@ -108,6 +111,12 @@ def main (args : List String) : IO Unit := do
 
 
 def simulate(mapping, ir_path, trace, initial, evidence):
+    if mapping.get('events', {}).get('format') == 'fourstate-bounded-events-v1':
+        from fourstate_bounded_events import simulate as simulate_bounded
+        return simulate_bounded(mapping,ir_path,trace,initial,evidence)
+    if 'events' in mapping:
+        from fourstate_events import simulate as simulate_events
+        return simulate_events(mapping, ir_path, trace, initial, evidence)
     from fourstate_simulate import decode
     encoded, encoded_initial = validate(mapping, trace, initial)
     evidence = fresh_directory(evidence)

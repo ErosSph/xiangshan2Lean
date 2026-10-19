@@ -1,0 +1,37 @@
+{
+  "format": "xiangshan-prefetch-fourstate-faults-v1",
+  "task": "F1.3",
+  "directed_fixture": "verification/fourstate/xiangshan-prefetch-directed.json",
+  "f12_root": "experiments/fourstate/pf-dir/20261017T061201Z-360f26ee",
+  "f12_summary_sha256": "2e355fb318320532210913441bb53bba5810f2ca518b4ebf4d9f3a443020282f",
+  "comparison_exit_codes": {"match": 0, "execution_or_contract_error": 1, "three_way_mismatch": 2},
+  "faults": [
+    {
+      "id": "output-bit",
+      "category": "output",
+      "case": "ring",
+      "target": "io_out_valid",
+      "rail": "value",
+      "operation": "xor-low-bit",
+      "expected_first": {"sample": 0, "cycle": 0, "sampling": "fall", "phase": "pre", "group": "outputs", "name": "io_out_valid", "bit": 0, "reference": "1", "encoded": "0", "lean": "1"}
+    },
+    {
+      "id": "hidden-state-bit",
+      "category": "state",
+      "case": "ring",
+      "target": "L2TlbPrefetch.old_reqs_2",
+      "rail": "next_value",
+      "operation": "xor-low-bit",
+      "expected_first": {"sample": 3, "cycle": 0, "sampling": "rise", "phase": "post", "group": "states", "name": "L2TlbPrefetch.old_reqs_2", "bit": 0, "reference": "0", "encoded": "1", "lean": "0"}
+    },
+    {
+      "id": "reachable-x-to-z",
+      "category": "xz",
+      "case": "vpn-arith",
+      "target": "io_out_bits_vpn",
+      "rail": "value",
+      "operation": "xor-tag",
+      "expected_first": {"sample": 23, "cycle": 4, "sampling": "rise", "phase": "post", "group": "outputs", "name": "io_out_bits_vpn", "bit": 26, "reference": "x", "encoded": "z", "lean": "x"}
+    }
+  ]
+}

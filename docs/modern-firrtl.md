@@ -89,9 +89,9 @@ python scripts/elaborate_chisel.py --module my.ProjectModule --constructor const
 
 ```powershell
 python scripts/fetch_xiangshan_dependencies.py
-python scripts/verify_modern_firrtl.py
-python scripts/check_circt_contracts.py
-python scripts/verify_modern_bridge.py
+python scripts/verification/two_state/verify_modern_firrtl.py
+python scripts/verification/two_state/check_circt_contracts.py
+python scripts/verification/two_state/verify_modern_bridge.py
 ```
 
 行为结果见 [现代入口验证](validation-modern-firrtl-7.3.json)，

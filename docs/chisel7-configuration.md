@@ -48,7 +48,7 @@ IR 的 `configuration` 字段记录配置根、singleton Field key、字段路�
 
 ```powershell
 python scripts/bootstrap.py --sbt --lean --firtool
-python scripts/verify_xiangshan_config.py
+python scripts/verification/two_state/verify_xiangshan_config.py
 ```
 
 该命令下载锁定的完整香山、Rocket Chip、CDE、HuanCun、Utility、Difftest、
@@ -121,8 +121,8 @@ Bundle 构造体中的 `require`、连接等独立语句目前明确拒绝；参
 回归同时包含算术位宽和条件位宽，以及相同类型 Bundle 的多个配置实例。
 
 ```powershell
-python scripts/verify_configuration.py
-python scripts/verify_xiangshan_hierarchy.py
+python scripts/verification/two_state/verify_configuration.py
+python scripts/verification/two_state/verify_xiangshan_hierarchy.py
 ```
 
 第二条使用本地测试顶层组合原始 `LeftShiftModule`、`RightShiftModule`，
@@ -141,9 +141,9 @@ python scripts/verify_xiangshan_hierarchy.py
 ## 通用回归与限制
 
 ```powershell
-python scripts/validate.py
-python scripts/verify_configuration.py
-python scripts/verify_xiangshan_config.py --skip-build
+python scripts/verification/two_state/validate.py
+python scripts/verification/two_state/verify_configuration.py
+python scripts/verification/two_state/verify_xiangshan_config.py --skip-build
 ```
 
 通用配置回归涵盖继承寄存器、trait 连接优先级、getter 覆盖、带参/无参 getter、

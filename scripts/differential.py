@@ -210,6 +210,7 @@ def fingerprint(ir_path, parameters):
              ROOT / "reference" / "src" / "main" / "scala" / "GenerateRTL.scala"}
     files.update(Path(s["source"]["file"]) for s in ir["signals"])
     files.update(ROOT / "scripts" / name for name in ["differential.py", "simulate.py", "rtl.py", "common.py"])
+    files.add(ROOT / "python/chisel2lean4/runtimes/parameterized.py")
     for path in sorted(files):
         digest.update(str(path.resolve()).encode())
         digest.update(path.read_bytes())

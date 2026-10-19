@@ -3,6 +3,14 @@ from __future__ import annotations
 
 
 def encode(ir):
+    if ir['format'].endswith('-v9'):
+        raise ValueError('Private extended v9 requires the explicit encode_extended entry')
+    if ir['format'].endswith('-v8'):
+        raise ValueError('Private eventful v8 requires the explicit encode_eventful entry')
+    if ir['format'].endswith('-v7'):
+        raise ValueError('Private scalable v7 requires the explicit encode_scalable entry')
+    if ir['format'].endswith('-v6'):
+        raise ValueError('Compact v6 requires explicit private small-model lowering before encoding')
     sequential = ir.get('mode') == 'sequential'
     hierarchical = ir['format'].endswith(('v4', 'v5'))
     clocks = set(ir.get('clock_signals', [ir.get('clock')])) if sequential else set()
@@ -47,7 +55,22 @@ def encode(ir):
         used.update(node_pairs[node['id']])
     top = ir['top'] + '__fourstate'
     ports = [x for x in signals.values() if x['direction'] != 'internal']
+    monitors = [dict(name=n, width=1, tag=fresh('c2l4_monitor'+str(i)+'_tag'),
+                     value=fresh('c2l4_monitor'+str(i)+'_value'))
+                for i,n in enumerate(ir.get('events', {}).get('monitors', []))]
     extra_ports = [r[k] for r in states for k in ('current_tag', 'current_value', 'next_tag', 'next_value')]
+    extra_ports += [m[k] for m in monitors for k in ('tag', 'value')]
+    assertions=[]
+    if ir.get('assertions'):
+        from fourstate_assertions import FIELDS
+        for i,a in enumerate(ir['assertions']):
+            entry=dict(a)
+            for key in FIELDS:entry[key]=fresh(f'c2l4_assert{i}_'+key)
+            if 'arguments' in a:
+                entry['arguments']=[dict(x,tag=fresh(f'c2l4_assert{i}_arg{j}_tag'),value=fresh(f'c2l4_assert{i}_arg{j}_value')) for j,x in enumerate(a['arguments'])]
+            assertions.append(entry)
+        extra_ports += [a[k] for a in assertions for k in FIELDS]
+        extra_ports += [v[k] for a in assertions for v in a.get('arguments',[]) for k in ('tag','value')]
     lines = ['module ' + top + '(' + ', '.join([p for x in ports for p in pairs[x['name']]] + extra_ports) + ');']
     for x in signals.values():
         declaration = 'wire' if x['direction'] == 'internal' else x['direction'] + ' wire'
@@ -57,8 +80,19 @@ def encode(ir):
                   f"output wire [{r['width']-1}:0] {r['next_tag']}, {r['next_value']};",
                   f"assign {pairs[r['name']][0]} = {r['current_tag']};",
                   f"assign {pairs[r['name']][1]} = {r['current_value']};"]
+    for m in monitors:
+        lines.append(f"output wire {m['tag']}, {m['value']};")
+        lines.extend(f"assign {m[k]} = {pairs[m['name']][i]};" for i,k in enumerate(('tag','value')))
+    for a in assertions:
+        lines.append('output wire '+', '.join(a[k] for k in FIELDS)+';')
+        for arg in a.get('arguments',[]):lines.append(f'output wire [{arg["width"]-1}:0] {arg["tag"]}, {arg["value"]};')
     for n in ir['nodes']:
         lines.append(f"wire [{n['width']-1}:0] " + ', '.join(node_pairs[n['id']]) + ';')
+    for a in assertions:
+        for key,value in zip(FIELDS,(*node_pairs[a['enable_node']],*node_pairs[a['pass_node']])):
+            lines.append(f'assign {a[key]} = {value};')
+        for arg in a.get('arguments',[]):
+            for key,value in zip(('tag','value'),node_pairs[arg['node']]):lines.append(f'assign {arg[key]} = {value};')
     for n in ir['nodes']:
         op, w = n['op'], n['width']
         args = [node_pairs[i] for i in n['args']]
@@ -105,6 +139,10 @@ def encode(ir):
             else:
                 zero, one = f'(~(|({at} | {av})))', f'(|(~{at} & {av}))'
             t, v = f'~({zero} | {one})', one
+        elif op in ('reduce_xor','reduce_xnor'):
+            at,av=args[0];unknown=f'(|{at})';parity=f'(^{av})'
+            if op=='reduce_xnor':parity=f'~{parity}'
+            t,v=unknown,f'(~{unknown} & {parity})'
         elif op == 'not':
             a, b = args[0]; t, v = a, f'(~{a} & ~{b})'
         elif op in ('logical_not', 'logical_and', 'logical_or'):
@@ -151,6 +189,24 @@ def encode(ir):
                 calculation = f'({av} {"+" if op == "add" else "-"} {bv})'
             t = f'({unknown} ? {w}\'b' + '1' * w + f' : {w}\'b0)'
             v = f'({unknown} ? {w}\'b0 : {calculation})'
+        elif op=='mod':
+            at,av=args[0];bt,bv=args[1]
+            bad=f'((|{at}) | (|{bt}) | ({bv}==0))'
+            denominator=f'({bad}?{w}\'d1:{bv})'
+            expr=f'({av} % {denominator})'
+            # Use the existing unsigned-remainder backend operation. Magnitudes
+            # fit in w unsigned bits, including the minimum signed value. Restore
+            # the dividend sign after remainder; protect the actual denominator.
+            # This also isolates 1 % -1 from unsigned ternary context propagation.
+            calculated=fresh(node_pairs[n['id']][1]+'_remainder')
+            if n['signed']:
+                magnitude_a=fresh(calculated+'_a');magnitude_b=fresh(calculated+'_b');magnitude_r=fresh(calculated+'_r')
+                lines += [f'wire [{w-1}:0] {magnitude_a}={av}[{w-1}]?(~{av}+{w}\'d1):{av};',
+                    f'wire [{w-1}:0] {magnitude_b}={bv}[{w-1}]?(~{bv}+{w}\'d1):{bv};',
+                    f'wire [{w-1}:0] {magnitude_r}={magnitude_a}%({bad}?{w}\'d1:{magnitude_b});']
+                expr=f'({av}[{w-1}]?(~{magnitude_r}+{w}\'d1):{magnitude_r})'
+            lines.append(f'wire [{w-1}:0] {calculated}={expr};')
+            t,v=f'({bad}?{w}\'b'+('1'*w)+f':{w}\'b0)',f'({bad}?{w}\'b0:{calculated})'
         elif op in ('shl', 'shr', 'ashl', 'ashr'):
             at, av = args[0]; bt, bv = args[1]
             unknown_amount = f'(|{bt})'
@@ -186,8 +242,11 @@ def encode(ir):
             v = f'((~{ct} & {cv}) ? {av} : {bv})'
         elif op == 'mux':
             ct, cv = args[0]; at, av = args[1]; bt, bv = args[2]
-            same = f'(~({at} ^ {bt}) & ~({av} ^ {bv}))'
-            t = f'({ct} ? (~{same} | {at}) : ({cv} ? {at} : {bt}))'
+            # IEEE 1800-2017 11.4.11 / Table 11-20: an ambiguous
+            # predicate preserves only equal *known* bits. Z/Z merges to X;
+            # case equality of the dual rails is not logical equivalence.
+            same = f'(~({at} | {bt} | ({av} ^ {bv})))'
+            t = f'({ct} ? ~{same} : ({cv} ? {at} : {bt}))'
             v = f'({ct} ? ({same} & {av}) : ({cv} ? {av} : {bv}))'
         else:
             raise ValueError('Unsupported four-state IR operation: ' + op)
@@ -213,8 +272,17 @@ def encode(ir):
         mapping['ports'].append(p)
     if sequential:
         mapping.update(clock=ir['clock'], states=states)
-        clock_entry = dict(next(x for x in ir['signals'] if x['name'] == ir.get('clock_signal', ir['clock'])), role='clock')
-        if hierarchical:
-            clock_entry['name'] = clock_entry['port_name']
-        mapping['ports'].append(clock_entry)
+        if 'memories' in ir:
+            mapping['memories'] = ir['memories']
+        if 'events' in ir:
+            mapping['events'] = ir['events']
+        if monitors:
+            mapping['monitors'] = monitors
+        if assertions:
+            mapping['assertions'] = assertions
+        if 'bounded_events' not in ir.get('capabilities', []):
+            clock_entry = dict(next(x for x in ir['signals'] if x['name'] == ir.get('clock_signal', ir['clock'])), role='clock')
+            if hierarchical:
+                clock_entry['name'] = clock_entry['port_name']
+            mapping['ports'].append(clock_entry)
     return '\n'.join(lines) + '\n', mapping

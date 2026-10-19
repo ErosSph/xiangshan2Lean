@@ -28,7 +28,7 @@ python scripts/lower_xiangshan.py <展开目录>/summary.json --initialization c
 python scripts/bootstrap_native_yosys.py
 python scripts/bootstrap_json_stream.py
 python scripts/convert_xiangshan.py <RTL降低目录>/summary.json
-python scripts/audit_xiangshan.py <展开目录>/summary.json --lowering <RTL降低目录>/summary.json --conversion <转换目录>/summary.json
+python scripts/verification/two_state/audit_xiangshan.py <展开目录>/summary.json --lowering <RTL降低目录>/summary.json --conversion <转换目录>/summary.json
 ```
 
 每一步保留来源哈希、命令和日志。后一步要求前一步完整成功。
@@ -100,7 +100,7 @@ python scripts/build_lean_table_runner.py --out experiments/lean-table-native-bo
 python scripts/yosys_simulate.py generated/xiangshan-whole-bounded/XiangShan/Whole.table.json --request request.json --native-runner experiments/lean-table-native-bounded-v2-7.3
 ```
 
-整颗测试入口为 `scripts/verify_xiangshan_whole.py`。它复制并核对原始 RTL，再执行独立 Verilator 对照；
+整颗测试入口为 `scripts/verification/two_state/verify_xiangshan_whole.py`。它复制并核对原始 RTL，再执行独立 Verilator 对照；
 当前准备的场景是复位、JTAG 时钟、外部总线停顿和地址属性查询，不等于完整程序运行验收。
 
 完整验收需要：整个顶层生成并通过 Lean 编译；存储器、时钟、复位和外部边界均有明确语义；

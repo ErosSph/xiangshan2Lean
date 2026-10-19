@@ -121,9 +121,9 @@ FIRRTL 入口使用官方 Scala FIRRTL 库处理位宽、聚合展开和条件�
 源码与配置验证：
 
 ```powershell
-python scripts/validate.py
-python scripts/verify_configuration.py
-python scripts/verify_xiangshan_config.py
+python scripts/verification/two_state/validate.py
+python scripts/verification/two_state/verify_configuration.py
+python scripts/verification/two_state/verify_xiangshan_config.py
 ```
 
 分别检查通用模块、配置与继承，以及真实香山 `RightShiftModule`。
@@ -133,9 +133,9 @@ RTL 仿真还需要 Verilator、C++ 编译器和 Make。
 经典 FIRRTL 的行为回归、错误检测和两端模型证明：
 
 ```powershell
-python scripts/verify_firrtl_frontend.py
-python scripts/check_firrtl_contracts.py
-python scripts/verify_firrtl_bridges.py
+python scripts/verification/two_state/verify_firrtl_frontend.py
+python scripts/verification/two_state/check_firrtl_contracts.py
+python scripts/verification/two_state/verify_firrtl_bridges.py
 ```
 
 复现完整香山 v2.1 工程的 FIRRTL 实验：
@@ -144,7 +144,7 @@ python scripts/verify_firrtl_bridges.py
 python scripts/prepare_xiangshan_firrtl.py
 python scripts/build_xiangshan_firrtl.py --module RightShiftModule
 python scripts/build_xiangshan_firrtl.py --module AluDataModule
-python scripts/verify_xiangshan_firrtl.py
+python scripts/verification/two_state/verify_xiangshan_firrtl.py
 ```
 
 现有验收记录如下。数字对应已保存的实验，不能代替新环境中的实际运行。

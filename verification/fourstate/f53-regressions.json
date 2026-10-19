@@ -1,0 +1,1802 @@
+[
+  {
+    "case": "regressions-f46-clockgate",
+    "top": "ClockGate",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "CK",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "CK"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f46-clockgate",
+      "server_case": "regressions-f46-clockgate",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 7044,
+      "seconds": 8.332555616274476
+    },
+    "manifest_sha256": "c721a685c1ae51315b0c2547d59158d810e4d1221475a4eb4cf39b6bea9a2a23"
+  },
+  {
+    "case": "regressions-f46-dualclock",
+    "top": "DualClock",
+    "source_files": [
+      "original-0.sv",
+      "original-1.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "sequential",
+      "clock": "ca",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "ca",
+        "cb"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f46-dualclock",
+      "server_case": "regressions-f46-dualclock",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 7044,
+      "seconds": 11.011256295256317
+    },
+    "manifest_sha256": "b745a6944f2eb8482504eb3d1122530f3464e4a7aaf9ca1363355599170ff34e"
+  },
+  {
+    "case": "regressions-f46-dualreset",
+    "top": "DualReset",
+    "source_files": [
+      "original-0.sv",
+      "original-1.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "sequential",
+      "clock": "ca",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "ca",
+        "cb"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f46-dualreset",
+      "server_case": "regressions-f46-dualreset",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 36356,
+      "seconds": 42.60301382280886
+    },
+    "manifest_sha256": "5323fbdd62ac495396a754c534a58f2946781c28dbb2f86b5478f392ac64539f"
+  },
+  {
+    "case": "regressions-f46-gatedregister",
+    "top": "GatedRegister",
+    "source_files": [
+      "original-0.sv",
+      "original-1.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f46-gatedregister",
+      "server_case": "regressions-f46-gatedregister",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 36356,
+      "seconds": 38.46138539724052
+    },
+    "manifest_sha256": "5c571f95792544a16f14161b70adb5044e5eba53e443fb0f62103f1681d87a53"
+  },
+  {
+    "case": "regressions-f46-invertedclock",
+    "top": "InvertedClock",
+    "source_files": [
+      "original-0.sv",
+      "original-1.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f46-invertedclock",
+      "server_case": "regressions-f46-invertedclock",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 1572,
+      "seconds": 5.749597795307636
+    },
+    "manifest_sha256": "761e990aee5e9565ac97b0207dc75ab72178f69f22a2a3c83e811be30fdadaa4"
+  },
+  {
+    "case": "regressions-f46-latch1",
+    "top": "Latch1",
+    "source_files": [
+      "original-0.sv",
+      "original-1.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f46-latch1",
+      "server_case": "regressions-f46-latch1",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 1572,
+      "seconds": 5.3579949559643865
+    },
+    "manifest_sha256": "2eeab51b67dc86bc87e44aea5467dbf249b1ebb8d230735c4f522291ee65db00"
+  },
+  {
+    "case": "regressions-f46-negativeclock",
+    "top": "NegativeClock",
+    "source_files": [
+      "original-0.sv",
+      "original-1.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f46-negativeclock",
+      "server_case": "regressions-f46-negativeclock",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 7044,
+      "seconds": 9.578857412561774
+    },
+    "manifest_sha256": "3962963edef62af9cd0eb32d8ad3ebfd0ee4155692a3968993bb8e21d1b62f39"
+  },
+  {
+    "case": "regressions-f47-jtagstatemachine",
+    "top": "JtagStateMachine",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clock",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clock"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f47-jtagstatemachine",
+      "server_case": "regressions-f47-jtagstatemachine",
+      "status": "THREE_WAY_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 12004,
+      "seconds": 11.318718103691936
+    },
+    "manifest_sha256": "375ce63e450f110ea4ae20afc64d43a930e056f08ad54b229cccad31f59ff8ba"
+  },
+  {
+    "case": "regressions-f47-namedprocedural",
+    "top": "NamedProcedural",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f47-namedprocedural",
+      "server_case": "regressions-f47-namedprocedural",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 24708,
+      "seconds": 27.24569551832974
+    },
+    "manifest_sha256": "b47b1239e30ae8cd53d147457136516ec32dbdb0fcde26e0d4090e8c4e1ab430"
+  },
+  {
+    "case": "regressions-f47-packedprocedural",
+    "top": "PackedProcedural",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "f47-packedprocedural",
+      "server_case": "regressions-f47-packedprocedural",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 35972,
+      "seconds": 43.66986663732678
+    },
+    "manifest_sha256": "3e02ef7a5b0932e1bc3b19bb6c2deb3308fae405cfef40622433a8986fc132d1"
+  },
+  {
+    "case": "regressions-legacy-v1",
+    "top": "Operators",
+    "source_files": [
+      "original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "legacy-v1",
+      "server_case": "regressions-legacy-v1",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 64,
+      "seconds": 1.5955545054748654
+    },
+    "manifest_sha256": "f3ddb924c6efb5dc295f6c23ce9f4645c934be60fdc0b3d1de7e998d898dae4d"
+  },
+  {
+    "case": "regressions-legacy-v2",
+    "top": "SequentialControl",
+    "source_files": [
+      "original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "legacy-v2",
+      "server_case": "regressions-legacy-v2",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 448,
+      "seconds": 2.0303567154332995
+    },
+    "manifest_sha256": "d648014ca60bac21345bc7c8071cc48f28bd73ac11b3485adeacbedfc63e9d73"
+  },
+  {
+    "case": "regressions-legacy-v3-comb",
+    "top": "WidthTypes",
+    "source_files": [
+      "original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "legacy-v3-comb",
+      "server_case": "regressions-legacy-v3-comb",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 36,
+      "seconds": 2.247619764879346
+    },
+    "manifest_sha256": "9e7d19ee0f1a06aaf85ded56c503303b46e98b2c9560b6a91f87fa06f058a1e9"
+  },
+  {
+    "case": "regressions-legacy-v3-seq",
+    "top": "Counter4",
+    "source_files": [
+      "original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "legacy-v3-seq",
+      "server_case": "regressions-legacy-v3-seq",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": false,
+      "samples": 84,
+      "seconds": 1.8164378451183438
+    },
+    "manifest_sha256": "7906892e706353383d69fda3ecab76e7593de0feb7e625257cffd2bdbac2e9ea"
+  },
+  {
+    "case": "regressions-reg-arithmetic-19",
+    "top": "ArithmeticBits",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-arithmetic-19",
+      "server_case": "regressions-reg-arithmetic-19",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 256,
+      "seconds": 2.5932166278362274
+    },
+    "manifest_sha256": "a9d145dc85d0bc6f49d3889b48be80dec2ab61afd7ca8929fa7bde3c0e0d5223"
+  },
+  {
+    "case": "regressions-reg-arithmetic-20",
+    "top": "ComparatorControl",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-arithmetic-20",
+      "server_case": "regressions-reg-arithmetic-20",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 168,
+      "seconds": 1.8966116197407246
+    },
+    "manifest_sha256": "a9b7d0951547af14d393ae48cd4d89a9d0f480191630eae5884adf30e50c2da3"
+  },
+  {
+    "case": "regressions-reg-arithmetic-21",
+    "top": "Counter4",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-arithmetic-21",
+      "server_case": "regressions-reg-arithmetic-21",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 208,
+      "seconds": 1.8259095018729568
+    },
+    "manifest_sha256": "dabd6177b3bfa5b579784279c49edb20810b959d5dc1dd31c068dad4e1a4b4cb"
+  },
+  {
+    "case": "regressions-reg-arithmetic-22",
+    "top": "ShiftPipeline",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-arithmetic-22",
+      "server_case": "regressions-reg-arithmetic-22",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 140,
+      "seconds": 1.9997374266386032
+    },
+    "manifest_sha256": "0f8f04a41d8f9970166027c31ea380b51b501927c8537b699624e3d64c907242"
+  },
+  {
+    "case": "regressions-reg-cam-26",
+    "top": "CAMTemplate",
+    "source_files": [
+      "rtl/original/CAMTemplate.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clock",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-cam-26",
+      "server_case": "regressions-reg-cam-26",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 3744,
+      "seconds": 10.191449201665819
+    },
+    "manifest_sha256": "41a945eda27b242ab9168e61a3db0b6ba121c9f25c4149d1c9d21389daa2abc1"
+  },
+  {
+    "case": "regressions-reg-combinational-00",
+    "top": "Literals",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-combinational-00",
+      "server_case": "regressions-reg-combinational-00",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 1,
+      "seconds": 1.4352902919054031
+    },
+    "manifest_sha256": "bd0b36ee2d26aa532356543316b2151fd908b0c9d5b174df8f73e67d5036e741"
+  },
+  {
+    "case": "regressions-reg-combinational-01",
+    "top": "Operators",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-combinational-01",
+      "server_case": "regressions-reg-combinational-01",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 64,
+      "seconds": 1.6394578404724598
+    },
+    "manifest_sha256": "813e2a1eac8626ebd11d85ac9c368a314c744c42ade9a7355a7624600e8459dd"
+  },
+  {
+    "case": "regressions-reg-combinational-02",
+    "top": "Vectors",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-combinational-02",
+      "server_case": "regressions-reg-combinational-02",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 132,
+      "seconds": 1.6694877557456493
+    },
+    "manifest_sha256": "3d94c6d83db07f5b351f809dd6352c190cce67cb17f9b44f9e1a255af566766f"
+  },
+  {
+    "case": "regressions-reg-compatibility-23",
+    "top": "ComparatorControl",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-compatibility-23",
+      "server_case": "regressions-reg-compatibility-23",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 24,
+      "seconds": 1.8500303411856294
+    },
+    "manifest_sha256": "1f090313a0382ead84a3063af20c54246546c5dd28c7accce4459f640e7a9416"
+  },
+  {
+    "case": "regressions-reg-compatibility-24",
+    "top": "Counter4",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-compatibility-24",
+      "server_case": "regressions-reg-compatibility-24",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 84,
+      "seconds": 1.7956624599173665
+    },
+    "manifest_sha256": "a24a174bce94df1a0d4336436a03706ed2e6366990c5d357526d3e28b6032778"
+  },
+  {
+    "case": "regressions-reg-compatibility-25",
+    "top": "ShiftPipeline",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-compatibility-25",
+      "server_case": "regressions-reg-compatibility-25",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 24,
+      "seconds": 2.0007834546267986
+    },
+    "manifest_sha256": "831383585f98910d2ef2edbd75ae56fc4aa111b2bb1910fdcf824b767833be7c"
+  },
+  {
+    "case": "regressions-reg-hierarchy-06",
+    "top": "GenerateAudit",
+    "source_files": [
+      "rtl/original/GenerateAudit.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-hierarchy-06",
+      "server_case": "regressions-reg-hierarchy-06",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 4,
+      "seconds": 1.3198884781450033
+    },
+    "manifest_sha256": "12c0ab31154d40ead6b7e764befcd36191bb56a5a208b8661a522d496deed2c0"
+  },
+  {
+    "case": "regressions-reg-hierarchy-07-v2",
+    "top": "HierarchyComb",
+    "source_files": [
+      "rtl/original/HierarchyComb.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-hierarchy-07",
+      "server_case": "regressions-reg-hierarchy-07-v2",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 32,
+      "seconds": 3.2817925987765193
+    },
+    "manifest_sha256": "bd715a1c3e2bed5cbd6e8c808910750414afcd84791c3ded943c33d8e33b8dde"
+  },
+  {
+    "case": "regressions-reg-hierarchy-08",
+    "top": "HierarchySwap",
+    "source_files": [
+      "rtl/original/HierarchySwap.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-hierarchy-08",
+      "server_case": "regressions-reg-hierarchy-08",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 48,
+      "seconds": 1.4382675243541598
+    },
+    "manifest_sha256": "8b7d0dbc9524337bc46c92efc2aa52fb020b78578e006d605fe592e931a6d2b1"
+  },
+  {
+    "case": "regressions-reg-hierarchy-09",
+    "top": "HierarchyTop",
+    "source_files": [
+      "rtl/original/HierarchyLeaf.sv",
+      "rtl/original/HierarchyMiddle.sv",
+      "rtl/original/HierarchyTop.sv",
+      "rtl/original/Unrelated.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-hierarchy-09",
+      "server_case": "regressions-reg-hierarchy-09",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 192,
+      "seconds": 8.862422251142561
+    },
+    "manifest_sha256": "db67d6a75d6734c29d6aab8b59c242529fd5012f6b801fe0b0a04c708f862db8"
+  },
+  {
+    "case": "regressions-reg-hierarchy-10",
+    "top": "PathCollision",
+    "source_files": [
+      "rtl/original/PathCollision.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-hierarchy-10",
+      "server_case": "regressions-reg-hierarchy-10",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 64,
+      "seconds": 1.502241475507617
+    },
+    "manifest_sha256": "8e90b1fb8c3b11bc58438e68ac39d867925408c42c7679d0bcae3a2085940371"
+  },
+  {
+    "case": "regressions-reg-legacy-v4",
+    "top": "HierarchyTop",
+    "source_files": [
+      "rtl/original/HierarchyLeaf.sv",
+      "rtl/original/HierarchyMiddle.sv",
+      "rtl/original/HierarchyTop.sv",
+      "rtl/original/Unrelated.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-legacy-v4",
+      "server_case": "regressions-reg-legacy-v4",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 192,
+      "seconds": 8.808108470402658
+    },
+    "manifest_sha256": "8ee3f79bbba0b06feb748638ac0c312b7e3e36845d4d10c6789e867cc8a935f1"
+  },
+  {
+    "case": "regressions-reg-levelgateway-27",
+    "top": "AsyncRegister",
+    "source_files": [
+      "rtl/original/AsyncRegister.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clock",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": [],
+      "async_reset": "reset"
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-levelgateway-27",
+      "server_case": "regressions-reg-levelgateway-27",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 17664,
+      "seconds": 8.855138405226171
+    },
+    "manifest_sha256": "a91ecccbd762253d8ef6f87b31bc80b2bd44e2df4d20a0e183a058e7b6e1d805"
+  },
+  {
+    "case": "regressions-reg-levelgateway-28",
+    "top": "AsyncSwap",
+    "source_files": [
+      "rtl/original/AsyncSwap.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clock",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": [],
+      "async_reset": "reset"
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-levelgateway-28",
+      "server_case": "regressions-reg-levelgateway-28",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 4176,
+      "seconds": 2.7284719506278634
+    },
+    "manifest_sha256": "7a1644a12fb50a5f26c0422899b6a6d2ce65bdfbf7e9d3fff38766c0ff2a5c53"
+  },
+  {
+    "case": "regressions-reg-levelgateway-29",
+    "top": "LevelGateway",
+    "source_files": [
+      "rtl/original/root-0/LevelGateway.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clock",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": [],
+      "async_reset": "reset"
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-levelgateway-29",
+      "server_case": "regressions-reg-levelgateway-29",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 21504,
+      "seconds": 10.13319007307291
+    },
+    "manifest_sha256": "2c4caa006f7af45c3e49227a202c74c0d32fadc46c1c600fe6acc64a8ec10a21"
+  },
+  {
+    "case": "regressions-reg-logic-16",
+    "top": "LogicBits",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-logic-16",
+      "server_case": "regressions-reg-logic-16",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 16,
+      "seconds": 1.7408993085846305
+    },
+    "manifest_sha256": "03c5d1af8fd76038d8ad80acfb1f772c72441c19efef3b791d2a9e3a963c7340"
+  },
+  {
+    "case": "regressions-reg-logic-17",
+    "top": "LogicCompare",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-logic-17",
+      "server_case": "regressions-reg-logic-17",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 256,
+      "seconds": 2.8346261167898774
+    },
+    "manifest_sha256": "436f5ad24234d94a0fc27d529bbfd35e3b6179bdec760c58ab2b898d632d4f1d"
+  },
+  {
+    "case": "regressions-reg-logic-18",
+    "top": "LogicState",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-logic-18",
+      "server_case": "regressions-reg-logic-18",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 64,
+      "seconds": 1.630129679106176
+    },
+    "manifest_sha256": "67a4b7b8bfc46669ca84244a67d1a4d15b476e4c9f2d2c390b8f3875b1c26d14"
+  },
+  {
+    "case": "regressions-reg-memory-hierarchy",
+    "top": "MemoryHierarchy",
+    "source_files": [
+      "rtl/original/MemoryHierarchy.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": true,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-memory-hierarchy",
+      "server_case": "regressions-reg-memory-hierarchy",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 1056,
+      "seconds": 2.306818616576493
+    },
+    "manifest_sha256": "a1a1127ce9629587ffeaf4e96effb6e7f873a99c00a571ed0d036947d6f92bd9"
+  },
+  {
+    "case": "regressions-reg-memory-nba",
+    "top": "MemoryNBA",
+    "source_files": [
+      "rtl/original/MemoryNBA.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": true,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-memory-nba",
+      "server_case": "regressions-reg-memory-nba",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 8192,
+      "seconds": 6.205527516081929
+    },
+    "manifest_sha256": "db260f5dd0b1a79c80ae09946ba4e32b4933d9f8bb9cdc45df547f4e4b8dbd29"
+  },
+  {
+    "case": "regressions-reg-memory-real-ram",
+    "top": "ram_2x3",
+    "source_files": [
+      "rtl/original/ram_2x3.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "W0_clk",
+      "bounded_memories": true,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-memory-real-ram",
+      "server_case": "regressions-reg-memory-real-ram",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 9280,
+      "seconds": 5.018591822125018
+    },
+    "manifest_sha256": "96adf3e103372d4472cf227887e93dd78bdd05fb734d79ae325e605136a545a5"
+  },
+  {
+    "case": "regressions-reg-memory-scale8",
+    "top": "Memory8x3",
+    "source_files": [
+      "rtl/original/Memory8x3.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": true,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-memory-scale8",
+      "server_case": "regressions-reg-memory-scale8",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 12032,
+      "seconds": 14.351782242767513
+    },
+    "manifest_sha256": "92c569cddd59a1083039a18c84548f26ee61016bb71f9dde79415f88e7630567"
+  },
+  {
+    "case": "regressions-reg-memory-small2-final",
+    "top": "Memory2x3",
+    "source_files": [
+      "rtl/original/Memory2x3.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": true,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-memory-small2-final",
+      "server_case": "regressions-reg-memory-small2-final",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 10560,
+      "seconds": 6.163541533052921
+    },
+    "manifest_sha256": "97f4af0d9d7bfdedf7ca972e91d8551c4476356ec096de5a1d200bb2a691cb58"
+  },
+  {
+    "case": "regressions-reg-memory-small4-final",
+    "top": "Memory4x5",
+    "source_files": [
+      "rtl/original/Memory4x5.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": true,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-memory-small4-final",
+      "server_case": "regressions-reg-memory-small4-final",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 34432,
+      "seconds": 17.8313797833398
+    },
+    "manifest_sha256": "976da12d4201d34e7729d3075009003b19cb77b1f93ff69be6b988d320880323"
+  },
+  {
+    "case": "regressions-reg-preprocessing-30",
+    "top": "MacroComb",
+    "source_files": [
+      "rtl/original/root-0/MacroComb.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": [
+        "SELECT_A=1"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-preprocessing-30",
+      "server_case": "regressions-reg-preprocessing-30",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 64,
+      "seconds": 1.357421675696969
+    },
+    "manifest_sha256": "d8ab26a32cddebb70040f7dc06c62c43b0b5f1097c65d3bb825ec98e4799ab92"
+  },
+  {
+    "case": "regressions-reg-preprocessing-31",
+    "top": "MacroComb",
+    "source_files": [
+      "rtl/original/root-0/MacroComb.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-preprocessing-31",
+      "server_case": "regressions-reg-preprocessing-31",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 64,
+      "seconds": 1.3056471142917871
+    },
+    "manifest_sha256": "9f957958a282fc6bbb037474474eb769197ec6b985b57ec31d2eb870499aad3c"
+  },
+  {
+    "case": "regressions-reg-preprocessing-32",
+    "top": "MacroComb",
+    "source_files": [
+      "rtl/original/root-0/MacroComb.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": [
+        "SELECT_XOR=1"
+      ]
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-preprocessing-32",
+      "server_case": "regressions-reg-preprocessing-32",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 64,
+      "seconds": 1.373392941430211
+    },
+    "manifest_sha256": "275b67cb322155fa47bab5128bff7e0e91e618d2e6e4e8544168cb714a1eaecd"
+  },
+  {
+    "case": "regressions-reg-preprocessing-33",
+    "top": "MacroGuard",
+    "source_files": [
+      "rtl/original/root-0/MacroGuard.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clock",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-preprocessing-33",
+      "server_case": "regressions-reg-preprocessing-33",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 32,
+      "seconds": 1.3971377732232213
+    },
+    "manifest_sha256": "59e7839467270ae17191f39993f42db30a39427c24aa967561637aedeccb7e64"
+  },
+  {
+    "case": "regressions-reg-prioritymux-34",
+    "top": "PriorityMuxModule_25",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-prioritymux-34",
+      "server_case": "regressions-reg-prioritymux-34",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 16384,
+      "seconds": 3.7550611421465874
+    },
+    "manifest_sha256": "59d97be22bf3aa8b0f77c6faac8247fb96667eb937f692b5c296c402b259028a"
+  },
+  {
+    "case": "regressions-reg-sequential-03",
+    "top": "SequentialControl",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-sequential-03",
+      "server_case": "regressions-reg-sequential-03",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 2016,
+      "seconds": 5.824713723734021
+    },
+    "manifest_sha256": "8689b5e66038ec0b8a4d38d2dbf1b0ef5135e66d45bfb16d51709fb46d8b9d5e"
+  },
+  {
+    "case": "regressions-reg-sequential-04",
+    "top": "SequentialSwap",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-sequential-04",
+      "server_case": "regressions-reg-sequential-04",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 224,
+      "seconds": 1.5961420629173517
+    },
+    "manifest_sha256": "6746c7a70e7e852fcfa8b2af875cea05c6179f52598c5d60c067c2023b3b0bee"
+  },
+  {
+    "case": "regressions-reg-sequential-05",
+    "top": "SequentialWide",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-sequential-05",
+      "server_case": "regressions-reg-sequential-05",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 1344,
+      "seconds": 2.187070555984974
+    },
+    "manifest_sha256": "404e34324519a6a464694ba46e98573d45177d88ada507b20b70a62342636e8f"
+  },
+  {
+    "case": "regressions-reg-width-11-v2",
+    "top": "WidthCast",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-width-11",
+      "server_case": "regressions-reg-width-11-v2",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 534,
+      "seconds": 7.031042815186083
+    },
+    "manifest_sha256": "70eefe3930971cfdf71ed59e6c1ce13984d22fae36eec5c005214c84739ebc8e"
+  },
+  {
+    "case": "regressions-reg-width-12-v2",
+    "top": "WidthCast",
+    "source_files": [
+      "rtl/original/WidthCast.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-width-12",
+      "server_case": "regressions-reg-width-12-v2",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 534,
+      "seconds": 6.971086389385164
+    },
+    "manifest_sha256": "c06dc96515b839c75a3495c50f50ef74ec1d529e8f78480900582978713c06ca"
+  },
+  {
+    "case": "regressions-reg-width-13",
+    "top": "WidthCastState",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-width-13",
+      "server_case": "regressions-reg-width-13",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 24,
+      "seconds": 1.8053548829630017
+    },
+    "manifest_sha256": "c4da366fcc83c3672cbf90ec8b41cce5c06e44c7f21d60d7c27880a23aa5ac96"
+  },
+  {
+    "case": "regressions-reg-width-14",
+    "top": "WidthState",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-width-14",
+      "server_case": "regressions-reg-width-14",
+      "status": "REGRESSION_REPLAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 64,
+      "seconds": 1.63594332896173
+    },
+    "manifest_sha256": "5d53ea341eead5373f1e7d3252f10f2ebe0488d5f871e7afd9a88e0ccd04f401"
+  },
+  {
+    "case": "regressions-reg-width-15",
+    "top": "WidthTypes",
+    "source_files": [
+      "rtl/original.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "combinational",
+      "clock": null,
+      "bounded_memories": false,
+      "bounded_events": false,
+      "immediate_assertions": false,
+      "defines": []
+    },
+    "accepted_execution": {
+      "group": "regressions",
+      "case": "reg-width-15",
+      "server_case": "regressions-reg-width-15",
+      "status": "FRESH_REGRESSION_PASS",
+      "fresh": true,
+      "affected": true,
+      "samples": 36,
+      "seconds": 2.2353896517306566
+    },
+    "manifest_sha256": "fdb3291d720d6baff6561171e0d270d9a14a58d63ec2586ae20480273fce0965"
+  },
+  {
+    "case": "aliases-deepreset-v2",
+    "top": "DeepReset",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "aliases",
+      "case": "DeepReset-v2",
+      "server_case": "aliases-deepreset-v2",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 36356,
+      "seconds": 21.35438839253038
+    },
+    "manifest_sha256": "23e7da92b1ff1f178ade3a2a70efda778e2fe7b5d1698cc3dacc2c42b05dc29b"
+  },
+  {
+    "case": "aliases-netreset-v2",
+    "top": "NetReset",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "aliases",
+      "case": "NetReset-v2",
+      "server_case": "aliases-netreset-v2",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 36356,
+      "seconds": 21.816840606741607
+    },
+    "manifest_sha256": "31927a15930f43d9305979aca84d207f9450926461a1f22d48d547e133303935"
+  },
+  {
+    "case": "aliases-portreset-v2",
+    "top": "PortReset",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "aliases",
+      "case": "PortReset-v2",
+      "server_case": "aliases-portreset-v2",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 36356,
+      "seconds": 21.71659608092159
+    },
+    "manifest_sha256": "0b3a185665b8aa8d50313e1b5a9df29bdb3093d9d256f6cce44d152da2f59140"
+  },
+  {
+    "case": "aliases-sharedreset-v2",
+    "top": "SharedReset",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": false,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "aliases",
+      "case": "SharedReset-v2",
+      "server_case": "aliases-sharedreset-v2",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 36356,
+      "seconds": 27.13704231288284
+    },
+    "manifest_sha256": "11c221e4f9e66d76ca968811c9d9e1586090f363a9ebef6abffb2abe2a4d0e2d"
+  },
+  {
+    "case": "assertions-assertionorder-v3",
+    "top": "AssertionOrder",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": true,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "assertions",
+      "case": "AssertionOrder-v3",
+      "server_case": "assertions-assertionorder-v3",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 36360,
+      "seconds": 21.71530600450933
+    },
+    "manifest_sha256": "732f45afb27d925eb00947baf8eefa236b6acbaf755fb3cdaf4e3f16300404d8"
+  },
+  {
+    "case": "assertions-assertionquiet-v2",
+    "top": "AssertionQuiet",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clk",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": true,
+      "defines": [],
+      "event_clocks": [
+        "clk"
+      ]
+    },
+    "accepted_execution": {
+      "group": "assertions",
+      "case": "AssertionQuiet-v2",
+      "server_case": "assertions-assertionquiet-v2",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 1572,
+      "seconds": 5.39154851436615
+    },
+    "manifest_sha256": "fb5703c4cbbcc0f4dfc62cfcc806136b9e5df34aa005f387dc14e13dad995d74"
+  },
+  {
+    "case": "assertions-captureupdatechain_2-v2",
+    "top": "CaptureUpdateChain_2",
+    "source_files": [
+      "original-0.sv"
+    ],
+    "source_is_dir": false,
+    "options": {
+      "mode": "sequential",
+      "clock": "clock",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": true,
+      "defines": [],
+      "event_clocks": [
+        "clock"
+      ]
+    },
+    "accepted_execution": {
+      "group": "assertions",
+      "case": "CaptureUpdateChain_2-v2",
+      "server_case": "assertions-captureupdatechain_2-v2",
+      "status": "THREE_WAY_PASS",
+      "fresh": false,
+      "affected": false,
+      "samples": 33380,
+      "seconds": 31.022820931859314
+    },
+    "manifest_sha256": "132fcf0c5e0752e05add78ce185f6823e5badd4bc7275e2ae4dadd2e9c670c9b"
+  },
+  {
+    "case": "jtagtapcontroller",
+    "top": "JtagTapController",
+    "source_files": [
+      "original-0.sv",
+      "original-1.sv",
+      "original-2.sv"
+    ],
+    "source_is_dir": true,
+    "options": {
+      "mode": "sequential",
+      "clock": "clock",
+      "bounded_memories": false,
+      "bounded_events": true,
+      "immediate_assertions": true,
+      "defines": [],
+      "event_clocks": [
+        "clock"
+      ]
+    },
+    "accepted_execution": {
+      "group": "cases",
+      "case": "JtagTapController",
+      "server_case": "jtagtapcontroller"
+    },
+    "manifest_sha256": "142af89683b5777bffc4ea3e99a3c8c2c4a4a79ed7db4ec3fea6eb7b9cf385a5"
+  }
+]

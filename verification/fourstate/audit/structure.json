@@ -1,0 +1,750 @@
+{
+  "cst": {
+    "syntaxTrees": [
+      {
+        "kind": "SyntaxTree",
+        "root": {
+          "kind": "CompilationUnit",
+          "members": [
+            {
+              "endmodule": "endmodule",
+              "header": {
+                "kind": "ModuleHeader",
+                "moduleKeyword": "module",
+                "name": "Leaf",
+                "parameters": {
+                  "closeParen": ")",
+                  "declarations": [
+                    {
+                      "declarators": [
+                        {
+                          "initializer": {
+                            "equals": "=",
+                            "expr": {
+                              "kind": "IntegerLiteralExpression",
+                              "literal": "4"
+                            },
+                            "kind": "EqualsValueClause"
+                          },
+                          "kind": "Declarator",
+                          "name": "W"
+                        }
+                      ],
+                      "keyword": "parameter",
+                      "kind": "ParameterDeclaration",
+                      "type": {
+                        "kind": "ImplicitType"
+                      }
+                    }
+                  ],
+                  "hash": "#",
+                  "kind": "ParameterPortList",
+                  "openParen": "("
+                },
+                "ports": {
+                  "closeParen": ")",
+                  "kind": "AnsiPortList",
+                  "openParen": "(",
+                  "ports": [
+                    {
+                      "declarator": {
+                        "kind": "Declarator",
+                        "name": "clk"
+                      },
+                      "header": {
+                        "dataType": {
+                          "kind": "ImplicitType"
+                        },
+                        "direction": "input",
+                        "kind": "VariablePortHeader"
+                      },
+                      "kind": "ImplicitAnsiPort"
+                    },
+                    ",",
+                    {
+                      "declarator": {
+                        "kind": "Declarator",
+                        "name": "rst"
+                      },
+                      "header": {
+                        "dataType": {
+                          "kind": "ImplicitType"
+                        },
+                        "kind": "VariablePortHeader"
+                      },
+                      "kind": "ImplicitAnsiPort"
+                    },
+                    ",",
+                    {
+                      "declarator": {
+                        "kind": "Declarator",
+                        "name": "d"
+                      },
+                      "header": {
+                        "dataType": {
+                          "dimensions": [
+                            {
+                              "closeBracket": "]",
+                              "kind": "VariableDimension",
+                              "openBracket": "[",
+                              "specifier": {
+                                "kind": "RangeDimensionSpecifier",
+                                "selector": {
+                                  "kind": "SimpleRangeSelect",
+                                  "left": {
+                                    "kind": "SubtractExpression",
+                                    "left": {
+                                      "identifier": "W",
+                                      "kind": "IdentifierName"
+                                    },
+                                    "operatorToken": "-",
+                                    "right": {
+                                      "kind": "IntegerLiteralExpression",
+                                      "literal": "1"
+                                    }
+                                  },
+                                  "range": ":",
+                                  "right": {
+                                    "kind": "IntegerLiteralExpression",
+                                    "literal": "0"
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "kind": "ImplicitType"
+                        },
+                        "direction": "input",
+                        "kind": "VariablePortHeader"
+                      },
+                      "kind": "ImplicitAnsiPort"
+                    },
+                    ",",
+                    {
+                      "declarator": {
+                        "kind": "Declarator",
+                        "name": "q"
+                      },
+                      "header": {
+                        "dataType": {
+                          "dimensions": [
+                            {
+                              "closeBracket": "]",
+                              "kind": "VariableDimension",
+                              "openBracket": "[",
+                              "specifier": {
+                                "kind": "RangeDimensionSpecifier",
+                                "selector": {
+                                  "kind": "SimpleRangeSelect",
+                                  "left": {
+                                    "kind": "SubtractExpression",
+                                    "left": {
+                                      "identifier": "W",
+                                      "kind": "IdentifierName"
+                                    },
+                                    "operatorToken": "-",
+                                    "right": {
+                                      "kind": "IntegerLiteralExpression",
+                                      "literal": "1"
+                                    }
+                                  },
+                                  "range": ":",
+                                  "right": {
+                                    "kind": "IntegerLiteralExpression",
+                                    "literal": "0"
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "keyword": "reg",
+                          "kind": "RegType"
+                        },
+                        "direction": "output",
+                        "kind": "VariablePortHeader"
+                      },
+                      "kind": "ImplicitAnsiPort"
+                    }
+                  ]
+                },
+                "semi": ";"
+              },
+              "kind": "ModuleDeclaration",
+              "members": [
+                {
+                  "declarators": [
+                    {
+                      "dimensions": [
+                        {
+                          "closeBracket": "]",
+                          "kind": "VariableDimension",
+                          "openBracket": "[",
+                          "specifier": {
+                            "kind": "RangeDimensionSpecifier",
+                            "selector": {
+                              "kind": "SimpleRangeSelect",
+                              "left": {
+                                "kind": "IntegerLiteralExpression",
+                                "literal": "0"
+                              },
+                              "range": ":",
+                              "right": {
+                                "kind": "IntegerLiteralExpression",
+                                "literal": "7"
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "kind": "Declarator",
+                      "name": "mem"
+                    }
+                  ],
+                  "kind": "DataDeclaration",
+                  "semi": ";",
+                  "type": {
+                    "dimensions": [
+                      {
+                        "closeBracket": "]",
+                        "kind": "VariableDimension",
+                        "openBracket": "[",
+                        "specifier": {
+                          "kind": "RangeDimensionSpecifier",
+                          "selector": {
+                            "kind": "SimpleRangeSelect",
+                            "left": {
+                              "kind": "IntegerLiteralExpression",
+                              "literal": "3"
+                            },
+                            "range": ":",
+                            "right": {
+                              "kind": "IntegerLiteralExpression",
+                              "literal": "0"
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "keyword": "reg",
+                    "kind": "RegType"
+                  }
+                },
+                {
+                  "keyword": "always",
+                  "kind": "AlwaysBlock",
+                  "statement": {
+                    "kind": "TimingControlStatement",
+                    "statement": {
+                      "closeParen": ")",
+                      "elseClause": {
+                        "clause": {
+                          "expr": {
+                            "kind": "NonblockingAssignmentExpression",
+                            "left": {
+                              "identifier": "q",
+                              "kind": "IdentifierName"
+                            },
+                            "operatorToken": "<=",
+                            "right": {
+                              "identifier": "d",
+                              "kind": "IdentifierName"
+                            }
+                          },
+                          "kind": "ExpressionStatement",
+                          "semi": ";"
+                        },
+                        "elseKeyword": "else",
+                        "kind": "ElseClause"
+                      },
+                      "ifKeyword": "if",
+                      "kind": "ConditionalStatement",
+                      "openParen": "(",
+                      "predicate": {
+                        "conditions": [
+                          {
+                            "expr": {
+                              "kind": "UnaryLogicalNotExpression",
+                              "operand": {
+                                "identifier": "rst",
+                                "kind": "IdentifierName"
+                              },
+                              "operatorToken": "!"
+                            },
+                            "kind": "ConditionalPattern"
+                          }
+                        ],
+                        "kind": "ConditionalPredicate"
+                      },
+                      "statement": {
+                        "expr": {
+                          "kind": "NonblockingAssignmentExpression",
+                          "left": {
+                            "identifier": "q",
+                            "kind": "IdentifierName"
+                          },
+                          "operatorToken": "<=",
+                          "right": {
+                            "base": "'b",
+                            "kind": "IntegerVectorExpression",
+                            "size": "4",
+                            "value": "0"
+                          }
+                        },
+                        "kind": "ExpressionStatement",
+                        "semi": ";"
+                      }
+                    },
+                    "timingControl": {
+                      "at": "@",
+                      "expr": {
+                        "closeParen": ")",
+                        "expr": {
+                          "kind": "BinaryEventExpression",
+                          "left": {
+                            "edge": "posedge",
+                            "expr": {
+                              "identifier": "clk",
+                              "kind": "IdentifierName"
+                            },
+                            "kind": "SignalEventExpression"
+                          },
+                          "operatorToken": "or",
+                          "right": {
+                            "edge": "negedge",
+                            "expr": {
+                              "identifier": "rst",
+                              "kind": "IdentifierName"
+                            },
+                            "kind": "SignalEventExpression"
+                          }
+                        },
+                        "kind": "ParenthesizedEventExpression",
+                        "openParen": "("
+                      },
+                      "kind": "EventControlWithExpression"
+                    }
+                  }
+                },
+                {
+                  "keyword": "always",
+                  "kind": "AlwaysBlock",
+                  "statement": {
+                    "kind": "TimingControlStatement",
+                    "statement": {
+                      "expr": {
+                        "kind": "NonblockingAssignmentExpression",
+                        "left": {
+                          "identifier": "mem",
+                          "kind": "IdentifierSelectName",
+                          "selectors": [
+                            {
+                              "closeBracket": "]",
+                              "kind": "ElementSelect",
+                              "openBracket": "[",
+                              "selector": {
+                                "expr": {
+                                  "identifier": "d",
+                                  "kind": "IdentifierSelectName",
+                                  "selectors": [
+                                    {
+                                      "closeBracket": "]",
+                                      "kind": "ElementSelect",
+                                      "openBracket": "[",
+                                      "selector": {
+                                        "kind": "SimpleRangeSelect",
+                                        "left": {
+                                          "kind": "IntegerLiteralExpression",
+                                          "literal": "2"
+                                        },
+                                        "range": ":",
+                                        "right": {
+                                          "kind": "IntegerLiteralExpression",
+                                          "literal": "0"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "kind": "BitSelect"
+                              }
+                            }
+                          ]
+                        },
+                        "operatorToken": "<=",
+                        "right": {
+                          "identifier": "d",
+                          "kind": "IdentifierName"
+                        }
+                      },
+                      "kind": "ExpressionStatement",
+                      "semi": ";"
+                    },
+                    "timingControl": {
+                      "at": "@",
+                      "expr": {
+                        "closeParen": ")",
+                        "expr": {
+                          "edge": "posedge",
+                          "expr": {
+                            "identifier": "clk",
+                            "kind": "IdentifierName"
+                          },
+                          "kind": "SignalEventExpression"
+                        },
+                        "kind": "ParenthesizedEventExpression",
+                        "openParen": "("
+                      },
+                      "kind": "EventControlWithExpression"
+                    }
+                  }
+                },
+                {
+                  "keyword": "initial",
+                  "kind": "InitialBlock",
+                  "statement": {
+                    "expr": {
+                      "kind": "AssignmentExpression",
+                      "left": {
+                        "identifier": "mem",
+                        "kind": "IdentifierSelectName",
+                        "selectors": [
+                          {
+                            "closeBracket": "]",
+                            "kind": "ElementSelect",
+                            "openBracket": "[",
+                            "selector": {
+                              "expr": {
+                                "kind": "IntegerLiteralExpression",
+                                "literal": "0"
+                              },
+                              "kind": "BitSelect"
+                            }
+                          }
+                        ]
+                      },
+                      "operatorToken": "=",
+                      "right": {
+                        "base": "'b",
+                        "kind": "IntegerVectorExpression",
+                        "size": "4",
+                        "value": "x"
+                      }
+                    },
+                    "kind": "ExpressionStatement",
+                    "semi": ";"
+                  }
+                }
+              ]
+            },
+            {
+              "endmodule": "endmodule",
+              "header": {
+                "kind": "ModuleHeader",
+                "moduleKeyword": "module",
+                "name": "Top",
+                "ports": {
+                  "closeParen": ")",
+                  "kind": "AnsiPortList",
+                  "openParen": "(",
+                  "ports": [
+                    {
+                      "declarator": {
+                        "kind": "Declarator",
+                        "name": "clk"
+                      },
+                      "header": {
+                        "dataType": {
+                          "kind": "ImplicitType"
+                        },
+                        "direction": "input",
+                        "kind": "VariablePortHeader"
+                      },
+                      "kind": "ImplicitAnsiPort"
+                    },
+                    ",",
+                    {
+                      "declarator": {
+                        "kind": "Declarator",
+                        "name": "rst"
+                      },
+                      "header": {
+                        "dataType": {
+                          "kind": "ImplicitType"
+                        },
+                        "kind": "VariablePortHeader"
+                      },
+                      "kind": "ImplicitAnsiPort"
+                    },
+                    ",",
+                    {
+                      "declarator": {
+                        "kind": "Declarator",
+                        "name": "d"
+                      },
+                      "header": {
+                        "dataType": {
+                          "dimensions": [
+                            {
+                              "closeBracket": "]",
+                              "kind": "VariableDimension",
+                              "openBracket": "[",
+                              "specifier": {
+                                "kind": "RangeDimensionSpecifier",
+                                "selector": {
+                                  "kind": "SimpleRangeSelect",
+                                  "left": {
+                                    "kind": "IntegerLiteralExpression",
+                                    "literal": "3"
+                                  },
+                                  "range": ":",
+                                  "right": {
+                                    "kind": "IntegerLiteralExpression",
+                                    "literal": "0"
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "kind": "ImplicitType"
+                        },
+                        "direction": "input",
+                        "kind": "VariablePortHeader"
+                      },
+                      "kind": "ImplicitAnsiPort"
+                    },
+                    ",",
+                    {
+                      "declarator": {
+                        "kind": "Declarator",
+                        "name": "q"
+                      },
+                      "header": {
+                        "dataType": {
+                          "dimensions": [
+                            {
+                              "closeBracket": "]",
+                              "kind": "VariableDimension",
+                              "openBracket": "[",
+                              "specifier": {
+                                "kind": "RangeDimensionSpecifier",
+                                "selector": {
+                                  "kind": "SimpleRangeSelect",
+                                  "left": {
+                                    "kind": "IntegerLiteralExpression",
+                                    "literal": "3"
+                                  },
+                                  "range": ":",
+                                  "right": {
+                                    "kind": "IntegerLiteralExpression",
+                                    "literal": "0"
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "kind": "ImplicitType"
+                        },
+                        "direction": "output",
+                        "kind": "VariablePortHeader"
+                      },
+                      "kind": "ImplicitAnsiPort"
+                    }
+                  ]
+                },
+                "semi": ";"
+              },
+              "kind": "ModuleDeclaration",
+              "members": [
+                {
+                  "declarators": [
+                    {
+                      "kind": "Declarator",
+                      "name": "x"
+                    }
+                  ],
+                  "kind": "NetDeclaration",
+                  "netType": "wire",
+                  "semi": ";",
+                  "type": {
+                    "dimensions": [
+                      {
+                        "closeBracket": "]",
+                        "kind": "VariableDimension",
+                        "openBracket": "[",
+                        "specifier": {
+                          "kind": "RangeDimensionSpecifier",
+                          "selector": {
+                            "kind": "SimpleRangeSelect",
+                            "left": {
+                              "kind": "IntegerLiteralExpression",
+                              "literal": "3"
+                            },
+                            "range": ":",
+                            "right": {
+                              "kind": "IntegerLiteralExpression",
+                              "literal": "0"
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "ImplicitType"
+                  }
+                },
+                {
+                  "instances": [
+                    {
+                      "closeParen": ")",
+                      "connections": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "expr": {
+                                "identifier": "clk",
+                                "kind": "IdentifierName"
+                              },
+                              "kind": "SimpleSequenceExpr"
+                            },
+                            "kind": "SimplePropertyExpr"
+                          },
+                          "kind": "OrderedPortConnection"
+                        },
+                        ",",
+                        {
+                          "expr": {
+                            "expr": {
+                              "expr": {
+                                "identifier": "rst",
+                                "kind": "IdentifierName"
+                              },
+                              "kind": "SimpleSequenceExpr"
+                            },
+                            "kind": "SimplePropertyExpr"
+                          },
+                          "kind": "OrderedPortConnection"
+                        },
+                        ",",
+                        {
+                          "expr": {
+                            "expr": {
+                              "expr": {
+                                "identifier": "d",
+                                "kind": "IdentifierName"
+                              },
+                              "kind": "SimpleSequenceExpr"
+                            },
+                            "kind": "SimplePropertyExpr"
+                          },
+                          "kind": "OrderedPortConnection"
+                        },
+                        ",",
+                        {
+                          "expr": {
+                            "expr": {
+                              "expr": {
+                                "identifier": "x",
+                                "kind": "IdentifierName"
+                              },
+                              "kind": "SimpleSequenceExpr"
+                            },
+                            "kind": "SimplePropertyExpr"
+                          },
+                          "kind": "OrderedPortConnection"
+                        }
+                      ],
+                      "decl": {
+                        "kind": "InstanceName",
+                        "name": "a"
+                      },
+                      "kind": "HierarchicalInstance",
+                      "openParen": "("
+                    }
+                  ],
+                  "kind": "HierarchyInstantiation",
+                  "semi": ";",
+                  "type": "Leaf"
+                },
+                {
+                  "instances": [
+                    {
+                      "closeParen": ")",
+                      "connections": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "expr": {
+                                "identifier": "clk",
+                                "kind": "IdentifierName"
+                              },
+                              "kind": "SimpleSequenceExpr"
+                            },
+                            "kind": "SimplePropertyExpr"
+                          },
+                          "kind": "OrderedPortConnection"
+                        },
+                        ",",
+                        {
+                          "expr": {
+                            "expr": {
+                              "expr": {
+                                "identifier": "rst",
+                                "kind": "IdentifierName"
+                              },
+                              "kind": "SimpleSequenceExpr"
+                            },
+                            "kind": "SimplePropertyExpr"
+                          },
+                          "kind": "OrderedPortConnection"
+                        },
+                        ",",
+                        {
+                          "expr": {
+                            "expr": {
+                              "expr": {
+                                "identifier": "x",
+                                "kind": "IdentifierName"
+                              },
+                              "kind": "SimpleSequenceExpr"
+                            },
+                            "kind": "SimplePropertyExpr"
+                          },
+                          "kind": "OrderedPortConnection"
+                        },
+                        ",",
+                        {
+                          "expr": {
+                            "expr": {
+                              "expr": {
+                                "identifier": "q",
+                                "kind": "IdentifierName"
+                              },
+                              "kind": "SimpleSequenceExpr"
+                            },
+                            "kind": "SimplePropertyExpr"
+                          },
+                          "kind": "OrderedPortConnection"
+                        }
+                      ],
+                      "decl": {
+                        "kind": "InstanceName",
+                        "name": "b"
+                      },
+                      "kind": "HierarchicalInstance",
+                      "openParen": "("
+                    }
+                  ],
+                  "kind": "HierarchyInstantiation",
+                  "semi": ";",
+                  "type": "Leaf"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "hierarchy": "Top|Top|fixture.sv\nTop.a|Leaf|fixture.sv\nTop.b|Leaf|fixture.sv\n",
+  "parser": "slang 12.0.0+545f88b2e",
+  "source": "// always @(negedge bogus) initial memory[3]; module Fake(); endmodule\nmodule Leaf #(parameter W=4)(input clk,rst,input [W-1:0]d, output reg [W-1:0]q);\nreg [3:0] mem [0:7];\nalways @(posedge clk or negedge rst) if(!rst) q<=4'b0; else q<=d;\nalways @(posedge clk) mem[d[2:0]] <= d;\ninitial mem[0]=4'bx;\nendmodule\nmodule Top(input clk,rst,input [3:0]d,output [3:0]q);\nwire [3:0] x; Leaf a(clk,rst,d,x); Leaf b(clk,rst,x,q);\nendmodule\n"
+}

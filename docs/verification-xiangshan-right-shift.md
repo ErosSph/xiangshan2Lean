@@ -57,7 +57,7 @@ RTL 参考文件保留原类声明和原类体。测试专用框架只提供该�
 先按主 README 安装固定依赖，然后在仓库根目录运行：
 
 ```powershell
-python scripts/verify_xiangshan_right_shift.py
+python scripts/verification/two_state/verify_xiangshan_right_shift.py
 ```
 
 默认验证 XLEN=8、32、64。64 位是实际香山配置；8/32 位是独立适配版本的

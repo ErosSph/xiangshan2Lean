@@ -1,0 +1,359 @@
+{
+  "format": "xiangshan-prefetch-fourstate-smoke-v1",
+  "top": "L2TlbPrefetch",
+  "clock": "clock",
+  "configuration": "MinimalConfig(1) via NanhuCoreConfig",
+  "upstream_commit": "997cd5b35cfbd26586674aa553d0f04b27914cb2",
+  "sources": {
+    "chirrtl": "experiments/modern-firrtl-7.3/XSPrefetch/original/design.fir",
+    "chirrtl_sha256": "569e32dc9747d495141f6767f08501abba445543f3059a684528c9c205608e3a",
+    "default_rtl": "experiments/modern-firrtl-7.3/XSPrefetch/original/Chisel2LeanReference.v",
+    "default_rtl_sha256": "dbc0462c701d79ffd749faab9c5a936eab7130336f3874eb7e02f82310d88927",
+    "official_rtl_sha256": "202764de1f83fa3cbfeb7688826d66f52114ddea07ceac3052187b75e9aefc6b",
+    "firtool_sha256": "afb77f160063de31ea3137502148365f920e8c0bdfa39673d14fac7d34d78939",
+    "audit": "experiments/fourstate/seq-audit-20261017T051322Z-c7947a42",
+    "audit_summary_sha256": "92b23201b9618b7b9a8b42c27ae2532e325dc4fe8bd5e748f3be331154d49fbb",
+    "audit_manifest_sha256": "a282f8e2cfaf73b77bb76d34fd75ece60457048dc17ef4006fcd8ed822cfe6f0"
+  },
+  "ports": {
+    "clock": [
+      "input",
+      1,
+      false,
+      0,
+      0
+    ],
+    "reset": [
+      "input",
+      1,
+      false,
+      0,
+      0
+    ],
+    "io_sfence_valid": [
+      "input",
+      1,
+      false,
+      0,
+      0
+    ],
+    "io_csr_satp_changed": [
+      "input",
+      1,
+      false,
+      0,
+      0
+    ],
+    "io_in_valid": [
+      "input",
+      1,
+      false,
+      0,
+      0
+    ],
+    "io_in_bits_vpn": [
+      "input",
+      27,
+      false,
+      26,
+      0
+    ],
+    "io_out_ready": [
+      "input",
+      1,
+      false,
+      0,
+      0
+    ],
+    "io_out_valid": [
+      "output",
+      1,
+      false,
+      0,
+      0
+    ],
+    "io_out_bits_vpn": [
+      "output",
+      27,
+      false,
+      26,
+      0
+    ]
+  },
+  "states": {
+    "L2TlbPrefetch.old_reqs_0": [
+      27,
+      false,
+      26,
+      0
+    ],
+    "L2TlbPrefetch.old_reqs_1": [
+      27,
+      false,
+      26,
+      0
+    ],
+    "L2TlbPrefetch.old_reqs_2": [
+      27,
+      false,
+      26,
+      0
+    ],
+    "L2TlbPrefetch.old_reqs_3": [
+      27,
+      false,
+      26,
+      0
+    ],
+    "L2TlbPrefetch.old_v_0": [
+      1,
+      false,
+      0,
+      0
+    ],
+    "L2TlbPrefetch.old_v_1": [
+      1,
+      false,
+      0,
+      0
+    ],
+    "L2TlbPrefetch.old_v_2": [
+      1,
+      false,
+      0,
+      0
+    ],
+    "L2TlbPrefetch.old_v_3": [
+      1,
+      false,
+      0,
+      0
+    ],
+    "L2TlbPrefetch.old_index": [
+      2,
+      false,
+      1,
+      0
+    ],
+    "L2TlbPrefetch.next_req": [
+      27,
+      false,
+      26,
+      0
+    ],
+    "L2TlbPrefetch.v": [
+      1,
+      false,
+      0,
+      0
+    ]
+  },
+  "initial": {
+    "L2TlbPrefetch.old_reqs_0": "xz01xz01xz01xz01xz01xz01xz0",
+    "L2TlbPrefetch.old_reqs_1": "zx10zx10zx10zx10zx10zx10zx1",
+    "L2TlbPrefetch.old_reqs_2": "00000000000000000000000000z",
+    "L2TlbPrefetch.old_reqs_3": "11111111111111111111111111x",
+    "L2TlbPrefetch.old_v_0": "x",
+    "L2TlbPrefetch.old_v_1": "z",
+    "L2TlbPrefetch.old_v_2": "1",
+    "L2TlbPrefetch.old_v_3": "0",
+    "L2TlbPrefetch.old_index": "xz",
+    "L2TlbPrefetch.next_req": "10xz10xz10xz10xz10xz10xz10z",
+    "L2TlbPrefetch.v": "z"
+  },
+  "reset_states": [
+    "L2TlbPrefetch.old_v_0",
+    "L2TlbPrefetch.old_v_1",
+    "L2TlbPrefetch.old_v_2",
+    "L2TlbPrefetch.old_v_3",
+    "L2TlbPrefetch.old_index",
+    "L2TlbPrefetch.v"
+  ],
+  "unreset_states": [
+    "L2TlbPrefetch.old_reqs_0",
+    "L2TlbPrefetch.old_reqs_1",
+    "L2TlbPrefetch.old_reqs_2",
+    "L2TlbPrefetch.old_reqs_3",
+    "L2TlbPrefetch.next_req"
+  ],
+  "cycles": [
+    {
+      "name": "mixed-start-and-no-edge-reset-assert",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "0",
+        "io_in_bits_vpn": "000000000000000000000000000",
+        "io_out_ready": "0"
+      },
+      "high_reset": "1"
+    },
+    {
+      "name": "synchronous-reset-and-no-edge-release",
+      "inputs": {
+        "reset": "1",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "0",
+        "io_in_bits_vpn": "000000000000000000000000000",
+        "io_out_ready": "0"
+      },
+      "high_reset": "0"
+    },
+    {
+      "name": "known-request",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "1",
+        "io_in_bits_vpn": "000000000000000000000001000",
+        "io_out_ready": "0"
+      }
+    },
+    {
+      "name": "backpressure-hold",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "0",
+        "io_in_bits_vpn": "000000000000000000000001000",
+        "io_out_ready": "0"
+      }
+    },
+    {
+      "name": "consume-first-request",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "0",
+        "io_in_bits_vpn": "000000000000000000000001000",
+        "io_out_ready": "1"
+      }
+    },
+    {
+      "name": "next-known-request",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "1",
+        "io_in_bits_vpn": "000000000000000000000010000",
+        "io_out_ready": "0"
+      }
+    },
+    {
+      "name": "simultaneous-consume-and-new-request",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "1",
+        "io_in_bits_vpn": "000000000000000000000011000",
+        "io_out_ready": "1"
+      }
+    },
+    {
+      "name": "second-hold",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "0",
+        "io_in_bits_vpn": "000000000000000000000011000",
+        "io_out_ready": "0"
+      }
+    },
+    {
+      "name": "mixed-xz-vpn",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "1",
+        "io_in_bits_vpn": "01xz01xz01xz01xz01xz01xz01z",
+        "io_out_ready": "0"
+      }
+    },
+    {
+      "name": "reset-with-unreset-data-update-and-overflow",
+      "inputs": {
+        "reset": "1",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "1",
+        "io_in_bits_vpn": "111111111111111111111111111",
+        "io_out_ready": "1"
+      }
+    },
+    {
+      "name": "known-request-after-reset",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "1",
+        "io_in_bits_vpn": "000000000000000000000100000",
+        "io_out_ready": "0"
+      }
+    },
+    {
+      "name": "sfence-flush-with-consume",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "1",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "0",
+        "io_in_bits_vpn": "000000000000000000000100000",
+        "io_out_ready": "1"
+      }
+    },
+    {
+      "name": "known-request-after-flush",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "1",
+        "io_in_bits_vpn": "000000000000000000000101000",
+        "io_out_ready": "0"
+      }
+    },
+    {
+      "name": "satp-flush",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "1",
+        "io_in_valid": "0",
+        "io_in_bits_vpn": "000000000000000000000101000",
+        "io_out_ready": "0"
+      }
+    },
+    {
+      "name": "xz-control-and-data-hold",
+      "inputs": {
+        "reset": "0",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "z",
+        "io_in_bits_vpn": "zx10zx10zx10zx10zx10zx10zx1",
+        "io_out_ready": "x"
+      }
+    },
+    {
+      "name": "final-synchronous-reset",
+      "inputs": {
+        "reset": "1",
+        "io_sfence_valid": "0",
+        "io_csr_satp_changed": "0",
+        "io_in_valid": "0",
+        "io_in_bits_vpn": "000000000000000000000000000",
+        "io_out_ready": "0"
+      }
+    }
+  ]
+}

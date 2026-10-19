@@ -1,45 +1,40 @@
 # Chisel2Lean4
 
-把固定配置的 Chisel 电路转换成可运行的 Lean 4 模型。例如先确定 `n=3`，再转换这个具体电路。
+将 Chisel 源码、已展开的 FIRRTL 或 SystemVerilog 电路转换成可执行的 Lean 4 模型。不同入口保留的参数、规范化方式和语义范围不同，请先看对应说明。
 
-## 实现
+## 项目导航
 
-`Chisel / firtool → SystemVerilog → Yosys FunctionalIR → Lean 4`
+- [文档总目录](docs/README.md)：使用、架构、验证、环境和历史交接。
+- [当前状态](docs/status.md)：最近记录的里程碑和未完成范围。
+- [脚本职责图](scripts/README.md)：转换入口、模型执行器、工具链和验证脚本的区别。
+- [脚本逐文件目录](docs/script-catalog.md)：203 个 Python 脚本的用途说明与分类。
+- [框架重构计划](docs/refactor-plan.md)：已执行范围、兼容边界和后续批次。
+- [源码入口概览](docs/project-overview.md) · [支持矩阵](docs/support-matrix.md) · [语义约定](docs/semantics.md)
 
-复用官方工具处理 Scala、香山配置和电路展开。我们实现 FunctionalIR 到 Lean 的导出器，用 `BitVec` 表示运算，用状态和更新函数表示寄存器、存储器。
+## 最短路径
 
-当前版本：Chisel 7.3.0、Yosys 0.70（整颗导入另用原生 0.70+16）、Lean 4.19.0。
+需要仓库锁定的 Java、Lean、sbt 和其他工具；安装步骤见[环境说明](docs/environment.md)。
 
-## 使用
+将 Chisel 源文件编译成参数化 Lean 模型：
 
-先在原工程中生成 SystemVerilog，再运行：
+```powershell
+python scripts/chisel2lean.py Design.scala --module mypkg.Design --out generated/design
+```
+
+转换已展开的 SystemVerilog：
 
 ```powershell
 python scripts/yosys2lean.py design.sv --top Design --out generated/design
 ```
 
-生成 `generated/design/Yosys/Design.lean`，默认检查 Lean 编译。安装和完整示例见 [使用说明](docs/yosys-frontend.md)。
+入口比较、FIRRTL 用法和生成模型的执行方式见[项目概览](docs/project-overview.md)及[Yosys 前端说明](docs/yosys-frontend.md)。
 
-独立四态实验入口已验证组合逻辑及单时钟同步复位子集，采用显式状态转移，不替换默认二态流程，见 [四态使用与协作约定](docs/fourstate-frontend.md)。
+## 范围
 
-## 验证
+转换器只接受文档列出的硬件语言子集；不支持的构造应明确报错。请用[支持矩阵](docs/support-matrix.md)选择入口，并按对应验证报告理解实际覆盖。有限回归不能推出任意 Chisel、SystemVerilog 或所有输入轨迹下的普遍等价。
 
-已通过 7 组配置、115,500 次 RTL 输出比较，包括 Counter、流水线、存储器 Queue，以及香山的 `AluDataModule` 和 `L2TlbPrefetch`。
+四态 RTL 是独立实验入口，范围和当前阻塞见[四态前端文档](docs/fourstate-frontend.md)，不会替换默认二态流程。
 
-香山模块源码没有修改，只新增外围构建、配置适配和端口包装。使用真实 `MinimalConfig(1)`；[源码核对](docs/validation-xiangshan-source-audit-7.3.json)和[测试报告](docs/validation-yosys-7.3.json)可查。
+## 许可
 
-默认使用单时钟；多时钟和检查语句可加 `--clock-mode global --effects preserve`，使用约定见[说明](docs/yosys-frontend.md)。
-
-整颗香山 `DefaultConfig` 单核已完成转换和 Lean 编译。基础运算、乘除法与压缩指令、浮点、访存、缓存逐出写回、异常、MPRV/Sv39 和外部中断程序已全部通过 RTL／Lean／Spike 三方对照，原始硬件未修改。
-本轮八类裸机汇编测试程序共九次独立运行，具体程序、验证范围和用法见[程序验证](docs/program-validation.md#已有用例)。有限测试不代表所有输入序列的等价证明。
-
-最新进度和接手步骤见[交接文档](docs/HANDOFF-2026-10-16.md)。整颗生成数据和工具缓存不随 Git 提交，可按说明重建。
-转到服务器继续验证，使用[迁移说明](docs/server.md)中的数据包和分步入口。
-
-项目基于 Chicala，保留 [Apache-2.0 许可证](LICENSE)，来源见 [NOTICE](NOTICE)。
-
-本机现仅保留源码和文档，大型数据与验证已迁到服务器，见 [迁移说明](MIGRATION.md)。
-
-## TODO
-
-- [ ] 在明确的初态、时钟、复位和接口规则下，无论输入什么数据、以什么合法顺序到达、运行多少拍，原始 RTL 和生成的 Lean 都产生相同的可观察行为。
+项目基于 Chicala 并保留 [Apache-2.0 许可证](LICENSE)，来源见 [NOTICE](NOTICE)。

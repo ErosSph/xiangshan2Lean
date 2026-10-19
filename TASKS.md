@@ -1,5 +1,7 @@
 # Chisel2Lean4 implementation
 
+发布里程碑（2026-10-19，项目维护者本次确认）：完整香山单核（XSTop）成功转换为 Lean 4 可执行模型并通过编译；全 0、全 1、全 X、全 Z 四种初始状态分别完成 7、7、10、10 步整机差分验证。本次 Git 整理未重跑该整机验证，原始凭证不随本次源码提交发布。下方 F5.7 的执行中描述保留为早期快照；这项有限前缀结果不表示原定四初态 × 36 步完整覆盖已完成。
+
 User authorization: 2026-10-13, continue until a working translator; the handoff
 T0 stopping point is superseded.
 
@@ -42,6 +44,79 @@ verification; caches and installed tools are excluded.
 ## Independent four-state extension
 
 Design, interfaces, evidence and blockers are maintained in
+[the four-state frontend document](docs/fourstate-frontend.md).
+
+- [ ] F5.7 完整XSTop端到端验证：用户将主线调整为原始ModelSim四态RTL↔实际Lean模型。已核实Icarus不属于后端依赖，并按PID／UID／启动身份／工作目录校验停止本次编译5个进程，全部文件保留；整机Icarus成功不再作为门槛，历史三方功能保留。ModelSim四初态×36步已实际执行，337,853,664条快照完整；尚无整机两方通过结论。当前从哈希严格匹配的compact-v4编码与Flat检查点恢复公共后端，不重跑SLANG或整机编码，先尝试初态／复位／时钟前7步，再接续原完整覆盖。压缩Flat恢复小模型已实际Lean编译，FunctionalIR、表数据、Lean及runtime与原流程逐字节相同。实测任务、取消收据、资源及分阶段状态见 `experiments/fourstate/f57-20261018t110744z-da58ffda/in-progress.json`；公共后端、IR和Lean接口未改，无提交／推送。
+
+## Full XSTop four-state roadmap (2026-10-18)
+
+Local Windows sources remain authoritative; server writes are restricted to
+`chisel2lean-fourstate`. Preserve all dirty/untracked work and historical data.
+The fixed DefaultConfig provenance chain remains unconfirmed; do not relabel
+audit counts or generated files as executable/behaviorally verified models.
+
+- [x] F3.1: static audit: 982 RTL files, 981 module definitions, 21,024 hierarchy
+  instances including XSTop. These counts are not conversion coverage.
+- [x] F3.2: PriorityMux exhaustive validation and CAM/LevelGateway blocker probes.
+- [x] F4.1: automatic process locals/blocking assignments; original CAMTemplate
+  passed 72-state-bit three-way comparison under the documented contract.
+- [x] F4.2: official preprocessing, guarded source provenance and regressions.
+- [x] A / F4.3: original LevelGateway passed 21,504 samples with explicit
+  `--async-reset reset`; all original state and output matched. Default macros
+  exclude ENABLE_INITIAL_REG_; its active initial path remains rejected.
+- [x] B / F4.4: all 981 definitions accounted; 767 bounded attempts, 229 IR/encoding successes, 538 rejections; two new definitions passed actual backend/Lean/three-way comparison. Instance weights are not verification counts.
+- [x] C / F4.5: opt-in bounded memories; 75,552 new fixture/real-RAM samples, all output/state exact; real ram_2x3 also passed the same 9,280 samples on Linux. 112 unit tests, complete existing regressions, old models and two-thread recompile/replay passed. 20/24 selected definitions encoded; 3 budget rejections and 1 later async blocker remain.
+- [x] D / F4.6: bounded low-transparent latches, real ClockGate, latched-AND/inverted clocks and two ordered independent roots. 96,988 new three-way samples; 146,625 complete-corpus regression/legacy replay samples, 122 unit tests and 98 rejection checks passed. No multi-clock memory expansion.
+- [x] E / F4.7: scoped F47_PASS after the ImmediateAssertion supplement. Bounded packed automatic locals, named sequential scopes and opt-in immediate assert/static $error observations passed. Original CaptureUpdateChain_2 and JtagStateMachine three-way PASS; JtagTapController now explicitly rejects a child asynchronous-reset port alias. No full Tap/XSTop claim; remaining semantics require separate validation.
+- [ ] F / F5: dependency-closed real hierarchy/subsystems, explicit environment,
+  state and event contracts, then finite three-way integration tests.
+- [x] F5.1 / F5.1a: F51A_PASS. IEEE conditional Z/Z merge corrected; untouched JtagTapController passes all 31,684 frozen three-way samples, all outputs/state/events/assertion diagnostics. Full historical, alias and assertion regressions retained.
+- [x] F5.2: F52_PROBE_PASS. Server-first complete XSTop bounded probe and blocker audit; 981 definitions accounted, 419 encoded closures (359 leaf / 60 composite), 562 explicit rejections. Instance weights are potential impact, not verified instance coverage. See the F5.2 section in docs/fourstate-frontend.md.
+- [x] F5.3: F53_PASS. Private compact memory/state IR and bound clock attribution; real small RAM/Queue, gated dual-clock hierarchy and ordered/static-slice NBA raw/encoded checks pass. Large RAMs have compact IR only; no whole-XSTop semantic conversion or Lean claim. See the F5.3 section in docs/fourstate-frontend.md.
+- [x] F5.4: F54_PASS. Explicit private v7 native dual-rail RAMs and scalable event plan; 12 models pass 13,756 raw/encoded samples and unchanged-backend FunctionalIR import. Depth/4,417-process/capacity fixtures, 112 tests, 7 faults/3 guards and 64 historical sets pass. No whole-XSTop or Lean execution claim; see the F5.4 evidence and limits in docs/fourstate-frontend.md.
+- [x] F5.5: F55_PASS within explicit private v8: static-bit derived resets and state-fed low-latched gates. Unmodified SRAMWrapper_32 closure, ResetGen boundary composition and three labeled witnesses pass 2,337 raw/encoded samples including every RAM word and activation old state; three real models import through the unchanged backend. 126 tests, 8 faults/4 guards, 64 historical sets and four fresh v7 cases pass. General reset logic/latch chains and other XSTop blockers remain; see the F5.5 evidence and limits in docs/fourstate-frontend.md.
+- [x] F5.6: F56_PASS for blockers 5-8 in explicit private v9: open ports, remaining frozen expressions/types, automatic process scopes/stateless events, and typed assertion diagnostics. Fifteen real modules plus seven fixtures pass 38,005 raw/encoded samples; all 22 import through the unchanged backend. 143 tests, 11 faults and 64 historical sets pass. Fresh audit imports 978/981 complete closures, including XSTop; three standalone tops exceed the retained two-root clock contract. Whole-XSTop encoding/behavior and Lean are not claimed; see the F5.6 evidence and limits in docs/fourstate-frontend.md.
+- [ ] G0 / F6: close configuration/tool/input provenance before DefaultConfig claims.
+- [ ] G1-G4 / F6: resource-bounded full encoding, FunctionalIR, Lean compilation,
+  execution and scoped difftest; distinguish every actual completed status.
+
+F4.3 evidence: `experiments/fourstate/async-f4.3/f43-async-20261017t161451z-d3e825c0a5/`.
+Its source hashes and VERIFIED_AND_IMPORTED receipt were checked before F4.4;
+no asynchronous functionality or completed experiment is being redeveloped.
+Current state (2026-10-18 Asia/Shanghai): F55_PASS for the selected real SRAM subsystem and ResetGen boundary composition, not whole-XSTop conversion. Evidence: experiments/fourstate/f55-20261018t081308z-8d0a6cc2/independent-final-v1/acceptance.json; delivery.json records reproduction, reference corrections, performance and source/Git protection. The 1,873 reset endpoints / 144 gate candidates are not all behaviorally validated. Public backend and old v4/v5/v6/v7 contracts remain intact. Stop awaiting acceptance; no Lean compilation/execution, next-stage development, commit or push.
+Record implementation, acceptance and continuation details in the existing
+[four-state document](docs/fourstate-frontend.md). Shared backend changes,
+software installation, unsafe writes/overwrites and major architecture changes
+are explicit stop conditions; no automatic commit/push/checkout/reset/cleanup.
+
+## GitHub issue #1: composite size-cast context and propagated signedness
+
+- [x] Reproduce the reported 8'(a+b) error with actual reference RTL, encoded
+  RTL and Lean; retain the original mismatch and subsequent failed attempts.
+- [x] Propagate the cast's own width into flat frontend operands while keeping
+  narrowing, nested casts, concatenation and shift-count boundaries intact.
+- [x] Use the official propagated conversion's context signedness in the
+  elaborated frontend; retain source extension for assignment/explicit casts.
+- [x] Extend the existing width batch with flat/elaborated composite casts and
+  explicit-state sequential casts; require independent literal expectations.
+- [x] Run all seven four-state batches, legacy replay and fresh official v5
+  prefetch conversion/execution; preserve hashes, commands and scoped evidence.
+
+Executed on 2026-10-17 (Asia/Shanghai): CAST_FIX_PASS, exit 0. The width batch
+passed 1,192 samples: original cases 36/64, flat and elaborated casts 534 each,
+and sequential casts 24. All 88 independent literal points passed. Remaining
+combinational/sequential/hierarchy/logic/arithmetic/compatibility batches passed
+197/3584/340/336/772/132 samples; old v4 replay passed 192 samples. Fresh official
+L2TlbPrefetch v5 conversion and the original 80-sample F1.1 trace matched all
+output/state bits and binary rails; encoded RTL was byte-identical to the old
+artifact. Historical F1.x pinned-source guards and reports were not changed.
+
+Only the independent four-state frontends, dedicated tests and documentation
+changed. A mixed signed/unsigned defect discovered by the larger comparison and
+a directory-hash error in the new test helper were fixed with failed evidence
+retained. Old affected models need regeneration; replay does not repair them.
+No shared backend/IR/runtime/CLI or two-state changes, whole-core build, commit,
+push or GitHub issue update. Detailed evidence and reproduction are in
 [the four-state frontend document](docs/fourstate-frontend.md).
 The tasks below do not replace the historical conclusions above.
 
@@ -208,3 +283,128 @@ regressions. The reference contract remains: default original RTL is converted;
 Icarus executes the official expression-split output of the same CHIRRTL.
 Default RTL has not directly completed Icarus simulation. No shared backend,
 upstream hardware, server environment or historical report was changed.
+
+## Four-state backend integration compatibility fix
+
+- [x] Reproduce truncated dead-expression arbitrary inputs and the large
+  generated Lean default-stack failure with real commands and exit codes.
+- [x] Purge dead public temporaries in a separate four-state backend copy;
+  retain encoded.sv, all ports/states and the strict arbitrary-input rejection.
+- [x] Compile the four-state source model with explicit Lean -s 65536 using
+  the existing emission-only backend option; leave shared implementations unchanged.
+- [x] Run flat/expanded targeted RTL, encoded RTL and Lean comparisons,
+  normalized-copy rail checks, independent expectations and affected regressions.
+
+Executed on 2026-10-17: BACKEND_FIX_PASS. Six targeted executions passed
+2,624 samples and 9,248 independent checks. The same generated Lean source
+fails with the default stack (3221226505, stack_space_exception) and compiles
+with the explicit stack (exit 0). The new dead-cone regression rejects the
+saved original entrypoint and passes the fixed entrypoint.
+
+Seven existing campaigns passed 197/3584/340/1192/336/772/132 samples; old v4
+replay passed 192 samples. A freshly generated official-layout L2TlbPrefetch
+model passed the existing 80-sample smoke and 255-sample directed fixtures,
+including 54/54 coverage points, all outputs/states, rails and independent
+checks. This reuses the original F1.1/F1.2 mechanisms without weakening their
+historical source-hash guards or claiming their pinned entrypoints reran.
+
+Shared code/runtime hashes (116 files), earlier fixes and historical evidence
+are preserved. No shared CLI/backend/two-state/server changes, new SV semantics,
+commit or push. Finite validation is not default/normalized RTL equivalence or
+whole-core four-state acceptance. Commands, failure controls, hashes, raw
+traces and reproduction are linked in
+[the four-state frontend document](docs/fourstate-frontend.md).
+
+## F1.1 real XiangShan sequential four-state smoke
+
+- [x] F1.1a: pin the saved L2TlbPrefetch CHIRRTL and prior read-only audit;
+  regenerate the official disallowLocalVariables RTL without editing hardware.
+- [x] F1.1b: independently list all nine ports and eleven registers (142 bits),
+  supply explicit mixed four-state initial values and sixteen deterministic cycles.
+- [x] F1.1c: compile and execute the reference RTL, encoded RTL and existing
+  Lean sequential wrapper; compare every pre/post output and original state bit.
+- [x] F1.1d: save commands, exits, raw traces, hashes, comparison counts and
+  first-failure data; document the SMOKE_PASS scope and reference contract.
+
+F1.1 executed on 2026-10-17 (Asia/Shanghai): SMOKE_PASS, command exit 0.
+Sixteen cycles / eighty samples with pre/post observation compared 4,480
+output-bit and 22,720 register-bit positions exactly, including X and Z.
+Observed output/current-state rails matched at 54,400 tag/value bit positions;
+both paths' 108,800 binary bit values were checked. All eleven explicit initial
+states were confirmed by VPI-initialized reference observations. The actual
+RunSequential.lean wrapper compiled and ran; first_failure is null.
+
+Both conversion input and Icarus reference are the same official no-local-variable
+RTL from saved CHIRRTL, using MinimalConfig(1) via NanhuCoreConfig, not DefaultConfig.
+This is a finite smoke, not full four-state equivalence between default and
+normalized RTL, full protocol validation, or whole-core four-state support.
+The default RTL, converter, existing verification helpers, shared backend/IR/
+runtime/CLI and all historical reports remain unchanged. No commit or push.
+The command, report, fixture, sampling and reproduction limits are linked in
+[the four-state frontend document](docs/fourstate-frontend.md).
+
+## F1.2 real XiangShan directed sequential validation
+
+- [x] F1.2a: verify F1.1 artifacts and reuse its exact official RTL, compiled v5
+  model, VPI/trace/sampling, execution and comparison functions.
+- [x] F1.2b: execute explicit eleven-register initial states and directed traces
+  for ring history, NBA ordering, reset/data, stall, flush, X/Z and VPN semantics.
+- [x] F1.2c: require executable trigger guards and independent literal/relational
+  postconditions for every coverage point; save observed witnesses and misses.
+- [x] F1.2d: rerun F1.1, the seven existing four-state batches and old v4 replay;
+  retain raw results, hashes, first-failure data and scoped documentation.
+
+F1.2 executed on 2026-10-17 (Asia/Shanghai): DIRECTED_PASS, command exit 0.
+All 26 directed trajectories / 51 cycles / 255 samples matched at every pre/post
+observation: 14,280 output-bit and 72,420 original register-bit positions.
+All 54 required coverage points hit their actual trigger conditions and passed
+independent expected-state checks. Observed binary rails matched at 173,400
+tag/value bit positions. No first failure or missing coverage point was reported.
+
+The unchanged F1.1 entrypoint reran with SMOKE_PASS (80 samples). Existing
+combinational, sequential, hierarchy, width, logic, arithmetic and compatibility
+campaigns passed 197/3584/340/100/336/772/132 samples; old v4 sequential replay
+also passed 192 samples. Commands, snapshots, detailed witnesses and reports
+are linked in the F1.2 section of docs/fourstate-frontend.md.
+
+Only the official disallowLocalVariables MinimalConfig(1)/NanhuCoreConfig RTL
+is covered. No converter, F1.1 mechanism, shared interface, two-state flow,
+default RTL or historical report changed; no commit or push. This is finite
+directed evidence, not default/normalized full equivalence or whole-core
+four-state acceptance.
+
+## F1.3 real XiangShan fault detection and closure
+
+- [x] F1.3a: verify F1.1/F1.2 artifacts and reuse the existing RTL/VPI/Lean,
+  mapping, trace, NBA sampling and exact output/state comparison mechanisms.
+- [x] F1.3b: compile and execute isolated encoded RTL mutations for an output
+  bit, an otherwise invisible original register bit, and reachable X-to-Z data.
+- [x] F1.3c: require correct baselines, successful mutant execution and actual
+  comparison exit 2, with exact first differences and independent trigger guards.
+- [x] F1.3d: rerun F1.1/F1.2, seven existing batches and old v4 replay; retain
+  commands, exits, raw traces, hashes, failed attempts and scoped documentation.
+
+F1.3 executed on 2026-10-17 (Asia/Shanghai): FAULT_DETECTION_PASS, entry exit 0.
+All three mutants compiled and executed with exit 0 and were rejected by the
+unchanged exact comparator with exit 2. First differences: ring sample 0/pre,
+io_out_valid[0] = 1/0/1; ring sample 3/post, old_reqs_2[0] = 0/1/0; vpn-arith
+sample 23/post, io_out_bits_vpn[26] = X/Z/X (reference/mutant/Lean).
+The state case preserves all 1,400 output-bit positions throughout its trace;
+the X/Z case starts with fully known state and reaches X through input arithmetic
+and a real edge. Raw rails confirm X=10 becoming Z=11, preserving known values.
+
+Fresh F1.2 passed 255 samples and 54/54 coverage points; F1.1 passed 80 samples.
+The seven existing batches passed 197/3584/340/100/336/772/132 samples and old
+v4 replay passed 192 samples. The first fault-driver attempt stopped at a CRLF
+assignment-location guard and remains BLOCKED in its own report; only the
+dedicated injection script was fixed. The successful new run explicitly reuses
+that freshly completed, hash-verified regression run. Default reproduction
+reruns all regressions. Independent delivery inspection decodes actual stdout
+and checks first differences, exit codes and all indexed artifact hashes.
+
+This status covers only these specified fault-detection checks on official
+disallowLocalVariables MinimalConfig(1)/NanhuCoreConfig RTL. It does not prove
+default/normalized full equivalence, exhaustive fault coverage or whole-core
+four-state correctness. No converter/shared interface/two-state changes, commit,
+push or rollback. Reports, commands and reproduction limits are linked in
+[the four-state frontend document](docs/fourstate-frontend.md).

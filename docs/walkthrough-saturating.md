@@ -77,10 +77,10 @@ Lean 4.19.0 进行检查。检查本次命令退出码为 0，以及
 ## 一条命令做完整的三路对照
 
 ```powershell
-python scripts/verify_saturating_example.py
+python scripts/verification/two_state/verify_saturating_example.py
 ```
 
-[验证脚本](../scripts/verify_saturating_example.py)执行以下步骤：
+[验证脚本](../scripts/verification/two_state/verify_saturating_example.py)执行以下步骤：
 
 1. 检查独立数学预期与手写的 18 周期输出表一致。
 2. 将这个新源码加入本次 sbt 官方参考编译；该设置只在本次运行中生效。
@@ -119,13 +119,13 @@ python scripts/verify_saturating_example.py
 只跑容易阅读的 18 个四位定向周期：
 
 ```powershell
-python scripts/verify_saturating_example.py --widths 4 --random-cycles 0 --evidence experiments/saturating-directed-check
+python scripts/verification/two_state/verify_saturating_example.py --widths 4 --random-cycles 0 --evidence experiments/saturating-directed-check
 ```
 
 扩展测试长度或选择其他正位宽：
 
 ```powershell
-python scripts/verify_saturating_example.py --widths 2 4 16 --random-cycles 1000 --evidence experiments/saturating-more
+python scripts/verification/two_state/verify_saturating_example.py --widths 2 4 16 --random-cycles 1000 --evidence experiments/saturating-more
 ```
 
 修改 Chisel 源码后再次运行，预期计算不会自动随源码改变：行为若与这里
@@ -135,7 +135,7 @@ python scripts/verify_saturating_example.py --widths 2 4 16 --random-cycles 1000
 ## 验证过程是否能发现错误
 
 ```powershell
-python scripts/verify_saturating_example.py --widths 4 --random-cycles 0 --negative-control --evidence experiments/saturating-directed-check
+python scripts/verification/two_state/verify_saturating_example.py --widths 4 --random-cycles 0 --negative-control --evidence experiments/saturating-directed-check
 ```
 
 这个命令先验证正确电路，再制作隔离副本，把溢出分支的

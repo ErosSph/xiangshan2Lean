@@ -45,11 +45,52 @@ def load(manifest_path):
         fourstate_ir = json.loads((base / manifest['fourstate_ir']).read_text(encoding='utf-8'))
         if version == 'v5':
             capabilities = fourstate_ir.get('capabilities')
-            supported = {'net_initializer', 'packed_select', 'packed_vectors', 'reductions', 'replication'}
+            supported = {'net_initializer', 'packed_select', 'packed_vectors', 'reductions', 'replication',
+                         'procedural_locals', 'preprocessing', 'async_posedge', 'unpacked_memory', 'bounded_events', 'immediate_assertions'}
             if (not isinstance(capabilities, list) or not capabilities or
                     any(not isinstance(c, str) or c not in supported for c in capabilities) or
                     len(capabilities) != len(set(capabilities))):
                 raise ValueError('Invalid v5 capability inventory')
+        if 'immediate_assertions' in fourstate_ir.get('capabilities', []):
+            from fourstate_assertions import validate_mapping,FIELDS
+            validate_mapping(mapping)
+            sites=fourstate_ir.get('assertions')
+            if ('bounded_events' not in fourstate_ir['capabilities'] or
+                    [{k:v for k,v in a.items() if k not in FIELDS} for a in mapping['assertions']]!=sites):
+                raise ValueError('Immediate assertion IR/observation contract mismatch')
+            for a in sites:
+                for key in ('enable_node','pass_node'):
+                    if type(a[key]) is not int or not 0<=a[key]<len(fourstate_ir['nodes']) or fourstate_ir['nodes'][a[key]]['width']!=1:
+                        raise ValueError('Invalid assertion IR flags')
+        elif any('assertions' in x for x in (mapping,fourstate_ir)):
+            raise ValueError('Assertion observations require immediate_assertions capability')
+        asynchronous = 'async_posedge' in fourstate_ir.get('capabilities', [])
+        if 'unpacked_memory' in fourstate_ir.get('capabilities', []):
+            memories = fourstate_ir.get('memories')
+            if not memories or memories != mapping.get('memories') or memories != elaboration.get('memories'):
+                raise ValueError('Memory layout inventory mismatch')
+            expected = {word for m in memories for word in m['words']}
+            actual = {p['name'] for p in fourstate_ir['states'] if 'memory' in p}
+            if expected != actual or len(expected) != sum(len(m['words']) for m in memories):
+                raise ValueError('Memory state inventory mismatch')
+        elif any('memories' in x for x in (mapping,fourstate_ir,elaboration)):
+            raise ValueError('Memory metadata requires unpacked_memory capability')
+        bounded = 'bounded_events' in fourstate_ir.get('capabilities', [])
+        if bounded:
+            from fourstate_bounded_events import validate_contract
+            validate_contract(mapping)
+            if (asynchronous or 'unpacked_memory' in fourstate_ir['capabilities'] or
+                    any(x.get('events') != mapping['events'] for x in (manifest,fourstate_ir,elaboration))):
+                raise ValueError('Bounded event contract mismatch or incompatible capability')
+        elif mapping.get('monitors'):
+            raise ValueError('Monitors require bounded_events capability')
+        if asynchronous:
+            from fourstate_events import validate_contract
+            validate_contract(mapping)
+            if manifest.get('events') != mapping['events'] or fourstate_ir.get('events') != mapping['events']:
+                raise ValueError('Asynchronous event contract mismatch')
+        elif not bounded and any('events' in x for x in (manifest, mapping, fourstate_ir)):
+            raise ValueError('Event metadata requires explicit async_posedge capability')
         if (fourstate_ir.get('format') != 'chisel2lean-fourstate-ir-' + version or fourstate_ir.get('mode') != mapping['mode']
                 or any(x.get('top') != mapping['top'] for x in (sources, elaboration, fourstate_ir))):
             raise ValueError('Expanded elaboration/source/IR identity mismatch')
@@ -61,6 +102,19 @@ def load(manifest_path):
         for entry in files:
             if manifest['artifact_sha256'].get(entry['snapshot']) != entry['sha256']:
                 raise ValueError('Expanded source snapshot missing or inconsistent')
+        if 'preprocessing' in fourstate_ir.get('capabilities', []):
+            key = manifest.get('preprocessing')
+            if key not in manifest['artifact_sha256']:
+                raise ValueError('Preprocessing receipt missing or unhashed')
+            pp = json.loads((base / key).read_text(encoding='utf-8'))
+            if pp != fourstate_ir.get('preprocessing') or pp.get('status') != 'PREPROCESSED':
+                raise ValueError('Preprocessing receipt mismatch')
+            used = [p for p in pp['files'] if p['role'] != 'admission-only']
+            if {p['path'] for p in used} != {p['path'] for p in files}:
+                raise ValueError('Preprocessing source inventory mismatch')
+            for p in used:
+                if manifest['artifact_sha256'].get(p['snapshot']) != p['sha256']:
+                    raise ValueError('Preprocessed source hash mismatch')
         keys = ('name', 'rtl_path', 'width', 'signed', 'left', 'right')
         def state_set(items):
             rows = {p['name']: tuple(p[k] for k in keys) for p in items}

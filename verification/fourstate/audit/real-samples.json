@@ -1,0 +1,500 @@
+{
+  "source": "Actual slang 12 CST nodes from this audit; no RTL conversion executed",
+  "resetgen": {
+    "AlwaysBlock": [
+      {
+        "keyword": "always",
+        "kind": "AlwaysBlock",
+        "statement": {
+          "kind": "TimingControlStatement",
+          "statement": {
+            "begin": "begin",
+            "end": "end",
+            "items": [
+              {
+                "closeParen": ")",
+                "elseClause": {
+                  "clause": {
+                    "expr": {
+                      "kind": "NonblockingAssignmentExpression",
+                      "left": {
+                        "identifier": "pipe_reset",
+                        "kind": "IdentifierName"
+                      },
+                      "operatorToken": "<=",
+                      "right": {
+                        "closeBrace": "}",
+                        "expressions": [
+                          {
+                            "identifier": "pipe_reset",
+                            "kind": "IdentifierSelectName",
+                            "selectors": [
+                              {
+                                "closeBracket": "]",
+                                "kind": "ElementSelect",
+                                "openBracket": "[",
+                                "selector": {
+                                  "kind": "SimpleRangeSelect",
+                                  "left": {
+                                    "kind": "IntegerLiteralExpression",
+                                    "literal": "1"
+                                  },
+                                  "range": ":",
+                                  "right": {
+                                    "kind": "IntegerLiteralExpression",
+                                    "literal": "0"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          ",",
+                          {
+                            "base": "'h",
+                            "kind": "IntegerVectorExpression",
+                            "size": "1",
+                            "value": "0"
+                          }
+                        ],
+                        "kind": "ConcatenationExpression",
+                        "openBrace": "{"
+                      }
+                    },
+                    "kind": "ExpressionStatement",
+                    "semi": ";"
+                  },
+                  "elseKeyword": "else",
+                  "kind": "ElseClause"
+                },
+                "ifKeyword": "if",
+                "kind": "ConditionalStatement",
+                "openParen": "(",
+                "predicate": {
+                  "conditions": [
+                    {
+                      "expr": {
+                        "identifier": "reset",
+                        "kind": "IdentifierName"
+                      },
+                      "kind": "ConditionalPattern"
+                    }
+                  ],
+                  "kind": "ConditionalPredicate"
+                },
+                "statement": {
+                  "expr": {
+                    "kind": "NonblockingAssignmentExpression",
+                    "left": {
+                      "identifier": "pipe_reset",
+                      "kind": "IdentifierName"
+                    },
+                    "operatorToken": "<=",
+                    "right": {
+                      "base": "'h",
+                      "kind": "IntegerVectorExpression",
+                      "size": "3",
+                      "value": "7"
+                    }
+                  },
+                  "kind": "ExpressionStatement",
+                  "semi": ";"
+                }
+              }
+            ],
+            "kind": "SequentialBlockStatement"
+          },
+          "timingControl": {
+            "at": "@",
+            "expr": {
+              "closeParen": ")",
+              "expr": {
+                "kind": "BinaryEventExpression",
+                "left": {
+                  "edge": "posedge",
+                  "expr": {
+                    "identifier": "clock",
+                    "kind": "IdentifierName"
+                  },
+                  "kind": "SignalEventExpression"
+                },
+                "operatorToken": "or",
+                "right": {
+                  "edge": "posedge",
+                  "expr": {
+                    "identifier": "reset",
+                    "kind": "IdentifierName"
+                  },
+                  "kind": "SignalEventExpression"
+                }
+              },
+              "kind": "ParenthesizedEventExpression",
+              "openParen": "("
+            },
+            "kind": "EventControlWithExpression"
+          }
+        }
+      }
+    ],
+    "AssignmentExpression": [
+      {
+        "kind": "AssignmentExpression",
+        "left": {
+          "identifier": "o_reset",
+          "kind": "IdentifierName"
+        },
+        "operatorToken": "=",
+        "right": {
+          "identifier": "pipe_reset",
+          "kind": "IdentifierSelectName",
+          "selectors": [
+            {
+              "closeBracket": "]",
+              "kind": "ElementSelect",
+              "openBracket": "[",
+              "selector": {
+                "expr": {
+                  "kind": "IntegerLiteralExpression",
+                  "literal": "2"
+                },
+                "kind": "BitSelect"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "DataDeclaration": [
+      {
+        "declarators": [
+          {
+            "kind": "Declarator",
+            "name": "pipe_reset"
+          }
+        ],
+        "kind": "DataDeclaration",
+        "semi": ";",
+        "type": {
+          "dimensions": [
+            {
+              "closeBracket": "]",
+              "kind": "VariableDimension",
+              "openBracket": "[",
+              "specifier": {
+                "kind": "RangeDimensionSpecifier",
+                "selector": {
+                  "kind": "SimpleRangeSelect",
+                  "left": {
+                    "kind": "IntegerLiteralExpression",
+                    "literal": "2"
+                  },
+                  "range": ":",
+                  "right": {
+                    "kind": "IntegerLiteralExpression",
+                    "literal": "0"
+                  }
+                }
+              }
+            }
+          ],
+          "keyword": "reg",
+          "kind": "RegType"
+        }
+      }
+    ],
+    "IdentifierSelectName": [
+      {
+        "identifier": "pipe_reset",
+        "kind": "IdentifierSelectName",
+        "selectors": [
+          {
+            "closeBracket": "]",
+            "kind": "ElementSelect",
+            "openBracket": "[",
+            "selector": {
+              "kind": "SimpleRangeSelect",
+              "left": {
+                "kind": "IntegerLiteralExpression",
+                "literal": "1"
+              },
+              "range": ":",
+              "right": {
+                "kind": "IntegerLiteralExpression",
+                "literal": "0"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "identifier": "pipe_reset",
+        "kind": "IdentifierSelectName",
+        "selectors": [
+          {
+            "closeBracket": "]",
+            "kind": "ElementSelect",
+            "openBracket": "[",
+            "selector": {
+              "expr": {
+                "kind": "IntegerLiteralExpression",
+                "literal": "2"
+              },
+              "kind": "BitSelect"
+            }
+          }
+        ]
+      }
+    ],
+    "SignalEventExpression": [
+      {
+        "edge": "posedge",
+        "expr": {
+          "identifier": "clock",
+          "kind": "IdentifierName"
+        },
+        "kind": "SignalEventExpression"
+      },
+      {
+        "edge": "posedge",
+        "expr": {
+          "identifier": "reset",
+          "kind": "IdentifierName"
+        },
+        "kind": "SignalEventExpression"
+      }
+    ],
+    "SystemName": []
+  },
+  "ram": {
+    "AlwaysBlock": [
+      {
+        "keyword": "always",
+        "kind": "AlwaysBlock",
+        "statement": {
+          "kind": "TimingControlStatement",
+          "statement": {
+            "begin": "begin",
+            "end": "end",
+            "items": [
+              {
+                "closeParen": ")",
+                "ifKeyword": "if",
+                "kind": "ConditionalStatement",
+                "openParen": "(",
+                "predicate": {
+                  "conditions": [
+                    {
+                      "expr": {
+                        "identifier": "W0_en",
+                        "kind": "IdentifierName"
+                      },
+                      "kind": "ConditionalPattern"
+                    }
+                  ],
+                  "kind": "ConditionalPredicate"
+                },
+                "statement": {
+                  "expr": {
+                    "kind": "NonblockingAssignmentExpression",
+                    "left": {
+                      "identifier": "Memory",
+                      "kind": "IdentifierSelectName",
+                      "selectors": [
+                        {
+                          "closeBracket": "]",
+                          "kind": "ElementSelect",
+                          "openBracket": "[",
+                          "selector": {
+                            "expr": {
+                              "identifier": "W0_addr",
+                              "kind": "IdentifierName"
+                            },
+                            "kind": "BitSelect"
+                          }
+                        }
+                      ]
+                    },
+                    "operatorToken": "<=",
+                    "right": {
+                      "identifier": "W0_data",
+                      "kind": "IdentifierName"
+                    }
+                  },
+                  "kind": "ExpressionStatement",
+                  "semi": ";"
+                }
+              }
+            ],
+            "kind": "SequentialBlockStatement"
+          },
+          "timingControl": {
+            "at": "@",
+            "expr": {
+              "closeParen": ")",
+              "expr": {
+                "edge": "posedge",
+                "expr": {
+                  "identifier": "W0_clk",
+                  "kind": "IdentifierName"
+                },
+                "kind": "SignalEventExpression"
+              },
+              "kind": "ParenthesizedEventExpression",
+              "openParen": "("
+            },
+            "kind": "EventControlWithExpression"
+          }
+        }
+      }
+    ],
+    "AssignmentExpression": [
+      {
+        "kind": "AssignmentExpression",
+        "left": {
+          "identifier": "R0_data",
+          "kind": "IdentifierName"
+        },
+        "operatorToken": "=",
+        "right": {
+          "colon": ":",
+          "kind": "ConditionalExpression",
+          "left": {
+            "identifier": "Memory",
+            "kind": "IdentifierSelectName",
+            "selectors": [
+              {
+                "closeBracket": "]",
+                "kind": "ElementSelect",
+                "openBracket": "[",
+                "selector": {
+                  "expr": {
+                    "identifier": "R0_addr",
+                    "kind": "IdentifierName"
+                  },
+                  "kind": "BitSelect"
+                }
+              }
+            ]
+          },
+          "predicate": {
+            "conditions": [
+              {
+                "expr": {
+                  "identifier": "R0_en",
+                  "kind": "IdentifierName"
+                },
+                "kind": "ConditionalPattern"
+              }
+            ],
+            "kind": "ConditionalPredicate"
+          },
+          "question": "?",
+          "right": {
+            "base": "'b",
+            "kind": "IntegerVectorExpression",
+            "size": "340",
+            "value": "x"
+          }
+        }
+      }
+    ],
+    "DataDeclaration": [
+      {
+        "declarators": [
+          {
+            "dimensions": [
+              {
+                "closeBracket": "]",
+                "kind": "VariableDimension",
+                "openBracket": "[",
+                "specifier": {
+                  "kind": "RangeDimensionSpecifier",
+                  "selector": {
+                    "kind": "SimpleRangeSelect",
+                    "left": {
+                      "kind": "IntegerLiteralExpression",
+                      "literal": "0"
+                    },
+                    "range": ":",
+                    "right": {
+                      "kind": "IntegerLiteralExpression",
+                      "literal": "1"
+                    }
+                  }
+                }
+              }
+            ],
+            "kind": "Declarator",
+            "name": "Memory"
+          }
+        ],
+        "kind": "DataDeclaration",
+        "semi": ";",
+        "type": {
+          "dimensions": [
+            {
+              "closeBracket": "]",
+              "kind": "VariableDimension",
+              "openBracket": "[",
+              "specifier": {
+                "kind": "RangeDimensionSpecifier",
+                "selector": {
+                  "kind": "SimpleRangeSelect",
+                  "left": {
+                    "kind": "IntegerLiteralExpression",
+                    "literal": "339"
+                  },
+                  "range": ":",
+                  "right": {
+                    "kind": "IntegerLiteralExpression",
+                    "literal": "0"
+                  }
+                }
+              }
+            }
+          ],
+          "keyword": "reg",
+          "kind": "RegType"
+        }
+      }
+    ],
+    "EqualsValueClause": [],
+    "IdentifierSelectName": [
+      {
+        "identifier": "Memory",
+        "kind": "IdentifierSelectName",
+        "selectors": [
+          {
+            "closeBracket": "]",
+            "kind": "ElementSelect",
+            "openBracket": "[",
+            "selector": {
+              "expr": {
+                "identifier": "W0_addr",
+                "kind": "IdentifierName"
+              },
+              "kind": "BitSelect"
+            }
+          }
+        ]
+      },
+      {
+        "identifier": "Memory",
+        "kind": "IdentifierSelectName",
+        "selectors": [
+          {
+            "closeBracket": "]",
+            "kind": "ElementSelect",
+            "openBracket": "[",
+            "selector": {
+              "expr": {
+                "identifier": "R0_addr",
+                "kind": "IdentifierName"
+              },
+              "kind": "BitSelect"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

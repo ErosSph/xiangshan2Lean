@@ -49,9 +49,9 @@ IR 中的 `source_path` 记录这些列与原始 Chisel 叶端口的对应关系
 运行检查：
 
 ```powershell
-python scripts/verify_aggregate.py
-python scripts/check_aggregate_contracts.py
-python scripts/verify_xiangshan_aggregate.py
+python scripts/verification/two_state/verify_aggregate.py
+python scripts/verification/two_state/check_aggregate_contracts.py
+python scripts/verification/two_state/verify_xiangshan_aggregate.py
 ```
 
 前两项检查 [通用测试模块](../tests/fixtures/aggregate/Supported.scala)；
